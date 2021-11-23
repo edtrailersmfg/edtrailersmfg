@@ -1,1 +1,350 @@
-__pyarmor__(__name__, __file__, b'\x50\x59\x41\x52\x4d\x4f\x52\x00\x00\x03\x08\x00\x55\x0d\x0d\x0a\x08\x2d\xa0\x01\x00\x00\x00\x00\x01\x00\x00\x00\x40\x00\x00\x00\x24\x02\x00\x00\x00\x00\x00\x00\xdf\xc3\xdc\x9f\x28\x50\x5f\xf3\xbd\xdf\x4f\xd2\xe0\x6d\x2b\xb9\x00\x00\x00\x00\x00\x00\x00\x00\x18\x7c\x4e\xe6\xfd\x0c\xe5\xe7\x1b\x08\x23\x10\x23\xea\x7a\x4a\xdd\xf5\x6a\x3e\x29\x63\xf7\x74\xdc\x2a\x37\x61\xd4\x84\xe0\x80\x95\xf9\x73\x43\xd7\xa6\x14\x79\xe9\xe2\x44\x1f\xbd\x2d\x7a\xbd\xa7\x4d\x2a\xe4\xdb\x53\xa1\xe5\xd9\x97\xb8\x2a\x4c\xb0\x8c\xe0\xfa\xc4\x28\x0e\xdb\x48\xb2\x72\x85\x58\xee\x94\xe5\xe3\xc3\xae\xcc\x88\x59\xff\x0a\x44\xf2\xee\x0d\xdf\x8b\xa3\xa6\xd0\x09\x33\xbb\x40\x39\x2a\xc2\x01\x1c\x65\x10\x64\xd0\xf7\xa2\x27\x87\xa0\xc7\xc0\xa0\x9f\x90\x58\x61\xb7\x23\xc8\xfa\xf9\x33\x0d\x0c\x20\xe1\x88\x01\xd8\x18\x48\xdd\x8e\xa6\x04\xa6\x68\xab\xac\x87\xa4\x3f\xbc\x68\x00\x40\x32\xbf\x63\x4b\x2a\xea\x13\xa9\xd9\x97\x0b\xaf\x63\x02\xcc\x4d\xcc\x07\x88\xe7\xca\xfe\x73\x75\xf0\xa2\x93\xbe\x57\xaf\xea\x74\x20\x84\x46\x31\xa7\x89\x17\x68\x60\xaf\xbe\x1d\x98\x3a\xfe\xf0\x9c\xb5\x40\x01\xb7\x51\x74\xa8\xce\x6e\xc5\xc9\x40\x37\xfa\x1b\x21\xc4\x4a\xbc\xce\x61\x46\x13\x3e\xf8\xfa\xdc\xa2\x0a\x8a\xf3\xea\x7b\x2e\x6f\xf0\x81\x87\x20\x3f\x08\x3d\xac\x59\xf6\xd9\xa5\xd7\x9d\x7e\x2f\xed\x64\xcd\x38\xc5\x1c\x7f\x58\x77\x7c\xfb\x76\x3e\x0b\xd8\x62\xd0\xa2\x9a\x65\x1f\xe5\x32\x8e\x5c\x41\xbe\x49\xd6\x40\xe4\x70\x0c\x29\x79\x70\xf2\xcb\x57\x3d\x82\x4c\xb7\x05\xce\x5a\x4c\xcf\x48\x15\x66\xda\xe8\xf0\x20\x4f\x7e\x63\x2e\xff\x1a\x9a\xd1\xfd\x29\x53\x4a\x7b\xba\x62\x67\xdf\x8c\xcc\xaf\x88\xd0\xf0\x5c\x72\xd7\xda\x67\x78\x41\xb1\xa3\xfe\xc6\xcb\xa0\xa1\xf8\x00\xd7\x27\xa9\x9e\x01\xc8\xc9\xb2\x34\xc3\xa7\x8e\x23\xc9\xed\xe2\xae\x62\x5d\x42\xaf\xa0\xcd\xf6\x30\x04\xb8\xbe\xb7\x6c\xa2\xf2\x42\xa0\x2d\x66\x33\x43\xbc\x2f\xd2\xcc\x65\xa8\x05\xf3\x07\x6f\x64\x34\x52\x61\x93\xfa\x76\x28\xe4\x96\x7c\x0c\xfe\xef\x34\x14\xa9\xde\x97\xe4\x26\x36\x93\x27\x7f\x21\x46\x07\x42\x1e\x2f\xe2\x6f\x03\x56\x01\xf9\xe2\x2a\x1f\x23\x91\xac\xf0\x7c\x2a\x9b\x05\x8a\xcc\x7d\x60\xba\xa6\x32\x15\x69\x33\xab\xbd\x37\xb1\x90\xb7\x41\xbd\xf2\x79\xd1\x51\xed\x25\x12\xac\xb4\x7d\x72\x79\x4b\xf3\xb0\xf0\xfd\xee\x6b\x1a\x4e\x96\x99\xf6\x70\xc9\x40\x5d\xdf\xa1\x75\x83\xc8\x51\xdf\x81\x4d\xcd\x60\xd4\x3b\x16\x4d\xc5\x40\x72\x97\x11\xca\x7e\x9e\x09\x93\x16\xe6\x24\x44\x8a\xe8\x51\x1c\xe3\xd0\x86\x46\xc6\x83\xba\x99\xfc\x85\x1d\x61\x98\xff\xc0\x6d\xc5\x65\xbd\xd2\x84\x25\x1b\xde\x86\xbe\x8d\xb8\x9c\x8e', 2)
+# -*- encoding: utf-8 -*-
+#
+
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+
+
+from odoo import api, fields, models, _
+from odoo.exceptions import UserError, ValidationError
+import csv
+import os.path
+import base64
+
+import odoo.tools as tools
+from . import update_mx_data ## Clase con Mucha Informacion
+
+import logging
+_logger = logging.getLogger(__name__)
+
+"""
+class overall_config_wizard_sat_models_cfdi(models.TransientModel):
+    _name = 'overall.config.wizard.sat.models.cfdi'
+    _description ="Wizard para cargar los catálogos del SAT"
+
+    load_data = fields.Boolean('Informacion Cargada')
+    action_status = fields.Text('Notas de Carga de Datos')
+    select_catalog = fields.Selection([
+                ("all","Todos"),
+                #("data/res.country.sat.code.csv" , "Paises"),
+                # Eliminado "data/res.country.state.sat.code.csv" , "Estados"),
+                # ("data/res.country.township.sat.code.csv" , "Municipios"),
+                # ("data/res.country.locality.sat.code.csv", "Localidades"),
+                # hooks ("data/res.country.zip.sat.code.csv", "Códigos Postales"),
+                # hooks ("data/res.colonia.zip.sat.code.csv","Colonias"),
+                # ('data/sat.aduana.csv', "Aduanas"),
+                # hooks ("data/sat.producto.csv", "Productos/Servicios"),
+                # ("data/sat.udm.csv", "Unidades de Medida"),
+                # Se puso en data.xml ("data/sat.uso.cfdi.csv", "Usos de CFDI"),
+                # hooks ("data/sat.patente.csv", "Patentes y Patentes Aduanales"),
+                # Se puso en data.xml ("data/res.country.csv", "Actualización Paises Claves SAT"),
+                ("data/res.country.state.csv", "Actualización Estados Claves SAT"),
+                ("data/zip.sat.code", "Actualización Codigos Postales Clientes/Proveedores"),
+                #("data/regimen.fiscal","Eliminar los Regimen Fiscales Antiguos"),
+                ("data/colonias/01/res.colonia.zip.sat.code.csv","Catalogo de Colonias Parte 01"),
+                ("data/colonias/02/res.colonia.zip.sat.code.csv","Catalogo de Colonias Parte 02"),
+                ("data/colonias/03/res.colonia.zip.sat.code.csv","Catalogo de Colonias Parte 03"),
+                # hooks ("data/sat.arancel.csv", "Fracciones Arancelarias (Comercio Exterior)"),
+                # Se puso en data.xml ('eaccount.bank', 'Bancos Oficiales'),
+                #('sat.account.code', 'Códigos Agrupadores SAT'),
+                #('eaccount.currency', 'Monedas'),
+                # Se puso en data.xml ('eaccount.payment.methods', 'Métodos de Pago (Contabilidad Electrónica)')
+        
+            ],'Selecciona el Catalogo', default="all" )
+
+    
+    def _reopen_wizard(self):
+        return { 'type'     : 'ir.actions.act_window',
+                 'res_id'   : self.id,
+                 'view_mode': 'form',
+                 'view_type': 'form',
+                 'res_model': 'overall.config.wizard.sat.models.cfdi',
+                 'target'   : 'new',
+                 'name'     : 'Carga de Catalogos para la Facturacion CFDI 3.3'}
+
+    
+    def _find_file_in_addons(self, directory, filename):
+        addons_paths = tools.config['addons_path'].split(',')
+        actual_module = directory.split('/')[0]
+        if len(addons_paths) == 1:
+            return os.path.join(addons_paths[0], directory, filename)
+        for pth in addons_paths:
+            for subdir in os.listdir(pth):
+                if subdir == actual_module:
+                    return os.path.join(pth, directory, filename)
+
+        return False
+    
+    
+    def process_catalogs_eaccount(self):
+        self.ensure_one()
+        form = self
+        user = self.env.user
+        expected_col_number = 2
+        orm_obj = self.env[form.select_catalog]
+        #if form.select_catalog == 'eaccount.bank':
+        #    target_file = self._find_file_in_addons('l10n_mx_einvoice/data', 'banks.csv')
+        if form.select_catalog == 'sat.account.code':
+            target_file = self._find_file_in_addons('l10n_mx_einvoice/data', 'sat_codes.csv')
+        elif form.select_catalog == 'eaccount.payment.methods':
+            target_file = self._find_file_in_addons('l10n_mx_einvoice/data', 'payment_methods.csv')
+        elif form.select_catalog == 'eaccount.currency':
+            target_file = self._find_file_in_addons('l10n_mx_einvoice/data', 'currencies.csv')
+        iterable_data = open(target_file, 'r', encoding="utf-8").readlines()
+        reader = csv.reader(iterable_data)
+        context = {}
+        #context['allow_management'] = True
+        obj_fields = []
+        vals = {}
+        #if form.select_catalog == 'eaccount.bank':
+        #    search_field = 'bic'
+        if form.select_catalog == 'sat.account.code':
+            search_field = 'key'
+        else:
+            search_field = 'code'
+        for (idx, row,) in enumerate(reader):
+            if len(row) < expected_col_number:
+                self.write({'action_status': 'Formato inesperado. Se esperaban %s columnas, pero se encontraron %s. Linea %s' % (expected_col_number, len(row), idx + 1)})
+                return True
+            if idx == 0:
+                obj_fields = row
+                continue
+            for (pos, fld,) in enumerate(obj_fields):
+                vals[fld] = row[pos].zfill(3) if fld == search_field and form.select_catalog in ('eaccount.bank', 'eaccount.currency') else row[pos]
+
+            #if form.select_catalog == 'eaccount.currency':
+            #    vals['company_id'] = user.company_id.id
+            stored_ids = orm_obj.search([(search_field, '=', vals[search_field])])
+            if stored_ids:
+                stored_ids.with_context(context).write(vals)
+            else:
+                res = orm_obj.with_context(context).create(vals)
+
+        #if form.select_catalog == 'eaccount.bank':
+        #    status = 'Los Bancos han sido correctamente procesados.'
+        if form.select_catalog == 'sat.account.code':
+            status = 'Los Códigos del SAT han sido correctamente procesados.'
+        elif form.select_catalog == 'eaccount.payment.methods':
+            status = 'Los métodos de pago han sido correctamente procesados.'
+        elif form.select_catalog == 'eaccount.currency':
+            status = 'Las monedas han sido correctamente procesadas.'
+        self.write({'action_status': status})
+        return self._reopen_wizard()
+    
+
+    
+    def process_catalogs(self):
+        # El siguiente Script Elimina los datos Cargados desde CSV o XML
+        # cr.execute("delete from ir_model_data where model='sat.udm';")
+        
+        status = "Los Informacion se Cargo de Forma Correcta."
+        if self.select_catalog in ('eaccount.bank','sat.account.code','eaccount.currency','eaccount.payment.methods'): # AQUI VAMOS ISRAEL
+            _logger.info('\n***** Actualizando %s ********\n' % self.select_catalog)
+            try:
+                self.process_catalogs_eaccount()
+                _logger.info('\n ***** %s *****\n' % self.select_catalog)
+            except:
+                status = "Se encontraron Errores en el Procesamiento.\nConsulte al Desarrollador: info@fixdoo.mx"                
+        elif self.select_catalog == "data/res.country.csv":
+            cr = self.env.cr
+            _logger.info('\n***** Actualizando los Paises ********\n')
+            try:
+                self.update_countrys_sat()
+                _logger.info('\n ***** Paises Actualizados *****\n')
+            except:
+                status = "Se encontraron Errores en el Procesamiento.\nConsulte al Desarrollador: info@fixdoo.mx"
+        elif self.select_catalog == "data/res.country.state.csv":
+            cr = self.env.cr
+            _logger.info('\n***** Actualizando los Estados ********\n')
+            try:
+                self.update_countrys_states_sat()
+                _logger.info('\n ***** Estados Actualizados *****\n')
+            except:
+                status = "Se encontraron Errores en el Procesamiento.\nConsulte al Desarrollador: info@fixdoo.mx"
+        elif self.select_catalog == "data/zip.sat.code":
+            _logger.info('\n***** Actualizando los Codigos Postales ********\n')
+            try:
+                self.env.cr.execute("
+                    update res_partner set zip_sat_id=res_country_zip_sat_code.id 
+                                                        from res_country_zip_sat_code 
+                                                        where res_country_zip_sat_code.code = res_partner.zip
+                                                        and res_partner.zip_sat_id is null;
+                    ")
+                _logger.info('\n ***** Codigos Postales Actualizados *****\n')
+            except:
+                status = "Se encontraron Errores en el Procesamiento.\nConsulte al Desarrollador: info@fixdoo.mx"
+
+        #elif self.select_catalog == "data/regimen.fiscal":
+        #    _logger.info('\n***** Actualizando los Regimen Fiscales ********\n')
+        #    try:
+        #        self.env.cr.execute("update res_partner set regimen_fiscal_id=null;")
+        #        _logger.info('\n ***** Regimen Fiscales Actualizados *****\n')
+        #    except:
+        #        status = "Se encontraron Errores en la Ejecucion.\nConsulte al Desarrollador: info@fixdoo.mx"
+                
+        #elif self.select_catalog == "data/sat.arancel.csv":
+        #    _logger.info('\n***** Cargando el Fichero: %s\n' % self.select_catalog)
+        #    cr = self.env.cr
+        #    module_name = "l10n_mx_einvoice"
+        #    mode = "update"
+        #    kind = "data"
+        #    noupdate = True
+        #    report = ""
+        #    target_file = self._find_file_in_addons('l10n_mx_einvoice', "data/sat.arancel.csv")
+        #    tools.convert_file(cr, module_name, "data/sat.arancel.csv", False, mode, noupdate, kind, target_file)
+        #    _logger.info('\n ***** Fichero Cargado *****\n')
+            
+        else:
+            if self.select_catalog == "all":
+                list_csv_data = [
+                        'data/res.country.sat.code.csv', 
+                        'data/res.country.state.sat.code.csv', 
+                        'data/res.country.township.sat.code.csv', 
+                        "data/res.country.locality.sat.code.csv",
+                        "data/res.country.zip.sat.code.csv",
+                        "data/res.colonia.zip.sat.code.csv",
+                        'data/sat.aduana.csv',
+                        "data/sat.producto.csv",
+                        "data/sat.udm.csv",
+                        # Se puso en data.xml "data/sat.uso.cfdi.csv",
+                        #"data/sat.patente.csv",
+                        #"data/sat.patente.aduanal.csv",
+                        #"data/sat.arancel.csv",
+                ]
+                cr = self.env.cr
+                module_name = "l10n_mx_einvoice"
+                mode = "update"
+                kind = "data"
+                noupdate = True
+                report = ""
+                try:
+                    for csv_file in list_csv_data:
+                        _logger.info('\n***** Cargando el Fichero: %s\n' % csv_file)
+
+                        target_file = self._find_file_in_addons('l10n_mx_einvoice', csv_file)
+                        tools.convert_file(cr, module_name, csv_file, False, mode, noupdate, kind, target_file)
+                        
+                        _logger.info('\n ***** Fichero Cargado *****\n')
+                except:
+                    status = "Se encontraron Errores en el Procesamiento.\nConsulte al Desarrollador: info@fixdoo.mx"
+
+                ### Actualizando los Paises ###
+                _logger.info('\n***** Actualizando los Paises ********')
+                try:
+                    self.update_countrys_sat()
+                    _logger.info('\n ***** Paises ACtualizados *****\n')
+                except:
+                    status = "Se encontraron Errores en el Procesamiento.\nConsulte al Desarrollador: info@fixdoo.mx"
+                ### Actualizando los Estados ###
+                _logger.info('\n***** Actualizando los Estados ********\n')
+                try:
+                    self.update_countrys_states_sat()
+                    _logger.info('\n ***** Estados Actualizados *****\n')
+                except:
+                    status = "Se encontraron Errores en el Procesamiento.\nConsulte al Desarrollador: info@fixdoo.mx"
+                ### Actualizando los Codigos Postales ###
+                _logger.info('\n***** Actualizando los Codigos Postales ********\n')
+                try:
+                    self.env.cr.execute("
+                        update res_partner set zip_sat_id=res_country_zip_sat_code.id 
+                                                            from res_country_zip_sat_code 
+                                                            where res_country_zip_sat_code.code = res_partner.zip
+                                                            and res_partner.zip_sat_id is null;
+                        ")
+                    _logger.info('\n ***** Codigos Postales Actualizados *****\n')
+                except:
+                    status = "Se encontraron Errores en el Procesamiento.\nConsulte al Desarrollador: info@fixdoo.mx"
+
+                ### Actualizando los Regimen Fiscales ###
+                #_logger.info('\n***** Actualizando los Regimen Fiscales ********\n')
+                #try:
+                #    self.env.cr.execute("update res_partner set regimen_fiscal_id=null;")
+                #    _logger.info('\n ***** Regimen Fiscales Actualizados *****\n')
+                #except:
+                #    status = "Se encontraron Errores en la Ejecucion.\nConsulte al Desarrollador: info@fixdoo.mx"
+
+
+            else:   
+                csv_file = self.select_catalog
+                cr = self.env.cr
+                module_name = "l10n_mx_einvoice"
+                mode = "update"
+                kind = "data"
+                noupdate = True
+                report = ""
+                dependent_list = [
+                    "data/res.country.sat.code.csv",
+                    "data/res.country.state.sat.code.csv",
+                    "data/res.country.township.sat.code.csv",
+                    "data/res.country.locality.sat.code.csv",
+                    "data/res.country.zip.sat.code.csv",
+                    "data/res.colonia.zip.sat.code.csv",
+                    ]
+                if csv_file in dependent_list:
+                    index_select = dependent_list.index(csv_file)
+                    csv_list_to_read = dependent_list[0:index_select+1]
+                    try:
+                        for csv_dep in csv_list_to_read:
+                            _logger.info('\n***** Cargando el Fichero: %s\n' % csv_dep)
+                            target_file = self._find_file_in_addons('l10n_mx_einvoice', csv_dep)
+                            tools.convert_file(cr, module_name, csv_dep, False, mode, noupdate, kind, target_file)
+                            _logger.info('\n ***** Fichero Cargado *****\n')
+                    except:
+                        status = "Se encontraron Errores en el Procesamiento.\nConsulte al Desarrollador: info@fixdoo.mx"
+                else:
+                    if csv_file == "data/sat.patente.csv":
+                        dependent_list = [
+                                           "data/sat.aduana.csv",
+                                           "data/sat.patente.csv",
+                                           "data/sat.patente.aduanal.csv" 
+                                          ]
+                        try:
+                            for csv_dep in dependent_list:
+                                _logger.info('\n***** Cargando el Fichero: %s\n' % csv_dep)
+                                target_file = self._find_file_in_addons('l10n_mx_einvoice', csv_dep)
+                                tools.convert_file(cr, module_name, csv_dep, False, mode, noupdate, kind, target_file)
+                        
+                                _logger.info('\n ***** Fichero Cargado *****\n')
+                        except:
+                            status = "Se encontraron Errores en el Procesamiento.\nConsulte al Desarrollador: info@fixdoo.mx"
+
+                    else:
+                        _logger.info('\n***** Cargando el Fichero: %s\n' % csv_file)
+                        try:
+                            target_file = self._find_file_in_addons('l10n_mx_einvoice', csv_file)
+                            tools.convert_file(cr, module_name, csv_file, False, mode, noupdate, kind, target_file)
+                            _logger.info('\n ***** Fichero Cargado *****\n')
+                        except:
+                            status = "Se encontraron Errores en el Procesamiento.\nConsulte al Desarrollador: info@fixdoo.mx"
+
+        _logger.info('\n ***** Fin de la Carga de Datos *****\n')
+
+        self.write({'action_status': status,'load_data':True})
+        return self._reopen_wizard()
+
+
+    
+    def update_countrys_sat(self):
+        cr = self.env.cr
+        instance_class_data = update_mx_data.ReturnCountryMxData()
+        list_codes = instance_class_data.return_country_list()
+        for code in list_codes:
+            cr.execute("
+                update res_country set 
+                    sat_code = ( select id 
+                    from res_country_sat_code where code= %s limit 1) where code=%s;
+
+                ",(code[1],code[0]))
+    
+    
+    def update_countrys_states_sat(self):
+        cr = self.env.cr
+        instance_class_data = update_mx_data.ReturnCountryMxData()
+        list_codes = instance_class_data.return_states_list()
+        for code in list_codes:
+            cr.execute("
+                update res_country_state set 
+                    sat_code = ( select id 
+                    from res_country_state_sat_code where code= %s limit 1) where code=%s;
+
+                ",(code[1],code[0]))
+"""

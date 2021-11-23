@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
-from .pytransform import pyarmor_runtime
-pyarmor_runtime()
+
 from . import catalogos_sat
 from . import res_partner
 from . import res_company

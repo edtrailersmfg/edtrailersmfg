@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
-from .pytransform import pyarmor_runtime
-pyarmor_runtime()
+
 from . import eaccount_account_bank
 from . import account
 from . import account_move
