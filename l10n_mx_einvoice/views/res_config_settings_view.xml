@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_account_config_settings_l10n_mx_einvoice" model="ir.ui.view">
+            <field name="name">res config settings l10n_mx_einvoice</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <div id="analytic" position="after">
+                    <h2 groups="account.group_account_manager">Facturación Electrónica para México (CFDI 3.3)</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">PAC</span>
+                                <div class="text-muted">
+                                    Seleccione el PAC con el cual se obtendrán los Timbres de Facturación Electrónica.
+                                </div>
+                                <div class="content-group">
+                                    <div class="row mt16">
+                                        <label for="pac" class="col-lg-3 o_light_label"/>
+                                        <field name="pac" />
+                                    </div>
+                                </div>
+                                <br/>
+                                <span class="o_form_label">Credenciales de Acceso</span>
+                                <div class="text-muted">
+                                    Indique las credenciales para conectarse con el PAC
+                                </div>
+                                <div class="content-group">
+                                    <div class="row mt16">
+                                        <label for="pac_user" class="col-lg-3 o_light_label"/>
+                                        <field name="pac_user" />
+                                        <label for="pac_password" class="col-lg-3 o_light_label"/>
+                                        <field name="pac_password" password="True"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" id="pac_testing">
+                            <div class="o_setting_left_pane" />
+                            <div class="o_setting_right_pane" id="regimen_fiscal">
+                                <label for="regimen_fiscal_id"/>
+                                <div class="text-muted">
+                                    Seleccione el Régimen Fiscal a usar para la emisión de los CFDIs
+                                </div>
+                                <field name="regimen_fiscal_id" widget="selection"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" id="pac_testing">
+                            <div class="o_setting_left_pane">
+                                <field name="pac_testing"/>
+                            </div>
+                            <div class="o_setting_right_pane" id="pac_pruebas">
+                                <label string="PAC en Pruebas" for="pac_testing"/>
+                                <div class="text-muted">
+                                    Active si desea hacer pruebas de CFDI
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

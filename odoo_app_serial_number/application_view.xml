@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <record id="res_company_app_serial_settings" model="ir.ui.view">
+            <field name="name">res.company.serial_number</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Licencia de Aplicaciones">
+                        <p class="oe_grey">
+                            La liencia nos permite la correcta ejecución de algunas aplicaciones desarrolladas por externos, relacionada directamente con el RFC.
+                        </p>
+                        <group string="Licencia de Comprobación">
+                            <field name="odoo_serial_key" />
+                        </group>
+                    </page>
+                    
+                </notebook>
+            </field>
+        </record>
+
+    </data>
+    
+</odoo>

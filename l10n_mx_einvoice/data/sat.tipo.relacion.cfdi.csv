@@ -1,0 +1,10 @@
+id,code,name
+sat_relacion_cfdi_01,01,Nota de crédito de los documentos relacionados
+sat_relacion_cfdi_02,02,Nota de débito de los documentos relacionados
+sat_relacion_cfdi_03,03,Devolución de mercancía sobre facturas o traslados previos
+sat_relacion_cfdi_04,04,Sustitución de los CFDI previos
+sat_relacion_cfdi_05,05,Traslados de mercancias facturados previamente
+sat_relacion_cfdi_06,06,Factura generada por los traslados previos
+sat_relacion_cfdi_07,07,CFDI por aplicación de anticipo
+sat_relacion_cfdi_08,08,Factura generada por pagos en parcialidades
+sat_relacion_cfdi_09,09,Factura generada por pagos diferidos

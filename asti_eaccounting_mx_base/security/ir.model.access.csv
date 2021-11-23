@@ -1,0 +1,16 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"user_eaccount_complements","user_eaccount_complements",model_eaccount_complements,account.group_account_user,1,1,1,1
+"user_eaccount_complement_types","user_eaccount_complement_types",model_eaccount_complement_types,account.group_account_user,1,0,0,0
+"admin_eaccount_complements","admin_eaccount_complements",model_eaccount_complements,account.group_account_manager,1,1,1,1
+"admin_eaccount_complement_types","admin_eaccount_complement_types",model_eaccount_complement_types,account.group_account_manager,1,1,1,1
+access_account_move_concept_template_user,access_account_move_concept_template,model_account_move_concept_template,base.group_user,1,0,0,0
+access_account_move_concept_template_manager,access_account_move_concept_template,model_account_move_concept_template,account.group_account_manager,1,1,1,1
+access_catalogo_cuentas,access_catalogo_cuentas,model_catalogo_cuentas,base.group_user,1,0,0,0
+access_eaccount_bank_account,access_eaccount_bank_account,model_eaccount_bank_account,account.group_account_user,1,1,1,0
+access_period_chooser,access_period_chooser,model_period_chooser,account.group_account_user,1,1,1,0
+access_vouchers_xml_creator,access_vouchers_xml_creator,model_vouchers_xml_creator,account.group_account_user,1,1,1,0
+access_hesa_filegenerate,access_hesa_filegenerate,model_hesa_filegenerate,account.group_account_user,1,1,1,0
+access_catalogo_cuentas_wizard,access_catalogo_cuentas_wizard,model_catalogo_cuentas_wizard,account.group_account_user,1,1,1,0
+access_files_generator_wizard,access_files_generator_wizard,model_files_generator_wizard,account.group_account_user,1,1,1,0
+access_moveline_info_manager,access_moveline_info_manager,model_moveline_info_manager,account.group_account_user,1,1,1,0
+access_xsdvalidation_handler_wizard,access_xsdvalidation_handler_wizard,model_xsdvalidation_handler_wizard,account.group_account_user,1,1,1,0

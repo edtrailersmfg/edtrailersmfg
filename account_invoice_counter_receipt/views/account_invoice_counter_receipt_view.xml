@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_account_invoice_counter_receipt_form" model="ir.ui.view">
+            <field name="name">account.invoice.counter.receipt.form</field>
+            <field name="model">account.invoice.counter.receipt</field>
+            <field name="arch" type="xml">
+                <form string="Contra-Recibo">
+                    <header>
+                        <button name="action_print_document" type="object" states="confirmed" 
+                                string="Imprimir"/>
+                        <button name="action_cancel" type="object" states="confirmed" string="Cancelar" 
+                                confirm="Esta seguro que desea cancelar este documento?"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirmed"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                            <field name="move_type" invisible="1"/>
+                        </div>                        
+                       <group>
+                           <group>
+                               <field name="partner_id" />
+                               <field name="payment_term_id" />
+                               <field name="currency_id" groups="base.group_multi_currency"/>
+                            </group>
+                            <group>
+                                <field name="date" />
+                                <field name="date_due" />
+                                <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+                           </group>
+                        </group>
+                        <notebook>
+                            <page string="Facturas recibidas" colspan="4">
+                                <field name="invoice_m2m_ids" colspan="4" nolabel="1"
+                                   domain="[('move_type','!=','entry'),('state','=','posted'), ('payment_state','=','not_paid'), ('counter_receipt_id', '=', False),('commercial_partner_id','=',partner_id),('move_type','=',move_type)]">
+                                    <tree string="Facturas y Notas de Crédito">
+                                        <field name="name" />
+                                        <field name="ref" />
+                                        <field name="invoice_origin" optional="hide"/>
+                                        <field name="invoice_date" />
+                                        <field name="original_date_due" optional="hide"/>
+                                        <field name="invoice_date_due"/>
+                                        <field name="amount_untaxed" sum="SubTotalSuma"/>
+                                        <field name="amount_tax"  sum="TaxesSuma"/>
+                                        <field name="amount_total" sum="TotalSuma"/>
+                                        <field name="amount_residual"  sum="SaldoSuma"/>
+                                        <field name="currency_id" />
+                                        <field name="state" />
+                                        <field name="payment_state" />
+                                        
+                                    </tree>
+                                </field>
+                                <group>
+                                    <group>
+                                        <field name="amount_total" />
+                                        <field name="amount_residual" invisible="1"/>
+                                    </group>
+                                    <group>
+                                        <field name="amount_total_text" />
+                                        <field name="amount_residual_text" invisible="1"/>
+                                    </group>
+                                </group>
+                                <field name="notes" colspan="4" nolabel="1" placeholder="Observaciones..." />
+                            </page>
+                            <!--<page string="Facturas asociadas" colspan="4">
+                                <field name="invoice_ids" colspan="4" nolabel="1"/>
+                            </page>-->
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record id="view_account_invoice_counter_receipt_tree" model="ir.ui.view">
+            <field name="name">account.invoice.counter.receipt.tree</field>
+            <field name="model">account.invoice.counter.receipt</field>
+            <field name="arch" type="xml">
+                <tree string="Contra-Recibos"
+                      decoration-muted="state=='cancel'">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="date"/>
+                    <field name="date_due"/>
+                    <field name="payment_term_id" />
+                    <field name="amount_total" sum="sum_amount_total"/>
+                    <field name="amount_residual" sum="sum_amount_residual"/>
+                    <field name="currency_id" groups="base.group_multi_currency"/>                    
+                    <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="view_account_invoice_counter_receipt_search" model="ir.ui.view">
+            <field name="name">account.invoice.counter.receipt.search</field>
+            <field name="model">account.invoice.counter.receipt</field>
+            <field name="arch" type="xml">
+                <search string="Contra-Recibos">
+                    <field name="name" />
+                    <field name="partner_id" />
+                    <group expand="0" string="Group By">
+                        <filter string="Empresa" name="partner_id" context="{'group_by':'partner_id'}"/>
+                        <filter string="Estado" name="state" context="{'group_by':'state'}"/>
+                        <filter string="Fecha Contra-Recibo" name="date" context="{'group_by':'date'}"/>
+                        <filter string="Fecha Vencimiento" name="date_due" context="{'group_by':'date_due'}"/>
+                        <filter string="Moneda" name="currency_id" context="{'group_by':'currency_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        
+        
+        <record id="action_account_invoice_counter_receipt_supplier" model="ir.actions.act_window">
+            <field name="name">Contra-Recibos</field>
+            <field name="res_model">account.invoice.counter.receipt</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="search_view_id" ref="view_account_invoice_counter_receipt_search"/>
+            <field name="view_id" ref="view_account_invoice_counter_receipt_tree"/>
+            <field name="context">{'default_move_type':'in_invoice'}</field>
+            <field name="domain">[('move_type','=','in_invoice')]</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Capture nuevos contra-recibos de Facturas de Proveedor
+              </p><p>
+                Un contra-recibo nos ayuda a definir días de crédito a partir 
+                de la fecha de revisión que establezca la empresa, para que a
+                partir de la recepción "corran" los días de crédito pactados
+                con cada proveedor.
+              </p>
+            </field>
+        </record>
+        
+        
+        <menuitem id="menu_account_invoice_counter_receipt_supplier"
+                  action="action_account_invoice_counter_receipt_supplier" 
+                  parent="account.menu_finance_payables"
+                  groups="account.group_account_invoice"
+                  sequence="19"/>
+        
+        <record id="action_account_invoice_counter_receipt_customer" model="ir.actions.act_window">
+            <field name="name">Cartas de Cobro</field>
+            <field name="res_model">account.invoice.counter.receipt</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="search_view_id" ref="view_account_invoice_counter_receipt_search"/>
+            <field name="view_id" ref="view_account_invoice_counter_receipt_tree"/>
+            <field name="context">{'default_move_type':'out_invoice'}</field>
+            <field name="domain">[('move_type','=','out_invoice')]</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Capture nuevas Cartas de Cobro de Clientes
+              </p><p>
+                Una Carta de Cobro nos ayuda a definir días de crédito a partir 
+                de la fecha de revisión que establezca el cliente, para que a
+                partir de la recepción "corran" los días de crédito pactados
+                con cada cliente.
+              </p>
+            </field>
+        </record>
+        
+        <menuitem id="menu_account_invoice_counter_receipt_customer"
+                  action="action_account_invoice_counter_receipt_customer" 
+                  parent="account.menu_finance_receivables"
+                  groups="account.group_account_invoice"
+                  sequence="14"/>
+        
+    </data>
+</odoo>

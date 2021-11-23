@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+
+        <!-- Tipos de Comprobante -->
+    <record id="tipo_00" model="sat.tipo.comprobante">
+        <field name="code">I</field>
+        <field name="name">Ingreso</field>
+    </record>
+
+    <record id="tipo_01" model="sat.tipo.comprobante">
+        <field name="code">E</field>
+        <field name="name">Egreso</field>
+    </record>
+ 
+     <record id="tipo_02" model="sat.tipo.comprobante">
+        <field name="code">T</field>
+        <field name="name">Traslado</field>
+    </record>
+
+     <record id="tipo_03" model="sat.tipo.comprobante">
+        <field name="code">N</field>
+        <field name="name">Nómina</field>
+    </record>
+
+     <record id="tipo_04" model="sat.tipo.comprobante">
+        <field name="code">P</field>
+        <field name="name">Pago</field>
+    </record>
+ 
+     <!-- Metodos de Pago -->
+     <record id="metodo_00" model="sat.metodo.pago">
+        <field name="name">Pago en una sola exhibición</field>
+        <field name="code">PUE</field>
+    </record>
+
+     <!-- <record id="metodo_01" model="sat.metodo.pago">
+        <field name="name">Pago inicial y parcialidades</field>
+        <field name="code">PIP</field>
+    </record> -->
+
+    <record id="metodo_02" model="sat.metodo.pago">
+        <field name="name">Pago en parcialidades o diferido</field>
+        <field name="code">PPD</field>
+    </record>
+
+    <!-- IMPUESTOS -->
+    <record id="impuesto_01" model="sat.impuesto">
+        <field name="name">ISR</field>
+        <field name="code">001</field>
+        <field name="retencion">True</field>
+        <field name="traslado">False</field>
+        <field name="tipo">federal</field>
+    </record>
+
+    <record id="impuesto_02" model="sat.impuesto">
+        <field name="name">IVA</field>
+        <field name="code">002</field>
+        <field name="retencion">True</field>
+        <field name="traslado">True</field>
+        <field name="tipo">federal</field>
+    </record>
+
+    <record id="impuesto_03" model="sat.impuesto">
+        <field name="name">IEPS</field>
+        <field name="code">003</field>
+        <field name="retencion">True</field>
+        <field name="traslado">True</field>
+        <field name="tipo">federal</field>
+    </record>
+    
+    <!-- Usos CFDI -->
+    <record id="sat_uso_cfdi_G02" model="sat.uso.cfdi"><field name="code">G02</field><field name="name">Devoluciones, descuentos o bonificaciones</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="True"/></record>
+    <record id="sat_uso_cfdi_G03" model="sat.uso.cfdi"><field name="code">G03</field><field name="name">Gastos en general</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="True"/></record>
+    <record id="sat_uso_cfdi_I01" model="sat.uso.cfdi"><field name="code">I01</field><field name="name">Construcciones</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="True"/></record>
+    <record id="sat_uso_cfdi_I02" model="sat.uso.cfdi"><field name="code">I02</field><field name="name">Mobilario y equipo de oficina por inversiones</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="True"/></record>
+    <record id="sat_uso_cfdi_I03" model="sat.uso.cfdi"><field name="code">I03</field><field name="name">Equipo de transporte</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="True"/></record>
+    <record id="sat_uso_cfdi_I04" model="sat.uso.cfdi"><field name="code">I04</field><field name="name">Equipo de computo y accesorios</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="True"/></record>
+    <record id="sat_uso_cfdi_I05" model="sat.uso.cfdi"><field name="code">I05</field><field name="name">Dados, troqueles, moldes, matrices y herramental</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="True"/></record>
+    <record id="sat_uso_cfdi_I06" model="sat.uso.cfdi"><field name="code">I06</field><field name="name">Comunicaciones telefónicas</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="True"/></record>
+    <record id="sat_uso_cfdi_I07" model="sat.uso.cfdi"><field name="code">I07</field><field name="name">Comunicaciones satelitales</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="True"/></record>
+    <record id="sat_uso_cfdi_I08" model="sat.uso.cfdi"><field name="code">I08</field><field name="name">Otra maquinaria y equipo</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="True"/></record>
+    <record id="sat_uso_cfdi_D01" model="sat.uso.cfdi"><field name="code">D01</field><field name="name">Honorarios médicos, dentales y gastos hospitalarios.</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="False"/></record>
+    <record id="sat_uso_cfdi_D02" model="sat.uso.cfdi"><field name="code">D02</field><field name="name">Gastos médicos por incapacidad o discapacidad</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="False"/></record>
+    <record id="sat_uso_cfdi_D03" model="sat.uso.cfdi"><field name="code">D03</field><field name="name">Gastos funerales.</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="False"/></record>
+    <record id="sat_uso_cfdi_D04" model="sat.uso.cfdi"><field name="code">D04</field><field name="name">Donativos.</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="False"/></record>
+    <record id="sat_uso_cfdi_D05" model="sat.uso.cfdi"><field name="code">D05</field><field name="name">Intereses reales efectivamente pagados por créditos hipotecarios (casa habitación).</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="False"/></record>
+    <record id="sat_uso_cfdi_D06" model="sat.uso.cfdi"><field name="code">D06</field><field name="name">Aportaciones voluntarias al SAR.</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="False"/></record>
+    <record id="sat_uso_cfdi_D07" model="sat.uso.cfdi"><field name="code">D07</field><field name="name">Primas por seguros de gastos médicos.</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="False"/></record>
+    <record id="sat_uso_cfdi_D08" model="sat.uso.cfdi"><field name="code">D08</field><field name="name">Gastos de transportación escolar obligatoria.</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="False"/></record>
+    <record id="sat_uso_cfdi_D09" model="sat.uso.cfdi"><field name="code">D09</field><field name="name">Depósitos en cuentas para el ahorro, primas que tengan como base planes de pensiones.</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="False"/></record>
+    <record id="sat_uso_cfdi_D10" model="sat.uso.cfdi"><field name="code">D10</field><field name="name">Pagos por servicios educativos (colegiaturas)</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="False"/></record>
+    <record id="sat_uso_cfdi_P01" model="sat.uso.cfdi"><field name="code">P01</field><field name="name">Por definir</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="False"/></record>
+
+    <!-- Bancos (Contabilidad Electrónica) -->
+    <record id="eaccount_bank_BANAMEX" model="eaccount.bank"><field name="code">BANAMEX</field><field name="name">Banco Nacional de México, S.A., Institución de Banca Múltiple, Grupo Financiero Banamex</field><field name="bic">002</field></record>
+    <record id="eaccount_bank_BANCOMEXT" model="eaccount.bank"><field name="code">BANCOMEXT</field><field name="name">Banco Nacional de Comercio Exterior, Sociedad Nacional de Crédito, Institución de Banca de Desarrollo</field><field name="bic">006</field></record>
+    <record id="eaccount_bank_BANOBRAS" model="eaccount.bank"><field name="code">BANOBRAS</field><field name="name">Banco Nacional de Obras y Servicios Públicos, Sociedad Nacional de Crédito, Institución de Banca de Desarrollo</field><field name="bic">009</field></record>
+    <record id="eaccount_bank_BBVA_BANCOMER" model="eaccount.bank"><field name="code">BBVA_BANCOMER</field><field name="name">BBVA Bancomer, S.A., Institución de Banca Múltiple, Grupo Financiero BBVA Bancomer</field><field name="bic">012</field></record>
+    <record id="eaccount_bank_SANTANDER" model="eaccount.bank"><field name="code">SANTANDER</field><field name="name">Banco Santander (México), S.A., Institución de Banca Múltiple, Grupo Financiero Santander</field><field name="bic">014</field></record>
+    <record id="eaccount_bank_BANJERCITO" model="eaccount.bank"><field name="code">BANJERCITO</field><field name="name">Banco Nacional del Ejército, Fuerza Aérea y Armada, Sociedad Nacional de Crédito, Institución de Banca de Desarrollo</field><field name="bic">019</field></record>
+    <record id="eaccount_bank_HSBC" model="eaccount.bank"><field name="code">HSBC</field><field name="name">HSBC México, S.A., institución De Banca Múltiple, Grupo Financiero HSBC</field><field name="bic">021</field></record>
+    <record id="eaccount_bank_BAJIO" model="eaccount.bank"><field name="code">BAJIO</field><field name="name">Banco del Bajío, S.A., Institución de Banca Múltiple</field><field name="bic">030</field></record>
+    <record id="eaccount_bank_IXE" model="eaccount.bank"><field name="code">IXE</field><field name="name">IXE Banco, S.A., Institución de Banca Múltiple, IXE Grupo Financiero</field><field name="bic">032</field></record>
+    <record id="eaccount_bank_INBURSA" model="eaccount.bank"><field name="code">INBURSA</field><field name="name">Banco Inbursa, S.A., Institución de Banca Múltiple, Grupo Financiero Inbursa</field><field name="bic">036</field></record>
+    <record id="eaccount_bank_INTERACCIONES" model="eaccount.bank"><field name="code">INTERACCIONES</field><field name="name">Banco Interacciones, S.A., Institución de Banca Múltiple</field><field name="bic">037</field></record>
+    <record id="eaccount_bank_MIFEL" model="eaccount.bank"><field name="code">MIFEL</field><field name="name">Banca Mifel, S.A., Institución de Banca Múltiple, Grupo Financiero Mifel</field><field name="bic">042</field></record>
+    <record id="eaccount_bank_SCOTIABANK" model="eaccount.bank"><field name="code">SCOTIABANK</field><field name="name">Scotiabank Inverlat, S.A.</field><field name="bic">044</field></record>
+    <record id="eaccount_bank_BANREGIO" model="eaccount.bank"><field name="code">BANREGIO</field><field name="name">Banco Regional de Monterrey, S.A., Institución de Banca Múltiple, Banregio Grupo Financiero</field><field name="bic">058</field></record>
+    <record id="eaccount_bank_INVEX" model="eaccount.bank"><field name="code">INVEX</field><field name="name">Banco Invex, S.A., Institución de Banca Múltiple, Invex Grupo Financiero</field><field name="bic">059</field></record>
+    <record id="eaccount_bank_BANSI" model="eaccount.bank"><field name="code">BANSI</field><field name="name">Bansi, S.A., Institución de Banca Múltiple</field><field name="bic">060</field></record>
+    <record id="eaccount_bank_AFIRME" model="eaccount.bank"><field name="code">AFIRME</field><field name="name">Banca Afirme, S.A., Institución de Banca Múltiple</field><field name="bic">062</field></record>
+    <record id="eaccount_bank_BANORTE" model="eaccount.bank"><field name="code">BANORTE</field><field name="name">Banco Mercantil del Norte, S.A., Institución de Banca Múltiple, Grupo Financiero Banorte</field><field name="bic">072</field></record>
+    <record id="eaccount_bank_THE_ROYAL_BANK" model="eaccount.bank"><field name="code">THE_ROYAL_BANK</field><field name="name">The Royal Bank of Scotland México, S.A., Institución de Banca Múltiple</field><field name="bic">102</field></record>
+    <record id="eaccount_bank_AMERICAN_EXPRESS" model="eaccount.bank"><field name="code">AMERICAN_EXPRESS</field><field name="name">American Express Bank (México), S.A., Institución de Banca Múltiple</field><field name="bic">103</field></record>
+    <record id="eaccount_bank_BAMSA" model="eaccount.bank"><field name="code">BAMSA</field><field name="name">Bank of America México, S.A., Institución de Banca Múltiple, Grupo Financiero Bank of America</field><field name="bic">106</field></record>
+    <record id="eaccount_bank_TOKYO" model="eaccount.bank"><field name="code">TOKYO</field><field name="name">Bank of Tokyo-Mitsubishi UFJ (México), S.A.</field><field name="bic">108</field></record>
+    <record id="eaccount_bank_JP_MORGAN" model="eaccount.bank"><field name="code">JP_MORGAN</field><field name="name">Banco J.P. Morgan, S.A., Institución de Banca Múltiple, J.P. Morgan Grupo Financiero</field><field name="bic">110</field></record>
+    <record id="eaccount_bank_BMONEX" model="eaccount.bank"><field name="code">BMONEX</field><field name="name">Banco Monex, S.A., Institución de Banca Múltiple</field><field name="bic">112</field></record>
+    <record id="eaccount_bank_VE_POR_MAS" model="eaccount.bank"><field name="code">VE_POR_MAS</field><field name="name">Banco Ve Por Mas, S.A. Institución de Banca Múltiple</field><field name="bic">113</field></record>
+    <record id="eaccount_bank_ING" model="eaccount.bank"><field name="code">ING</field><field name="name">ING Bank (México), S.A., Institución de Banca Múltiple, ING Grupo Financiero</field><field name="bic">116</field></record>
+    <record id="eaccount_bank_DEUTSCHE" model="eaccount.bank"><field name="code">DEUTSCHE</field><field name="name">Deutsche Bank México, S.A., Institución de Banca Múltiple</field><field name="bic">124</field></record>
+    <record id="eaccount_bank_CREDIT_SUISSE" model="eaccount.bank"><field name="code">CREDIT_SUISSE</field><field name="name">Banco Credit Suisse (México), S.A. Institución de Banca Múltiple, Grupo Financiero Credit Suisse (México)</field><field name="bic">126</field></record>
+    <record id="eaccount_bank_AZTECA" model="eaccount.bank"><field name="code">AZTECA</field><field name="name">Banco Azteca, S.A. Institución de Banca Múltiple.</field><field name="bic">127</field></record>
+    <record id="eaccount_bank_AUTOFIN" model="eaccount.bank"><field name="code">AUTOFIN</field><field name="name">Banco Autofin México, S.A. Institución de Banca Múltiple</field><field name="bic">128</field></record>
+    <record id="eaccount_bank_BARCLAYS" model="eaccount.bank"><field name="code">BARCLAYS</field><field name="name">Barclays Bank México, S.A., Institución de Banca Múltiple, Grupo Financiero Barclays México</field><field name="bic">129</field></record>
+    <record id="eaccount_bank_COMPARTAMOS" model="eaccount.bank"><field name="code">COMPARTAMOS</field><field name="name">Banco Compartamos, S.A., Institución de Banca Múltiple</field><field name="bic">130</field></record>
+    <record id="eaccount_bank_BANCO_FAMSA" model="eaccount.bank"><field name="code">BANCO_FAMSA</field><field name="name">Banco Ahorro Famsa, S.A., Institución de Banca Múltiple</field><field name="bic">131</field></record>
+    <record id="eaccount_bank_BMULTIVA" model="eaccount.bank"><field name="code">BMULTIVA</field><field name="name">Banco Multiva, S.A., Institución de Banca Múltiple, Multivalores Grupo Financiero</field><field name="bic">132</field></record>
+    <record id="eaccount_bank_ACTINVER" model="eaccount.bank"><field name="code">ACTINVER</field><field name="name">Banco Actinver, S.A. Institución de Banca Múltiple, Grupo Financiero Actinver</field><field name="bic">133</field></record>
+    <record id="eaccount_bank_WAL-MART" model="eaccount.bank"><field name="code">WAL-MART</field><field name="name">Banco Wal-Mart de México Adelante, S.A., Institución de Banca Múltiple</field><field name="bic">134</field></record>
+    <record id="eaccount_bank_NAFIN" model="eaccount.bank"><field name="code">NAFIN</field><field name="name">Nacional Financiera, Sociedad Nacional de Crédito, Institución de Banca de Desarrollo</field><field name="bic">135</field></record>
+    <record id="eaccount_bank_INTERBANCO" model="eaccount.bank"><field name="code">INTERBANCO</field><field name="name">Inter Banco, S.A. Institución de Banca Múltiple </field><field name="bic">136</field></record>
+    <record id="eaccount_bank_BANCOPPEL" model="eaccount.bank"><field name="code">BANCOPPEL</field><field name="name">BanCoppel, S.A., Institución de Banca Múltiple </field><field name="bic">137</field></record>
+    <record id="eaccount_bank_ABC_CAPITAL" model="eaccount.bank"><field name="code">ABC_CAPITAL</field><field name="name">ABC Capital, S.A., Institución de Banca Múltiple </field><field name="bic">138</field></record>
+    <record id="eaccount_bank_UBS_BANK" model="eaccount.bank"><field name="code">UBS_BANK</field><field name="name">UBS Bank México, S.A., Institución de Banca Múltiple, UBS Grupo Financiero </field><field name="bic">139</field></record>
+    <record id="eaccount_bank_CONSUBANCO" model="eaccount.bank"><field name="code">CONSUBANCO</field><field name="name">Consubanco, S.A. Institución de Banca Múltiple </field><field name="bic">140</field></record>
+    <record id="eaccount_bank_VOLKSWAGEN" model="eaccount.bank"><field name="code">VOLKSWAGEN</field><field name="name">Volkswagen Bank, S.A., Institución de Banca Múltiple </field><field name="bic">141</field></record>
+    <record id="eaccount_bank_CIBANCO" model="eaccount.bank"><field name="code">CIBANCO</field><field name="name">CIBanco, S.A. </field><field name="bic">143</field></record>
+    <record id="eaccount_bank_BBASE" model="eaccount.bank"><field name="code">BBASE</field><field name="name">Banco Base, S.A., Institución de Banca Múltiple </field><field name="bic">145</field></record>
+    <record id="eaccount_bank_BANSEFI" model="eaccount.bank"><field name="code">BANSEFI</field><field name="name">Banco del Ahorro Nacional y Servicios Financieros, Sociedad Nacional de Crédito, Institución de Banca de Desarrollo </field><field name="bic">166</field></record>
+    <record id="eaccount_bank_HIPOTECARIA_FEDERAL" model="eaccount.bank"><field name="code">HIPOTECARIA_FEDERAL</field><field name="name">Sociedad Hipotecaria Federal, Sociedad Nacional de Crédito, Institución de Banca de Desarrollo </field><field name="bic">168</field></record>
+    <record id="eaccount_bank_MONEXCB" model="eaccount.bank"><field name="code">MONEXCB</field><field name="name">Monex Casa de Bolsa, S.A. de C.V. Monex Grupo Financiero </field><field name="bic">600</field></record>
+    <record id="eaccount_bank_GBM" model="eaccount.bank"><field name="code">GBM</field><field name="name">GBM Grupo Bursátil Mexicano, S.A. de C.V. Casa de Bolsa </field><field name="bic">601</field></record>
+    <record id="eaccount_bank_MASARI" model="eaccount.bank"><field name="code">MASARI</field><field name="name">Masari Casa de Bolsa, S.A. </field><field name="bic">602</field></record>
+    <record id="eaccount_bank_VALUE" model="eaccount.bank"><field name="code">VALUE</field><field name="name">Value, S.A. de C.V. Casa de Bolsa </field><field name="bic">605</field></record>
+    <record id="eaccount_bank_ESTRUCTURADORES" model="eaccount.bank"><field name="code">ESTRUCTURADORES</field><field name="name">Estructuradores del Mercado de Valores Casa de Bolsa, S.A. de C.V. </field><field name="bic">606</field></record>
+    <record id="eaccount_bank_TIBER" model="eaccount.bank"><field name="code">TIBER</field><field name="name">Casa de Cambio Tiber, S.A. de C.V. </field><field name="bic">607</field></record>
+    <record id="eaccount_bank_VECTOR" model="eaccount.bank"><field name="code">VECTOR</field><field name="name">Vector Casa de Bolsa, S.A. de C.V. </field><field name="bic">608</field></record>
+    <record id="eaccount_bank_BYB" model="eaccount.bank"><field name="code">ByB</field><field name="name">B y B, Casa de Cambio, S.A. de C.V. </field><field name="bic">610</field></record>
+    <record id="eaccount_bank_ACCIVAL" model="eaccount.bank"><field name="code">ACCIVAL</field><field name="name">Acciones y Valores Banamex, S.A. de C.V., Casa de Bolsa </field><field name="bic">614</field></record>
+    <record id="eaccount_bank_MERRILL_LYNCH" model="eaccount.bank"><field name="code">MERRILL_LYNCH</field><field name="name">Merrill Lynch México, S.A. de C.V. Casa de Bolsa </field><field name="bic">615</field></record>
+    <record id="eaccount_bank_FINAMEX" model="eaccount.bank"><field name="code">FINAMEX</field><field name="name">Casa de Bolsa Finamex, S.A. de C.V. </field><field name="bic">616</field></record>
+    <record id="eaccount_bank_VALMEX" model="eaccount.bank"><field name="code">VALMEX</field><field name="name">Valores Mexicanos Casa de Bolsa, S.A. de C.V. </field><field name="bic">617</field></record>
+    <record id="eaccount_bank_UNICA" model="eaccount.bank"><field name="code">UNICA</field><field name="name">Unica Casa de Cambio, S.A. de C.V. </field><field name="bic">618</field></record>
+    <record id="eaccount_bank_MAPFRE" model="eaccount.bank"><field name="code">MAPFRE</field><field name="name">MAPFRE Tepeyac, S.A. </field><field name="bic">619</field></record>
+    <record id="eaccount_bank_PROFUTURO" model="eaccount.bank"><field name="code">PROFUTURO</field><field name="name">Profuturo G.N.P., S.A. de C.V., Afore </field><field name="bic">620</field></record>
+    <record id="eaccount_bank_CB_ACTINVER" model="eaccount.bank"><field name="code">CB_ACTINVER</field><field name="name">Actinver Casa de Bolsa, S.A. de C.V. </field><field name="bic">621</field></record>
+    <record id="eaccount_bank_OACTIN" model="eaccount.bank"><field name="code">OACTIN</field><field name="name">OPERADORA ACTINVER, S.A. DE C.V. </field><field name="bic">622</field></record>
+    <record id="eaccount_bank_SKANDIA" model="eaccount.bank"><field name="code">SKANDIA</field><field name="name">Skandia Vida, S.A. de C.V. </field><field name="bic">623</field></record>
+    <record id="eaccount_bank_CBDEUTSCHE" model="eaccount.bank"><field name="code">CBDEUTSCHE</field><field name="name">Deutsche Securities, S.A. de C.V. CASA DE BOLSA </field><field name="bic">626</field></record>
+    <record id="eaccount_bank_ZURICH" model="eaccount.bank"><field name="code">ZURICH</field><field name="name">Zurich Compañía de Seguros, S.A. </field><field name="bic">627</field></record>
+    <record id="eaccount_bank_ZURICHVI" model="eaccount.bank"><field name="code">ZURICHVI</field><field name="name">Zurich Vida, Compañía de Seguros, S.A. </field><field name="bic">628</field></record>
+    <record id="eaccount_bank_SU_CASITA" model="eaccount.bank"><field name="code">SU_CASITA</field><field name="name">Hipotecaria Su Casita, S.A. de C.V. SOFOM ENR </field><field name="bic">629</field></record>
+    <record id="eaccount_bank_CB_INTERCAM" model="eaccount.bank"><field name="code">CB_INTERCAM</field><field name="name">Intercam Casa de Bolsa, S.A. de C.V. </field><field name="bic">630</field></record>
+    <record id="eaccount_bank_CI_BOLSA" model="eaccount.bank"><field name="code">CI_BOLSA</field><field name="name">CI Casa de Bolsa, S.A. de C.V. </field><field name="bic">631</field></record>
+    <record id="eaccount_bank_BULLTICK_CB" model="eaccount.bank"><field name="code">BULLTICK_CB</field><field name="name">Bulltick Casa de Bolsa, S.A., de C.V. </field><field name="bic">632</field></record>
+    <record id="eaccount_bank_STERLING" model="eaccount.bank"><field name="code">STERLING</field><field name="name">Sterling Casa de Cambio, S.A. de C.V. </field><field name="bic">633</field></record>
+    <record id="eaccount_bank_FINCOMUN" model="eaccount.bank"><field name="code">FINCOMUN</field><field name="name">Fincomún, Servicios Financieros Comunitarios, S.A. de C.V. </field><field name="bic">634</field></record>
+    <record id="eaccount_bank_HDI_SEGUROS" model="eaccount.bank"><field name="code">HDI_SEGUROS</field><field name="name">HDI Seguros, S.A. de C.V. </field><field name="bic">636</field></record>
+    <record id="eaccount_bank_ORDER" model="eaccount.bank"><field name="code">ORDER</field><field name="name">Order Express Casa de Cambio, S.A. de C.V </field><field name="bic">637</field></record>
+    <record id="eaccount_bank_AKALA" model="eaccount.bank"><field name="code">AKALA</field><field name="name">Akala, S.A. de C.V., Sociedad Financiera Popular </field><field name="bic">638</field></record>
+    <record id="eaccount_bank_CB_JPMORGAN" model="eaccount.bank"><field name="code">CB_JPMORGAN</field><field name="name">J.P. Morgan Casa de Bolsa, S.A. de C.V. J.P. Morgan Grupo Financiero </field><field name="bic">640</field></record>
+    <record id="eaccount_bank_REFORMA" model="eaccount.bank"><field name="code">REFORMA</field><field name="name">Operadora de Recursos Reforma, S.A. de C.V., S.F.P. </field><field name="bic">642</field></record>
+    <record id="eaccount_bank_STP" model="eaccount.bank"><field name="code">STP</field><field name="name">Sistema de Transferencias y Pagos STP, S.A. de C.V.SOFOM ENR </field><field name="bic">646</field></record>
+    <record id="eaccount_bank_TELECOMM" model="eaccount.bank"><field name="code">TELECOMM</field><field name="name">Telecomunicaciones de México </field><field name="bic">647</field></record>
+    <record id="eaccount_bank_EVERCORE" model="eaccount.bank"><field name="code">EVERCORE</field><field name="name">Evercore Casa de Bolsa, S.A. de C.V. </field><field name="bic">648</field></record>
+    <record id="eaccount_bank_SKANDIA" model="eaccount.bank"><field name="code">SKANDIA</field><field name="name">Skandia Operadora de Fondos, S.A. de C.V. </field><field name="bic">649</field></record>
+    <record id="eaccount_bank_SEGMTY" model="eaccount.bank"><field name="code">SEGMTY</field><field name="name">Seguros Monterrey New York Life, S.A de C.V </field><field name="bic">651</field></record>
+    <record id="eaccount_bank_ASEA" model="eaccount.bank"><field name="code">ASEA</field><field name="name">Solución Asea, S.A. de C.V., Sociedad Financiera Popular </field><field name="bic">652</field></record>
+    <record id="eaccount_bank_KUSPIT" model="eaccount.bank"><field name="code">KUSPIT</field><field name="name">Kuspit Casa de Bolsa, S.A. de C.V. </field><field name="bic">653</field></record>
+    <record id="eaccount_bank_SOFIEXPRESS" model="eaccount.bank"><field name="code">SOFIEXPRESS</field><field name="name">J.P. SOFIEXPRESS, S.A. de C.V., S.F.P. </field><field name="bic">655</field></record>
+    <record id="eaccount_bank_UNAGRA" model="eaccount.bank"><field name="code">UNAGRA</field><field name="name">UNAGRA, S.A. de C.V., S.F.P. </field><field name="bic">656</field></record>
+    <record id="eaccount_bank_OPCIONES_EMPRESARIALES_DEL_NOROESTE" model="eaccount.bank"><field name="code">OPCIONES_EMPRESARIALES_DEL_NOROESTE</field><field name="name">OPCIONES EMPRESARIALES DEL NORESTE, S.A. DE C.V., S.F.P. </field><field name="bic">659</field></record>
+    <record id="eaccount_bank_CLS" model="eaccount.bank"><field name="code">CLS</field><field name="name">Cls Bank International </field><field name="bic">901</field></record>
+    <record id="eaccount_bank_INDEVAL" model="eaccount.bank"><field name="code">INDEVAL</field><field name="name">SD. Indeval, S.A. de C.V. </field><field name="bic">902</field></record>
+    <record id="eaccount_bank_LIBERTAD" model="eaccount.bank"><field name="code">LIBERTAD</field><field name="name">Libertad Servicios Financieros, S.A. De C.V. </field><field name="bic">670</field></record>
+    <record id="eaccount_bank_N/A" model="eaccount.bank"><field name="code">N/A</field><field name="name"></field><field name="bic">999</field></record>
+
+    <!-- eaccount.payment.methods   -->
+    <record id="eaccount_payment_methods_02" model="eaccount.payment.methods"><field name="code">02</field><field name="name">Cheque</field></record>
+    <record id="eaccount_payment_methods_03" model="eaccount.payment.methods"><field name="code">03</field><field name="name">Transferencia</field></record>
+    <record id="eaccount_payment_methods_04" model="eaccount.payment.methods"><field name="code">04</field><field name="name">Tarjetas de crédito</field></record>
+    <record id="eaccount_payment_methods_05" model="eaccount.payment.methods"><field name="code">05</field><field name="name">Monederos electrónicos</field></record>
+    <record id="eaccount_payment_methods_06" model="eaccount.payment.methods"><field name="code">06</field><field name="name">Dinero electrónico</field></record>
+    <record id="eaccount_payment_methods_07" model="eaccount.payment.methods"><field name="code">07</field><field name="name">Tarjetas digitales</field></record>
+    <record id="eaccount_payment_methods_08" model="eaccount.payment.methods"><field name="code">08</field><field name="name">Vales de despensa</field></record>
+    <record id="eaccount_payment_methods_09" model="eaccount.payment.methods"><field name="code">09</field><field name="name">Bienes</field></record>
+    <record id="eaccount_payment_methods_10" model="eaccount.payment.methods"><field name="code">10</field><field name="name">Servicio</field></record>
+    <record id="eaccount_payment_methods_11" model="eaccount.payment.methods"><field name="code">11</field><field name="name">Por cuenta de tercero</field></record>
+    <record id="eaccount_payment_methods_12" model="eaccount.payment.methods"><field name="code">12</field><field name="name">Dación en pago</field></record>
+    <record id="eaccount_payment_methods_13" model="eaccount.payment.methods"><field name="code">13</field><field name="name">Pago por subrogación</field></record>
+    <record id="eaccount_payment_methods_14" model="eaccount.payment.methods"><field name="code">14</field><field name="name">Pago por consignación</field></record>
+    <record id="eaccount_payment_methods_15" model="eaccount.payment.methods"><field name="code">15</field><field name="name">Condonación</field></record>
+    <record id="eaccount_payment_methods_16" model="eaccount.payment.methods"><field name="code">16</field><field name="name">Cancelación</field></record>
+    <record id="eaccount_payment_methods_17" model="eaccount.payment.methods"><field name="code">17</field><field name="name">Compensación</field></record>
+    <record id="eaccount_payment_methods_98" model="eaccount.payment.methods"><field name="code">98</field><field name="name">NA</field></record>
+    <record id="eaccount_payment_methods_99" model="eaccount.payment.methods"><field name="code">99</field><field name="name">Otros</field></record>
+
+    <!-- res.country  Actualizacion de nombres de paises -->
+    <record id="base.ad" model="res.country">
+        <field name="sat_code">AND</field>
+    </record>
+    <record id="base.ae" model="res.country">
+        <field name="sat_code">ARE</field>
+    </record>
+    <record id="base.af" model="res.country">
+        <field name="sat_code">AFG</field>
+    </record>
+    <record id="base.ag" model="res.country">
+        <field name="sat_code">ATG</field>
+    </record>
+    <record id="base.ai" model="res.country">
+        <field name="sat_code">AIA</field>
+    </record>
+    <record id="base.al" model="res.country">
+        <field name="sat_code">ALB</field>
+    </record>
+    <record id="base.am" model="res.country">
+        <field name="sat_code">ARM</field>
+    </record>
+    <record id="base.ao" model="res.country">
+        <field name="sat_code">AGO</field>
+    </record>
+    <record id="base.aq" model="res.country">
+        <field name="sat_code">ATA</field>
+    </record>
+    <record id="base.ar" model="res.country">
+        <field name="sat_code">ARG</field>
+    </record>
+    <record id="base.as" model="res.country">
+        <field name="sat_code">ASM</field>
+    </record>
+    <record id="base.at" model="res.country">
+        <field name="sat_code">AUT</field>
+    </record>
+    <record id="base.au" model="res.country">
+        <field name="sat_code">AUS</field>
+    </record>
+    <record id="base.aw" model="res.country">
+        <field name="sat_code">ABW</field>
+    </record>
+    <record id="base.ax" model="res.country">
+        <field name="sat_code">ALA</field>
+    </record>
+    <record id="base.az" model="res.country">
+        <field name="sat_code">AZE</field>
+    </record>
+    <record id="base.ba" model="res.country">
+        <field name="sat_code">BIH</field>
+    </record>
+    <record id="base.bb" model="res.country">
+        <field name="sat_code">BRB</field>
+    </record>
+    <record id="base.bd" model="res.country">
+        <field name="sat_code">BGD</field>
+    </record>
+    <record id="base.be" model="res.country">
+        <field name="sat_code">BEL</field>
+    </record>
+    <record id="base.bf" model="res.country">
+        <field name="sat_code">BFA</field>
+    </record>
+    <record id="base.bg" model="res.country">
+        <field name="sat_code">BGR</field>
+    </record>
+    <record id="base.bh" model="res.country">
+        <field name="sat_code">BHR</field>
+    </record>
+    <record id="base.bi" model="res.country">
+        <field name="sat_code">BDI</field>
+    </record>
+    <record id="base.bj" model="res.country">
+        <field name="sat_code">BEN</field>
+    </record>
+    <record id="base.bl" model="res.country">
+        <field name="sat_code">BLM</field>
+    </record>
+    <record id="base.bm" model="res.country">
+        <field name="sat_code">BMU</field>
+    </record>
+    <record id="base.bn" model="res.country">
+        <field name="sat_code">BRN</field>
+    </record>
+    <record id="base.bo" model="res.country">
+        <field name="sat_code">BOL</field>
+    </record>
+    <record id="base.bq" model="res.country">
+        <field name="sat_code">BES</field>
+    </record>
+    <record id="base.br" model="res.country">
+        <field name="sat_code">BRA</field>
+    </record>
+    <record id="base.bs" model="res.country">
+        <field name="sat_code">BHS</field>
+    </record>
+    <record id="base.bt" model="res.country">
+        <field name="sat_code">BTN</field>
+    </record>
+    <record id="base.bv" model="res.country">
+        <field name="sat_code">BVT</field>
+    </record>
+    <record id="base.bw" model="res.country">
+        <field name="sat_code">BWA</field>
+    </record>
+    <record id="base.by" model="res.country">
+        <field name="sat_code">BLR</field>
+    </record>
+    <record id="base.bz" model="res.country">
+        <field name="sat_code">BLZ</field>
+    </record>
+    <record id="base.ca" model="res.country">
+        <field name="sat_code">CAN</field>
+    </record>
+    <record id="base.cc" model="res.country">
+        <field name="sat_code">CCK</field>
+    </record>
+    <record id="base.cf" model="res.country">
+        <field name="sat_code">CAF</field>
+    </record>
+    <record id="base.cd" model="res.country">
+        <field name="sat_code">COD</field>
+    </record>
+    <record id="base.cg" model="res.country">
+        <field name="sat_code">COG</field>
+    </record>
+    <record id="base.ch" model="res.country">
+        <field name="sat_code">CHE</field>
+    </record>
+    <record id="base.ci" model="res.country">
+        <field name="sat_code">CIV</field>
+    </record>
+    <record id="base.ck" model="res.country">
+        <field name="sat_code">COK</field>
+    </record>
+    <record id="base.cl" model="res.country">
+        <field name="sat_code">CHL</field>
+    </record>
+    <record id="base.cm" model="res.country">
+        <field name="sat_code">CMR</field>
+    </record>
+    <record id="base.cn" model="res.country">
+        <field name="sat_code">CHN</field>
+    </record>
+    <record id="base.co" model="res.country">
+        <field name="sat_code">COL</field>
+    </record>
+    <record id="base.cr" model="res.country">
+        <field name="sat_code">CRI</field>
+    </record>
+    <record id="base.cu" model="res.country">
+        <field name="sat_code">CUB</field>
+    </record>
+    <record id="base.cv" model="res.country">
+        <field name="sat_code">CPV</field>
+    </record>
+    <record id="base.cw" model="res.country">
+        <field name="sat_code">CUW</field>
+    </record>
+    <record id="base.cx" model="res.country">
+        <field name="sat_code">CXR</field>
+    </record>
+    <record id="base.cy" model="res.country">
+        <field name="sat_code">CYP</field>
+    </record>
+    <record id="base.cz" model="res.country">
+        <field name="sat_code">CZE</field>
+    </record>
+    <record id="base.de" model="res.country">
+        <field name="sat_code">DEU</field>
+    </record>
+    <record id="base.dj" model="res.country">
+        <field name="sat_code">DJI</field>
+    </record>
+    <record id="base.dk" model="res.country">
+        <field name="sat_code">DNK</field>
+    </record>
+    <record id="base.dm" model="res.country">
+        <field name="sat_code">DMA</field>
+    </record>
+    <record id="base.do" model="res.country">
+        <field name="sat_code">DOM</field>
+    </record>
+    <record id="base.dz" model="res.country">
+        <field name="sat_code">DZA</field>
+    </record>
+    <record id="base.ec" model="res.country">
+        <field name="sat_code">ECU</field>
+    </record>
+    <record id="base.ee" model="res.country">
+        <field name="sat_code">EST</field>
+    </record>
+    <record id="base.eg" model="res.country">
+        <field name="sat_code">EGY</field>
+    </record>
+    <record id="base.eh" model="res.country">
+        <field name="sat_code">ESH</field>
+    </record>
+    <record id="base.er" model="res.country">
+        <field name="sat_code">ERI</field>
+    </record>
+    <record id="base.es" model="res.country">
+        <field name="sat_code">ESP</field>
+    </record>
+    <record id="base.et" model="res.country">
+        <field name="sat_code">ETH</field>
+    </record>
+    <record id="base.fi" model="res.country">
+        <field name="sat_code">FIN</field>
+    </record>
+    <record id="base.fj" model="res.country">
+        <field name="sat_code">FJI</field>
+    </record>
+    <record id="base.fk" model="res.country">
+        <field name="sat_code">FLK</field>
+    </record>
+    <record id="base.fm" model="res.country">
+        <field name="sat_code">FSM</field>
+    </record>
+    <record id="base.fo" model="res.country">
+        <field name="sat_code">FRO</field>
+    </record>
+    <record id="base.fr" model="res.country">
+        <field name="sat_code">FRA</field>
+    </record>
+    <record id="base.ga" model="res.country">
+        <field name="sat_code">GAB</field>
+    </record>
+    <record id="base.gd" model="res.country">
+        <field name="sat_code">GRD</field>
+    </record>
+    <record id="base.ge" model="res.country">
+        <field name="sat_code">GEO</field>
+    </record>
+    <record id="base.gf" model="res.country">
+        <field name="sat_code">GUY</field>
+    </record>
+    <record id="base.gh" model="res.country">
+        <field name="sat_code">GHA</field>
+    </record>
+    <record id="base.gi" model="res.country">
+        <field name="sat_code">GIB</field>
+    </record>
+    <record id="base.gg" model="res.country">
+        <field name="sat_code">GGY</field>
+    </record>
+    <record id="base.gl" model="res.country">
+        <field name="sat_code">GRL</field>
+    </record>
+    <record id="base.gm" model="res.country">
+        <field name="sat_code">GMB</field>
+    </record>
+    <record id="base.gn" model="res.country">
+        <field name="sat_code">GIN</field>
+    </record>
+    <record id="base.gp" model="res.country">
+        <field name="sat_code">GLP</field>
+    </record>
+    <record id="base.gq" model="res.country">
+        <field name="sat_code">GNQ</field>
+    </record>
+    <record id="base.gr" model="res.country">
+        <field name="sat_code">GRC</field>
+    </record>
+    <record id="base.gs" model="res.country">
+        <field name="sat_code">SGS</field>
+    </record>
+    <record id="base.gt" model="res.country">
+        <field name="sat_code">GTM</field>
+    </record>
+    <record id="base.gu" model="res.country">
+        <field name="sat_code">GUM</field>
+    </record>
+    <record id="base.gw" model="res.country">
+        <field name="sat_code">GNB</field>
+    </record>
+    <record id="base.gy" model="res.country">
+        <field name="sat_code">GUF</field>
+    </record>
+    <record id="base.hk" model="res.country">
+        <field name="sat_code">HKG</field>
+    </record>
+    <record id="base.hm" model="res.country">
+        <field name="sat_code">HMD</field>
+    </record>
+    <record id="base.hn" model="res.country">
+        <field name="sat_code">HND</field>
+    </record>
+    <record id="base.hr" model="res.country">
+        <field name="sat_code">HRV</field>
+    </record>
+    <record id="base.ht" model="res.country">
+        <field name="sat_code">HTI</field>
+    </record>
+    <record id="base.hu" model="res.country">
+        <field name="sat_code">HUN</field>
+    </record>
+    <record id="base.id" model="res.country">
+        <field name="sat_code">IDN</field>
+    </record>
+    <record id="base.ie" model="res.country">
+        <field name="sat_code">IRL</field>
+    </record>
+    <record id="base.il" model="res.country">
+        <field name="sat_code">ISR</field>
+    </record>
+    <record id="base.im" model="res.country">
+        <field name="sat_code">IMN</field>
+    </record>
+    <record id="base.in" model="res.country">
+        <field name="sat_code">IND</field>
+    </record>
+    <record id="base.io" model="res.country">
+        <field name="sat_code">IOT</field>
+    </record>
+    <record id="base.iq" model="res.country">
+        <field name="sat_code">IRQ</field>
+    </record>
+    <record id="base.ir" model="res.country">
+        <field name="sat_code">IRN</field>
+    </record>
+    <record id="base.is" model="res.country">
+        <field name="sat_code">ISL</field>
+    </record>
+    <record id="base.it" model="res.country">
+        <field name="sat_code">ITA</field>
+    </record>
+    <record id="base.je" model="res.country">
+        <field name="sat_code">JEY</field>
+    </record>
+    <record id="base.jm" model="res.country">
+        <field name="sat_code">JAM</field>
+    </record>
+    <record id="base.jo" model="res.country">
+        <field name="sat_code">JOR</field>
+    </record>
+    <record id="base.jp" model="res.country">
+        <field name="sat_code">JPN</field>
+    </record>
+    <record id="base.ke" model="res.country">
+        <field name="sat_code">KEN</field>
+    </record>
+    <record id="base.kg" model="res.country">
+        <field name="sat_code">KGZ</field>
+    </record>
+    <record id="base.kh" model="res.country">
+        <field name="sat_code">KHM</field>
+    </record>
+    <record id="base.ki" model="res.country">
+        <field name="sat_code">KIR</field>
+    </record>
+    <record id="base.km" model="res.country">
+        <field name="sat_code">COM</field>
+    </record>
+    <record id="base.kn" model="res.country">
+        <field name="sat_code">KNA</field>
+    </record>
+    <record id="base.kp" model="res.country">
+        <field name="sat_code">PRK</field>
+    </record>
+    <record id="base.kr" model="res.country">
+        <field name="sat_code">KOR</field>
+    </record>
+    <record id="base.kw" model="res.country">
+        <field name="sat_code">KWT</field>
+    </record>
+    <record id="base.ky" model="res.country">
+        <field name="sat_code">CYM</field>
+    </record>
+    <record id="base.kz" model="res.country">
+        <field name="sat_code">KAZ</field>
+    </record>
+    <record id="base.la" model="res.country">
+        <field name="sat_code">LAO</field>
+    </record>
+    <record id="base.lb" model="res.country">
+        <field name="sat_code">LBN</field>
+    </record>
+    <record id="base.lc" model="res.country">
+        <field name="sat_code">LCA</field>
+    </record>
+    <record id="base.li" model="res.country">
+        <field name="sat_code">LIE</field>
+    </record>
+    <record id="base.lk" model="res.country">
+        <field name="sat_code">LKA</field>
+    </record>
+    <record id="base.lr" model="res.country">
+        <field name="sat_code">LBR</field>
+    </record>
+    <record id="base.ls" model="res.country">
+        <field name="sat_code">LSO</field>
+    </record>
+    <record id="base.lt" model="res.country">
+        <field name="sat_code">LTU</field>
+    </record>
+    <record id="base.lu" model="res.country">
+        <field name="sat_code">LUX</field>
+    </record>
+    <record id="base.lv" model="res.country">
+        <field name="sat_code">LVA</field>
+    </record>
+    <record id="base.ly" model="res.country">
+        <field name="sat_code">LBY</field>
+    </record>
+    <record id="base.ma" model="res.country">
+        <field name="sat_code">MAR</field>
+    </record>
+    <record id="base.mc" model="res.country">
+        <field name="sat_code">MCO</field>
+    </record>
+    <record id="base.md" model="res.country">
+        <field name="sat_code">MDA</field>
+    </record>
+    <record id="base.me" model="res.country">
+        <field name="sat_code">MNE</field>
+    </record>
+    <record id="base.mf" model="res.country">
+        <field name="sat_code">MAF</field>
+    </record>
+    <record id="base.mg" model="res.country">
+        <field name="sat_code">MDG</field>
+    </record>
+    <record id="base.mh" model="res.country">
+        <field name="sat_code">MHL</field>
+    </record>
+    <record id="base.mk" model="res.country">
+        <field name="sat_code">MKD</field>
+    </record>
+    <record id="base.ml" model="res.country">
+        <field name="sat_code">MLI</field>
+    </record>
+    <record id="base.mm" model="res.country">
+        <field name="sat_code">MMR</field>
+    </record>
+    <record id="base.mn" model="res.country">
+        <field name="sat_code">MNG</field>
+    </record>
+    <record id="base.mo" model="res.country">
+        <field name="sat_code">MAC</field>
+    </record>
+    <record id="base.mp" model="res.country">
+        <field name="sat_code">MNP</field>
+    </record>
+    <record id="base.mq" model="res.country">
+        <field name="sat_code">MTQ</field>
+    </record>
+    <record id="base.mr" model="res.country">
+        <field name="sat_code">MRT</field>
+    </record>
+    <record id="base.ms" model="res.country">
+        <field name="sat_code">MSR</field>
+    </record>
+    <record id="base.mt" model="res.country">
+        <field name="sat_code">MLT</field>
+    </record>
+    <record id="base.mu" model="res.country">
+        <field name="sat_code">MUS</field>
+    </record>
+    <record id="base.mv" model="res.country">
+        <field name="sat_code">MDV</field>
+    </record>
+    <record id="base.mw" model="res.country">
+        <field name="sat_code">MWI</field>
+    </record>
+    <record id="base.mx" model="res.country">
+        <field name="sat_code">MEX</field>
+    </record>
+    <record id="base.my" model="res.country">
+        <field name="sat_code">MYS</field>
+    </record>
+    <record id="base.mz" model="res.country">
+        <field name="sat_code">MOZ</field>
+    </record>
+    <record id="base.na" model="res.country">
+        <field name="sat_code">NAM</field>
+    </record>
+    <record id="base.nc" model="res.country">
+        <field name="sat_code">NCL</field>
+    </record>
+    <record id="base.ne" model="res.country">
+        <field name="sat_code">NER</field>
+    </record>
+    <record id="base.nf" model="res.country">
+        <field name="sat_code">NFK</field>
+    </record>
+    <record id="base.ng" model="res.country">
+        <field name="sat_code">NGA</field>
+    </record>
+    <record id="base.ni" model="res.country">
+        <field name="sat_code">NIC</field>
+    </record>
+    <record id="base.nl" model="res.country">
+        <field name="sat_code">NLD</field>
+    </record>
+    <record id="base.no" model="res.country">
+        <field name="sat_code">NOR</field>
+    </record>
+    <record id="base.np" model="res.country">
+        <field name="sat_code">NPL</field>
+    </record>
+    <record id="base.nr" model="res.country">
+        <field name="sat_code">NRU</field>
+    </record>
+    <record id="base.nu" model="res.country">
+        <field name="sat_code">NIU</field>
+    </record>
+    <record id="base.nz" model="res.country">
+        <field name="sat_code">NZL</field>
+    </record>
+    <record id="base.om" model="res.country">
+        <field name="sat_code">OMN</field>
+    </record>
+    <record id="base.pa" model="res.country">
+        <field name="sat_code">PAN</field>
+    </record>
+    <record id="base.pe" model="res.country">
+        <field name="sat_code">PER</field>
+    </record>
+    <record id="base.pf" model="res.country">
+        <field name="sat_code">PYF</field>
+    </record>
+    <record id="base.pg" model="res.country">
+        <field name="sat_code">PNG</field>
+    </record>
+    <record id="base.ph" model="res.country">
+        <field name="sat_code">PHL</field>
+    </record>
+    <record id="base.pk" model="res.country">
+        <field name="sat_code">PAK</field>
+    </record>
+    <record id="base.pl" model="res.country">
+        <field name="sat_code">POL</field>
+    </record>
+    <record id="base.pm" model="res.country">
+        <field name="sat_code">SPM</field>
+    </record>
+    <record id="base.pn" model="res.country">
+        <field name="sat_code">PCN</field>
+    </record>
+    <record id="base.pr" model="res.country">
+        <field name="sat_code">PRI</field>
+    </record>
+    <record id="base.ps" model="res.country">
+        <field name="sat_code">PSE</field>
+    </record>
+    <record id="base.pt" model="res.country">
+        <field name="sat_code">PRT</field>
+    </record>
+    <record id="base.pw" model="res.country">
+        <field name="sat_code">PLW</field>
+    </record>
+    <record id="base.py" model="res.country">
+        <field name="sat_code">PRY</field>
+    </record>
+    <record id="base.qa" model="res.country">
+        <field name="sat_code">QAT</field>
+    </record>
+    <record id="base.re" model="res.country">
+        <field name="sat_code">REU</field>
+    </record>
+    <record id="base.ro" model="res.country">
+        <field name="sat_code">ROU</field>
+    </record>
+    <record id="base.rs" model="res.country">
+        <field name="sat_code">SRB</field>
+    </record>
+    <record id="base.ru" model="res.country">
+        <field name="sat_code">RUS</field>
+    </record>
+    <record id="base.rw" model="res.country">
+        <field name="sat_code">RWA</field>
+    </record>
+    <record id="base.sa" model="res.country">
+        <field name="sat_code">SAU</field>
+    </record>
+    <record id="base.sb" model="res.country">
+        <field name="sat_code">SLB</field>
+    </record>
+    <record id="base.sc" model="res.country">
+        <field name="sat_code">SYC</field>
+    </record>
+    <record id="base.sd" model="res.country">
+        <field name="sat_code">SDN</field>
+    </record>
+    <record id="base.se" model="res.country">
+        <field name="sat_code">SWE</field>
+    </record>
+    <record id="base.sg" model="res.country">
+        <field name="sat_code">SGP</field>
+    </record>
+    <record id="base.sh" model="res.country">
+        <field name="sat_code">SHN</field>
+    </record>
+    <record id="base.si" model="res.country">
+        <field name="sat_code">SVN</field>
+    </record>
+    <record id="base.sj" model="res.country">
+        <field name="sat_code">SJM</field>
+    </record>
+    <record id="base.sk" model="res.country">
+        <field name="sat_code">SVK</field>
+    </record>
+    <record id="base.sl" model="res.country">
+        <field name="sat_code">SLE</field>
+    </record>
+    <record id="base.sm" model="res.country">
+        <field name="sat_code">SMR</field>
+    </record>
+    <record id="base.sn" model="res.country">
+        <field name="sat_code">SEN</field>
+    </record>
+    <record id="base.so" model="res.country">
+        <field name="sat_code">SOM</field>
+    </record>
+    <record id="base.sr" model="res.country">
+        <field name="sat_code">SUR</field>
+    </record>
+    <record id="base.ss" model="res.country">
+        <field name="sat_code">SSD</field>
+    </record>
+    <record id="base.st" model="res.country">
+        <field name="sat_code">STP</field>
+    </record>
+    <record id="base.sv" model="res.country">
+        <field name="sat_code">SLV</field>
+    </record>
+    <record id="base.sx" model="res.country">
+        <field name="sat_code">SXM</field>
+    </record>
+    <record id="base.sy" model="res.country">
+        <field name="sat_code">SYR</field>
+    </record>
+    <record id="base.sz" model="res.country">
+        <field name="sat_code">SWZ</field>
+    </record>
+    <record id="base.tc" model="res.country">
+        <field name="sat_code">TCA</field>
+    </record>
+    <record id="base.td" model="res.country">
+        <field name="sat_code">TCD</field>
+    </record>
+    <record id="base.tf" model="res.country">
+        <field name="sat_code">ATF</field>
+    </record>
+    <record id="base.tg" model="res.country">
+        <field name="sat_code">TGO</field>
+    </record>
+    <record id="base.th" model="res.country">
+        <field name="sat_code">THA</field>
+    </record>
+    <record id="base.tj" model="res.country">
+        <field name="sat_code">TJK</field>
+    </record>
+    <record id="base.tk" model="res.country">
+        <field name="sat_code">TKL</field>
+    </record>
+    <record id="base.tm" model="res.country">
+        <field name="sat_code">TKM</field>
+    </record>
+    <record id="base.tn" model="res.country">
+        <field name="sat_code">TUN</field>
+    </record>
+    <record id="base.to" model="res.country">
+        <field name="sat_code">TON</field>
+    </record>
+    <record id="base.tl" model="res.country">
+        <field name="sat_code">TLS</field>
+    </record>
+    <record id="base.tr" model="res.country">
+        <field name="sat_code">TUR</field>
+    </record>
+    <record id="base.tt" model="res.country">
+        <field name="sat_code">TTO</field>
+    </record>
+    <record id="base.tv" model="res.country">
+        <field name="sat_code">TUV</field>
+    </record>
+    <record id="base.tw" model="res.country">
+        <field name="sat_code">TWN</field>
+    </record>
+    <record id="base.tz" model="res.country">
+        <field name="sat_code">TZA</field>
+    </record>
+    <record id="base.ua" model="res.country">
+        <field name="sat_code">UKR</field>
+    </record>
+    <record id="base.ug" model="res.country">
+        <field name="sat_code">UGA</field>
+    </record>
+    <record id="base.uk" model="res.country">
+        <field name="sat_code">GBR</field>
+    </record>
+    <record id="base.um" model="res.country">
+        <field name="sat_code">UMI</field>
+    </record>
+    <record id="base.us" model="res.country">
+        <field name="sat_code">USA</field>
+    </record>
+    <record id="base.uy" model="res.country">
+        <field name="sat_code">URY</field>
+    </record>
+    <record id="base.uz" model="res.country">
+        <field name="sat_code">UZB</field>
+    </record>
+    <record id="base.va" model="res.country">
+        <field name="sat_code">VAT</field>
+    </record>
+    <record id="base.vc" model="res.country">
+        <field name="sat_code">VCT</field>
+    </record>
+    <record id="base.ve" model="res.country">
+        <field name="sat_code">VEN</field>
+    </record>
+    <record id="base.vg" model="res.country">
+        <field name="sat_code">VGB</field>
+    </record>
+    <record id="base.vi" model="res.country">
+        <field name="sat_code">VIR</field>
+    </record>
+    <record id="base.vn" model="res.country">
+        <field name="sat_code">VNM</field>
+    </record>
+    <record id="base.vu" model="res.country">
+        <field name="sat_code">VUT</field>
+    </record>
+    <record id="base.wf" model="res.country">
+        <field name="sat_code">WLF</field>
+    </record>
+    <record id="base.ws" model="res.country">
+        <field name="sat_code">WSM</field>
+    </record>
+    <record id="base.ye" model="res.country">
+        <field name="sat_code">YEM</field>
+    </record>
+    <record id="base.yt" model="res.country">
+        <field name="sat_code">MYT</field>
+    </record>
+    <record id="base.za" model="res.country">
+        <field name="sat_code">ZAF</field>
+    </record>
+    <record id="base.zm" model="res.country">
+        <field name="sat_code">ZMB</field>
+    </record>
+    <record id="base.zw" model="res.country">
+        <field name="sat_code">ZWE</field>
+    </record>
+
+</data>
+</odoo>

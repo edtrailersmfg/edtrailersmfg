@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+                    
+
+        <record model="ir.ui.view" id="res_partner_locality_sat_form">
+            <field name="name">res.partner.tree.sat.code.locality</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="street" position="before">
+                    <field name="country_code_rel" invisible="1"/>
+                </field>
+                <field name="street2" position="replace">
+                    <field name="street2" placeholder="Street 2..." class="o_address_street" 
+                           attrs="{'invisible':[('country_code_rel','=','MX')]}"/>
+                    
+                        <field name="zip_sat_id" class="o_address_street" placeholder="Código Postal XXXXX"
+                               options="{'no_open': True,'no_create': True}" 
+                               attrs="{'invisible':[('country_code_rel','!=','MX')]}"/>
+                    
+                    <div class="oe_edit_only o_row" attrs="{'invisible':[('country_code_rel','!=','MX')]}">
+                        <label for="zip_sat_id" string="Colonia" class="oe_edit_only"/>
+                        <field name="colonia_sat_id" placeholder="Colonia" class="oe_edit_only oe_edit_only o_address_street" 
+                               domain="[('zip_sat_code','=',zip_sat_id)]" 
+                               options="{'no_open': True,'no_create': True}"
+                               attrs="{'invisible':[('country_code_rel','!=','MX')]}"/>
+                    </div>
+                    <div class="oe_edit_only o_row" attrs="{'invisible':[('country_code_rel','!=','MX')]}">
+                        <label for="township_sat_id" class="oe_edit_only" string="Municipio"/>
+                        <field name="township_sat_id" class="o_address_city oe_edit_only o_address_street" 
+                               domain="[('state_sat_code','=',state_id)]" placeholder="Municipio"
+                               options="{'no_open': True,'no_create': True}" 
+                               attrs="{'invisible':[('country_code_rel','!=','MX')]}"/>
+                    </div>
+                    <div class="oe_edit_only o_row" attrs="{'invisible':[('country_code_rel','!=','MX')]}">
+                        <label for="locality_sat_id" class="oe_edit_only" string="Localidad"/>
+                        <field name="locality_sat_id" class="o_address_street oe_edit_only"
+                           domain="[('state_sat_code','=',state_id)]" placeholder="Localidad"
+                           attrs="{'invisible':[('country_code_rel','!=','MX')]}"
+                           options="{'no_open': True,'no_create': True}"/>
+                    </div>
+                </field>
+                <field name="city" position="replace">
+                    <field name="city" placeholder="City" class="o_address_city" 
+                           attrs="{'invisible':[('country_code_rel','=','MX')]}"/>
+                </field>
+                <field name="zip" position="replace">
+                    <field name="zip" class="o_address_zip" 
+                           attrs="{'invisible':[('country_code_rel','=','MX')]}"/>
+                </field>
+                <!-- <field name="state_id" position="attributes" >
+                    <attribute name="attrs">{'invisible':[('country_code_rel','=','MX')]}</attribute>
+                </field> -->
+                <field name="country_id" position="after">
+                        <span> </span>
+                        <field name="country_id" placeholder="Country" class="o_address_country" options="{&quot;no_open&quot;: True}"/>    
+                        
+                </field>
+                <field name="country_id" position="replace"/>
+                
+
+                <field name="vat" position="after" >
+                    <field name="curp" attrs="{'invisible':['|',('company_type2','!=','physical_person'),('country_code_rel','!=','MX')]}"/>
+                    <field name="num_reg_trib" string="Numero de Identificacion Fiscal"
+                           attrs="{'invisible':[('country_code_rel','=','MX')]}"/>
+                    <field name="uso_cfdi_id"/>
+                    <field name="pay_method_id" widget="selection"/>
+                    
+                </field>
+                <field name="company_type" position="replace" >
+                    <field name="company_type" invisible="1" />
+                        <field name="company_type2" widget="radio" class="oe_edit_only" options="{'horizontal': true}"/>
+                    
+                </field>
+                <field name="user_id" position="before" >
+                    <field name="persona_fisica" invisible="1"/>
+                    
+                </field>
+                <field name="category_id" position="after" >
+                    <field name="country_code_rel" invisible="1" />
+                </field>
+                <!--<field name="vat" position="before">
+                    <field name="l10n_mx_street_reference" 
+                               attrs="{'invisible':[('country_code_rel','!=','MX')]}"
+                               placeholder="P.Ej. Entre Av Hidalgo y Av. Carrillo"/>
+                </field>-->
+                
+                </field>
+            </record>
+            
+        <record model="ir.ui.view" id="view_partner_form_inh_xml22">
+            <field name="name">view.partner.form.inh.xml22</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name="arch" type="xml">
+                <field name="property_account_position_id" position="after">
+                    <field name="envio_manual_cfdi" />
+                </field>
+            </field>
+        </record>   
+        
+        
+        
+    </data>
+</odoo>

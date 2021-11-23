@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">        
+        <!-- Parametro para definir si se puede pagar factura sin Contra-Recibo -->
+        <record model="ir.config_parameter" id="account_invoice_counter_receipt_mandatory_for_payment">               
+          <field name="key">account_invoice_counter_receipt_mandatory_for_payment</field> 
+          <field name="value">1
+      1- Es necesario que la Factura tenga Contra-Recibo (Proveedores) / Carta de Cobro (Clientes) para poder pagarla
+      2- NO SE NECESITA que la Factura tenga Contra-Recibo (Proveedores) / Carta de Cobro (Clientes) para poder pagarla
+          </field>              
+        </record>
+        
+    </data>
+</odoo>

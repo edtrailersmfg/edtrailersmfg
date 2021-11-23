@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+        <!-- Se elimina porque al parecer nadie lo usa
+        <record model="ir.ui.view" id="counted_product_normal_form_view">
+            <field name="name">Counted product.normal.form</field>
+            <field name="model">product.template</field>
+            <field name="type">form</field>
+            <field name="priority">50</field>
+            <field name="inherit_id" ref="account.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <field name="property_account_income_id" position="after">
+                    <field name="property_account_income_id2" />
+                </field>
+            </field>
+        </record>
+
+        <record id="counted_view_category_property_form" model="ir.ui.view">
+            <field name="name">counted.product.category.property.form</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="account.view_category_property_form"/>
+            <field name="priority">50</field>
+            <field name="arch" type="xml">
+                <field name="property_account_income_categ_id" position="after">
+                        <field name="property_account_income_categ_id2"  />
+                </field>
+            </field>
+        </record>
+        -->
+    </data>
+</odoo>
