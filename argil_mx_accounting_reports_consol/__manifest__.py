@@ -3,7 +3,7 @@
 {
     'name': 'Reportes Contables Mexico',
     'version': '1',
-    "author" : "Fixdoo, Argil Consulting",
+    "author" : "Argil Consulting",
     "category" : "Account",
     'description': """
 Reportes Contables comunmente usados en Mexico
@@ -42,7 +42,7 @@ Este modulo esta enfocado cuando se maneja multicompany y permite consolidar cue
 		
 
     """,
-    "website" : "http://www.fixdoo.mx",
+    "website" : "http://www.argil.mx",
     "depends" : ["account",
                  "l10n_mx_account_tree",
                  "account_period_and_fiscalyear"],

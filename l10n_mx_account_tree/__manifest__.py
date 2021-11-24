@@ -7,7 +7,7 @@
     "depends": [
         'account', 'analytic'
     ],
-    "author": "Fixdoo",
+    "author": "Argil Consulting",
     "description" : """
 Estructura Jerárquica de cuentas
 ================================
@@ -16,7 +16,7 @@ Este módulo agrega algunos cambios para obtener un Catálogo de Cuentas Jerárq
 para el Plan Contable y Cuentas Analíticas
 
     """,
-    "website": "http://fixdoo.mx",
+    "website": "http://argil.mx",
     "category": "Accounting",
     "demo": [],
     "test": [],

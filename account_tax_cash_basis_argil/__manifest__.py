@@ -3,7 +3,7 @@
 {
     "name": "Reclasificación de Impuesto Efectivamente Cobrado/Pagado", 
     "version": "1.0", 
-    "author": "Fixdoo, Argil Consulting", 
+    "author": "Argil Consulting", 
     "category": "Localization/Mexico", 
     "description": """
 
@@ -17,7 +17,7 @@ pago/cobro.
 Depender&aacute; de la configuraci&oacute; del impuesto.
 
     """, 
-    "website": "http://www.fixdoo.mx", 
+    "website": "http://www.argil.mx", 
     #'license' : 'OEEL-1',
     "depends": [
         "account", 

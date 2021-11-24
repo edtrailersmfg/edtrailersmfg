@@ -10,8 +10,8 @@
          XML requeridos por SAT.
          """,
     'version': '1.0',
-    'author' : 'Argil, Fixdoo',
-    'website': 'http://www.fixdoo.mx',
+    'author' : 'Argil',
+    'website': 'http://www.argil.mx',
     #'license' : 'OEEL-1',
     'category' : 'Accounting',
     'depends' : ['base', 

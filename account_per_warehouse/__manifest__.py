@@ -4,7 +4,7 @@
 {
     "name": "Cuenta Contable por Almacén / Ubicación (interna)", 
     "version": "1.1", 
-    "author": "Fixdoo", 
+    "author": "Argil Consulting", 
     "category": "Account", 
     "description": """
 Cuenta Contable por Almacén / Ubicación (interna)
@@ -20,7 +20,7 @@ de la Categoría de Producto (Cuenta de Valorización de Inventario) o en el Pro
 Este módulo permite mostrar el campo "Cuenta Contable Entrada/Salida" en las Ubicaciones
 Internas para que al generar la póliza tome esta cuenta contable.
     """, 
-    "website": "http://www.fixdoo.mx", 
+    "website": "http://www.argil.mx", 
     "depends": ["stock_account", 
                 'stock',
                 'stock_landed_costs',

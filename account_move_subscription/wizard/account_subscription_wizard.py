@@ -7,7 +7,7 @@
 #    
 #   Forked by:
 #   2016 - Argil Consulting SA de CV
-#    (<http://www.fixdoo.mx>)
+#    (<http://www.argil.mx>)
 ##############################################################################
 
 from odoo import models, fields, api, _

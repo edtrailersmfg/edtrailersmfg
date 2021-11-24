@@ -4,7 +4,7 @@
     "version"   : "1.0", 
     'summary'   : 'Ejercicio Fiscal y Periodos Mensuales',
     'sequence'  : 20,
-    "author"    : "Fixdoo, Argil", 
+    "author"    : "Argil Consulting", 
     "category"  : "Account", 
     "description": """
 
@@ -38,7 +38,7 @@ Periodo => Periodo de Apertura
 -  13/2019    =>   [ X ]
 
     """, 
-    "website": "http://www.fixdoo.mx", 
+    "website": "http://www.argil.mx", 
     #'license' : 'OEEL-1',
     "depends": [
         "account", 
