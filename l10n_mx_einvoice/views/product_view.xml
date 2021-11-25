@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+<!-- Regimen Fiscal -->
+
+<!-- CATEGORIAS -->
+        <record model="ir.ui.view" id="view_category_property_form_cfdi_33">
+            <field name="name">product.category.cfdi.33</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="account.view_category_property_form"/>
+            <field name="arch" type="xml">
+                <group name="account_property" position="after">
+                    <group name="product_sat" string="Atributos CFDI 3.3" groups="account.group_account_manager">
+                        <group>
+                            <field name="sat_product_id" options="{'no_create_edit': True,'no_create': True}" />
+                        </group>
+                        <group>
+                           
+                        </group>
+                    </group>
+                </group>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="tree_product_category_fields_3_3_einvoice_inhrt">
+            <field name="name">product.category.cfdi.33</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_list_view"/>
+            <field name="arch" type="xml">
+                <field name="display_name" position="after">
+                    <field name="sat_product_id" />
+               </field>
+            </field>
+        </record>
+    
+<!-- HERENCIA A PRODUCT TEMPLATE -->
+        <record model="ir.ui.view" id="form_product_template_fields_3_3_einvoice_inhrt">
+            <field name="name">product.template.cfdi.33</field>
+            <field name="model">product.template</field>
+            <!--<field name="priority">50</field>-->
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <field name="categ_id" position="after">
+                    <field name="sat_product_id" 
+                           options="{'no_create_edit': True,'no_create': True}" 
+                           attrs="{'required':[('sale_ok','=',True)],'invisible':[('sale_ok','!=',True)]}"/>
+                    <field name="no_identity_type" attrs="{'required':[('sale_ok','=',True)],'invisible':[('sale_ok','!=',True)]}"/>
+                    <field name="no_identity_other" 
+                           attrs="{'invisible':['|',('no_identity_type','!=','manual'),('sale_ok','!=',True)],'required':[('no_identity_type','=','manual')]}"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="tree_product_template_fields_3_3_einvoice_inhrt">
+            <field name="name">product.template.cfdi.33</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="sat_product_id" />
+               </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="tree_product_product_fields_3_3_einvoice_inhrt">
+            <field name="name">product.product.cfdi.33</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_product_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="sat_product_id" />
+               </field>
+            </field>
+        </record>
+
+<!-- UNIDADES DE MEDIDA -->
+
+        <record model="ir.ui.view" id="tree_product_UOM_fields_3_3_einvoice_inhrt">
+            <field name="name">uom.uom.cfdi.33</field>
+            <field name="model">uom.uom</field>
+            <field name="inherit_id" ref="uom.product_uom_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="category_id" position="after">
+                    <field name="sat_uom_id" />
+               </field>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="form_product_UOM_fields_3_3_einvoice_inhrt">
+            <field name="name">product.uom.cfdi.33</field>
+            <field name="model">uom.uom</field>
+            <field name="inherit_id" ref="uom.product_uom_form_view"/>
+            <field name="arch" type="xml">
+                <field name="active" position="before">
+                    <field name="sat_uom_id" required="1" options="{'no_create_edit': True,'no_create': True}"/>
+               </field>
+            </field>
+        </record>
+
+
+
+
+
+
+</data>
+</odoo>

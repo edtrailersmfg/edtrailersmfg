@@ -1,0 +1,59 @@
+<odoo>
+    
+    <data>
+        
+        <record id="overall_config_wizard_sat_models_cfdi_form" model="ir.ui.view">
+            <field name="name">overall.config.wizard.sat.models.cfdi</field>
+            <field name="model">overall.config.wizard.sat.models.cfdi</field>
+            <field name="arch" type="xml">
+                <form string="Asistente Carga de Catalogos CFDI 3.3" version="7.0">
+                    <field name="load_data" invisible="1"/>
+                    <notebook attrs="{'invisible':[('load_data','=',True)]}">
+                        <page string="Catálogos del SAT">
+                            Estos catálogos son publicados oficialmente por el SAT, y proveen datos requeridos para la generación de Documentos CFDI Versión 3.3. Al dar clic en &quot;Procesar carga&quot; se buscarán los registros existentes; si se hayan serán 
+                            actualizados, si no serán creados.
+                            <br/>
+                            <br/>
+                            <strong>Selecciona los catalogos a Implementar:</strong>
+                            <br />
+                            <h3>
+                                <field name="select_catalog" required="1" />
+                            </h3>
+                            <br/>
+                            <br/>
+                             <div align="center" >
+                                <button type="object" name="process_catalogs" string="Procesar Carga" class="oe_highlight"/>
+                            </div>
+		                    
+                        </page>
+                        
+                    </notebook><br/><br/>
+                    <separator string="Resultados de la Carga de los Catalogos" attrs="{'invisible':[('load_data','=',False)]}"/>
+                    <h3>
+                    	<field name="action_status" placeholder="Resultados obtenidos..." attrs="{'invisible':[('load_data','=',False)]}" readonly="1"/>
+                    </h3>
+                    <div align="center" >
+                        <button string="Cerrar" special="cancel" attrs="{'invisible':[('load_data','=',False)]}" icon="fa-window-close"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+        
+        <record id="overall_config_wizard_sat_models_cfdi_action" model="ir.actions.act_window">
+            <field name="name">Asistente Carga Catalogos</field>
+            <field name="res_model">overall.config.wizard.sat.models.cfdi</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        
+        <menuitem id="overall_config_wizard_sat_models_cfdi_menu" 
+                  name="Asistente Carga Datos" 
+                  parent="catalogos_sat_menu" 
+                  action="overall_config_wizard_sat_models_cfdi_action"
+                  groups="base.group_no_one"
+                  sequence="99"/>
+
+    </data>
+    
+</odoo>

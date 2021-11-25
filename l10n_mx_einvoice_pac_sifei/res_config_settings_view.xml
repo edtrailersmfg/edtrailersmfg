@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_account_config_settings_l10n_mx_einvoice_sifei" model="ir.ui.view">
+            <field name="name">account settings l10n_mx_einvoice sifei</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="l10n_mx_einvoice.view_account_config_settings_l10n_mx_einvoice"/>
+            <field name="arch" type="xml">
+                <field name="pac_password" position="after">
+                    <label for="pac_equipo_id" class="col-md-3 o_light_label"/>
+                    <field name="pac_equipo_id" />
+                </field>
+                
+                <div id="pac_pruebas" position="inside">
+                    <br/>
+                    <span class="o_form_label">Credenciales de Acceso PRUEBAS</span>
+                    <div class="text-muted">
+                        Indique las credenciales para conectarse con el PAC para entorno de PRUEBAS
+                    </div>
+                    <div class="content-group">
+                        <div class="row mt16">
+                            <label for="pac_user_4_testing" class="col-md-3 o_light_label"/>
+                            <field name="pac_user_4_testing" />
+                            <label for="pac_password_4_testing" class="col-md-3 o_light_label"/>
+                            <field name="pac_password_4_testing" password="1"/>
+                            <label for="pac_equipo_id_4_testing" class="col-md-3 o_light_label"/>
+                            <field name="pac_equipo_id_4_testing" />
+                        </div>
+                    </div>                    
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

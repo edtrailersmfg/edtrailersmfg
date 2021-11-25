@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        
+         <record model="ir.ui.view" id="account_invoice_form_inherit_cfdi_33_filter">
+            <field name="name">account.invoice.select.l10n_mx_einvoice</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+            <field name="arch" type="xml">
+                <filter name="due_date" position="after">
+                    <separator />
+                    <filter string="Factura con Relacion" domain="[('type_rel_id','!=',False)]" 
+                            name="factura_con_relacion"/>
+                    <filter string="Factura Anticipo" domain="[('deposit_invoice','=',True)]"
+                            name="factura_anticipo"/>
+                    <filter string="Factura Anticipo Relacionada" domain="[('deposit_invoice_used','=',True)]"
+                            name="factura_anticipo_relacionada"/>
+                    <filter string="Factura Anticipo No Relacionada" 
+                            domain="[('deposit_invoice_used','=',False),('deposit_invoice','=',True)]"
+                            name="factura_anticipo_no_relacionada"/>
+                    <separator/>
+                </filter>
+            </field>
+        </record>
+        
+        
+        <record  model="ir.ui.view" id="view_move_form_l10n_mx_einvoice">
+            <field name="name">account.move.form.l10n_mx_einvoice</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <!--<xpath expr="//sheet" position="inside">
+                    <field name="use_for_cfdi" />
+                </xpath>-->
+                <field name="ref" position="after">
+                    <field name="use_for_cfdi" invisible="1"/>
+                    <field name="metodo_pago_id" 
+                           attrs="{'invisible': ['|', ('move_type','not in',('out_invoice','out_refund')),('use_for_cfdi','in',(0,False))], 'required': [('move_type','in',('out_invoice','out_refund')),('use_for_cfdi','in',(1,True))]}"
+                           options="{'no_create_edit': True,'no_open': True}"/>
+                    <field name="uso_cfdi_id" 
+                           attrs="{'invisible': ['|', ('move_type','not in',('out_invoice','out_refund')),('use_for_cfdi','in',(0,False))], 'required': [('move_type','in',('out_invoice','out_refund')),('use_for_cfdi','in',(1,True))]}"
+                           options="{'no_create_edit': True,'no_open': True}"/>
+                    <field name="pay_method_id" 
+                           attrs="{'invisible': ['|', ('move_type','not in',('out_invoice','out_refund')),('use_for_cfdi','in',(0,False))], 'required': [('move_type','in',('out_invoice','out_refund')),('use_for_cfdi','in',(1,True))]}"/>
+                    <field name="cfdi_complemento"
+                           attrs="{'invisible': ['|', ('move_type','not in',('out_invoice','out_refund')),('use_for_cfdi','in',(0,False))]}"/>
+                    
+                </field>
+                <field name="invoice_date" position="after">
+                    <field name="invoice_datetime" invisible="1"/> <!--attrs="{'invisible': [('use_for_cfdi','in',(0,False))]}"/>-->
+                </field>
+                <xpath expr="//field[@name='tax_totals_json']" position="before">
+                    <field name="amount_discount" attrs="{'invisible': [('amount_discount','&lt;=',0.0)]}"/>
+                </xpath>
+
+                
+                <field name="fiscal_position_id" position="after">
+                    <!--<field name="pay_method_id" colspan="2" />
+                    <newline/>
+                    <field name="pay_method_ids" colspan="2" widget="many2many_tags" invisible="1"/>
+                    -->
+                    <field name="acc_payment" 
+                           domain = "[('partner_id', '=', partner_id)]" 
+                           context="{'default_partner_id': partner_id }" 
+                           attrs="{'invisible': [('move_type','=','entry')]}"/>
+                </field>
+                <notebook position="inside">
+                    <page string="CFDI Relacionados" attrs="{'invisible': [('use_for_cfdi','in',(0,False))]}">
+                        <group>
+                            <group>
+                                <field name="type_rel_id" options="{'no_create': True,'no_open': True}"/>
+                                <field name="deposit_invoice_used" readonly="1" />
+                            </group>
+                            <group>
+                                <field name="deposit_invoice" />
+                                <field name="deposit_invoice_rel_id" 
+                                       attrs="{'invisible':[('deposit_invoice_used','=',False)]}"  readonly="1"/>
+                            </group>
+                        </group>
+                        <field name="type_rel_cfdi_ids" 
+                               attrs="{'readonly':[('state','!=','draft')],'invisible': [('use_for_cfdi','in',(0,False))]}">
+                            <tree string="CFDI Relacionados" editable="top">
+                                <!--<field name="name" />-->
+                                <field name="invoice_id" 
+                                       options="{'no_create_edit': True,'no_open': True}" />
+                                <field name="move_name" />
+                                <field name="date_invoice" />
+                                <field name="cfdi_folio_fiscal" />
+                                <field name="amount_total" />
+                                <field name="currency_id" />
+                                <field name="state" />
+                                <field name="payment_state" />
+                                <field name="onchange_domain" invisible="1" />
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="CFDI Info" attrs="{'invisible': ['|',('move_type','=','entry'),('use_for_cfdi','!=',True)]}"
+                          groups="base.group_no_one">
+                        <group colspan="4" col="2" >
+                            <separator string="Informacion de Timbrado" colspan="2"/>
+                            <field name="cfdi_pac" invisible="1"/>
+                            <field name="type_document_id" readonly="1" invisible="1"/>
+                            <field name="cfdi_fecha_timbrado"/>
+                            <field name="address_issued_id" groups="base.group_no_one"/>
+                            <field name="company_emitter_id" groups="base.group_no_one"/>
+                            <field name="cfdi_sello" groups="base.group_no_one"/>
+                            <field name="cfdi_no_certificado" groups="base.group_no_one"/>
+                            <field name="cfdi_cadena_original" groups="base.group_no_one"/>
+                            <separator string="Archivos" colspan="2" groups="base.group_no_one"/>
+                            <field name="xml_file_no_sign_index" groups="base.group_no_one"/>
+                            <field name="xml_file_signed_index" groups="base.group_no_one"/>
+                            <separator string="Log Timbrado" colspan="2" groups="base.group_no_one"
+                                       attrs="{'invisible': [('cfdi_last_message','=',False)]}"/>
+                            <field name="cfdi_last_message" attrs="{'invisible': [('cfdi_last_message','=',False)]}"
+                                   groups="base.group_no_one"/>
+
+                            <separator string="Cancelacion de CFDI" colspan="2" />
+                            <field name="mailbox_state" readonly="1"/>
+                            <field name="cancel_wht_mailbox" />
+                            <field name="cancelation_request_ids" >
+                                <tree string="Cancelacion CFDI" editable="top" create="false">
+                                    <field name="date_request" readonly="1" required="1"/>
+                                    <field name="state" readonly="1" required="1"/>
+                                    <field name="folio_fiscal" readonly="1" required="1"/>
+                                    <field name="request_ignored" attrs="{'readonly':[('state','!=','process')]}" invisible="1"/>
+                                    <button name="unlink_me" string="X" type="objet" invisible="1"/>
+                                </tree>
+                                <form string="Cancelacion CFDI">
+                                    <sheet>
+                                        <group>
+                                            <field name="date_request" readonly="1"/>
+                                            <field name="state" readonly="1"/>
+                                            <field name="folio_fiscal" readonly="1"/>
+                                            <field name="request_ignored" attrs="{'readonly':[('state','!=','process')]}" invisible="1"/>
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                            <field name="cfdi_fecha_cancelacion" 
+                                   attrs="{'invisible': [('cfdi_fecha_cancelacion','=',False)]}"/>
+                            <!--<field name="cfdi_cbb" widget="image" options='{"size": [90, 90]}'/>-->
+                            <separator string="Log Cancelación" colspan="2" groups="base.group_no_one"
+                                       attrs="{'invisible': [('xml_acuse_cancelacion','=',False)]}"/>
+                            <field name="xml_acuse_cancelacion" attrs="{'invisible': [('xml_acuse_cancelacion','=',False)]}"
+                                   groups="base.group_no_one"/>
+                        </group>
+                    </page>
+                    
+                </notebook>
+                <!--
+                <field name="move_name" position="replace" />
+                <field name="number" position="replace">
+                        <field name="move_name" class="oe_inline" nolabel="1" readonly="1"/>
+                </field>
+                <field name="date_due" position="replace"/>
+                <field name="user_id" position="replace" />
+                <field name="team_id" position="replace" />-->
+
+                <div name="journal_div" position="after">
+                    <field name="cfdi_folio_fiscal" 
+                           attrs="{'invisible': ['|', '|', ('move_type','not in',('out_invoice','out_refund')),('use_for_cfdi','in',(0,False)),('state','!=','posted')]}"/>
+                    <label for="cfdi_state" 
+                           attrs="{'invisible': ['|', '|', ('move_type','not in',('out_invoice','out_refund')), ('use_for_cfdi','in',(0,False)),('state','!=','posted')]}"/>
+                    <div attrs="{'invisible': ['|', '|', ('move_type','not in',('out_invoice','out_refund')),('use_for_cfdi','in',(0,False)),('state','!=','posted')]}">
+                        <field name="cfdi_state" widget="selection" />
+                        <button name="action_cfdi_try_new" type="object" string="Procesar" class="btn-link"
+                                context="{'already_open':1}"
+                                attrs="{'invisible': ['|',('cfdi_state','in',('cancel','sent')),('cfdi_folio_fiscal','!=',False)]}"/>
+                        
+                    </div>
+                </div>
+                
+                <header position="inside">
+                    <field name="mailbox_state" invisible="1"/>
+                </header>
+                <sheet position="before">
+                        <div class="alert alert-warning" role="alert" style="margin-bottom:0px;" attrs="{'invisible': ['|',('mailbox_state','!=','process'),('state','!=','open')]}">
+                        La Factura tiene una Solicitud de Cancelacion en el SAT.
+                        </div>
+                        <div class="alert alert-danger" role="alert" style="margin-bottom:0px;" attrs="{'invisible': ['|',('mailbox_state','!=','rejected'),('state','!=','open')]}">
+                        La Solicitud de Cancelación fue Rechazada por el Cliente.
+                        </div>
+                        <div class="alert alert-danger" role="alert" style="margin-bottom:0px;" attrs="{'invisible': ['|',('mailbox_state','!=','no_cancel'),('state','!=','open')]}">
+                        La Solicitud de Cancelación fue Rechazada por el SAT.
+                        </div>
+                </sheet>
+                <field name="state" position="before">
+                    <button name="cancelation_request_create" string="Solicitud Cancelacion" 
+                            type="object" icon="fa-close" 
+                            attrs="{'invisible': ['|','|','|',('state','!=','posted'),('move_type','=','entry'),('use_for_cfdi','in',(0,False)),('payment_state','=','paid')]}"/>
+                    <button name="cancelation_request_consult" string="Consultar Cancelacion" 
+                            type="object" icon="fa-close" 
+                            attrs="{'invisible':['|','|','|','|',('use_for_cfdi','in',(0,False)),('mailbox_state','in',('no','done')),('state','!=','posted'),('move_type','=','entry'),('payment_state','=','paid')]}"/>
+                </field>
+                <button name="action_register_payment"  position="attributes">
+                    <attribute name="context">{'dont_redirect_to_payments': False}</attribute>
+                </button>
+            </field>
+        </record>
+        
+        
+
+        <record  model="ir.ui.view" id="view_invoice_tree_l10n_mx_einvoice">
+            <field name="name">account.move.tree.l10n_mx_einvoice</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_invoice_tree"/>
+            <field name="arch" type="xml">
+                <field name="invoice_origin" position="before">
+                    <field name="mailbox_state" optional="hide" invisible="context.get('default_move_type') not in ('out_invoice', 'out_refund')"/>
+                </field>
+                <field name="state" position="before">
+                    <field name="deposit_invoice" optional="hide" invisible="context.get('default_move_type') not in ('out_invoice', 'out_refund')"/>
+                </field>
+            </field>
+        </record>        
+        
+        
+<!--
+        <record model="ir.ui.view" id="account_invoice_form_inherit_cfdi_33_tree">
+            <field name="name">account.move.tree.cfdi.33</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.invoice_tree"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="before">
+                    <field name="invoice_serie" />
+                </field>
+            </field>
+        </record>
+-->
+    </data>
+</odoo>
