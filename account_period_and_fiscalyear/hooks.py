@@ -22,6 +22,6 @@ def post_init_hook(cr, registry):
                                                    'company_id' : company.id})
             
     cr.execute(
-        """update account_move_line aml set period_id = (select ap.id from account_period ap where ap.company_id=aml.company_id and aml.date >= ap.date_start and aml.date <= ap.date_stop);
-        update account_move am set period_id = (select ap.id from account_period ap where ap.company_id=am.company_id and am.date >= ap.date_start and am.date <= ap.date_stop);
+        """update account_move_line aml set period_id = (select ap.id from account_period ap where ap.company_id=aml.company_id and aml.date >= ap.date_start and aml.date <= ap.date_stop limit 1);
+        update account_move am set period_id = (select ap.id from account_period ap where ap.company_id=am.company_id and am.date >= ap.date_start and am.date <= ap.date_stop limit 1);
         """)
