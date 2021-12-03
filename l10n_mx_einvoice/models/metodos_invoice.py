@@ -445,12 +445,13 @@ class AccountMove(models.Model):
             'cfdi:Addenda',
         ]
        
-        keys = data_dict.keys()
+        keys = list(data_dict.keys())
         key_item_sort = []
         for ko in key_order:
             if ko in keys:
                 key_item_sort.append([ko, data_dict[ko]])
                 keys.pop(keys.index(ko))
+
                 
         if keys ==['Rfc', 'RegimenFiscal', 'Nombre' ]:
             keys = ['Rfc', 'Nombre', 'RegimenFiscal']
