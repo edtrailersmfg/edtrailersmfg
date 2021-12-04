@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+
+     <record model="ir.ui.view" id="view_move_form_l10n_mx_einvoice_cce">
+            <field name="name">account.move.cfdi.33.cce</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <field name="invoice_incoterm_id" position="attributes">
+                    <attribute name="attrs">{'required': [('cfdi_complemento','=','comercio_exterior')]}</attribute>
+                </field>
+                <xpath expr='//field[@name="invoice_line_ids"]/tree/field[@name="product_uom_id"]' position="after">
+                    <!--<field name="cce_complemento" /> -->
+                    <field name="cce_sat_arancel_id" 
+                           attrs="{'column_invisible': [('parent.cfdi_complemento','!=','comercio_exterior')]}" /> 
+                    <field name="cce_quantity" 
+                           attrs="{'column_invisible': [('parent.cfdi_complemento','!=','comercio_exterior')],'required': [('parent.cfdi_complemento','=','comercio_exterior')]}"/>
+                    <field name="cce_uom" 
+                           attrs="{'column_invisible': [('parent.cfdi_complemento','!=','comercio_exterior')]}" />
+                </xpath>
+                <notebook position="inside">
+                    <page string="Complemento Comercio Exterior"
+                          attrs="{'invisible': [('cfdi_complemento','!=','comercio_exterior')]}">
+                        <group>
+                            <group>
+                                <field name="cfdi_comercio_exterior_total_usd" />
+                                <field name="cfdi_certificado_origen" 
+                                       attrs="{'required': [('cfdi_complemento','=','comercio_exterior')]}"/>
+                                <field name="cfdi_num_certificado_origen" 
+                                       attrs="{'required': [('cfdi_certificado_origen','=','1')]}"/>
+                            </group>
+                            <group invisible="1">
+                                <field name="cfdi_motivo_traslado" />
+                                <field name="cfdi_comercio_exterior_propietario_id" />
+                            </group>
+                        </group>
+                        <group colspan="4">
+                                <field name="cfdi_comercio_exterior_notas"  
+                                   nolabel="1" placeholder="Notas Comercio Exterior..."/>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+    
+
+</data>
+</odoo>

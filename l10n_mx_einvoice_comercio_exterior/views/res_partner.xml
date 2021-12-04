@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="res_aprtner_ce_comments_form">
+            <field name="name">res.aprtner.ce.comments</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page name="ce_comments" string="Comercio Exterior">
+                        <group string="Notas">
+                            <field name="cfdi_comercio_exterior_notas"
+                                   nolabel="1" placeholder="Notas Comercio Exterior..."/>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+        
+    </data>
+</odoo>
