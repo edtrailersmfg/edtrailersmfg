@@ -1,0 +1,23 @@
+id,code,name,aplica_persona_fisica,aplica_persona_moral
+regimen_fiscal_00,601,General de Ley Personas Morales,False,True
+regimen_fiscal_01,603,Personas Morales con Fines no Lucrativos,False,True
+regimen_fiscal_02,605,Sueldos y Salarios e Ingresos Asimilados a Salarios,True,False
+regimen_fiscal_03,606,Arrendamiento,True,False
+regimen_fiscal_04,608,Demás ingresos,True,False
+regimen_fiscal_05,609,Consolidación,False,True
+regimen_fiscal_06,610,Residentes en el Extranjero sin Establecimiento Permanente en México,False,False
+regimen_fiscal_07,611,Ingresos por Dividendos (socios y accionistas),True,False
+regimen_fiscal_08,612,Personas Físicas con Actividades Empresariales y Profesionales,True,False
+regimen_fiscal_09,614,Ingresos por intereses,True,False
+regimen_fiscal_10,616,Sin obligaciones fiscales,True,False
+regimen_fiscal_11,620,Sociedades Cooperativas de Producción que optan por diferir sus ingresos,False,True
+regimen_fiscal_12,621,Incorporación Fiscal,True,False
+regimen_fiscal_13,622,"Actividades Agrícolas, Ganaderas, Silvícolas y Pesqueras",True,True
+regimen_fiscal_14,623,Opcional para Grupos de Sociedades,False,True
+regimen_fiscal_15,624,Coordinados,False,True
+regimen_fiscal_16,628,Hidrocarburos,False,True
+regimen_fiscal_17,607,Régimen de Enajenación o Adquisición de Bienes,False,True
+regimen_fiscal_18,629,De los Regímenes Fiscales Preferentes y de las Empresas Multinacionales,True,False
+regimen_fiscal_19,630,Enajenación de acciones en bolsa de valores,True,False
+regimen_fiscal_20,615,Régimen de los ingresos por obtención de premios,True,False
+regimen_fiscal_21,625,Régimen de las Actividades Empresariales con ingresos a través de Plataformas Tecnológicas,True,False

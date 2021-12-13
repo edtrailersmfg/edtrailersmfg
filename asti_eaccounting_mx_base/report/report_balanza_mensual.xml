@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <template id="report_balanza_mensual_sat">
+            <t t-call="web.html_container">
+            <t t-set="data_report_margin_top" t-value="15"/>
+            <t t-set="data_report_header_spacing" t-value="10"/>
+            <!--<t t-set="data_report_dpi" t-value="300"/>-->
+            <t t-call="web.internal_layout">
+                <div class="page">
+                    <div class="row" style="font-size: 12px;">
+                        <strong><p t-esc="user.company_id.name" style="font-size: 14px;"/></strong>
+                        <p t-esc="'RFC: ' + user.company_id.partner_id.vat"/>
+                        <strong>BALANZA MENSUAL SAT</strong><BR/>
+                    </div>
+                    <table class="table table-condensed" style="page-break-inside: avoid">
+                        <thead>
+                            <tr style="text-align:center;font-size: 9px">
+                                <th style="width:11%;">Código SAT</th>
+                                <th style="width:35%;">Descripción SAT</th>
+                                <th style="width:5%;">Nivel</th>
+                                <th style="width:5%;">Nat</th>
+                                <th style="width:11%;">Saldo Inicial</th>
+                                <th style="width:11%;">Debe</th>
+                                <th style="width:11%;">Haber</th>
+                                <th style="width:11%;">Saldo Final</th>                                
+                            </tr>
+                       </thead>
+                       <tbody class="sale_tbody">
+                            <tr t-foreach="docs" t-as="o" style="font-size: 9px">
+                                <td><span t-field="o.account_id.sat_code_id.key"/></td>
+                                <td><span t-field="o.account_id.sat_code_id.name"/></td>
+                                <td style="text-align:center;"><span t-field="o.account_level"/></td>
+                                <td style="text-align:center;">
+                                    <span t-if="o.account_id.in_debt==True">D</span>
+                                    <span t-if="o.account_id.in_debt==False">A</span>
+                                </td>
+                                <td style="text-align:right;"><span t-field="o.initial_balance"/></td>  
+                                <td style="text-align:right;"><span t-field="o.debit"/></td>
+                                <td style="text-align:right;"><span t-field="o.credit"/></td>
+                                <td style="text-align:right;"><span t-field="o.ending_balance"/></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+    
+    
+        <record id="action_report_balanza_mensual_sat" model="ir.actions.report">
+            <field name="name">Balanza Mensual SAT</field>
+            <field name="model">account.monthly_balance</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">asti_eaccounting_mx_base.report_balanza_mensual_sat</field>
+            <field name="report_file">asti_eaccounting_mx_base.report_balanza_mensual_sat</field>
+            <!--<field name="print_report_name">'Waybill - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="model_purchase_order"/>
+            <field name="binding_type">report</field>-->
+        </record>
+
+    </data>
+</odoo>

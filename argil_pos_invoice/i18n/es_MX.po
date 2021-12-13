@@ -1,0 +1,372 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* argil_pos_invoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-03 17:39+0000\n"
+"PO-Revision-Date: 2016-09-03 12:50-0500\n"
+"Last-Translator: Israel Cruz Argil <israel.cruz@argil.mx>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 1.8.8\n"
+
+#. module: argil_pos_invoice
+#: model:ir.model,name:argil_pos_invoice.model_account_move
+msgid "Account Entry"
+msgstr "Póliza"
+
+#. module: argil_pos_invoice
+#: model:ir.ui.view,arch_db:argil_pos_invoice.view_invoice_form_pos_reconcile
+msgid "Aplicar Pagos de TpV"
+msgstr "Aplicar Pagos de TpV"
+
+#. module: argil_pos_invoice
+#: model:ir.ui.view,arch_db:argil_pos_invoice.view_account_invoice_pos_reconcile_wizard
+#: model:ir.ui.view,arch_db:argil_pos_invoice.view_pos_order_invoice_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,help:argil_pos_invoice.field_res_partner_invoice_2_general_public
+msgid "Check this if this Customer will be invoiced as General Public"
+msgstr "Active si al Facturar será como Público en General"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,help:argil_pos_invoice.field_res_partner_use_as_general_public
+msgid "Check this if this Customer will be used to create Daily Invoice for General Public"
+msgstr "Público en General por Defecto"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,help:argil_pos_invoice.field_pos_order_invoice_2_general_public
+msgid "Check this if this POS Ticket will be invoiced as General Public"
+msgstr "Active si el Ticket de TpV será facturado a Público en General"
+
+#. module: argil_pos_invoice
+#: model:ir.ui.view,arch_db:argil_pos_invoice.view_pos_order_invoice_wizard
+msgid "Create Invoice"
+msgstr "Crear factura"
+
+#. module: argil_pos_invoice
+#: model:ir.actions.act_window,name:argil_pos_invoice.action_pos_order_invoice
+msgid "Create Invoices"
+msgstr "Crear Facturas"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_account_invoice_pos_reconcile_with_payments_create_uid
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_create_uid
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_line_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_account_invoice_pos_reconcile_with_payments_create_date
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_create_date
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_line_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_date
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_line_date_order
+msgid "Date"
+msgstr "Fecha"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_account_invoice_pos_reconcile_with_payments_display_name
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_display_name
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_line_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_account_journal_pos_payments_remove_entries
+msgid "Eliminar Pagos del POS"
+msgstr "Eliminar Pagos del POS"
+
+#. module: argil_pos_invoice
+#: code:addons/argil_pos_invoice/model/res_partner.py:23
+#, python-format
+msgid "Error ! You can have only one Partner checked to Use for General Public Invoice..."
+msgstr "Error ! Solo puede tener un Partner definido para generar facturas a Público en General…"
+
+#. module: argil_pos_invoice
+#: code:addons/argil_pos_invoice/model/product.py:24
+#, python-format
+msgid "Error ! You can have only one Unit of Measure checked to Use for General Public Invoice..."
+msgstr "Error ! Solo puede tener una Unidad de Medida a usar para generar facturas a Público en General…"
+
+#. module: argil_pos_invoice
+#: code:addons/argil_pos_invoice/model/pos_invoice.py:159
+#, python-format
+msgid "From POS Orders"
+msgstr "De Tickets de TpV"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_2_general_public
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_line_invoice_2_general_public
+msgid "General Public"
+msgstr "Público en General"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_account_invoice_pos_reconcile_with_payments_id
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_id
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_journal_id
+msgid "Invoice Journal"
+msgstr "Diario"
+
+#. module: argil_pos_invoice
+#: model:ir.ui.view,arch_db:argil_pos_invoice.view_account_invoice_pos_reconcile_wizard
+msgid "Invoice Reconcile With POS Payments"
+msgstr "Conciliar Pagos del TpV con la Factura"
+
+#. module: argil_pos_invoice
+#: model:ir.model,name:argil_pos_invoice.model_account_invoice_tax
+msgid "Invoice Tax"
+msgstr "Impuesto de Factura"
+
+#. module: argil_pos_invoice
+#: code:addons/argil_pos_invoice/model/pos_invoice.py:166
+#, python-format
+msgid "Invoice created from POS Orders"
+msgstr "Factura resultado de Tickets de TpV"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_res_partner_invoice_2_general_public
+msgid "Invoice to General Public Partner"
+msgstr "Facturar a Público en General"
+
+#. module: argil_pos_invoice
+#: model:ir.model,name:argil_pos_invoice.model_account_journal
+msgid "Journal"
+msgstr "Diario"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,help:argil_pos_invoice.field_account_journal_pos_payments_remove_entries
+msgid ""
+"Las partidas contables generadas por los pagos de una TPV\n"
+"se eliminarán cuando se haga el cierre de Caja"
+msgstr ""
+"Las partidas contables generadas por los pagos de una TPV\n"
+"se eliminarán cuando se haga el cierre de Caja"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_account_invoice_pos_reconcile_with_payments___last_update
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard___last_update
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_line___last_update
+msgid "Last Modified on"
+msgstr "Última Modifiación en"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_account_invoice_pos_reconcile_with_payments_write_uid
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_line_write_uid
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_account_invoice_pos_reconcile_with_payments_write_date
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_line_write_date
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_account_journal_pos_dont_create_entries
+msgid "No crear Pólizas de Tickets del POS"
+msgstr "No crear Pólizas de Tickets del TpV"
+
+#. module: argil_pos_invoice
+#: model:ir.ui.view,arch_db:argil_pos_invoice.view_pos_order_invoice_wizard
+msgid "POS Order to Invoice"
+msgstr "Ticket TpV a Facturar"
+
+#. module: argil_pos_invoice
+#: code:addons/argil_pos_invoice/model/pos_invoice.py:160
+#, python-format
+msgid "POS Orders from %s"
+msgstr "Tickets TpV de %s"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_line_ticket_id
+msgid "POS Ticket"
+msgstr "Ticket TpV"
+
+#. module: argil_pos_invoice
+#: model:ir.model,name:argil_pos_invoice.model_res_partner
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_line_partner_id
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_account_invoice_pos_reconcile_with_payments_date
+msgid "Payment Date"
+msgstr "Fecha de pago"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,help:argil_pos_invoice.field_pos_order_invoice_wizard_line_user_id
+msgid "Person who uses the cash register. It can be a reliever, a student or an interim employee."
+msgstr "Persona que utiliza la caja registradora. Puede ser un sustituto, un estudiante o un empleado interino."
+
+#. module: argil_pos_invoice
+#: code:addons/argil_pos_invoice/model/pos_invoice.py:155
+#, python-format
+msgid "Please configure a Default Unit of Measure to use as UoM in Invoice Lines."
+msgstr "Por favor configure una Unidad de Medida por defecto para usar como UdM para las Líneas de Factura"
+
+#. module: argil_pos_invoice
+#: code:addons/argil_pos_invoice/model/pos_invoice.py:28
+#, python-format
+msgid "Please configure a Partner as default for Use as General Public Partner."
+msgstr "Por favor configure un Partner por defecto a usar como Público en General"
+
+#. module: argil_pos_invoice
+#: code:addons/argil_pos_invoice/model/pos_invoice.py:49
+#, python-format
+msgid "Please provide a partner for the sale."
+msgstr "Por favor defina un Partner para la venta"
+
+#. module: argil_pos_invoice
+#: model:ir.model,name:argil_pos_invoice.model_pos_order
+msgid "Point of Sale"
+msgstr "Terminal Punto de Venta"
+
+#. module: argil_pos_invoice
+#: model:ir.model,name:argil_pos_invoice.model_product_uom
+msgid "Product Unit of Measure"
+msgstr "Unidad de medida del producto"
+
+#. module: argil_pos_invoice
+#: model:ir.actions.act_window,name:argil_pos_invoice.action_invoice_pos_reconcile
+msgid "Reconcile Invoices and POS Payments"
+msgstr "Concilie pagos del TpV con Facturas"
+
+#. module: argil_pos_invoice
+#: model:ir.ui.view,arch_db:argil_pos_invoice.view_account_invoice_pos_reconcile_wizard
+msgid "Reconcile Payments"
+msgstr "Conciliar Pagos"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_line_pos_reference
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_line_user_id
+msgid "Salesman"
+msgstr "Vendedor"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_line_session_id
+msgid "Session"
+msgstr "Sesión"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,help:argil_pos_invoice.field_account_journal_pos_dont_create_entries
+msgid ""
+"Si marca esta casilla entonces no se van a generar pólizas de\n"
+"los Ticketsde TPV (en el funcionamiento estándar se genera póliza\n"
+"contable por cada Ticket de Venta, pero de alguna manera se\n"
+"duplican las partidas cuando se crean las Facturas."
+msgstr ""
+"Si marca esta casilla entonces no se van a generar pólizas de\n"
+"los Ticketsde TPV (en el funcionamiento estándar se genera póliza\n"
+"contable por cada Ticket de Venta, pero de alguna manera se\n"
+"duplican las partidas cuando se crean las Facturas."
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,help:argil_pos_invoice.field_pos_order_invoice_wizard_date
+msgid "This date will be used as the invoice date and period will be chosen accordingly!"
+msgstr "La fecha será usada como la fecha de Factura…"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,help:argil_pos_invoice.field_account_invoice_pos_reconcile_with_payments_date
+msgid "This date will be used as the payment date !"
+msgstr "Esta fecha será usada como fecha de Pago"
+
+#. module: argil_pos_invoice
+#: model:ir.ui.view,arch_db:argil_pos_invoice.view_pos_order_invoice_wizard
+msgid "This wizard will create Invoice(s) from selected POS Orders"
+msgstr "Este Asistente creará factura(s) de el/los ticket(s) de TpV seleccionados"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_ticket_ids
+msgid "Tickets to Invoice"
+msgstr "Tickets a Facturar"
+
+#. module: argil_pos_invoice
+#: model:ir.ui.view,arch_db:argil_pos_invoice.view_pos_order_invoice_wizard
+msgid "Tickets to be invoiced"
+msgstr "Tickets a Facturar"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_line_amount_total
+msgid "Total"
+msgstr "Total"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_res_partner_use_as_general_public
+msgid "Use as General Public Partner"
+msgstr "Usar como Público en General"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_product_uom_use_4_invoice_general_public
+msgid "Use for General Public Invoice"
+msgstr "Usar como Público en General"
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,field_description:argil_pos_invoice.field_pos_order_invoice_wizard_line_wiz_id
+msgid "Wizard"
+msgstr "Asistente"
+
+#. module: argil_pos_invoice
+#: model:ir.model,name:argil_pos_invoice.model_account_invoice_pos_reconcile_with_payments
+msgid "Wizard to Reconcile POS Payments with Invoices from POS Orders"
+msgstr "Asistente para Conciliar los Pagos en el TpV con la(s) Factura(s) de Tickets de TpV."
+
+#. module: argil_pos_invoice
+#: model:ir.model,name:argil_pos_invoice.model_pos_order_invoice_wizard
+msgid "Wizard to create Invoices from several POS Tickets"
+msgstr "Asistente para crear facturas de varios Tickets de TpV"
+
+#. module: argil_pos_invoice
+#: model:ir.model,name:argil_pos_invoice.model_pos_order_invoice_wizard_line
+msgid "Wizard to create Invoices from several POS Tickets2"
+msgstr "Asistente para crear facturas de varios Tickets de TpV2"
+
+#. module: argil_pos_invoice
+#: model:ir.ui.view,arch_db:argil_pos_invoice.view_account_invoice_pos_reconcile_wizard
+msgid "Wizard to create Payments for each Invoice linking with POS Orders Payments"
+msgstr "Asistente para Conciliar los Pagos en el TpV con la(s) Factura(s) de Tickets de TpV."
+
+#. module: argil_pos_invoice
+#: model:ir.model.fields,help:argil_pos_invoice.field_pos_order_invoice_wizard_journal_id
+msgid "You can select here the journal to use for the Invoice that will be created."
+msgstr "Puede seleccionar el Diario Contable a usar para generar la Factura"
+
+#. module: argil_pos_invoice
+#: model:ir.ui.view,arch_db:argil_pos_invoice.view_account_invoice_pos_reconcile_wizard
+#: model:ir.ui.view,arch_db:argil_pos_invoice.view_pos_order_invoice_wizard
+msgid "or"
+msgstr "ó"
+
+#. module: argil_pos_invoice
+#: model:ir.model,name:argil_pos_invoice.model_pos_session
+msgid "pos.session"
+msgstr "Sesión TPV"
+
+#. module: argil_pos_invoice
+#: model:ir.ui.view,arch_db:argil_pos_invoice.view_pos_order_invoice_wizard
+msgid "total"
+msgstr "total"

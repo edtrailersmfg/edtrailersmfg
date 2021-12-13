@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+            
+        <record id="moveline_currency_fit2" model="ir.ui.view">
+            <field name="name">moveline.currency.fit</field>
+            <field name="model">account.move</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='line_ids']/tree/field[@name='account_id']" position="before">
+                    <button type="object" name="edit_eaccount_info" 
+                            icon="fa-list"
+                            help="Agregar Complementos de Contabilidad Electrónica"/>
+                </xpath>
+                <notebook position="before">
+                    <field name="item_concept" placeholder="Concepto para la póliza..."/>
+                </notebook>
+                <button name="button_cancel" position="after">
+                    <button type="object" name="edit_complements" string="Auxiliar de folios"/>
+                </button>
+            </field>
+        </record>
+        
+    </data>
+    
+</odoo>

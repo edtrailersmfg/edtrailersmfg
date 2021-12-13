@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        
+        <record model="ir.ui.view" id="certificate_form_view_sifei">
+            <field name="name">certificate.form.sifei</field>
+            <field name="model">l10n_mx_edi.certificate</field>
+            <field name="inherit_id" ref="l10n_mx_edi.certificate_form_view"/>
+            <field name="arch" type="xml">
+                <field name="serial_number" position="after">
+                    <field name="pfx"/>
+                </field>
+            </field>
+        </record>
+        
+    </data>
+</odoo>

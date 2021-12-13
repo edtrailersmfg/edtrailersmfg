@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_account_config_settings_l10n_mx_einvoice_cce" model="ir.ui.view">
+            <field name="name">res.config.settings.l10n_mx_einvoice.cce</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="l10n_mx_einvoice.view_account_config_settings_l10n_mx_einvoice"/>
+            <field name="arch" type="xml">
+                <div id="pac_testing" position="after">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Comercio Exterior</span>
+                            <div class="text-muted">
+                                Indique los datos requeridos para Complemento de Comercio Exterior.
+                            </div>
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label for="cfdi_num_exportador_confiable" class="col-lg-3 o_light_label"/>
+                                    <field name="cfdi_num_exportador_confiable" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

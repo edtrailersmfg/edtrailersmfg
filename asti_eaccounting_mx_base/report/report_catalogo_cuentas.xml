@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_catalogo_cuentas_sat">
+        <t t-call="web.html_container">
+            <t t-set="data_report_margin_top" t-value="20"/>
+            <t t-set="data_report_header_spacing" t-value="15"/>
+            <t t-set="data_report_dpi" t-value="110"/>
+            <t t-call="web.internal_layout">
+                <div class="page">
+                    <strong><t t-esc="user.company_id.name" /></strong><BR/>
+                    <strong><t t-esc="'RFC: ' + user.company_id.partner_id.vat"/></strong><BR/>
+                    <strong>CATALOGO DE CUENTAS CON CODIGO AGRUPADOR DEL SAT</strong>
+                    <table class="table table-condensed" style="page-break-inside: avoid">
+                        <thead>
+                            <tr style="text-align:center;font-size:9px">
+                                <th>Cuenta</th>
+                                <th>Descripcion</th>
+                                <th>Nivel</th>
+                                <th>Nat</th>
+                                <th>Código SAT</th>
+                                <th>Descripción SAT</th>
+                            </tr>
+                       </thead>
+                       <tbody class="sale_tbody">
+                            <tr t-foreach="docs" t-as="o" style="font-size:9px;">
+                                <td><span t-field="o.account_code"/></td>
+                                <td><span t-field="o.account_name"/></td>
+                                <td style="text-align:center;"><span t-field="o.account_level"/></td>
+                                <td style="text-align:center;"><span t-field="o.account_nature"/></td>
+                                <td style="text-align:center;"><span t-field="o.sat_account_code"/></td>
+                                <td><span t-field="o.sat_account_name"/></td>
+                           </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+    
+    
+    <record id="action_report_catalogo_cuentas_sat" model="ir.actions.report">
+            <field name="name">Catalogo Cuentas SAT</field>
+            <field name="model">catalogo.cuentas</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">asti_eaccounting_mx_base.report_catalogo_cuentas_sat</field>
+            <field name="report_file">asti_eaccounting_mx_base.report_catalogo_cuentas_sat</field>
+            <!--<field name="print_report_name">'Waybill - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="model_purchase_order"/>
+            <field name="binding_type">report</field>-->
+        </record>
+    
+
+</odoo>

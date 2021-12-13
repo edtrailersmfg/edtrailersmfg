@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        
+        <record id="view_account_payment_form_eaccounting" model="ir.ui.view">
+            <field name="name">account.payment.invoice.form.eaccounting</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form"/>
+            <field name="arch" type="xml">
+                <field name="state" position="before">
+                    <button name="create_automatic_complements_eacounting" type="object" string="Complementos ContaE" 
+                            attrs="{'invisible': ['|',('complements_contae','=', True), ('cfdi_folio_fiscal','=',False)]}" />
+
+                </field>
+                <field name="partner_bank_id" position="after">
+                    <field name="cmpl_type" attrs="{'readonly': [('complements_contae','=', True)]}"/>
+                    <field name="partner_parent_id" invisible="1" />
+                    <field name="other_payment" 
+                           attrs="{'readonly' : [('cmpl_type', '!=', 'payment')], 'required' : [('cmpl_type','=', 'payment')], 'invisible': [('cmpl_type','!=', 'payment')],}"/>
+                    <field name="complements_contae" readonly="1"/>
+                </field>
+            </field>
+        </record>
+        
+        
+        <record id="payment_fit_invoice_form" model="ir.ui.view">
+            <field name="name">payment.fit.invoice.form</field>
+            <field name="model">account.payment.register</field>
+            <field name="inherit_id" ref="l10n_mx_einvoice.view_account_payment_form_multi_l10n_mx_einvoice"/>
+            <field name="arch" type="xml">
+                <field name="partner_bank_id" position="after">
+                    <field name="cmpl_type" invisible="1"/>
+                    <field name="partner_parent_id" invisible="1" />
+                    <field name="other_payment" 
+                           attrs="{'readonly' : [('cmpl_type', '!=', 'payment')], 
+                                   'required' : [('cmpl_type','=', 'payment')],
+                                   'invisible': [('cmpl_type','!=', 'payment')],}"/>
+                </field>
+                <field name="partner_bank_id" position="replace">
+                    <field name="partner_bank_id"
+                           attrs="{'invisible': ['|', ('show_partner_bank_account', '=', False), '|', ('can_edit_wizard', '=', False), '&amp;', ('can_group_payments', '=', True), ('group_payment', '=', False)],
+                                   'required': [('payment_type','=','inbound'),('pay_method_id_code', '=', '03'),('require_partner_bank_account', '=', True), ('can_edit_wizard', '=', True), '|', ('can_group_payments', '=', False), ('group_payment', '=', False)]}"/>
+                </field>
+            </field>
+        </record>
+        
+ 
+    </data>
+    
+</odoo>

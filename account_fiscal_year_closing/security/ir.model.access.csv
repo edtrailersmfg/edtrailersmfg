@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_cy_earnings,access_account_cy_earnings,model_account_cy_earnings,account.group_account_manager,1,1,1,0

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="vatimport_product_template_form_view">
+            <field name="name">TMS product.normal.form</field>
+            <field name="model">product.template</field>
+            <field name="type">form</field>
+            <field name="priority">50</field>
+            <field name="inherit_id" ref="account.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <field name="supplier_taxes_id" position="after">
+                    <field name="import_vat" />
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+	<data>
+        
+
+	  
+		<record id="view_pos_order_invoice_form" model="ir.ui.view">
+			<field name="name">POS Order Invoice Form</field>
+			<field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+			<field name="arch" type="xml">
+               <field name="session_move_id" position="after">
+	                    <field name="account_move" readonly="1"
+	                            attrs="{'invisible':[('account_move','=',False)]}"/>
+                </field>
+			</field>
+		</record>
+
+		
+		<record id="view_pos_order_invoice_tree" model="ir.ui.view">
+			<field name="name">POS Order Invoice Tree</field>
+			<field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_order_tree"/>
+			<field name="arch" type="xml">
+                <field name="user_id" position="before">
+                    <field name="account_move" />
+                </field>
+			</field>
+		</record>		
+		
+		<record id="view_pos_order_invoice_search" model="ir.ui.view">
+			<field name="name">POS Order Invoice Search</field>
+			<field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_order_filter"/>
+			<field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="account_move" />
+                </field>
+                <filter name="invoiced" position="after">
+                    <filter string="Con Factura" name="with_invoice" domain="[('account_move','!=',False)]"/>
+                    <filter string="No Facturado" name="wou_invoice" domain="[('account_move','=',False)]"/>
+                    <filter string="Por Factura" name="x_to_invoice" domain="[]" context="{'group_by':'account_move'}"/>
+                </filter>
+			</field>
+		</record>        
+
+  </data>
+</odoo>

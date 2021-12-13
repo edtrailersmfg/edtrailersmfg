@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+	<data>
+        
+        <!--
+        <record model="ir.ui.view" id="view_pos_pos_form_pos_invoice">
+            <field name="name">sale.order.invoice</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <button name="action_invoice" position="replace"></button>
+            </field>
+        </record>
+	  -->
+
+	  
+		<record id="view_sale_order_invoice_wizard" model="ir.ui.view">
+			<field name="name">Sale Orders to Invoice</field>
+			<field name="model">sale.order.invoice_wizard</field>
+			<field name="arch" type="xml">
+				<form string="Pedidos a Facturar">
+					<group string="Este Asistente permite generar Facturación a Publico en General y Facturación Estandar" col="4" colspan="4">
+						<field name="date"/>
+                        <field name="journal_id" domain="[('type', '=', 'sale')]"/>
+						<separator string="Ventas a Facturar" colspan="4" />
+						<field name="ticket_ids" colspan="4" nolabel="1">
+                            <tree editable="top" create="false">
+                                <field name="date_order" />
+                                <field name="ticket_id" />
+                                <field name="sale_reference" />
+                                <field name="user_id" />
+                                <field name="amount_total" sum="total"/>
+                                <field name="partner_id" />
+                                <field name="invoice_2_general_public" attrs="{'readonly': [('partner_id', '=', False)]}"/>
+                            </tree>
+                        </field>
+					</group>
+					<footer>
+						<button name="create_invoice_from_sales" string="Crear Facturas" type="object" class="oe_highlight"/>
+						or
+						<button string="Cancelar" class="oe_link" special="cancel"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+
+			
+        <act_window
+            name="Creacion de Facturas Globales"
+            id="action_sale_order_invoice"
+            res_model="sale.order.invoice_wizard"
+            binding_model="sale.order"
+            binding_views="list"
+            view_mode="form"
+            target="new"
+            />
+
+  </data>
+</odoo>
