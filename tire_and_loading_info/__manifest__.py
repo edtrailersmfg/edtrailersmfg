@@ -7,7 +7,7 @@
     'maintainer': 'Sursoom',
     'company': 'Sursoom',
     'website': 'https://www.sursoom.mx',
-    'description': """Imprime reporte del formato'""",
+    'description': """'Imprime reporte del formato'""",
     'depends': ['studio_customization',
                 'base'
                 ],
