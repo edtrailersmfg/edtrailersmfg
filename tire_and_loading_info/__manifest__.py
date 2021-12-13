@@ -2,7 +2,7 @@
     'name': 'Tire and Loading Info',
     'version': '15.0.1.0.1',
     'category': 'Inventory',
-    'summary': "Print format for tire and loading info'",
+    'summary': "Print format for tire and loading info",
     'author': 'Sursoom',
     'maintainer': 'Sursoom',
     'company': 'Sursoom',
@@ -13,6 +13,9 @@
                 'studio_customization',
                 'base'
                 ],
+    'data': [
+        'reports/report.xml'
+    ],
     'images': ['static/description/banner.png'],
     'license': 'AGPL-3',
     'application': False,

@@ -1,0 +1,13 @@
+<odoo>
+	<data>
+		<report
+			string="Tire & Loading Info"
+			id="tire_and_loading_info_report"
+			model="studio_customization.x_tire_loading_info"
+			report_type="qweb-pdf"
+			name="studio_customization.x_tire_loading_info_card"
+			file="studio_customization.x_tire_loading_info_card"
+			attachment_use="True"
+		/>
+	</data>
+</odoo>
