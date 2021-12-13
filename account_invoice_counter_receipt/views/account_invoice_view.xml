@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>  
+        
+        <record id="invoice_form_counter_receipt" model="ir.ui.view">
+            <field name="name">Contra Recibo y/o Cartas de Cobro</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <field name="invoice_date_due" position="after">
+                    <field name="counter_receipt_id" 
+                           attrs="{'invisible': [('counter_receipt_id', '=', False)]}"/>
+                    <field name="skip_counter_receipt_validation" 
+                           states="open,paid"/>
+                </field>
+            </field>
+        </record>
+        
+        
+         <record model="ir.ui.view" id="view_account_invoice_filter_counter_receipt">
+            <field name="name">account.invoice.filter.counter.receipt</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+            <field name="arch" type="xml">
+                <field name="date" position="after">
+                    <field name="counter_receipt_id" string="Contra-Recibo / Carta de Cobro"/>
+                </field>
+                <filter name="late" position="after">
+                    <filter string="Sin Contra-Recibo / Carta de Cobro" domain="[('counter_receipt_id','=',False)]" 
+                            name="factura_sin_cr"/>
+                    <separator/>
+                </filter>
+                <filter name="duedate" position="after">
+                    <filter string="Contra-Recibo / Carta de Cobro" name="contrarecibo" context="{'group_by':'counter_receipt_id'}"/>
+                </filter>
+            </field>
+        </record>
+        
+    </data>
+</odoo>

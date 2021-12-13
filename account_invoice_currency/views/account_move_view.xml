@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+
+        <record id="view_account_invoice_filter_currency" model="ir.ui.view">
+            <field name="name">account.move.select</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+            <field name="arch" type="xml">            
+                <filter name="duedate" position="after">
+                    <separator />
+                    <filter name="partner_id" string="Empresa" context="{'group_by':'partner_id'}"/>
+                    <filter name="currency_id" string="Moneda" context="{'group_by':'currency_id'}" groups="base.group_multi_currency"/>
+                </filter>
+            </field>
+        </record>
+        
+        
+        <record id="view_invoice_tree_currency" model="ir.ui.view">
+            <field name="name">account.move.tree</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_invoice_tree"/>
+            <field name="arch" type="xml">
+                <field name="currency_id" position="replace">
+                    <field name="currency_id" groups="base.group_multi_currency"/>
+                </field>
+            </field>
+        </record>
+
+        
+        <!--
+        <record id="invoice_tree_currency_supplier" model="ir.ui.view">
+            <field name="name">account.move.tree</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.move_supplier_tree"/>
+            <field name="arch" type="xml">
+                <field name="currency_id" position="replace">
+                    <field name="currency_id" />
+                </field>
+                <field name="amount_total_signed" position="replace">
+                    <field name="amount_total_signed" sum="x"/>
+                </field>
+                <field name="residual_signed" position="replace">
+                    <field name="residual_signed" string="A Pagar" sum="y"/>
+                </field>
+            </field>
+        </record>
+        -->
+        
+        
+        
+    </data>
+</odoo>

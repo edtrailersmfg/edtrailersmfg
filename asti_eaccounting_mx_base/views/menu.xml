@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+<!--    processes menu -->                
+        <menuitem id="files_generator_menu"
+                  action="files_generator_action"
+                  parent="account.menu_finance_reports"
+                  sequence="10" 
+                  groups="account.group_account_user"/>
+        
+        <menuitem name="Contabilidad Electrónica" 
+                  parent="account.menu_finance_entries" 
+                  id="menu_mexican_eaccount_options" 
+                  sequence="150"
+                  groups="account.group_account_user"/>
+        
+        <menuitem id="files_generator_menu2" 
+                  action="files_generator_action"
+                  parent="menu_mexican_eaccount_options"
+                  sequence="10" 
+                  groups="account.group_account_user"/>
+
+    </data>
+    
+</odoo>

@@ -1,0 +1,69 @@
+account_invoice_currency      (✔)          => OK
+account_period_and_fiscalyear (✔)          => OK
+l10n_mx_account_tree          (✔)          => OK
+    - Revisar cómo regresar las vistas de Arbol que había en la v10
+    - Se encontró que se puede ver la Balanza Mensual usando vista de Lista "estándar"
+    
+l10n_mx_einvoice              (✔)          => OK
+    - Formatos PDF de Factura y CFDI PAgos (Mejorados)
+    - Se Utilizo el estilo Background con lo cual se hereda el formato mejorado.
+    
+l10n_mx_einvoice_pac_sifei     (✔)         => OK
+    - Error al cancelar
+        - Contraseña incorrecta para PFX o archivo dañado. 
+        - Se estaba generando mal el archivo PFX, ya que estaba recibiendo la contraseña en bytes string con la cual convertia el pem al pfx, esto ocasionaba que el pfx se creara con una contraseña binaria no de formato cadena.
+
+
+stock_move_entries             (✔)         => OK
+
+l10n_mx_import_info            (✔)         => OK. Se agrega soporte a Pedimentos en Lotes.
+
+account_per_warehouse          (✔)         => 90%
+    - Falta Revisar que funcione para el módulo Fleet_MRO (hasta que se migre a la v14)
+
+
+account_invoice_analisys_extension  (✔)    => OK
+
+
+account_invoice_counter_receipt (✔)        => 95 %
+	- Faltan Pruebas
+
+account_payment_merge   (✔)                 => OK
+
+asti_eaccounting_mx_base  (✔)               => OK
+
+account_fiscal_year_closing   (✔)          => OK
+
+argil_mx_accounting_reports_consol  (✔)    => OK
+
+ifrs_report                (✔)             => OK
+
+
+argil_pos_invoice          (✔)             => OK
+
+     
+
+account_invoice_resend_email  (✔)          => OK
+
+account_move_subscription   (✔)             => 95%
+	- Faltan Pruebas para descartar cualquier error.
+
+
+l10n_mx_einvoice_sale           (✔)          => OK
+    - SI fue necesario migrarlo porque es necesario "arrastrar" algunos valores 
+      de la ficha del cliiente para la Factura.
+
+l10n_mx_diot_report           (✔)             => OK
+    - Se necesitan mas pruebas
+
+
+
+
+account_invoice_cancel    (X)               => Ya no es necesario migrarlo porque el proceso de Odoo ya lo cubre.
+argil_account_tax_cash_basis                => En revisión si Odoo lo cubre al 100% (Ya no es necesario migrarlo porque el proceso de Odoo ya lo cubre.)
+
+account_invoice_payment_by_date_due (X)     => Ya no es necesario migrarlo porque el proceso de Odoo ya lo cubre.
+    - Se tendría que revisar si aplica o no, ya que se usará el módulo account_invoice_balance_analysis (LME v12) o el de la OCA
+
+l10n_mx_einvoice_purchase (X)               => Ya no es necesario migrarlo porque el proceso de Odoo ya lo cubre.
+

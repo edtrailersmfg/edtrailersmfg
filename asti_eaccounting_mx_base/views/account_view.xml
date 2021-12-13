@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        
+        <record id="account_search_tree" model="ir.ui.view">
+            <field name="name">account.search.tree</field>
+            <field name="model">account.account</field>
+            <field name="inherit_id" ref="account.view_account_search"/>
+            <field name="arch" type="xml">
+                <field name="user_type_id" position="before">
+                    <filter domain="[('take_for_xml', '=', True)]" name="take_for_xml"
+                            string="Cuentas para XML" />
+                </field>
+            </field>
+        </record>
+        
+        <record id="account_fit_tree" model="ir.ui.view">
+            <field name="name">account.fit.tree</field>
+            <field name="model">account.account</field>
+            <field name="inherit_id" ref="account.view_account_list"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="sat_code_id" readonly="1"/>
+                </field>
+            </field>
+        </record>
+        
+        <record id="account_fit_form" model="ir.ui.view">
+            <field name="name">account.fit.form</field>
+            <field name="model">account.account</field>
+            <field name="inherit_id" ref="account.view_account_form"/>
+            <field name="arch" type="xml">
+                <field name="deprecated" position="after">
+                    <!--<separator string="Contabilidad electrónica"/>-->
+                    <h3 style="color: #7c7bad;text-decoration : underline">Contabilidad Electrónica</h3><br/>
+                        <field name="in_debt" />
+                        <field name="in_cred" />
+                        <field name="take_for_xml"/>
+                        <field name="sat_code_id" attrs="{'invisible' : [('take_for_xml', '=', False)], 'required' : [('take_for_xml', '=', True)]}"/>
+                        <field name="first_period_id" attrs="{'invisible' : [('take_for_xml', '=', False)], 'required' : [('take_for_xml', '=', True)]}"/>
+                        <!--<field name="rfc" />
+                        <field name="eaccount_account_ids" widget="one2many_list" mode="tree" nolabel="1" colspan="2">
+                            <tree editable="bottom" string="">
+                                <field name="code"/>
+                                <field name="bank_id"/>
+                                <field name="currency_id"/>
+                            </tree>
+                        </field>
+                        <h3 style="color: #7c7bad;text-decoration : underline">Aplica en:</h3><br/>
+                        <field name="apply_in_check" />
+                        <field name="apply_in_cfdi" />
+                        <field name="apply_in_trans" />
+                        <field name="apply_in_other" />
+                        <field name="apply_in_paymth" />
+                        <field name="apply_in_forgn" />-->
+                </field>
+            </field>
+        </record>
+        
+
+        <!-- server action 
+        ******************
+        ******************
+        Para evitar errores de usuario se ocultaron estas opciones para que solo se pueda 
+        obtener el XML / PDF desde el Wizard
+        ******************
+        ******************
+        <record id="accounting_plan_xml_action" model="ir.actions.server">
+            <field name="name">Generar XML del SAT</field>
+            <field name="type">ir.actions.server</field>
+            <field name="condition">True</field>
+            <field name="state">code</field>
+            <field name="model_id" ref="account.model_account_account"/>
+            <field name="sequence" eval="5"/>
+            <field name="code">action = object.launch_period_chooser()</field>
+        </record>
+        
+        <record id="accounting_plan_xml_sidelink" model="ir.values">
+            <field name="name">accounting.plan.xml.sidelink</field>
+            <field name="model">account.account</field>
+            <field name="object" eval="1"/>
+            <field name="key2">client_action_multi</field>
+            <field name="value" eval="'ir.actions.server,%d'% accounting_plan_xml_action"/>
+        </record>
+        
+        -->
+        <!-- mini wizard to choose period 
+        
+        
+        <record id="period_chooser_form" model="ir.ui.view">
+            <field name="name">period.chooser.form</field>
+            <field name="model">period.chooser</field>
+            <field name="arch" type="xml">
+                <form string="Contabilidad Electrónica - catálogo de cuentas">
+                    <group>
+           				<field name="period_id"/>
+           			</group>
+                    <footer>
+                    	<button type="object" name="generate_xml" string="Generar XML" class="oe_highlight"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        
+        -->
+    </data>
+    
+</odoo>

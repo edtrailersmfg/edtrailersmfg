@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+
+
+     <record model="ir.ui.view" id="form_product_template_3_3_einvoice_inhrt_complemento_comerc_ext">
+            <field name="name">product.template.cfdi.33.complemento.comerc.ext</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="l10n_mx_einvoice.form_product_template_fields_3_3_einvoice_inhrt"/>
+            <field name="arch" type="xml">
+                <field name="sat_product_id" position="after">
+                    <field name="sat_arancel_id" options="{'no_create_edit': True,'no_create': True}"/>
+                    <field name="sat_marca" />
+                    <field name="sat_modelo"/>
+                    <field name="sat_submodelo"/>
+                    <field name="sat_factor_conversion"/>
+                </field>
+            </field>
+        </record>
+
+</data>
+</odoo>

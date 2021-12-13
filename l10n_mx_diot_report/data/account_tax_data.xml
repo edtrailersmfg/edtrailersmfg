@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Tag usado solo para la DIOT -->
+        <record id="tag_diot_16_imp_non_cred" model="account.account.tag">
+            <field name="name">DIOT: 16% IVA IMPORTACION NO ACRED.</field>
+            <field name="applicability">taxes</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+      
+        <record id="tag_diot_16_imp_exento" model="account.account.tag">
+            <field name="name">DIOT: 16% IVA IMPORTACION EXENTO</field>
+            <field name="applicability">taxes</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+        
+        <record id="tax16imp" model="account.tax">
+            <field name="sequence" eval="1"/>
+            <!--<field name="chart_template_id" ref="l10n_mx.mx_coa"/>-->
+            <field name="name">IVA(16%) Importaciones</field>
+            <field name="description">IVA(16%) Importaciones</field>
+            <field name="amount">16</field>
+            <field name="active" eval="False"/>
+            <field name="amount_type">fixed</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="tax_group_id" ref="l10n_mx.tax_group_iva_16"/>
+            <field name="tax_exigibility">on_payment</field>
+            <!-- <field name="cash_basis_base_account_id" ref="l10n_mx.cuenta801_01_99"/>-->
+            <field name="cash_basis_transition_account_id" ref="l10n_mx.cuenta119_01"/>
+            <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'tag_ids': [ref('l10n_mx.tag_diot_16_imp')],
+                }),
+
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'account_id': ref('l10n_mx.cuenta118_01'),
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'tag_ids': [ref('l10n_mx.tag_diot_16_imp')],
+                }),
+
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'account_id': ref('l10n_mx.cuenta119_01'),
+                }),
+            ]"/>
+        </record>
+        
+        <record id="tax16imp_noncred" model="account.tax">
+            <field name="sequence" eval="1"/>
+            <!--<field name="chart_template_id" ref="l10n_mx.mx_coa"/>-->
+            <field name="name">IVA(16%) Importaciones - No Acreditable</field>
+            <field name="description">IVA(16%) Importaciones No Acred</field>
+            <field name="amount">16</field>
+            <field name="active" eval="False"/>
+            <field name="amount_type">fixed</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="tax_group_id" ref="l10n_mx.tax_group_iva_16"/>
+            <field name="tax_exigibility">on_payment</field>
+            <!-- <field name="cash_basis_base_account_id" ref="l10n_mx.cuenta801_01_99"/>-->
+            <field name="cash_basis_transition_account_id" ref="l10n_mx.cuenta119_01"/>
+            <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'tag_ids': [ref('l10n_mx_diot_report.tag_diot_16_imp_non_cred')],
+                }),
+
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'account_id': ref('l10n_mx.cuenta118_01'),
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'tag_ids': [ref('l10n_mx_diot_report.tag_diot_16_imp_non_cred')],
+                }),
+
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'account_id': ref('l10n_mx.cuenta119_01'),
+                }),
+            ]"/>
+        </record>
+
+        <record id="taximp_exento" model="account.tax">
+            <field name="sequence" eval="1"/>
+            <!--<field name="chart_template_id" ref="l10n_mx.mx_coa"/>-->
+            <field name="name">IVA Exento Importaciones</field>
+            <field name="description">IVA Exento Importaciones</field>
+            <field name="amount">16</field>
+            <field name="active" eval="False"/>
+            <field name="amount_type">fixed</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="tax_group_id" ref="l10n_mx.tax_group_iva_0"/>
+            <field name="tax_exigibility">on_payment</field>
+            <!-- <field name="cash_basis_base_account_id" ref="l10n_mx.cuenta801_01_99"/>-->
+            <field name="cash_basis_transition_account_id" ref="l10n_mx.cuenta119_01"/>
+            <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'tag_ids': [ref('l10n_mx_diot_report.tag_diot_16_imp_exento')],
+                }),
+
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'account_id': ref('l10n_mx.cuenta118_01'),
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'tag_ids': [ref('l10n_mx_diot_report.tag_diot_16_imp_exento')],
+                }),
+
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'account_id': ref('l10n_mx.cuenta119_01'),
+                }),
+            ]"/>
+        </record>
+
+      
+    </data>    
+</odoo>

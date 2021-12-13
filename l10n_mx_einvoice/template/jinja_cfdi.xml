@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pago10="http://www.sat.gob.mx/Pagos" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd http://www.sat.gob.mx/Pagos http://www.sat.gob.mx/sitio_internet/cfd/Pagos/Pagos10.xsd" Version="3.3" {% if serie %} Serie="{{serie}}" {% endif %} {% if folio %} Folio="{{folio}}" {% endif %} Fecha="{{date_2_cfdi_tz}}" SubTotal="0" Total="0" Moneda="XXX" LugarExpedicion="{{o.address_issued_id.zip_sat_id.code}}" TipoDeComprobante="P" NoCertificado="{{noCertificado}}" Certificado="{{certificado}}" Sello="">{% if o.activar_relacion_cfdi and o.cfdi_relacionado_id %}
+    <cfdi:CfdiRelacionados TipoRelacion="04">
+        <cfdi:CfdiRelacionado UUID="{{ o.cfdi_relacionado_id.cfdi_folio_fiscal }}"/>
+    </cfdi:CfdiRelacionados>{% endif %}
+    <cfdi:Emisor Rfc="{{emisor_rfc.replace('&','&amp;')}}" Nombre="{{emisor_nombre.replace('&','&amp;') or ''}}" RegimenFiscal="{{emisor_regimen}}"/>
+    <cfdi:Receptor Rfc="{{receptor_rfc.replace('&','&amp;')}}" Nombre="{{receptor_nombre.replace('&','&amp;')}}" UsoCFDI="P01" {% if ResidenciaFiscal %} ResidenciaFiscal="{{ResidenciaFiscal}}" {% endif %}{% if NumRegIdTrib %} NumRegIdTrib="{{NumRegIdTrib}}" {% endif %} />
+    <cfdi:Conceptos>
+        <cfdi:Concepto ClaveProdServ="84111506" Cantidad="1" ClaveUnidad="ACT" Descripcion="Pago" ValorUnitario="0" Importe="0"/>
+    </cfdi:Conceptos>
+    <cfdi:Complemento>
+        <pago10:Pagos Version="1.0">
+            <pago10:Pago FechaPago="{{fecha_recepcion}}" FormaDePagoP="{{o.pay_method_id.code}}" MonedaP="{{o.currency_id.name.upper()}}" {% if o.currency_id.name != o.company_id.currency_id.name %} TipoCambioP="{{
+            '{0:0.4f}'.format(o.tipo_cambio)}}" {% endif %} Monto="{{'{0:0.2f}'.format(o.amount)}}" {% if o.num_operacion %} NumOperacion="{{o.num_operacion}}" {% endif %} {% if rfcemisorctaord %} RfcEmisorCtaOrd="{{rfcemisorctaord}}" {% endif %} {% if nombancoordext %} NomBancoOrdExt="{{nombancoordext}}" {% endif %} {% if ctaordenante %} CtaOrdenante="{{ctaordenante}}" {% endif %} {% if rfcemisorctaben %} RfcEmisorCtaBen="{{rfcemisorctaben}}" {% endif %} {% if ctabeneficiario %} CtaBeneficiario="{{ctabeneficiario}}"  {% endif %} >
+                {% for l in o.payment_invoice_line_ids %}<pago10:DoctoRelacionado IdDocumento="{{l.invoice_uuid}}" {% if l.invoice_serie %} Serie="{{l.invoice_serie}}" {% endif %} {% if l.invoice_folio %} Folio="{{l.invoice_folio}}" {% endif %} MonedaDR="{{l.invoice_currency_id.name.upper()}}" {% if l.invoice_currency_rate != 0 and l.invoice_currency_id.name != o.currency_id.name %} TipoCambioDR="{{'{0:0.6f}'.format(l.invoice_currency_rate)}}" {% endif %} {% if l.invoice_id.metodo_pago_id %} MetodoDePagoDR="{{l.invoice_id.metodo_pago_id.code}}" {% endif %} NumParcialidad="{{l.parcialidad}}" ImpSaldoAnt="{{'{0:0.2f}'.format(l.saldo_anterior)}}" ImpPagado="{{'{0:0.2f}'.format(l.monto_pago)}}" ImpSaldoInsoluto="{{'{0:0.2f}'.format(l.saldo_final)}}"/>{% endfor %}
+            </pago10:Pago>
+        </pago10:Pagos>
+    </cfdi:Complemento>
+</cfdi:Comprobante>

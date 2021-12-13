@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <record model="ir.module.category" id="module_date_invoice_l10n_mx_einvoice">
+            <field name="name">Fecha FacturaE</field>
+            <field name="description">Indicate tue type of date that need was colocated in the invoice</field>
+            <field name="sequence">999</field>
+        </record>
+        
+        <record id="group_date_invoice_l10n_mx_einvoice" model="res.groups">
+            <field name="name">Date</field>
+            <field name="comment">Date</field>
+            <field name="category_id" ref="module_date_invoice_l10n_mx_einvoice"/>
+        </record>
+        
+        <record id="group_datetime_invoice_l10n_mx_einvoice" model="res.groups">
+            <field name="name">DateTime</field>
+            <field name="comment">Date Time</field>
+            <field name="category_id" ref="module_date_invoice_l10n_mx_einvoice"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        <record id="group_datetime_invoice_l10n_mx_einvoice" model="res.groups">
+            <field name="implied_ids" eval="[(4, ref('group_datetime_invoice_l10n_mx_einvoice'))]"/>
+        </record>
+        
+        <record id="admon_cfdi_33" model="res.groups">
+            <field name="name">Administrador CFDI 3.3</field>
+            <field name="comment">Estos Usuarios Tendran la Posibilidad de Administrar los Atributos para el CFDI 3.3, pudiendo corregir algun valor de los mismos o inclusive con la posibilidad de añadir nuevos.</field>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="user_cfdi_33" model="res.groups">
+            <field name="name">Usuario CFDI 3.3</field>
+            <field name="comment">Estos Usuarios Tendran la Posibilidad de Utilizar los Atributos para el CFDI 3.3, pero de forma limitada a solo lectura.</field>
+        </record>
+
+        <record model="ir.module.category" id="module_l10n_mx_einvoice">
+            <field name="name">Facturación Electrónica de México</field>
+            <field name="description">User:This user has limitations to create or modify.Manager:The user will have an access to the Electronic Invoice data and configuration</field>
+            <field name="sequence">999</field>
+        </record>
+        
+        <record id="group_l10n_mx_einvoice_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="comment">This user has limitations to create or modify</field>
+            <field name="category_id" ref="module_l10n_mx_einvoice"/>
+            <!--<field name="implied_ids" eval="[(4, ref('base.group_document_user'))]"/>-->
+        </record>
+        
+        <record id="group_l10n_mx_einvoice_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="comment">The user will have an access to the Electronic Invoice data and configuration</field>
+            <field name="category_id" ref="module_l10n_mx_einvoice"/>
+            <field name="implied_ids" eval="[(4, ref('group_l10n_mx_einvoice_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="res_group_einvoice_show_default_wizards" model="res.groups">
+          <field name="name">Facturacion Electronica</field>
+        </record>        
+
+        <record id="report_multicompany_rule" model="ir.rule">
+            <field name="name">Report Multicompany</field>
+            <field ref="model_report_multicompany" name="model_id"/>
+            <field eval="True" name="global"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+        
+    </data>
+</odoo>

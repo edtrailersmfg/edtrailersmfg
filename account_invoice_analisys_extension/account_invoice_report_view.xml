@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+    <data>
+
+    <record id="view_account_invoice_report_search_invoice_number" model="ir.ui.view">
+        <field name="name">account.invoice.report.search.invoice_number</field>
+        <field name="model">account.invoice.report</field>
+        <field name="inherit_id" ref="account.view_account_invoice_report_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//group/filter[@name='partner_id']" position="after">
+                <filter string="Moneda" name="currency" domain="[]" context="{'group_by':'currency_id'}"/>
+            </xpath>
+        </field>
+    </record>
+        
+        
+    </data>
+</openerp>

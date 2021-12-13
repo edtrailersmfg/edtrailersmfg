@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+
+
+
+        <record id="company_form_global_invoice" model="ir.ui.view">
+            <field name="name">company.form.global</field>
+            <field name="model">res.company</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <field name="phone" position="before">
+                    <field name="product_for_global_invoice" required="1" domain="[('product_for_global_invoice','=',True)]"/>
+                    <field name="invoice_public_default" />
+                </field>
+            </field>
+        </record>
+
+        <record id="global_invoice_sale_view_form" model="ir.ui.view">
+            <field name="name">global.invoice.sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Factura Global" >
+                        <button name="update_concepts_to_global_invoice" string="Actualizar Conceptos Factura Global" type="object" icon="fa-check-square-o"/>
+
+                            <field name="global_line_ids" readonly="1">
+                                <tree string="Conceptos Facturacion Global" editable="bottom" >
+                                    <field name="product_id" />
+                                    <field name="noidentificacion" />
+                                    <field name="uom_id" />
+                                    <field name="quantity" invisible="1"/>
+                                    <field name="invoice_line_tax_ids" />
+                                    <field name="price_unit" sum="Total Facturacion"/>
+                                </tree>
+                            </field>
+                            <separator string="Facturas" />
+                            <field name="invoice_global_ids" widget="many2many_tags"/>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+        <record id="global_invoice_pos_view_form" model="ir.ui.view">
+            <field name="name">global.invoice.pos.order.form</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Factura Global" >
+                        <button name="update_concepts_to_global_invoice" string="Actualizar Conceptos Factura Global" type="object" icon="fa-check-square-o"/>
+                            <field name="global_line_ids" readonly="1">
+                                <tree string="Conceptos Facturacion Global" editable="bottom" >
+                                    <field name="product_id" />
+                                    <field name="noidentificacion" />
+                                    <field name="uom_id" />
+                                    <field name="quantity" invisible="1"/>
+                                    <field name="invoice_line_tax_ids" />
+                                    <field name="price_unit" sum="Total Facturacion"/>
+                                </tree>
+                            </field>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+<!-- 
+        <record id="product_global_uom" model="product.uom" >
+            <field name="name">Actividad Facturacion</field>
+            <field name="uom_type">reference</field>
+            <field name="category_id" ref="product.product_uom_categ_unit"/>
+            <field name="sat_uom_id" ref="l10n_mx_sat_models_datas.sat_udm_code_241"/>
+        </record>
+
+
+        <record id="product_global_discount" model="product.product" >
+            <field name="name">Servicio Facturacion Global</field>
+            <field name="type">service</field>
+            <field name="uom_id" ref="argil_pos_invoice.product_global_uom"/>
+            <field name="sat_product_id" ref="l10n_mx_sat_models_datas.c_ClaveProdServ_01010101"/>
+            <field name="product_for_global">True</field>
+        </record> -->
+    
+
+  </data>
+</odoo>

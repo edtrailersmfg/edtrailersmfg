@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_account_diot_report" model="ir.ui.view">
+            <field name="name">Reporte DIOT</field>
+            <field name="model">account.diot.report</field>
+            <field name="arch" type="xml">
+            <form string="DIOT Report" >
+                <field invisible="1" name="state"/>
+                <field name="name" invisible="1"/>
+                <group  states="choose" string="Reporte DIOT - Declaración Informativa de Operaciontes con Terceros" colspan="4">
+                    <field name="company_id" />
+                    <label for="date_from" string="Periodo" />
+                    <div class="o_row">
+                        <field name="date_from" class="oe_inline"/> - <field name="date_to" class="oe_inline"/>
+                    </div>
+                </group>
+                <div states="get">
+                    <h2>El reporte de la DIOT ha sido creado exitosamente!</h2>
+                    <p>Aquí puede encontrar el archivo de la DIOT:</p>
+                    <p>Hoja de Cálculo:  <field name="file_csv" readonly="1" filename="filename_csv"/></p>
+                    <p>Archivo TXT para subir al porta del SAT: <field name="file" readonly="1" filename="filename"/> </p>
+                    <field name="filename" invisible="1"/>
+                    <field name="filename_csv" invisible="1"/>
+                </div>
+                <div states="not_file">
+                    <h2>El reporte de la DIOT no pudo se creado!</h2>
+                    <p>Probablemente porque:</p>
+                    <p>- No hay movimientos a reportar en el periodo seleccionado</p>
+                    <p>- No tiene configurados los impuestos correctamente</p>
+                </div>
+
+                <footer  states="choose">
+                    <button name="create_diot" string="Crear archivo de la DIOT" colspan="1" type="object" class="oe_highlight" icon="fa-cogs"/>
+                    <button string="Cancelar" class="oe_link" special="cancel" icon="fa-close"/>
+                </footer>
+                <footer attrs="{'invisible':[('state','not in', ('get', 'not_file'))]}">
+                    <button special="cancel" string="Close" type="object" icon="fa-close"/>
+                </footer>
+            </form>
+            </field>
+        </record>
+
+        <record id="action_account_diot_report" model="ir.actions.act_window">
+            <field name="name">Reporte DIOT</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.diot.report</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="help"></field>
+        </record>
+
+        <menuitem   name="Reporte de la DIOT"
+                    parent="account.menu_finance_reports" sequence="20"
+                    action="action_account_diot_report"
+                    id="menu_account_diot_declaration"
+            />
+
+
+    </data>
+</odoo>

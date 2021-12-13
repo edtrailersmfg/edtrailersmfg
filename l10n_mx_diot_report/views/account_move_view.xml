@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_accuont_invoice_line_vatimport_wizard" model="ir.ui.view">
+            <field name="name">Agregar IVA de Importaciones</field>
+            <field name="model">account.invoice.line.vatimport.wizard</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Agregar IVA Importaciones">
+                    <field name="company_id" colspan="4" invisible="1"/>
+                    <group col="4" colspan="4">
+                        <separator string="Desglose de IVA de Importaciones" colspan="4"/>
+                        <field name="line_ids" nolabel="1" colspan="4">
+                            <tree>
+                                <field name="line_type" />
+                                <field name="account_id" 
+                                       domain="[('deprecated', '=', False), ('company_id', '=', parent.company_id)]"/>
+                                <field name="name" />
+                                <field name="analytic_account_id" 
+                                       domain="['|', ('company_id', '=', parent.company_id), ('company_id', '=', False)]" 
+                                       groups="analytic.group_analytic_accounting" />
+                                <field name="analytic_tag_ids" groups="analytic.group_analytic_tags" 
+                                       domain="['|', ('company_id', '=', parent.company_id), ('company_id', '=', False)]" 
+                                       widget="many2many_tags" />
+                                <field name="partner_id" />
+                                <field name="date" />
+                                <field name="amount_base" />
+                                <field name="tax_amount" sum="suma_iva_imp"/>
+                            </tree>
+                            <form>
+                                <group col="4" colspan="4">
+                                    <field name="line_type" />
+                                    <newline />
+                                    <field name="account_id" 
+                                       domain="[('deprecated', '=', False), ('company_id', '=', parent.company_id)]"/>
+                                    <field name="name" />
+                                    <field name="analytic_account_id" 
+                                           domain="['|', ('company_id', '=', parent.company_id), ('company_id', '=', False)]" 
+                                           groups="analytic.group_analytic_accounting" />
+                                    <field name="analytic_tag_ids" groups="analytic.group_analytic_tags" 
+                                           domain="['|', ('company_id', '=', parent.company_id), ('company_id', '=', False)]" 
+                                           widget="many2many_tags" />
+                                    <field name="partner_id" />
+                                    <field name="date" />
+                                    <field name="amount_base" />
+                                    <field name="tax_amount" sum="suma_iva_imp"/>
+                                    
+                                </group>
+                            </form>
+                        </field>
+                    </group>
+                    <footer>
+                        <button name="button_add_invoice_line" 
+                                class="oe_highlight"
+                                string="Agregar IVA de Importaciones" type="object"  />
+                        o
+                        <button special="cancel" string="Cancel" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        
+        <record id="action_acount_invoice_vatimport_wizard" model="ir.actions.act_window">
+            <field name="name">Agregar IVA Importaciones</field>
+            <field name="res_model">account.invoice.line.vatimport.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        
+        <record id="view_move_form_vatimport" model="ir.ui.view">
+            <field name="name">account.invoice.form.vatimport</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <!--<field name="reference" position="attributes">
+                    <attribute name="attrs">{'required': 1}</attribute>
+                </field>-->
+                <button name="button_draft" position="after">
+                    <button string="Agregar IVA Importaciones" 
+                            attrs="{'invisible':[('state','!=','draft')]}"
+                            type="action" name="%(l10n_mx_diot_report.action_acount_invoice_vatimport_wizard)d" groups="account.group_account_invoice"/>
+                </button>    
+                <field name="id" position="before">
+                    <field name="has_vat_lines" invisible="1"/>
+                </field>                
+                <notebook position="inside">
+                    <page string="IVA Importaciones"
+                          attrs="{'invisible': [('has_vat_lines','=',False)]}">
+                        <group>
+                            <field name="vat_line_ids" nolabel="1" readonly="1">
+                                <tree>
+                                    <field name="invoice_line_id" invisible="1"/>
+                                    <field name="account_id" />
+                                    <field name="name" />
+                                    <field name="partner_id" />
+                                    <field name="date" />
+                                    <field name="amount_base" />
+                                    <field name="tax_amount" sum="suma_iva_imp"/>
+                                    <field name="line_type" />
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+        
+    </data>
+</odoo>
