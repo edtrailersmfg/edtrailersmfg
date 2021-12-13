@@ -8,17 +8,14 @@
     'company': 'Sursoom',
     'website': 'https://www.sursoom.mx',
     'description': """Imprime reporte del formato'""",
-    'depends': ['stock',
-                'stock_account',
-                'studio_customization',
+    'depends': ['studio_customization',
                 'base'
                 ],
     'data': [
         'reports/report.xml'
     ],
-    'images': ['static/description/banner.png'],
     'license': 'AGPL-3',
-    'application': False,
+    'application': True,
     'installable': True,
     'auto_install': False,
 }
