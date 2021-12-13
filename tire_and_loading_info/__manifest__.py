@@ -11,8 +11,8 @@
     'description': """'Imprime reporte del formato'""",
     'depends': ['base','studio_customization'],
     'data': [
-        'views/templates.xml',
-        'reports/report.xml'
+        #'views/templates.xml',
+        #'reports/report.xml'
     ],
     'license': 'AGPL-3',
     'application': True,
