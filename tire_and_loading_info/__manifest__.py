@@ -12,7 +12,7 @@
                 'base'
                 ],
     'data': [
-        'reports/report.xml'
+
     ],
     'license': 'AGPL-3',
     'application': True,
