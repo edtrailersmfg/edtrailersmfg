@@ -10,7 +10,7 @@
     'description': """Imprime reporte del formato'""",
     'depends': ['stock',
                 'stock_account',
-                'purchase',
+                'studio_customization',
                 'base'
                 ],
     'images': ['static/description/banner.png'],
