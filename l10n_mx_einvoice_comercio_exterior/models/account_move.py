@@ -158,7 +158,9 @@ class AccountMove(models.Model):
                               "- País"
                              ))        
         
-        if address_invoice_parent.persona_fisica:
+        _logger.info("\n########## address_invoice_parent: %s" % address_invoice_parent)
+        _logger.info("\n########## address_invoice_parent.curp: %s" % address_invoice_parent.curp)
+        if address_invoice_parent.curp:
             complemento['cce11:ComercioExterior']['cce11:Emisor'].update({'Curp':address_invoice_parent.curp})
         
         complemento['cce11:ComercioExterior']['cce11:Emisor'].update({'cce11:Domicilio': {
