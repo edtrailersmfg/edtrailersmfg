@@ -25,6 +25,7 @@ class CancelationSFCodes:
             '611':'Los datos recibidos están incompletos o no se encuentran donde se esperarían.',
             '620':'Permiso denegado.',
             '621':'Los datos recibidos no son válidos.',
+            '623': 'El UUID proporcionado no se encuentra en el panel de timbrado del usuario.',
             '633':'Uso indebido de cuenta de producción en pruebas o cuenta de prueba en producción.',
             '701':'Ya existe una transacción asíncrona para el UUID especificado.',
             # Cancelacion 2018 #
