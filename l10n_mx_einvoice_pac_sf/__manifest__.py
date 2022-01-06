@@ -18,6 +18,9 @@
     "depends" : [
                 "l10n_mx_einvoice",
                 ],
-    "data" : [],
+    "data" : [
+                'views/account_invoice_view.xml',
+                'views/account_payment_view.xml',
+            ],
     "installable" : True,
 }

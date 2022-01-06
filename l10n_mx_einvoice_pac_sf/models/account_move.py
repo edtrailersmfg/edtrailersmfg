@@ -13,7 +13,22 @@ class AccountMove(models.Model):
                                 ondelete={'pac_sf': 'set null'})
     
     #####################################
+
+    motivo_cancelacion = fields.Selection([
+        ('01', '[01] Comprobantes emitidos con errores con relación'),
+        ('02', '[02] Comprobantes emitidos con errores sin relación'),
+        ('03', '[03] No se llevó a cabo la operación'),
+        ('04', '[04] Operación nominativa relacionada en una factura global')
+    ], required=False, string="Motivo Cancelación", copy=False)
+    
+    
+    uuid_relacionado_cancelacion = fields.Char(string="UUID Relacionado en Cancelación", copy=False)
         
+    def cancelation_request_create(self):
+        if self.journal_id.use_for_cfdi and self.cfdi_folio_fiscal and not self.motivo_cancelacion:
+            raise UserError("Debe ingresar el motivo de la cancelación desde la pestaña CFDI Info")
+        return super(AccountInvoice, self).cancelation_request_create()
+
 class AccountPayment(models.Model):
     _inherit = 'account.payment'
 
@@ -22,7 +37,23 @@ class AccountPayment(models.Model):
                                 string='CFDI Pac', readonly=True, store=True, copy=False, default='pac_sf',
                                 ondelete={'pac_sf': 'set null'})
     #####################################        
+
+    motivo_cancelacion = fields.Selection([
+        ('01', '[01] Comprobantes emitidos con errores con relación'),
+        ('02', '[02] Comprobantes emitidos con errores sin relación'),
+        ('03', '[03] No se llevó a cabo la operación'),
+        ('04', '[04] Operación nominativa relacionada en una factura global')
+    ], required=False, string="Motivo Cancelación", copy=False)
     
+    
+    uuid_relacionado_cancelacion = fields.Char(string="UUID Relacionado en Cancelación", copy=False)
+        
+
+    def action_cancel(self):
+        if self.journal_id.use_for_cfdi and self.cfdi_folio_fiscal and not self.motivo_cancelacion:
+            raise UserError("Debe ingresar el motivo de la cancelación desde la pestaña CFDI Info")
+        return super(AccountPayment, self).action_cancel()
+
 class AccountMoveCancelationRecord(models.Model):
     _inherit = 'account.move.cancelation.record'
 
@@ -68,7 +99,9 @@ class AccountMoveCancelationRecord(models.Model):
                     isZipFile = 0
                     # print("######### (user, password, invoice_rec.cfdi_folio_fiscal, rfc_emisor, email_emisor, cerCSD, keyCSD, contrasenaCSD) >>>>> \n",(user, password, invoice_rec.cfdi_folio_fiscal, rfc_emisor, email_emisor, cerCSD, keyCSD, contrasenaCSD))
                     try:
-                        resultado = client.service.cancelarAsincrono(user, password, invoice_rec.cfdi_folio_fiscal, rfc_emisor, email_emisor, cerCSD, keyCSD, contrasenaCSD)
+                        uuid_cancelacion_motivo = '%s|%s|%s' % (invoice_rec.cfdi_folio_fiscal, invoice_rec.motivo_cancelacion, 
+                                                 invoice_rec.uuid_relacionado_cancelacion or '')
+                        resultado = client.service.cancelarAsincrono(user, password, uuid_cancelacion_motivo, rfc_emisor, email_emisor, cerCSD, keyCSD, contrasenaCSD)
                     except WebFault as f:
                         raise UserError(_('Advertencia !!!\nOcurrió un error al intentar Cancelar el CFDI.'))
                     code_result = resultado.status
