@@ -147,8 +147,8 @@ class AccountMove(models.Model):
         
         if not (address_invoice_parent.street and \
                 address_invoice_parent.zip_sat_id.code and \
-                address_invoice_parent.state_id.sat_code.code and \
-                address_invoice_parent.country_id.sat_code.code
+                address_invoice_parent.state_id.code and \
+                address_invoice_parent.country_id.sat_code
                ):
             raise UserError(_("Error !!! La dirección del Emisor parece estar incompleta o algún valor no tiene relacionado el Código SAT correspondiente,"
                               "por favor revise que tenga los siguientes datos en la dirección:\n"
@@ -158,14 +158,16 @@ class AccountMove(models.Model):
                               "- País"
                              ))        
         
-        if address_invoice_parent.persona_fisica:
+        _logger.info("\n########## address_invoice_parent: %s" % address_invoice_parent)
+        _logger.info("\n########## address_invoice_parent.curp: %s" % address_invoice_parent.curp)
+        if address_invoice_parent.curp:
             complemento['cce11:ComercioExterior']['cce11:Emisor'].update({'Curp':address_invoice_parent.curp})
         
         complemento['cce11:ComercioExterior']['cce11:Emisor'].update({'cce11:Domicilio': {
             'Calle'     : address_invoice_parent.street,
             'CodigoPostal' : address_invoice_parent.zip_sat_id.code,
-            'Estado'    : address_invoice_parent.state_id.sat_code.code,
-            'Pais'      : address_invoice_parent.country_id.sat_code.code
+            'Estado'    : address_invoice_parent.state_id.code,
+            'Pais'      : address_invoice_parent.country_id.sat_code
             }})
         
         
@@ -189,11 +191,11 @@ class AccountMove(models.Model):
         if ('transport_document_cfdi' in self._fields and self.transport_document_cfdi) and not self.cfdi_comercio_exterior_propietario_id:
             raise UserError(_('Error !!! El tipo de Comprobante es de Traslado y exige que se defina el Propietario de la Mercancía'))
         elif 'transport_document_cfdi' in self._fields and self.transport_document_cfdi:
-            if not (self.cfdi_comercio_exterior_propietario_id.num_reg_trib and self.cfdi_comercio_exterior_propietario_id.country_id.sat_code.code):
+            if not (self.cfdi_comercio_exterior_propietario_id.num_reg_trib and self.cfdi_comercio_exterior_propietario_id.country_id.sat_code):
                 raise UserError(_('Error !!! El Propietario no tiene definido el Registro Tributario o el País, no es posible generar el CFDI sin esa información'))
             complemento['cce11:ComercioExterior'].update({'cce11:Propietario': {
                 'NumRegIdTrib'     : self.cfdi_comercio_exterior_propietario_id.num_reg_trib,
-                'ResidenciaFiscal' : self.cfdi_comercio_exterior_propietario_id.country_id.sat_code.code,
+                'ResidenciaFiscal' : self.cfdi_comercio_exterior_propietario_id.country_id.sat_code,
             }})        
         
         # ------- ------- RECEPTOR ------- -------
@@ -204,7 +206,7 @@ class AccountMove(models.Model):
             if not partner.num_reg_trib:
                 raise UserError(_('Error !!! El cliente es extranjero pero no tiene definido el Registro Tributario, no es posible generar el CFDI sin esa información'))
         
-        if not (partner.street and partner.zip and partner.state_id and partner.country_id.sat_code.code):
+        if not (partner.street and partner.zip and partner.state_id and partner.country_id.sat_code):
             raise UserError(_("Error !!! La dirección del Receptor parece estar incompleta o algún valor no tiene relacionado el Código SAT correspondiente,"
                               "por favor revise que tenga los siguientes datos en la dirección:\n"
                               "- Calle\n"
@@ -213,21 +215,21 @@ class AccountMove(models.Model):
                               "- País"
                              ))
         
-        if partner.country_id.code in ('CAN','USA','MX') and not partner.state_id.sat_code:
+        if partner.country_id.code in ('CAN','USA','MX') and not partner.state_id.code:
             raise UserError('Para los Receptores de países México / Canadá / Estados Unidos es indispensable que cree el estado esté asociado en el Catálogo de Estados del SAT, por favor revise Configuración => Catálogos SAT CFDI => Catálogo Códigos de Estados')
             
         complemento['cce11:ComercioExterior']['cce11:Receptor'].update({'cce11:Domicilio': {
             'Calle'     : partner.street,
             'CodigoPostal' : partner.zip or partner.zip_sat_id.code,
-            'Estado'    : (partner.state_id.sat_code and partner.state_id.sat_code.code) or partner.state_id.name,
-            'Pais'      : partner.country_id.sat_code.code,
+            'Estado'    : (partner.state_id.code and partner.state_id.code) or partner.state_id.name,
+            'Pais'      : partner.country_id.sat_code,
             }})
 
         if not complemento['cce11:ComercioExterior']['cce11:Receptor']['cce11:Domicilio']['CodigoPostal']:
             complemento['cce11:ComercioExterior']['cce11:Receptor']['cce11:Domicilio'].pop('CodigoPostal')
         
         comprobante['cfdi:Comprobante']['cfdi:Receptor'].update({'NumRegIdTrib'     : partner.num_reg_trib,
-                                                                 'ResidenciaFiscal' : partner.country_id.sat_code.code})
+                                                                 'ResidenciaFiscal' : partner.country_id.sat_code})
         
         if partner.street_number:
             complemento['cce11:ComercioExterior']['cce11:Receptor']['cce11:Domicilio'].update({'NumeroExterior': partner.street_number})
@@ -246,7 +248,7 @@ class AccountMove(models.Model):
 
             complemento['cce11:ComercioExterior']['cce11:Destinatario'].update({'NumRegIdTrib': partner.num_reg_trib})
 
-            if not (partner.street and partner.state_id.sat_code.code and partner.country_id.sat_code.code):
+            if not (partner.street and partner.state_id.code and partner.country_id.sat_code):
                 raise UserError(_("Error !!! La dirección del Receptor parece estar incompleta o algún valor no tiene relacionado el Código SAT correspondiente,"
                                   "por favor revise que tenga los siguientes datos en la dirección:"
                                   "- Calle"
@@ -257,8 +259,8 @@ class AccountMove(models.Model):
             complemento['cce11:ComercioExterior']['cce11:Destinatario'].update({'cce11:Domicilio': {
                 'Calle'     : partner.street,
                 'CodigoPostal' : partner.zip_sat_id.code,
-                'Estado'    : partner.state_id.sat_code.code,
-                'Pais'      : partner.country_id.sat_code.code
+                'Estado'    : partner.state_id.code,
+                'Pais'      : partner.country_id.sat_code
                 }})
 
             if partner.street_number:

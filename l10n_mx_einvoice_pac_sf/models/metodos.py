@@ -68,7 +68,9 @@ class AccountMove(models.Model):
             if self.company_id.partner_id.vat == 'TBE740319AP4':
                 contrasenaCSD += ' '
             try:
-                resultado = client.service.cancelar(user, password, self.cfdi_folio_fiscal, cerCSD, keyCSD, contrasenaCSD)
+                uuid_cancelacion_motivo = '%s|%s|%s' % (self.cfdi_folio_fiscal, self.motivo_cancelacion, 
+                                                 self.uuid_relacionado_cancelacion or '')
+                resultado = client.service.cancelar(user, password, uuid_cancelacion_motivo, cerCSD, keyCSD, contrasenaCSD)
             except WebFault as f:
                 raise UserError(_('Advertencia !!!\nOcurrió un error al intentar Cancelar el CFDI.'))
             
@@ -230,7 +232,9 @@ class AccountPayment(models.Model):
             if self.company_id.partner_id.vat == 'TBE740319AP4':
                 contrasenaCSD += ' '
             try:
-                resultado = client.service.cancelar(user, password, self.cfdi_folio_fiscal, cerCSD, keyCSD, contrasenaCSD)
+                uuid_cancelacion_motivo = '%s|%s|%s' % (self.cfdi_folio_fiscal, self.motivo_cancelacion, 
+                                                 self.uuid_relacionado_cancelacion or '')
+                resultado = client.service.cancelar(user, password, uuid_cancelacion_motivo, cerCSD, keyCSD, contrasenaCSD)
             except WebFault as f:
                 raise UserError(_('Advertencia !!!\nOcurrió un error al intentar obtener el Timbre. \n\nCódigo: %s\nError: %s\nMensaje: %s') % 
                                 (f.fault.detail.SifeiException.codigo,f.fault.detail.SifeiException.error, f.fault.detail.SifeiException.message))
