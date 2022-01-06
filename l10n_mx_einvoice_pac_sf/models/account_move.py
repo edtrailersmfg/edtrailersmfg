@@ -27,7 +27,7 @@ class AccountMove(models.Model):
     def cancelation_request_create(self):
         if self.journal_id.use_for_cfdi and self.cfdi_folio_fiscal and not self.motivo_cancelacion:
             raise UserError("Debe ingresar el motivo de la cancelación desde la pestaña CFDI Info")
-        return super(AccountInvoice, self).cancelation_request_create()
+        return super(AccountMove, self).cancelation_request_create()
 
 class AccountPayment(models.Model):
     _inherit = 'account.payment'
