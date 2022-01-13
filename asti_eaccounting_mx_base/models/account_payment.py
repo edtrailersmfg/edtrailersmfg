@@ -59,6 +59,7 @@ class AccountPaymentRegister(models.TransientModel):
                '17' : '17',
                '98' : '98',
                '99' : '99',
+               '28' : '28',
                False: False,
               }
         self.pay_method_id = self.other_payment and rel[self.other_payment.code] and \
