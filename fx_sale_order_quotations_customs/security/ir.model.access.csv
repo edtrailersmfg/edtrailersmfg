@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+wizard_order_line_recompute_access,wizard.order.line.recompute,model_wizard_order_line_recompute,,1,1,1,1
+wizard_order_recompute_access,wizard.order.recompute,model_wizard_order_recompute,,1,1,1,1

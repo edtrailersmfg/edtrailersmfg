@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>  
+
+        <!-- Asistente Cotización -->
+
+        <record id="view_wizard_order_recompute_form" model="ir.ui.view">
+            <field name="name">wizard.order.recompute</field>
+            <field name="model">wizard.order.recompute</field>
+            <field name="arch" type="xml">
+                <form string="Calculo Total">
+                    <group>
+                        <h1>
+                            <field name="sale_order_name" nolabel="1" readonly="1"/>
+                        </h1>
+                    </group>
+                    <group >
+                        <h1 class="oe_center">
+                            <span attrs="{'invisible':[('order_updated','=',False)]}">Total Previo: <field name="amount_total_prev" readonly="1" force_save="1"/> → </span>Total Venta: <field name="amount_total" readonly="1" force_save="1"/>
+                        </h1>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="sale_order_id" invisible="1"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="order_updated" invisible="1"/>
+                            <field name="price_surcharge" />
+                            <label for="price_surcharge_percentage" string="Tarifa Extra" />
+                            <div class="o_row" >
+                                <field name="price_surcharge_percentage"/>
+                                <span>%%</span>
+                            </div>
+                            <field name="discount_amount" />
+                            <label for="discount_percent" string="Descuento" />
+                            <div class="o_row" >
+                                <field name="discount_percent"/>
+                                <span>%%</span>
+                            </div>
+                            <field name="total_sale_order" readonly="1" attrs="{'invisible':[('order_updated','=',False)]}"/>
+                        </group>
+                        <group>
+                        </group>                        
+                    </group>
+                    <footer>
+                        <button name="compute_value" id="compute_value" string="Calcular" type="object" data-hotkey="c" 
+                            icon="fa-cogs"/>
+                        <button name="compute_and_back" id="compute_and_back" string="Guardar y Volver" type="object" data-hotkey="r" 
+                            icon="fa-floppy-o"/>
+                        <button name="update_prices" id="update_prices" string="Cotización Original" type="object" data-hotkey="c" 
+                            icon="fa-eraser"/>
+                            
+                        <button string="Cerrar" class="oe_highlight oe_link" special="cancel" icon="fa-window-close" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_wizard_order_recompute" model="ir.actions.act_window">
+            <field name="name">Calculo Cotización</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wizard.order.recompute</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <!-- TODO: check if we need this -->
+            <field name="binding_model_id" ref="sale.model_sale_order" />
+            <field name="binding_view_types">list</field>
+        </record>
+
+
+        <!-- Asistente Linea Cotización -->
+
+        <record id="view_wizard_order_line_recompute_form" model="ir.ui.view">
+            <field name="name">wizard.order.line.recompute</field>
+            <field name="model">wizard.order.line.recompute</field>
+            <field name="arch" type="xml">
+                <form string="Calculo Precio">
+                    <group>
+                        <h1>
+                            <field name="product_id" nolabel="1" readonly="1"/>
+                        </h1>
+                    </group>
+                    <group >
+                        <h1 class="oe_center">
+                            <span attrs="{'invisible':[('price_updated','=',False)]}">Precio Previo: <field name="price_unit_prev" readonly="1" force_save="1"/> → </span>Precio Venta: <field name="price_unit" readonly="1" force_save="1"/>
+                        </h1>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="sale_order_line_id" invisible="1"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="price_updated" invisible="1"/>
+                            <field name="price_surcharge" />
+                            <label for="price_surcharge_percentage" string="Tarifa Extra" />
+                            <div class="o_row" >
+                                <field name="price_surcharge_percentage"/>
+                                <span>%%</span>
+                            </div>
+                            <field name="discount_amount" />
+                            <label for="discount_percent" string="Descuento" />
+                            <div class="o_row" >
+                                <field name="discount_percent"/>
+                                <span>%%</span>
+                            </div>
+                            <field name="price_sale_order" readonly="1" attrs="{'invisible':[('price_updated','=',False)]}"/>
+                        </group>
+                        <group>
+                        </group>                        
+                    </group>
+                    <footer>
+                        <button name="compute_value" id="compute_value" string="Calcular" type="object" data-hotkey="c" 
+                            icon="fa-cogs"/>
+                        <button name="compute_and_back" id="compute_and_back" string="Guardar y Volver" type="object" data-hotkey="r" 
+                            icon="fa-floppy-o"/>
+                        <button string="Cerrar" class="oe_highlight oe_link" special="cancel" icon="fa-window-close" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_wizard_order_line_recompute" model="ir.actions.act_window">
+            <field name="name">Calculo Precio Linea</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wizard.order.line.recompute</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <!-- TODO: check if we need this -->
+            <field name="binding_model_id" ref="sale.model_sale_order_line" />
+            <field name="binding_view_types">list</field>
+        </record>
+
+
+    <!-- Sale Order -->
+    <record model="ir.ui.view" id="view_order_form_advanced">
+        <field name="name">sale.order.advanced</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <notebook position="before">
+                <button string="Cotización" icon="fa-money" name='%(action_wizard_order_recompute)d' type='action' class="oe_right" style="display: inline-block;
+  padding: 5px 15px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #b787aa;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 5px #999;"/>
+
+            </notebook>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']" position="before">
+                <button name='%(action_wizard_order_line_recompute)d' type='action' string='Producto' icon="fa-money" style="display: inline-block;
+  padding: 3px 12px;
+  font-size: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #b787aa;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 5px #999;"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Tarifas -->
+    <record model="ir.ui.view" id="product_pricelist_advanced_view">
+        <field name="name">product.pricelist.advanced</field>
+        <field name="model">product.pricelist</field>
+        <field name="inherit_id" ref="product.product_pricelist_view"/>
+        <field name="arch" type="xml">
+            <group name="pricelist_settings" position="after">
+                <group>
+                    <field name="team_id" />
+                    <field name="user_id" />
+                </group>
+            </group>
+        </field>
+    </record>
+
+    <!-- Elemento de Tarifa -->
+    <record model="ir.ui.view" id="product_pricelist_item_form_advnaced_view">
+        <field name="name">product.pricelist.item.advanced</field>
+        <field name="model">product.pricelist.item</field>
+        <field name="inherit_id" ref="product.product_pricelist_item_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='base']" position="after">
+                <label for="utility_percentage" string="Utilidad" attrs="{'invisible':[('compute_price', '!=', 'formula')]}"/>
+                <div class="o_row" attrs="{'invisible':[('compute_price', '!=', 'formula')]}">
+                    <field name="utility_percentage"/>
+                    <span>%%</span>
+                </div>
+            </xpath>
+
+            <field name="price_surcharge" position="after">
+                <label for="price_surcharge_percentage" string="Tarifa Extra" attrs="{'invisible':[('compute_price', '!=', 'formula')]}"/>
+                <div class="o_row" attrs="{'invisible':[('compute_price', '!=', 'formula')]}">
+                    <field name="price_surcharge_percentage"/>
+                    <span>%%</span>
+                </div>
+                <field name="price_surcharge_02" widget="monetary" string="Tarifa Extra 2" attrs="{'invisible':[('compute_price', '!=', 'formula')]}"/>
+                <label for="price_surcharge_02_percentage" string="Tarifa Extra 2" attrs="{'invisible':[('compute_price', '!=', 'formula')]}"/>
+                <div class="o_row" attrs="{'invisible':[('compute_price', '!=', 'formula')]}">
+                    <field name="price_surcharge_02_percentage"/>
+                    <span>%%</span>
+                </div>
+            </field>
+        </field>
+    </record>
+
+    </data>
+</openerp>
