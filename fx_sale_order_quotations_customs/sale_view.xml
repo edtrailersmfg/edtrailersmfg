@@ -182,6 +182,19 @@
         </field>
     </record>
 
+    <record model="ir.ui.view" id="product_pricelist_advanced_tree_view">
+        <field name="name">product.pricelist.advanced</field>
+        <field name="model">product.pricelist</field>
+        <field name="inherit_id" ref="product.product_pricelist_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="currency_id" position="after">
+                <field name="team_id" />
+                <field name="user_id" />
+            </field>
+        </field>
+    </record>
+
+
     <!-- Elemento de Tarifa -->
     <record model="ir.ui.view" id="product_pricelist_item_form_advnaced_view">
         <field name="name">product.pricelist.item.advanced</field>
