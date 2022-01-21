@@ -93,6 +93,8 @@ class WizardOrderRecompute(models.TransientModel):
             raise UserError("El porcentaje Maximo de Tarifa Extra es 100%")
         if self.discount_percent > 100:
             raise UserError("El porcentaje Maximo de Descuento es 100%")
+        if not self.sale_order_id.order_line:
+            raise UserError("No existe información en las Lineas de Cotización.")
         ########################## CHERMAN ############################
         final_advanced_price = 0.0
 
@@ -134,6 +136,8 @@ class WizardOrderRecompute(models.TransientModel):
         active_ids = ctx.get('active_ids',False)
         if self.sale_order_id.state != 'draft':
             raise UserError("No se puede actualizar el total si el registro no es una Cotización (Borrador).")
+        if not self.sale_order_id.order_line:
+            raise UserError("No existe información en las Lineas de Cotización.")
         if self.amount_total != self.total_sale_order:
             difference_amount = self.total_sale_order - self.amount_total
             _logger.info("\n##### difference_amount: %s ", difference_amount)
@@ -173,6 +177,8 @@ class WizardOrderRecompute(models.TransientModel):
         active_ids = ctx.get('active_ids',False)
         if self.sale_order_id.state != 'draft':
             raise UserError("No se puede actualizar el total si el registro no es una Cotización (Borrador).")
+        if not self.sale_order_id.order_line:
+            raise UserError("No existe información en las Lineas de Cotización.")
         self.sale_order_id.update_prices()
         return {'type': 'ir.actions.act_window_close'}
 
