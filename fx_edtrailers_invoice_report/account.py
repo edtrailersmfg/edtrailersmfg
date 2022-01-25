@@ -56,4 +56,4 @@ class AccountMoveLine(models.Model):
                                                                                                                                       price_unit,
                                                                                                                                       price_subtotal)
         _logger.info("\n############# adicional_info: %s " % adicional_info)
-        return ""
+        return adicional_info
