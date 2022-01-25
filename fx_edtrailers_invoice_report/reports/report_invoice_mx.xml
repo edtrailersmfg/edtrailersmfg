@@ -14,7 +14,7 @@
     </template> -->
 
   <template id="l10n_mx_einvoice.report_invoice_document_cfdi">
-t t-call="web.basic_layout">
+<t t-call="web.basic_layout">
       <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
             <div class="page" style="border: 2px solid black;">
 <title>Invoice</title>
