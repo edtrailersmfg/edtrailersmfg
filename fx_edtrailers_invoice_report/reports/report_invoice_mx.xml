@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <!-- <template id="fx_edtrailers_invoice_report.basic_layout">
+        <h1>HOLA MUNDO</h1>
+        <t t-if="o and 'company_id' in o">
+            <t t-set="company" t-value="o.company_id"></t>
+        </t>
+        <t t-if="not o or not 'company_id' in o">
+            <t t-set="company" t-value="res_company"></t>
+        </t>
+        <t t-raw="0" />
+    </template> -->
+
+  <template id="l10n_mx_einvoice.report_invoice_document_cfdi">
+<t t-call="web.basic_layout">
+      <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
+            <div class="page" style="border: 2px solid black;">
+<title>Invoice</title>
+    <style media="screen">
+        body {
+            font-family: 'Segoe UI','Microsoft Sans Serif',sans-serif;
+        }
+
+        /*
+            These next two styles are apparently the modern way to clear a float. This allows the logo
+            and the word "Invoice" to remain above the From and To sections. Inserting an empty div
+            between them with clear:both also works but is bad style.
+            Reference:
+            http://stackoverflow.com/questions/490184/what-is-the-best-way-to-clear-the-css-style-float
+        */
+        header:before, header:after {
+            content: " ";
+            display: table;
+        }
+
+        header:after {
+            clear: both;
+        }
+
+        .invoiceNbr {
+            font-size: 40px;
+            margin-right: 30px;
+            margin-top: 30px;
+            float: right;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .from {
+            float: left;
+        }
+
+        .to {
+            float: right;
+        }
+
+        .fromto {
+            border-style: solid;
+            border-width: 1px;
+            border-color: #646464;
+            border-radius: 5px;
+            margin: 20px;
+            min-width: 200px;
+        }
+
+        .fromtocontent {
+            margin: 10px;
+            margin-right: 15px;
+        }
+
+        .panel {
+            background-color: #646464;
+            padding: 7px;
+        }
+
+        .items {
+            clear: both;
+            display: table;
+            padding: 20px;
+        }
+
+        /* Factor out common styles for all of the "col-" classes.*/
+        div[class^="col-"] {
+            display: table-cell;
+            padding: 7px;
+        }
+
+        /*for clarity name column styles by the percentage of width */
+        .col-1-10 {
+            width: 10%;
+        }
+
+        .col-1-52 {
+            width: 52%;
+        }
+
+        .row {
+            display: table-row;
+            page-break-inside: avoid;
+        }
+
+    </style>
+
+    <!-- These styles are exactly like the screen styles except they use points (pt) as units
+        of measure instead of pixels (px) -->
+    <style media="print">
+        body {
+            font-family: 'Segoe UI','Microsoft Sans Serif',sans-serif;
+        }
+
+        header:before, header:after {
+            content: " ";
+            display: table;
+        }
+
+        header:after {
+            clear: both;
+        }
+
+        .invoiceNbr {
+            font-size: 30pt;
+            margin-right: 30pt;
+            margin-top: 30pt;
+            float: right;
+        }
+
+        .invoiceNbrCFDI {
+            font-size: 12pt;
+            margin-right: 30pt;
+            margin-top: 30pt;
+            float: right;
+        }
+
+        .companyNM {
+            font-size: 30pt;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .from {
+            float: left;
+        }
+
+        .to {
+            float: right;
+        }
+
+        .fromto {
+            border-style: solid;
+            border-width: 1pt;
+            border-color: #646464;
+            border-radius: 5pt;
+            margin: 10pt;
+            min-width: 400pt;
+        }
+
+        .fromtocontent {
+            margin: 10pt;
+            margin-right: 15pt;
+        }
+
+        .panel {
+            background-color: #646464;
+            padding: 7pt;
+        }
+
+        .items {
+            clear: both;
+            display: table;
+            padding: 20pt;
+        }
+
+        div[class^="col-"] {
+            display: table-cell;
+            padding: 7pt;
+        }
+
+        .col-1-10 {
+            width: 10%;
+        }
+
+        .col-1-52 {
+            width: 52%;
+        }
+
+        .row {
+            display: table-row;
+            page-break-inside: avoid;
+        }
+    </style>
+
+<header class="header">
+    <div>
+        <table width="100%" style="font-size:12px; border-collapse: collapse;padding: 5px;" id="company_address_data">
+            <tr>
+                <td width="30%" style="vertical-align: middle;text-align: center;">
+                    <img t-if="o.company_id.logo" t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)" style="max-height: 100px;height: auto;"/>
+                    <br/>
+                </td>
+                <td width="40%" align="center" valign="top">
+                    <strong>
+                        <strong><span style="font-size:18px;">ANNA LOEWEN HARMS -DBA-</span><br/></strong>
+                    </strong>
+                    <strong>
+                        <span style="font-size:30px;" t-field="o.company_emitter_id.partner_id.name"></span><br/>
+                    </strong>
+                    <strong><span style="font-size:18px;" t-field="o.company_emitter_id.partner_id.vat"/><br/></strong>
+                    <strong><span>Address Calle Pino#64 KM 8.9 CUAUHTEMOC</span></strong>
+                    <br/>
+                    <strong><span>CHIHUAHUA MX, ZIP 31607</span></strong>
+                    <br/>
+                    <strong><span>Email: sales@edzinktrailer.com</span></strong>
+                </td>
+                <td width="30%" align="center" valign="top">
+                        <strong>
+                            <u><strong><span style="font-size:26px;color: #2960fa;">WWW.EDZINKTRAILER.COM</span><br/></strong></u>
+                        </strong>
+                        <table class="table table-condensed table-bordered" style="font-size:18px; ">
+                          <tr>
+                            <td style="padding: 2px; background-color: #646464; color: #FFFFFF;text-align: center;">
+                              <strong style="color: #FFFFFF;text-align: center;">DATE</strong>
+                            </td>
+                            <td style="padding: 2px; background-color: #646464; color: #FFFFFF;text-align: center;">
+                               <strong style="color: #FFFFFF;text-align: center;">FILE</strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="padding: 2px; text-align: center;">
+                               <span t-field="o.invoice_date"  t-options='{"widget": "date", "format": "dd/MM/yyyy"}'/>
+                            </td>
+                            <td style="padding: 2px; text-align: center;">
+                               <span t-field="o.name"/>
+                            </td>
+                          </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <span style="font-size:18px;padding-left:30px;padding-right:30px;">
+            <strong>
+              FOR SALES CAL, <span t-if="o.company_id.partner_id.phone"> Tel, <i aria-hidden="true" class="fa fa-phone-square"/> </span><span  t-field="o.company_id.partner_id.phone"/><span t-if="o.company_id.partner_id.mobile"> Cel, <i aria-hidden="true" class="fa fa-phone-square"/> </span><span  t-field="o.company_id.partner_id.mobile"/>
+              <span style="float: right;color: #7f260c;padding-right:50px;" t-if="o.move_type == 'out_invoice'">
+                INVOICE
+              </span>
+              <span style="float: right;color: #7f260c;padding-right:50px;" t-if="o.move_type == 'out_refund'">
+                CREDIT NOTE
+              </span>
+          </strong>
+        </span>
+    </div>
+    
+  <div>
+    <div class="fromto from" style="width: 45%;height:180px;" >
+        <div class="panel" align="center"><strong><span style="color: #FFFFFF" t-if="o.move_type == 'out_invoice'" >BILL TO</span></strong></div>
+            <div class="fromtocontent">
+            <div align="center">
+                  <i aria-hidden="true" class="fa fa-building"/> <strong><span style="font-size:14px;" t-field="o.partner_id.name"/></strong>
+                    <BR/>
+                     <i aria-hidden="true" class="fa fa-map-marker"/><span t-field="o.partner_id.street_name"/>
+                        <span t-if="o.partner_id.street_number"> No. <span t-field="o.partner_id.street_number"/></span>
+                        <span t-if="o.partner_id.street_number2"> Int. <span t-field="o.partner_id.street_number2"/></span>
+                    <BR/>
+                    <span t-if="o.partner_id.street2 or o.partner_id.colonia_sat_id">Col. <span t-raw="o.partner_id.street2 or o.partner_id.colonia_sat_id.name"/>, </span>
+                    <span t-if="o.partner_id.country_id.code != 'MX'">
+                        <span t-if="o.partner_id.city"><span t-field="o.partner_id.city"/>, </span>
+                        <span t-field="o.partner_id.state_id.name"/>, <span t-field="o.partner_id.country_id.name"/><BR/>
+                        CP: <span t-field="o.partner_id.zip"/>
+                    </span>
+                    <span t-if="o.partner_id.country_id.code == 'MX'">
+                        <span t-if="o.partner_id.city"><span t-field="o.partner_id.city"/>, </span>
+                        <span t-field="o.partner_id.state_id.name"/>, 
+                        <span t-field="o.partner_id.country_id.name"/>, CP: <span t-field="o.partner_id.zip_sat_id.code"/>
+                    </span>
+                  <br t-if="o.partner_id.phone"/>
+                  <i aria-hidden="true" class="fa fa-phone-square" t-if="o.partner_id.phone"/>
+                  <span t-esc="o.partner_id.phone or 'N/D'" t-if="o.partner_id.phone"/>
+                  <br t-if="o.partner_id.email"/>
+                  <i class="fa fa-envelope" aria-hidden="true" t-if="o.partner_id.email"/>
+                  <span t-field="o.partner_id.email" t-if="o.partner_id.email"/>
+            </div>
+            <div style="padding-left: 10px;">
+                <span t-if="o.partner_id.vat"> RFC: <span t-field="o.partner_id.vat"/> <span t-if="o.partner_id.num_reg_trib"></span> ID Extranjero:  <span t-field="o.partner_id.num_reg_trib"/></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="fromto to" style="width: 45%;height:180px;">
+        <div class="panel" align="center"><strong style="color: #FFFFFF">SHIP TO</strong></div>
+            <div class="fromtocontent">
+            <div align="center">
+                  <i aria-hidden="true" class="fa fa-building"/>  <strong><span style="font-size:14px;" t-field="o.partner_id.name"/></strong>
+                    <BR/>
+                     <i aria-hidden="true" class="fa fa-map-marker"/><span t-field="o.partner_id.street_name"/>
+                        <span t-if="o.partner_id.street_number"> No. <span t-field="o.partner_id.street_number"/></span>
+                        <span t-if="o.partner_id.street_number2"> Int. <span t-field="o.partner_id.street_number2"/></span>
+                    <BR/>
+                    <span t-if="o.partner_id.street2 or o.partner_id.colonia_sat_id">Col. <span t-raw="o.partner_id.street2 or o.partner_id.colonia_sat_id.name"/>, </span>
+                    <span t-if="o.partner_id.country_id.code != 'MX'">
+                        <span t-if="o.partner_id.city"><span t-field="o.partner_id.city"/>, </span>
+                        <span t-field="o.partner_id.state_id.name"/>, <span t-field="o.partner_id.country_id.name"/><BR/>
+                        CP: <span t-field="o.partner_id.zip"/>
+                    </span>
+                    <span t-if="o.partner_id.country_id.code == 'MX'">
+                        <span t-if="o.partner_id.city"><span t-field="o.partner_id.city"/>, </span>
+                        <span t-field="o.partner_id.state_id.name"/>, 
+                        <span t-field="o.partner_id.country_id.name"/>, CP: <span t-field="o.partner_id.zip_sat_id.code"/>
+                    </span>
+                  <br t-if="o.partner_id.phone"/>
+                  <i aria-hidden="true" class="fa fa-phone-square" t-if="o.partner_id.phone"/>
+                  <span t-esc="o.partner_id.phone or 'N/D'" t-if="o.partner_id.phone"/>
+                  <br t-if="o.partner_id.email"/>
+                  <i class="fa fa-envelope" aria-hidden="true" t-if="o.partner_id.email"/>
+                  <span t-field="o.partner_id.email" t-if="o.partner_id.email"/>
+            </div>
+            <div style="padding-left: 10px;">
+                <span t-if="o.partner_id.vat"> RFC: <span t-field="o.partner_id.vat"/> <span t-if="o.partner_id.num_reg_trib"></span> ID Extranjero:  <span t-field="o.partner_id.num_reg_trib"/></span>
+            </div>
+
+        </div>
+    </div>
+  </div>
+    
+</header>
+            <div align="center">
+                <table class="table table-condensed table-bordered" style="font-size:12px;text-align: center;width: 98%">
+                  <tr>
+                    <td style="padding: 2px;padding-left:5px; background-color: #646464; color: #FFFFFF;width: 25%">
+                      <strong>VENDEDOR:</strong>
+                    </td>
+                    <td style="padding: 2px; background-color: #646464; color: #FFFFFF;width: 25%">
+                      <strong>MONEDA:</strong>
+                    </td>
+                    <td style="padding: 2px; background-color: #646464; color: #FFFFFF;width: 25%">
+                      <strong>TC:</strong>
+                    </td>
+                    <td style="padding: 2px; background-color: #646464; color: #FFFFFF;width: 25%">
+                      <strong>CONDICIONES DE PAGO:</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td style="padding: 2px; ">
+                          <span t-field="o.user_id"/>
+                        </td>
+                        <td style="padding: 2px; ">
+                          <span t-field="o.currency_id.name"/>
+                        </td>
+                        <td style="padding: 2px; ">
+                          <span t-if="o.tipo_cambio == 1.0">1</span><span t-if="o.tipo_cambio != 1.0"><span t-field="o.tipo_cambio"/></span>
+                        </td>
+                        <td style="padding: 2px; ">
+                          <span t-field="o.invoice_payment_term_id"/>
+                        </td>
+                  </tr>
+                </table>
+            </div>
+            
+            <!-- Detalle del CFDI -->
+            <div align="center">
+                <table class="table table-condensed table-bordered;width: 95%;">
+                  <thead style="font-size:12px; background-color: #646464; color: #FFFFFF">
+                    <tr>
+                      <th style="padding: 2px; width:9%;" class="text-center">
+                        <span>CÓDIGO SAT:</span>
+                      </th>
+                      <th style="padding: 2px; width:28%;">
+                        <span>DESCRIPCION:</span>
+                      </th>
+                      <th style="padding: 2px; width:9%;text-align:center">
+                        <span>CANTIDAD:</span>
+                      </th>
+                      <th style="padding: 2px; width:9%;text-align:center">
+                        <span>U.MEDIDA:</span>
+                      </th>
+                      <th style="padding: 2px; width:10%;text-align:center">
+                        <span>PRECIO UNITARIO:</span>
+                      </th>
+                      <th style="padding: 2px; width:10%;text-align:center">
+                        <span>IMPORTE:</span>
+                      </th>
+                      <th style="padding: 2px; width:10%;text-align:center">
+                        <span>DESCUENTO:</span>
+                      </th>
+                      <th style="padding: 2px; width:10%;text-align:center;">
+                        <span>Monto:</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody style="font-size:14px;">
+                    <tr t-as="l" t-foreach="o.invoice_line_ids">
+                      <td class="text-center;">
+                        <span t-raw="'%s &lt;br&gt;' % l.product_id and l.product_id.sat_product_id.code or ''"/>
+                      </td>
+                      <td class="text-left">
+                        <span t-field="l.name"/>
+                      </td>
+                      <td class="text-center">
+                        <span t-field="l.quantity"/>
+                      </td>
+                      <td class="text-center">
+                        [<span t-field="l.product_uom_id.sat_uom_id.code"/>]<br/><span t-field="l.product_uom_id"/>
+
+                      </td>
+                      <td class="text-center">
+                        <span t-field="l.price_unit"/>
+                      </td>
+                       <td class="text-center">
+                        <span t-if="l.discount == 0.0"><span t-raw="'%.2f' % l.price_subtotal"/></span>
+                        <span t-if="l.discount != 0.0"><span t-raw="'%.2f' % (l.price_unit * l.quantity)"/></span>
+                      </td>
+                      <td class="text-center">
+                        <span t-if="l.discount == 0.0">0.00</span>
+                        <span t-if="l.discount != 0.0"><span t-raw="'%.2f' % (l.amount_discount)"/></span>
+                      </td>
+                      <td class="text-center" colspan="2">
+                        <span t-field="l.price_subtotal"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="4" style="border-right: 2px solid #dee2e6;">
+                        <strong>IMPORTE CON LETRA:</strong>
+                        <span t-field="o.amount_to_text"/>
+                        <br t-if="o.narration"/>
+                        <br t-if="o.narration"/>
+                        <strong t-if="o.narration">NOTAS:</strong>
+                        <span t-field="o.narration"/><br t-if="o.narration" /> 
+                        <span>Complemento para Comercio exterior:</span><br/>
+                        <span t-if="o.cfdi_complemento == 'comercio_exterior'"  style="padding-left: 45px;">
+                            Tipo de operación: Exportación de mercancías <br/>
+                        </span>
+                        <span t-if="o.cfdi_complemento == 'comercio_exterior' and o.invoice_incoterm_id"  style="padding-left: 45px;">
+                            Clave de INCOTERM: <span t-field="o.invoice_incoterm_id.code"/> <br/>
+                        </span>
+                        <span t-if="o.cfdi_complemento == 'comercio_exterior' and o.cfdi_certificado_origen"  style="padding-left: 45px;">
+                            Funge como certificado de origen: <span t-esc="'No' if o.cfdi_certificado_origen == '0' else 'Sí'"/> <br/>
+                        </span>
+                        <span t-if="o.cfdi_complemento == 'comercio_exterior'"  style="padding-left: 45px;">
+                            Tipo de cambio <span t-field="o.currency_id.name"/>: <span t-if="o.tipo_cambio == 1.0">1</span><span t-if="o.tipo_cambio != 1.0"><span t-field="o.tipo_cambio"/></span> <br/>
+                        </span>
+                        <span t-if="o.cfdi_complemento == 'comercio_exterior'"  style="padding-left: 45px;">
+                            Total: <span t-field="o.amount_total"/> <span t-field="o.currency_id.name"/> <br/>
+                        </span>
+                        <span t-if="o.cfdi_complemento == 'comercio_exterior'"  style="padding-left: 45px;">
+                            Subdivisión: No
+                        </span>
+                      </td>
+                      <td class="text-right" colspan="4" style="border-left: 2px solid #dee2e6;">
+                        <strong>SUB-TOTAL</strong>
+                        <span t-field="o.amount_untaxed"/>
+                        <br/>
+                        <strong>DESCUENTO</strong>
+                        <span t-field="o.amount_discount" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                        <br/>
+                        <strong>IMPUESTOS</strong>
+                        <span t-field="o.amount_tax"/>
+                        <br/>
+                        <strong>TOTAL</strong>
+                        <span t-field="o.amount_total"/>
+                        <br/>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            <div></div>
+            <!-- <table class="table table-condensed" style="font-size:12px">
+                <tr t-if="o.invoice_incoterm_id" style="border: 1px solid #dee2e6;">
+                    <td style="text-align:center;" t-if="o.invoice_origin" id="o_origin">
+                        <strong>Origen:</strong><BR/><p t-field="o.invoice_origin"/>
+                    </td>
+                    <td style="text-align:center;" t-if="o.name" id="o_description">
+                        <B>Descripción:</B><BR/><p t-field="o.name"/>
+                    </td>
+                    <td style="text-align:center;" t-if="o.ref" id="o_reference">
+                        <B>Referencia:</B><BR/><p t-field="o.ref"/>
+                        <div invisible="1"><div name="reference">.</div></div>
+                    </td>
+                    <td style="text-align:center;" t-if="o.invoice_incoterm_id" id="o_incoterms">
+                        <B>Incoterms:</B><BR/>
+                        <span t-raw="'[%s] %s' % (o.invoice_incoterm_id.code, o.invoice_incoterm_id.name)"/>
+                    </td>
+                </tr>
+            </table>
+ -->
+            <table style="font-size:12px;border: 1px solid #dee2e6;" t-if="o.type_rel_cfdi_ids" width="100%">
+                <tbody t-if="o.type_rel_cfdi_ids">
+                    <tr t-if="o.type_rel_cfdi_ids" style="font-size:12px;border-left: 1px solid black;">
+                        <td style="width:30%;text-align:center;padding: 2px; background-color: #646464; color: #FFFFFF;">Relacion CFDI</td>
+                        <td style="width:30%;text-align:center;padding: 2px; background-color: #646464; color: #FFFFFF;">Folio</td>
+                        <td style="width:40%;text-align:center;padding: 2px; background-color: #646464; color: #FFFFFF;border-right: 1px solid black;">UUID</td>
+                    </tr>
+                    <tr t-foreach="o.type_rel_cfdi_ids" t-as="cfdi">
+                        <td style="text-align:center;border-left: 1px solid black;"><span t-field="o.type_rel_id"/></td>
+                        <td style="text-align:center;"><span t-field="cfdi.invoice_id.name"/></td>
+                        <td style="text-align:center;border-right: 1px solid black;"><span t-field="cfdi.invoice_id.cfdi_folio_fiscal"/></td>
+                    </tr>
+                </tbody>
+            </table>
+
+             <div align="left" >
+                 
+             </div>
+
+             <table class="table table-condensed" style="font-size:12px;font-size:12px;border: 1px solid #dee2e6;">
+                <tr>
+                    <td rowspan="9" id="sat_cbb" style="border-left: 1px solid black;">
+                        <img t-if="o.cfdi_cbb" t-att-src="'data:image/png;base64,%s' % to_text(o.cfdi_cbb)" style="width:5.5cm;height:5.5cm;"/>
+                    </td>
+                </tr>
+                <tr style="background-color: #646464; color: #FFFFFF; ">
+                    <td style="padding: 0px;border-right: 1px solid black;">
+                        <strong id="sat_sello_sat" style="padding-left: 15px;">Cadena Original:</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0px;border-right: 1px solid black;">
+                        <span t-field="o.cfdi_cadena_original" style="display:block;width:860px;word-wrap:break-word;"/>
+                    </td>
+                </tr>
+                <tr style="background-color: #646464; color: #FFFFFF; padding: 0px;">
+                    <td style="padding: 0px;border-right: 1px solid black;">
+                        <strong id="sat_sello_sat" style="padding-left: 15px;">Sello Digital Emisor:</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0px;border-right: 1px solid black;">
+                        <span t-field="o.sello" style="display:block;width:860px;word-wrap:break-word;"/>
+                    </td>
+                </tr>
+                <tr style="background-color: #646464; color: #FFFFFF; padding: 0px; ">
+                    <td style="padding: 0px;">
+                        <strong id="sat_sello_sat" style="padding-left: 15px;">Sello Digital SAT:</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0px;border-right: 1px solid black;">
+                        <span t-field="o.cfdi_sello" style="display:block;width:860px;word-wrap:break-word;"/>
+                    </td>
+                </tr>
+                <tr style="border-bottom: 1px solid #dee2e6;">
+                    <td style="padding: 0px;border-right: 1px solid black;">
+                        <br/>
+                        Método de pago: <span t-field="o.metodo_pago_id"/><br/>
+                        Forma de pago: <span t-field="o.pay_method_id"/><br/>
+                        Uso del CFDI: <span t-field="o.uso_cfdi_id"/><br/>
+                    </td>
+                </tr>
+               <!--  <tr style="border: 1px solid #07190B;">
+                    <td style="font-size:12px;width: 85%;text-align: left;padding-left: 15px;">
+                        <strong>
+                            Este documento es una representación impresa de un CFDI. Folio del SAT: <span t-field="o.cfdi_folio_fiscal" />
+                            <br/>
+                            Fecha de certificación: <span t-field="o.cfdi_fecha_timbrado"/> Certificado del emisor: <span t-field="o.no_certificado"/> Certificado del SAT: <span t-field="o.cfdi_no_certificado"/>
+                            <br/>
+                            Régimen fiscal del emisor: <span t-field="o.company_emitter_id.regimen_fiscal_id"/> Lugar de expedición: <span t-field="o.company_id.partner_id.zip_sat_id.code"/><br/>
+                            <strong style="font-size:12px;text-align: center;"></strong>  
+                            <strong style="font-size:12px;text-align: left;padding-right: 15px;">   CFDI 3.3/Ingreso</strong><br/>                       
+                        </strong>
+                    </td>
+                </tr> -->
+            </table>
+            <div></div>
+            <table width="100%" style="padding: 0px;">
+                <tr style="border: 1px solid #07190B;">
+                    <td style="font-size:12px;width: 85%;text-align: left;padding-left: 15px;">
+                        <strong>
+                            Este documento es una representación impresa de un CFDI. Folio del SAT: <span t-field="o.cfdi_folio_fiscal" />
+                            <br/>
+                            Fecha de certificación: <span t-field="o.cfdi_fecha_timbrado"/> Certificado del emisor: <span t-field="o.no_certificado"/> Certificado del SAT: <span t-field="o.cfdi_no_certificado"/>
+                            <br/>
+                            Régimen fiscal del emisor: <span t-field="o.company_emitter_id.regimen_fiscal_id"/> Lugar de expedición: <span t-field="o.company_id.partner_id.zip_sat_id.code"/><br/>
+                            <strong style="font-size:12px;text-align: center;"></strong>  
+                        </strong>
+                    </td>
+                    <td style="width: 15%;text-align: right;">
+                        
+                         <strong style="font-size:12px;text-align: center;">   CFDI 3.3/Ingreso</strong><br/>                       
+                    </td>
+                </tr>
+            </table>
+
+        </div> <!-- Fin del  div class page -->
+
+        
+
+        <div class="footer">
+            <table style="width: 100%">
+                <tr >
+                    <td style="font-size:11px;width: 15%;text-align: center;border: 1px solid #07190B;border-collapse: collapse;padding: 1px;border-bottom: 1px;border-left: 1px;border-right: 1px;">
+                        <span t-esc="user.company_id.name"></span>
+                    </td>
+                    <td style="width: 20%;text-align: left;border: 1px solid #07190B;border-collapse: collapse;padding: 1px;border-bottom: 1px;border-left: 1px;border-right: 1px;">
+                    </td>
+                    <td style="width: 50%;text-align: center;border: 1px solid #07190B;border-collapse: collapse;padding: 1px;border-bottom: 1px;border-left: 1px;border-right: 1px;">
+                    </td>
+                    <td style="width: 15%;text-align: right;border: 1px solid #07190B;border-collapse: collapse;padding: 1px;border-bottom: 1px;border-left: 1px;border-right: 1px;">
+
+                         <strong  style="font-size:11px;text-align: center;" ><span>   Pagina </span><span class="page" /> de <span class="topage" /></strong>                       
+                    </td>
+                </tr>
+            </table>
+        </div>
+      </t>
+    </template>
+
+  </data>
+
+
+</odoo>
