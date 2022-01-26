@@ -14,11 +14,11 @@
     </template> -->
 
   <template id="l10n_mx_einvoice.report_invoice_document_cfdi">
-<t t-call="web.basic_layout">
-      <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
-            <div class="page" style="border: 2px solid black;">
-<title>Invoice</title>
-    <style media="screen">
+    <t t-call="web.basic_layout">
+          <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
+                <div class="page" style="border: 2px solid black;">
+    <title>Invoice</title>
+        <style media="screen">
         body {
             font-family: 'Segoe UI','Microsoft Sans Serif',sans-serif;
         }
@@ -395,106 +395,106 @@
                     </tr>
                   </thead>
                   <tbody style="font-size:12px;">
-                    <tr t-as="l" t-foreach="o.invoice_line_ids">
-                      <td class="text-center;">
-                        <span t-raw="'%s &lt;br&gt;' % l.product_id and l.product_id.sat_product_id.code or ''"/>
-                      </td>
-                      <td class="text-left">
-                        <span t-field="l.name" t-if="l.display_type not in ('line_section','line_note')"/>
-                        <span t-if="l.display_type in ('line_section','line_note')">
-                            <strong><span t-field="l.name"/></strong>
-                            <br/>
-                            <span t-esc="l.get_info_previous_sections()" />
-                        </span>
-                      </td>
-                      <td class="text-center">
-                        <span t-field="l.quantity"/>
-                      </td>
-                      <td class="text-center">
-                        [<span t-field="l.product_uom_id.sat_uom_id.code"/>]<br/><span t-field="l.product_uom_id"/>
+                    <t t-as="l" t-foreach="o.invoice_line_ids">
+                        <tr t-if="l.display_type not in ('line_section','line_note')">
+                          <td class="text-center;">
+                            <span t-raw="'%s &lt;br&gt;' % l.product_id and l.product_id.sat_product_id.code or ''"/>
+                          </td>
+                          <td class="text-left">
+                            <span t-field="l.name" t-if="l.display_type not in ('line_section','line_note')"/>
+                          </td>
+                          <td class="text-center">
+                            <span t-field="l.quantity"/>
+                          </td>
+                          <td class="text-center">
+                            [<span t-field="l.product_uom_id.sat_uom_id.code"/>]<br/><span t-field="l.product_uom_id"/>
 
-                      </td>
-                      <td class="text-center">
-                        <span t-field="l.price_unit"/>
-                      </td>
-                       <td class="text-center">
-                        <span t-if="l.discount == 0.0"><span t-raw="'%.2f' % l.price_subtotal"/></span>
-                        <span t-if="l.discount != 0.0"><span t-raw="'%.2f' % (l.price_unit * l.quantity)"/></span>
-                      </td>
-                      <td class="text-center">
-                        <span t-if="l.discount == 0.0">0.00</span>
-                        <span t-if="l.discount != 0.0"><span t-raw="'%.2f' % (l.amount_discount)"/></span>
-                      </td>
-                      <td class="text-center" colspan="2">
-                        <span t-field="l.price_subtotal"/>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="4" style="border-right: 2px solid #dee2e6;">
-                        <strong>IMPORTE CON LETRA:</strong>
-                        <span t-field="o.amount_to_text"/>
-                        <br t-if="o.narration"/>
-                        <br t-if="o.narration"/>
-                        <strong t-if="o.narration">NOTAS:</strong>
-                        <span t-field="o.narration"/><br t-if="o.narration"/> 
-                        <span>Complemento para Comercio exterior:</span><br/>
-                        <span t-if="o.cfdi_complemento == 'comercio_exterior'" style="padding-left: 45px;">
-                            Tipo de operación: Exportación de mercancías <br/>
-                        </span>
-                        <span t-if="o.cfdi_complemento == 'comercio_exterior' and o.invoice_incoterm_id" style="padding-left: 45px;">
-                            Clave de INCOTERM: <span t-field="o.invoice_incoterm_id.code"/> <br/>
-                        </span>
-                        <span t-if="o.cfdi_complemento == 'comercio_exterior' and o.cfdi_certificado_origen" style="padding-left: 45px;">
-                            Funge como certificado de origen: <span t-esc="'No' if o.cfdi_certificado_origen == '0' else 'Sí'"/> <br/>
-                        </span>
-                        <span t-if="o.cfdi_complemento == 'comercio_exterior'" style="padding-left: 45px;">
-                            Tipo de cambio <span t-field="o.currency_id.name"/>: <span t-if="o.tipo_cambio == 1.0">1</span><span t-if="o.tipo_cambio != 1.0"><span t-field="o.tipo_cambio"/></span> <br/>
-                        </span>
-                        <span t-if="o.cfdi_complemento == 'comercio_exterior'" style="padding-left: 45px;">
-                            Total: <span t-field="o.amount_total"/> <span t-field="o.currency_id.name"/> <br/>
-                        </span>
-                        <span t-if="o.cfdi_complemento == 'comercio_exterior'" style="padding-left: 45px;">
-                            Subdivisión: No
-                        </span>
-                      </td>
-                      <td class="text-right" colspan="4" style="border-left: 2px solid #dee2e6;">
-                        <strong>SUB-TOTAL</strong>
-                        <span t-field="o.amount_untaxed"/>
-                        <br/>
-                        <strong>DESCUENTO</strong>
-                        <span t-field="o.amount_discount" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
-                        <br/>
-                        <strong>IMPUESTOS</strong>
-                        <span t-field="o.amount_tax"/>
-                        <br/>
-                        <strong>TOTAL</strong>
-                        <span t-field="o.amount_total"/>
-                        <br/>
-                      </td>
-                    </tr>
+                          </td>
+                          <td class="text-center">
+                            <span t-field="l.price_unit"/>
+                          </td>
+                           <td class="text-center">
+                            <span t-if="l.discount == 0.0"><span t-raw="'%.2f' % l.price_subtotal"/></span>
+                            <span t-if="l.discount != 0.0"><span t-raw="'%.2f' % (l.price_unit * l.quantity)"/></span>
+                          </td>
+                          <td class="text-center">
+                            <span t-if="l.discount == 0.0">0.00</span>
+                            <span t-if="l.discount != 0.0"><span t-raw="'%.2f' % (l.amount_discount)"/></span>
+                          </td>
+                          <td class="text-center" colspan="2">
+                            <span t-field="l.price_subtotal"/>
+                          </td>
+                        </tr>
+                        <tr t-if="l.display_type in ('line_section','line_note')">
+                            <td class="text-left" colspan="8">
+                                <strong><span t-field="l.name"/></strong>
+                                <br/>
+                                <t t-set="aditional_info_previous" t-value="l.get_info_previous_sections()" />
+                                <span t-if="aditional_info_previous"> Fracción arancelaria: <span t-esc="aditional_info_previous['arancel']"/>  Unidad aduana: <span t-esc="aditional_info_previous['udm_sat']"/> Cantidad Aduana: <span t-esc="aditional_info_previous['quantity']"/> Valor unitario aduana:<span t-esc="aditional_info_previous['price_unit']"/>  Valor: <span t-esc="aditional_info_previous['price_subtotal']"/>
+                                </span>
+
+                            </td>
+                        </tr>
+                    </t>
+
+                        <tr>
+                          <td colspan="4" style="border-right: 2px solid #dee2e6;">
+                            <strong>IMPORTE CON LETRA:</strong>
+                            <span t-field="o.amount_to_text"/>
+                            <br t-if="o.narration"/>
+                            <br t-if="o.narration"/>
+                            <strong t-if="o.narration">NOTAS:</strong>
+                            <span t-field="o.narration"/>
+                          </td>
+                          <td class="text-right" colspan="4" style="border-left: 2px solid #dee2e6;">
+                            <strong>SUB-TOTAL</strong>
+                            <span t-field="o.amount_untaxed"/>
+                            <br/>
+                            <strong>DESCUENTO</strong>
+                            <span t-field="o.amount_discount" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                            <br/>
+                            <strong>IMPUESTOS</strong>
+                            <span t-field="o.amount_tax"/>
+                            <br/>
+                            <strong>TOTAL</strong>
+                            <span t-field="o.amount_total"/>
+                            <br/>
+                          </td>
+                        </tr>
                   </tbody>
                 </table>
             </div>
             <div/>
-            <!-- <table class="table table-condensed" style="font-size:12px">
-                <tr t-if="o.invoice_incoterm_id" style="border: 1px solid #dee2e6;">
-                    <td style="text-align:center;" t-if="o.invoice_origin" id="o_origin">
-                        <strong>Origen:</strong><BR/><p t-field="o.invoice_origin"/>
-                    </td>
-                    <td style="text-align:center;" t-if="o.name" id="o_description">
-                        <B>Descripción:</B><BR/><p t-field="o.name"/>
-                    </td>
-                    <td style="text-align:center;" t-if="o.ref" id="o_reference">
-                        <B>Referencia:</B><BR/><p t-field="o.ref"/>
-                        <div invisible="1"><div name="reference">.</div></div>
-                    </td>
-                    <td style="text-align:center;" t-if="o.invoice_incoterm_id" id="o_incoterms">
-                        <B>Incoterms:</B><BR/>
-                        <span t-raw="'[%s] %s' % (o.invoice_incoterm_id.code, o.invoice_incoterm_id.name)"/>
-                    </td>
-                </tr>
-            </table>
- -->
+
+            <div align="center">
+                <table class="table table-condensed" style="font-size:12px;width:98%;;" t-if="o.cfdi_complemento == 'comercio_exterior'">
+                    <tr style="border: 1px solid #dee2e6;">
+                        <td style="text-align:left;padding-left: 15px;" id="o_origin">
+                            <span>Complemento para Comercio exterior:</span><br/>
+                            <span t-if="o.cfdi_complemento == 'comercio_exterior'" style="padding-left: 45px;">
+                                Tipo de operación: Exportación de mercancías <br/>
+                            </span>
+                            <span t-if="o.cfdi_complemento == 'comercio_exterior' and o.invoice_incoterm_id" style="padding-left: 45px;">
+                                Clave de INCOTERM: <span t-field="o.invoice_incoterm_id.code"/> <br/>
+                            </span>
+                            <span t-if="o.cfdi_complemento == 'comercio_exterior' and o.cfdi_certificado_origen" style="padding-left: 45px;">
+                                Funge como certificado de origen: <span t-esc="'No' if o.cfdi_certificado_origen == '0' else 'Sí'"/> <br/>
+                            </span>
+                            <span t-if="o.cfdi_complemento == 'comercio_exterior'" style="padding-left: 45px;">
+                                Tipo de cambio <span t-field="o.currency_id.name"/>: <span t-if="o.tipo_cambio == 1.0">1</span><span t-if="o.tipo_cambio != 1.0"><span t-field="o.tipo_cambio"/></span> <br/>
+                            </span>
+                            <span t-if="o.cfdi_complemento == 'comercio_exterior'" style="padding-left: 45px;">
+                                Total: <span t-field="o.amount_total"/> <span t-field="o.currency_id.name"/> <br/>
+                            </span>
+                            <span t-if="o.cfdi_complemento == 'comercio_exterior'" style="padding-left: 45px;">
+                                Subdivisión: No
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+
             <table style="font-size:12px;border: 1px solid #dee2e6;" t-if="o.type_rel_cfdi_ids" width="100%">
                 <tbody t-if="o.type_rel_cfdi_ids">
                     <tr t-if="o.type_rel_cfdi_ids" style="font-size:12px;border-left: 1px solid black;">
