@@ -35,6 +35,9 @@ class AccountMoveLine(models.Model):
     def get_info_previous_sections(self):
         _logger.info("\n############# get_info_previous_sections >>>>>>>>>>>> ")
         invoice_id = self.move_id
+        adicional_info_dict = {
+
+                              }
         adicional_info = ""
         previous_line = False
         for invoice_line in invoice_id.invoice_line_ids:
@@ -55,5 +58,13 @@ class AccountMoveLine(models.Model):
                                                                                                                                       quantity,
                                                                                                                                       price_unit,
                                                                                                                                       price_subtotal)
+        
+            adicional_info_dict = {
+                                    'arancel': arancel,
+                                    'udm_sat': udm_sat,
+                                    'quantity': quantity,
+                                    'price_unit': price_unit,
+                                    'price_subtotal': price_subtotal,
+                                  }
         _logger.info("\n############# adicional_info: %s " % adicional_info)
-        return adicional_info
+        return adicional_info_dict

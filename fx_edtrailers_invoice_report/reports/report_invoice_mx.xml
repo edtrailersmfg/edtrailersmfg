@@ -400,8 +400,9 @@
                         <span t-raw="'%s &lt;br&gt;' % l.product_id and l.product_id.sat_product_id.code or ''"/>
                       </td>
                       <td class="text-left">
-                        <span t-field="l.name"/>
+                        <span t-field="l.name" t-if="l.display_type not in ('line_section','line_note')"/>
                         <span t-if="l.display_type in ('line_section','line_note')">
+                            <strong><span t-field="l.name"/></strong>
                             <br/>
                             <span t-esc="l.get_info_previous_sections()" />
                         </span>
