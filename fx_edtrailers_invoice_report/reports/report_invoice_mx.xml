@@ -210,12 +210,14 @@
                     <strong>
                         <span style="font-size:30px;" t-field="o.company_emitter_id.partner_id.name"/><br/>
                     </strong>
-                    <strong><span style="font-size:18px;" t-field="o.company_emitter_id.partner_id.vat"/><br/></strong>
-                    <strong><span>Address Calle Pino#64 KM 8.9 CUAUHTEMOC</span></strong>
+                    <strong><p style="font: 6pt Georgia,serif; padding:0px; margin-bottom:0px;"><span t-field="o.company_emitter_id.partner_id.vat"/><br/>
+                    Address Calle Pino#64 KM 8.9 CUAUHTEMOC
                     <br/>
-                    <strong><span>CHIHUAHUA MX, ZIP 31607</span></strong>
+                    CHIHUAHUA MX, ZIP 31607
                     <br/>
-                    <strong><span>Email: sales@edzinktrailer.com</span></strong>
+                    Email: sales@edzinktrailer.com
+                    </p>
+                    </strong>
                 </td>
                 <td width="30%" align="center" valign="top">
                         <strong>
