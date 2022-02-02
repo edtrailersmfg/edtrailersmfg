@@ -215,7 +215,8 @@
                     <br/>
                     CHIHUAHUA MX, ZIP 31607
                     <br/>
-                    Email: sales@edzinktrailer.com
+                    Email: sales@edzinktrailer.com <br/>
+                    <span t-if="o.company_id.partner_id.phone"> Tel. <i aria-hidden="true" class="fa fa-phone-square"/> </span><span t-field="o.company_id.partner_id.phone"/><span t-if="o.company_id.partner_id.mobile"> | Cel. <i aria-hidden="true" class="fa fa-mobile"/> </span><span t-field="o.company_id.partner_id.mobile"/>
                     </p>
                     </strong>
                 </td>
@@ -249,7 +250,7 @@
     <div>
         <span style="font-size:18px;padding-left:30px;padding-right:30px;">
             <strong>
-              FOR SALES CAL, <span t-if="o.company_id.partner_id.phone"> Tel. <i aria-hidden="true" class="fa fa-phone-square"/> </span><span t-field="o.company_id.partner_id.phone"/><span t-if="o.company_id.partner_id.mobile"> | Cel. <i aria-hidden="true" class="fa fa-mobile"/> </span><span t-field="o.company_id.partner_id.mobile"/>
+              <!-- FOR SALES CAL, <span t-if="o.company_id.partner_id.phone"> Tel. <i aria-hidden="true" class="fa fa-phone-square"/> </span><span t-field="o.company_id.partner_id.phone"/><span t-if="o.company_id.partner_id.mobile"> | Cel. <i aria-hidden="true" class="fa fa-mobile"/> </span><span t-field="o.company_id.partner_id.mobile"/> -->
               <span style="float: right;color: #7f260c;padding-right:50px;" t-if="o.move_type == 'out_invoice'">
                 INVOICE
               </span>
@@ -259,7 +260,7 @@
           </strong>
         </span>
     </div>
-    
+    <br/>
   <div>
     <div class="fromto from" style="width: 45%;height:220px;">
         <div class="panel" align="center"><strong><span style="color: #FFFFFF" t-if="o.move_type == 'out_invoice'">BILL TO</span></strong></div>
@@ -403,7 +404,7 @@
                             <span t-raw="'%s &lt;br&gt;' % l.product_id and l.product_id.sat_product_id.code or ''"/>
                           </td>
                           <td class="text-left">
-                            <span t-field="l.name" t-if="l.display_type not in ('line_section','line_note')"/>
+                            <p t-field="l.name" style="font: 8pt Georgia,serif; padding:0px; margin-bottom:0px;"/>
                           </td>
                           <td class="text-center">
                             <span t-field="l.quantity"/>
