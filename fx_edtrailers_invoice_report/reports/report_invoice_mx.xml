@@ -210,7 +210,7 @@
                     <strong>
                         <span style="font-size:30px;" t-field="o.company_emitter_id.partner_id.name"/><br/>
                     </strong>
-                    <strong><p style="font: 6pt Georgia,serif; padding:0px; margin-bottom:0px;"><span t-field="o.company_emitter_id.partner_id.vat"/><br/>
+                    <strong><p style="font: 8pt Georgia,serif; padding:0px; margin-bottom:0px;"><span t-field="o.company_emitter_id.partner_id.vat"/><br/>
                     Address Calle Pino#64 KM 8.9 CUAUHTEMOC
                     <br/>
                     CHIHUAHUA MX, ZIP 31607
