@@ -1,0 +1,111 @@
+<odoo>
+    <data>
+        <!-- VISTA DE LISTA (TREE) LOGISTICA -->
+        <record id="view_logistica_ordenes_venta_carga_tree" model="ir.ui.view">
+            <field name="name">view.logistica.ordenes.venta.carga.tree</field>
+            <field name="model">logistica.ordenes_venta_carga</field>
+            <field name="arch" type="xml">
+                <tree string="Orden Venta-Carga">
+                    <field name="orden_venta"/>
+                    <field name="cliente"/>
+                    <field name="fecha_pedido"/>
+                    <field name="fecha_compromiso"/>
+                    <field name="transportista"/>
+                    <field name="fecha_salida"/>
+                    <field name="fecha_entrega"/>
+                    <field name="estado"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <!-- VISTA FORMULARIO LOGÍSTICA -->
+        <record id="view_logistica_ordenes_venta_carga_form" model="ir.ui.view">
+            <field name="name">Orden de venta</field>
+            <field name="model">logistica.ordenes_venta_carga</field>
+            <field name="arch" type="xml">
+                <form string="Delivery Orders">
+                    <sheet>
+                        <group name=" group_top">
+                            <group name="group_left">
+                                <field name="orden_venta"/>
+                                <field name="cliente"/>
+                                <field name="fecha_pedido"/>
+                                <field name="fecha_compromiso"/>
+
+                            </group>
+                            <group name="group_right">
+                                <field name="fecha_salida"/>
+                                <field name="orden_salida"/>
+                                <field name="fecha_entrega"/>
+                                <!-- <field name="nombre" invisible="True"/> -->
+                                <field name="id_transportista" invisible="True"/>
+                                <field name="transportista" invisible="True"/>
+                                <field name="evidencia" help="Upload the evidence image (PDF or JPG)."
+                                       widget="image" options="{'accepted_file_extensions': '.pdf,.jpg'}"/>
+                                <!--                                <field name="evidencia" help="Carga tu imagen de evidencia (PDF o JPG)." widget="image"-->
+                                <!--                                       options="{'accepted_file_extensions': '.pdf,.jpg'}"/>-->
+                                <!--                                <t t-if="value == 1">-->
+                                <!--                                    <p>Valor 1</p>-->
+                                <!--                                </t>-->
+                                <!--                                <t t-elif="value == 2">-->
+                                <!--                                    <p>Valor 1</p>-->
+                                <!--                                </t>-->
+                                <!--                                <div t-if="object.evidencia not ''">-->
+
+                                <!--                                    <field name="evidencia" widget="attachment_image"/>-->
+
+                                <!--                                </div>-->
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--NUEVO CAMPO TRANSPORTISTA (CONTACTOS) -->
+        <record id="view_custom_contact_form" model="ir.ui.view">
+            <field name="name">view.custom.contact.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='category_id']" position="after">
+                    <field name="transportista"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!--NUEVO CAMPO FECHA COMPROMISO (VENTAS) -->
+        <record id="view_sale_order_form2" model="ir.ui.view">
+            <field name="name">view.sale.order.form2</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <field name="fecha_compromiso"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Acción para abrir vistas de los modelos -->
+        <record model="ir.actions.act_window" id="action_logistica_ordenes_venta_carga_view">
+            <field name="name">Orden</field>
+            <field name="res_model">logistica.ordenes_venta_carga</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <!-- Menú item superior -->
+        <menuitem name="Logistics" id="menu_logistica_root"/>
+
+        <!-- Categorías de menú -->
+        <menuitem name="Delivery Orders" id="menu_logistica_ordenes"
+                  parent="menu_logistica_root"/>
+
+        <!--Acciones del menú-->
+        <menuitem name="Orders" id="menu_logistica_orden"
+                  parent="menu_logistica_ordenes"
+                  action="action_logistica_ordenes_venta_carga_view"/>
+
+    </data>
+</odoo>
