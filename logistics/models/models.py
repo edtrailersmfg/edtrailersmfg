@@ -6,7 +6,7 @@ from odoo.exceptions import ValidationError
 
 class CustomLogistica(models.Model):
     _name = 'logistica.ordenes_venta_carga'
-    # _inherit = 'sale.order'
+    _inherit = ["portal.mixin","mail.thread","mail.activity.mixin"]
     _description = "List of Sales Orders and Loading Orders"
     _order = "orden_venta"
 
