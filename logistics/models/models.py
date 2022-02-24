@@ -16,7 +16,7 @@ class CustomLogistica(models.Model):
     fecha_pedido = fields.Datetime(related='orden_venta.date_order', tracking=True, string='Order Date')
     fecha_compromiso = fields.Datetime(related='orden_venta.fecha_compromiso', string='Scheduled Shipping Date')
     orden_salida = fields.Many2one('stock.picking', string='Delivery Order')
-    fecha_salida = fields.Datetime(string='Delivery Date')
+    fecha_salida = fields.Datetime(string='Departure Date')
     estado = fields.Selection([('N', 'New'), ('T', 'In transit'), ('E', 'Delivered')], string='Delivery Status',
                               track_visibility='onchange')
     evidencia = fields.Binary(string='Evidencia', store=True)
@@ -27,7 +27,7 @@ class CustomLogistica(models.Model):
     # transportista = fields.Boolean(related='id_transportista.transportista',
     #                                string='Transportista',
     #                                domain="['|', ('company_id', '=', False), ('company_id', '=', company_id) )]")
-    transportista = fields.Boolean(related='id_transportista.transportista',
+    transportista = fields.Many2one(related='id_transportista.transportista',
                                    string='Carrier')
     fecha_entrega = fields.Datetime(string='Delivery Date')
 
