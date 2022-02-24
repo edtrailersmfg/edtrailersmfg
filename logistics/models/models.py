@@ -27,7 +27,7 @@ class CustomLogistica(models.Model):
     # transportista = fields.Boolean(related='id_transportista.transportista',
     #                                string='Transportista',
     #                                domain="['|', ('company_id', '=', False), ('company_id', '=', company_id) )]")
-    transportista = fields.Many2one(related='id_transportista.transportista',
+    transportista = fields.Boolean(related='id_transportista.transportista',
                                    string='Carrier')
     fecha_entrega = fields.Datetime(string='Delivery Date')
 
