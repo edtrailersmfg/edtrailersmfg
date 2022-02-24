@@ -96,7 +96,7 @@
 
         <!-- Acción para abrir vistas de los modelos -->
         <record model="ir.actions.act_window" id="action_logistica_ordenes_venta_carga_view">
-            <field name="name">Orden</field>
+            <field name="name">Delivery Orders</field>
             <field name="res_model">logistica.ordenes_venta_carga</field>
             <field name="view_mode">tree,form</field>
         </record>
