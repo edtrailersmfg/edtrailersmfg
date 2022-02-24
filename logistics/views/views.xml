@@ -1,27 +1,9 @@
 <odoo>
     <data>
-        <!-- VISTA DE LISTA (TREE) LOGISTICA -->
-        <record id="view_logistica_ordenes_venta_carga_tree" model="ir.ui.view">
-            <field name="name">view.logistica.ordenes.venta.carga.tree</field>
-            <field name="model">logistica.ordenes_venta_carga</field>
-            <field name="arch" type="xml">
-                <tree string="Orden Venta-Carga">
-                    <field name="orden_venta"/>
-                    <field name="cliente"/>
-                    <field name="fecha_pedido"/>
-                    <field name="fecha_compromiso"/>
-                    <field name="transportista"/>
-                    <field name="fecha_salida"/>
-                    <field name="fecha_entrega"/>
-                    <field name="estado"/>
-                </tree>
-            </field>
-        </record>
-
 
         <!-- VISTA FORMULARIO LOGÍSTICA -->
         <record id="view_logistica_ordenes_venta_carga_form" model="ir.ui.view">
-            <field name="name">Orden de venta</field>
+            <field name="name">Delivery Orders </field>
             <field name="model">logistica.ordenes_venta_carga</field>
             <field name="arch" type="xml">
                 <form string="Delivery Orders">
@@ -59,9 +41,34 @@
                             </group>
                         </group>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
+
+
+        <!-- VISTA DE LISTA (TREE) LOGISTICA -->
+        <record id="view_logistica_ordenes_venta_carga_tree" model="ir.ui.view">
+            <field name="name">view.logistica.ordenes.venta.carga.tree</field>
+            <field name="model">logistica.ordenes_venta_carga</field>
+            <field name="arch" type="xml">
+                <tree string="Orden Venta-Carga">
+                    <field name="orden_venta"/>
+                    <field name="cliente"/>
+                    <field name="fecha_pedido"/>
+                    <field name="fecha_compromiso"/>
+                    <field name="transportista"/>
+                    <field name="fecha_salida"/>
+                    <field name="fecha_entrega"/>
+                    <field name="estado"/>
+                </tree>
+            </field>
+        </record>
+
 
         <!--NUEVO CAMPO TRANSPORTISTA (CONTACTOS) -->
         <record id="view_custom_contact_form" model="ir.ui.view">
