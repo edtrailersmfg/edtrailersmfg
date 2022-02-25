@@ -21,7 +21,7 @@ class CustomLogistica(models.Model):
                               track_visibility='onchange')
     evidencia = fields.Binary(string='Evidencia', store=True)
     transportista = fields.Many2one('res.partner', string='Carrier',
-                                       domain="[('commercial_partner_id', '=', cliente)]")
+                                       domain="[('transportista', '=', True)]")
     fecha_entrega = fields.Datetime(string='Delivery Date')
 
     _sql_constraints = [

@@ -23,7 +23,7 @@
                                 <field name="fecha_entrega"/>
                                 <!-- <field name="nombre" invisible="True"/> -->
                                 <field name="evidencia" help="Upload the evidence image (PDF or JPG)."
-                                       widget="image" options="{'accepted_file_extensions': '.pdf,.jpg'}"/>
+                                        options="{'accepted_file_extensions': '.pdf,.jpg'}"/>
                                 <!--                                <field name="evidencia" help="Carga tu imagen de evidencia (PDF o JPG)." widget="image"-->
                                 <!--                                       options="{'accepted_file_extensions': '.pdf,.jpg'}"/>-->
                                 <!--                                <t t-if="value == 1">-->
