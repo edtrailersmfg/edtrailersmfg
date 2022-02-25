@@ -10,7 +10,7 @@ class CustomLogistica(models.Model):
     _description = "List of Sales Orders and Loading Orders"
     _order = "orden_venta"
 
-    orden_venta = fields.Many2one('sale.order', string='Sales Order', required=True, stored=True)
+    orden_venta = fields.Many2one('sale.order', string='Sale Order', required=True, stored=True)
     cliente = fields.Many2one(related='orden_venta.partner_id', tracking=True, string='Customer',
                               domain="['|', ('company_id', '=', False), ('company_id', '=', company_id) )]")
     fecha_pedido = fields.Datetime(related='orden_venta.date_order', tracking=True, string='Order Date')
