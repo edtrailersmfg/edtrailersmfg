@@ -14,6 +14,7 @@
                                 <field name="cliente"/>
                                 <field name="fecha_pedido"/>
                                 <field name="fecha_compromiso"/>
+                                <field name="transportista"/>
 
                             </group>
                             <group name="group_right">
@@ -21,8 +22,6 @@
                                 <field name="orden_salida"/>
                                 <field name="fecha_entrega"/>
                                 <!-- <field name="nombre" invisible="True"/> -->
-                                <field name="id_transportista" invisible="True"/>
-                                <field name="transportista" invisible="True"/>
                                 <field name="evidencia" help="Upload the evidence image (PDF or JPG)."
                                        widget="image" options="{'accepted_file_extensions': '.pdf,.jpg'}"/>
                                 <!--                                <field name="evidencia" help="Carga tu imagen de evidencia (PDF o JPG)." widget="image"-->

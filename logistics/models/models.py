@@ -20,15 +20,8 @@ class CustomLogistica(models.Model):
     estado = fields.Selection([('N', 'New'), ('T', 'In transit'), ('E', 'Delivered')], string='Delivery Status',
                               track_visibility='onchange')
     evidencia = fields.Binary(string='Evidencia', store=True)
-    id_transportista = fields.Many2one('res.partner', string='Carrier',
+    transportista = fields.Many2one('res.partner', string='Carrier',
                                        domain="[('commercial_partner_id', '=', cliente)]")
-    # nombre = fields.Char(related='id_transportista.display_name', string='nombre transportista',
-    #                      domain="[('name', '=', nombre)]")
-    # transportista = fields.Boolean(related='id_transportista.transportista',
-    #                                string='Transportista',
-    #                                domain="['|', ('company_id', '=', False), ('company_id', '=', company_id) )]")
-    transportista = fields.Boolean(related='id_transportista.transportista',
-                                   string='Carrier')
     fecha_entrega = fields.Datetime(string='Delivery Date')
 
     _sql_constraints = [
