@@ -10,7 +10,7 @@
     <field name="sequence">60</field>
   </record>
 
-  <template id="consulta_estatus_personas" name="detalle_estatus">
+  <template id="delivery_orders_query" name="delivery_orders_status">
 
     <t t-call="website.layout">
       <div id="wrap" class="oe_structure oe_empty">
