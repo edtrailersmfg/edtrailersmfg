@@ -3,7 +3,7 @@
         <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
             <t t-call="portal.portal_docs_entry">
                 <t t-set="title">Delivery Orders</t>
-                <t t-set="url" t-value="'/my/deliveryorders'"/>
+                <t t-set="url" t-value="'/deliveryorders/my'"/>
                 <t t-set="placeholder_count" t-value="'delivery_count'"/>
             </t>
         </xpath>
