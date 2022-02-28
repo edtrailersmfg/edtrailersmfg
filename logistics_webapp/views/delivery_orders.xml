@@ -1,14 +1,107 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-<data name="Show Delivery Orders" customize_show="True" inherit_id="portal.portal_my_home" priority="10">
-        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
-            <t t-call="portal.portal_docs_entry">
-                <t t-set="title">Delivery Orders</t>
-                <t t-set="url" t-value="'/delivery-orders/my'"/>
-                <t t-set="placeholder_count" t-value="'delivery_count'"/>
-            </t>
-        </xpath>
-    </data>
+<data>
 
+  <record id="menu_seguimiento" model="website.menu">
+    <field name="name">Consulta tu estatus</field>
+    <field name="url">/consulta-estatus-personas/load</field>
+    <field name="parent_id" ref="website.main_menu"/>
+    <field name="sequence">60</field>
+  </record>
+
+  <template id="consulta_estatus_personas" name="detalle_estatus">
+
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty">
+
+        <form role="form" action="/consulta-estatus-personas" method="POST">
+          <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+            <div class="container">
+                <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"/>
+                <br/><br/>
+                <h1>Personas Certificadas</h1>
+                <!--BUSQUEDA POR NUMERO DE GUIA-->
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="folio">CURP o ID</label>
+                      <input type="text" class="form-control o_website_form_input"  required=""  placeholder="Escriba su CURP o ID" name="folio"/>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+               <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
+                 <button class="btn btn-primary btn-lg o_website_form_send o_default_snippet_text">Buscar</button>
+                 <span id="o_website_form_result"/>
+               </div>
+             </div>
+               <t t-set="i" t-value="1"/> 
+               <t t-foreach="lista_datos" t-as="reg">
+               <span t-if="i==1">
+                  <center>
+                    <br/><br/>
+                    <h3>
+                      <t t-esc="reg.name"/>
+                    </h3>
+                    <t t-esc="reg.x_id"/>
+                    <br/><br/>
+                  </center>
+                  <t t-set="i" t-value="2"/>
+                </span>
+                </t>
+
+                <table id="tabla_documentos" class="table table-striped">
+                  <thead>
+                    <tr>
+                    <!--
+                      <th>CURP o ID</th>
+                      <th>Nombre</th>
+                      <th>Ocupación</th> -->
+                      <th>No. Certificado</th>
+                      <th>Código EC</th>
+                      <th>Emisión</th>
+                      <th>Expiración</th>
+                      <th>Seguimiento 1</th>
+                    <!--  <th>Seguimiento 2</th>  -->
+                      <th>Estatus</th>
+                      <th>O. Evaluador</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr t-foreach="lista_datos" t-as="row">
+                    <!--
+                      <td><t t-esc="row.x_id"/></td>
+                      <td><t t-esc="row.name"/></td>
+                      <td><t t-esc="row.x_ocupacion"/></td> -->
+                      <td><t t-esc="row.x_certificado"/></td>
+                      <td><t t-esc="row.x_codigo_EC"/></td>
+                      <td><t t-esc="row.x_emision"/></td>
+                      <td><t t-esc="row.x_expiracion"/></td>
+                      <td><t t-esc="row.x_seguimiento_1"/></td>
+                    <!-- <td><t t-esc="row.x_seguimiento_2"/></td> -->
+                      <td><t t-esc="row.x_estatus"/></td>
+                      <td><t t-esc="row.x_organismo_evaluador"/></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br/><br/><br/><br/>
+              </div>
+            </form>
+
+      </div>
+    </t>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script>
+      $(document).ready(function() {
+      $('#tabla_documentos').DataTable({
+         "paging": true,
+         "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Spanish.json"
+        }
+      });
+     });
+    </script>
+  </template>
+</data>
 </odoo>
