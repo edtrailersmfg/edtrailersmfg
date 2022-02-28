@@ -1,99 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<odoo>
-
-<data>
-
-  <record id="menu_delivery_orders" model="website.menu">
-    <field name="name">Delivery Orders Query</field>
-    <field name="url">/delivery-orders-query/load</field>
-    <field name="parent_id" ref="website.main_menu"/>
-    <field name="sequence">60</field>
-  </record>
-
-  <template id="menu_delivery_orders_template" name="deliver_orders_detail">
-
-    <t t-call="website.layout">
-      <div id="wrap" class="oe_structure oe_empty">
-
-        <form role="form" action="/delivery-orders-query" method="POST">
-          <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-            <div class="container">
-                <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"/>
-                <br/><br/>
-                <h1>Delivery Orders</h1>
-                <!--BUSQUEDA POR NUMERO DE GUIA-->
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <label for="folio">Carrier</label>
-                      <input type="text" class="form-control o_website_form_input"  required=""  placeholder="Escriba su CURP o ID" name="folio"/>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-               <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
-                 <button class="btn btn-primary btn-lg o_website_form_send o_default_snippet_text">Buscar</button>
-                 <span id="o_website_form_result"/>
-               </div>
-             </div>
-               <t t-set="i" t-value="1"/> 
-               <t t-foreach="lista_datos" t-as="reg">
-               <span t-if="i==1">
-                  <center>
-                    <br/><br/>
-                    <h3>
-                      <t t-esc="reg.name"/>
-                    </h3>
-                    <t t-esc="reg.x_id"/>
-                    <br/><br/>
-                  </center>
-                  <t t-set="i" t-value="2"/>
-                </span>
-                </t>
-
-                <table id="tabla_documentos" class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th>Sale Order</th>
-                      <th>Delivery Address</th>
-                      <th>Schedule Shipping Date</th>
-                      <th>Departure Date</th>
-                      <th>Delivery Order</th>
-                      <th>Estatus</th>
-                      <th>Delivery Date</th>
-                      <th>Document</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr t-foreach="lista_datos" t-as="row">
-                      <td><t t-esc="row.orden_venta"/></td>
-                      <td><t t-esc="row.direccion_entrega"/></td>
-                      <td><t t-esc="row.fecha_compromiso"/></td>
-                      <td><t t-esc="row.fecha_salida"/></td>
-                      <td><t t-esc="row.orden_salida"/></td>
-                      <td><t t-esc="row.estado"/></td>
-                      <td><t t-esc="row.fecha_entrega"/></td>
-                      <td><t t-esc="row.evidencia"/></td>
-                    </tr>
-                  </tbody>
-                </table>
-                <br/><br/><br/><br/>
-              </div>
-            </form>
-
-      </div>
-    </t>
-
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-    <script>
-      $(document).ready(function() {
-      $('#tabla_documentos').DataTable({
-         "paging": true,
-         "language": {
-            "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Spanish.json"
-        }
-      });
-     });
-    </script>
-  </template>
-</data>
-</odoo>
+<?xml version="1.0"?>
+<data name="Show Signatures" customize_show="True" inherit_id="portal.portal_my_home" priority="70">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">Delivery Orders</t>
+                <t t-set="url" t-value="'/my/deliveryorders'"/>
+                <t t-set="placeholder_count" t-value="'delivery_count'"/>
+            </t>
+        </xpath>
+    </data>
