@@ -4,7 +4,7 @@
 <data>
 
   <record id="menu_seguimiento" model="website.menu">
-    <field name="name">Consulta tu estatus</field>
+    <field name="name">Delivery Orders</field>
     <field name="url">/consulta-estatus-personas/load</field>
     <field name="parent_id" ref="website.main_menu"/>
     <field name="sequence">60</field>
