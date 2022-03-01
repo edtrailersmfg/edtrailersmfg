@@ -13,6 +13,11 @@ class CustomLogistica(models.Model):
     orden_venta = fields.Many2one('sale.order', string='Sale Order', required=True, stored=True)
     cliente = fields.Many2one(related='orden_venta.partner_id', tracking=True, string='Customer',
                               domain="['|', ('company_id', '=', False), ('company_id', '=', company_id) )]")
+
+    entregar_en = fields.Many2one(related='orden_venta.partner_shipping_id', tracking=True, string='Delivery Address',
+                              domain="['|', ('company_id', '=', False), ('company_id', '=', company_id) )]")
+
+
     fecha_pedido = fields.Datetime(related='orden_venta.date_order', tracking=True, string='Order Date')
     fecha_compromiso = fields.Datetime(related='orden_venta.fecha_compromiso', string='Scheduled Shipping Date')
     orden_salida = fields.Many2one('stock.picking', string='Delivery Order')
@@ -34,9 +39,9 @@ class CustomLogistica(models.Model):
     def set_transportista(self):
         for rec in self:
             if rec.cliente:
-                rec.id_transportista = rec.cliente
+                #rec.id_transportista = rec.cliente
                 # print('id_transportista', rec.id_transportista)
-                # print('cliente', rec.cliente)
+                print('cliente', rec.cliente)
                 # print('transportista', rec.transportista)
 
     def editar_formulario(self):
