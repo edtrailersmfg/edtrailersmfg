@@ -10,77 +10,63 @@
     <field name="sequence">60</field>
   </record>
 
-  <template id="delivery_orders_query" name="delivery_orders_status">
+  <template id="delivery-order-query" name="delivery_order_status">
 
     <t t-call="website.layout">
       <div id="wrap" class="oe_structure oe_empty">
 
-        <form role="form" action="/consulta-estatus-personas" method="POST">
+        <form role="form" action="/delivery-order-query" method="POST">
           <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
             <div class="container">
                 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"/>
                 <br/><br/>
-                <h1>Personas Certificadas</h1>
+                <h3>Delivery Orders</h3>
                 <!--BUSQUEDA POR NUMERO DE GUIA-->
+
+<!--
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                      <label for="folio">CURP o ID</label>
-                      <input type="text" class="form-control o_website_form_input"  required=""  placeholder="Escriba su CURP o ID" name="folio"/>
+                      <label for="folio">Sale Order</label>
+                      <input type="text" class="form-control o_website_form_input"  required=""  placeholder="Sale Order Number or ID" name="folio"/>
                     </div>
                 </div>
 
                 <div class="form-group row">
                <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
-                 <button class="btn btn-primary btn-lg o_website_form_send o_default_snippet_text">Buscar</button>
+                 <button class="btn btn-primary btn-lg o_website_form_send o_default_snippet_text">Search</button>
                  <span id="o_website_form_result"/>
                </div>
              </div>
-               <t t-set="i" t-value="1"/> 
-               <t t-foreach="lista_datos" t-as="reg">
-               <span t-if="i==1">
-                  <center>
-                    <br/><br/>
-                    <h3>
-                      <t t-esc="reg.name"/>
-                    </h3>
-                    <t t-esc="reg.x_id"/>
-                    <br/><br/>
-                  </center>
-                  <t t-set="i" t-value="2"/>
-                </span>
-                </t>
-
+-->
                 <table id="tabla_documentos" class="table table-striped">
                   <thead>
                     <tr>
-                    <!--
-                      <th>CURP o ID</th>
-                      <th>Nombre</th>
-                      <th>Ocupación</th> -->
-                      <th>No. Certificado</th>
-                      <th>Código EC</th>
-                      <th>Emisión</th>
-                      <th>Expiración</th>
-                      <th>Seguimiento 1</th>
-                    <!--  <th>Seguimiento 2</th>  -->
+                      <th>Delivery Order</th>
+                      <th>Delivery Address</th>
+                      <th>Scheduled Shipping Date</th>
+                      <th>Departure Date</th>
                       <th>Estatus</th>
-                      <th>O. Evaluador</th>
+                      <th>Delivery Date</th>
+                      <th>Receipt</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr t-foreach="lista_datos" t-as="row">
-                    <!--
-                      <td><t t-esc="row.x_id"/></td>
-                      <td><t t-esc="row.name"/></td>
-                      <td><t t-esc="row.x_ocupacion"/></td> -->
-                      <td><t t-esc="row.x_certificado"/></td>
-                      <td><t t-esc="row.x_codigo_EC"/></td>
-                      <td><t t-esc="row.x_emision"/></td>
-                      <td><t t-esc="row.x_expiracion"/></td>
-                      <td><t t-esc="row.x_seguimiento_1"/></td>
-                    <!-- <td><t t-esc="row.x_seguimiento_2"/></td> -->
-                      <td><t t-esc="row.x_estatus"/></td>
-                      <td><t t-esc="row.x_organismo_evaluador"/></td>
+                      <td><t t-esc="row.orden_venta.name"/></td>
+                      <td>
+                          <t t-esc="row.entregar_en.name"/><br/>
+                          <t t-esc="row.entregar_en.street_name"/>, 
+                          <t t-esc="row.entregar_en.street_number"/><br/>
+                          <t t-esc="row.entregar_en.city"/>, 
+                          <t t-esc="row.entregar_en.state_id.name"/><br/>
+                          <t t-esc="row.entregar_en.zip"/>, 
+                          <t t-esc="row.entregar_en.country_id.name"/>
+                      </td>
+                      <td><t t-esc="row.fecha_compromiso"/></td>
+                      <td><t t-esc="row.fecha_salida"/></td>
+                      <td><t t-esc="row.estado"/></td>
+                      <td><t t-esc="row.fecha_entrega"/></td>
+                      <td><t t-esc="row.evidencia"/></td>
                     </tr>
                   </tbody>
                 </table>

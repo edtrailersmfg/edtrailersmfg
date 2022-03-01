@@ -12,12 +12,14 @@
                             <group name="group_left">
                                 <field name="orden_venta"/>
                                 <field name="cliente"/>
+                                <field name="entregar_en"/>
                                 <field name="fecha_pedido"/>
-                                <field name="fecha_compromiso"/>
-                                <field name="transportista"/>
+
 
                             </group>
                             <group name="group_right">
+                                <field name="fecha_compromiso"/>
+                                <field name="transportista"/>
                                 <field name="fecha_salida"/>
                                 <field name="orden_salida"/>
                                 <field name="fecha_entrega"/>
