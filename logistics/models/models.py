@@ -22,8 +22,7 @@ class CustomLogistica(models.Model):
     fecha_compromiso = fields.Datetime(related='orden_venta.fecha_compromiso', string='Scheduled Shipping Date')
     orden_salida = fields.Many2one('stock.picking', string='Delivery Order')
     fecha_salida = fields.Datetime(string='Departure Date')
-    estado = fields.Selection([('N', 'New'), ('T', 'In transit'), ('E', 'Delivered')], string='Delivery Status',
-                              track_visibility='onchange')
+    estado = fields.Selection([('N', 'New'), ('T', 'In transit'), ('E', 'Delivered')], default="N", string='Delivery Status')
     evidencia = fields.Binary(string='Evidencia', store=True)
     transportista = fields.Many2one('res.partner', string='Carrier',
                                        domain="[('transportista', '=', True)]")
@@ -43,6 +42,31 @@ class CustomLogistica(models.Model):
                 # print('id_transportista', rec.id_transportista)
                 print('cliente', rec.cliente)
                 # print('transportista', rec.transportista)
+
+    @api.onchange('orden_salida')
+    def update_estado(self):
+        if self.orden_salida:
+            self.estado = 'T'
+        
+        if not(self.orden_salida):
+            self.estado = 'N'
+    
+    @api.onchange('fecha_entrega')
+    def update_estado_entrega(self):
+        if self.fecha_entrega:
+            self.estado = 'E'
+
+            start_date = self.fecha_salida
+            end_date = self.fecha_entrega
+            if start_date > end_date:
+                self.fecha_entrega = ''
+                raise ValidationError("The delivery date must be after the departure date")
+            pass
+
+        else:
+            self.estado = 'T'
+
+
 
     def editar_formulario(self):
         view_id = self.env.ref('Logistica.view_logistica_ordenes_venta_carga_form').id
@@ -86,14 +110,7 @@ class CustomLogistica(models.Model):
             raise ValidationError("The departure date must be later than the order date")
         pass
 
-    @api.onchange('fecha_entrega')
-    def comparar_fecha_entrega(self):
-        start_date = self.fecha_salida
-        end_date = self.fecha_entrega
-        if start_date > end_date:
-            self.fecha_entrega = ''
-            raise ValidationError("The delivery date must be after the departure date")
-        pass
+
 
 
 class CustomSaleOrder(models.Model):
