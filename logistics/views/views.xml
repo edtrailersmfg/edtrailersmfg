@@ -7,6 +7,9 @@
             <field name="model">logistica.ordenes_venta_carga</field>
             <field name="arch" type="xml">
                 <form string="Delivery Orders">
+                    <header>
+                        <field name="estado" clickable="True" widget="statusbar"></field>
+                    </header>
                     <sheet>
                         <group name=" group_top">
                             <group name="group_left">
