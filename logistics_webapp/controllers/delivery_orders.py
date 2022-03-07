@@ -9,7 +9,7 @@ class web_delivery_orders(http.Controller):
         if request.session.login:
             cliente=request.env['res.partner'].sudo().search([('email','=',request.session.login)])
             if cliente:
-                lista_datos=request.env['logistica.ordenes_venta_carga'].sudo().search([('transportista','=',cliente.id)])
+                lista_datos=request.env['logistica.ordenes_venta_carga'].sudo().search([('transportista','=',cliente.id)], order='id asc')
                 print(lista_datos)
                 return http.request.render('logistics_webapp.delivery-order-query',{
                     'lista_datos':lista_datos,
