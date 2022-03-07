@@ -24,7 +24,7 @@ class CustomLogistica(models.Model):
     fecha_salida = fields.Datetime(string='Departure Date')
     estado = fields.Selection([('N', 'New'), ('T', 'In transit'), ('E', 'Delivered')], default="N", string='Delivery Status')
     evidencia = fields.Binary(string='Evidencia', store=True)
-    plataforma = fields.Char(String='Numero de Plataforma')
+    plataforma = fields.Char(string='Platform')
     transportista = fields.Many2one('res.partner', string='Carrier',
                                        domain="[('transportista', '=', True)]")
     fecha_entrega = fields.Datetime(string='Delivery Date')
