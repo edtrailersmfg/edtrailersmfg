@@ -24,10 +24,12 @@
     # always loaded
     'data': [
         'views/delivery_orders.xml',
+        'views/delivery_order_form_template.xml',
+        'views/do_thanking_template.xml',
     ],
-     'js': [
- 'static/src/js/website.js'
-],
+    'js': [
+        'static/src/js/website.js'
+    ],
 
 
 }

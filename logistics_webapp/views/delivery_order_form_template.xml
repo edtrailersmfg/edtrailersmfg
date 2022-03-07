@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <data>
+        <template id="portal_delivery_order">
+            <t t-call="website.layout">
+                <t t-set="no_footer" t-value="1"/>
+                <div id="wrap" class="oe_structure oe_empty">
+                    <div class="container py-2">
+                    <t t-set="additional_title">Delivery Order</t>
+                        <form action="sumit/delivery/order" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                            <input type="hidden" name="d_id" t-att-value="delivery.id"/>
+                            <div class="row o_portal_details">
+                                <div class="col-12">
+                                    <div class="form-row row justify-content-center mt-2 mb-3">
+                                        <div class="form-group col-8">
+                                            <p class="h3 text-center">Delivery Order</p>
+                                        </div>
+                                    </div>
+                        <!--
+                                    <div class="form-row row my-2">
+                                        <div t-attf-class="form-group col-xl-2">
+                                            <label class="col-form-label" for="name">User Name</label>
+                                        </div>
+                                        <div t-attf-class="form-group col-xl-4">
+                                            <span t-attf-class="form-control border-0" t-field="partner.name" />
+                                        </div>
+                                    </div>
+                        -->
+
+                                    <div class="form-row row my-2">
+                                        <div t-attf-class="form-group col-xl-2">
+                                            <label class="col-form-label" for="delivery_order">Delivery Order</label>
+                                        </div>
+                                        <div t-attf-class="form-group col-xl-4">
+                                            <span t-attf-class="form-control border-0" t-field="delivery.orden_venta.name" />
+                                        </div>
+                                    </div>
+                                    <div class="form-row row my-2">
+                                        <div t-attf-class="form-group col-xl-2">
+                                            <label class="col-form-label" for="delivery_address">Delivery Address</label>
+                                        </div>
+                                        <div t-attf-class="form-group col-xl-4">
+                                            <div t-field="delivery.entregar_en" t-options='{"widget": "contact", "fields": ["email", "phone", "address", "name"]}'/>
+                                        </div>
+                                    </div>
+                                    <div class="form-row row my-2">
+                                        <div t-attf-class="form-group col-xl-2">
+                                            <label class="col-form-label" for="shipping_date">Schedule Shipping Date</label>
+                                        </div>
+                                        <div t-attf-class="form-group col-xl-4">
+                                            <span t-attf-class="form-control border-0" t-field="delivery.fecha_compromiso" />
+                                        </div>
+                                    </div>
+                                    <div class="form-row row my-2">
+                                        <div t-attf-class="form-group col-xl-2">
+                                            <label class="col-form-label" for="shipping_date">Departure Date</label>
+                                        </div>
+                                        <div t-attf-class="form-group col-xl-4">
+                                            <span t-attf-class="form-control border-0" t-field="delivery.fecha_salida" />
+                                        </div>
+                                    </div>
+                                    <div class="form-row row my-2">
+                                        <div t-attf-class="form-group col-xl-2">
+                                            <label class="col-form-label" for="name">Estatus</label>
+                                        </div>
+                                        <div t-attf-class="form-group col-xl-4">
+                                            <span t-attf-class="form-control border-0" t-field="delivery.estado" />
+                                        </div>
+                                    </div>
+                                    <div class="form-row row my-2">
+                                        <div t-attf-class="form-group col-xl-2">
+                                            <label class="col-form-label" for="platform_number">Platform number</label>
+                                        </div>
+                                        <div t-attf-class="form-group col-xl-4">
+                                            <input t-attf-class="form-control" name="platform_number"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-row row my-2">
+                                        <div t-attf-class="form-group col-xl-2">
+                                            <label class="col-form-label" for="shipping_date">Delivery Date</label>
+                                        </div>
+                                        <div t-attf-class="form-group col-xl-4">
+                                            <input type="date" t-attf-class="form-control" name="delivery_date"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-row row my-2">
+                                        <div t-attf-class="form-group col-xl-2">
+                                            <label class="col-form-label" for="shipping_date">Receipt</label>
+                                        </div>
+                                        <div t-attf-class="form-group col-xl-4">
+                                            <input type="file" t-attf-class="form-control" name="receipt_file"/>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix col-8">
+                                        <button type="submit" class="btn btn-primary float-right mb32 ">
+                                            Update
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

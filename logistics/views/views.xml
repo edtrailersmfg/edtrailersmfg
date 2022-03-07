@@ -17,12 +17,14 @@
                                 <field name="cliente"/>
                                 <field name="entregar_en"/>
                                 <field name="fecha_pedido"/>
+                                <field name="fecha_compromiso"/>
 
 
                             </group>
                             <group name="group_right">
-                                <field name="fecha_compromiso"/>
+                                
                                 <field name="transportista"/>
+                                <field name="plataforma"/>
                                 <field name="fecha_salida"/>
                                 <field name="orden_salida"/>
                                 <field name="fecha_entrega"/>
@@ -62,12 +64,12 @@
             <field name="arch" type="xml">
                 <tree string="Orden Venta-Carga">
                     <field name="orden_venta"/>
-                    <field name="cliente"/>
+                    <field name="entregar_en"/>
                     <field name="fecha_pedido"/>
                     <field name="fecha_compromiso"/>
                     <field name="transportista"/>
+                    <field name="plataforma"/>
                     <field name="fecha_salida"/>
-                    <field name="fecha_entrega"/>
                     <field name="estado"/>
                 </tree>
             </field>
