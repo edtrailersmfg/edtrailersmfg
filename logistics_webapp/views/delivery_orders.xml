@@ -26,21 +26,22 @@
                   <thead>
                     <tr>
                       <th>Delivery Order</th>
+                      <th>Platform</th>
                       <th>Delivery Address</th>
                       <th>Scheduled Shipping Date</th>
                       <th>Departure Date</th>
-                      <th>Estatus</th>
-                      <th>Delivery Date</th>
-                      <th>Receipt</th>
+                      <th>Estatus</th>                      
+                      <th>Option</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr t-foreach="lista_datos" t-as="row">
                       <td><t t-esc="row.orden_venta.name"/></td>
+                      <td><t t-esc="row.plataforma"/></td>
                       <td>
                           <t t-esc="row.entregar_en.name"/><br/>
-                          <t t-esc="row.entregar_en.street_name"/>, 
-                          <t t-esc="row.entregar_en.street_number"/><br/>
+                          <t t-esc="row.entregar_en.street"/>,
+                          <t t-esc="row.entregar_en.street2"/><br/>
                           <t t-esc="row.entregar_en.city"/>, 
                           <t t-esc="row.entregar_en.state_id.name"/><br/>
                           <t t-esc="row.entregar_en.zip"/>, 
@@ -48,9 +49,12 @@
                       </td>
                       <td><t t-esc="row.fecha_compromiso"/></td>
                       <td><t t-esc="row.fecha_salida"/></td>
-                      <td><t t-esc="row.estado"/></td>
-                      <td><t t-esc="row.fecha_entrega"/></td>
-                      <td><t t-esc="row.evidencia"/></td>
+                      <td><t t-esc="row.estado"/></td>                      
+                      <td>
+                          <button t-attf-formaction="/delivery-order-query?d_id=#{row.id}" class="btn btn-primary btn-lg o_website_form_send o_default_snippet_text">
+                              Edit
+                          </button>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
