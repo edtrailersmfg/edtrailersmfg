@@ -86,16 +86,4 @@ Add additional notes about how to deploy this on a live system
 ## Authors
 
 * **Israel Cruz Argil** - *Initial work* - [CEO - Argil Consulting](https://www.linkedin.com/in/israel-ca-a431a624/)
-* **German Ponce Dominguez** - *Contributor* - [Python Developer Master](https://www.linkedin.com/in/german-ponce-dominguez-07a02b61/)
-* **Aldo Luna Guzman** - *Contributor* - [Python Developer Master](https://www.argil.mx)
-
-
-See also the list of [contributors](https://bitbucket.org/argilconsulting/odoo-mexico-localization) who participated in this project.
-
-## License
-
-Protedigo contra Pirateria bajo la Ley de Protección de Derechos de Autor de México  [Mas información](https://mexico.justia.com/federales/leyes/ley-federal-del-derecho-de-autor/titulo-ii/capitulo-i/) para mas detalles.
-
-## Release NOTES:
-
-* **Versión Beta - 26/09/2021** - *Commit 66032cab0e52bc1b766f4725c1b9a6b5b91ca18b* - [Versión Desarrollada Odoo 14.0](https://bitbucket.org/argilconsulting/odoo-mexico-localization/src/15.0/)
+* **German Ponce Dominguez** 

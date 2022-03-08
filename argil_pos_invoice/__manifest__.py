@@ -4,7 +4,7 @@
 {
     "name": "POS - Factura Diaria", 
     "version": "1.1", 
-    "author": "Argil Consulting", 
+    "author": "Fixdoo & Argil", 
     "category": "POS", 
     "description": """
 POS - Factura Diaria
@@ -32,7 +32,7 @@ Es importante tener definido un Producto en la Contabilidad --> Configuracion --
 
 
     """, 
-    "website": "http://www.argil.mx", 
+    "website": "http://www.fixdoo.mx", 
 
     "depends": [#"base_setup", 
                 "product", 

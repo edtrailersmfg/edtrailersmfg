@@ -1,15 +1,9 @@
 # -*- encoding: utf-8 -*-
-###########################################################################
-#
-#    Copyright (c) 2015 Argil Consulting - http://www.argil.mx
-#    All Rights Reserved.
-############################################################################
-#    Coded by: Israel CA (israel.cruz@argil.mx)
 
 {
     "name": "Extensión - Análisis de Facturas", 
     "version": "1.0", 
-    "author": "Argil Consulting", 
+    "author": "Fixdoo & Argil", 
     "category": "Accounting", 
     "description": """
 
@@ -24,7 +18,7 @@ Se agregan las siguiente columnas:
     - Referencia factura de Proveedor y/o Número de Factura de Cliente
 
     """, 
-    "website": "http://www.argil.mx/", 
+    "website": "http://www.fixdoo.mx/", 
     #'license' : 'OEEL-1',
     "depends": ["account", "account_invoice_currency",
     ], 

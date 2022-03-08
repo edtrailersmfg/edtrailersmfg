@@ -4,7 +4,7 @@
 {
     "name" : "DIOT",
     "version" : "1.0",
-    "author" : "Argil Consulting",
+    "author" : "Fixdoo & Argil",
     "category" : "Localization/Mexico",
     "description": """
 Declaración de Operaciones con Terceros (DIOT)
@@ -20,7 +20,7 @@ Declaración de Operaciones con Terceros (DIOT)
     
 
     """,
-    "website" : "http://www.argil.mx",
+    "website" : "http://www.fixdoo.mx",
 
     "depends" : [
         "l10n_mx",
