@@ -3,8 +3,8 @@
 {
     "name"      : "Complemento Comercio Exterior 1.1",
     "version"   : "1.0",
-    "author"    : "Argil Consulting",
-    "website"   : "https://www.argil.mx",
+    "author"    : "Fixdoo & Argil",
+    "website"   : "https://www.fixdoo.mx",
     "category"  : "Localization/Mexico",
     "description": """
 

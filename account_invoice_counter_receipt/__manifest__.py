@@ -4,8 +4,8 @@
 {
     "name"      : "Contra Recibos de Facturas (Clientes y Proveedores)",
     "version"   : "1.0",
-    "author"    : "Argil Consulting",
-    "website"   : "https://argil.mx",
+    "author"    : "Fixdoo & Argil",
+    "website"   : "https://fixdoo.mx",
     "description" : """
 Contra Recibos de Facturas (Clientes y Proveedores)
 ===================================================

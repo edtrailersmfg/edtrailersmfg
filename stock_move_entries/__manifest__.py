@@ -5,7 +5,7 @@
 {
     "name": "Información Contable en Movimientos de Inventario", 
     "version": "1.1", 
-    "author": "Argil Consulting", 
+    "author": "Fixdoo & Argil", 
     "category": "Account", 
     "description": """
 Información Contable en Movimientos de Inventario
@@ -21,7 +21,7 @@ Además agrega las siguientes funcionalidades:
         También agrega la Suma del Monto Movimiento
     
     """, 
-    "website": "http://www.argil.mx", 
+    "website": "http://www.fixdoo.mx", 
     "depends": [
         "stock_account",
     ], 
