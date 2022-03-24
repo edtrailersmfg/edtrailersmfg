@@ -17,7 +17,7 @@ import logging
 _logger = logging.getLogger(__name__)
 
 
-msg2 = "Contacta a tu administrador de Sistema o contactanos info@argil.mx"
+msg2 = "Contacta a tu administrador de Sistema o contactanos info@fixdoo.mx"
 
 
 class pay_method(models.Model):

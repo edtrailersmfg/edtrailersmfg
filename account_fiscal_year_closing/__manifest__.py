@@ -2,7 +2,7 @@
 {
     "name": "Póliza de Cierre de Año Fiscal", 
     "version": "1.0", 
-    "author": "Argil Consulting", 
+    "author": "Fixdoo & Argil", 
     "category": "Account", 
     "description": """
 
@@ -14,7 +14,7 @@ Este módulo ayuda para generar la Póliza de Cierre de Año Fiscal (Póliza de 
 - Agrega el Asistente para Cerrar el Año Fiscal
 
     """, 
-    "website": "http://www.argil.mx", 
+    "website": "http://www.fixdoo.mx", 
     #'license' : 'OEEL-1',
     "depends": ["account", 
                 "account_period_and_fiscalyear",], 

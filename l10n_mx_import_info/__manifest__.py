@@ -3,9 +3,9 @@
 {
     "name" : "Pedimentos Aduanales en CFDI",
     "version" : "1.0",
-    "author" : "Argil Consulting",
+    "author" : "Fixdoo & Argil",
     "category"  : "Localization",
-    "website": "http://www.argil.mx",
+    "website": "http://www.fixdoo.mx",
     "description": """
 Pedimentos Aduanales en CFDI
 ============================

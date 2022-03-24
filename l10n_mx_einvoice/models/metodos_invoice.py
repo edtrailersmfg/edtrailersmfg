@@ -34,7 +34,7 @@ CFDI_XSLT_CADENA_TFD = 'l10n_mx_einvoice/SAT/cadenaoriginal_3_3/cadenaoriginal_T
 import logging
 _logger = logging.getLogger(__name__)
 
-msg2 = "Contacte a su administrador de sistemas o mande correo a info@argil.mx"
+msg2 = "Contacte a su administrador de sistemas o mande correo a info@fixdoo.mx"
 
 def conv_ascii(text):
     """

@@ -1,8 +1,4 @@
 # -*- encoding: utf-8 -*-
-#    Copyright (c) 2014 Argil Consulting - http://www.argil.mx
-############################################################################
-#    Coded by: Israel Cruz Argil (israel.cruz@argil.mx)
-############################################################################
 
 from odoo.tools.float_utils import float_round as round
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
