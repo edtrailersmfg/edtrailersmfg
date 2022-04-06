@@ -74,7 +74,7 @@
                                             <label class="col-form-label" for="platform_number">Platform number</label>
                                         </div>
                                         <div t-attf-class="form-group col-xl-4">
-                                            <input t-attf-class="form-control" name="platform_number"/>
+                                            <input t-attf-class="form-control" name="platform_number" t-att-value="delivery.plataforma"/>
                                         </div>
                                     </div>
                                     <div class="form-row row my-2">
@@ -82,7 +82,7 @@
                                             <label class="col-form-label" for="shipping_date">Delivery Date</label>
                                         </div>
                                         <div t-attf-class="form-group col-xl-4">
-                                            <input type="date" t-attf-class="form-control" name="delivery_date"/>
+                                            <input type="date" t-attf-class="form-control" name="delivery_date" t-att-value="delivery.fecha_entrega and delivery.fecha_entrega.strftime('%Y-%m-%d') or ''"/>
                                         </div>
                                     </div>
                                     <div class="form-row row my-2">
@@ -90,6 +90,9 @@
                                             <label class="col-form-label" for="shipping_date">Receipt</label>
                                         </div>
                                         <div t-attf-class="form-group col-xl-4">
+                                            <a t-attf-href="/delivery-order-query/download?delivery_id=#{delivery.id}&amp;download=#{'' if delivery.file_name.endswith('.pdf') or delivery.file_name.endswith('.jpg')  or delivery.file_name.endswith('.png') else '1'}" target="_blank"><span t-field="delivery.file_name" t-if="delivery.file_name"/></a>
+<!--                                        </div>-->
+<!--                                        <div t-attf-class="form-group col-xl-4">-->
                                             <input type="file" t-attf-class="form-control" name="receipt_file"/>
                                         </div>
                                     </div>

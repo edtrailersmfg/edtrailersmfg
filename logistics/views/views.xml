@@ -28,8 +28,9 @@
                                 <field name="fecha_salida"/>
                                 <field name="orden_salida"/>
                                 <field name="fecha_entrega"/>
+                                <field name="file_name" invisible="1"/>
                                 <!-- <field name="nombre" invisible="True"/> -->
-                                <field name="evidencia" help="Upload the evidence image (PDF or JPG)."
+                                <field name="evidencia" filename="file_name" help="Upload the evidence image (PDF or JPG)."
                                         options="{'accepted_file_extensions': '.pdf,.jpg'}"/>
                                 <!--                                <field name="evidencia" help="Carga tu imagen de evidencia (PDF o JPG)." widget="image"-->
                                 <!--                                       options="{'accepted_file_extensions': '.pdf,.jpg'}"/>-->

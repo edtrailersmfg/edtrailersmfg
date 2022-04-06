@@ -19,11 +19,12 @@ class CustomLogistica(models.Model):
 
 
     fecha_pedido = fields.Datetime(related='orden_venta.date_order', tracking=True, string='Order Date')
-    fecha_compromiso = fields.Datetime(related='orden_venta.fecha_compromiso', string='Scheduled Shipping Date')
+    fecha_compromiso = fields.Datetime(related='orden_venta.fecha_compromiso', string='Scheduled Shipping Date', store=True)
     orden_salida = fields.Many2one('stock.picking', string='Delivery Order')
     fecha_salida = fields.Datetime(string='Departure Date')
     estado = fields.Selection([('N', 'New'), ('T', 'In transit'), ('E', 'Delivered')], default="N", string='Delivery Status')
     evidencia = fields.Binary(string='Evidencia', store=True)
+    file_name = fields.Char('File Name')
     plataforma = fields.Char(string='Platform')
     transportista = fields.Many2one('res.partner', string='Carrier',
                                        domain="[('transportista', '=', True)]")
