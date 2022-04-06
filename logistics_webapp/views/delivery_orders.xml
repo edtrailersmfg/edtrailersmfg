@@ -30,8 +30,10 @@
                       <th>Delivery Address</th>
                       <th>Scheduled Shipping Date</th>
                       <th>Departure Date</th>
+                      <th>Delivery Date</th>
                       <th>Estatus</th>                      
                       <th>Option</th>
+                      <th></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -49,11 +51,17 @@
                       </td>
                       <td><t t-esc="row.fecha_compromiso"/></td>
                       <td><t t-esc="row.fecha_salida"/></td>
-                      <td><t t-esc="row.estado"/></td>                      
+                      <td><t t-esc="row.fecha_entrega"/></td>
+                      <td><t t-esc="row.estado"/></td>
                       <td>
                           <button t-attf-formaction="/delivery-order-query?d_id=#{row.id}" class="btn btn-primary btn-lg o_website_form_send o_default_snippet_text">
                               Edit
                           </button>
+                      </td>
+                      <td>
+                        <t t-if="row.file_name">
+                          <a t-attf-href="/delivery-order-query/download?delivery_id=#{row.id}&amp;download=#{'' if row.file_name.endswith('.pdf') or row.file_name.endswith('.jpg')  or row.file_name.endswith('.png') else '1'}" target="_blank"><i><span class="fa fa-download"/></i></a>
+                        </t>
                       </td>
                     </tr>
                   </tbody>
