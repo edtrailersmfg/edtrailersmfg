@@ -9,10 +9,10 @@ class SaleOrder(models.Model):
 
     def simulate_materials_requirement(self):
         # filtrar pedidos que no esten confirmados
-        non_sale_state = self.filtered(
-            lambda ln: ln.state not in ['draft', 'sale']
+        not_allowed_state = self.filtered(
+            lambda ln: ln.state in ['done', 'cancel']
         )
-        if len(non_sale_state):
+        if len(not_allowed_state):
             raise UserError(
                 'Elija únicamente pedidos confirmados o cotizaciones'
             )
@@ -26,7 +26,9 @@ class SaleOrder(models.Model):
         for prod in all_prods_ids:
             # buscar nombre "manufacture" como bandera que indica a producir
             has_manufacture = prod.route_ids.filtered(
-                lambda r: 'manufacture' in r.name.lower()
+                lambda r: 'manufacture' in r.name.lower() \
+                    or 'fabrica' in r.name.lower() \
+                    or 'produc' in r.name.lower()
             )
             if not has_manufacture:
                 non_manufactured_prods.append(
