@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_requirement_sim,access.requirement.sim,model_materials_requirement_simulation,base.group_user,1,1,1,1
+access_msg_display,access.msg.display,model_wizard_display_message,,1,1,1,1
