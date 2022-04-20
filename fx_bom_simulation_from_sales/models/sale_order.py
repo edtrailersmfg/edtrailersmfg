@@ -10,7 +10,7 @@ class SaleOrder(models.Model):
     def simulate_materials_requirement(self):
         # filtrar pedidos que no esten confirmados
         not_allowed_state = self.filtered(
-            lambda ln: ln.state in ['done', 'cancel']
+            lambda ln: ln.state == 'cancel'
         )
         if len(not_allowed_state):
             raise UserError(
