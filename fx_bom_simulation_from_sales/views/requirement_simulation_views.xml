@@ -39,6 +39,8 @@
                 <field name="virtual_available"/>
                 <field name="required_qty"/>
                 <field name="purchase_qty"/>
+                <field name="required_total_cost" sum="Costo ctd requerida"/>
+                <field name="purchase_total_cost" sum="Costo ctd comprar"/>
             </tree>
         </field>
     </record>

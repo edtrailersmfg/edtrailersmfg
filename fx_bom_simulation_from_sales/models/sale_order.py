@@ -86,6 +86,7 @@ class SaleOrder(models.Model):
             # todas las partidas estan explotadas y agrupadas
             # crear registros de simulacion
             for product_id, qty in order_exploded_qtys.items():
+                purchase_qty = qty - product_id.virtual_available
                 MaterialsReqSimulation.create({
                     'order_id' : order.id,
                     'partner_id' : order.partner_id.id,
@@ -94,8 +95,10 @@ class SaleOrder(models.Model):
                     'qty_available' : product_id.qty_available,
                     'virtual_available' : product_id.virtual_available,
                     'required_qty' : qty,
-                    'purchase_qty' : qty - product_id.virtual_available,
-                    'user_id' : self.env.user.id
+                    'purchase_qty' : purchase_qty,
+                    'user_id' : self.env.user.id,
+                    'required_total_cost' : qty * product_id.standard_price,
+                    'purchase_total_cost' : purchase_qty * product_id.standard_price
                 })
 
         return {
