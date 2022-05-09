@@ -17,6 +17,8 @@ class MaterialsRequirementSimulation(models.Model):
     required_qty = fields.Float('Cantidad requerida')
     purchase_qty = fields.Float('Cantidad a comprar')
     user_id = fields.Many2one('res.user', 'Usuario')
+    required_total_cost = fields.Float('Costo ctd requerida')
+    purchase_total_cost = fields.Float('Costo ctd a comprar')
 
     def create_draft_purchase_orders(self):
         # verificar que todos los productos tengan proveedor
