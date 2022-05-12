@@ -105,20 +105,18 @@
                 </t>
             </t>
         </template>
-        
-        
-        <record id="report_accountmove_act" model="ir.actions.report">
+                        
+         <record id="report_accountmove_act" model="ir.actions.report">
             <field name="name">Impresión Póliza</field>
             <field name="model">account.move</field>
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">account_move_report.report_accountmove</field>
             <field name="report_file">account_move_report.report_accountmove</field>
-            <field name="attachment_use" eval="True" />
-            <!-- <field name="attachment">(object.state == 'posted') and (object.company_emitter_id.vat+ '_' + (object.name or 'INV').replace('/','_') + '.pdf')</field> -->
             <field name="print_report_name">(('Póliza_' + (object.name or '')).replace('/','_')+'.pdf')</field>
-            <!--<field name="binding_model_id" ref="model_purchase_order"/>
-            <field name="binding_type">report</field>-->
-        </record>  
-                
+            <field name="binding_model_id" ref="account.model_account_move"/>
+            <field name="binding_type">report</field>
+        </record>
+
+
     </data>
 </openerp>
