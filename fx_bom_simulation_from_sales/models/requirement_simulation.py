@@ -53,7 +53,7 @@ class MaterialsRequirementSimulation(models.Model):
             # sumar cantidadas para todo registro del producto
             filter = lambda rec: rec.product_id == prod
             prod_qty = sum(
-                self.filtered(filter).mapped('purchase_qty')
+                self.filtered(filter).mapped('required_qty')
             )
             # agregar a la lista el producto actual y asignar al mapeo
             current_prods.append((prod, prod_qty))
