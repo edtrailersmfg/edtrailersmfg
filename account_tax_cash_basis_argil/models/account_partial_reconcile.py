@@ -171,3 +171,5 @@ class AccountPartialReconcile(models.Model):
             (line + counterpart_line).reconcile()
 
         return moves
+
+

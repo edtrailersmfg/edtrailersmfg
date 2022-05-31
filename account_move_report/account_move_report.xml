@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        
+        <template id="report_account_move_document">
+            <t t-set="orientation" t-value="landscape"/>            
+            <t t-set="data_report_dpi" t-value="600"/>
+            <t t-call="web.basic_layout">
+                <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})" />
+                <div class="page">
+                    <table class="table table-condensed" style="font-size:9px;border: 1px solid #ddd;border-collapse: collapse;padding: 5px;">
+                        <tr>
+                            <td colspan="2" width="40%" align="center" valign="top" style="border: 1px solid white;">
+                                <strong>
+                                    <span t-field="o.company_id.partner_id.name" style="font-size:12px;"/><BR/>                                
+                                </strong>
+                                <span t-if="o.company_id.partner_id.vat"><span t-field="o.company_id.partner_id.vat"/></span><BR/>
+                                <span t-field="o.company_id.partner_id.regimen_fiscal_id.name"/>
+                                <BR/>
+                                <span t-field="o.company_id.partner_id.street_number"/>
+                                    <span t-if="o.company_id.partner_id.street_number"> No. <span t-field="o.company_id.partner_id.street_number"/></span>
+                                    <span t-if="o.company_id.partner_id.street_number2"> Int. <span t-field="o.company_id.partner_id.street_number2"/></span>
+                                    <BR/>
+                                    <span t-if="o.company_id.partner_id.colonia_sat_id">
+                                        <span t-field="o.company_id.partner_id.colonia_sat_id.name"/>,
+                                    </span>
+                                    <span t-if="o.company_id.partner_id.township_sat_id">
+                                        <span t-field="o.company_id.partner_id.township_sat_id.name"/>
+                                    </span>
+                                    <BR/>
+                                    <span t-field="o.company_id.partner_id.state_id.name"/>, 
+                                    <span t-field="o.company_id.partner_id.country_id.name"/>
+                                    <span t-if="o.company_id.partner_id.zip_sat_id">
+                                        CP: <span t-field="o.company_id.partner_id.zip_sat_id.code"/>
+                                    </span>
+
+                            </td>
+                            <td width="30%" align="center" valign="middle" style="border: 1px solid white;">
+                                <img t-if="o.company_id.logo" t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)" style="max-height: 90px;height: auto;"/>
+                            </td>
+                            <td width="30%" valign="top" style="border: 1px solid white;text-align: center;">
+                                <strong>Impresión de Poliza Contable</strong>
+                                <BR/>
+                                <span t-field="o.name" style="font-size:12px;"/>
+                                <BR/>
+                                <strong>Fecha: </strong><span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/> <BR/>
+                                <strong>Impreso por: </strong>
+                                    <span t-field="user.partner_id.name"/>
+
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+
+                    <div class="oe_structure"/>
+                    <table class="table table-condensed">
+                        <tr style="font-size: 11px;">
+                            <td align="right"><strong>Póliza:</strong></td>
+                            <td><p t-field="o.name"/></td>
+                            <td align="right"><strong>Referencia:</strong></td>
+                            <td><p t-field="o.ref"/></td>
+                            <td align="right"><strong>Fecha:</strong></td>
+                            <td><p t-field="o.date"/></td>                                
+                        </tr>
+                    </table>
+                    <t t-set="sum_debit" t-value="0.0"/>
+                    <t t-set="sum_credit" t-value="0.0"/>
+                    <table class="table table-condensed" style="font-size: 9px;">
+                        <thead>
+                            <tr>
+                                <th style="text-align: center;font-weight: bold;border-bottom:1pt solid black;border-top:1pt solid black;">Cuenta Contable</th>
+                                <th style="text-align: center;font-weight: bold;border-bottom:1pt solid black;border-top:1pt solid black;">Descripción</th>
+                                <th style="text-align: center;font-weight: bold;border-bottom:1pt solid black;border-top:1pt solid black;">Empresa</th>
+                                <th style="text-align: center;font-weight: bold;border-bottom:1pt solid black;border-top:1pt solid black;">Debe</th>
+                                <th style="text-align: center;font-weight: bold;border-bottom:1pt solid black;border-top:1pt solid black;">Haber</th>
+                                <th style="text-align: center;font-weight: bold;border-bottom:1pt solid black;border-top:1pt solid black;" groups="analytic.group_analytic_accounting">Cuenta Analitica</th>
+                                <th style="text-align: center;font-weight: bold;border-bottom:1pt solid black;border-top:1pt solid black;">Monto Moneda E.</th>
+                                <th style="text-align: center;font-weight: bold;border-bottom:1pt solid black;border-top:1pt solid black;">Moneda</th>
+                            </tr>
+                       </thead>
+                       <tbody> <!-- class="sale_tbody">-->
+                            <t t-foreach="o.line_ids" t-as="l">
+                                <tr>
+                                    <td style="border-bottom:1pt solid gray;">
+                                       <span t-field="l.account_id.code"/>-<span t-field="l.account_id.name"/>
+                                    </td>
+                                    <td style="word-wrap: break-word;border-bottom:1pt solid gray;">
+                                        <span t-field="l.name"/>
+                                    </td>
+                                    <td style="border-bottom:1pt solid gray;">
+                                        <span t-field="l.partner_id.name"/>
+                                    </td>
+                                    <td style="text-align:right;border-bottom:1pt solid gray;">
+                                        <span t-esc="'{0:,.2f}'.format(l.debit)" />
+                                    </td>
+                                    <td style="text-align:right;border-bottom:1pt solid gray;">
+                                        <span t-esc="'{0:,.2f}'.format(l.credit)" />
+                                    </td>
+                                    <td style="border-bottom:1pt solid gray;" groups="analytic.group_analytic_accounting">
+                                        <p t-if="l.analytic_account_id"><span t-field="l.analytic_account_id.name"/></p>
+                                    </td>
+                                    <td style="text-align:right;border-bottom:1pt solid gray;">
+                                        <span t-esc="'{0:,.2f}'.format(l.amount_currency)" />
+                                        <!--<span t-field="l.amount_currency"/>-->
+                                    </td>
+                                    <td style="border-bottom:1pt solid gray;">
+                                        <span t-field="l.currency_id.name"/>
+                                    </td>
+                                    <t t-set="sum_debit" t-value="sum_debit + round(l.debit, 2)"/>
+                                    <t t-set="sum_credit" t-value="sum_credit + round(l.credit, 2)"/>
+                                </tr>
+                            </t>
+                        </tbody>
+                        <tfooter>
+                            <tr>
+                                <td colspan="3" style="text-align:right;font-weight: bold;padding-top: 10px;">SUMAS: </td>
+                                <td style="text-align:right;font-weight: bold;padding-top: 10px;">
+                                    <span t-esc="'{0:,.2f}'.format(sum_debit)" />
+                                </td>
+                                <td style="text-align:right;font-weight: bold;padding-top: 10px;">
+                                    <span t-esc="'{0:,.2f}'.format(sum_credit)" />
+                                </td>
+                                <td colspan="3"></td>
+                            </tr>
+                        </tfooter>
+                    </table>
+
+                    <br/><br/><br/>
+                    <table class="table table-condensed" style="font-size: 9px;">
+                        <tr>
+                            <td width="40%" style="border-top:1pt solid gray;text-align:center;">Contador</td>
+                            <td width="20%" style="text-align:center;"><span>   ·   ·   </span></td>
+                            <td width="40%" style="border-top:1pt solid gray;text-align:center;">Contralor</td>
+                        </tr>
+                    </table>
+                    <div class="oe_structure"/>
+                </div>
+            </t>
+        </template>
+
+
+        <template id="report_accountmove">
+            <t t-call="web.html_container">
+                <t t-set="data_report_margin_top" t-value="12"/>
+                <t t-set="data_report_header_spacing" t-value="9"/>
+                <t t-foreach="docs" t-as="o">
+                    <t t-set="lang" t-value="o.partner_id.lang"/>
+                    <t t-call="account_move_report.report_account_move_document" t-lang="lang"/>
+                </t>
+            </t>
+        </template>
+                        
+         <record id="report_accountmove_act" model="ir.actions.report">
+            <field name="name">Impresión Póliza</field>
+            <field name="model">account.move</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">account_move_report.report_accountmove</field>
+            <field name="report_file">account_move_report.report_accountmove</field>
+            <field name="print_report_name">(('Póliza_' + (object.name or '')).replace('/','_')+'.pdf')</field>
+            <field name="binding_model_id" ref="account.model_account_move"/>
+            <field name="binding_type">report</field>
+        </record>
+
+
+    </data>
+</openerp>
