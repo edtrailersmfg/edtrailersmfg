@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2022 Sursoom <contacto@sursoom.mx>
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html)
+-->
+<odoo>
+    <data>
+
+        <record id="action_report_account_report" model="ir.actions.report">
+            <field name="name">Reporte de Facturación</field>
+            <field name="model">account.report.wizard</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">account_report_extend.report_account_report</field>
+            <field name="report_file">account_report_extend.report_account_report</field>
+            <field name="print_report_name">'Reporte Facturas'</field>
+            <field name="binding_type">report</field>
+        </record>
+
+        <record id="action_report_account_report_xlsx" model="ir.actions.report">
+            <field name="name">Reporte de Facturación (en XLSX)</field>
+            <field name="model">account.report.wizard</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">account_report_extend.report_account_report_excel</field>
+            <field name="report_file">Reporte Facturas</field>
+            <field name="print_report_name">'Reporte de Facturación'</field>
+            <field name="binding_type">report</field>
+        </record>
+
+    </data>
+</odoo>
