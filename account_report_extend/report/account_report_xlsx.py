@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 from odoo import models, _
 PAYMENT_STATE = {
-    'not_paid': 'Not Paid',
-    'in_payment': 'In Payment',
-    'paid': 'paid'
+    'not_paid': 'Sin Pagar',
+    'in_payment': 'En Proceso de Pago',
+    'paid': 'Pagado',
+    'partial': 'Pagado Parcialmente',
+    'reversed': 'Revertido',
+    'invoicing_legacy': 'Sistema anterior de Facturación',
 }
 
 class AccountReportXlsx(models.AbstractModel):
