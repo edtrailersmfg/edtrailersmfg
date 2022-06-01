@@ -22,6 +22,7 @@ class AccounutReportWizard(models.TransientModel):
         AccountMove = self.env['account.move']
         domain = [
             ('state', '=', 'posted'),
+            ('move_type', '=', 'out_invoice'),
         ]
         if docs.start_date:
             domain.append(
