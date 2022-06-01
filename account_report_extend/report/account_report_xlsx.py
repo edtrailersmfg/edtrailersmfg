@@ -20,8 +20,8 @@ class AccountReportXlsx(models.AbstractModel):
             _('Fecha Factura'),
             _('Factura #'),
             _('Cliente'),
-            _('RFC'),
-            _('Folio Fiscal'),
+            #_('RFC'),
+            #_('Folio Fiscal'),
             _('Precio Venta'),
             _('Descuento'),
             _('Impuesto'),
@@ -49,10 +49,10 @@ class AccountReportXlsx(models.AbstractModel):
             j += 1
             sheet.write(i, j, str(m.partner_id.name), '')
             j += 1
-            sheet.write(i, j, str(m.partner_id.vat), '')
-            j += 1
-            sheet.write(i, j, str(m.l10n_mx_edi_cfdi_uuid), '')
-            j += 1
+            #sheet.write(i, j, str(m.partner_id.vat), '')
+            #j += 1
+            #sheet.write(i, j, str(m.l10n_mx_edi_cfdi_uuid), '')
+            #j += 1
             sheet.write(i, j, m.price, '')
             j += 1
             sheet.write(i, j, m.discount, '')
@@ -69,5 +69,5 @@ class AccountReportXlsx(models.AbstractModel):
             j += 1
             sheet.write(i, j, m.margin, '')
             j += 1
-            sheet.write(i, j, PAYMENT_STATE[m.invoice_payment_state], '')
+            sheet.write(i, j, PAYMENT_STATE[m.payment_state], '')
             j += 1

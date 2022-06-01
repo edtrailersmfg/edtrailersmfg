@@ -17,8 +17,9 @@
                                 <th>Fecha Factura</th>
                                 <th>Factura #</th>
                                 <th>Cliente</th>
+                        <!--
                                 <th>RFC</th>
-                                <th>Folio Fiscal</th>
+                                <th>Folio Fiscal</th>  -->
                                 <th>Precio Venta</th>
                                 <th>Descuento</th>
                                 <th>Impuesto</th>
@@ -36,8 +37,12 @@
                                     <td><span t-field="data.invoice_date"/></td>
                                     <td><span t-field="data.name"/></td>
                                     <td><span t-field="data.partner_id"/></td>
+
+                            <!--
                                     <td><span t-field="data.partner_id.vat"/></td>
                                     <td><span t-field="data.l10n_mx_edi_cfdi_uuid"/></td>
+                            -->
+
                                     <td><span t-field="data.price"/></td>
                                     <td><span t-field="data.discount"/></td>
                                     <td><span t-field="data.amount_tax"/></td>
@@ -46,7 +51,7 @@
                                     <td><span t-field="data.cost_amount"/></td>
                                     <td><span t-field="data.profit"/></td>
                                     <td><span t-field="data.margin"/></td>
-                                    <td><span t-field="data.invoice_payment_state"/></td>
+                                    <td><span t-field="data.payment_state"/></td>
                                 </tr>
                             </t>
                         </tbody>
