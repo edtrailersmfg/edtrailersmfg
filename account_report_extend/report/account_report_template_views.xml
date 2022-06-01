@@ -19,10 +19,10 @@
                                 <th>Cliente</th>
                         <!--
                                 <th>RFC</th>
-                                <th>Folio Fiscal</th>  -->
+                                <th>Folio Fiscal</th>  
                                 <th>Precio Venta</th>
                                 <th>Descuento</th>
-                                <th>Impuesto</th>
+                                <th>Impuesto</th> -->
                                 <th>Total con Signo</th>
                                 <th>Importe</th>
                                 <th>Costo</th>
@@ -41,11 +41,13 @@
                             <!--
                                     <td><span t-field="data.partner_id.vat"/></td>
                                     <td><span t-field="data.l10n_mx_edi_cfdi_uuid"/></td>
-                            -->
+                            
 
                                     <td><span t-field="data.price"/></td>
                                     <td><span t-field="data.discount"/></td>
                                     <td><span t-field="data.amount_tax"/></td>
+                            -->
+
                                     <td><span t-field="data.amount_untaxed_signed"/></td>
                                     <td><span t-field="data.amount_untaxed"/></td>
                                     <td><span t-field="data.cost_amount"/></td>

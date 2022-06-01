@@ -22,9 +22,9 @@ class AccountReportXlsx(models.AbstractModel):
             _('Cliente'),
             #_('RFC'),
             #_('Folio Fiscal'),
-            _('Precio Venta'),
-            _('Descuento'),
-            _('Impuesto'),
+            #_('Precio Venta'),
+            #_('Descuento'),
+            #_('Impuesto'),
             _('Total con Signo'),
             _('Importe'),
             _('Costo'),
@@ -53,12 +53,12 @@ class AccountReportXlsx(models.AbstractModel):
             #j += 1
             #sheet.write(i, j, str(m.l10n_mx_edi_cfdi_uuid), '')
             #j += 1
-            sheet.write(i, j, m.price, '')
-            j += 1
-            sheet.write(i, j, m.discount, '')
-            j += 1
-            sheet.write(i, j, m.amount_tax, '')
-            j += 1
+            #sheet.write(i, j, m.price, '')
+            #j += 1
+            #sheet.write(i, j, m.discount, '')
+            #j += 1
+            #sheet.write(i, j, m.amount_tax, '')
+            #j += 1
             sheet.write(i, j, m.amount_untaxed_signed, '')
             j += 1
             sheet.write(i, j, m.amount_untaxed, '')
