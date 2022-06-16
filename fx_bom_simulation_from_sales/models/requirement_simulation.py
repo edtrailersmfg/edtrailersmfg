@@ -38,7 +38,7 @@ class MaterialsRequirementSimulation(models.Model):
         supplier_and_prods = {}
         # lista sin repeticiones de producto, con cantidad > 0
         product_ids = self.filtered(
-                lambda ln: ln.purchase_qty > 0    
+                lambda ln: ln.required_qty > 0    
             ).mapped('product_id')
         for prod in product_ids:
             # obtener el primer proveedor configurado

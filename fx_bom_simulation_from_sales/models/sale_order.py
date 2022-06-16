@@ -106,6 +106,6 @@ class SaleOrder(models.Model):
             'res_model' : 'materials.requirement.simulation',
             'name' : 'Simulación de requerimiento de material',
             'view_mode' : 'tree',
-            'context' : {'search_default_missing_stock' : 1},
+            'context' : {'search_default_grp_product' : 1},
             'domain' : [('user_id', '=', self.env.user.id)]
         }
