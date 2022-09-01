@@ -391,9 +391,9 @@
     <record id="base.cz" model="res.country">
         <field name="sat_code">CZE</field>
     </record>
-    <record id="base.de" model="res.country">
+    <!-- <record id="base.de" model="res.country">
         <field name="sat_code">DEU</field>
-    </record>
+    </record> -->
     <record id="base.dj" model="res.country">
         <field name="sat_code">DJI</field>
     </record>
