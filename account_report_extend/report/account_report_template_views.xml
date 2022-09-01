@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2020 Ketan Kachhela <l.kachhela28@gmail.com>
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html)
+-->
+<odoo>
+    <template id="report_account_report_template">
+        <t t-call="web.external_layout">
+            <t t-foreach="doc" t-as="o">
+                <div class="mb-2 ml-1 mt-2 row">
+                    Fecha del Reporte : De <span class="ml-2 mr-2" t-field="o.start_date"/> hasta <span class="ml-2 mr-2"  t-field="o.end_date"/>
+                </div>
+                <div class="page">
+                    <table class="table table-sm o_main_table">
+                        <thead style="display: table-row-group">
+                            <tr>
+                                <th>Fecha Factura</th>
+                                <th>Factura #</th>
+                                <th>Cliente</th>
+                        <!--
+                                <th>RFC</th>
+                                <th>Folio Fiscal</th>  
+                                <th>Precio Venta</th>
+                                <th>Descuento</th>
+                                <th>Impuesto</th> -->
+                                <th>Total con Signo</th>
+                                <th>Importe</th>
+                                <th>Costo</th>
+                                <th>Beneficio</th>
+                                <th>Margen %</th>
+                                <th>Estado del Pago</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="move_data" t-as="data">
+                                <tr>
+                                    <td><span t-field="data.invoice_date"/></td>
+                                    <td><span t-field="data.name"/></td>
+                                    <td><span t-field="data.partner_id"/></td>
+
+                            <!--
+                                    <td><span t-field="data.partner_id.vat"/></td>
+                                    <td><span t-field="data.l10n_mx_edi_cfdi_uuid"/></td>
+                            
+
+                                    <td><span t-field="data.price"/></td>
+                                    <td><span t-field="data.discount"/></td>
+                                    <td><span t-field="data.amount_tax"/></td>
+                            -->
+
+                                    <td><span t-field="data.amount_untaxed_signed"/></td>
+                                    <td><span t-field="data.amount_untaxed"/></td>
+                                    <td><span t-field="data.cost_amount"/></td>
+                                    <td><span t-field="data.profit"/></td>
+                                    <td><span t-field="data.margin"/></td>
+                                    <td><span t-field="data.payment_state"/></td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <template id="report_account_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="account_report_extend.report_account_report_template" t-lang="doc.env.user.lang"/>
+            </t>
+        </t>
+    </template>
+
+</odoo>

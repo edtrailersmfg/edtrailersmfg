@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_account_report_wizard_form" model="ir.ui.view">
+        <field name="name">account.report.wizard.form</field>
+        <field name="model">account.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="start_date"/>
+                        </group>
+                        <group>
+                            <field name="end_date"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Print PDF" name="action_get_report_values"
+                                type="object"
+                                class="btn-primary"/>
+                        <button string="Print Xlsx" name="action_get_xlsx_report"
+                                type="object"
+                                class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id='account_report_wizard_action' model='ir.actions.act_window'>
+        <field name="name">Reporte de Facturación</field>
+        <field name="res_model">account.report.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="view_account_report_wizard_form"/>
+    </record>
+
+    <menuitem id="sale_order_confirm_wizard_menu"
+              name="Reporte de Facturación"
+              parent="account.menu_finance_reports"
+              action="account_report_wizard_action"/>
+
+</odoo>
