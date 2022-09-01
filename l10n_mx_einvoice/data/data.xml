@@ -278,9 +278,11 @@
     <record id="base.bd" model="res.country">
         <field name="sat_code">BGD</field>
     </record>
+    <!--
     <record id="base.be" model="res.country">
         <field name="sat_code">BEL</field>
     </record>
+    -->
     <record id="base.bf" model="res.country">
         <field name="sat_code">BFA</field>
     </record>
