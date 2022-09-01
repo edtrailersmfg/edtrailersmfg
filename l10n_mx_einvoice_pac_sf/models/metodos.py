@@ -23,6 +23,11 @@ import time
 import logging
 _logger = logging.getLogger(__name__)
 
+from zeep.plugins import HistoryPlugin
+
+from lxml import etree
+
+history = HistoryPlugin()
 
 class AccountMove(models.Model):
     _inherit = 'account.move'
@@ -63,7 +68,7 @@ class AccountMove(models.Model):
             fcer.close()
             fkey.close()
             contrasenaCSD = self.journal_id.certificate_password
-            client = Client(wsdl_url)
+            client = Client(wsdl_url, plugins=[history])
             isZipFile = 0
             if self.company_id.partner_id.vat == 'TBE740319AP4':
                 contrasenaCSD += ' '
@@ -71,6 +76,13 @@ class AccountMove(models.Model):
                 uuid_cancelacion_motivo = '%s|%s|%s' % (self.cfdi_folio_fiscal, self.motivo_cancelacion, 
                                                  self.uuid_relacionado_cancelacion or '')
                 resultado = client.service.cancelar(user, password, uuid_cancelacion_motivo, cerCSD, keyCSD, contrasenaCSD)
+                
+                envelope_pretty_xml = etree.tostring(history.last_sent["envelope"], encoding="unicode", pretty_print=True)
+                response_pretty_xml = etree.tostring(history.last_received["envelope"], encoding="unicode", pretty_print=True)
+
+                _logger.info("\nEnvelope: %s " % envelope_pretty_xml)
+                _logger.info("\nResponse: %s " % response_pretty_xml)
+
             except WebFault as f:
                 raise UserError(_('Advertencia !!!\nOcurrió un error al intentar Cancelar el CFDI.'))
             
@@ -114,10 +126,17 @@ class AccountMove(models.Model):
             if 'testing' in wsdl_url:
                 msg += _('ADVERTENCIA, TIMBRADO EN PRUEBAS!!!!\n\n')            
             cfdi = xml_res_str_addenda            
-            client = Client(wsdl_url)
+            client = Client(wsdl_url, plugins=[history])
             isZipFile = 0
             try:
                 resultado = client.service.timbrar(user, password, cfdi, isZipFile)
+                
+                envelope_pretty_xml = etree.tostring(history.last_sent["envelope"], encoding="unicode", pretty_print=True)
+                response_pretty_xml = etree.tostring(history.last_received["envelope"], encoding="unicode", pretty_print=True)
+
+                _logger.info("\nEnvelope: %s " % envelope_pretty_xml)
+                _logger.info("\nResponse: %s " % response_pretty_xml)
+
             except WebFault as f:
                 raise UserError(_('Advertencia !!!\nOcurrió un error al intentar obtener el Timbre. \n\nCódigo: %s\nError: %s\nMensaje: %s') % 
                                 (f.fault.detail.SifeiException.codigo,f.fault.detail.SifeiException.error, f.fault.detail.SifeiException.message))
@@ -127,7 +146,7 @@ class AccountMove(models.Model):
             folio_fiscal = resultado.resultados[0].uuid or ''
             codigo_timbrado = resultado.resultados[0].status or ''
             mensaje = resultado.resultados[0].mensaje
-            if codigo_timbrado == 200:
+            if codigo_timbrado == 200 and folio_fiscal:
                 fecha_timbrado = resultado.resultados[0].fechaTimbrado and resultado.resultados[0].fechaTimbrado.replace(tzinfo=None) or False
                 cfdi_data = {
                     'cfdi_cbb': base64.encodebytes(resultado.resultados[0].qrCode) or False,  # ya lo regresa en base64
@@ -152,8 +171,9 @@ class AccountMove(models.Model):
                 else:
                     msg += _("No puedo extraer el archivo XML del PAC")
             else:
-                raise UserError(_('Advertencia !!!\nCódigo Sellado: %s. - Código Validación: %s. - Folio Fiscal: %s. - Mensaje: %s. - Mensaje de Validación: %s.') % (
-                    codigo_timbrado, resultado.resultados[0].status, folio_fiscal, mensaje, resultados_mensaje))
+                msg += _('Advertencia !!!\nCódigo Sellado: %s. - Código Validación: %s. - Folio Fiscal: %s. - Mensaje: %s. - Mensaje de Validación: %s.') % (
+                    codigo_timbrado, resultado.resultados[0].status, folio_fiscal, mensaje, resultados_mensaje)
+
         else:
             msg += 'No se encontró información del Webservice del PAC, revise la configuración'
             raise UserError(_('Advertencia !!!\nNo se encontró información del Webservice del PAC, revise la configuración'))
@@ -227,7 +247,7 @@ class AccountPayment(models.Model):
             fcer.close()
             fkey.close()
             contrasenaCSD = self.journal_id.certificate_password
-            client = Client(wsdl_url)
+            client = Client(wsdl_url, plugins=[history])
             isZipFile = 0
             if self.company_id.partner_id.vat == 'TBE740319AP4':
                 contrasenaCSD += ' '
@@ -235,6 +255,13 @@ class AccountPayment(models.Model):
                 uuid_cancelacion_motivo = '%s|%s|%s' % (self.cfdi_folio_fiscal, self.motivo_cancelacion, 
                                                  self.uuid_relacionado_cancelacion or '')
                 resultado = client.service.cancelar(user, password, uuid_cancelacion_motivo, cerCSD, keyCSD, contrasenaCSD)
+                
+                envelope_pretty_xml = etree.tostring(history.last_sent["envelope"], encoding="unicode", pretty_print=True)
+                response_pretty_xml = etree.tostring(history.last_received["envelope"], encoding="unicode", pretty_print=True)
+
+                _logger.info("\nEnvelope: %s " % envelope_pretty_xml)
+                _logger.info("\nResponse: %s " % response_pretty_xml)
+                        
             except WebFault as f:
                 raise UserError(_('Advertencia !!!\nOcurrió un error al intentar obtener el Timbre. \n\nCódigo: %s\nError: %s\nMensaje: %s') % 
                                 (f.fault.detail.SifeiException.codigo,f.fault.detail.SifeiException.error, f.fault.detail.SifeiException.message))
@@ -279,10 +306,17 @@ class AccountPayment(models.Model):
                 msg += _('ADVERTENCIA, TIMBRADO EN PRUEBAS!!!!\n\n')
                         
             cfdi = xml_res_str_addenda            
-            client = Client(wsdl_url)
+            client = Client(wsdl_url, plugins=[history])
             isZipFile = 0
             try:
                 resultado = client.service.timbrar(user, password, cfdi, isZipFile)
+                
+                envelope_pretty_xml = etree.tostring(history.last_sent["envelope"], encoding="unicode", pretty_print=True)
+                response_pretty_xml = etree.tostring(history.last_received["envelope"], encoding="unicode", pretty_print=True)
+
+                _logger.info("\nEnvelope: %s " % envelope_pretty_xml)
+                _logger.info("\nResponse: %s " % response_pretty_xml)
+
             except WebFault as f:
                 raise UserError(_('Advertencia !!!\nOcurrió un error al intentar obtener el Timbre. \n\nCódigo: %s\nError: %s\nMensaje: %s') % 
                                 (f.fault.detail.SifeiException.codigo,f.fault.detail.SifeiException.error, f.fault.detail.SifeiException.message))            
@@ -314,8 +348,8 @@ class AccountPayment(models.Model):
                 else:
                     msg += _("No puedo extraer el archivo XML del PAC")
             else:
-                raise UserError(_('Advertencia !!!\nCódigo Sellado: %s. - Código Validación: %s. - Folio Fiscal: %s. - Mensaje: %s. - Mensaje de Validación: %s.') % (
-                    codigo_timbrado, resultado.resultados[0].status, folio_fiscal, mensaje, resultados_mensaje))
+                msg += _('Advertencia !!!\nCódigo Sellado: %s. - Código Validación: %s. - Folio Fiscal: %s. - Mensaje: %s. - Mensaje de Validación: %s.') % (
+                    codigo_timbrado, resultado.resultados[0].status, folio_fiscal, mensaje, resultados_mensaje)
         else:
             msg += 'No se encontró información del Webservice del PAC, revise la configuración'
             raise UserError(_('Advertencia !!!\nNo se encontró información del Webservice del PAC, revise la configuración'))
@@ -406,8 +440,8 @@ class AccountPayment(models.Model):
                     else:
                         msg += _("No puedo extraer el archivo XML del PAC")
                 else:
-                    raise UserError(_('Advertencia !!!\nCódigo Sellado: %s. - Código Validación: %s. - Folio Fiscal: %s. - Mensaje: %s. - Mensaje de Validación: %s.') % (
-                        codigo_timbrado, codigo_validacion, folio_fiscal, mensaje, resultados_mensaje))
+                    msg += _('Advertencia !!!\nCódigo Sellado: %s. - Código Validación: %s. - Folio Fiscal: %s. - Mensaje: %s. - Mensaje de Validación: %s.') % (
+                        codigo_timbrado, codigo_validacion, folio_fiscal, mensaje, resultados_mensaje)
         else:
             msg += 'No se encontró información del Webservice del PAC, revise la configuración'
             raise UserError(_('Advertencia !!!\nNo se encontró información del Webservice del PAC, revise la configuración'))

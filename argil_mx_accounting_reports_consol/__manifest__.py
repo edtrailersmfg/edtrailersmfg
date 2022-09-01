@@ -3,7 +3,7 @@
 {
     'name': 'Reportes Contables Mexico',
     'version': '1',
-    "author" : "Fixdoo & Argil",
+    "author" : "Fixdoo",
     "category" : "Account",
     'description': """
 Reportes Contables comunmente usados en Mexico
@@ -55,5 +55,6 @@ Este modulo esta enfocado cuando se maneja multicompany y permite consolidar cue
         "report/report_general_ledger.xml",
              ],
     "installable" : True,
+    'license': 'Other proprietary',
 
 }

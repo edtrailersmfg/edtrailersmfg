@@ -4,16 +4,16 @@
     "version"   : "1.0", 
     'summary'   : 'Ejercicio Fiscal y Periodos Mensuales',
     'sequence'  : 20,
-    "author"    : "Fixdoo & Argil", 
+    "author"    : "Fixdoo", 
     "category"  : "Account", 
     "description": """
 
 Ejercicio Fiscal y Periodos Mensuales
 =====================================
 
-Aunque Odoo agregó el objeto Ejercicio Fiscal, por compatibilidad en la Locaización Mexicana de Fixdoo se mantiene esta funcionalidad. 
+Aunque Odoo agregó el objeto Ejercicio Fiscal, por compatibilidad en la Locaización Mexicana de Argil se mantiene esta funcionalidad. 
       Este módulo agrega Ejercicio Fiscal y el Periodos Mensuales "dummy" para poder migrar el módulo de IFRS 
-y otros reportes de Fixdoo Consulting.
+y otros reportes de Argil Consulting.
 
 El Año Fiscal en México es prácticamente un año Natural.
 
@@ -39,7 +39,7 @@ Periodo => Periodo de Apertura
 
     """, 
     "website": "http://www.fixdoo.mx", 
-    #'license' : 'OEEL-1',
+    'license': 'Other proprietary',
     "depends": [
         "account", 
     ], 

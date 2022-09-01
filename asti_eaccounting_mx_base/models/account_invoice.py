@@ -93,9 +93,9 @@ class AccountInvoice(models.Model):
     #         xpartner = inv.partner_id.parent_id or inv.partner_id
     #         if xpartner.type_of_third == '05' and not xpartner.number_fiscal_id_diot:
     #             raise UserError(_('Información faltante\n\nSe necesita un ID fiscal para el complemento a extranjeros, verifique la configuración de la DIOT para este proveedor.'))
-    #         cmpl_vals['foreign_taxid'] = xpartner.number_fiscal_id_diot
+    #         cmpl_vals['foreign_tax_id'] = xpartner.number_fiscal_id_diot
     #         cmpl_vals['foreign_invoice'] = inv.reference
-    #         if cmpl_vals['foreign_taxid'] and cmpl_vals['foreign_invoice']:
+    #         if cmpl_vals['foreign_tax_id'] and cmpl_vals['foreign_invoice']:
     #             cmpl_vals.update({'amount'          : inv.amount_total,
     #                              'compl_date'       : inv.invoice_date,
     #                              'compl_currency_id': inv.currency_id.id,
@@ -166,6 +166,7 @@ class AccountInvoice(models.Model):
                     attachment_xml_ids = self.env['ir.attachment'].search([('res_model', '=', 'account.move'), 
                                                                            ('res_id', '=', rec.id), 
                                                                            ('name', 'ilike', '.xml')], limit=1)
+                    res = {}
                     if not attachment_xml_ids:
                         raise UserError(_('No Puede Validar la Factura o Nota de Credito sin el archivo XML del CFDI...'))
                     elif attachment_xml_ids and not rec.validate_attachment2:
@@ -179,25 +180,53 @@ class AccountInvoice(models.Model):
                                    'SOAPAction': 'http://tempuri.org/IConsultaCFDIService/Consulta'}
                         #-------------
                         for att in attachment_xml_ids:
-                            xml_data = base64.b64decode(att.datas).replace(b'http://www.sat.gob.mx/registrofiscal ', b'').replace(b'http://www.sat.gob.mx/cfd/3 ', b'').replace(b'Rfc=',b'rfc=').replace(b'Fecha=',b'fecha=').replace(b'Total=',b'total=').replace(b'Folio=',b'folio=').replace(b'Serie=',b'serie=')
+                            #### Migración CFDI 4.0 ####
+                            version_cfdi = ""
+                            arch_xml = parseString(base64.b64decode(att.datas))
+                            cfdi_comprobante_att = arch_xml.getElementsByTagName('cfdi:Comprobante')[0]                    
+                            version_cfdi = cfdi_comprobante_att.attributes['Version'].value
+                            _logger.info("\n########### version_cfdi : %s" % version_cfdi)
+                            ###########################
                             result, res = False, False
                             estado_cfdi = ''
+
                             try:
-                                xmlTree = et.ElementTree(et.fromstring(xml_data))
-                                vouchNode = xmlTree.getroot()
-                                uuid = vouchNode.find('{http://www.sat.gob.mx/cfd/3}Complemento').find('{http://www.sat.gob.mx/TimbreFiscalDigital}TimbreFiscalDigital').attrib['UUID'].upper()
+                                #### Migración CFDI 4.0 ####
+                                version_var = 3
+                                if version_cfdi == "4.0":
+                                    version_var = 4
+                                    _logger.info("\n########### CFDI 4.0 >>>>>>>>> ")  
+                                else:
+                                    _logger.info("\n########### CFDI 3.3 >>>>>>>>> ")  
                                 
-                                rfc_emisor = vouchNode.find('{http://www.sat.gob.mx/cfd/3}Emisor').attrib['rfc'].upper()
+                                ############################
+
+                                is_xml_signed = arch_xml.getElementsByTagName('tfd:TimbreFiscalDigital')
+                                if not is_xml_signed:
+                                    raise UserError(_('El XML no esta timbrado.'))
+                                
+                                cfdi_timbre_fiscal_digital = arch_xml.getElementsByTagName('tfd:TimbreFiscalDigital')[0]
+
+                                uuid = cfdi_timbre_fiscal_digital.attributes['UUID'].value
+                                
+                                cfdi_emisor = arch_xml.getElementsByTagName('cfdi:Emisor')[0]
+
+                                rfc_emisor = cfdi_emisor.attributes['Rfc'].value
                                 rfc_emisor = rfc_emisor.replace('&','&amp;')
                                 rfc_emisor = rfc_emisor.replace('<','&lt;')
                                 rfc_emisor = rfc_emisor.replace('>','&gt;')
 
-                                rfc_receptor = vouchNode.find('{http://www.sat.gob.mx/cfd/3}Receptor').attrib['rfc'].upper()
+                                cfdi_receptor = arch_xml.getElementsByTagName('cfdi:Receptor')[0]
+
+                                rfc_receptor = cfdi_receptor.attributes['Rfc'].value
                                 rfc_receptor = rfc_receptor.replace('&','&amp;')
                                 rfc_receptor = rfc_receptor.replace('<','&lt;')
                                 rfc_receptor = rfc_receptor.replace('>','&gt;')
-                                
-                                monto_total = float(vouchNode.attrib['total'])
+
+                                monto_total = float(cfdi_comprobante_att.attributes['Total'].value)
+
+                                ###########################
+
                                 #-------------
                                 bodyx = body.format(rfc_emisor, rfc_receptor, monto_total, uuid)
                                 result = requests.post(url=url, headers=headers, data=bodyx)
@@ -228,7 +257,11 @@ class AccountInvoice(models.Model):
                         if not uuid:
                             raise UserError(_('Formato de archivo XML incorrecto\n\nSe necesita cargar un archivo de extensión ".xml" (CFDI)'))
                     
-                    rec.message_post(body=_("La factura (XML) adjunta se encuentra Vigente en el SAT\n%s") % (res and create_list_html(res['s:Envelope']['s:Body']['ConsultaResponse']['ConsultaResult']) or ''))
+                    if res and not rec.validate_attachment2:
+                        rec.message_post(body=_("La factura (XML) adjunta se encuentra Vigente en el SAT\n%s") % (res and create_list_html(res['s:Envelope']['s:Body']['ConsultaResponse']['ConsultaResult']) or ''))
+                    if rec.validate_attachment2:
+                        rec.message_post(body=_("La factura no se valido ante el SAT."))
+                        
         if not company.auto_mode_enabled:
             return result
         ############## Creando los Complementos ########
@@ -251,9 +284,9 @@ class AccountInvoice(models.Model):
             xpartner = inv.partner_id.parent_id or inv.partner_id
             if xpartner.type_of_third == '05' and not xpartner.number_fiscal_id_diot:
                 raise UserError(_('Información faltante\n\nSe necesita un ID fiscal para el complemento a extranjeros, verifique la configuración de la DIOT para este proveedor.'))
-            cmpl_vals['foreign_taxid'] = xpartner.number_fiscal_id_diot
+            cmpl_vals['foreign_tax_id'] = xpartner.number_fiscal_id_diot
             cmpl_vals['foreign_invoice'] = inv.ref
-            if cmpl_vals['foreign_taxid'] and cmpl_vals['foreign_invoice']:
+            if cmpl_vals['foreign_tax_id'] and cmpl_vals['foreign_invoice']:
                 cmpl_vals.update({'amount'          : inv.amount_total,
                                  'compl_date'       : inv.invoice_date,
                                  'compl_currency_id': inv.currency_id.id,

@@ -63,6 +63,9 @@
 
                 <field name="vat" position="after" >
                     <field name="curp" attrs="{'invisible':['|',('company_type2','!=','physical_person'),('country_code_rel','!=','MX')]}"/>
+
+                    <field name="regimen_fiscal_id" options="{'no_create_edit': True,'no_create': True}"/>
+                    
                     <field name="num_reg_trib" string="Numero de Identificacion Fiscal"
                            attrs="{'invisible':[('country_code_rel','=','MX')]}"/>
                     <field name="uso_cfdi_id"/>

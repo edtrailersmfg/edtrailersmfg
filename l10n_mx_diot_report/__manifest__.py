@@ -4,7 +4,7 @@
 {
     "name" : "DIOT",
     "version" : "1.0",
-    "author" : "Fixdoo & Argil",
+    "author" : "Fixdoo",
     "category" : "Localization/Mexico",
     "description": """
 Declaración de Operaciones con Terceros (DIOT)
@@ -40,4 +40,5 @@ Declaración de Operaciones con Terceros (DIOT)
     'css':[],
     'test': [],
     "installable" : True,
+    'license': 'Other proprietary',
 }

@@ -17,7 +17,7 @@ from odoo.exceptions import UserError
 from odoo.tools.float_utils import float_repr
 
 CFDI_TEMPLATE = 'l10n_mx_edi.payment10'
-CFDI_XSLT_CADENA = 'l10n_mx_edi/data/3.3/cadenaoriginal.xslt'
+CFDI_XSLT_CADENA = 'l10n_mx_edi/data/4.0/cadenaoriginal.xslt'
 CFDI_SAT_QR_STATE = {
     'No Encontrado': 'not_found',
     'Cancelado': 'cancelled',

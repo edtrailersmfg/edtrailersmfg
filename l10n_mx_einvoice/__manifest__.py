@@ -4,7 +4,7 @@
     "version"   : "1.0",
     "Summary"   : "Facturación Electrónica para México",
     "sequence"  : 50,
-    "author"    : "AFixdoo & Argil",
+    "author"    : "Fixdoo",
     "category"  : "Localization",
     "description" : """
 Facturación Electrónica México
@@ -77,6 +77,7 @@ Este módulo extiende Odoo para poder manejar Facturación Electrónica de acuer
     "post_init_hook": "post_init_hook",
     'installable'   : True,
     'application'   : True,
+    'license': 'Other proprietary',
 
     }
 

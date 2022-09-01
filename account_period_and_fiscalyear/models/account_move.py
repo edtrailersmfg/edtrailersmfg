@@ -69,9 +69,11 @@ class AccountMove(models.Model):
                 raise UserError(_("No se pueden agregar/modificar asientos del periodo %s. Revisa el estado del periodo" % (move.period_id.name)))
 
     def write(self, vals):
-        for rec in self:
-            if rec.period_id and rec.period_id.state == 'done':
-                raise UserError(_("No se pueden agregar/modificar asientos del periodo %s. Revisa el estado del periodo" % (rec.period_id.name)))
+        campos = ['invoice_date','state','partner_id']
+        if any(k in vals.keys() for k in campos):
+            for rec in self:
+                if rec.period_id and rec.period_id.state == 'done':
+                    raise UserError(_("No se pueden agregar/modificar asientos del periodo %s. Revisa el estado del periodo" % (rec.period_id.name)))
         result = super(AccountMove, self).write(vals)
         return result
     
@@ -95,8 +97,10 @@ class AccountMoveLine(models.Model):
                 raise UserError(_("No se pueden agregar/modificar apuntes del periodo %s. Revisa el estado del periodo" % (line.period_id.name)))
 
     def write(self, vals):
-        for rec in self:
-            if rec.period_id and rec.period_id.state == 'done':
-                raise UserError(_("No se pueden agregar/modificar apuntes del periodo %s. Revisa el estado del periodo" % (rec.period_id.name)))
+        campos = ['debit','credit','partner_id', 'date','name']
+        if any(k in vals.keys() for k in campos):
+            for rec in self:
+                if rec.period_id and rec.period_id.state == 'done':
+                    raise UserError(_("No se pueden agregar/modificar apuntes del periodo %s. Revisa el estado del periodo" % (rec.period_id.name)))
         result = super(AccountMoveLine, self).write(vals)
         return result

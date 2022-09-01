@@ -4,7 +4,7 @@
 {
     "name": "Cuenta Contable por Almacén / Ubicación (interna)", 
     "version": "1.1", 
-    "author": "Fixdoo & Argil", 
+    "author": "Fixdoo", 
     "category": "Account", 
     "description": """
 Cuenta Contable por Almacén / Ubicación (interna)
@@ -34,5 +34,6 @@ Internas para que al generar la póliza tome esta cuenta contable.
     "css": [], 
     "qweb": [], 
     "installable": True, 
+    'license': 'Other proprietary',
 
 }

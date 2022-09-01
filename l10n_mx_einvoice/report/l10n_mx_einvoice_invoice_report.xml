@@ -96,6 +96,9 @@
                                         CP: <span t-field="o.partner_id.zip_sat_id.code"/>
                                     </span>
                                     <BR/>RFC: <span t-field="o.partner_id.vat"/>
+                                    <span t-if="o.partner_id.regimen_fiscal_id">
+                                        <BR/>Regimen Fiscal: <span t-field="o.partner_id.regimen_fiscal_id"/>
+                                    </span>
                                     <span t-if="o.partner_id.country_id.code != 'MX' and o.partner_id.num_reg_trib">
                                         <BR/>Registro Tributario: <span t-field="o.partner_id.num_reg_trib"/>
                                     </span>
@@ -143,7 +146,7 @@
                                     <strong>Tipo de Comprobante:</strong>
                                     <span t-field="o.type_document_id"/>
                                     <BR/>
-                                    <strong>Versión Comprobante: </strong>3.3<BR/>
+                                    <strong>Versión Comprobante: </strong>4.0<BR/>
                                     <strong>No. CSD del Emisor: </strong><span t-field="o.no_certificado"/><br/>
                                     <strong>No. CSD del SAT: </strong><span t-field="o.cfdi_no_certificado"/><BR/>
                                     <t t-if="o.metodo_pago_id">
@@ -165,14 +168,14 @@
                     
                     <table name="invoice_line_table" style="font-size:12px;width:99%;">
                         <thead>
-                            <tr style="border: 1px solid #ddd;background-color: #ddd">
-                                <th style="vertical-align: middle;text-align:center;height: 25px;">Clave SAT</th>
-                                <th style="vertical-align: middle;height: 25px;">Description</th>
-                                <th style="vertical-align: middle;text-align:center;height: 25px;">Cant / UdM / [Clave UdM]</th>
-                                <th style="vertical-align: middle;height: 25px;" class="text-right" id="th_precio_unitario">Precio Unitario</th>
-                                <th style="vertical-align: middle;height: 25px;" class="text-right">Importe</th>
-                                <th style="vertical-align: middle;height: 25px;" class="text-right">Descuento</th>
-                                <th style="vertical-align: middle;height: 25px;" class="text-right">Monto</th>
+                            <tr style="border: 1px solid #ddd;background-color: #ddd;width: 100%">
+                                <th style="vertical-align: middle;text-align:center;height: 25px;width: 15%;">Clave SAT</th>
+                                <th style="vertical-align: middle;height: 25px;width: 35%;">Description</th>
+                                <th style="vertical-align: middle;text-align:center;height: 25px;width: 10%;">Cant / UdM / [Clave UdM]</th>
+                                <th style="vertical-align: middle;height: 25px;width: 10%;" class="text-right" id="th_precio_unitario">Precio Unitario</th>
+                                <th style="vertical-align: middle;height: 25px;width: 10%;" class="text-right">Importe</th>
+                                <th style="vertical-align: middle;height: 25px;width: 10%;" class="text-right">Descuento</th>
+                                <th style="vertical-align: middle;height: 25px;width: 10%;" class="text-right">Monto</th>
                             </tr>
                         </thead>
                         <tbody class="invoice_tbody">

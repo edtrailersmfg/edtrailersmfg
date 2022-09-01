@@ -29,12 +29,45 @@ from lxml import etree
 from lxml.objectify import fromstring
 from xml.dom.minidom import parse, parseString
 
-CFDI_XSLT_CADENA_TFD = 'l10n_mx_einvoice/SAT/cadenaoriginal_3_3/cadenaoriginal_TFD_1_1.xslt'
+CFDI_XSLT_CADENA_TFD = 'l10n_mx_einvoice/SAT/cadenaoriginal_4_0/cadenaoriginal_TFD_1_1.xslt'
 
 import logging
 _logger = logging.getLogger(__name__)
 
-msg2 = "Contacte a su administrador de sistemas o mande correo a info@fixdoo.mx"
+msg2 = "Contacte a su administrador de sistemas o mande correo a info@argil.mx"
+
+REPLACEMENTS = [
+    ' s. de r.l. de c.v.', ' S. de R.L. de C.V.', ' S. De R.L. de C.V.', ' S. De R.L. De C.V.', ' s. en c. por a.',
+    ' S. en C. por A.', ' S. En C. Por A.', ' s.a.b. de c.v.', ' S.A.B. DE C.V.', ' S.A.B. De C.V.', 
+    ' S.A.B. de C.V.', ' s de rl de cv', ' S de RL de CV', ' S DE RL DE CV', ' s.a. de c.v.',
+    ' S.A. de C.V.', ' S.A. De C.V.', ' S.A. DE C.V.', ' s en c por a', ' S en C por A',
+    ' S EN C POR A', ' s. de r.l.', ' S. de R.L.', ' S. De R.L.', ' s. en n.c.',
+    ' S. en N.C.', ' S. En N.C.', ' S. EN N.C.', ' sab de cv', ' SAB de CV',
+    ' SAB De CV', ' SAB DE CV', ' sa de cv', ' SA de CV', ' SA De CV', 
+    ' SA DE CV', ' s. en c.', ' S. en C.', ' S. En C.', ' S. EN C.', 
+    ' SA. DE C.V.', ' sa. de c.v.',  'SA. de C.V.', ' sa. DE c.v.', 
+    ' S.A DE CV',  ' S.A. DE CV', ' S.A. DE C.V', ' S.A. DE C.V', ' S.A. DE CV.',
+    ' SA. DE C.V',  ' SA DE C.V.', ' S.A DE C.V.', ' S.A DE C.V', ' SA DE CV.',
+    ' s.a de cv', ' s.a. de cv', ' s.a. de c.v', ' s.a. de c.v', ' s.a. de cv.', 
+    ' sa. de c.v', ' sa de c.v.', ' s.a de c.v.', ' s.a de c.v', ' sa de cv.', 
+    ' S.A de CV',  ' S.A. de CV', ' S.A. de C.V', ' S.A. de C.V', ' S.A. de CV.',
+    ' SA. de C.V',  ' SA de C.V.', ' S.A de C.V.', ' S.A de C.V', ' SA de CV.',
+    ' sde rl de cv', ' Sde RL de CV', ' SDE RL DE CV', ' SDE RL', ' SDE RL CV', ' SDE RL de CV', 
+    ' S DE RL CV', ' s de rl cv', ' s. de rl c.v.', ' s. de r.l. c.v.', ' s. de rl cv.', ' s. de rl c.v',
+    ' s. de rl de c.v.', ' s. de rl de c.v', ' s. de rl de c.v', ' s. de rl de cv.',
+    ' S. DE RL DE CV', ' S. DE RL DE C.V.', ' S. DE RL DE C.V', ' S. DE RL DE CV.',
+    ' s de rl', ' S de RL', ' S DE RL', ' s en nc', ' S en NC',
+    ' S EN NC', ' s en c', ' S en C', ' S EN C', ' s.c.',
+    ' S.C.', ' A.C.', ' a.c.', ' sc', ' SC', ' ac', ' AC',
+]
+
+def return_replacement(cadena):
+    cad = cadena
+    for x in REPLACEMENTS:
+        if cad.endswith(x):
+            cad = cadena.replace(x, '')
+            break
+    return cad
 
 def conv_ascii(text):
     """
@@ -387,7 +420,8 @@ class AccountMove(models.Model):
                 node.appendChild(child)
             else:
                 if isinstance(attribute, str): # or isinstance(attribute, bytes):
-                    attribute = conv_ascii(attribute)
+                    if attribute != 'Sí':
+                        attribute = conv_ascii(attribute)
                 else:
                     attribute = str(attribute)
                 node.setAttribute(element, attribute)
@@ -437,6 +471,7 @@ class AccountMove(models.Model):
         """
         key_order = [
             'cfdi:CfdiRelacionados',
+            'cfdi:InformacionGlobal',
             'cfdi:Emisor',
             'cfdi:Receptor',
             'cfdi:Conceptos',
@@ -704,11 +739,11 @@ class AccountMove(models.Model):
                     'l10n_mx_einvoice', 'SAT')):
                     # If dir is in path, save it on real_path
                     file_globals['fname_xslt'] = my_path and os.path.join(
-                        my_path, 'l10n_mx_einvoice', 'SAT', 'cadenaoriginal_3_3',
-                        'cadenaoriginal_3_3.xslt') or ''
+                        my_path, 'l10n_mx_einvoice', 'SAT', 'cadenaoriginal_4_0',
+                        'cadenaoriginal_4_0.xslt') or ''
                     ### TFD CADENA ORIGINAL XSLT ###
                     file_globals['fname_xslt_tfd'] = my_path and os.path.join(
-                        my_path, 'l10n_mx_einvoice', 'SAT', 'cadenaoriginal_3_3',
+                        my_path, 'l10n_mx_einvoice', 'SAT', 'cadenaoriginal_4_0',
                         'cadenaoriginal_TFD_1_1.xslt') or ''
                     break
         if not file_globals.get('fname_xslt', False):
@@ -726,11 +761,11 @@ class AccountMove(models.Model):
             if os.path.isdir(os.path.join(my_path, 'l10n_mx_einvoice', 'SAT')):
                 # If dir is in path, save it on real_path
                 file_globals['fname_xslt'] = my_path and os.path.join(
-                    my_path, 'l10n_mx_einvoice', 'SAT','cadenaoriginal_3_3',
-                    'cadenaoriginal_3_3.xslt') or ''
+                    my_path, 'l10n_mx_einvoice', 'SAT','cadenaoriginal_4_0',
+                    'cadenaoriginal_4_0.xslt') or ''
                 ### TFD CADENA ORIGINAL XSLT ###
                 file_globals['fname_xslt_tfd'] = my_path and os.path.join(
-                    my_path, 'l10n_mx_einvoice', 'SAT', 'cadenaoriginal_3_3',
+                    my_path, 'l10n_mx_einvoice', 'SAT', 'cadenaoriginal_4_0',
                     'cadenaoriginal_TFD_1_1.xslt') or ''
         return file_globals
              
@@ -773,6 +808,7 @@ class AccountMove(models.Model):
     
     def _get_global_taxes(self):
         self.ensure_one()
+        iva_exento = False
         values = {
             'total_retenciones': 0,
             'total_impuestos': 0,
@@ -780,6 +816,8 @@ class AccountMove(models.Model):
             'impuestos': [],
         }
         taxes = {}
+        #### Cambio Retenciones ####
+        taxes_retenciones_ids = []
         for line in self.invoice_line_ids.filtered('price_subtotal'):
             price = line.price_unit * (1.0 - (line.discount or 0.0) / 100.0)
             tax_line = {tax['id']: tax for tax in line.tax_ids.compute_all(
@@ -790,7 +828,13 @@ class AccountMove(models.Model):
                     'amount', tax.amount / 100 * float("%.2f" % line.price_subtotal))), 2)
                 rate = round(abs(tax.amount), 2)
                 amount_base = round(abs(tax_dict.get(
-                    'base',line.price_subtotal)), )
+                    'base',line.price_subtotal)), 2)
+
+                #### Cambio Retenciones ####
+                is_retencion = False
+                if tax.amount < 0.0:
+                    is_retencion = True
+                    taxes_retenciones_ids.append(tax.id)
                 if tax.id not in taxes:
                     taxes.update({tax.id: {
                         'name': (tax.invoice_repartition_line_ids.tag_ids[0].name
@@ -798,7 +842,7 @@ class AccountMove(models.Model):
                         'amount': amount,
                         'rate': rate if tax.amount_type == 'fixed' else rate / 100.0,
                         'type': tax.sat_tasa_cuota,
-                        'tax_amount': tax_dict.get('amount', tax.amount),
+                        'tax_amount': amount, #tax_dict.get('amount', tax.amount),
                         'sat_code_tax' : tax.sat_code_tax,
                         'amount_base': amount_base,
                     }})
@@ -808,16 +852,64 @@ class AccountMove(models.Model):
                         'tax_amount': taxes[tax.id]['tax_amount'] + amount,
                         'amount_base': taxes[tax.id]['amount_base'] + amount_base,
                     })
-                if tax.amount >= 0:
-                    values['total_impuestos'] += amount
-                else:
+                #### Cambio Retenciones ####
+                if is_retencion:
                     values['total_retenciones'] += amount
-        values['impuestos'] = [tax for tax in taxes.values() if tax['tax_amount'] >= 0]
-        values['retenciones'] = [tax for tax in taxes.values() if tax['tax_amount'] < 0]
+                else:
+                    values['total_impuestos'] += amount
+
+            ######## IVA EXENTO #########
+            for tax in line.tax_ids.filtered(lambda r: r.sat_tasa_cuota == 'Exento'):
+                iva_exento = True
+                tax_dict = tax_line.get(tax.id, {})
+                amount = round(abs(tax_dict.get(
+                    'amount', tax.amount / 100 * float("%.2f" % line.price_subtotal))), 2)
+                rate = round(abs(tax.amount), 2)
+                amount_base = round(abs(tax_dict.get(
+                    'base',line.price_subtotal)), )
+
+                taxes_retenciones_ids.append(tax.id)
+                if tax.id not in taxes:
+                    taxes.update({tax.id: {
+                        'name': (tax.invoice_repartition_line_ids.tag_ids[0].name
+                                 if tax.mapped('invoice_repartition_line_ids.tag_ids') else tax.name).upper(),
+                        'amount': amount,
+                        'rate': rate if tax.amount_type == 'fixed' else rate / 100.0,
+                        'type': tax.sat_tasa_cuota,
+                        'tax_amount': amount, #tax_dict.get('amount', tax.amount),
+                        'sat_code_tax' : tax.sat_code_tax,
+                        'amount_base': amount_base,
+                    }})
+                else:
+                    taxes[tax.id].update({
+                        'amount': taxes[tax.id]['amount'] + amount,
+                        'tax_amount': taxes[tax.id]['tax_amount'] + amount,
+                        'amount_base': taxes[tax.id]['amount_base'] + amount_base,
+                    })
+
+        #### Cambio Retenciones ####
+        retenciones_finales_list = []
+        traslados_finales_list = []
+        for taxkey in taxes.keys():
+            if taxkey in taxes_retenciones_ids:
+                retenciones_finales_list.append(taxes[taxkey])
+            else:
+                traslados_finales_list.append(taxes[taxkey])
+        values['impuestos'] = traslados_finales_list
+        values['retenciones'] = retenciones_finales_list
         #values['retenciones'] = self._l10n_mx_edi_group_withholding(
         #    [tax for tax in taxes.values() if tax['tax_amount'] < 0])
-        return values
+        return values, iva_exento
     
+    def _invoice_get_serie_and_folio(self, move):
+        name_numbers = list(re.finditer('\d+', move.name))
+        serie_number = move.name[:name_numbers[-1].start()]
+        folio_number = name_numbers[-1].group().lstrip('0')
+        return {
+            'serie_number': serie_number,
+            'folio_number': folio_number,
+        }
+
     def _get_facturae_invoice_dict_data(self):
         self.ensure_one()
         invoice_datas = []
@@ -839,11 +931,11 @@ class AccountMove(models.Model):
         invoice_data_parent['cfdi:Comprobante'] = {}
         # default data
         invoice_data_parent['cfdi:Comprobante'].update(
-                    {'xmlns:cfdi'   : "http://www.sat.gob.mx/cfd/3",
+                    {'xmlns:cfdi'   : "http://www.sat.gob.mx/cfd/4",
                      'xmlns:xs'     : "http://www.w3.org/2001/XMLSchema",
                      'xmlns:xsi'    : "http://www.w3.org/2001/XMLSchema-instance",
-                     'xsi:schemaLocation': "http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd",
-                     'Version': "3.3", })
+                     'xsi:schemaLocation': "http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd",
+                     'Version': "4.0", })
         
         #xnumber_work = re.findall('\d+', invoice.number)  or False
         #number_work = xnumber_work and xnumber_work[0] or xnumber_work
@@ -858,26 +950,30 @@ class AccountMove(models.Model):
         ## Guardando el Tipo de Cambio ##
         self.write({'tipo_cambio': rate})
         # Serie y Folio
-        serie_from_type = invoice.journal_id.code
-        try:
-            car= '/' if '/' in self.name else '-' if '-' in self.name else '.' if '.' in self.name else '*'
-            if car=='*':
-                number_work = self.name
-            name_splitted = self.name.split(car)
-            try:
-                serie_from_type = car.join(x for x in name_splitted[:-1]) + car
-                number_work = name_splitted[-1:][0]
-            except:
-                number_work = self.name
-        except:
-            try:
-                xnumber_work = re.findall('\d+', self.name)  or False
-                number_work = xnumber_work and xnumber_work[0] or xnumber_work
-            except:
-                number_work = self.name
+        serie_and_folio_res = self._invoice_get_serie_and_folio(invoice)
+        serie_from_type = serie_and_folio_res['serie_number']
+        number_work_int = serie_and_folio_res['folio_number']
+
+        # serie_from_type = invoice.journal_id.code
+        # try:
+        #     car= '/' if '/' in self.name else '-' if '-' in self.name else '.' if '.' in self.name else '*'
+        #     if car=='*':
+        #         number_work = self.name
+        #     name_splitted = self.name.split(car)
+        #     try:
+        #         serie_from_type = car.join(x for x in name_splitted[:-1]) + car
+        #         number_work = name_splitted[-1:][0]
+        #     except:
+        #         number_work = self.name
+        # except:
+        #     try:
+        #         xnumber_work = re.findall('\d+', self.name)  or False
+        #         number_work = xnumber_work and xnumber_work[0] or xnumber_work
+        #     except:
+        #         number_work = self.name
             
-        #xnumber_work = re.findall('\d+', self.name)  or False
-        #number_work = xnumber_work and xnumber_work[0] or xnumber_work
+        xnumber_work = re.findall('\d+', self.name)  or False
+        number_work = xnumber_work and xnumber_work[0] or xnumber_work
         #serie_from_type = invoice.journal_id.sequence_id.prefix and invoice.journal_id.sequence_id.prefix.replace('/','').replace(' ','').replace('-','') or ''
         # serie_from_type = (self.journal_id.code or '').replace('-', '').replace('/','').replace(' ','').replace('.','')
         #if invoice.move_type == 'out_refund':
@@ -897,9 +993,16 @@ class AccountMove(models.Model):
             'LugarExpedicion': invoice.address_issued_id.zip_sat_id.code,
             'Moneda': invoice.currency_id.name.upper(),
             'TipoCambio': rate,
+            'Exportacion': invoice.exportacion,
             # 'FormaPago': invoice.pay_method_ids and ','.join([x.code for x in invoice.pay_method_ids]) or '99',
             'CondicionesDePago': invoice.invoice_payment_term_id.name if invoice.invoice_payment_term_id else '',
         })
+
+        if invoice.pac_confirmation_code:
+            invoice_data_parent['cfdi:Comprobante'].update({
+                'Confirmacion': invoice.pac_confirmation_code,
+            })
+            
         if invoice.pay_method_id:
             invoice_data_parent['cfdi:Comprobante'].update({
                 'FormaPago': invoice.pay_method_id.code,
@@ -950,7 +1053,17 @@ class AccountMove(models.Model):
                 cfdi_rel.invoice_id.write({'deposit_invoice_used': True, 'deposit_invoice_rel_id': self.id})
             cfdi_relacionado_list.append({'TipoRelacion': self.type_rel_id.code})
             invoice_data['cfdi:CfdiRelacionados'] =  cfdi_relacionado_list
-                                                    
+        
+        ####### Factura Global #######
+        if invoice.global_invoice:
+            invoice_data['cfdi:InformacionGlobal'] = {
+                'Periodicidad': invoice.fg_periodicity,
+                'Meses': invoice.fg_months,
+                'Año': invoice.fg_year,                
+            }
+
+        ####### Emisor y Receptor ######
+
         invoice_data['cfdi:Emisor'] = {}
 
         if not self.env.company.regimen_fiscal_id:
@@ -960,12 +1073,15 @@ class AccountMove(models.Model):
         parent_name = parent_name.replace('&','&amp;')
         parent_name = parent_name.replace('<','&lt;')
         parent_name = parent_name.replace('>','&gt;')
+
+        razon_social_emisor = return_replacement(address_invoice_parent.name)
+        
         invoice_data['cfdi:Emisor'].update({
 
             'Rfc': address_invoice_parent.vat[:2]=='MX' and \
                    address_invoice_parent.vat[:4] != 'MXMX' and \
                    address_invoice_parent.vat[2:] or address_invoice_parent.vat,
-            'Nombre': address_invoice_parent.name,
+            'Nombre': razon_social_emisor,
             'RegimenFiscal': self.env.company.regimen_fiscal_id.code or '',
             
         })
@@ -981,12 +1097,31 @@ class AccountMove(models.Model):
         else:
             rfc = parent_obj.vat[:2]=='MX' and parent_obj.vat[:4] != 'MXMX' and parent_obj.vat[2:] or parent_obj.vat
         address_invoice = self.partner_id
+
+        if not parent_obj.regimen_fiscal_id:
+            raise UserError("El cliente %s no cuenta con el Regimen Fiscal." % parent_obj.name)
+
+        receptor_zip = ""
+        if parent_obj.zip_sat_id:
+            receptor_zip = parent_obj.zip_sat_id.code
+        else:
+            if parent_obj.zip:
+                receptor_zip = parent_obj.zip
+
+        if not receptor_zip:
+            raise UserError("El cliente %s no cuenta con la dirección fiscal." % parent_obj.name)
+
+        razon_social_receptor = (parent_obj.name or '')
+        if rfc.upper() != 'XAXX010101000':
+            razon_social_receptor = return_replacement(parent_obj.name)
+
         invoice_data['cfdi:Receptor'] = {}
         invoice_data['cfdi:Receptor'].update({
             'Rfc': rfc.upper(),
-            'Nombre': (parent_obj.name or ''),
+            'Nombre': razon_social_receptor,
             'UsoCFDI': invoice.uso_cfdi_id.code,
-
+            'RegimenFiscalReceptor': parent_obj.regimen_fiscal_id.code,
+            'DomicilioFiscalReceptor ': receptor_zip,
         })
         # Termina seccion: Receptor
         
@@ -1021,6 +1156,8 @@ class AccountMove(models.Model):
             else:
                 cantidad_qr = qr_cantidad_split[0]+"."+decimales_res
 
+            if not line.product_id.sat_tax_obj:
+                raise UserError("El producto %s no tiene configurado el Objeto de Impuesto." % line.product_id.name)
 
             concepto = {
                 'ClaveProdServ': sat_product_id.code,
@@ -1030,6 +1167,7 @@ class AccountMove(models.Model):
                 'Descripcion': line.name or '',
                 'ValorUnitario': "%.2f" % (price_unit or 0.0),
                 'Importe': "%.2f" % (line.price_subtotal or 0.0),
+                'ObjetoImp': line.product_id.sat_tax_obj,
             # Falta el Descuento #
             }
 
@@ -1086,24 +1224,37 @@ class AccountMove(models.Model):
 
                 ## Definiendo el Tipo de Impuesto #
                 ## Montos Positivos Traslados ###
+                ##### IVA EXENTO #####
+                iva_exento  = False
                 if tax.amount >= 0:
                     if tax.sat_tasa_cuota == 'Tasa':
                         tax_importe = tax.amount / 100.0 * line.price_subtotal
                     elif tax.sat_tasa_cuota =='Cuota':
                         tax_importe = tax.amount
+                    elif tax.sat_tasa_cuota =='Exento':
+                        ##### IVA EXENTO #####
+                        iva_exento = True
+                        tax_importe  = 0.0
                     else:
                         continue
                     ## Comienza por Detalle #
+
+                    tax_concept_node =  {
+                                            'Base': "%.2f" % (line.price_subtotal or 0.0),
+                                            'Impuesto': tax.sat_code_tax,
+                                            'TipoFactor': tax.sat_tasa_cuota,
+                                            'TasaOCuota': "%.6f" % (tax.amount/100.0),
+                                            'Importe': "%.2f" % tax_importe,
+                                        }
+
+                    ##### IVA EXENTO #####
+                    if iva_exento:
+                        tax_concept_node.pop('TasaOCuota')
+                        tax_concept_node.pop('Importe')
+
                     impuesto_dict = {
-                        'cfdi:Traslado':
-                        {
-                            'Base': "%.2f" % (line.price_subtotal or 0.0),
-                            'Impuesto': tax.sat_code_tax,
-                            'TipoFactor': tax.sat_tasa_cuota,
-                            'TasaOCuota': "%.6f" % (tax.amount/100.0),
-                            'Importe': "%.2f" % tax_importe,
-                        }
-                    }
+                                        'cfdi:Traslado': tax_concept_node,
+                                    }
                     
                     impuestos_traslados.append(impuesto_dict)
                 else:
@@ -1146,6 +1297,14 @@ class AccountMove(models.Model):
                     if info_aduanera:
                         concepto.update({'cfdi:InformacionAduanera': info_aduanera})
 
+            if self.cfdi_complemento == 'carta_porte':
+                info_aduanera = []
+                if 'waybill_pedimento' in invoice._fields and invoice.waybill_pedimento:
+                    informacion_aduanera = {
+                        'NumeroPedimento': invoice.waybill_pedimento,
+                    }
+                    info_aduanera.append(informacion_aduanera)
+                    concepto.update({'cfdi:InformacionAduanera': info_aduanera})
                         
             if sat_product_id.complemento_que_debe_incluir:
                 concepto = line.add_complements_with_concept_cfdi(concepto)
@@ -1160,8 +1319,13 @@ class AccountMove(models.Model):
         
         # Inicia seccion: impuestos
         # Si hay impuestos en la Fatura se agrega el nodo de Impuestos
-        taxes = self._get_global_taxes()
-        if taxes:
+        taxes, iva_exento = self._get_global_taxes()
+        _logger.info("\n##### Impuestos Agrupados para la Facturación: %s " % taxes)
+        total_impuestos = taxes.get('total_impuestos', 0.0)
+        total_retenciones = taxes.get('total_retenciones', 0.0)
+        _logger.info("\n##### total_impuestos: %s " % total_impuestos)
+        _logger.info("\n##### total_retenciones: %s " % total_retenciones)
+        if total_impuestos or total_retenciones:
             invoice_data['cfdi:Impuestos'] = {}
             
             if 'total_impuestos' in taxes:
@@ -1172,13 +1336,25 @@ class AccountMove(models.Model):
                 invoice_data['cfdi:Impuestos'].update({'cfdi:Traslados' : []})
                 #impuesto_list = invoice_data_impuestos.setdefault('cfdi:Traslados', [])
                 for tax_line in taxes['impuestos']:
-                    invoice_data['cfdi:Impuestos']['cfdi:Traslados'].append(
-                        {'cfdi:Traslado' : {
-                            'Impuesto': tax_line['sat_code_tax'],
-                            'TipoFactor': tax_line['type'],
-                            'TasaOCuota': "%.6f" % abs(tax_line['rate']),
-                            'Importe': "%.2f" % abs(tax_line['tax_amount'])}
-                        })
+                    #### IVA EXENTO ####
+                    if tax_line['type'] == 'Exento':
+                        invoice_data['cfdi:Impuestos']['cfdi:Traslados'].append(
+                            {'cfdi:Traslado' : {
+                                'Base': "%.2f" % abs(tax_line['amount_base']),
+                                'Impuesto': tax_line['sat_code_tax'],
+                                'TipoFactor': tax_line['type'],
+                                }
+                            })
+                    ####################
+                    else:
+                        invoice_data['cfdi:Impuestos']['cfdi:Traslados'].append(
+                            {'cfdi:Traslado' : {
+                                'Base': "%.2f" % abs(tax_line['amount_base']),
+                                'Impuesto': tax_line['sat_code_tax'],
+                                'TipoFactor': tax_line['type'],
+                                'TasaOCuota': "%.6f" % abs(tax_line['rate']),
+                                'Importe': "%.2f" % abs(tax_line['tax_amount'])}
+                            })
             if 'total_retenciones' in taxes:
                 if 'total_retenciones' in taxes and taxes['total_retenciones'] > 0.0:
                     invoice_data['cfdi:Impuestos'].update({
@@ -1193,8 +1369,27 @@ class AccountMove(models.Model):
                                 #'TasaOCuota': "%.6f" % abs(tax_line['rate']),
                                 'Importe': "%.2f" % abs(tax_line['tax_amount'])}
                             })
+        #### IVA EXENTO ####
+        else:
+            if iva_exento:
+                invoice_data['cfdi:Impuestos'] = {}
+                if 'total_impuestos' in taxes:
+                    invoice_data['cfdi:Impuestos'].update({
+                        'TotalImpuestosTrasladados': "%.2f"%( taxes['total_impuestos'] or 0.0),
+                    })
+                    
+                    invoice_data['cfdi:Impuestos'].update({'cfdi:Traslados' : []})
+                    #impuesto_list = invoice_data_impuestos.setdefault('cfdi:Traslados', [])
+                    for tax_line in taxes['impuestos']:
+                        #### IVA EXENTO ####
+                        invoice_data['cfdi:Impuestos']['cfdi:Traslados'].append(
+                            {'cfdi:Traslado' : {
+                                'Base': "%.2f" % abs(tax_line['amount_base']),
+                                'Impuesto': tax_line['sat_code_tax'],
+                                'TipoFactor': tax_line['type'],
+                                }
+                            })
 
-        
         # Termina seccion: impuestos
         if 'cfdi_complemento' in self._fields and self.cfdi_complemento:
             invoice_data_parent = invoice._get_einvoice_complement_dict(invoice_data_parent)
@@ -1257,7 +1452,7 @@ class AccountMove(models.Model):
         emisor = 'cfdi:Emisor'
         receptor = 'cfdi:Receptor'
         concepto = 'cfdi:Conceptos'
-        facturae_version = '3.3'
+        facturae_version = '4.0'
         data_dict = self._get_facturae_invoice_dict_data()
         # data_dict = data_dict[0]
         while(type(data_dict)!=dict):
@@ -2082,7 +2277,7 @@ class AccountMoveLine(models.Model):
 
     
     ### Permite Añadir Complementos por Conceptos ###
-    ############### CFDI 3.3 #################
+    ############### CFDI 4.0 #################
     def add_complements_with_concept_cfdi(self, concepto):
         # invoice_line = linea de la Factura (Browse Record)
         # product = producto de la linea (Browse Record)

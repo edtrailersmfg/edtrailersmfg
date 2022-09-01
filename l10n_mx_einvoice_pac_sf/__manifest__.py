@@ -3,7 +3,7 @@
 {
     "name" : "Conector con el PAC Solución Factible",
     "version" : "1.0",
-    "author" : "Fixdoo & Argil",
+    "author" : "Fixdoo",
     "category" : "Localization/Mexico",
     "description" : """
     
@@ -23,4 +23,5 @@
                 'views/account_payment_view.xml',
             ],
     "installable" : True,
+    'license': 'Other proprietary',
 }

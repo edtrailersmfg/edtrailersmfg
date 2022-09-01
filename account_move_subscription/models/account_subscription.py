@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
-
+##############################################################################
+#
+#   Original by Odoo SA
+#   Forked by:
+#   2016 - Argil Consulting SA de CV
+#    (<http://www.argil.mx>)
+##############################################################################
 
 from odoo import api, fields, models, _
 from odoo.exceptions import UserError

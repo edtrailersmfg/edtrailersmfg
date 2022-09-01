@@ -17,7 +17,7 @@ import logging
 _logger = logging.getLogger(__name__)
 
 
-msg2 = "Contacta a tu administrador de Sistema o contactanos info@fixdoo.mx"
+msg2 = "Contacta a tu administrador de Sistema o contactanos info@argil.mx"
 
 
 class pay_method(models.Model):
@@ -844,28 +844,31 @@ class SATFraccionArancelaria(models.Model):
                                        ('especifica','Específica'),
                                        ('azucaroso', 'Contenido Azucaroso')],
                                      string="Criterio", default='na')
-    unidad_de_medida= fields.Selection(selection=[('01','KILO'),  
-                                        ('02','GRAMO'  ),
-                                        ('03','METRO LINEAL'),
-                                        ('04','METRO CUADRADO'),
-                                        ('05','METRO CUBICO'),
-                                        ('06','PIEZA'),
-                                        ('07','CABEZA'),
-                                        ('08','LITRO'),
-                                        ('09','PAR'),
-                                        ('10','KILOWATT'),
-                                        ('11','MILLAR'),
-                                        ('12','JUEGO'),
-                                        ('13','KILOWATT/HORA'),
-                                        ('14','TONELADA'),
-                                        ('15','BARRIL'),
-                                        ('16','GRAMO NETO'),
-                                        ('17','DECENAS'),
-                                        ('18','CIENTOS'),
-                                        ('19','DOCENAS'),
-                                        ('20','CAJA'),
-                                        ('21','BOTELLA'),
-                                        ('99','SERVICIO')],
+    unidad_de_medida= fields.Selection(selection=[
+                                                    ('01',"KILO"),
+                                                    ('02',"GRAMO"),
+                                                    ('03',"METRO LINEAL"),
+                                                    ('04',"METRO CUADRADO"),
+                                                    ('05',"METRO CUBICO"),
+                                                    ('06',"PIEZA"),
+                                                    ('07',"CABEZA"),
+                                                    ('08',"LITRO "),
+                                                    ('09',"PAR"),
+                                                    ('10',"KILOWATT"),
+                                                    ('11',"MILLAR"),
+                                                    ('12',"JUEG "),
+                                                    ('13',"KILOWATT/HORA"),
+                                                    ('14',"TONELADA"),
+                                                    ('15',"BARRIL"),
+                                                    ('16',"GRAMO NETO"),
+                                                    ('17',"DECENAS"),
+                                                    ('18',"CIENTOS"),
+                                                    ('19',"DOCENAS"),
+                                                    ('20',"CAJA"),
+                                                    ('21',"BOTELLA"),
+                                                    ('22',"CARAT"),
+                                                    ('99',"SERVICIO"),
+                                                ],
                                       string='Unidad de Medida')
     impuesto_importacion = fields.Char(string="Impuesto Importación")
     impuesto_exportacion = fields.Char(string="Impuesto Exportación")

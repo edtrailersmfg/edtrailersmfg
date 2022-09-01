@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>      
+        
+        <!-- PAGO DE VARIAS FACTURAS --> 
+        <record id="view_account_payment_form_l10n_mx_einvoice" model="ir.ui.view">
+            <field name="name">account.payment.invoice.form.l10n_mx_einvoice</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_bank_id" position="after">
+                    <field name="merged" string="Pago Fusionado" readonly="1"/>
+                </field>
+                <xpath expr="//sheet" position="inside">
+                    <notebook colspan="4" attrs="{'invisible' : [('merged', '=', False)]}">
+                        <page string="Facturas relacionadas">
+                            <field name="payment_invoice_line_ids" colspan="4" nolabel="1">
+                                <tree>
+                                    <field name="invoice_id" />
+                                    <field name="invoice_serie" />
+                                    <field name="invoice_folio" />
+                                    <field name="invoice_uuid" />
+                                    <field name="invoice_currency_id" />
+                                    <field name="invoice_currency_rate" />
+                                    <field name="parcialidad" />
+                                    <field name="saldo_anterior" />
+                                    <field name="monto_pago" />
+                                    <field name="saldo_final" />
+                                </tree>
+                            </field>
+                        </page>                        
+                    </notebook>
+                </xpath>
+            </field>
+        </record>        
+        
+    </data>
+</odoo>

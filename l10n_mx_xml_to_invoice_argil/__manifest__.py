@@ -12,10 +12,13 @@
        al importar un archivo .zip que contenga xml de facturas (CFDIs)
     """,
 
-    'author': "Fixdoo & Argil",
-    'website': "http://www.fixdoo.mx",
+    'author': "Argil Consulting",
+    'website': "http://www.argil.mx",
     'category': 'Invoicing',
     'version': '1.0.2',
+
+    'maintainer':"Israel Cruz Argil",
+
     # dependencias
     'depends': [
         'sale_management',
@@ -37,4 +40,5 @@
     'demo': [],
     'installable': True,
     'auto_install': False,
+    'license': 'Other proprietary',
 }

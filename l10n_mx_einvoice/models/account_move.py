@@ -58,11 +58,11 @@ class AccountMove(models.Model):
                     timbre = xvalue.attributes['UUID'].value
                     serie, folio = False, False
                     try:
-                        serie = yvalue.attributes['serie'].value
+                        serie = yvalue.attributes['Serie'].value
                     except:
                         pass
                     try:
-                        folio = yvalue.attributes['folio'].value
+                        folio = yvalue.attributes['Folio'].value
                     except:
                         pass
                     res = self.search([('sat_uuid', '=', timbre),('id','!=',rec.id),('company_id','=',rec.company_id.id)])
@@ -260,6 +260,52 @@ class AccountMove(models.Model):
     l10n_mx_edi_is_required = fields.Boolean(string="Dummy", 
                                              help="Este campo es dummy porque lo usa el modulo l10n_mx_edi y afecta en el Template del envio de factura ")
     
+    #### CFDI 4.0 ####
+
+    pac_confirmation_code = fields.Char('Codigo de Confirmación', help="Atributo condicional para registrar la clave de confirmación que entregue\
+                    el PAC para expedir el comprobante con importes grandes, con un tipo de cambio fuera del rango establecido o con ambos casos", size=64)
+    
+    exportacion = fields.Selection(
+        selection=[('01', 'No aplica'), 
+                   ('02', 'Definitiva'), 
+                   ('03', 'Temporal'),],
+        string='Exportacion', default = '01',
+    )
+    
+    global_invoice = fields.Boolean('Factura global')
+
+    fg_periodicity = fields.Selection(
+        selection=[('01', '01 - Diario'),
+                   ('02', '02 - Semanal'),
+                   ('03', '03 - Quincenal'),
+                   ('04', '04 - Mensual'),
+                   ('05', '05 - Bimestral'),],
+        string=_('Periodicidad'),
+    )
+
+    fg_months = fields.Selection(
+        selection=[('01', '01 - Enero'),
+                   ('02', '02 - Febrero'),
+                   ('03', '03 - Marzo'),
+                   ('04', '04 - Abril'),
+                   ('05', '05 - Mayo'),
+                   ('06', '06 - Junio'),
+                   ('07', '07 - Julio'),
+                   ('08', '08 - Agosto'),
+                   ('09', '09 - Septiembre'),
+                   ('10', '10 - Octubre'),
+                   ('11', '11 - Noviembre'),
+                   ('12', '12 - Diciembre'),
+                   ('13', '13 - Enero - Febrero'),
+                   ('14', '14 - Marzo - Abril'),
+                   ('15', '15 - Mayo - Junio'),
+                   ('16', '16 - Julio - Agosto'),
+                   ('17', '17 - Septiembre - Octubre'),
+                   ('18', '18 - Noviembre - Diciembre'),],
+        string=_('Meses'),
+    )
+
+    fg_year =  fields.Char(string=_('Año'))
     
     
     @api.depends('number', 'journal_id', 'invoice_date')

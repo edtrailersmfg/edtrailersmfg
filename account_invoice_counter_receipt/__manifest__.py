@@ -4,7 +4,7 @@
 {
     "name"      : "Contra Recibos de Facturas (Clientes y Proveedores)",
     "version"   : "1.0",
-    "author"    : "Fixdoo & Argil",
+    "author"    : "Fixdoo",
     "website"   : "https://fixdoo.mx",
     "description" : """
 Contra Recibos de Facturas (Clientes y Proveedores)
@@ -34,5 +34,5 @@ También agrega una validación para que no permita pagar Facturas
         "report/account_invioce_counter_receipt_report.xml"
     ],
     "installable": True,
-    
+    'license': 'Other proprietary',   
 }

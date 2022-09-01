@@ -3,6 +3,16 @@ from odoo import api, fields, models, _, tools
 from . import cancelation_codes ## Clase con Mucha Informacion
 from zeep import Client
 from odoo.exceptions import UserError, ValidationError
+from odoo.exceptions import UserError, RedirectWarning, ValidationError
+
+from zeep.plugins import HistoryPlugin
+
+from lxml import etree
+
+import logging
+_logger = logging.getLogger(__name__)
+
+history = HistoryPlugin()
 
 class AccountMove(models.Model):
     _inherit = 'account.move'
@@ -95,13 +105,20 @@ class AccountMoveCancelationRecord(models.Model):
                     contrasenaCSD = invoice_rec.journal_id.certificate_password
                     #if invoice_rec.company_id.partner_id.vat == 'TBE740319AP4':
                     #    contrasenaCSD += ' '
-                    client = Client(wsdl_url)
+                    client = Client(wsdl_url, plugins=[history])
                     isZipFile = 0
                     # print("######### (user, password, invoice_rec.cfdi_folio_fiscal, rfc_emisor, email_emisor, cerCSD, keyCSD, contrasenaCSD) >>>>> \n",(user, password, invoice_rec.cfdi_folio_fiscal, rfc_emisor, email_emisor, cerCSD, keyCSD, contrasenaCSD))
                     try:
                         uuid_cancelacion_motivo = '%s|%s|%s' % (invoice_rec.cfdi_folio_fiscal, invoice_rec.motivo_cancelacion, 
                                                  invoice_rec.uuid_relacionado_cancelacion or '')
                         resultado = client.service.cancelarAsincrono(user, password, uuid_cancelacion_motivo, rfc_emisor, email_emisor, cerCSD, keyCSD, contrasenaCSD)
+                        
+                        envelope_pretty_xml = etree.tostring(history.last_sent["envelope"], encoding="unicode", pretty_print=True)
+                        response_pretty_xml = etree.tostring(history.last_received["envelope"], encoding="unicode", pretty_print=True)
+
+                        _logger.info("\nEnvelope: %s " % envelope_pretty_xml)
+                        _logger.info("\nResponse: %s " % response_pretty_xml)
+                        
                     except WebFault as f:
                         raise UserError(_('Advertencia !!!\nOcurrió un error al intentar Cancelar el CFDI.'))
                     code_result = resultado.status
@@ -181,11 +198,18 @@ class AccountMoveCancelationRecord(models.Model):
                     contrasenaCSD = invoice_rec.journal_id.certificate_password
                     if invoice_rec.company_id.partner_id.vat == 'TBE740319AP4':
                         contrasenaCSD += ' '
-                    client = Client(wsdl_url)
+                    client = Client(wsdl_url, plugins=[history])
                     isZipFile = 0
                     # print("######### (user, password, invoice_rec.cfdi_folio_fiscal, rfc_emisor, email_emisor, cerCSD, keyCSD, contrasenaCSD) >>>>> \n",(user, password, invoice_rec.cfdi_folio_fiscal, rfc_emisor, email_emisor, cerCSD, keyCSD, contrasenaCSD))
                     try:
                         resultado = client.service.getStatusCancelacionAsincrona(user, password, invoice_rec.cfdi_folio_fiscal)
+                        
+                        envelope_pretty_xml = etree.tostring(history.last_sent["envelope"], encoding="unicode", pretty_print=True)
+                        response_pretty_xml = etree.tostring(history.last_received["envelope"], encoding="unicode", pretty_print=True)
+
+                        _logger.info("\nEnvelope: %s " % envelope_pretty_xml)
+                        _logger.info("\nResponse: %s " % response_pretty_xml)
+
                     except WebFault as f:
                         raise UserError(_('Advertencia !!!\nOcurrió un error al intentar Cancelar el CFDI.'))
                     code_result = resultado.status

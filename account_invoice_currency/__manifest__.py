@@ -2,7 +2,7 @@
 {
     "name": "Moneda en Facturas", 
     "version": "1.0", 
-    "author": "Fixdoo & Argil", 
+    "author": "Argil Consulting", 
     "category": "Account", 
     "description": """
 
@@ -21,8 +21,8 @@ Si ya tiene tiempo usando Odoo es recomendable correr el siguiente script para a
 update res_currency_rate set rate2=1/rate where rate <> 0;
 
     """, 
-    "website": "http://www.fixdoo.mx", 
-    #'license' : 'OEEL-1',
+    "website": "http://www.argil.mx", 
+    'license': 'Other proprietary',
     "depends": [
         "account", 
     ], 

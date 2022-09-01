@@ -72,7 +72,7 @@ class AccountEdiFormat(models.Model):
                 'username': move.company_id.l10n_mx_edi_pac_username,
                 'password': move.company_id.l10n_mx_edi_pac_password,
                 'equipo_id' : move.company_id.l10n_mx_edi_pac_equipo_id,
-                'url'     : 'http://devcfdi.sifei.com.mx:8080/SIFEI33/SIFEI?wsdl',
+                'url'       : 'http://devcfdi.sifei.com.mx:8080/SIFEI33/SIFEI?wsdl',
                 'cancel_url': 'http://devcfdi.sifei.com.mx:8888/CancelacionSIFEI/Cancelacion?wsdl',
             }
         else:
@@ -85,7 +85,7 @@ class AccountEdiFormat(models.Model):
                 'username': move.company_id.l10n_mx_edi_pac_username,
                 'password': move.company_id.l10n_mx_edi_pac_password,
                 'equipo_id' : move.company_id.l10n_mx_edi_pac_equipo_id,
-                'url': 'https://sat.sifei.com.mx:8443/SIFEI/SIFEI?wsdl',
+                'url'       : 'https://sat.sifei.com.mx:8443/SIFEI/SIFEI?wsdl',
                 'cancel_url': 'https://sat.sifei.com.mx:9000/CancelacionSIFEI/Cancelacion?wsdl',
             }
 
@@ -140,17 +140,20 @@ class AccountEdiFormat(models.Model):
 
     def _l10n_mx_edi_sifei_cancel(self, move, credentials, cfdi):
         certificate_pfx, cert_password = self._get_pfx_file_and_password(move)
-        #_logger.info("certificate_pfx: %s" % certificate_pfx)
-        #_logger.info("cert_password: %s" % cert_password)
         ##################################
         client = Client(credentials['cancel_url'], plugins=[LogPlugin()])
+
+        
         try:
+            params = '|%s|%s|%s|' % (move.l10n_mx_edi_cfdi_uuid, move.motivo_cancelacion, 
+                                     move.uuid_relacionado_cancelacion or '')    
             resultado = client.service.cancelaCFDI(credentials['username'], 
                                                    credentials['password'], 
                                                    move.company_id.vat,
                                                    certificate_pfx, 
                                                    cert_password, 
-                                                   move.l10n_mx_edi_cfdi_uuid)
+                                                   params)
+                                                   #move.l10n_mx_edi_cfdi_uuid)
             
             
             try:
@@ -236,4 +239,7 @@ class AccountEdiFormat(models.Model):
         return self._l10n_mx_edi_sifei_sign(move, credentials, cfdi)
 
     def _l10n_mx_edi_sifei_cancel_payment(self, move, credentials, cfdi):
+        _logger.info("move: %s" % move)
+        _logger.info("credentials: %s" % credentials)
+        _logger.info("cfdi: %s" % cfdi)
         return self._l10n_mx_edi_sifei_cancel(move, credentials, cfdi)

@@ -6,11 +6,11 @@
             <field name="name">overall.config.wizard.sat.models.cfdi</field>
             <field name="model">overall.config.wizard.sat.models.cfdi</field>
             <field name="arch" type="xml">
-                <form string="Asistente Carga de Catalogos CFDI 3.3" version="7.0">
+                <form string="Asistente Carga de Catalogos CFDI 4.0" version="7.0">
                     <field name="load_data" invisible="1"/>
                     <notebook attrs="{'invisible':[('load_data','=',True)]}">
                         <page string="Catálogos del SAT">
-                            Estos catálogos son publicados oficialmente por el SAT, y proveen datos requeridos para la generación de Documentos CFDI Versión 3.3. Al dar clic en &quot;Procesar carga&quot; se buscarán los registros existentes; si se hayan serán 
+                            Estos catálogos son publicados oficialmente por el SAT, y proveen datos requeridos para la generación de Documentos CFDI Versión 4.0. Al dar clic en &quot;Procesar carga&quot; se buscarán los registros existentes; si se hayan serán 
                             actualizados, si no serán creados.
                             <br/>
                             <br/>

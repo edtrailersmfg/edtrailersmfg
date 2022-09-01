@@ -59,7 +59,7 @@ class overall_config_wizard_sat_models_cfdi(models.TransientModel):
                  'view_type': 'form',
                  'res_model': 'overall.config.wizard.sat.models.cfdi',
                  'target'   : 'new',
-                 'name'     : 'Carga de Catalogos para la Facturacion CFDI 3.3'}
+                 'name'     : 'Carga de Catalogos para la Facturacion CFDI 4.0'}
 
     
     def _find_file_in_addons(self, directory, filename):

@@ -79,6 +79,7 @@ class account_journal(models.Model):
         #_logger.info("self.use_for_cfdi: %s" % self.use_for_cfdi)
         if cer_der_b64str and key_der_b64str and password:
             cer_pem_b64 = ssl.DER_cert_to_PEM_cert(base64.decodebytes(self.certificate_file)).encode('UTF-8')
+
             key_pem_b64 = certificate_lib.convert_key_cer_to_pem(base64.decodebytes(self.certificate_key_file),
                                                                 str.encode(self.certificate_password))
             if not key_pem_b64:
@@ -86,13 +87,19 @@ class account_journal(models.Model):
                                                                 self.certificate_password+ ' ')
             pfx_pem_b64 = certificate_lib.convert_cer_to_pfx(cer_pem_b64, key_pem_b64,
                                                              str.encode(self.certificate_password))
+            _logger.info("cer_pem_b64: %s" % cer_pem_b64)
+            _logger.info("key_pem_b64: %s" % key_pem_b64)
+            _logger.info("pfx_pem_b64: %s" % pfx_pem_b64)
             cert = crypto.load_certificate(crypto.FILETYPE_PEM, cer_pem_b64)
             x = hex(cert.get_serial_number())
             self.serial_number = x[1::2].replace('x','')
-            date_start = cert.get_notBefore().decode("utf-8") 
-            date_end = cert.get_notAfter().decode("utf-8") 
-            self.date_start = date_start[:4] + '-' + date_start[4:][:2] + '-' + date_start[6:][:2]
-            self.date_end = date_end[:4] + '-' + date_end[4:][:2] + '-' + date_end[6:][:2]
+            try:
+                date_start = cert.get_notBefore().decode("utf-8") 
+                date_end = cert.get_notAfter().decode("utf-8") 
+                self.date_start = date_start[:4] + '-' + date_start[4:][:2] + '-' + date_start[6:][:2]
+                self.date_end = date_end[:4] + '-' + date_end[4:][:2] + '-' + date_end[6:][:2]
+            except: 
+                pass
             self.certificate_file_pem       = base64.b64encode(cer_pem_b64)
             self.certificate_key_file_pem   = base64.b64encode(key_pem_b64)
             self.certificate_pfx_file       = base64.b64encode(pfx_pem_b64)

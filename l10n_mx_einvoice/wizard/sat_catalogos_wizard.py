@@ -7,7 +7,7 @@ _logger = logging.getLogger(__name__)
 
 class SAT_CatalogosWizard(models.TransientModel):
     _name = 'sat.catalogos.wizard'
-    _description ="Catalogos del SAT para CFDI 3.3 y Contabilidad Electronica"
+    _description ="Catalogos del SAT para CFDI 4.0 y Contabilidad Electronica"
 
     catalogo = fields.Selection([('action_sat_tipo_comprobante', 'Tipos de Comprobantes'),
                                  ('action_sat_uso_cfdi', 'Uso de CFDI'),

@@ -369,7 +369,7 @@ class XmlImportWizard(models.TransientModel):
 
         return bills
 
-    def get_tax_ids(self, tax_group, version='3.3'):
+    def get_tax_ids(self, tax_group, version='4.0'):
         """
         obtiene los ids de los impuestos
         a partir de nombres de grupos de impuestos
@@ -399,7 +399,7 @@ class XmlImportWizard(models.TransientModel):
                 if len(tax_data) == 4:
                     tax_factor = tax_data[3]
                     domain.append(('l10n_mx_tax_type', '=', tax_factor))
-                if version == '3.3':
+                if version == '4.0':
                     if tax_factor != 'Exento':
                         tax_rate = float(tax_data[1])
                         if tax_type == 'tras':
@@ -474,7 +474,7 @@ class XmlImportWizard(models.TransientModel):
         default_account = partner_rec.default_xml_import_account and partner_rec.default_xml_import_account.id or False
         partner_id = partner_rec.id
         if self.import_type == 'start_amount':
-            if version == '3.3':
+            if version == '4.0':
                 invoice_line = self.compact_lines(root['cfdi:Conceptos']['cfdi:Concepto'], default_account)
             else:
                 taxes = self.get_cfdi32_taxes(root['cfdi:Impuestos'])

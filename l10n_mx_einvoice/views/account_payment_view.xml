@@ -112,6 +112,9 @@
                             <group colspan="4" col="2">
                                 <separator string="Informacion de Timbrado" colspan="2"/>
                                 <field name="cfdi_pac" />
+
+                                <field name="pac_confirmation_code" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)]}"/>
+                                
                                 <field name="type_document_id" readonly="1"/>
                                 
                                 <field name="cfdi_sello"/>
