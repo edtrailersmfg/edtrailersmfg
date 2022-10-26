@@ -59,7 +59,6 @@ class AccountPaymentRegister(models.TransientModel):
                '17' : '17',
                '98' : '98',
                '99' : '99',
-               '28' : '28',
                False: False,
               }
         self.pay_method_id = self.other_payment and rel[self.other_payment.code] and \
@@ -119,7 +118,6 @@ class AccountPayment(models.Model):
                '17' : '17',
                '98' : '98',
                '99' : '99',
-               '28' : '28',
                False: False,
               }
         self.pay_method_id = self.other_payment and rel[self.other_payment.code] and \
@@ -143,7 +141,8 @@ class AccountPayment(models.Model):
     
     def get_cfdi(self):
         res = super(AccountPayment, self).get_cfdi()
-        self.create_automatic_complements_eacounting()
+        if self.cfdi_folio_fiscal:
+            self.create_automatic_complements_eacounting()
         return res
     
     def action_post(self):

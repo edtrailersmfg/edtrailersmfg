@@ -3,7 +3,7 @@
 {
     "name" : "Pedimentos Aduanales en CFDI",
     "version" : "1.0",
-    "author" : "Fixdoo & Argil",
+    "author" : "Fixdoo",
     "category"  : "Localization",
     "website": "http://www.fixdoo.mx",
     "description": """
@@ -25,4 +25,5 @@ Este módulo agrega el manejo de Pedimentos Aduanales en Facturación Electróni
     ],
 
     "installable": True,
+    'license': 'Other proprietary',
 }

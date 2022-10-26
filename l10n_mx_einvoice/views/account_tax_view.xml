@@ -4,7 +4,7 @@
         <!-- IMPUESTOS -->
 
         <record model="ir.ui.view" id="tree_account_tax_fields_3_3_einvoice_inhrt">
-            <field name="name">account.tax.cfdi.33</field>
+            <field name="name">account.tax.cfdi.40</field>
             <field name="model">account.tax</field>
             <field name="inherit_id" ref="account.view_tax_tree"/>
             <field name="arch" type="xml">
@@ -17,16 +17,18 @@
 
 
         <record model="ir.ui.view" id="form_account_tax_fields_3_3_einvoice_inhrt">
-            <field name="name">account.tax.cfdi.33</field>
+            <field name="name">account.tax.cfdi.40</field>
             <field name="model">account.tax</field>
             <field name="inherit_id" ref="account.view_tax_form"/>
             <field name="arch" type="xml">
                 <field name="company_id" position="before">
-                    <separator string="CFDI 3.3" colspan="2" />
+                    <separator string="CFDI 4.0" colspan="2" />
                     <field name="sat_tasa_cuota" 
                            attrs="{'invisible':[('type_tax_use','!=','sale')]}"/>
                     <field name="sat_code_tax"
                            attrs="{'invisible':[('type_tax_use','!=','sale')]}"/>
+                    <field name="local_tax"
+                           attrs="{'invisible':[('sat_code_tax','!=','004')]}"/>
                 </field>
             </field>
         </record>

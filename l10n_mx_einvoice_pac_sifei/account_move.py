@@ -4,6 +4,8 @@ from odoo.exceptions import UserError
 from suds.client import Client, WebFault
 from suds.plugin import MessagePlugin
 from xml.dom.minidom import parse, parseString
+from odoo.exceptions import UserError, RedirectWarning, ValidationError
+
 from . import cancelation_codes ## Clase con Mucha Informacion
 import logging
 _logger = logging.getLogger(__name__)
@@ -26,7 +28,22 @@ class AccountMove(models.Model):
     cfdi_pac                = fields.Selection(selection_add=[('pac_sifei', 'SIFEI - https://www.sifei.com.mx')], string='CFDI Pac', readonly=True, store=True, copy=False, default='pac_sifei',
                                                ondelete={'pac_sifei': 'set null'})
     #####################################
+
+    motivo_cancelacion = fields.Selection([
+        ('01', '[01] Comprobantes emitidos con errores con relación'),
+        ('02', '[02] Comprobantes emitidos con errores sin relación'),
+        ('03', '[03] No se llevó a cabo la operación'),
+        ('04', '[04] Operación nominativa relacionada en una factura global')
+    ], required=False, string="Motivo Cancelación", copy=False)
+    
+    
+    uuid_relacionado_cancelacion = fields.Char(string="UUID Relacionado en Cancelación", copy=False)
         
+    def cancelation_request_create(self):
+        if self.journal_id.use_for_cfdi and self.cfdi_folio_fiscal and not self.motivo_cancelacion:
+            raise UserError("Debe ingresar el motivo de la cancelación desde la pestaña CFDI Info")
+        return super(AccountMove, self).cancelation_request_create()
+
 class AccountPayment(models.Model):
     _inherit = 'account.payment'
 
@@ -34,7 +51,22 @@ class AccountPayment(models.Model):
     cfdi_pac                = fields.Selection(selection_add=[('pac_sifei', 'SIFEI - https://www.sifei.com.mx')], string='CFDI Pac', readonly=True, store=True, copy=False, default='pac_sifei',
                                                ondelete={'pac_sifei': 'set null'})
     #####################################        
+
+    motivo_cancelacion = fields.Selection([
+        ('01', '[01] Comprobantes emitidos con errores con relación'),
+        ('02', '[02] Comprobantes emitidos con errores sin relación'),
+        ('03', '[03] No se llevó a cabo la operación'),
+        ('04', '[04] Operación nominativa relacionada en una factura global')
+    ], required=False, string="Motivo Cancelación", copy=False)
     
+    
+    uuid_relacionado_cancelacion = fields.Char(string="UUID Relacionado en Cancelación", copy=False)
+        
+
+    def action_cancel(self):
+        if self.journal_id.use_for_cfdi and self.cfdi_folio_fiscal and not self.motivo_cancelacion:
+            raise UserError("Debe ingresar el motivo de la cancelación desde la pestaña CFDI Info")
+        return super(AccountPayment, self).action_cancel()
     
 class AccountMoveCancelationRecord(models.Model):
     _name = 'account.move.cancelation.record'
@@ -83,8 +115,11 @@ class AccountMoveCancelationRecord(models.Model):
                     code_result = ""
 
                     try:
+                        uuid_cancelacion_motivo = '|%s|%s|%s|' % (invoice_rec.cfdi_folio_fiscal, invoice_rec.motivo_cancelacion, 
+                                                 invoice_rec.uuid_relacionado_cancelacion or '')
+
                         resultado = client.service.cancelaCFDI(user, password, rfc_emisor,
-                                                           certificate_pfx, file_globals['password'], invoice_rec.cfdi_folio_fiscal)
+                                                           certificate_pfx, file_globals['password'], uuid_cancelacion_motivo)
                         xml_respuesta = parseString(resultado)
                         if xml_respuesta.getElementsByTagName('Acuse'):
                             timbre = xml_respuesta.getElementsByTagName('Acuse')[0]

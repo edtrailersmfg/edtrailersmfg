@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        	
+        <record model="ir.ui.view" id="view_move_form_inherit_sifei_cancel">
+            <field name="name">view_move_form_inherit.sifei_cancel</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account_edi.view_move_form_inherit"/>
+            <field name="arch" type="xml">
+                <button name="button_cancel_posted_moves" position="replace">
+                    <button name="%(action_account_cfdi_cancel_sat)d" string="Solicitar Cancelación" type="action" groups="account.group_account_invoice" attrs="{'invisible' : [('edi_show_cancel_button', '=', False)]}"/>
+                </button>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="view_l10n_mx_edi_invoice_form_inherit_sifei_cancel">
+            <field name="name">l10n_mx_edi.invoice.form.inherit.sifei_cancel</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="l10n_mx_edi.view_l10n_mx_edi_invoice_form_inherit"/>
+            <field name="arch" type="xml">
+                <field name="l10n_mx_edi_origin" position="after">
+                    <field name="motivo_cancelacion" 
+                           attrs="{'invisible' : [('motivo_cancelacion','=',False)]}"/>
+                    <field name="uuid_relacionado_cancelacion" 
+                           attrs="{'invisible' : [('uuid_relacionado_cancelacion','=',False)]}"/>
+                </field>         
+            </field>
+        </record>
+    </data>
+</odoo>

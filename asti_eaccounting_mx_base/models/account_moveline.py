@@ -2,6 +2,8 @@
 from odoo import api, fields, models, _
 from odoo.exceptions import UserError, ValidationError
 from lxml import etree as et
+from xml.dom.minidom import parse, parseString
+
 import base64
 import re
 import logging
@@ -299,155 +301,197 @@ class eaccount_complements(models.Model):
     @api.onchange('file_data')
     def onchange_file_data(self, currency_id=False):
         if self.file_data:
-            xml_data = base64.b64decode(self.file_data).replace(b'http://www.sat.gob.mx/registrofiscal ',b'').replace(b'http://www.sat.gob.mx/cfd/3 ',b'').replace(b'http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd',b'http://www.sat.gob.mx/TimbreFiscalDigital').replace(b'Rfc=',b'rfc=').replace(b'Fecha=',b'fecha=').replace(b'Total=',b'total=').replace(b'Folio=',b'folio=').replace(b'Serie=',b'serie=')            
-            xml_data = xml_data.replace(xml_data[xml_data.find(b"<cfdi:Addenda"):xml_data.find(b"</cfdi:Addenda")+15],b'')
-            try:
-                xmlTree = et.ElementTree(et.fromstring(xml_data))
-            except:
-                raise UserError(_('Formato de archivo incorrecto 222\n\nSe necesita cargar un archivo de extensión ".xml" (CFDI)'))
-            if b'cfdi:Comprobante' not in xml_data[0:100] and b'Comprobante' not in xml_data[0:100]:
-                raise UserError(_('Archivo XML incorrecto\n\nSe necesita cargar un archivo de tipo CFDI'))
+            #### Migración CFDI 4.0 ####
+            xml_data = base64.b64decode(self.file_data)
+            version_cfdi = ""
+            arch_xml = parseString(xml_data)
 
-            if b'cfdi:Comprobante' in xml_data[0:100]:
-                vouchNode = xmlTree.getroot()
-                if vouchNode is None:
-                    raise UserError(_('Estructura CFDI inválida\n\nNo se encontró el nodo "cfdi:Comprobante"'))
-                if 'total' not in vouchNode.attrib.keys() or 'fecha' not in vouchNode.attrib.keys():
-                    raise UserError(_('Información faltante\n\nCompruebe que el CFDI tenga asignados los campos "total" y "fecha".'))
-                emitterNode = vouchNode.find('{http://www.sat.gob.mx/cfd/3}Emisor')
-                if emitterNode is None:
-                    raise UserError(_('Estructura CFDI inválida\n\nNo se encontró el nodo "cfdi:Emisor"'))
-                if 'rfc' not in emitterNode.attrib.keys():
-                    raise UserError(_('Información faltante\n\nNo se encontró el RFC emisor.'))
-                receiverNode = vouchNode.find('{http://www.sat.gob.mx/cfd/3}Receptor')
-                if receiverNode is None:
-                    raise UserError(_('Estructura CFDI inválida\n\nNo se encontró el nodo "cfdi:Receptor"'))
-                if 'rfc' not in receiverNode.attrib.keys():
-                    raise UserError(_('Información faltante\n\nNo se encontró el RFC receptor.'))
-                complNode = vouchNode.find('{http://www.sat.gob.mx/cfd/3}Complemento')
-                if complNode is None:
-                    raise UserError(_('Estructura CFDI inválida\n\nNo se encontró el nodo "cfdi:Complemento"'))
-                stampNode = complNode.find('{http://www.sat.gob.mx/TimbreFiscalDigital}TimbreFiscalDigital')
-                if stampNode is None:
-                    raise UserError(_('Estructura CFDI inválida\n\nNo se encontró el nodo "tfd:TimbreFiscalDigital"'))
-                if 'UUID' not in stampNode.attrib.keys():
-                    raise UserError(_('Información faltante\n\nNo se encontró el Folio Fiscal (UUID)'))
-                if len(stampNode.attrib['UUID']) != 36:
-                    raise UserError(_('Información incorrecta\n\nEl Folio Fiscal (UUID) %s es incorrecto: se esperaban 36 caracteres, se encontraron %s' % (stampNode.attrib['UUID'], len(stampNode.attrib['UUID']))))
-                self.uuid = stampNode.attrib['UUID'].upper()
-            else:
-                vouchNode = xmlTree.getroot()
-                if vouchNode is None:
-                    raise UserError(_('Estructura CFD inválida\n\nNo se encontró el nodo "Comprobante"'))
-                if 'total' not in vouchNode.attrib.keys() or 'fecha' not in vouchNode.attrib.keys():
-                    raise UserError(_('Información faltante\n\nCompruebe que el CFD tenga asignados los campos "total" y "fecha".'))
-                emitterNode = vouchNode.find('{http://www.sat.gob.mx/cfd/2}Emisor')
-                if emitterNode is None:
-                    raise UserError(_('Estructura CFD inválida\n\nNo se encontró el nodo "Emisor"'))
-                if 'rfc' not in emitterNode.attrib.keys():
-                    raise UserError(_('Información faltante\n\nNo se encontró el RFC emisor.'))
-                receiverNode = vouchNode.find('{http://www.sat.gob.mx/cfd/2}Receptor')
-                if receiverNode is None:
-                    raise UserError(_('Estructura CFD inválida\n\nNo se encontró el nodo "Receptor"'))
-                if 'rfc' not in receiverNode.attrib.keys():
-                    raise UserError(_('Información faltante\n\nNo se encontró el RFC receptor.'))
-            self.compl_currency_id = currency_id and currency_id.id or self.env.user.company_id.currency_id
-            if 'TipoCambio' in vouchNode.attrib.keys():
-                try:
-                    self.exchange_rate = float(vouchNode.attrib['TipoCambio'])
-                except:
-                    pass
-            """
-            self.cbb_series = vouchNode.attrib.get('serie', '')
             try:
-                self.cbb_number = long(vouchNode.attrib.get('folio', 0))
+                cfdi_comprobante_att = arch_xml.getElementsByTagName('cfdi:Comprobante')[0]                    
             except:
-                pass
-            """
-            self.rfc = emitterNode.attrib['rfc']
-            self.rfc2 = receiverNode.attrib['rfc']
-            self.compl_date = vouchNode.attrib['fecha'][0:10]
-            self.amount = float(vouchNode.attrib['total'])
+                raise UserError(_('Formato de archivo incorrecto!\n\nSe necesita cargar un archivo de extensión ".xml" (CFDI)'))
+
+            version_cfdi = cfdi_comprobante_att.attributes['Version'].value
+            _logger.info("\n########### version_cfdi : %s" % version_cfdi)
+            ###########################
+            is_xml_signed = arch_xml.getElementsByTagName('tfd:TimbreFiscalDigital')
+            if not is_xml_signed:
+                raise UserError(_('El XML no esta timbrado.'))
+            cfdi_timbre_fiscal_digital = arch_xml.getElementsByTagName('tfd:TimbreFiscalDigital')[0]
+            
+            uuid = cfdi_timbre_fiscal_digital.attributes['UUID'].value
+                
+            try:               
+                cfdi_emisor = arch_xml.getElementsByTagName('cfdi:Emisor')[0]
+            except:
+                raise UserError(_('Estructura CFDI inválida\n\nNo se encontró el nodo "cfdi:Emisor"'))
+
+            rfc_emisor = cfdi_emisor.attributes['Rfc'].value
+            rfc_emisor = rfc_emisor.replace('&','&amp;')
+            rfc_emisor = rfc_emisor.replace('<','&lt;')
+            rfc_emisor = rfc_emisor.replace('>','&gt;')
+
+            try:
+                cfdi_receptor = arch_xml.getElementsByTagName('cfdi:Receptor')[0]
+            except:
+                raise UserError(_('Estructura CFDI inválida\n\nNo se encontró el nodo "cfdi:Receptor"'))
+
+            rfc_receptor = cfdi_receptor.attributes['Rfc'].value
+            rfc_receptor = rfc_receptor.replace('&','&amp;')
+            rfc_receptor = rfc_receptor.replace('<','&lt;')
+            rfc_receptor = rfc_receptor.replace('>','&gt;')
+
+            monto_total_cfdi = float(cfdi_comprobante_att.attributes['Total'].value)
+
+            try:
+                fecha_cfdi = cfdi_comprobante_att.attributes['Fecha'].value
+            except:
+                fecha_cfdi = ""
+
+            try:
+                folio_cfdi = cfdi_comprobante_att.attributes['Folio'].value
+            except:
+                folio_cfdi = ""
+
+            try:
+                serie_cfdi = cfdi_comprobante_att.attributes['Serie'].value
+            except:
+                serie_cfdi = ""
+
+            tipo_cambio = 1.0
+            try:
+                tipo_cambio = cfdi_comprobante_att.attributes['TipoCambio'].value
+            except:
+                tipo_cambio = tipo_cambio
+
+            if not rfc_emisor:
+                raise UserError(_('Información faltante\n\nNo se encontró el RFC emisor.'))
+
+            if not rfc_receptor:
+                raise UserError(_('Información faltante\n\nNo se encontró el RFC receptor.'))
+
+            if not uuid:
+                raise UserError(_('Información faltante\n\nNo se encontró el Folio Fiscal (UUID)'))
+
+            if len(uuid) != 36:
+                raise UserError(_('Información incorrecta\n\nEl Folio Fiscal (UUID) %s es incorrecto: se esperaban 36 caracteres, se encontraron %s' % (uuid, len(stampNode.attrib['UUID']))))
+            
+            self.uuid = uuid.upper()
+            
+            self.compl_currency_id = currency_id and currency_id.id or self.env.user.company_id.currency_id
+            
+            self.exchange_rate = float(tipo_cambio)
+
+            self.cbb_series = serie_cfdi
+            try:
+                self.cbb_number = int(folio_cfdi)
+            except:
+                _logger.info("\n#### No es un valor numerico ")
+
+            self.rfc = rfc_emisor
+            self.rfc2 = rfc_receptor
+            self.compl_date = fecha_cfdi
+            self.amount = monto_total_cfdi
             return
 
 
     def onchange_attached(self, attachment=False, currency_id=False):
         if attachment:
-            xml_data = base64.b64decode(attachment).replace(b'http://www.sat.gob.mx/registrofiscal ',b'').replace(b'http://www.sat.gob.mx/cfd/3 ',b'').replace(b'http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd',b'http://www.sat.gob.mx/TimbreFiscalDigital').replace(b'Rfc=',b'rfc=').replace(b'Fecha=',b'fecha=').replace(b'Total=',b'total=').replace(b'Folio=',b'folio=').replace(b'Serie=',b'serie=')            
-            xml_data = xml_data.replace(xml_data[xml_data.find(b"<cfdi:Addenda"):xml_data.find(b"</cfdi:Addenda")+15],b'')
+            xml_data = base64.b64decode(attachment)
+            version_cfdi = ""
+            arch_xml = parseString(xml_data)
+
+            vals = {}
+
             try:
-                xmlTree = et.ElementTree(et.fromstring(xml_data))
+                cfdi_comprobante_att = arch_xml.getElementsByTagName('cfdi:Comprobante')[0]                    
             except:
-                raise UserError(_('Formato de archivo incorrecto 111\n\nSe necesita cargar un archivo de extensión ".xml" (CFDI)'))
-            if b'cfdi:Comprobante' not in xml_data[0:100] and b'Comprobante' not in xml_data[0:100]:
-                raise UserError(_('Archivo XML incorrecto\n\nSe necesita cargar un archivo de tipo CFDI'))
-            else:
-                vals = {}
-                #if 'cfdi:Comprobante' in xml_data[0:100]:
-                vouchNode = xmlTree.getroot()
-                if vouchNode is None:
-                    raise UserError(_('Estructura CFDI inválida\n\nNo se encontró el nodo "cfdi:Comprobante"'))
-                if 'total' not in vouchNode.attrib.keys() or 'fecha' not in vouchNode.attrib.keys():
-                    raise UserError(_('Información faltante\n\nCompruebe que el CFDI tenga asignados los campos "total" y "fecha".'))
-                emitterNode = vouchNode.find('{http://www.sat.gob.mx/cfd/3}Emisor')
-                if emitterNode is None:
-                    raise UserError(_('Estructura CFDI inválida\n\nNo se encontró el nodo "cfdi:Emisor"'))
-                if 'rfc' not in emitterNode.attrib.keys():
-                    raise UserError(_('Información faltante\n\nNo se encontró el RFC emisor.'))
-                receiverNode = vouchNode.find('{http://www.sat.gob.mx/cfd/3}Receptor')
-                if receiverNode is None:
-                    raise UserError(_('Estructura CFDI inválida\n\nNo se encontró el nodo "cfdi:Receptor"'))
-                if 'rfc' not in receiverNode.attrib.keys():
-                    raise UserError(_('Información faltante\n\nNo se encontró el RFC receptor.'))
-                complNode = vouchNode.find('{http://www.sat.gob.mx/cfd/3}Complemento')
-                if complNode is None:
-                    raise UserError(_('Estructura CFDI inválida\n\nNo se encontró el nodo "cfdi:Complemento"'))
-                stampNode = complNode.find('{http://www.sat.gob.mx/TimbreFiscalDigital}TimbreFiscalDigital')
-                if stampNode is None:
-                    raise UserError(_('Estructura CFDI inválida\n\nNo se encontró el nodo "tfd:TimbreFiscalDigital"'))
-                if 'UUID' not in stampNode.attrib.keys():
-                    raise UserError(_('Información faltante\n\nNo se encontró el Folio Fiscal (UUID)'))
-                if len(stampNode.attrib['UUID']) != 36:
-                    raise UserError(_('Información incorrecta\n\nEl Folio Fiscal (UUID) %s es incorrecto: se esperaban 36 caracteres, se encontraron %s' % (stampNode.attrib['UUID'], len(stampNode.attrib['UUID']))))
-                vals['uuid'] = stampNode.attrib['UUID'].upper()
-            """
-            else:
-                vouchNode = xmlTree.getroot()
-                if vouchNode is None:
-                    raise UserError(_('Estructura CFD inválida\n\nNo se encontró el nodo "Comprobante"'))
-                if 'total' not in vouchNode.attrib.keys() or 'fecha' not in vouchNode.attrib.keys():
-                    raise UserError(_('Información faltante\n\nCompruebe que el CFD tenga asignados los campos "total" y "fecha".'))
-                emitterNode = vouchNode.find('{http://www.sat.gob.mx/cfd/2}Emisor')
-                if emitterNode is None:
-                    raise UserError(_('Estructura CFD inválida\n\nNo se encontró el nodo "Emisor"'))
-                if 'rfc' not in emitterNode.attrib.keys():
-                    raise UserError(_('Información faltante\n\nNo se encontró el RFC emisor.'))
-                receiverNode = vouchNode.find('{http://www.sat.gob.mx/cfd/2}Receptor')
-                if receiverNode is None:
-                    raise UserError(_('Estructura CFD inválida\n\nNo se encontró el nodo "Receptor"'))
-                if 'rfc' not in receiverNode.attrib.keys():
-                    raise UserError(_('Información faltante\n\nNo se encontró el RFC receptor.'))
-            """
+                raise UserError(_('Formato de archivo incorrecto!\n\nSe necesita cargar un archivo de extensión ".xml" (CFDI)'))
+
+            version_cfdi = cfdi_comprobante_att.attributes['Version'].value
+            _logger.info("\n########### version_cfdi : %s" % version_cfdi)
+            ###########################
+            is_xml_signed = arch_xml.getElementsByTagName('tfd:TimbreFiscalDigital')
+            if not is_xml_signed:
+                raise UserError(_('El XML no esta timbrado.'))
+            cfdi_timbre_fiscal_digital = arch_xml.getElementsByTagName('tfd:TimbreFiscalDigital')[0]
+            
+            uuid = cfdi_timbre_fiscal_digital.attributes['UUID'].value
+                
+            try:               
+                cfdi_emisor = arch_xml.getElementsByTagName('cfdi:Emisor')[0]
+            except:
+                raise UserError(_('Estructura CFDI inválida\n\nNo se encontró el nodo "cfdi:Emisor"'))
+
+            rfc_emisor = cfdi_emisor.attributes['Rfc'].value
+            rfc_emisor = rfc_emisor.replace('&','&amp;')
+            rfc_emisor = rfc_emisor.replace('<','&lt;')
+            rfc_emisor = rfc_emisor.replace('>','&gt;')
+
+            try:
+                cfdi_receptor = arch_xml.getElementsByTagName('cfdi:Receptor')[0]
+            except:
+                raise UserError(_('Estructura CFDI inválida\n\nNo se encontró el nodo "cfdi:Receptor"'))
+
+            rfc_receptor = cfdi_receptor.attributes['Rfc'].value
+            rfc_receptor = rfc_receptor.replace('&','&amp;')
+            rfc_receptor = rfc_receptor.replace('<','&lt;')
+            rfc_receptor = rfc_receptor.replace('>','&gt;')
+
+            monto_total_cfdi = float(cfdi_comprobante_att.attributes['Total'].value)
+
+            try:
+                fecha_cfdi = cfdi_comprobante_att.attributes['Fecha'].value
+            except:
+                fecha_cfdi = ""
+
+            try:
+                folio_cfdi = cfdi_comprobante_att.attributes['Folio'].value
+            except:
+                folio_cfdi = ""
+
+            try:
+                serie_cfdi = cfdi_comprobante_att.attributes['Serie'].value
+            except:
+                serie_cfdi = ""
+
+            if not rfc_emisor:
+                raise UserError(_('Información faltante\n\nNo se encontró el RFC emisor.'))
+
+            if not rfc_receptor:
+                raise UserError(_('Información faltante\n\nNo se encontró el RFC receptor.'))
+
+            if not uuid:
+                raise UserError(_('Información faltante\n\nNo se encontró el Folio Fiscal (UUID)'))
+
+            if len(uuid) != 36:
+                raise UserError(_('Información incorrecta\n\nEl Folio Fiscal (UUID) %s es incorrecto: se esperaban 36 caracteres, se encontraron %s' % (uuid, len(stampNode.attrib['UUID']))))
+            
+            tipo_cambio = 1.0
+            try:
+                tipo_cambio = cfdi_comprobante_att.attributes['TipoCambio'].value
+            except:
+                tipo_cambio = tipo_cambio
+
+            vals['uuid'] = uuid.upper()
+
             vals['compl_currency_id'] = currency_id and currency_id.id or self.env.user.company_id.currency_id.id
-            if 'TipoCambio' in vouchNode.attrib.keys():
-                vals['exchange_rate'] = float(vouchNode.attrib['TipoCambio'])
-            """
-            vals['cbb_series'] = vouchNode.attrib.get('serie', '')
+            vals['exchange_rate'] = float(tipo_cambio)
+
+            vals['cbb_series'] = serie_cfdi
+
             try:
-                vals['cbb_number'] = int(vouchNode.attrib.get('folio', 0))
+                vals['cbb_number'] =  int(folio_cfdi)
             except:
-                pass
-            """
+                _logger.info("\n#### No es un valor numerico ")
             vals.update({
-                'rfc': emitterNode.attrib['rfc'],
-                'rfc2': receiverNode.attrib['rfc'],
-                'compl_date' : vouchNode.attrib['fecha'][0:10],
-                'amount' : float(vouchNode.attrib['total']),
+                'rfc': rfc_emisor,
+                'rfc2': rfc_receptor,
+                'compl_date' : fecha_cfdi,
+                'amount' : monto_total_cfdi,
             })
             return {'value':vals}
         return {'value':False}
-        
-eaccount_complements()
 
 class account_moveline_fit(models.Model):
     _inherit = 'account.move.line'
@@ -478,5 +522,4 @@ class account_moveline_fit(models.Model):
 
 
 
-account_moveline_fit()
 

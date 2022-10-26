@@ -3,7 +3,7 @@
 {
     "name"      : "Fusionar Pagos de Clientes previo CFDI",
     "version"   : "1.0",
-    "author"    : "Fixdoo & Argil",
+    "author"    : "Fixdoo",
     "category"  : "Localization/Mexico",
     "description" : """
     
@@ -11,7 +11,7 @@
     
     """,
     "website" : "http://www.fixdoo.mx",
-    #'license' : 'OEEL-1',
+    'license': 'Other proprietary',
     "depends" : [
                 "l10n_mx_einvoice",
     ],

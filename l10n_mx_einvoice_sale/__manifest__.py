@@ -3,9 +3,9 @@
 {
     "name" : "Integración de info de Facturación Electrónica con Ventas",
     "version" : "1.0",
-    "author" : "Argil Consulting",
+    "author" : "Fixdoo",
     "category"  : "Localization",
-    "website": "http://www.argil.mx",
+    "website": "http://www.fixdoo.mx",
     "description": """
 Integración de info de Facturación Electrónica con Ventas
 =============================================================
@@ -23,4 +23,5 @@ Este módulo integra los Pedidos de Venta con la información necesaria para Fac
     ],
 
     "installable": True,
+    'license': 'Other proprietary',
 }

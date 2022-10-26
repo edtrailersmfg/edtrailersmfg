@@ -1,4 +1,14 @@
 # -*- coding: utf-8 -*-
+##############################################################################
+#
+#   Original Author:
+#    2014 Agile Business Group sagl
+#    (<http://www.agilebg.com>)
+#    
+#   Forked by:
+#   2016 - Argil Consulting SA de CV
+#    (<http://www.argil.mx>)
+##############################################################################
 
 from odoo import models, fields, api, _
 import odoo.addons.decimal_precision as dp

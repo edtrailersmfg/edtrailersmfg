@@ -20,7 +20,12 @@ class ProductTemplate(models.Model):
 
     no_identity_other = fields.Char('No. Identificacion Manual', size=100, help='Ingresa manualmente el No. Identificador')
 
-
+    sat_tax_obj = fields.Selection(
+        selection=[('01', '[ 01 ] No objeto de impuesto'), 
+                   ('02', '[ 02 ] Sí objeto de impuesto'), 
+                   ('03', '[ 03 ] Sí objeto del impuesto y no obligado al desglose'),],
+        string='Objeto de Impuestos', default = '02')
+    
 class UomUom(models.Model):
     _inherit ='uom.uom'
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <template id="complemento_pago_fusion" inherit_id="l10n_mx_edi.payment10">
+            <xpath expr="//*[name()='cfdi:Complemento']" position="replace" t-if="record.merged">
+                <pago10:Pagos Version="1.0"
+            xmlns:pago10="http://www.sat.gob.mx/Pagos">
+
+                    <pago10:Pago 
+                        t-att-FechaPago="cfdi_payment_date" 
+                        t-att-FormaDePagoP="record.l10n_mx_edi_payment_method_id.code" 
+                        t-att-MonedaP="currency.name" 
+                        t-att-TipoCambioP="format_float(rate_payment_curr_mxn, 6)" 
+                        t-att-Monto="format_float(amount, record.currency_id.decimal_places)" 
+                        t-att-NumOperacion="format_string(record.ref, 100)" 
+                        t-att-RfcEmisorCtaOrd="emitter_vat_ord" 
+                        t-att-NomBancoOrdExt="bank_vat_ord" 
+                        t-att-CtaOrdenante="payment_account_ord" 
+                        t-att-RfcEmisorCtaBen="receiver_vat_ord" 
+                        t-att-CtaBeneficiario="payment_account_receiver">
+                            <t t-foreach="payment_invoice_line_ids" t-as="payment_invoice" >
+                                <pago10:DoctoRelacionado t-att-IdDocumento="payment_invoice.invoice_uuid" t-att-Folio="format_string(payment_invoice.invoice_folio, 40)" t-att-Serie="format_string(payment_invoice.invoice_serie, 25)" t-att-MonedaDR="payment_invoice.currency_id.name" t-att-TipoCambioDR="payment_invoice.invoice_currency_rate if payment_invoice.invoice_id.currency_id != record.currency_id else False" t-att-MetodoDePagoDR="payment_invoice.invoice_id.l10n_mx_edi_payment_policy" t-att-NumParcialidad="payment_invoice.parcialidad" t-att-ImpSaldoAnt="format_float(payment_invoice.saldo_anterior, record.currency_id.decimal_places)" t-att-ImpPagado="format_float(payment_invoice.monto_pago, record.currency_id.decimal_places)" t-att-ImpSaldoInsoluto="format_float(payment_invoice.saldo_final, record.currency_id.decimal_places)"/>
+                            </t>
+                        </pago10:Pago>
+                </pago10:Pagos>
+            </xpath>        
+        </template>
+
+</odoo>

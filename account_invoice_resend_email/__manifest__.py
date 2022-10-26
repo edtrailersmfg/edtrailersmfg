@@ -3,14 +3,14 @@
 {
     "name": "Re Enviar Factura de Cliente",
     "version": "1.0",
-    "author" : "Fixdoo & Argil",
+    "author" : "Fixdoo",
     "website" : "http://www.fixdoo.mx",
     "description": """
     Este modulo permite re-enviar la Factura de Cliente reemplazando el botón "Enviar".
 
     """,
     'depends': ['account','l10n_mx_einvoice'],
-    #'license' : 'OEEL-1',
+    'license': 'Other proprietary',
     'data': [
         ],
     'demo': [],

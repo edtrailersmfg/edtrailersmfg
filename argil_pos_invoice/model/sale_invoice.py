@@ -129,9 +129,9 @@ class sale_order_invoice_wizard(models.TransientModel):
             if not metodo_pago_id:
                 raise UserError("Error!\nNo se encuentra el metodo de Pago PUE.")
             metodo_pago_id = metodo_pago_id[0]
-            uso_cfdi_id = self.env['sat.uso.cfdi'].search([('code','=','P01')])
+            uso_cfdi_id = self.env['sat.uso.cfdi'].search([('code','=','S01')])
             if not uso_cfdi_id:
-                raise UserError("Error!\nNo se encuentra el uso de cfdi P01.")
+                raise UserError("Error!\nNo se encuentra el uso de cfdi S01.")
             uso_cfdi_id = uso_cfdi_id[0]
             pay_method_ids = self.env['pay.method'].search([('code','=','01')])
             if not pay_method_ids:

@@ -68,8 +68,18 @@
         <field name="traslado">True</field>
         <field name="tipo">federal</field>
     </record>
-    
+
+    <record id="impuesto_04" model="sat.impuesto">
+        <field name="name">Impuesto Local</field>
+        <field name="code">004</field>
+        <field name="retencion">True</field>
+        <field name="traslado">True</field>
+        <field name="tipo">federal</field>
+    </record>
+
     <!-- Usos CFDI -->
+    <record id="sat_uso_cfdi_G01" model="sat.uso.cfdi"><field name="code">G01</field><field name="name">Adquisición de Mercancias</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="True"/></record>
+
     <record id="sat_uso_cfdi_G02" model="sat.uso.cfdi"><field name="code">G02</field><field name="name">Devoluciones, descuentos o bonificaciones</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="True"/></record>
     <record id="sat_uso_cfdi_G03" model="sat.uso.cfdi"><field name="code">G03</field><field name="name">Gastos en general</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="True"/></record>
     <record id="sat_uso_cfdi_I01" model="sat.uso.cfdi"><field name="code">I01</field><field name="name">Construcciones</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="True"/></record>
@@ -91,7 +101,10 @@
     <record id="sat_uso_cfdi_D09" model="sat.uso.cfdi"><field name="code">D09</field><field name="name">Depósitos en cuentas para el ahorro, primas que tengan como base planes de pensiones.</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="False"/></record>
     <record id="sat_uso_cfdi_D10" model="sat.uso.cfdi"><field name="code">D10</field><field name="name">Pagos por servicios educativos (colegiaturas)</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="False"/></record>
     <record id="sat_uso_cfdi_P01" model="sat.uso.cfdi"><field name="code">P01</field><field name="name">Por definir</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="False"/></record>
-
+    <record id="sat_uso_cfdi_CP01" model="sat.uso.cfdi"><field name="code">CP01</field><field name="name">Pagos</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="False"/></record>
+    <record id="sat_uso_cfdi_CN01" model="sat.uso.cfdi"><field name="code">CN01</field><field name="name">Nómina</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="False"/></record>
+    <record id="sat_uso_cfdi_S01" model="sat.uso.cfdi"><field name="code">S01</field><field name="name">Sin efectos fiscales</field><field name="aplica_persona_fisica" eval="True"/><field name="aplica_persona_moral" eval="False"/></record>
+    
     <!-- Bancos (Contabilidad Electrónica) -->
     <record id="eaccount_bank_BANAMEX" model="eaccount.bank"><field name="code">BANAMEX</field><field name="name">Banco Nacional de México, S.A., Institución de Banca Múltiple, Grupo Financiero Banamex</field><field name="bic">002</field></record>
     <record id="eaccount_bank_BANCOMEXT" model="eaccount.bank"><field name="code">BANCOMEXT</field><field name="name">Banco Nacional de Comercio Exterior, Sociedad Nacional de Crédito, Institución de Banca de Desarrollo</field><field name="bic">006</field></record>
@@ -265,9 +278,11 @@
     <record id="base.bd" model="res.country">
         <field name="sat_code">BGD</field>
     </record>
+    <!--
     <record id="base.be" model="res.country">
         <field name="sat_code">BEL</field>
     </record>
+    -->
     <record id="base.bf" model="res.country">
         <field name="sat_code">BFA</field>
     </record>
@@ -376,9 +391,9 @@
     <record id="base.cz" model="res.country">
         <field name="sat_code">CZE</field>
     </record>
-    <record id="base.de" model="res.country">
+    <!-- <record id="base.de" model="res.country">
         <field name="sat_code">DEU</field>
-    </record>
+    </record> -->
     <record id="base.dj" model="res.country">
         <field name="sat_code">DJI</field>
     </record>
@@ -487,9 +502,9 @@
     <record id="base.gy" model="res.country">
         <field name="sat_code">GUF</field>
     </record>
-    <record id="base.hk" model="res.country">
+    <!-- <record id="base.hk" model="res.country">
         <field name="sat_code">HKG</field>
-    </record>
+    </record> -->
     <record id="base.hm" model="res.country">
         <field name="sat_code">HMD</field>
     </record>

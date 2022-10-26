@@ -116,8 +116,10 @@ class AccountInvoice(models.Model):
             certificate_pfx = self.journal_id.certificate_pfx_file
             client = Client(wsdl_url, plugins=[LogPlugin()])
             try:
+                uuid_cancelacion_motivo = '|%s|%s|%s|' % (self.cfdi_folio_fiscal, self.motivo_cancelacion, 
+                                                 self.uuid_relacionado_cancelacion or '')
                 resultado = client.service.cancelaCFDI(user, password, self.company_id.partner_id.vat_split,
-                                                       certificate_pfx, file_globals['password'], self.cfdi_folio_fiscal)
+                                                       certificate_pfx, file_globals['password'], uuid_cancelacion_motivo)
             except WebFault as f:
                 raise UserError(_('Advertencia !!!\nOcurrió un error al intentar Cancelar el Timbre. \n\nCódigo: %s\nError: %s\nMensaje: %s') % 
                                 (f.fault.detail.SifeiException.codigo,f.fault.detail.SifeiException.error, f.fault.detail.SifeiException.message))
@@ -354,8 +356,10 @@ class AccountPayment(models.Model):
             certificate_pfx = self.journal_id.certificate_pfx_file.decode("utf-8")
             client = Client(wsdl_url, plugins=[LogPlugin()])
             try:
+                uuid_cancelacion_motivo = '|%s|%s|%s|' % (self.cfdi_folio_fiscal, self.motivo_cancelacion, 
+                                                 self.uuid_relacionado_cancelacion or '')
                 resultado = client.service.cancelaCFDI(user, password, self.company_id.partner_id.vat_split,
-                                                       certificate_pfx, file_globals['password'], self.cfdi_folio_fiscal)
+                                                       certificate_pfx, file_globals['password'], uuid_cancelacion_motivo)
             except WebFault as f:
                 raise UserError(_('Advertencia !!!\nOcurrió un error al intentar Cancelar el Timbre. \n\nCódigo: %s\nError: %s\nMensaje: %s') % 
                                 (f.fault.detail.SifeiException.codigo,f.fault.detail.SifeiException.error, f.fault.detail.SifeiException.message))

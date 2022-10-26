@@ -1,4 +1,8 @@
 # -*- encoding: utf-8 -*-
+#    Copyright (c) 2014 Argil Consulting - http://www.argil.mx
+############################################################################
+#    Coded by: Israel Cruz Argil (israel.cruz@argil.mx)
+############################################################################
 
 from odoo.tools.float_utils import float_round as round
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
@@ -306,7 +310,6 @@ class AccountMXReportDataWizard(models.TransientModel):
                                         ], string='Tipo', default='pdf')
     print_detail = fields.Boolean(string='Imprimir Detalle', help='Permite Imprimir en el Reporte el detalle de Movimientos.')
 """
-    @api.multi
     def get_info(self):
 
         context = dict(self._context.copy() or {})

@@ -78,6 +78,9 @@
                                     <span t-field="o.partner_id.name"/>
                                     <BR/>
                                     RFC: <span t-field="o.partner_id.vat"/><BR/>
+                                    <span t-if="o.partner_id.regimen_fiscal_id">
+                                        <BR/>Regimen Fiscal: <span t-field="o.partner_id.regimen_fiscal_id"/>
+                                    </span>
                                     <span t-field="o.partner_id.street_number"/>
                                     <span t-if="o.partner_id.street_number"> No. <span t-field="o.partner_id.street_number"/></span>
                                     <span t-if="o.partner_id.street_number2"> Int. <span t-field="o.partner_id.street_number2"/></span>
@@ -94,7 +97,7 @@
                                 <strong>Tipo de Comprobante:</strong>
                                 <span t-field="o.type_document_id"/>
                                 <BR/>
-                                <strong>Versión Comprobante: </strong>3.3<BR/>
+                                <strong>Versión Comprobante: </strong>4.0<BR/>
                                 <strong>No. CSD del Emisor: </strong><span t-field="o.no_certificado"/><br/>
                                 <strong>No. CSD del SAT: </strong><span t-field="o.cfdi_no_certificado"/><BR/>
                                 <strong>Forma de Pago: </strong><span t-raw="'[%s] %s' % (o.pay_method_id.code,o.pay_method_id.name)"/>

@@ -4,7 +4,7 @@
 {
     "name": "POS - Factura Diaria", 
     "version": "1.1", 
-    "author": "Fixdoo & Argil", 
+    "author": "Fixdoo", 
     "category": "POS", 
     "description": """
 POS - Factura Diaria
@@ -54,6 +54,7 @@ Es importante tener definido un Producto en la Contabilidad --> Configuracion --
     "css": [], 
     "qweb": [], 
     "installable": True, 
+    'license': 'Other proprietary',
 }
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

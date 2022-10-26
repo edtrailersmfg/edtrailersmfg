@@ -11,6 +11,8 @@ class AccountPayment(models.Model):
     
     merged = fields.Boolean('Fusionado')
 
+    # account_journal_payment_credit_account_id
+    # account_journal_payment_debit_account_id
 
     def group_moves_data_in_payment(self, main_payment, main_move):
         account_move_lines_groupped_credit = []
@@ -21,7 +23,21 @@ class AccountPayment(models.Model):
         finally_amount_currency_debit = 0.0
         destination_account_id = main_payment.destination_account_id.id
         destination_journal_id = main_payment.journal_id.id
-        account_journal_id = main_payment.payment_type in ('outbound','transfer') and main_payment.journal_id.payment_credit_account_id.id or main_payment.journal_id.payment_credit_account_id.id
+
+        account_journal_id = False
+
+        #### Cambiamos las cuentas de acuerdo a los cambios de Odoo 15 ###
+        payment_credit_account_id = main_payment.journal_id.outbound_payment_method_line_ids.payment_account_id
+        payment_debit_account_id = main_payment.journal_id.inbound_payment_method_line_ids.payment_account_id
+
+        # payment_credit_account_id = main_payment.company_id.account_journal_payment_credit_account_id
+        # payment_debit_account_id = main_payment.company_id.account_journal_payment_debit_account_id
+
+        if main_payment.payment_type == 'outbound':
+            account_journal_id = payment_credit_account_id
+        elif main_payment.payment_type == 'inbound':
+            account_journal_id = payment_debit_account_id
+
         if not account_journal_id:
             _logger.info("\n:::::: Error al Agrupar. No se pudo obtener la cuenta del diario %s " % main_payment.journal_id.name)
             return True
@@ -196,7 +212,7 @@ class AccountPaymentMerge(models.TransientModel):
         if 'monto_factoraje_financiero' in main_payment._fields and factoraje:
             xdata['monto_factoraje_financiero'] = factoraje
         _logger.info("xdata: %s" % xdata)
-        main_payment.write(xdata)
+        main_payment.with_context(no_check_move=True).write(xdata)
         return {
             'domain': "[('id','in', ["+','.join(map(str,[main_payment.id]))+"])]",
             'name': _('Pagos'),
@@ -210,6 +226,17 @@ class AccountPaymentMerge(models.TransientModel):
 
 
 
-
+class AccountMoveLine(models.Model):
+    _inherit = "account.move.line"
     
+    def _check_reconciliation(self):
+        context = self._context
+        if context.get('no_check_move',False):
+            return True
+        for line in self:
+            if line.matched_debit_ids or line.matched_credit_ids:
+                raise UserError(_("You cannot do this modification on a reconciled journal entry. "
+                                  "You can just change some non legal fields or you must unreconcile first.\n"
+                                  "Journal Entry (id): %s (%s)") % (line.move_id.name, line.move_id.id))
+
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

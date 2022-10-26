@@ -45,6 +45,11 @@
                     <field name="cfdi_complemento"
                            attrs="{'invisible': ['|', ('move_type','not in',('out_invoice','out_refund')),('use_for_cfdi','in',(0,False))]}"/>
                     
+                    <!-- CFDI 4.0 -->
+                    <field name="global_invoice" attrs="{'invisible': ['|', ('move_type','not in',('out_invoice','out_refund')),('use_for_cfdi','in',(0,False))]}"/>
+                    
+                    <field name="exportacion" attrs="{'invisible': ['|', ('move_type','not in',('out_invoice','out_refund')),('use_for_cfdi','in',(0,False))]}"/>
+                    
                 </field>
                 <field name="invoice_date" position="after">
                     <field name="invoice_datetime" invisible="1"/> <!--attrs="{'invisible': [('use_for_cfdi','in',(0,False))]}"/>-->
@@ -95,10 +100,13 @@
                         </field>
                     </page>
                     <page string="CFDI Info" attrs="{'invisible': ['|',('move_type','=','entry'),('use_for_cfdi','!=',True)]}"
-                          groups="base.group_no_one">
+                          >
                         <group colspan="4" col="2" >
                             <separator string="Informacion de Timbrado" colspan="2"/>
                             <field name="cfdi_pac" invisible="1"/>
+
+                            <field name="pac_confirmation_code" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)]}"/>
+                            
                             <field name="type_document_id" readonly="1" invisible="1"/>
                             <field name="cfdi_fecha_timbrado"/>
                             <field name="address_issued_id" groups="base.group_no_one"/>
@@ -145,7 +153,16 @@
                                    groups="base.group_no_one"/>
                         </group>
                     </page>
-                    
+                    <!-- CFDI 4.0 -->
+                    <page name="info_global" string="Factura global"  attrs="{'invisible': [('global_invoice','=',False)]}">
+                        <group cols="4">
+                            <group>
+                                <field name="fg_periodicity" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)],'invisible': [('use_for_cfdi','in',(0,False))]}"/>
+                                <field name="fg_months" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)],'invisible': [('use_for_cfdi','in',(0,False))]}"/>
+                                <field name="fg_year" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)],'invisible': [('use_for_cfdi','in',(0,False))]}"/>
+                            </group>
+                        </group>
+                    </page>
                 </notebook>
                 <!--
                 <field name="move_name" position="replace" />
@@ -217,7 +234,7 @@
         
 <!--
         <record model="ir.ui.view" id="account_invoice_form_inherit_cfdi_33_tree">
-            <field name="name">account.move.tree.cfdi.33</field>
+            <field name="name">account.move.tree.cfdi.40</field>
             <field name="model">account.move</field>
             <field name="inherit_id" ref="account.invoice_tree"/>
             <field name="arch" type="xml">

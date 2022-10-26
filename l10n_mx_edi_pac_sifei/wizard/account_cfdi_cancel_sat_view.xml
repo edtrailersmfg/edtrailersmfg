@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="account_cfdi_cancel_sat_form" model="ir.ui.view">
+            <field name="name">account.cfdi.cancel.wizard</field>
+            <field name="model">account.cfdi.cancel.sat</field>
+            <field name="arch" type="xml">
+                <form string="Solicitar Cancelación">                    
+                    <group colspan="4" col="4">
+                        <field name="invoice_id" invisible="1"/>
+                        <field name="payment_id" invisible="1"/>
+                        <field name="motivo_cancelacion" />
+                        <field name="uuid_relacionado_cancelacion" />
+                    </group>
+                    <footer>
+                        <button name="request_cancel" type="object" string="Solicitar Cancelación"
+                                class="oe_highlight" />
+                        <button string="Cancelar" class="oe_link" special="cancel" icon="fa-close"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="action_account_cfdi_cancel_sat" model="ir.actions.act_window">
+            <field name="name">Solicitar Cancelación</field>
+            <field name="res_model">account.cfdi.cancel.sat</field>
+            <!--<field name="binding_model_id" ref="account.model_account_move" />-->
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        
+
+            
+    </data>
+</odoo>

@@ -19,11 +19,43 @@ from lxml import etree
 from lxml.objectify import fromstring
 from xml.dom.minidom import parse, parseString
 
-CFDI_XSLT_CADENA_TFD = 'l10n_mx_einvoice/SAT/cadenaoriginal_3_3/cadenaoriginal_TFD_1_1.xslt'
+CFDI_XSLT_CADENA_TFD = 'l10n_mx_einvoice/SAT/cadenaoriginal_4_0/cadenaoriginal_TFD_1_1.xslt'
 
 import logging
 _logger = logging.getLogger(__name__)
 
+REPLACEMENTS = [
+    ' s. de r.l. de c.v.', ' S. de R.L. de C.V.', ' S. De R.L. de C.V.', ' S. De R.L. De C.V.', ' s. en c. por a.',
+    ' S. en C. por A.', ' S. En C. Por A.', ' s.a.b. de c.v.', ' S.A.B. DE C.V.', ' S.A.B. De C.V.', 
+    ' S.A.B. de C.V.', ' s de rl de cv', ' S de RL de CV', ' S DE RL DE CV', ' s.a. de c.v.',
+    ' S.A. de C.V.', ' S.A. De C.V.', ' S.A. DE C.V.', ' s en c por a', ' S en C por A',
+    ' S EN C POR A', ' s. de r.l.', ' S. de R.L.', ' S. De R.L.', ' s. en n.c.',
+    ' S. en N.C.', ' S. En N.C.', ' S. EN N.C.', ' sab de cv', ' SAB de CV',
+    ' SAB De CV', ' SAB DE CV', ' sa de cv', ' SA de CV', ' SA De CV', 
+    ' SA DE CV', ' s. en c.', ' S. en C.', ' S. En C.', ' S. EN C.', 
+    ' SA. DE C.V.', ' sa. de c.v.',  'SA. de C.V.', ' sa. DE c.v.', 
+    ' S.A DE CV',  ' S.A. DE CV', ' S.A. DE C.V', ' S.A. DE C.V', ' S.A. DE CV.',
+    ' SA. DE C.V',  ' SA DE C.V.', ' S.A DE C.V.', ' S.A DE C.V', ' SA DE CV.',
+    ' s.a de cv', ' s.a. de cv', ' s.a. de c.v', ' s.a. de c.v', ' s.a. de cv.', 
+    ' sa. de c.v', ' sa de c.v.', ' s.a de c.v.', ' s.a de c.v', ' sa de cv.', 
+    ' S.A de CV',  ' S.A. de CV', ' S.A. de C.V', ' S.A. de C.V', ' S.A. de CV.',
+    ' SA. de C.V',  ' SA de C.V.', ' S.A de C.V.', ' S.A de C.V', ' SA de CV.',
+    ' sde rl de cv', ' Sde RL de CV', ' SDE RL DE CV', ' SDE RL', ' SDE RL CV', ' SDE RL de CV', 
+    ' S DE RL CV', ' s de rl cv', ' s. de rl c.v.', ' s. de r.l. c.v.', ' s. de rl cv.', ' s. de rl c.v',
+    ' s. de rl de c.v.', ' s. de rl de c.v', ' s. de rl de c.v', ' s. de rl de cv.',
+    ' S. DE RL DE CV', ' S. DE RL DE C.V.', ' S. DE RL DE C.V', ' S. DE RL DE CV.',
+    ' s de rl', ' S de RL', ' S DE RL', ' s en nc', ' S en NC',
+    ' S EN NC', ' s en c', ' S en C', ' S EN C', ' s.c.',
+    ' S.C.', ' A.C.', ' a.c.', ' sc', ' SC', ' ac', ' AC',
+]
+
+def return_replacement(cadena):
+    cad = cadena
+    for x in REPLACEMENTS:
+        if cad.endswith(x):
+            cad = cadena.replace(x, '')
+            break
+    return cad
 
 # class AccountMove(models.Model):
 #     _name = 'account.move'
@@ -229,11 +261,11 @@ class AccountPayment(models.Model):
                 if os.path.isdir(os.path.join(my_path,'l10n_mx_einvoice', 'SAT')):
                     # If dir is in path, save it on real_path
                     file_globals['fname_xslt'] = my_path and os.path.join(
-                        my_path, 'l10n_mx_einvoice', 'SAT', 'cadenaoriginal_3_3',
-                        'cadenaoriginal_3_3.xslt') or ''
+                        my_path, 'l10n_mx_einvoice', 'SAT', 'cadenaoriginal_4_0',
+                        'cadenaoriginal_4_0.xslt') or ''
                     ### TFD CADENA ORIGINAL XSLT ###
                     file_globals['fname_xslt_tfd'] = my_path and os.path.join(
-                        my_path, 'l10n_mx_einvoice', 'SAT', 'cadenaoriginal_3_3',
+                        my_path, 'l10n_mx_einvoice', 'SAT', 'cadenaoriginal_4_0',
                         'cadenaoriginal_TFD_1_1.xslt') or ''
                     break
         if not file_globals.get('fname_xslt', False):
@@ -251,11 +283,11 @@ class AccountPayment(models.Model):
             if os.path.isdir(os.path.join(my_path, 'l10n_mx_einvoice', 'SAT')):
                 # If dir is in path, save it on real_path
                 file_globals['fname_xslt'] = my_path and os.path.join(
-                    my_path, 'l10n_mx_einvoice', 'SAT','cadenaoriginal_3_3',
-                    'cadenaoriginal_3_3.xslt') or ''
+                    my_path, 'l10n_mx_einvoice', 'SAT','cadenaoriginal_4_0',
+                    'cadenaoriginal_4_0.xslt') or ''
                 ### TFD CADENA ORIGINAL XSLT ###
                 file_globals['fname_xslt_tfd'] = my_path and os.path.join(
-                    my_path, 'l10n_mx_einvoice', 'SAT', 'cadenaoriginal_3_3',
+                    my_path, 'l10n_mx_einvoice', 'SAT', 'cadenaoriginal_4_0',
                     'cadenaoriginal_TFD_1_1.xslt') or ''
         return file_globals    
     
@@ -399,30 +431,32 @@ class AccountPayment(models.Model):
                         _logger.info('Timbre entregado por el PAC - Pago: %s', fname_payment)
                         msj = tools.ustr(res.get('msg', False))
                         index_xml = res.get('cfdi_xml', False)
-                        if isinstance(index_xml, str):
-                            index_xml = str.encode(index_xml)
-                        payment.write({'xml_file_signed_index' : index_xml})
-                        ###### Recalculando la Cadena Original ############
-                        cfdi_signed = fdata
-                        cadena_tfd_signed = ""
-                        try:
-                            cadena_tfd_signed = payment._get_einvoice_cadena_tfd(index_xml)
-                        except:
-                            cadena_tfd_signed = payment.cfdi_cadena_original
-                        payment.cfdi_cadena_original = cadena_tfd_signed
-                        ################ FIN ################
-                        data_attach = {
-                                'name'        : fname_payment,
-                                'datas'       : base64.encodebytes(index_xml),
-                                'store_fname' : fname_payment,
-                                'description' : 'Archivo XML del Comprobante Fiscal Digital - Pago: %s' % (payment.name),
-                                'res_model'   : 'account.payment',
-                                'res_id'      : payment.id,
-                                'type'        : 'binary',
-                            }
-                        attach = attachment_obj.with_context({}).create(data_attach)
-                        xres = payment.do_something_with_xml_attachment(attach)
-                        cfdi_state = 'xml_signed'
+                        if index_xml:
+                            if isinstance(index_xml, str):
+                                index_xml = str.encode(index_xml)
+                            payment.write({'xml_file_signed_index' : index_xml})
+                            ###### Recalculando la Cadena Original ############
+                            cfdi_signed = fdata
+                            cadena_tfd_signed = ""
+                            try:
+                                cadena_tfd_signed = payment._get_einvoice_cadena_tfd(index_xml)
+                            except:
+                                cadena_tfd_signed = payment.cfdi_cadena_original
+                            payment.cfdi_cadena_original = cadena_tfd_signed
+                            ################ FIN ################
+                            data_attach = {
+                                    'name'        : fname_payment,
+                                    'datas'       : base64.encodebytes(index_xml),
+                                    'store_fname' : fname_payment,
+                                    'description' : 'Archivo XML del Comprobante Fiscal Digital - Pago: %s' % (payment.name),
+                                    'res_model'   : 'account.payment',
+                                    'res_id'      : payment.id,
+                                    'type'        : 'binary',
+                                }
+                            attach = attachment_obj.with_context({}).create(data_attach)
+                            xres = payment.do_something_with_xml_attachment(attach)
+                            cfdi_state = 'xml_signed'
+
                     else:
                         msj += _("No se encontró el Driver del PAC para %s" % (type))
                     payment.write({'cfdi_last_message': payment.cfdi_last_message + "\n-.-.-.-.-.-.-.-.-.-.-.-.-.\n" + \
@@ -580,12 +614,414 @@ class AccountPayment(models.Model):
         _logger.info('Se forzo el volcado del Pago Timbrado: %s', fname_payment)
         return True
     
+    ##### Detalle de los Impuestos #####
+
+    def get_account_tax_amounts_detail_from_invoice(self):
+
+        taxes_amounts_by_invoice_traslados = {}
+        taxes_amounts_by_invoice_retenciones = {}
+
+        taxes_amounts_traslados_totales = []
+        taxes_amounts_retenciones_totales = []
+
+        taxes_amounts_traslados_totales_dict = {}
+        taxes_amounts_retenciones_totales_dict = {}
+
+        TotalTrasladosBaseIVA16 = False
+        TotalTrasladosImpuestoIVA16 = False
+        TotalTrasladosBaseIVA8 = False
+        TotalTrasladosImpuestoIVA8 = False
+        TotalTrasladosBaseIVA0 = False
+        TotalTrasladosImpuestoIVA0 = False
+        TotalTrasladosBaseIVAExento = False
+
+        TotalRetencionesIVA = False
+        TotalRetencionesISR = False
+        TotalRetencionesIEPS = False
+
+        MontoTotalPagos = 0.0
+
+        decimal_presicion = 2
+
+
+        for payment in self:
+            # MontoTotalPagos = payment.amount
+
+            _logger.info("\n####### MontoTotalPagos: %s" % MontoTotalPagos)
+
+            _logger.info("\n####### Moneda: %s" % payment.currency_id.name)
+
+            payment_currency_rate = payment.currency_id.with_context({'date': payment.date}).rate
+            payment_currency_rate = payment_currency_rate != 0 and 1.0/payment_currency_rate or 0.0
+            if payment_currency_rate == 1.0:
+                payment_currency_rate = 1
+            else:
+                payment_currency_rate = float('%.4f' % payment_currency_rate)
+            _logger.info("\n####### TC: %s" % payment_currency_rate)
+
+            if payment.payment_invoice_line_ids:
+                for pinvoice in payment.payment_invoice_line_ids:
+                    monto_pago = pinvoice.monto_pago
+                    monto_pago_payment_currency = 0.0
+                    invoice_id = pinvoice.invoice_id
+                    invoice_amount_total = invoice_id.amount_total
+                    invoice_amount_total_payment_currency = 0.0
+
+                    x_date = fields.Date.context_today(self)
+                    if payment.currency_id==payment.company_id.currency_id or payment.currency_id == invoice_id.currency_id:
+                        x_date = payment.date
+                    elif payment.currency_id != invoice_id.currency_id:
+                        x_date = invoice_id.invoice_date
+
+                    if MontoTotalPagos <= 0.0:
+                        if payment.currency_id == payment.company_id.currency_id:
+                            MontoTotalPagos = payment.amount
+                        else:
+                            # monto_total_pago_mxn = round(payment.currency_id._convert(round(float("%.2f" % payment.amount), 2), payment.company_id.currency_id, payment.company_id, x_date), 2)
+                            monto_total_pago_mxn = payment.amount * payment_currency_rate
+                            MontoTotalPagos = monto_total_pago_mxn
+
+                    #revisa la cantidad que se va a pagar en el docuemnto
+                    equivalencia_dr  = round(pinvoice.invoice_currency_rate,6)
+                    if payment.currency_id.id != invoice_id.currency_id.id:
+                        if payment.currency_id.name == 'MXN':
+                            _logger.info("\n########## Factura Moneda E. Pago en Pesos >>>> ")
+                            invoice_amount_total_payment_currency = invoice_id.amount_total / equivalencia_dr
+                            monto_pago_payment_currency = monto_pago / equivalencia_dr
+                        else:
+                            _logger.info("\n########## Factura Moneda E. Pago en Moneda E. >>>> ")
+                            invoice_amount_total_payment_currency = invoice_id.amount_total / equivalencia_dr
+                            monto_pago_payment_currency = monto_pago / equivalencia_dr
+                    else:
+                        equivalencia_dr = 1
+                        invoice_amount_total_payment_currency = invoice_id.amount_total
+                        monto_pago_payment_currency = monto_pago
+
+                    if equivalencia_dr == 1:
+                       decimal_presicion = 2
+                    else:
+                       decimal_presicion = 6
+
+
+                    paid_percentage = monto_pago_payment_currency / invoice_amount_total_payment_currency
+
+                    _logger.info("\n######## decimal_presicion : %s " % decimal_presicion)
+                    _logger.info("\n######## monto_pago : %s " % monto_pago)
+                    _logger.info("\n######## invoice_id : %s " % invoice_id)
+                    _logger.info("\n######## invoice_amount_total : %s " % invoice_amount_total)
+                    _logger.info("\n######## invoice_amount_total_payment_currency : %s " % invoice_amount_total_payment_currency)
+                    _logger.info("\n######## paid_percentage : %s " % paid_percentage)
+                    _logger.info("\n######## monto_pago_payment_currency : %s " % monto_pago_payment_currency)
+
+                    taxes, iva_exento = invoice_id._get_global_taxes()
+                    total_impuestos = taxes.get('total_impuestos', 0.0)
+                    total_retenciones = taxes.get('total_retenciones', 0.0)
+                    _logger.info("\n##### total_impuestos: %s " % total_impuestos)
+                    _logger.info("\n##### total_retenciones: %s " % total_retenciones)
+                    _logger.info("\n##### iva_exento: %s " % iva_exento)
+
+                    sat_code_tax = 'IVA'
+
+                    ######## Traslados ########
+                    list_taxes_invoice_details_traslados = []
+
+                    ######## Retenciones ########
+                    list_taxes_invoice_details_retenciones = []
+
+
+                    # _logger.info("\n##### Impuestos Agrupados para la Facturación: %s " % taxes)
+                    if total_impuestos or total_retenciones:                    
+                        if 'total_impuestos' in taxes:
+                            TotalImpuestosTrasladados = taxes['total_impuestos']
+
+                            for tax_line in taxes['impuestos']:
+                                BaseDR=abs(tax_line['amount_base'])
+                                ImpuestoDR=tax_line['sat_code_tax'] 
+                                TipoFactorDR=tax_line['type']
+                                TasaOCuotaDR=abs(tax_line['rate'])
+                                ImporteDR=abs(tax_line['tax_amount'])
+
+                                importe_dr = round(invoice_id.currency_id._convert(round(float("%.2f" % ImporteDR) * paid_percentage, 6), payment.currency_id, payment.company_id, x_date), 6)
+                                # importe_dr_mxn = round(invoice_id.currency_id._convert(round(float("%.2f" % ImporteDR) * paid_percentage, 2), payment.company_id.currency_id, payment.company_id, x_date), 2)
+
+                                importe_dr_mxn = 0.0
+                                if payment.currency_id == payment.company_id.currency_id:
+                                    importe_dr_mxn = importe_dr
+                                else:
+                                    importe_dr_mxn = importe_dr * payment_currency_rate
+
+                                base_dr = round(invoice_id.currency_id._convert(round(float("%.2f" % BaseDR) * paid_percentage, 6), payment.currency_id, payment.company_id, x_date), 6)
+                                # base_dr_mxn = round(invoice_id.currency_id._convert(round(float("%.2f" % BaseDR) * paid_percentage, 2), payment.company_id.currency_id, payment.company_id, x_date), 2)
+                                
+                                base_dr_mxn = 0.0
+                                if payment.currency_id == payment.company_id.currency_id:
+                                    base_dr_mxn = base_dr
+                                else:
+                                    base_dr_mxn = base_dr * payment_currency_rate
+
+                                ### Convertimos el valor al porcentaje aplicado ###
+                                BaseDR = BaseDR * paid_percentage
+                                ImporteDR = ImporteDR * paid_percentage
+                                sat_code_tax = tax_line['sat_code_tax']
+
+                                if TipoFactorDR == 'Exento':
+                                    TotalTrasladosBaseIVAExento = TotalTrasladosBaseIVAExento + base_dr_mxn
+                                else:
+                                    if '%0.*f' % (2, TasaOCuotaDR) == '0.16':
+                                        # IVA 16
+                                        TotalTrasladosBaseIVA16 = TotalTrasladosBaseIVA16 + base_dr_mxn
+                                        TotalTrasladosImpuestoIVA16 = TotalTrasladosImpuestoIVA16 + importe_dr_mxn
+                                    elif '%0.*f' % (2, TasaOCuotaDR) == '0.08':
+                                        # IVA 8
+                                        TotalTrasladosBaseIVA8 = TotalTrasladosBaseIVA8 + base_dr_mxn
+                                        TotalTrasladosImpuestoIVA8 = TotalTrasladosImpuestoIVA8 + importe_dr_mxn
+                                    elif '%0.*f' % (2, TasaOCuotaDR) == '0.00':
+                                        # IVA 0
+                                        TotalTrasladosBaseIVA0 = TotalTrasladosBaseIVA0 + base_dr_mxn
+                                        TotalTrasladosImpuestoIVA0 = TotalTrasladosImpuestoIVA0 + importe_dr_mxn
+
+                                tax_invoice_vals_traslados = {
+                                                        'BaseDR': '%0.*f' % (2, BaseDR),
+                                                        'ImpuestoDR': ImpuestoDR,
+                                                        'TipoFactorDR': TipoFactorDR,
+                                                        'TasaOcuotaDR': '%0.*f' % (6, TasaOCuotaDR),
+                                                        'ImporteDR': '%0.*f' % (decimal_presicion, ImporteDR),
+                                                    }
+
+                                tax_invoice_vals_traslados_totals = tax_invoice_vals_traslados.copy()
+
+                                tax_invoice_vals_traslados_totals.update({
+                                                                                'BaseDR': base_dr,
+                                                                                'ImporteDR': importe_dr,
+                                                                            })
+
+                                list_taxes_invoice_details_traslados.append(tax_invoice_vals_traslados)
+                                taxes_amounts_by_invoice_traslados.update({
+                                                                invoice_id: list_taxes_invoice_details_traslados,
+                                                            })
+
+                                total_imp_trasl_name = ImpuestoDR + '-' + TipoFactorDR + '-' + '%0.*f' % (2, TasaOCuotaDR)
+                                if total_imp_trasl_name in taxes_amounts_traslados_totales_dict:
+                                    BaseDR_prev = taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['BaseDR']
+                                    ImporteDR_prev = taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['ImporteDR']
+
+                                    BaseDR_new = float(BaseDR_prev) + base_dr
+                                    ImporteDR_new = float(ImporteDR_prev) + importe_dr
+                                    
+                                    taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['BaseDR'] = '%0.*f' % (2, BaseDR_new)
+                                    taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['ImporteDR'] = '%0.*f' % (decimal_presicion, ImporteDR_new)
+                                else:
+                                    taxes_amounts_traslados_totales_dict.update({
+                                                                                   total_imp_trasl_name : tax_invoice_vals_traslados_totals,
+                                                                                })
+
+                        if 'total_retenciones' in taxes:
+                            if 'total_retenciones' in taxes and taxes['total_retenciones'] > 0.0:
+
+                                TotalImpuestosRetenidos = taxes['total_retenciones']
+                                for tax_line in taxes['retenciones']:
+                                    BaseDR=abs(tax_line['amount_base'])
+                                    ImpuestoDR=tax_line['sat_code_tax'] 
+                                    TipoFactorDR=tax_line['type']
+                                    TasaOCuotaDR=abs(tax_line['rate'])
+                                    ImporteDR=abs(tax_line['tax_amount'])
+
+                                    importe_dr = round(invoice_id.currency_id._convert(round(float("%.2f" % ImporteDR) * paid_percentage, 6), payment.currency_id, payment.company_id, x_date), 6)
+                                    # importe_dr_mxn = round(invoice_id.currency_id._convert(round(float("%.2f" % ImporteDR) * paid_percentage, 2), payment.company_id.currency_id, payment.company_id, x_date), 2)
+
+                                    importe_dr_mxn = 0.0
+                                    if payment.currency_id == payment.company_id.currency_id:
+                                        importe_dr_mxn = importe_dr
+                                    else:
+                                        importe_dr_mxn = importe_dr * payment_currency_rate
+
+                                    base_dr = round(invoice_id.currency_id._convert(round(float("%.2f" % BaseDR) * paid_percentage, 6), payment.currency_id, payment.company_id, x_date), 6)
+                                    # base_dr_mxn = round(invoice_id.currency_id._convert(round(float("%.2f" % BaseDR) * paid_percentage, 2), payment.company_id.currency_id, payment.company_id, x_date), 2)
+                                    
+                                    base_dr_mxn = 0.0
+                                    if payment.currency_id == payment.company_id.currency_id:
+                                        base_dr_mxn = base_dr
+                                    else:
+                                        base_dr_mxn = base_dr * payment_currency_rate
+
+                                    ### Convertimos el valor al porcentaje aplicado ###
+                                    BaseDR = BaseDR * paid_percentage
+                                    ImporteDR = ImporteDR * paid_percentage
+
+                                    sat_code_tax = tax_line['sat_code_tax']
+
+                                    if sat_code_tax == 'IVA' or sat_code_tax == '002':
+                                        # IVA 16
+                                        TotalRetencionesIVA = TotalRetencionesIVA + importe_dr_mxn
+                                    elif sat_code_tax == 'ISR' or sat_code_tax == '001':
+                                        # IVA 8
+                                        TotalRetencionesISR = TotalRetencionesISR + importe_dr_mxn
+                                    elif sat_code_tax == 'IEPS' or sat_code_tax == '003':
+                                        # IVA 0
+                                        TotalRetencionesIEPS = TotalRetencionesIEPS + importe_dr_mxn
+
+                                    tax_invoice_vals_retenciones = {
+                                                            'BaseDR': '%0.*f' % (2, BaseDR),
+                                                            'ImpuestoDR': ImpuestoDR,
+                                                            'TipoFactorDR': TipoFactorDR,
+                                                            'TasaOcuotaDR': '%0.*f' % (6, TasaOCuotaDR),
+                                                            'ImporteDR': '%0.*f' % (decimal_presicion, ImporteDR),
+                                                        }
+
+                                    tax_invoice_vals_retenciones_totals = tax_invoice_vals_retenciones.copy()
+
+                                    tax_invoice_vals_retenciones_totals.update({
+                                                                                'BaseDR': base_dr,
+                                                                                'ImporteDR': importe_dr,
+                                                                            })
+
+                                    list_taxes_invoice_details_retenciones.append(tax_invoice_vals_retenciones)
+                                    taxes_amounts_by_invoice_retenciones.update({
+                                                                    invoice_id: list_taxes_invoice_details_retenciones,
+                                                                })
+
+                                    total_imp_ret_name = ImpuestoDR + '-' + TipoFactorDR + '-' + '%0.*f' % (2, TasaOCuotaDR)
+                                    if total_imp_ret_name in taxes_amounts_retenciones_totales_dict:
+                                        BaseDR_prev = taxes_amounts_retenciones_totales_dict[total_imp_ret_name]['BaseDR']
+                                        ImporteDR_prev = taxes_amounts_retenciones_totales_dict[total_imp_ret_name]['ImporteDR']
+
+                                        BaseDR_new = float(BaseDR_prev) + base_dr
+                                        ImporteDR_new = float(ImporteDR_prev) + importe_dr
+                                        
+                                        taxes_amounts_retenciones_totales_dict[total_imp_ret_name]['BaseDR'] = '%0.*f' % (2, BaseDR_new)
+                                        taxes_amounts_retenciones_totales_dict[total_imp_ret_name]['ImporteDR'] = '%0.*f' % (decimal_presicion, ImporteDR_new)
+                                    else:
+                                        taxes_amounts_retenciones_totales_dict.update({
+                                                                                       total_imp_ret_name : tax_invoice_vals_retenciones_totals,
+                                                                                    })
+                    #### IVA EXENTO ####
+                    else:
+                        if iva_exento:
+                            if 'total_impuestos' in taxes:
+                                TotalImpuestosTrasladados = taxes['total_impuestos']
+                                
+                                for tax_line in taxes['impuestos']:
+                                    BaseDR=abs(tax_line['amount_base'])
+                                    ImpuestoDR=tax_line['sat_code_tax'] 
+                                    TipoFactorDR=tax_line['type']
+                                    TasaOCuotaDR=abs(tax_line['rate'])
+                                    ImporteDR=abs(tax_line['tax_amount'])
+
+                                    ### Convertimos el valor al porcentaje aplicado ###
+                                    importe_dr = round(invoice_id.currency_id._convert(round(float("%.2f" % ImporteDR) * paid_percentage, 2), payment.currency_id, payment.company_id, x_date), 2)
+                                    # importe_dr_mxn = round(invoice_id.currency_id._convert(round(float("%.2f" % ImporteDR) * paid_percentage, 2), payment.company_id.currency_id, payment.company_id, x_date), 2)
+                                    
+                                    importe_dr_mxn = 0.0
+                                    if payment.currency_id == payment.company_id.currency_id:
+                                        importe_dr_mxn = importe_dr
+                                    else:
+                                        importe_dr_mxn = importe_dr * payment_currency_rate
+
+                                    base_dr = round(invoice_id.currency_id._convert(round(float("%.2f" % BaseDR) * paid_percentage, 2), payment.currency_id, payment.company_id, x_date), 2)
+                                    # base_dr_mxn = round(invoice_id.currency_id._convert(round(float("%.2f" % BaseDR) * paid_percentage, 2), payment.company_id.currency_id, payment.company_id, x_date), 2)
+                                    
+                                    base_dr_mxn = 0.0
+                                    if payment.currency_id == payment.company_id.currency_id:
+                                        base_dr_mxn = base_dr
+                                    else:
+                                        base_dr_mxn = base_dr * payment_currency_rate
+
+                                    BaseDR = BaseDR * paid_percentage
+                                    ImporteDR = ImporteDR * paid_percentage
+
+                                    if TipoFactorDR == 'Exento':
+                                        TotalTrasladosBaseIVAExento = TotalTrasladosBaseIVAExento + base_dr_mxn
+                                    else:
+                                        if '%0.*f' % (2, TasaOCuotaDR) == '0.16':
+                                            # IVA 16
+                                            TotalTrasladosBaseIVA16 = TotalTrasladosBaseIVA16 + base_dr_mxn
+                                            TotalTrasladosImpuestoIVA16 = TotalTrasladosImpuestoIVA16 + importe_dr_mxn
+                                        elif '%0.*f' % (2, TasaOCuotaDR) == '0.08':
+                                            # IVA 8
+                                            TotalTrasladosBaseIVA8 = TotalTrasladosBaseIVA8 + base_dr_mxn
+                                            TotalTrasladosImpuestoIVA8 = TotalTrasladosImpuestoIVA8 + importe_dr_mxn
+                                        elif '%0.*f' % (2, TasaOCuotaDR) == '0.00':
+                                            # IVA 0
+                                            TotalTrasladosBaseIVA0 = TotalTrasladosBaseIVA0 + base_dr_mxn
+                                            TotalTrasladosImpuestoIVA0 = TotalTrasladosImpuestoIVA0 + importe_dr_mxn
+
+                                    tax_invoice_vals_traslados = {
+                                                            'BaseDR': '%0.*f' % (2, BaseDR),
+                                                            'ImpuestoDR': ImpuestoDR,
+                                                            'TipoFactorDR': TipoFactorDR,
+                                                            'TasaOcuotaDR': '%0.*f' % (6, TasaOCuotaDR),
+                                                            'ImporteDR': '%0.*f' % (decimal_presicion, ImporteDR),
+                                                        }
+
+                                    tax_invoice_vals_traslados_totals = tax_invoice_vals_traslados.copy()
+
+                                    tax_invoice_vals_traslados_totals.update({
+                                                                                'BaseDR': base_dr,
+                                                                                'ImporteDR': importe_dr,
+                                                                            })
+                                    
+                                    list_taxes_invoice_details_traslados.append(tax_invoice_vals_traslados)
+                                    taxes_amounts_by_invoice_traslados.update({
+                                                                    invoice_id: list_taxes_invoice_details_traslados,
+                                                                })
+
+                                    total_imp_trasl_name = ImpuestoDR + '-' + TipoFactorDR + '-' + '%0.*f' % (2, TasaOCuotaDR)
+                                    if total_imp_trasl_name in taxes_amounts_traslados_totales_dict:
+                                        BaseDR_prev = taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['BaseDR']
+                                        ImporteDR_prev = taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['ImporteDR']
+
+                                        BaseDR_new = float(BaseDR_prev) + base_dr
+                                        ImporteDR_new = float(ImporteDR_prev) + importe_dr
+                                        
+                                        taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['BaseDR'] = '%0.*f' % (2, BaseDR_new)
+                                        taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['ImporteDR'] = '%0.*f' % (decimal_presicion, ImporteDR_new)
+                                    else:
+                                        taxes_amounts_traslados_totales_dict.update({
+                                                                                       total_imp_trasl_name : tax_invoice_vals_traslados_totals,
+                                                                                    })
+
+        if taxes_amounts_traslados_totales_dict:
+            for taxt in taxes_amounts_traslados_totales_dict.keys():
+                taxvals = taxes_amounts_traslados_totales_dict[taxt]
+                taxes_amounts_traslados_totales.append(taxvals)
+        if taxes_amounts_retenciones_totales_dict:
+            for taxr in taxes_amounts_retenciones_totales_dict.keys():
+                taxvals = taxes_amounts_retenciones_totales_dict[taxr]
+                taxes_amounts_retenciones_totales.append(taxvals)
+
+        ###### Los totales los convertimos a moneda nacional ######## 
+        
+        if self.currency_id.name == 'MXN':
+            decimal_presicion = 2
+        _logger.info("\n############# decimal_presicion: %s " % decimal_presicion)
+
+        tax_amounts_dr = {
+                                    'TotalRetencionesIVA' : '%0.*f' % (decimal_presicion, TotalRetencionesIVA) if TotalRetencionesIVA else False,
+                                    'TotalRetencionesISR' : '%0.*f' % (decimal_presicion, TotalRetencionesISR) if TotalRetencionesISR else False,
+                                    'TotalRetencionesIEPS' : '%0.*f' % (decimal_presicion, TotalRetencionesIEPS) if TotalRetencionesIEPS else False,
+                                    'TotalTrasladosBaseIVA16' : '%0.*f' % (decimal_presicion, TotalTrasladosBaseIVA16) if TotalTrasladosBaseIVA16 else False,
+                                    'TotalTrasladosImpuestoIVA16' : '%0.*f' % (decimal_presicion, TotalTrasladosImpuestoIVA16) if TotalTrasladosImpuestoIVA16 else False,
+                                    'TotalTrasladosBaseIVA8' : '%0.*f' % (decimal_presicion, TotalTrasladosBaseIVA8) if TotalTrasladosBaseIVA8 else False,
+                                    'TotalTrasladosImpuestoIVA8' : '%0.*f' % (decimal_presicion, TotalTrasladosImpuestoIVA8) if TotalTrasladosImpuestoIVA8 else False,
+                                    'TotalTrasladosBaseIVA0' : '%0.*f' % (decimal_presicion, TotalTrasladosBaseIVA0) if TotalTrasladosBaseIVA0 else False,
+                                    'TotalTrasladosImpuestoIVA0' : '%0.*f' % (decimal_presicion, TotalTrasladosImpuestoIVA0) if TotalTrasladosImpuestoIVA0 else False,
+                                    'TotalTrasladosBaseIVAExento' : '%0.*f' % (decimal_presicion, TotalTrasladosBaseIVAExento) if TotalTrasladosBaseIVAExento else False,
+                                    'TrasladosDR': taxes_amounts_by_invoice_traslados,
+                                    'RetencionesDR': taxes_amounts_by_invoice_retenciones,
+                                    'TrasladosDRTotales': taxes_amounts_traslados_totales,
+                                    'RetencionesDRTotales': taxes_amounts_retenciones_totales,
+                                    'MontoTotalPagos': '%0.*f' % (decimal_presicion, MontoTotalPagos),
+                              }
+
+        # raise UserError("DEBUG >>>>>")
+
+        return tax_amounts_dr
     
     
     def get_xml_to_sign(self):    
         self.ensure_one()
         context = self._context.copy()
-        facturae_version = "3.3"
+        facturae_version = "4.0"
         if not self.pay_method_id:
             raise UserError(_('Error !!!\nNo ha definido el método de Pago. Recuerde que este Método de Pago es diferente al de Contabilidad Electrónica (Definido en el diario contable de Pago)'))
         invoice_obj = self.env['account.move']
@@ -658,14 +1094,50 @@ class AccountPayment(models.Model):
             #date_2_cfdi_tz = ti.strftime('%Y-%m-%dT%H:%M:%S', ti.strptime(str(payment_datetime_to_sign), '%Y-%m-%d %H:%M:%S'))
         if not self.env.company.regimen_fiscal_id:
             raise UserError("Error!\nLa Compañía %s no tiene definido un Regimen Fiscal, por lo cual no puede emitir el Recibo CFDI." % address_payment_parent.name)
+        
+        receptor_zip = ""
+        if parent_obj.zip_sat_id:
+            receptor_zip = parent_obj.zip_sat_id.code
+        else:
+            if parent_obj.zip:
+                receptor_zip = parent_obj.zip
+
+        #### Detalle de Pagos ####
+        
+        tax_amounts_details = self.get_account_tax_amounts_detail_from_invoice()
+
+        TotalRetencionesIVA = tax_amounts_details.get('TotalRetencionesIVA', False)
+        TotalRetencionesISR = tax_amounts_details.get('TotalRetencionesISR', False)
+        TotalRetencionesIEPS = tax_amounts_details.get('TotalRetencionesIEPS', False)
+        TotalTrasladosBaseIVA16 = tax_amounts_details.get('TotalTrasladosBaseIVA16', False)
+        TotalTrasladosImpuestoIVA16 = tax_amounts_details.get('TotalTrasladosImpuestoIVA16', False)
+        TotalTrasladosBaseIVA8 = tax_amounts_details.get('TotalTrasladosBaseIVA8', False)
+        TotalTrasladosImpuestoIVA8 = tax_amounts_details.get('TotalTrasladosImpuestoIVA8', False)
+        TotalTrasladosBaseIVA0 = tax_amounts_details.get('TotalTrasladosBaseIVA0', False)
+        TotalTrasladosImpuestoIVA0 = tax_amounts_details.get('TotalTrasladosImpuestoIVA0', False)
+        TotalTrasladosBaseIVAExento = tax_amounts_details.get('TotalTrasladosBaseIVAExento', False)
+        TrasladosDR = tax_amounts_details.get('TrasladosDR', False)
+        RetencionesDR = tax_amounts_details.get('RetencionesDR', False)
+
+        TrasladosDRTotales = tax_amounts_details.get('TrasladosDRTotales', False)
+        RetencionesDRTotales = tax_amounts_details.get('RetencionesDRTotales', False)
+        MontoTotalPagos = tax_amounts_details.get('MontoTotalPagos', False)
+        # MontoTotalPagos = False
+
+        razon_social_emisor = return_replacement(address_payment_parent.name)
+
+        razon_social_receptor = receptor_nombre
+        if receptor_rfc.upper() != 'XAXX010101000':
+            razon_social_receptor = return_replacement(receptor_nombre)
+            
         dictargs2 = {
             'o'             : self,
             'time'          : ti,
             'emisor_rfc'    : address_payment_parent.vat,
-            'emisor_nombre' : address_payment_parent.name,
+            'emisor_nombre' : razon_social_emisor,
             'emisor_regimen': self.env.company.regimen_fiscal_id.code,
             'receptor_rfc'  : receptor_rfc.upper(),
-            'receptor_nombre': receptor_nombre or '',
+            'receptor_nombre': razon_social_receptor or '',
             'ResidenciaFiscal' : ResidenciaFiscal,
             'NumRegIdTrib'  : NumRegIdTrib,
             'noCertificado' : noCertificado,
@@ -675,6 +1147,25 @@ class AccountPayment(models.Model):
             'fecha'         : fecha,
             'date_2_cfdi_tz': date_2_cfdi_tz,
             'fecha_recepcion' : fecha_recepcion,
+            'pac_confirmation_code': self.pac_confirmation_code if self.pac_confirmation_code else False,
+            'domicilio_fiscal_receptor': receptor_zip,
+            'regimen_fiscal_receptor': parent_obj.regimen_fiscal_id.code,
+            'objeto_impuesto': '01',
+            'TotalRetencionesIVA': TotalRetencionesIVA,
+            'TotalRetencionesISR': TotalRetencionesISR,
+            'TotalRetencionesIEPS': TotalRetencionesIEPS,
+            'TotalTrasladosBaseIVA16': TotalTrasladosBaseIVA16,
+            'TotalTrasladosImpuestoIVA16': TotalTrasladosImpuestoIVA16,
+            'TotalTrasladosBaseIVA8': TotalTrasladosBaseIVA8,
+            'TotalTrasladosImpuestoIVA8': TotalTrasladosImpuestoIVA8,
+            'TotalTrasladosBaseIVA0': TotalTrasladosBaseIVA0,
+            'TotalTrasladosImpuestoIVA0': TotalTrasladosImpuestoIVA0,
+            'TotalTrasladosBaseIVAExento': TotalTrasladosBaseIVAExento,
+            'TrasladosDR': TrasladosDR,
+            'RetencionesDR': RetencionesDR,
+            'TrasladosDRTotales': TrasladosDRTotales,
+            'RetencionesDRTotales': RetencionesDRTotales,
+            'MontoTotalPagos': MontoTotalPagos,
             }
 
         ### Datos Bancarios en XML ###

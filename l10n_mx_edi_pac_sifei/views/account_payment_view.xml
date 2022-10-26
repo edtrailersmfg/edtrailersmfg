@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        	
+        <record model="ir.ui.view" id="view_account_payment_form_inh_l10n_mx_sifei_cancel">
+            <field name="name">view_account_payment_form_inh_l10n_mx.sifei_cancel</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="l10n_mx_edi.view_account_payment_form_inh_l10n_mx"/>
+            <field name="arch" type="xml">
+                <field name="l10n_mx_edi_origin" position="after">
+                    <field name="motivo_cancelacion" 
+                           attrs="{'invisible' : [('motivo_cancelacion','=',False)]}"/>
+                    <field name="uuid_relacionado_cancelacion" 
+                           attrs="{'invisible' : [('uuid_relacionado_cancelacion','=',False)]}"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>
+	

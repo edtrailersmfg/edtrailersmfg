@@ -13,4 +13,7 @@ class AccountTax(models.Model):
     
     sat_code_tax = fields.Selection([('001','[ 001 ] ISR'),
                                      ('002','[ 002 ] IVA'),
-                                     ('003','[ 003 ] IEPS')], 'Clave SAT')
+                                     ('003','[ 003 ] IEPS'),
+                                     ('004','[ 004 ] Impuesto Local')], 'Clave SAT')
+
+    local_tax = fields.Char('Impuesto Local')

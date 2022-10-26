@@ -5,8 +5,8 @@
     'version': '1.0',
     'category': 'Account',
     'summary': "Templates for recurring Journal Entries",
-    'author': "Argil Consulting,Odoo SA",
-    'website': 'http://www.argil.mx',
+    'author': "Fixdoo",
+    'website': 'http://www.fixdoo.mx',
     'depends': ['account', 'analytic'],
     'data': [
         'security/ir.model.access.csv',
@@ -15,6 +15,7 @@
     ],
     'test': [],
     'installable': True,
-}
+    'license': 'Other proprietary',
+}   
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

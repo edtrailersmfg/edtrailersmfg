@@ -26,14 +26,14 @@
         </record>
         
         <record id="admon_cfdi_33" model="res.groups">
-            <field name="name">Administrador CFDI 3.3</field>
-            <field name="comment">Estos Usuarios Tendran la Posibilidad de Administrar los Atributos para el CFDI 3.3, pudiendo corregir algun valor de los mismos o inclusive con la posibilidad de añadir nuevos.</field>
+            <field name="name">Administrador CFDI 4.0</field>
+            <field name="comment">Estos Usuarios Tendran la Posibilidad de Administrar los Atributos para el CFDI 4.0, pudiendo corregir algun valor de los mismos o inclusive con la posibilidad de añadir nuevos.</field>
             <field name="users" eval="[(4, ref('base.user_root'))]"/>
         </record>
 
         <record id="user_cfdi_33" model="res.groups">
-            <field name="name">Usuario CFDI 3.3</field>
-            <field name="comment">Estos Usuarios Tendran la Posibilidad de Utilizar los Atributos para el CFDI 3.3, pero de forma limitada a solo lectura.</field>
+            <field name="name">Usuario CFDI 4.0</field>
+            <field name="comment">Estos Usuarios Tendran la Posibilidad de Utilizar los Atributos para el CFDI 4.0, pero de forma limitada a solo lectura.</field>
         </record>
 
         <record model="ir.module.category" id="module_l10n_mx_einvoice">

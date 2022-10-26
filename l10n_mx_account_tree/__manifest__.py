@@ -7,7 +7,7 @@
     "depends": [
         'account', 'analytic'
     ],
-    "author": "Fixdoo & Argil",
+    "author": "Fixdoo",
     "description" : """
 Estructura Jerárquica de cuentas
 ================================
@@ -26,5 +26,5 @@ para el Plan Contable y Cuentas Analíticas
         'views/analytic_view.xml',
     ],
     "installable": True,
-
+    'license': 'Other proprietary',
 }

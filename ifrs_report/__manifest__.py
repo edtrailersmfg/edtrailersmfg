@@ -3,10 +3,10 @@
 {
     "name"      : "NIIF - Normas Internacionales de Información Financiera",
     "version"   : "1.0",
-    "author"    : "Fixdoo & Argil",
+    "author"    : "Argil Consulting",
     "category"  : "Accounting",
-    "website"   : "http://www.fixdoo.mx",
-    #'license'  : 'OEEL-1',
+    "website"   : "http://www.argil.mx",
+    'license': 'Other proprietary',
     "depends"   : [
         "account",
         "l10n_mx_account_tree",

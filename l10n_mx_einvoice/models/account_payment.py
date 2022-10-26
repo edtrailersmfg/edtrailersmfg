@@ -131,17 +131,17 @@ class AccountPayment(models.Model):
                                                            ('name', 'ilike', '.xml')], limit=1)
                 if attachment_xml_ids:
                     try:
-                        xml_data = base64.b64decode(attachment_xml_ids.datas).replace('http://www.sat.gob.mx/cfd/3 ', '').replace('Rfc=','rfc=').replace('Fecha=','fecha=').replace('Total=','total=').replace('Folio=','folio=').replace('Serie=','serie=')
+                        xml_data = base64.b64decode(attachment_xml_ids.datas).replace('http://www.sat.gob.mx/cfd/3 ', '').replace('http://www.sat.gob.mx/cfd/4 ', '').replace('Rfc=','rfc=').replace('Fecha=','fecha=').replace('Total=','total=').replace('Folio=','folio=').replace('Serie=','serie=')
                         arch_xml = parseString(xml_data)
                         xvalue = arch_xml.getElementsByTagName('tfd:TimbreFiscalDigital')[0]
                         timbre = xvalue.attributes['UUID'].value
                         serie, folio = False, False
                         try:
-                            serie = xvalue.attributes['serie'].value
+                            serie = xvalue.attributes['Serie'].value
                         except:
                             pass
                         try:
-                            folio = xvalue.attributes['folio'].value
+                            folio = xvalue.attributes['Folio'].value
                         except:
                             pass
                         res = payment_obj.search([('sat_uuid', '=', timbre),('id','!=',self.id)])
@@ -204,7 +204,7 @@ class AccountPayment(models.Model):
     
     user_id = fields.Many2one('res.users', string='Usuario', readonly=True, default=lambda self: self.env.user)
     uso_cfdi_id = fields.Many2one('sat.uso.cfdi', 'Uso CFDI', required=False, 
-                                  default=lambda self: self.env['sat.uso.cfdi'].search([('code','=','P01')],limit=1)) 
+                                  default=lambda self: self.env['sat.uso.cfdi'].search([('code','=','S01')],limit=1)) 
     type_document_id = fields.Many2one('sat.tipo.comprobante', string='Tipo de Comprobante', required=False, 
                                        help='Define el motivo de la compra.', 
                                        default=lambda self: self.env['sat.tipo.comprobante'].search([('code','=','P')],limit=1)) 
@@ -289,6 +289,9 @@ class AccountPayment(models.Model):
     
     comments = fields.Text("Comentarios")
 
+    pac_confirmation_code = fields.Char('Codigo de Confirmación', help="Atributo condicional para registrar la clave de confirmación que entregue\
+                    el PAC para expedir el comprobante con importes grandes, con un tipo de cambio fuera del rango establecido o con ambos casos", size=64)
+    
     
     @api.onchange('date')
     def _onchange_payment_date(self):
@@ -354,8 +357,27 @@ class AccountPaymentInvoice(models.Model):
     def _get_saldo_final(self):
         for rec in self:
             rec.saldo_final = round(rec.saldo_anterior - rec.monto_pago, 2)
-        
     
+    @api.depends('invoice_id')
+    def _get_object_invoice_taxes(self):
+        for rec in self:
+            objeto_impuestos = '01'
+            for line in rec.invoice_id.invoice_line_ids:
+                if line.product_id and line.product_id.sat_tax_obj:
+                    if line.product_id.sat_tax_obj != '01':
+                        objeto_impuestos  =  '02'
+            rec.objeto_impuestos  = objeto_impuestos
+
+    @api.depends('invoice_id', 'invoice_currency_rate', 'monto_pago')
+    def _get_dr_equivalence(self):
+        for payment in self:
+            equivalencia_dr = 1
+            #revisa la cantidad que se va a pagar en el docuemnto
+            if round(payment.invoice_currency_rate,6) != 1.0:
+                equivalencia_dr = round(payment.invoice_currency_rate,6)
+
+            payment.equivalencia_dr  = equivalencia_dr
+        
     payment_id  = fields.Many2one('account.payment', 'Pago', required=True)
     payment_state = fields.Selection(string="Estado", readonly=True, related="payment_id.state")
     payment_currency_id = fields.Many2one('res.currency', string="Moneda de Pago", related='payment_id.currency_id', readonly=True)
@@ -375,5 +397,6 @@ class AccountPaymentInvoice(models.Model):
     monto_pago  = fields.Float('Monto Aplicado', default=0.0, help="Monto Pago (en Moneda de la Factura)")
     saldo_final = fields.Float('Saldo Insoluto', compute='_get_saldo_final', store=True,
                                help="Saldo Insoluto (en Moneda de la Factura) después del pago")
-    
-    
+
+    objeto_impuestos = fields.Char('Objeto de Impuestos', compute="_get_object_invoice_taxes")
+    equivalencia_dr  = fields.Float('Equivalencia DR', compute="_get_dr_equivalence", digits=(4,6))

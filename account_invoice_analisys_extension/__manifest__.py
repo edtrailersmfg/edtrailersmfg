@@ -1,9 +1,10 @@
 # -*- encoding: utf-8 -*-
 
+
 {
     "name": "Extensión - Análisis de Facturas", 
     "version": "1.0", 
-    "author": "Fixdoo & Argil", 
+    "author": "Fixdoo", 
     "category": "Accounting", 
     "description": """
 
@@ -19,7 +20,7 @@ Se agregan las siguiente columnas:
 
     """, 
     "website": "http://www.fixdoo.mx/", 
-    #'license' : 'OEEL-1',
+    'license': 'Other proprietary',
     "depends": ["account", "account_invoice_currency",
     ], 
     "data": [
