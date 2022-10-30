@@ -228,8 +228,10 @@ class AccountMove(models.Model):
         if not complemento['cce11:ComercioExterior']['cce11:Receptor']['cce11:Domicilio']['CodigoPostal']:
             complemento['cce11:ComercioExterior']['cce11:Receptor']['cce11:Domicilio'].pop('CodigoPostal')
         
-        complemento['cce11:ComercioExterior']['cce11:Receptor'].update({'NumRegIdTrib'     : partner.num_reg_trib,
-                                                                 'ResidenciaFiscal' : partner.country_id.sat_code})
+        #complemento['cce11:ComercioExterior']['cce11:Receptor'].update({'NumRegIdTrib'     : partner.num_reg_trib,
+        #                                                         'ResidenciaFiscal' : partner.country_id.sat_code})
+
+        complemento['cce11:ComercioExterior']['cce11:Receptor'].update({'NumRegIdTrib'     : partner.num_reg_trib})
         
         if partner.street_number:
             complemento['cce11:ComercioExterior']['cce11:Receptor']['cce11:Domicilio'].update({'NumeroExterior': partner.street_number})
