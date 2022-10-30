@@ -1115,6 +1115,8 @@ class AccountMove(models.Model):
         if rfc.upper() != 'XAXX010101000':
             razon_social_receptor = return_replacement(parent_obj.name)
 
+        residencia_fiscal_receptor = parent_obj.country_id.sat_code
+
         invoice_data['cfdi:Receptor'] = {}
         invoice_data['cfdi:Receptor'].update({
             'Rfc': rfc.upper(),
@@ -1123,6 +1125,7 @@ class AccountMove(models.Model):
             'RegimenFiscalReceptor': parent_obj.regimen_fiscal_id.code,
             #'DomicilioFiscalReceptor ': receptor_zip,
             'DomicilioFiscalReceptor ': invoice.address_issued_id.zip_sat_id.code,
+            'ResidenciaFiscal ': residencia_fiscal_receptor,
         })
         # Termina seccion: Receptor
         
