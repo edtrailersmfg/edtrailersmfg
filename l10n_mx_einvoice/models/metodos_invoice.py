@@ -582,7 +582,7 @@ class AccountMove(models.Model):
                         'FechaHoraSalidaLlegada',
                         'IDUbicacion',
                         'NumRegIdTrib',
-                        #'ResidenciaFiscal',
+                        'ResidenciaFiscal',
                         'NumEstacion',
                         'NombreEstacion',
                         'TipoEstacion',
@@ -1121,7 +1121,8 @@ class AccountMove(models.Model):
             'Nombre': razon_social_receptor,
             'UsoCFDI': invoice.uso_cfdi_id.code,
             'RegimenFiscalReceptor': parent_obj.regimen_fiscal_id.code,
-            'DomicilioFiscalReceptor ': receptor_zip,
+            #'DomicilioFiscalReceptor ': receptor_zip,
+            'DomicilioFiscalReceptor ': invoice.address_issued_id.zip_sat_id.code,
         })
         # Termina seccion: Receptor
         
