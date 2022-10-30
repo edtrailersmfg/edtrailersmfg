@@ -195,7 +195,7 @@ class AccountMove(models.Model):
                 raise UserError(_('Error !!! El Propietario no tiene definido el Registro Tributario o el País, no es posible generar el CFDI sin esa información'))
             complemento['cce11:ComercioExterior'].update({'cce11:Propietario': {
                 'NumRegIdTrib'     : self.cfdi_comercio_exterior_propietario_id.num_reg_trib,
-                'ResidenciaFiscal' : self.cfdi_comercio_exterior_propietario_id.country_id.sat_code,
+                #'ResidenciaFiscal' : self.cfdi_comercio_exterior_propietario_id.country_id.sat_code,
             }})        
         
         # ------- ------- RECEPTOR ------- -------
