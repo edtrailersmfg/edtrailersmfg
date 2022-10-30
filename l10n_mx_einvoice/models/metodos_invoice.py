@@ -582,7 +582,7 @@ class AccountMove(models.Model):
                         'FechaHoraSalidaLlegada',
                         'IDUbicacion',
                         'NumRegIdTrib',
-                        'ResidenciaFiscal',
+                        #'ResidenciaFiscal',
                         'NumEstacion',
                         'NombreEstacion',
                         'TipoEstacion',
