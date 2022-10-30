@@ -65,7 +65,7 @@
   <xsl:template match="cce11:Propietario">
     <!--  Tratamiento de los atributos de cce11:Propietario-->
     
-    <xsl:call-template name="Requerido">
+    <xsl:call-template name="Opcional">
       <xsl:with-param name="valor" select="./@NumRegIdTrib" />
     </xsl:call-template>
     <xsl:call-template name="Requerido">
