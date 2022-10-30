@@ -1279,7 +1279,7 @@ class AccountMove(models.Model):
                             'Impuesto': tax.sat_code_tax,
                             'TipoFactor': tax.sat_tasa_cuota,
                             'TasaOCuota': "%.6f" % (abs(tax.amount) / 100.0),
-                            'Importe': "%.0f" % tax_importe,
+                            'Importe': "%.2f" % tax_importe,
                         }
                     }
 
