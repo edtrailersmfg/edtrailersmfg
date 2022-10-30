@@ -1126,6 +1126,7 @@ class AccountMove(models.Model):
             #'DomicilioFiscalReceptor ': receptor_zip,
             'DomicilioFiscalReceptor ': invoice.address_issued_id.zip_sat_id.code,
             'ResidenciaFiscal ': residencia_fiscal_receptor,
+            'NumRegIdTrib ': parent_obj.num_reg_trib,
         })
         # Termina seccion: Receptor
         
