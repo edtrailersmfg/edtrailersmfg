@@ -1116,18 +1116,12 @@ class AccountMove(models.Model):
             razon_social_receptor = return_replacement(parent_obj.name)
 
         invoice_data['cfdi:Receptor'] = {}
-        #invoice_data['cfdi:Receptor'].update({
-        #    'Rfc': rfc.upper(),
-        #    'Nombre': razon_social_receptor,
-        #    'UsoCFDI': invoice.uso_cfdi_id.code,
-        #    'RegimenFiscalReceptor': parent_obj.regimen_fiscal_id.code,
-        #    'DomicilioFiscalReceptor ': receptor_zip,
-        #})
         invoice_data['cfdi:Receptor'].update({
             'Rfc': rfc.upper(),
             'Nombre': razon_social_receptor,
             'UsoCFDI': invoice.uso_cfdi_id.code,
             'RegimenFiscalReceptor': parent_obj.regimen_fiscal_id.code,
+            'DomicilioFiscalReceptor ': receptor_zip,
         })
         # Termina seccion: Receptor
         
