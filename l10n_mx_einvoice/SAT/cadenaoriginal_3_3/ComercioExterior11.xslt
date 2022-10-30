@@ -77,7 +77,7 @@
   <xsl:template match="cce11:Receptor">
     <!--  Tratamiento de los atributos de cce11:Receptor-->
     
-    <xsl:call-template name="Requerido">
+    <xsl:call-template name="Opcional">
       <xsl:with-param name="valor" select="./@NumRegIdTrib" />
     </xsl:call-template>
     <xsl:apply-templates select="./cce11:Domicilio" />
