@@ -116,6 +116,7 @@ class AccountPayment(models.Model):
                '15' : '15',
                '16' : False,
                '17' : '17',
+               '28' : '28',
                '98' : '98',
                '99' : '99',
                False: False,
