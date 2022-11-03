@@ -1077,8 +1077,8 @@ class AccountPayment(models.Model):
             if not address_invoice.num_reg_trib:
                 raise UserError(_("Error!\nPara clientes con dirección en el extranjero es necesario ingresar el registro de identidad fiscal."))
             
-            #ResidenciaFiscal = address_invoice.country_id.sat_code
-            #NumRegIdTrib = address_invoice.num_reg_trib
+            ResidenciaFiscal = address_invoice.country_id.sat_code
+            NumRegIdTrib = address_invoice.num_reg_trib
             #Quitar 03/11/2022 Enrique Jaquez
 
         fecha = self.date_payment_tz.strftime('%Y-%m-%dT%H:%M:%S') or ''
