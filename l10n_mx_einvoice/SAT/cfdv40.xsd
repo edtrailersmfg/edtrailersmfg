@@ -147,13 +147,11 @@
 							</xs:simpleType>
 						</xs:attribute>
 
-<!--
 						<xs:attribute name="ResidenciaFiscal" type="catCFDI:c_Pais" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo condicional para registrar la clave del país de residencia para efectos fiscales del receptor del comprobante, cuando se trate de un extranjero, y que es conforme con la especificación ISO 3166-1 alpha-3. Es requerido cuando se incluya el complemento de comercio exterior o se registre el atributo NumRegIdTrib.</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
--->
 
 						<xs:attribute name="NumRegIdTrib" use="optional">
 							<xs:annotation>
