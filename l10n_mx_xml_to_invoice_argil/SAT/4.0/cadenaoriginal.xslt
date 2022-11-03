@@ -166,14 +166,12 @@
     <xsl:call-template name="Requerido">
       <xsl:with-param name="valor" select="./@DomicilioFiscalReceptor"/>
     </xsl:call-template>
-<!--
     <xsl:call-template name="Opcional">
       <xsl:with-param name="valor" select="./@ResidenciaFiscal"/>
     </xsl:call-template>
     <xsl:call-template name="Opcional">
       <xsl:with-param name="valor" select="./@NumRegIdTrib"/>
     </xsl:call-template>
--->
     <xsl:call-template name="Requerido">
       <xsl:with-param name="valor" select="./@RegimenFiscalReceptor"/>
     </xsl:call-template>
