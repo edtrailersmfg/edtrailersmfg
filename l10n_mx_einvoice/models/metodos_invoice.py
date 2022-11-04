@@ -1119,6 +1119,7 @@ class AccountMove(models.Model):
 
         invoice_data['cfdi:Receptor'] = {}
 
+        #Enrique Jaquez
         if rfc.upper() != 'XAXX010101000':
             invoice_data['cfdi:Receptor'].update({
                 'Rfc': rfc.upper(),
@@ -1130,8 +1131,7 @@ class AccountMove(models.Model):
                 'ResidenciaFiscal ': residencia_fiscal_receptor,
                 'NumRegIdTrib ': parent_obj.num_reg_trib,
             })
-
-        if rfc.upper() == 'XAXX010101000':
+        else:
             invoice_data['cfdi:Receptor'].update({
                 'Rfc': rfc.upper(),
                 'Nombre': razon_social_receptor,
@@ -1140,7 +1140,6 @@ class AccountMove(models.Model):
                 #'DomicilioFiscalReceptor ': receptor_zip,
                 'DomicilioFiscalReceptor ': invoice.address_issued_id.zip_sat_id.code,
             })
-
         # Termina seccion: Receptor
         
         # Inicia seccion: Conceptos
