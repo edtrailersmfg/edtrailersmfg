@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="car_theme_footer" inherit_id="website.layout"
+              name="Car Theme Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section class="oe_structure" id="footer">
+                    <div class="pt0" id="footer_9">
+                        <div class="container">
+                            <div class="row pt64">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb16">
+                                    <img style="margin:0 auto;" class="img img-responsive img-fluid"
+                                         src="/logo.png" alt="Logo of YourCompany" title="YourCompany"/>
+                                    <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit.lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                    <div>
+                                        <a href="/website/social/facebook">
+                                            <i class="fa fa-facebook px-2 rounded-circle text-o-color-5"/>
+                                        </a>
+                                        <a href="/website/social/twitter">
+                                            <i class="fa fa-twitter px-2 rounded-circle text-o-color-5"/>
+                                        </a>
+                                        <a href="/website/social/linkedin">
+                                            <i class="fa fa-linkedin px-2 rounded-circle text-o-color-5"/>
+                                        </a>
+                                        <a href="/website/social/youtube">
+                                            <i class="fa fa-youtube-play px-2 rounded-circle text-o-color-5"/>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb16">
+                                    <h5 class="mb16">
+                                        <font style="color: rgb(153, 153, 153);">Our Services</font>
+                                    </h5>
+                                    <ul class="list-unstyled text-decoration-none">
+                                        <li>
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip625063">
+                                                <font style="color: rgb(153, 153, 153);" data-original-title=""
+                                                      title="" aria-describedby="tooltip110158">Car Booking
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank" class="o_default_snippet_text"
+                                               data-original-title="" title="" aria-describedby="tooltip554529">
+                                                <font style="color: rgb(153, 153, 153);">Car Manufacture
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank" class="o_default_snippet_text"
+                                               data-original-title="" title="" aria-describedby="tooltip935848">
+                                                <font style="color: rgb(153, 153, 153);">Product Marketing
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank" class="o_default_snippet_text"
+                                               data-original-title="" title="" aria-describedby="tooltip144148">
+                                                <font style="color: rgb(153, 153, 153);">Social Media
+                                                    Monitoring
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank" class="o_default_snippet_text"
+                                               data-original-title="" title="" aria-describedby="tooltip924899">
+                                                <font style="color: rgb(153, 153, 153);">Free Services</font>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank" class="o_default_snippet_text"
+                                               data-original-title="" title="" aria-describedby="tooltip836524">
+                                                <font style="color: rgb(153, 153, 153);">Help Desk</font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-2 pb16">
+                                    <h5 class="mb16">
+                                        <font style="color: rgb(153, 153, 153);">Useful Links</font>
+                                    </h5>
+                                    <ul class="list-unstyled text-decoration-none">
+                                        <li>
+                                            <a href="#" target="_blank" class="o_default_snippet_text"
+                                               data-original-title="" title="">
+                                                <font style="color: rgb(153, 153, 153);">About us
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank" class="o_default_snippet_text"
+                                               data-original-title="" title="" aria-describedby="tooltip677524">
+                                                <font style="color: rgb(153, 153, 153);">Our Services
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank" class="o_default_snippet_text"
+                                               data-original-title="" title="" aria-describedby="tooltip391851">
+                                                <font style="color: rgb(153, 153, 153);" data-original-title=""
+                                                      title="" aria-describedby="tooltip638193">Information
+                                                </font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-2 pb16">
+                                    <h5 class="mb16 o_default_snippet_text">
+                                        <font style="color: rgb(153, 153, 153);">Need Help</font>
+                                    </h5>
+                                    <ul class="list-unstyled text-decoration-none">
+                                        <li>
+                                            <a href="#" target="_blank" class="o_default_snippet_text"
+                                               data-original-title="" title="" aria-describedby="tooltip705040">
+                                                <font style="color: rgb(153, 153, 153);">Contact Us</font>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank" class="o_default_snippet_text"
+                                               data-original-title="" title="" aria-describedby="tooltip156113">
+                                                <font style="color: rgb(153, 153, 153);">Our Blog</font>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank" class="o_default_snippet_text"
+                                               data-original-title="" title="" aria-describedby="tooltip870712">
+                                                <font style="color: rgb(153, 153, 153);">Service Help Desk
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank" class="o_default_snippet_text"
+                                               data-original-title="" title="" aria-describedby="tooltip886832">
+                                                <font style="color: rgb(153, 153, 153);">System Status
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank" class="o_default_snippet_text"
+                                               data-original-title="" title="" aria-describedby="tooltip239917">
+                                                <font style="color: rgb(153, 153, 153);">FAQs</font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr/>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </xpath>
+    </template>
+</odoo>

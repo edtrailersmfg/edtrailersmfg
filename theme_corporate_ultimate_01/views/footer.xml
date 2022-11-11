@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="corporate_theme_footer" inherit_id="website.layout"
+              name="Corporate Theme Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section id="footer" class="oe_structure oe_structure_solo"
+                         style="border-top: none; position: relative;"
+                         data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Origins/11&quot;,&quot;colors&quot;:{&quot;c3&quot;:&quot;#2033AA&quot;,&quot;c5&quot;:&quot;#EF2674&quot;},&quot;flip&quot;:[]}">
+                    <div class="o_we_shape o_web_editor_Origins_11"
+                         style="background-image: url(&quot;/web_editor/shape/web_editor/Origins/11.svg?c3=%232033AA&amp;c5=%23EF2674&quot;);"/>
+                    <div class="oe_structure oe_empty">
+                        <div class="pt96 pb32" id="footer_3">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb32 o_colored_level" style="">
+                                        <img style="margin:0 auto;" class="img img-responsive img-fluid"
+                                             src="/logo.png" alt=""
+                                             title="YourCompany" loading="lazy" data-original-id="735"
+                                             data-original-src="/logo.png"
+                                             data-mimetype="image/png" data-resize-width="220"/>
+                                        <p class="o_default_snippet_text">
+                                            <font style="" class="text-o-color-4">Lorem Ipsum is simply dummy text of
+                                                the
+                                                printing and typesetting industry. Lorem Ipsum has been the industry's
+                                                standard dummy.
+                                                &amp;nbsp;
+                                            </font>
+                                        </p>
+                                        <div class="media mt16 mb16">
+                                            <i class="fa fa-2x fa-map-marker mr-2 text-o-color-4" style=""/>
+                                            <div class="media-body">
+                                                <p class="font-weight-bold mb8 o_default_snippet_text">
+                                                    <font style="" class="text-o-color-4">Address :</font>
+                                                </p>
+                                                <span data-note-id="3" t-field="res_company.street"
+                                                      class="text-o-color-4"/>
+                                                <span t-field="res_company.city" class="text-o-color-4"/>
+                                                <span t-field="res_company.state_id.name" class="text-o-color-4"/>
+                                                <span t-field="res_company.zip" class="text-o-color-4"/>
+                                                <span t-field="res_company.country_id.name" class="text-o-color-4"/>
+                                            </div>
+                                        </div>
+                                        <div class="media mt16 mb16">
+                                            <i class="fa fa-2x fa-phone mr-2 text-o-color-4" style=""/>
+                                            <div class="media-body">
+                                                <p class="font-weight-bold mb8 o_default_snippet_text">
+                                                    <font style="" class="text-o-color-4">Call us &amp;amp;
+                                                        Hire us :
+                                                        &amp;nbsp;
+                                                    </font>
+                                                </p>
+                                                <span t-field="res_company.phone" class="text-o-color-4"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-6 col-md-4 col-lg-2 mb32 o_colored_level">
+                                        <h5 class="mb24" style="color: rgb(255, 255, 255);">
+                                            <font style="font-size: 18px;" class="text-o-color-4">
+                                                <b>Social Media</b>
+                                            </font>
+
+                                        </h5>
+                                        <ul class="list-unstyled">
+                                            <a href="/website/social/facebook">
+                                                <i class="fa fa-facebook-square px-2 text-o-color-4"/>
+                                            </a>
+                                            <a href="/website/social/twitter">
+                                                <i class="fa fa-twitter px-2 text-o-color-4"/>
+                                            </a>
+                                            <a href="/website/social/linkedin">
+                                                <i class="fa fa-linkedin px-2 text-o-color-4"/>
+                                            </a>
+                                        </ul>
+                                        <ul class="list-unstyled">
+                                            <a href="/website/social/youtube">
+                                                <i class="fa fa-youtube-play px-2 text-o-color-4"/>
+                                            </a>
+                                            <a href="/website/social/github">
+                                                <i class="fa fa-github px-2 text-o-color-4"/>
+                                            </a>
+                                            <a href="/website/social/instagram">
+                                                <i class="fa fa-instagram px-2 text-o-color-4"/>
+                                            </a>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-2 mb32 o_colored_level">
+                                        <h5>
+                                            <font style="color: rgb(255, 255, 255); font-size: 18px;">
+                                                <b class="o_default_snippet_text">Usefull Links</b>
+                                            </font>
+                                        </h5>
+                                        <ul class="list-unstyled mt24">
+                                            <li class="mb8">
+                                                <font style="color: rgb(255, 255, 255);" data-original-title="" title=""
+                                                      aria-describedby="tooltip932996">Home
+                                                </font>
+                                            </li>
+                                            <li class="mb8">
+                                                <font style="color: rgb(255, 255, 255);" data-original-title="" title=""
+                                                      aria-describedby="tooltip503473">About Us
+                                                </font>
+                                            </li>
+                                            <li class="mb8">
+                                                <a href="#" target="_blank">
+                                                    <font style="color: rgb(255, 255, 255);" data-original-title=""
+                                                          title="" aria-describedby="tooltip335452">Services
+                                                    </font>
+                                                </a>
+                                            </li>
+                                            <li class="mb8">
+                                                <a href="#" target="_blank">
+                                                    <font style="color: rgb(255, 255, 255);" data-original-title=""
+                                                          title="" aria-describedby="tooltip633203">Testimonial
+                                                    </font>
+                                                </a>
+                                            </li>
+                                            <li class="mb8">
+                                                <a href="#" target="_blank">
+                                                    <font style="color: rgb(255, 255, 255);" data-original-title=""
+                                                          title="" aria-describedby="tooltip633203">Team
+                                                    </font>
+                                                </a>
+                                            </li>
+                                            <li class="mb8">
+                                                <a href="#" target="_blank">
+                                                    <font style="color: rgb(255, 255, 255);" data-original-title=""
+                                                          title="" aria-describedby="tooltip25642">Blog
+                                                    </font>
+                                                </a>
+                                            </li>
+                                            <li class="mb8">
+                                                <font style="" class="text-o-color-4">Contact Us</font>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32 o_colored_level">
+                                        <h5 class="mb24 o_default_snippet_text">
+                                            <font style="color: rgb(255, 255, 255); font-size: 18px;">
+                                                <b class="o_default_snippet_text">Our Newsletter</b>
+                                            </font>
+                                        </h5>
+                                        <p class="o_default_snippet_text">
+                                            <font style="" class="text-o-color-4">Lorem Ipsum is simply dummy text of
+                                                the
+                                                printing and typesetting industry. Lorem Ipsum has been the industry's
+                                                standard dummy.
+                                            </font>
+                                        </p>
+                                        <div class="input-group js_subscribe hidden d-block" data-list-id="1"
+                                             data-subscribe="off">
+                                            <input type="email" name="email"
+                                                   class="js_subscribe_email form-control w-100 mb8"
+                                                   placeholder="your email..." disabled=""/>
+                                            <div class="input-group-btn">
+                                                <a href="#"
+                                                   class="btn btn-primary js_subscribe_btn o_default_snippet_text w-100 d-none">
+                                                    Subscribe
+                                                </a>
+                                                <a href="#"
+                                                   class="btn btn-success js_subscribed_btn hidden o_default_snippet_text w-100"
+                                                   disabled="disabled">Thanks
+                                                </a>
+                                            </div>
+                                            <div class="alert alert-success hidden o_default_snippet_text d-none">Thanks
+                                                for your subscription!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>
+
+

@@ -1,0 +1,400 @@
+<odoo>
+    <data>
+
+        <!--Snippet Banner start-->
+        <template id="construction_banner" name="Construction Banner">
+            <section
+                    class="s_cover parallax align-content-center align-items-center d-flex full-height s_parallax_is_fixed"
+                    data-scroll-background-ratio="1" style="background-image: none; height: 100vh !important;">
+                <span class="s_parallax_bg oe_img_bg oe_custom_bg"
+                      style="background-image: url(&quot;/theme_construction_ultimate_02/static/src/img/placeholder-1170.jpg&quot;);background-position: 50% 0px;"/>
+                <div class="container">
+                    <div class="row s_nb_column_fixed">
+                        <div class="col-lg-12 s_title" data-name="Title">
+                            <h1 class="text-left">
+                                <font style="color: rgb(255, 255, 255); font-size: 36px;">
+                                    <b>FROM CONCEPT TO CREATION</b>
+                                </font>
+                            </h1>
+                        </div>
+                        <div class="s_text pt16 pb16 col-lg-8" data-name="Text">
+                            <p class="lead text-left o_default_snippet_text" style="text-align: center;">
+                                <font style="color: rgb(255, 255, 255);">Write one or two paragraphs describing your
+                                    product, services or a specific feature. &amp;nbsp;
+                                </font>
+                                <font style="color: rgb(255, 255, 255);">To be successful your content needs to be
+                                    useful to your readers. &amp;nbsp;
+                                </font>
+                            </p>
+                        </div>
+                        <div class="col-lg-12 text-left pt16 pb16" data-name="Buttons">
+                            <a href="/aboutus" class="mb8 mt8 btn btn-outline-primary rounded-circle btn-lg"
+                               data-original-title="" title="" aria-describedby="tooltip380392">VIEW MORE
+                            </a>
+                            <a href="/contactus" class="mb8 mt8 btn btn-primary rounded-circle btn-lg"
+                               data-original-title="" title="" aria-describedby="tooltip16318">CONTACT US
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Banner End-->
+
+        <!--Snippet CTA start-->
+        <template id="construction_cta" name="Construction CTA">
+            <section class="s_call_to_action sni-block pt32 pb32 bg-primary oe_custom_bg">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-md-8 col-sm-12 col-lg-8 s_title">
+                            <h2 class="o_default_snippet_text">We're here to get started your project in right
+                                direction
+                            </h2>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 text-md-right col-lg-4">
+                            <p>
+                                <a href="/contactus"
+                                   class="rounded-circle rounded-circle rounded-circle rounded-circle btn btn-dark btn-lg"
+                                   data-original-title="" title="" aria-describedby="tooltip615999">Contact Us
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet CTA End-->
+
+        <!--Snippet Service start-->
+        <template id="construction_service" name="Construction Service">
+            <section class="pt64 pb64">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-lg-12 text-center mb48">
+                            <h2 class="o_default_snippet_text">WHAT WE DO</h2>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center mb16">
+                            <img src="/theme_construction_ultimate_02/static/src/img/placeholder-350x133.png"
+                                 alt="image"
+                                 title="image" class="img-fluid mb8 mt8"/>
+                            <h3 class="o_default_snippet_text">Building Construction</h3>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center mb16">
+                            <img src="/theme_construction_ultimate_02/static/src/img/placeholder-350x133.png"
+                                 alt="image"
+                                 title="image" class="img-fluid mb8 mt8"/>
+                            <h3 class="o_default_snippet_text">Building Renovation</h3>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center mb16">
+                            <img src="/theme_construction_ultimate_02/static/src/img/placeholder-350x133.png"
+                                 alt="image"
+                                 title="image" class="img-fluid mb8 mt8"/>
+                            <h3 class="o_default_snippet_text">Architectural Design</h3>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center mb16">
+                            <img src="/theme_construction_ultimate_02/static/src/img/placeholder-350x133.png"
+                                 alt="image"
+                                 title="image" class="img-fluid mb8 mt8"/>
+                            <h3 class="o_default_snippet_text">Interior Design</h3>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center mb16">
+                            <img src="/theme_construction_ultimate_02/static/src/img/placeholder-350x133.png"
+                                 alt="image"
+                                 title="image" class="img-fluid mb8 mt8"/>
+                            <h3 class="o_default_snippet_text">Electricity</h3>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center mb16">
+                            <img src="/theme_construction_ultimate_02/static/src/img/placeholder-350x133.png"
+                                 alt="image"
+                                 title="image" class="img-fluid mb8 mt8"/>
+                            <h3 class="o_default_snippet_text">Flooring</h3>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Service End-->
+
+        <!--Snippet Feature start-->
+        <template id="construction_feature" name="Construction Feature">
+            <section class="s_features_grid pt64 bg-secondary oe_img_bg pb64 oe_custom_bg"
+                     style="background-image: url(&quot;/theme_construction_ultimate_02/static/src/img/placeholder-1170.jpg&quot;);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 s_col_no_bgcolor">
+                            <div class="row">
+                                <div class="col-lg-12 pb24" data-name="Box">
+                                    <h2 style="text-align: center; ">
+                                        <font style="color: rgb(255, 255, 255);" class="o_default_snippet_text">WHY
+                                            CHOOSE US
+                                        </font>
+                                    </h2>
+                                </div>
+                                <div class="pt16 pb16 col-lg-4 col-md-6" data-name="Box">
+                                    <i class="fa fa-font-awesome rounded-circle bg-primary s_features_grid_icon pe-7s-check fa-500px fa-2x"
+                                       data-original-title="" title="" aria-describedby="tooltip334181" style=""/>
+                                    <div class="s_features_grid_content">
+                                        <h4>
+                                            <font style="color: rgb(255, 255, 255);">
+                                                <b class="o_default_snippet_text">10+ Years Of Experience</b>
+                                            </font>
+                                        </h4>
+                                        <p>
+                                            <span style="color: rgb(255, 255, 255); font-family: &quot;helvetica neue&quot;, HelveticaNeue, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px;"
+                                                  class="o_default_snippet_text">Lorem ipsum dolor sit amet,
+                                                consectetuer adipiscing elit. &amp;nbsp;Cum sociis natoque penatibu.
+                                            </span>
+                                            <br/>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="pt16 pb16 col-lg-4 col-md-6" data-name="Box">
+                                    <i class="fa fa-2x fa-files-o rounded-circle bg-primary s_features_grid_icon pe-7s-users fa-500px"
+                                       data-original-title="" title="" aria-describedby="tooltip996359" style=""/>
+                                    <div class="s_features_grid_content">
+                                        <h4>
+                                            <font style="color: rgb(255, 255, 255);">
+                                                <b class="o_default_snippet_text">Professional Team</b>
+                                            </font>
+                                        </h4>
+                                        <p>
+                                            <span style="color: rgb(255, 255, 255); font-family: &quot;helvetica neue&quot;, HelveticaNeue, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px;"
+                                                  class="o_default_snippet_text">Lorem ipsum dolor sit amet,
+                                                consectetuer adipiscing elit. &amp;nbsp;Cum sociis natoque penatibu.
+                                            </span>
+                                            <br/>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="pt16 pb16 col-lg-4 col-md-6" data-name="Box">
+                                    <i class="fa fa-2x rounded-circle bg-primary s_features_grid_icon pe-7s-plugin fa-500px"
+                                       data-original-title="" title="" aria-describedby="tooltip666199" style=""/>
+                                    <div class="s_features_grid_content">
+                                        <h4>
+                                            <font style="color: rgb(255, 255, 255);">
+                                                <b class="o_default_snippet_text">Good Material</b>
+                                            </font>
+                                        </h4>
+                                        <p>
+                                            <span style="color: rgb(255, 255, 255); font-family: &quot;helvetica neue&quot;, HelveticaNeue, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px;"
+                                                  class="o_default_snippet_text">Lorem ipsum dolor sit amet,
+                                                consectetuer adipiscing elit. &amp;nbsp;Cum sociis natoque penatibu.
+                                            </span>
+                                            <br/>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="pt16 pb16 col-lg-4 col-md-6" data-name="Box">
+                                    <i class="fa fa-2x rounded-circle bg-primary s_features_grid_icon pe-7s-share fa-500px"
+                                       style="" data-original-title="" title="" aria-describedby="tooltip833536"/>
+                                    <div class="s_features_grid_content">
+                                        <h4>
+                                            <font style="color: rgb(255, 255, 255);">
+                                                <b class="o_default_snippet_text">Automated System</b>
+                                            </font>
+                                        </h4>
+                                        <p>
+                                            <span style="color: rgb(255, 255, 255); font-family: &quot;helvetica neue&quot;, HelveticaNeue, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px;"
+                                                  class="o_default_snippet_text">Lorem ipsum dolor sit amet,
+                                                consectetuer adipiscing elit. &amp;nbsp;Cum sociis natoque penatibu.
+                                            </span>
+                                            <br/>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="pt16 pb16 col-lg-4 col-md-6" data-name="Box">
+                                    <i class="fa fa-2x rounded-circle bg-primary s_features_grid_icon pe-7s-like2 fa-500px"
+                                       data-original-title="" title="" aria-describedby="tooltip205683" style=""/>
+                                    <div class="s_features_grid_content">
+                                        <h4>
+                                            <font style="color: rgb(255, 255, 255);">
+                                                <b class="o_default_snippet_text">Safety</b>
+                                            </font>
+                                        </h4>
+                                        <p>
+                                            <span style="color: rgb(255, 255, 255); font-family: &quot;helvetica neue&quot;, HelveticaNeue, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px;"
+                                                  class="o_default_snippet_text">Lorem ipsum dolor sit amet,
+                                                consectetuer adipiscing elit. &amp;nbsp;Cum sociis natoque penatibu.
+                                            </span>
+                                            <br/>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="pt16 pb16 col-lg-4 col-md-6" data-name="Box">
+                                    <i class="fa fa-2x rounded-circle bg-primary s_features_grid_icon pe-7s-smile fa-500px"
+                                       data-original-title="" title="" aria-describedby="tooltip766584" style=""/>
+                                    <div class="s_features_grid_content">
+                                        <h4>
+                                            <font style="color: rgb(255, 255, 255);">
+                                                <b class="o_default_snippet_text">Quality Work</b>
+                                            </font>
+                                        </h4>
+                                        <p>
+                                            <span style="color: rgb(255, 255, 255); font-family: &quot;helvetica neue&quot;, HelveticaNeue, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px;"
+                                                  class="o_default_snippet_text">Lorem ipsum dolor sit amet,
+                                                consectetuer adipiscing elit. &amp;nbsp;Cum sociis natoque penatibu.
+                                            </span>
+                                            <br/>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Feature End-->
+
+        <!--Snippet Project start-->
+        <template id="construction_project" name="Construction Project">
+            <section class="sni-block pt64 pb64">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 pb48 text-center">
+                            <h2>OUR FEATURED PROJECTS</h2>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 img-box">
+                            <div class="img-box-container">
+                                <img class="img-fluid d-block mx-auto mt8 mb8"
+                                     src="/theme_construction_ultimate_02/static/src/img/placeholder-350x350.png"
+                                     data-original-title="" title="" aria-describedby="tooltip470592"/>
+                                <div class="overlay">
+                                    <div class="img-text">PROJECT 1</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 img-box">
+                            <div class="img-box-container">
+                                <img class="img-fluid d-block mx-auto mt8 mb8"
+                                     src="/theme_construction_ultimate_02/static/src/img/placeholder-350x350.png"
+                                     data-original-title="" title="" aria-describedby="tooltip470592"/>
+                                <div class="overlay">
+                                    <div class="img-text">PROJECT 2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 img-box">
+                            <div class="img-box-container">
+                                <img class="img-fluid d-block mx-auto mt8 mb8"
+                                     src="/theme_construction_ultimate_02/static/src/img/placeholder-350x350.png"
+                                     data-original-title="" title="" aria-describedby="tooltip470592"/>
+                                <div class="overlay">
+                                    <div class="img-text">PROJECT 3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 img-box">
+                            <div class="img-box-container">
+                                <img class="img-fluid d-block mx-auto mt8 mb8"
+                                     src="/theme_construction_ultimate_02/static/src/img/placeholder-350x350.png"
+                                     data-original-title="" title="" aria-describedby="tooltip470592"/>
+                                <div class="overlay">
+                                    <div class="img-text">PROJECT 4</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 img-box">
+                            <div class="img-box-container">
+                                <img class="img-fluid d-block mx-auto mt8 mb8"
+                                     src="/theme_construction_ultimate_02/static/src/img/placeholder-350x350.png"
+                                     data-original-title="" title="" aria-describedby="tooltip470592"/>
+                                <div class="overlay">
+                                    <div class="img-text">PROJECT 5</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 img-box">
+                            <div class="img-box-container">
+                                <img class="img-fluid d-block mx-auto mt8 mb8"
+                                     src="/theme_construction_ultimate_02/static/src/img/placeholder-350x350.png"
+                                     data-original-title="" title="" aria-describedby="tooltip470592"/>
+                                <div class="overlay">
+                                    <div class="img-text">PROJECT 6</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Project End-->
+
+        <!--Snippet Brand Logo start-->
+        <template id="construction_brand_logo" name="Construction Brand Logo">
+            <section class="sni-block pt64 pb64">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 co-xl-3 col-lg-3 col-sm-6">
+                            <img class="img-fluid mt8 mb8 d-block mx-auto"
+                                 src="/theme_construction_ultimate_02/static/src/img/brand-logo.png"
+                                 data-original-title=""
+                                 title="" aria-describedby="tooltip725375"/>
+                        </div>
+                        <div class="col-12 co-xl-3 col-lg-3 col-sm-6">
+                            <img class="img-fluid mt8 mb8 d-block mx-auto"
+                                 src="/theme_construction_ultimate_02/static/src/img/brand-logo.png"
+                                 data-original-title=""
+                                 title="" aria-describedby="tooltip439236"/>
+                        </div>
+                        <div class="col-12 co-xl-3 col-lg-3 col-sm-6">
+                            <img class="img-fluid mt8 mb8 d-block mx-auto"
+                                 src="/theme_construction_ultimate_02/static/src/img/brand-logo.png"
+                                 data-original-title=""
+                                 title="" aria-describedby="tooltip168665"/>
+                        </div>
+                        <div class="col-12 co-xl-3 col-lg-3 col-sm-6">
+                            <img class="img-fluid mt8 mb8 d-block mx-auto"
+                                 src="/theme_construction_ultimate_02/static/src/img/brand-logo.png"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Brand Logo End-->
+
+        <!--Snippets Assets-->
+        <template id="demo_snippets" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_structure']" position="before">
+                <div id="snippet_demo_snippets" class="o_panel">
+                    <div class="o_panel_header">
+                        <i class="fa fa-th-large"/>
+                        Construction Ultimate 02
+                    </div>
+                    <div class="o_panel_body">
+                        <t t-snippet="theme_construction_ultimate_02.construction_banner"
+                           t-thumbnail="/theme_construction_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_construction_ultimate_02.construction_cta"
+                           t-thumbnail="/theme_construction_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_construction_ultimate_02.construction_service"
+                           t-thumbnail="/theme_construction_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_construction_ultimate_02.construction_feature"
+                           t-thumbnail="/theme_construction_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_construction_ultimate_02.construction_project"
+                           t-thumbnail="/theme_construction_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_construction_ultimate_02.construction_brand_logo"
+                           t-thumbnail="/theme_construction_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

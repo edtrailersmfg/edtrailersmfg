@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="snippet_ultimate_footer_option" inherit_id="website.snippet_options">
+        <t t-call="web_editor.snippet_options"/>
+        <xpath expr="//we-button[@data-customize-website-views='website.footer_custom']"
+               position="before">
+            <we-button title="Construction Theme Footer"
+                       data-customize-website-views="theme_construction_ultimate_01.construction_theme_footer"
+                       data-customize-website-variable="'construction-theme-footer'"
+                       data-img="">Construction Theme Footer
+            </we-button>
+        </xpath>
+    </template>
+
+</odoo>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="construction_theme_footer" inherit_id="website.layout"
+              name="Construction Theme Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section class="oe_structure oe_custom_bg" id="footer"
+                         style="background-image: url(&quot;/theme_construction_ultimate_01/static/src/img/placeholder-image-1170.jpg&quot;);">
+                    <div class="pb32 oe_img_bg pt0" id="footer_19">
+                        <div class="container">
+                            <div class="row pt64">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb32">
+                                    <img style="margin:0 auto;" class="img img-responsive img-fluid" src="/logo.png"
+                                         alt="Logo of YourCompany" title="YourCompany"/>
+                                    <p class="pt16 o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Nam eu sem tempor,
+                                        varius quam at,luctus dui. Mauris magna metus.
+                                    </p>
+                                    <div class="o_default_snippet_text media mb8">
+                                        <i class="fa fa-phone-square mr-2 mt-1" style="color: rgb(255, 255, 255);"/>
+                                        <div class="media-body">
+                                            <font style="color: rgb(255, 255, 255);">
+                                                <span>Call Us:</span>
+                                                <span t-field="res_company.phone"/>
+                                            </font>
+                                        </div>
+                                    </div>
+                                    <div class="o_default_snippet_text media mb8">
+                                        <i class="fa fa-envelope-open mr-2 mt-1" style="color: rgb(255, 255, 255);"/>
+                                        <div class="media-body">
+                                            <font style="color: rgb(255, 255, 255);">
+                                                <span>E-mail On</span>
+                                                <span t-field="res_company.email"/>
+                                            </font>
+                                        </div>
+                                    </div>
+                                    <div class="o_default_snippet_text media mb8">
+                                        <i class="fa fa-map-marker mr-2 mt-1" style="color: rgb(255, 255, 255);"/>
+                                        <div class="media-body">
+                                            <font style="color: rgb(255, 255, 255);">
+                                                <span>Visit Us:</span>
+                                                <span t-field="res_company.street"/>
+                                            </font>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb32">
+                                    <h4 class="pb16 font-weight-bold border-bottom o_default_snippet_text">
+                                        <font style="color: rgb(255, 255, 255);">Recent News</font>
+                                    </h4>
+                                    <div class="pt16">
+                                        <h6 class="o_default_snippet_text">
+                                            <font style="color: rgb(255, 255, 255);">Within the construction industry as
+                                                their overdraft
+                                                &amp;nbsp;
+                                            </font>
+                                        </h6>
+                                        <h6 class="o_default_snippet_text">
+                                            <i class="fa fa-clock-o" style="color: rgb(255, 255, 255);"/>
+                                            <font style="color: rgb(255, 255, 255);">
+                                                January 22, 2016
+                                                &amp;nbsp;
+                                            </font>
+                                        </h6>
+                                    </div>
+                                    <div class="pt16">
+                                        <h6 class="o_default_snippet_text">
+                                            <font style="color: rgb(255, 255, 255);">Within the construction industry as
+                                                their overdraft
+                                                &amp;nbsp;
+                                            </font>
+                                        </h6>
+                                        <h6 class="o_default_snippet_text">
+                                            <i class="fa fa-clock-o" style="color: rgb(255, 255, 255);"/>
+                                            <font style="color: rgb(255, 255, 255);">
+                                                January 22, 2016
+
+
+                                                &amp;nbsp;
+                                            </font>
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb32">
+                                    <h4 class="pb16 font-weight-bold border-bottom o_default_snippet_text">
+                                        <font style="color: rgb(255, 255, 255);">Navigation</font>
+                                    </h4>
+                                    <div class="row pt16">
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-6">
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="#" class="text-decoration-none o_default_snippet_text"
+                                                       target="_blank">About US
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="text-decoration-none o_default_snippet_text"
+                                                       target="_blank" data-original-title="" title=""
+                                                       aria-describedby="tooltip35904">Contact
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="text-decoration-none o_default_snippet_text"
+                                                       target="_blank">Typography
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="text-decoration-none o_default_snippet_text"
+                                                       target="_blank">Carrers
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="text-decoration-none o_default_snippet_text"
+                                                       target="_blank">Shop
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-6">
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="#" class="text-decoration-none o_default_snippet_text"
+                                                       target="_blank">News
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="text-decoration-none o_default_snippet_text"
+                                                       target="_blank">Testimonials
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="text-decoration-none o_default_snippet_text"
+                                                       target="_blank">Services
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="text-decoration-none o_default_snippet_text"
+                                                       target="_blank">Our Team
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="text-decoration-none o_default_snippet_text"
+                                                       target="_blank">Our Approach
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="input-group js_subscribe hidden" data-list-id="1" data-subscribe="off">
+                                        <input type="email" name="email"
+                                               class="js_subscribe_email form-control rounded-0"
+                                               placeholder="your email..."/>
+                                        <span class="input-group-btn">
+                                            <a href="#"
+                                               class="btn btn-primary js_subscribe_btn o_default_snippet_text rounded-0">
+                                                Subscribe
+                                            </a>
+                                            <a href="#"
+                                               class="btn btn-success js_subscribed_btn hidden o_default_snippet_text rounded-0 d-none"
+                                               disabled="disabled">
+                                                Thanks
+                                            </a>
+                                        </span>
+                                        <div class="alert alert-success hidden o_default_snippet_text rounded-0 d-none">
+                                            Thanks for your
+                                            subscription!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                                    <h4 class="pb16 font-weight-bold border-bottom o_default_snippet_text">
+                                        <font style="color: rgb(255, 255, 255);">Gallery</font>
+                                    </h4>
+                                    <div class="row pt16 pb16 px-3">
+                                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                            <img src="/theme_construction_ultimate_01/static/src/img/placeholder-image-95x79.png"
+                                                 class="img-fluid d-block mx-auto"/>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                            <img src="/theme_construction_ultimate_01/static/src/img/placeholder-image-95x79.png"
+                                                 class="img-fluid d-block mx-auto"/>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                            <img src="/theme_construction_ultimate_01/static/src/img/placeholder-image-95x79.png"
+                                                 class="img-fluid d-block mx-auto"/>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                            <img src="/theme_construction_ultimate_01/static/src/img/placeholder-image-95x79.png"
+                                                 class="img-fluid d-block mx-auto"/>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                            <img src="/theme_construction_ultimate_01/static/src/img/placeholder-image-95x79.png"
+                                                 class="img-fluid d-block mx-auto"/>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                            <img src="/theme_construction_ultimate_01/static/src/img/placeholder-image-95x79.png"
+                                                 class="img-fluid d-block mx-auto"/>
+                                        </div>
+                                    </div>
+                                    <h6>
+                                        <a href="#" class="text-decoration-none text-warning o_default_snippet_text"
+                                           target="_blank"><i class="fa fa-arrow-circle-right"/>View More Photos
+                                        </a>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </xpath>
+    </template>
+</odoo>

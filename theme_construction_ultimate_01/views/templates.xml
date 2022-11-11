@@ -1,0 +1,645 @@
+<odoo>
+    <data>
+        <!--Snippet Banner Start-->
+        <template id="construction_banner" name="Construction Banner">
+            <section
+                    class="s_cover parallax align-content-center align-items-center d-flex full-height s_parallax_is_fixed"
+                    data-scroll-background-ratio="1" style="background-image: none;">
+                <span class="oe_img_bg s_parallax_bg oe_custom_bg"
+                      style="text-align: center; background-image: url(&quot;/theme_construction_ultimate_01/static/src/img/placeholder-image-1170.jpg&quot;); background-position: 50% 0px;">
+                    <br/>
+                </span>
+                <div class="container">
+                    <div class="row s_nb_column_fixed">
+                        <div class="col-lg-12 s_title" data-name="Title">
+                            <h1 class="s_title_thin text-white" style="font-size: 40px; text-align: center;">
+                                <b>WE ARE CONSTRUCTOR</b>
+                            </h1>
+                        </div>
+                        <div class="col-lg-12 s_text pt16 pb16" data-name="Text">
+                            <p class="lead text-white o_default_snippet_text" style="text-align: center;">Write one or
+                                two paragraphs describing your
+                                product, services or a specific feature.
+
+
+                                <br/>
+                                To be successful your content needs to be useful to your readers.
+
+
+                            </p>
+                        </div>
+                        <div class="col-lg-12 s_btn text-center pt16 pb16" data-name="Buttons">
+                            <a href="/contactus" class="btn btn-primary flat" data-original-title="" title=""
+                               aria-describedby="tooltip961334">
+                                <b>
+                                    <font style="font-size: 14px;" data-original-title="" title=""
+                                          aria-describedby="tooltip116273">Read More</font>&amp;nbsp;
+                                    <font style="font-size: 14px;" data-original-title="" title=""
+                                          aria-describedby="tooltip116273" class="o_default_snippet_text"/>
+                                </b>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Banner End-->
+
+        <!--Snippet Brand Logo Start-->
+        <template id="construction_brand_logo" name="Construction Brand Logo">
+            <section class="pt48 pb0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                            <img src="/theme_construction_ultimate_01/static/src/img/brand-logo.png"
+                                 class="img-fluid mb8 mt8" alt="Brand Logo"
+                                 title="Brand Logo"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                            <img src="/theme_construction_ultimate_01/static/src/img/brand-logo.png"
+                                 class="img-fluid mb8 mt8" alt="Brand Logo"
+                                 title="Brand Logo"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                            <img src="/theme_construction_ultimate_01/static/src/img/brand-logo.png"
+                                 class="img-fluid mb8 mt8" alt="Brand Logo"
+                                 title="Brand Logo"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                            <img src="/theme_construction_ultimate_01/static/src/img/brand-logo.png"
+                                 class="img-fluid mb8 mt8" alt="Brand Logo"
+                                 title="Brand Logo"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                            <img src="/theme_construction_ultimate_01/static/src/img/brand-logo.png"
+                                 class="img-fluid mb8 mt8" alt="Brand Logo"
+                                 title="Brand Logo"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                            <img src="/theme_construction_ultimate_01/static/src/img/brand-logo.png"
+                                 class="img-fluid mb8 mt8" alt="Brand Logo"
+                                 title="Brand Logo"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Brand Logo End-->
+
+        <!--Snippet Left Content Start-->
+        <template id="construction_left_content" name="Construction Left Content">
+            <section class="pt64 pb0">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 pt8 pb8">
+                            <h2>
+                                <font style="font-size: 24px;">
+                                    <b class="o_default_snippet_text">WE BUILD ARCHITECTURE</b>
+                                </font>
+                            </h2>
+                            <p class="pt24 pb24 o_default_snippet_text">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Pellentesque fermentum est in tortor congue
+                                suscipit. Suspendisse potenti.Aliquam finibus pharetra tellus at
+                                egestas.
+                            </p>
+                            <a href="#" class="text-decoration-none" data-original-title="" title=""
+                               aria-describedby="tooltip607654">
+                                <b data-original-title="" title="" aria-describedby="tooltip336047"
+                                   class="o_default_snippet_text">
+                                    WATCH VIDEO</b>&amp;nbsp;
+
+
+                                <i class="fa pe-7s-angle-right-circle fa-500px fa-x" data-original-title="" title=""
+                                   aria-describedby="tooltip382244" style=""/>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 pt8 pb8">
+                            <img src="/theme_construction_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                 alt="Image"
+                                 class="img-fluid pt8 pb8 mx-auto d-block" data-original-title="" title=""
+                                 aria-describedby="tooltip844872"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Left Content End-->
+
+        <!--Snippet Right Content Start-->
+        <template id="construction_right_content" name="Construction Right Content">
+            <section class="pb64 pt0">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 pt8 pb8">
+                            <img src="/theme_construction_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                 alt="Image"
+                                 class="img-fluid pt8 pb8 mx-auto d-block" data-original-title="" title=""
+                                 aria-describedby="tooltip393058"/>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 pt8 pb8">
+                            <h2>
+                                <b>
+                                    <font style="font-size: 24px;" class="o_default_snippet_text">WE DELIVER BEST
+                                        SERVICES
+                                    </font>
+                                </b>
+                            </h2>
+                            <p class="pt24 pb24 o_default_snippet_text">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Pellentesque fermentum est in tortor congue
+                                suscipit. Suspendisse potenti.Aliquam finibus pharetra tellus at
+                                egestas.
+                            </p>
+                            <a href="#" class="text-decoration-none" data-original-title="" title=""
+                               aria-describedby="tooltip446784">
+                                <b class="o_default_snippet_text">WATCH VIDEO</b>&amp;nbsp;
+
+
+                                <i class="fa pe-7s-angle-right-circle fa-500px" data-original-title="" title=""
+                                   aria-describedby="tooltip926916" style=""/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Right Content End-->
+
+        <!--Snippet Services Start-->
+        <template id="construction_services" name="Construction Services">
+            <section class="pt64 pb64 oe_img_bg oe_custom_bg"
+                     style="background-image: url(&quot;/theme_construction_ultimate_01/static/src/img/placeholder-image-1170.jpg&quot;);">
+                <div class="container ">
+                    <div class="row ">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                            <h2>
+                                <b>
+                                    <font style="color: rgb(255, 255, 255); font-size: 36px;"
+                                          class="o_default_snippet_text">OUR WORK
+                                    </font>
+                                </b>
+                            </h2>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 text-center pb24">
+                            <div class="border bg-white">
+                                <img src="/theme_construction_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                     alt="" class="img-fluid"
+                                     data-original-title="" title="" aria-describedby="tooltip841861"/>
+                                <div class="px-3">
+                                    <h3 class="pt16 o_default_snippet_text" style="text-align: left; ">
+                                        <font style="font-size: 18px;">
+                                            <b>Construction Planning
+                                                &amp;nbsp;
+                                            </b>
+                                        </font>
+                                    </h3>
+                                    <p class="o_default_snippet_text" style="text-align: left; ">Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 text-center pb24">
+                            <div class="border bg-white">
+                                <img src="/theme_construction_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                     alt="" class="img-fluid"
+                                     data-original-title="" title="" aria-describedby="tooltip470238"/>
+                                <div class="px-3">
+                                    <h3 class="pt16 o_default_snippet_text" style="text-align: left; ">
+                                        <b>
+                                            <font style="font-size: 18px;">Office Renovation</font>
+                                        </b>
+                                    </h3>
+                                    <p class="o_default_snippet_text" style="text-align: left; ">Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 text-center pb24">
+                            <div class="border bg-white">
+                                <img src="/theme_construction_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                     alt="" class="img-fluid"
+                                     data-original-title="" title="" aria-describedby="tooltip597655"/>
+                                <div class="px-3">
+                                    <h3 class="pt16 o_default_snippet_text" style="text-align: left; ">
+                                        <font style="font-size: 18px;">
+                                            <b>Architectural Plans</b>
+                                        </font>
+                                    </h3>
+                                    <p class="o_default_snippet_text" style="text-align: left; ">Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 text-center pb24">
+                            <div class="border bg-white">
+                                <img src="/theme_construction_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                     alt="" class="img-fluid"
+                                     data-original-title="" title="" aria-describedby="tooltip330388"/>
+                                <div class="px-3">
+                                    <h3 class="pt16 o_default_snippet_text" style="text-align: left; ">
+                                        <font style="font-size: 18px;">
+                                            <b>Reconstruction
+                                                Services
+                                                &amp;nbsp;
+                                            </b>
+                                        </font>
+                                    </h3>
+                                    <p class="o_default_snippet_text" style="text-align: left; ">Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 text-center pb24">
+                            <div class="border bg-white">
+                                <img src="/theme_construction_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                     alt="" class="img-fluid"
+                                     data-original-title="" title="" aria-describedby="tooltip157474"/>
+                                <div class="px-3">
+                                    <h3 class="pt16 o_default_snippet_text" style="text-align: left;">
+                                        <font style="font-size: 18px;">
+                                            <b>House Renovation</b>
+                                        </font>
+                                    </h3>
+                                    <p class="o_default_snippet_text" style="text-align: left; ">Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 text-center pb24">
+                            <div class="border bg-white">
+                                <img src="/theme_construction_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                     alt="" class="img-fluid"
+                                     data-original-title="" title="" aria-describedby="tooltip629211"/>
+                                <div class="px-3">
+                                    <h3 class="pt16 o_default_snippet_text" style="text-align: left; ">
+                                        <font style="font-size: 18px;">
+                                            <b>Architectural Design
+                                                &amp;nbsp;
+                                            </b>
+                                        </font>
+                                    </h3>
+                                    <p class="o_default_snippet_text" style="text-align: left; ">Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Services End-->
+
+        <!--Snippet Features Start-->
+        <template id="construction_features" name="Construction Features">
+            <section class="pb64 pt0 bg-100 oe_custom_bg" style="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="row pt64">
+                                <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                    <img src="/theme_construction_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                         alt="half-mobile" class="img-fluid mb8"
+                                         data-original-title="" title="" aria-describedby="tooltip982382"/>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-12 col-lg-6 ">
+                                    <div class="col-12 col-sm-12 col-md-9 col-lg-9  media pb16">
+                                        <i class="fa fa-2x mr-3 mt-2 pe-7s-news-paper fa-500px" data-original-title=""
+                                           title="" aria-describedby="tooltip594011" style=""/>
+                                        <div class="media-body">
+                                            <h3 class="pb8 pt8">
+                                                <b class="o_default_snippet_text">
+                                                    <font style="font-size: 18px;">Planning</font>
+                                                </b>
+                                            </h3>
+                                            <p class="o_default_snippet_text">Lorem ipsum dolor sit
+                                                amet, consectetur adipiscing elit. Ut at semper metus.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-9 col-lg-9  media pb16">
+                                        <i class="fa fa-2x fa-life-ring mr-3 mt-2 pe-7s-graph1 fa-500px"
+                                           data-original-title="" title="" aria-describedby="tooltip624663" style=""/>
+                                        <div class="media-body">
+                                            <h3 class="pt8 pb8">
+                                                <b>
+                                                    <font style="font-size: 18px;">Design</font>
+                                                </b>
+                                            </h3>
+                                            <p class="o_default_snippet_text">Lorem ipsum dolor sit
+                                                amet, consectetur adipiscing elit. Ut at semper metus.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-9 col-lg-9  media">
+                                        <i class="fa fa-2x mr-3 mt-2 pe-7s-culture fa-500px" data-original-title=""
+                                           title="" aria-describedby="tooltip296942" style=""/>
+                                        <div class="media-body">
+                                            <h3 class="pt8 pb8">
+                                                <b class="o_default_snippet_text">
+                                                    <font style="font-size: 18px;">Building</font>
+                                                </b>
+                                            </h3>
+                                            <p class="o_default_snippet_text">Lorem ipsum dolor sit
+                                                amet, consectetur adipiscing elit. Ut at semper metus.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Features End-->
+
+        <!--Snippet Testimonial Start-->
+        <template id="construction_testimonial" name="Construction Testimonial">
+            <section class="pt64 pb64 oe_img_bg oe_custom_bg" id="testimonials_d2"
+                     style="background-image: url(&quot;/theme_construction_ultimate_01/static/src/img/placeholder-image-1170.jpg&quot;);">
+                <div id="myCarousel1567496210321" class="s_quotes_carousel carousel slide s_carousel_default"
+                     data-interval="10000">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel1567496210321" data-slide-to="0" class="active"/>
+                        <li data-target="#myCarousel1567496210321" data-slide-to="1"/>
+                        <li data-target="#myCarousel1567496210321" data-slide-to="2"/>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item pt80 pb80 active" data-name="Slide" style="">
+                            <div class="container">
+                                <div class="row content justify-content-md-center mx-2">
+                                    <blockquote
+                                            class="carousel-content col-12 col-sm-12 col-md-12 col-lg-8 bg-white border-0">
+                                        <p class="lead mt32 mb32 text-center o_default_snippet_text">
+                                            <font style="font-size: 18px;">
+                                                Write a quote here from one of your customers. Quotes are a
+                                                great way to build confidence in your products or services.
+                                                &amp;nbsp;
+                                            </font>
+                                        </p>
+                                        <div class="text-center">
+                                            <img class="img"
+                                                 src="/theme_construction_ultimate_01/static/src/img/placeholder-user1.png"
+                                                 alt="" data-original-title=""
+                                                 title="" aria-describedby="tooltip447156"/>
+                                            <span class="o_default_snippet_text">Jane DOE</span>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item pt80 pb80" data-name="Slide" style="">
+                            <div class="container">
+                                <div class="row content justify-content-md-center mx-2">
+                                    <blockquote
+                                            class="carousel-content col-12 col-sm-12 col-md-12 col-lg-8 bg-white border-0">
+                                        <p class="lead mt32 mb32 text-center">
+                                            <font style="font-size: 18px;">
+                                                Write a quote here from one of your customers. Quotes are a
+                                                great way to build confidence in your products or services.
+                                                &amp;nbsp;
+                                            </font>
+                                        </p>
+                                        <div class="text-center">
+                                            <img class="img"
+                                                 src="/theme_construction_ultimate_01/static/src/img/placeholder-user1.png"
+                                                 alt="" data-original-title=""
+                                                 title="" aria-describedby="tooltip362222"/>
+                                            <span class="o_default_snippet_text">Jane DOE</span>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item pt80 pb80 oe_custom_bg" data-name="Slide" style="">
+                            <div class="container">
+                                <div class="row content justify-content-md-center mx-2">
+                                    <blockquote
+                                            class="carousel-content col-12 col-sm-12 col-md-12 col-lg-8 bg-white border-0">
+                                        <p class="lead mt32 mb32 text-center o_default_snippet_text">
+                                            <font style="font-size: 18px;">
+                                                Write a quote here from one of your customers. Quotes are a
+                                                great way to build confidence in your products or services.
+                                                &amp;nbsp;
+                                            </font>
+                                        </p>
+                                        <div class="text-center">
+                                            <img class="img"
+                                                 src="/theme_construction_ultimate_01/static/src/img/placeholder-user1.png"
+                                                 alt="" data-original-title=""
+                                                 title="" aria-describedby="tooltip144798"/>
+                                            <span class="o_default_snippet_text">Jane DOE</span>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-control-prev" data-target="#myCarousel1567496210321" data-slide="prev"
+                         role="img" aria-label="Previous" title="Previous">
+                        <span class="carousel-control-prev-icon"/>
+                        <span class="sr-only o_default_snippet_text">Previous</span>
+                    </div>
+                    <div class="carousel-control-next" data-target="#myCarousel1567496210321" data-slide="next"
+                         role="img" aria-label="Next" title="Next">
+                        <span class="carousel-control-next-icon"/>
+                        <span class="sr-only o_default_snippet_text">Next</span>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Testimonial End-->
+
+        <!--Snippet Contact Us Start-->
+        <template id="construction_contact_us" name="Construction Contact Us">
+            <section class="s_banner parallax s_parallax_is_fixed pt64 pb64" data-scroll-background-ratio="1"
+                     style="background-image: none;">
+                <span class="s_parallax_bg oe_img_bg oe_custom_bg"
+                      style="background-image: url(&quot;/theme_construction_ultimate_01/static/src/img/placeholder-image-1170.jpg&quot;);"/>
+                <div class="container">
+                    <div class="row s_nb_column_fixed">
+                        <div class="jumbotron pt32 pb32 col-lg-6 col-md-6 rounded bg-white o_colored_level"
+                             data-name="Box">
+                            <div class="row">
+                                <div class="col-lg-12 s_title s_col_no_bgcolor" data-name="Title">
+                                    <p class="s_title_thin">
+                                        <font style="font-size: 24px;" class="o_default_snippet_text">Contact Us
+                                        </font>
+                                    </p>
+                                    <p class="s_title_thin">
+                                        <span style="font-size: 48px;" class="o_default_snippet_text">Get in touch
+                                            with us
+                                        </span>
+                                        <br/>
+                                        <br/>
+                                    </p>
+                                </div>
+                                <div class="col-lg-12 pt8 pb32 s_col_no_bgcolor" data-name="Text">
+                                    <div class="contact-page-side-content">
+                                        <div class="single-contact-block mb32">
+                                            <h4 class="o_default_snippet_text">
+                                                <i class="fa fa-fax"/>
+                                                Address
+                                            </h4>
+                                            <span class="o_default_snippet_text">250 Executive Park Blvd, Suite 3400
+                                            </span>
+                                            <span class="o_default_snippet_text">San Francisco</span>
+                                            <span class="o_default_snippet_text">California</span>
+                                            <span class="o_default_snippet_text">94134</span>
+                                            <span class="o_default_snippet_text">United States</span>
+                                        </div>
+                                        <div class="single-contact-block mb32">
+                                            <h4 class="o_default_snippet_text">
+                                                <i class="fa fa-phone"/>
+                                                Phone
+                                            </h4>
+                                            <p class="o_default_snippet_text">+1 (650) 691-3277</p>
+                                        </div>
+                                        <div class="single-contact-block mb32">
+                                            <h4 class="o_default_snippet_text">
+                                                <i class="fa fa-envelope-o"/>
+                                                Email Address
+                                            </h4>
+                                            <p class="o_default_snippet_text">info@yourcompany.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 s_text pt16 pb16 o_colored_level" data-name="Text">
+                            <form action="/website_form/" method="post" data-model_name="crm.lead"
+                                  data-success-mode="redirect" data-success-page="/contactus-thank-you"
+                                  class="s_website_form container-fluid mt32 o_mark_required" data-mark="*"
+                                  enctype="multipart/form-data" data-editable-form="false">
+                                <div class="s_website_form_rows row s_col_no_bgcolor">
+                                    <div class="col-md-12">
+                                        <div class="form-group s_website_form_field s_website_form_required row">
+                                            <div class="col-12 o_colored_level">
+                                                <label class="col-form-label s_website_form_label d-none"
+                                                       for="contact_name">
+                                                    <span class="s_website_form_label_content"/>
+                                                </label>
+                                                <input type="text" class="form-control s_website_form_input"
+                                                       name="contact_name" placeholder="Your Name" required=""
+                                                       value=""/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group s_website_form_field row">
+                                            <div class="col-12 o_colored_level">
+                                                <label class="col-form-label s_website_form_label d-none"
+                                                       for="contact_name">
+                                                    <span class="s_website_form_label_content"/>
+                                                </label>
+                                                <input type="text" class="form-control s_website_form_input"
+                                                       name="phone" placeholder="Phone Number" value=""/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group s_website_form_field s_website_form_required row">
+                                            <div class="col-12 o_colored_level">
+                                                <label class="col-form-label s_website_form_label d-none"
+                                                       for="contact_name">
+                                                    <span class="s_website_form_label_content"/>
+                                                </label>
+                                                <input type="text" class="form-control s_website_form_input"
+                                                       name="email_from" required="" placeholder="Email" value=""/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group s_website_form_field row">
+                                            <div class="col-12 o_colored_level">
+                                                <label class="col-form-label s_website_form_label d-none"
+                                                       for="contact_name">
+                                                    <span class="s_website_form_label_content"/>
+                                                </label>
+                                                <input type="text" class="form-control s_website_form_input"
+                                                       name="partner_name" required="" placeholder="Your Company"
+                                                       value=""/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group s_website_form_field s_website_form_model_required row">
+                                            <div class="col-12 o_colored_level">
+                                                <label class="col-form-label s_website_form_label d-none"
+                                                       for="contact_name">
+                                                    <span class="s_website_form_label_content"/>
+                                                </label>
+                                                <input type="text" class="form-control s_website_form_input" name="name"
+                                                       required="" placeholder="Subject" value=""/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group s_website_form_field s_website_form_required row">
+                                            <div class="col-12 o_colored_level">
+                                                <label class="col-form-label s_website_form_label d-none"
+                                                       for="contact_name">
+                                                    <span class="s_website_form_label_content"/>
+                                                </label>
+                                                <textarea class="form-control s_website_form_input" name="description"
+                                                          required="" placeholder="Your Question"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12 s_website_form_submit">
+                                        <div class="col-12">
+                                            <div class="s_btn text-center" data-name="Buttons">
+                                                <a href="#" role="button"
+                                                   class="btn btn-primary btn-lg btn-secondary o_website_form_send o_default_snippet_text">
+                                                    Send
+                                                </a>
+                                                <span id="o_website_form_result"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Contact Us End-->
+
+        <!--Snippets Assets Start-->
+        <template id="demo_snippets" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_structure']" position="before">
+                <div id="snippet_demo_snippets" class="o_panel">
+                    <div class="o_panel_header">
+                        <i class="fa fa-th-large"/>
+                        Construction Ultimate 01
+                    </div>
+                    <div class="o_panel_body">
+                        <t t-snippet="theme_construction_ultimate_01.construction_banner"
+                           t-thumbnail="/theme_construction_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_construction_ultimate_01.construction_brand_logo"
+                           t-thumbnail="/theme_construction_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_construction_ultimate_01.construction_left_content"
+                           t-thumbnail="/theme_construction_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_construction_ultimate_01.construction_right_content"
+                           t-thumbnail="/theme_construction_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_construction_ultimate_01.construction_services"
+                           t-thumbnail="/theme_construction_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_construction_ultimate_01.construction_features"
+                           t-thumbnail="/theme_construction_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_construction_ultimate_01.construction_testimonial"
+                           t-thumbnail="/theme_construction_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_construction_ultimate_01.construction_contact_us"
+                           t-thumbnail="/theme_construction_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+        <!--Snippets Assets End-->
+    </data>
+</odoo>

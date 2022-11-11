@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="company_theme_footer" inherit_id="website.layout"
+              name="Company Theme Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer"
+                         style="border-top:none;">
+                    <div id="footer" class="oe_structure oe_structure_solo" style="border-top:none;">
+                        <div class="s_call_to_action pt48 pb24 oe_custom_bg" id="footer_custom_d6">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12 pb112 pt64">
+                                        <h3 style="text-align: center; ">
+                                            <img style="margin:0 auto;" class="img img-responsive img-fluid"
+                                                 src="/logo.png" alt="Logo of YourCompany" title="YourCompany"/>
+                                            <b class="o_default_snippet_text">
+                                                <br/>
+                                            </b>
+                                        </h3>
+                                        <h3 style="text-align: center; ">
+                                            <br/>
+                                        </h3>
+                                        <h3 style="text-align: center; ">
+                                            <b>
+                                                <font style="color: rgb(206, 198, 206);">&amp;nbsp;</font>
+                                            </b>
+                                            <font style="color: rgb(206, 198, 206); font-size: 14px;"
+                                                  class="o_default_snippet_text">&amp;nbsp;Lorem ipsum dolor sit amet,
+                                                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                                et dolore magna aliqua.
+                                            </font>
+                                        </h3>
+                                        <h3 style="text-align: center; ">
+                                            <font style="color: rgb(206, 198, 206); font-size: 14px;"
+                                                  class="o_default_snippet_text">Ut enim ad minim veniam, quis nostrud
+                                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                Duis aute irure dolor in reprehenderit in voluptate veolores eos qui
+                                                ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui doerat
+                                                voluptatem.
+                                            </font>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

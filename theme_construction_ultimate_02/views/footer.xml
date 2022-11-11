@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="construction_two_theme_footer" inherit_id="website.layout"
+              name="Construction Two Theme Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section id="footer" class="oe_structure_solo bg-secondary" style="border-top: none;">
+                    <div id="footer_custom_d1" class="pt48 pb48" style="">
+                        <div class="container f_content">
+                            <div class="row mt32">
+                                <div class="col-md-3 col-lg-3 mt8 mb8 footer-div column-3">
+                                    <h4 class="mb16">
+                                        <font style="color: rgb(255, 255, 255); font-size: 18px;">ABOUT US</font>
+                                    </h4>
+                                    <h4>
+                                        <font style="color: rgb(255, 255, 255); font-size: 14px;"
+                                              class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetuer
+                                            adipiscing elit. Aenean commodo ligula eget dolor.
+                                        </font>
+                                    </h4>
+                                </div>
+                                <div class="col-md-3 col-lg-3  mt8 mb8 footer-div column-4">
+                                    <h4 class="mb16">
+                                        <font style="color: rgb(255, 255, 255); font-size: 18px;">OFFICE ADDRESS</font>
+                                    </h4>
+                                    <h4>
+                                        <span style="color: rgb(255, 255, 255); font-size: 14px;">
+                                            <span t-field="res_company.street"/>
+                                            <span t-field="res_company.city"/>
+                                        </span>
+                                    </h4>
+                                    <h4>
+                                        <span style="color: rgb(255, 255, 255); font-size: 14px;"
+                                              class="o_default_snippet_text">
+                                            <span t-field="res_company.state_id.name"/>
+                                            <span t-field="res_company.zip"/>
+                                            <span t-field="res_company.country_id.name"/>
+                                        </span>
+                                    </h4>
+                                    <h4>
+                                        <span style="color: rgb(255, 255, 255); font-size: 14px;"/>
+                                    </h4>
+                                    <h4>
+                                        <span style="color: rgb(255, 255, 255); font-size: 14px;"
+                                              class="o_default_snippet_text">
+                                            <span t-field="res_company.phone"/>
+                                        </span>
+                                    </h4>
+                                    <h4>
+                                        <span style="color: rgb(255, 255, 255); font-size: 14px;"/>
+                                    </h4>
+                                    <h4>
+                                        <span style="color: rgb(255, 255, 255); font-size: 14px;">
+                                            <span t-field="res_company.email"/>
+                                        </span>
+                                    </h4>
+                                </div>
+                                <div class="col-md-3 mt8 mb8 footer-div column-4 col-lg-2">
+                                    <h4 class="mb16">
+                                        <font style="color: rgb(255, 255, 255); font-size: 18px;">WORKING&amp;nbsp;
+                                            HOURS
+                                        </font>
+                                    </h4>
+                                    <ul class="footer-links list-unstyled">
+                                        <li class="mt8 mb8"/>
+                                        <li class="mt8 mb8 o_default_snippet_text">
+                                            <font style="color: rgb(255, 255, 255);">Mo-Fr: 8:00-19:00</font>
+                                        </li>
+                                        <li class="mt8 mb8 o_default_snippet_text">
+                                            <font style="color: rgb(255, 255, 255);">Sa: 8:00-14:00</font>
+                                        </li>
+                                        <li class="mt8 mb8 o_default_snippet_text">
+                                            <font style="color: rgb(255, 255, 255);">So: closed</font>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 mt8 mb8 footer-div column-4 col-lg-4">
+                                    <h4 class="mb16">
+                                        <font style="color: rgb(255, 255, 255); font-size: 18px;">RECENT PROJECTS</font>
+                                    </h4>
+                                    <ul class="footer-links list-unstyled">
+                                        <li class="mb8 mt8">
+                                            <img class="img-fluid o_we_custom_image"
+                                                 src="/theme_construction_ultimate_02/static/src/img/placeholder-70x70.png"
+                                                 style="width: 25%;" data-original-title="" title=""
+                                                 aria-describedby="tooltip285476"/>
+                                            <b>
+                                                <font style="color: rgb(255, 255, 255);"
+                                                      class="d-lg-inline d-flex mx-lg-3 o_default_snippet_text">Project
+                                                    2 -
+                                                    Interior Design
+                                                </font>
+                                            </b>
+                                        </li>
+                                        <li class="mb8 mt8">
+                                            <img class="img-fluid o_we_custom_image"
+                                                 src="/theme_construction_ultimate_02/static/src/img/placeholder-70x70.png"
+                                                 data-original-title="" title=""
+                                                 aria-describedby="tooltip346881" style="width: 25%;"/>
+                                            <span style="font-weight: bolder;">
+                                                <font style="color: rgb(255, 255, 255);"
+                                                      class="d-lg-inline d-flex mx-lg-3 o_default_snippet_text">Project
+                                                    5 -
+                                                    Construction styles
+                                                </font>
+                                            </span>
+                                            <br/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>
