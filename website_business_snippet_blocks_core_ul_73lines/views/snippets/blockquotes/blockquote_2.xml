@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Blockquote 2" id="blockquote_2">
+        <section class="pt64 pb64" id="blockquote_d2" data-visible="blockquote">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2 class="font-weight-bold">Blockquote</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div id="blockquote_d2"
+                 class="s_quotes_carousel s_carousel_default carousel slide"
+                 data-interval="10000">
+                <ol class="carousel-indicators">
+                    <li data-target="#blockquote_d2"
+                        data-slide-to="0" class="active"/>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active"
+                         data-name="Slide">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <blockquote class="bg-100 carousel-content mt64 mb64 col-12 col-sm-12 col-md-10 col-lg-9">
+                                    <div class="blockquote_content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor
+                                            incididun ut labore et dolore magna aliqua Ut enim ad.
+                                        </p>
+                                    </div>
+                                    <span class="font-weight-bold o_default_snippet_text">
+                                        —
+                                        Jane DOE
+                                    </span>
+                                    <img width="109" height="88"
+                                         src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/quote1.png"
+                                         class="img-fluid quote_img" alt=""/>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-control-prev"
+                     data-target="#blockquote_d2" data-slide="prev"
+                     role="img" aria-label="Previous" title="Previous">
+                    <span class="carousel-control-prev-icon"/>
+                    <span class="sr-only o_default_snippet_text">Previous
+                    </span>
+                </div>
+                <div class="carousel-control-next"
+                     data-target="#blockquote_d2" data-slide="next"
+                     role="img" aria-label="Next" title="Next">
+                    <span class="carousel-control-next-icon"/>
+                    <span class="sr-only o_default_snippet_text">Next</span>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

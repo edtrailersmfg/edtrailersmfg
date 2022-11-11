@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Counter_8" id="counter_8">
+        <section class="pt64 pb48" id="counter_8"
+                 style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-24.jpg&quot;);
+    background-repeat: no-repeat;
+    background-size: cover; background-attachment: fixed; position:relative;" data-visible="counters">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row text-center text-white">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb48">
+                        <h2>Counter Design</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="counter-box">
+                            <i class="fa fa-globe fa-4x"></i>
+                            <h3 class="mt32">165</h3>
+                            <hr/>
+                            <h4>Worldwide Centers</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="counter-box">
+                            <i class="fa fa-book fa-4x"></i>
+                            <h3 class="mt32">501</h3>
+                            <hr/>
+                            <h4>Courses Involved</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="counter-box">
+                            <i class="fa fa-building-o fa-4x"></i>
+                            <h3 class="mt32">455</h3>
+                            <hr/>
+                            <h4>Campus Building</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="counter-box">
+                            <i class="fa fa-graduation-cap fa-4x"></i>
+                            <h3 class="mt32">5042</h3>
+                            <hr/>
+                            <h4>No. Of Graduates</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,36 @@
+/*
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+*/
+
+.headline_hidden .headline {
+  display: none;
+}
+
+.owl-nav {
+  text-align: center;
+}
+
+nav button.owl-prev, .owl-carousel .owl-nav button.owl-prev {
+  background: black;
+  color: white;
+  padding: 5px 10px;
+}
+
+nav button.owl-next, .owl-carousel .owl-nav button.owl-next {
+  background: black;
+  color: white;
+  padding: 5px 10px;
+}
+
+.owl-carousel .owl-item img{
+    width:auto !important;
+    height: 230px !important;
+    margin: 0 auto;
+}
+
+.owl-carousel{
+    .owl-nav{
+        margin:32px 0;
+    }
+}

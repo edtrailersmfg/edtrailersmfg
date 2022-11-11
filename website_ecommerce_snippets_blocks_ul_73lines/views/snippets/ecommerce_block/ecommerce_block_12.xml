@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="ecommerce_block_12" name="Ecommerce BLock 12">
+        <section class="pt64 pb64" id="ecommerce_block_12" data-visible="ecommerce_blocks">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="oe_structure oe_empty">
+                            <div class="box">
+                                <a href="#">
+                                    <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-404x370.png"
+                                         alt="" class="img-fluid"/>
+                                </a>
+                                <div class="box-content">
+                                    <h3 class="title">Block Title</h3>
+                                    <span class="post">Lorem Ipsum</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="oe_structure oe_empty">
+                            <div class="box">
+                                <a href="#">
+                                    <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-404x370.png"
+                                         alt="" class="img-fluid"/>
+                                </a>
+                                <div class="box-content">
+                                    <h3 class="title">Block Title</h3>
+                                    <span class="post">Lorem Ipsum</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="oe_structure oe_empty">
+                            <div class="box">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-404x370.png" alt="" class="img-fluid"/>
+                                <div class="box-content">
+                                    <h3 class="title">Block Title</h3>
+                                    <span class="post">Lorem Ipsum</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

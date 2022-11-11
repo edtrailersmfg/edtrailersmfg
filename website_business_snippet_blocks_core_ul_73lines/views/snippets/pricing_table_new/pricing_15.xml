@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Pricing 15" id="pricing_15">
+        <section class="pt64 pb64" data-visible="pricing">
+            <div class="container">
+
+                <h2 class="text-center col-lg-12">Pricing Table</h2>
+                <p class="text-center mb48">Lorem Ipsum is simply dummy text of the printing.</p>
+                <div class="text-center pb32 nav-tabs border-0">
+                    <ul class="nav justify-content-center" role="tablist">
+                        <li class="nav-item">
+                            <a class="btn btn-outline-primary mr-3 mt8 mb8 rounded-circle" data-toggle="tab"
+                               href="#one">Active Tab
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class=" btn btn-outline-primary mr-3  mt8 mb8 rounded-circle" data-toggle="tab"
+                               href="#two">Tab Two
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class=" btn btn-outline-primary mr-3  mt8 mb8 rounded-circle" data-toggle="tab"
+                               href="#three">Tab Three
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row tab-content">
+                    <div id="one" class="col-12 col-sm-12 col-md-12 col-lg-12 tab-pane active">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb32">
+                                <div class="border rounded">
+                                    <div class="bg-light text-center pt32 pb32">
+                                        <p>First Plan</p>
+                                        <h2>$34</h2>
+                                    </div>
+                                    <div class="px-4 bg-white pt32 pb32">
+                                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit.consectetur adipiscing elit.
+                                        </p>
+                                        <a href="#" class="btn btn-primary btn-block">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb32">
+                                <div class="border rounded">
+                                    <div class="bg-light text-center pt32 pb32">
+                                        <p>Second Plan</p>
+                                        <h2>$34</h2>
+                                    </div>
+                                    <div class="px-4 bg-white pt32 pb32">
+                                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit.consectetur adipiscing elit.
+                                        </p>
+                                        <a href="#" class="btn btn-primary btn-block">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                <div class="border rounded">
+                                    <div class="bg-light text-center pt32 pb32">
+                                        <p>Third Plan</p>
+                                        <h2>$34</h2>
+                                    </div>
+                                    <div class="px-4 bg-white pt32 pb32">
+                                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit.consectetur adipiscing elit.
+                                        </p>
+                                        <a href="#" class="btn btn-primary btn-block">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="two" class="col-12 col-sm-12 col-md-12 col-lg-12 tab-pane fade">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb32">
+                                <div class="border rounded">
+                                    <div class="bg-light text-center pt32 pb32">
+                                        <p>First Plan</p>
+                                        <h2>$344</h2>
+                                    </div>
+                                    <div class="px-4 bg-white pt32 pb32">
+                                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit.consectetur adipiscing elit.
+                                        </p>
+                                        <a href="#" class="btn btn-primary btn-block">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb32">
+                                <div class="border rounded">
+                                    <div class="bg-light text-center pt32 pb32">
+                                        <p>Second Plan</p>
+                                        <h2>$34</h2>
+                                    </div>
+                                    <div class="px-4 bg-white pt32 pb32">
+                                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit.consectetur adipiscing elit.
+                                        </p>
+                                        <a href="#" class="btn btn-primary btn-block">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                <div class="border rounded">
+                                    <div class="bg-light text-center pt32 pb32">
+                                        <p>Third Plan</p>
+                                        <h2>$34</h2>
+                                    </div>
+                                    <div class="px-4 bg-white pt32 pb32">
+                                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit.consectetur adipiscing elit.
+                                        </p>
+                                        <a href="#" class="btn btn-primary btn-block">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="three" class="col-12 col-sm-12 col-md-12 col-lg-12 tab-pane fade">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb32">
+                                <div class="border rounded">
+                                    <div class="bg-light text-center pt32 pb32">
+                                        <p>First Plan</p>
+                                        <h2>$3444</h2>
+                                    </div>
+                                    <div class="px-4 bg-white pt32 pb32">
+                                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit.consectetur adipiscing elit.
+                                        </p>
+                                        <a href="#" class="btn btn-primary btn-block">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb32">
+                                <div class="border rounded">
+                                    <div class="bg-light text-center pt32 pb32">
+                                        <p>Second Plan</p>
+                                        <h2>$34</h2>
+                                    </div>
+                                    <div class="px-4 bg-white pt32 pb32">
+                                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit.consectetur adipiscing elit.
+                                        </p>
+                                        <a href="#" class="btn btn-primary btn-block">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                <div class="border rounded">
+                                    <div class="bg-light text-center pt32 pb32">
+                                        <p>Third Plan</p>
+                                        <h2>$34</h2>
+                                    </div>
+                                    <div class="px-4 bg-white pt32 pb32">
+                                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit.consectetur adipiscing elit.
+                                        </p>
+                                        <a href="#" class="btn btn-primary btn-block">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

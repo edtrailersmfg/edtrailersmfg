@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+    <template id="dynamic_filter_template_custom_product_template_item_mini_1" name="Mini Product Carousel 1">
+        <t t-foreach="records" t-as="product">
+            <div class="product_dynamic_class">
+                <form action="/shop/cart/update" method="post"
+                      class="mt8 mb8 product_grid_4">
+                    <input type="hidden" name="csrf_token"
+                           t-att-value="request.csrf_token()"/>
+                    <div itemscope="itemscope" itemtype="http://schema.org/Product">
+                        <div class="oe_product_image_carousel mini-image">
+                            <a itemprop="url"
+                               t-att-href="'/shop/product/%s' % slug(product)">
+                                <span itemprop="image" t-field="product.image_1920"
+                                      t-options='{"widget": "image", "resize": None if product_image_big else "300x300"}'
+                                      t-att-alt="product.name"
+                                      class="align-items-center d-flex h-100 justify-content-center"/>
+                            </a>
+                        </div>
+                        <section class="mini-info">
+                            <h5 class="oe_title">
+                                <a itemprop="name"
+                                   t-att-href="'/shop/product/%s' % slug(product)"
+                                   t-field="product.name"/>
+                            </h5>
+                            <div class="easy-shortcuts-user-rating">
+                                <t t-name="portal_rating_rating.rating_stars_static">
+                                    <t t-set="val_integer"
+                                       t-value="round(product.get_rating_stat(product)['avg'])"/>
+                                    <t t-set="val_decimal" t-value="0"/>
+                                    <t t-set="empty_star"
+                                       t-value="5 - val_integer"/>
+                                    <div class="o_website_rating_static">
+                                        <t t-foreach="range(0,val_integer)"
+                                           t-as="num">
+                                            <i class="fa fa-star"/>
+                                        </t>
+                                        <t t-if="val_decimal">
+                                            <i class="fa fa-star-half-o"/>
+                                        </t>
+                                        <t t-foreach="range(0,empty_star)" t-as="num">
+                                            <i class="fa fa-star-o"/>
+                                        </t>
+                                    </div>
+                                </t>
+                            </div>
+                            <div itemprop="offers" itemscope="itemscope"
+                                 itemtype="http://schema.org/Offer"
+                                 class="product_price easy-shortcuts-price"
+                                 t-if="product.product_variant_ids">
+                                <b>
+                                    <!--                                    <t t-if="(product.lst_price - product.list_price ) &gt; 0.1  and website.get_current_pricelist().discount_policy=='without_discount'">-->
+                                    <!--                                        <del class="text-danger mr8"-->
+                                    <!--                                             style="white-space: nowrap;"-->
+                                    <!--                                             t-esc="compute_currency(product.website_public_price)"-->
+                                    <!--                                             t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}"/>-->
+                                    <!--                                    </t>-->
+                                    <span t-esc="product.list_price"
+                                          t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                                    <span itemprop="price" style="display:none;"
+                                          t-esc="product.price"/>
+                                    <span itemprop="priceCurrency"
+                                          style="display:none;"
+                                          t-esc="website.currency_id.name"/>
+                                </b>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item mr-0 add_cart_parent xxxx">
+                                        <input name="product_id"
+                                               t-att-data-product-id="product.product_variant_ids[0].id"
+                                               t-att-value="product.product_variant_ids[0].id"
+                                               type="hidden"/>
+                                        <a href="#"
+                                           class="btn btn-secondary js_add_cart easy-shortcuts-add-to-cart social_cart"
+                                           data-toggle="tooltip"
+                                           title="Add to Cart">
+                                            <span class="fa fa-shopping-cart">
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item mr-0 o_compare_parent">
+                                        <t t-set="product_variant_id"
+                                           t-value="product._get_first_possible_variant_id()"/>
+                                        <button t-if="product_variant_id"
+                                                type="button" role="button"
+                                                class="d-md-inline-block btn btn-secondary o_add_compare"
+                                                title="Compare" aria-label="Compare"
+                                                t-att-data-product-product-id="product_variant_id"
+                                                data-action="o_comparelist">
+                                            <span class="fa fa-exchange"></span>
+                                        </button>
+                                    </li>
+                                    <li class="list-inline-item mr-0 o_wishlist_parent">
+                                        <t t-set="in_wish" t-value="product._is_in_wishlist()"/>
+                                        <t t-set="product_variant_id"
+                                           t-value="product._get_first_possible_variant_id()"/>
+                                        <button t-if="product_variant_id" type="button" role="button"
+                                                class="btn btn-secondary o_add_wishlist"
+                                                t-att-disabled='in_wish or None'
+                                                title="Add to Wishlist" t-att-data-product-template-id="product.id"
+                                                t-att-data-product-product-id="product_variant_id"
+                                                data-action="o_wishlist">
+                                            <span class="fa fa-heart" role="img" aria-label="Add to wishlist"></span>
+                                        </button>
+                                    </li>
+                                    <li class="list-inline-item mr-0 oe_quick_view">
+                                        <button type="button" class="btn btn-secondary o_quick_view_popup o_quick_view"
+                                                title="Quick View" t-att-data-product-id="product.id">
+                                            <span class="fa fa-eye" role="img" aria-label="Quick View"/>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                    <!--                    <t t-if="product.website_ribbon_id">-->
+                    <!--                        <t t-set="bg_color" t-value="product.website_ribbon_id.bg_color or ''"/>-->
+                    <!--                        <t t-set="text_color" t-value="product.website_ribbon_id.text_color or ''"/>-->
+                    <!--                        <t t-set="bg_class" t-value="product.website_ribbon_id.html_class or ''"/>-->
+                    <!--                        <span t-attf-class="o_ribbon #{bg_class}"-->
+                    <!--                              t-attf-style="#{text_color and ('color: %s; ' % text_color)}#{bg_color and 'background-color:' + bg_color}"-->
+                    <!--                              t-raw="product.website_ribbon_id.html or ''"/>-->
+                    <!--                    </t>-->
+                </form>
+            </div>
+        </t>
+    </template>
+</odoo>

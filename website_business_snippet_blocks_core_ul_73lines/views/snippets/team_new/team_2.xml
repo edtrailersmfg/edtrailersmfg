@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Team 2" id="team_2">
+        <section class="pt64 pb64" data-visible="team">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb32">
+                        <h2>Team</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg" alt="" title="" class="img-fluid rounded"/>
+                        <h3 class="pt16">Employee One</h3>
+                        <p>Position</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg" alt="" title="" class="img-fluid rounded"/>
+                        <h3 class="pt16">Employee Two</h3>
+                        <p>Position</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg" alt="" title="" class="img-fluid rounded"/>
+                        <h3 class="pt16">Employee Three</h3>
+                        <p>Position</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg" alt="" title="" class="img-fluid rounded"/>
+                        <h3 class="pt16">Employee Four</h3>
+                        <p>Position</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg" alt="" title="" class="img-fluid rounded"/>
+                        <h3 class="pt16">Employee Five</h3>
+                        <p>Position</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg" alt="" title="" class="img-fluid rounded"/>
+                        <h3 class="pt16">Employee Six</h3>
+                        <p>Position</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg" alt="" title="" class="img-fluid rounded"/>
+                        <h3 class="pt16">Employee Seven</h3>
+                        <p>Position</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg" alt="" title="" class="img-fluid rounded"/>
+                        <h3 class="pt16">Employee Eight</h3>
+                        <p>Position</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

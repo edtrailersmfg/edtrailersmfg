@@ -1,0 +1,37 @@
+/*
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+*/
+
+.categ-title {
+    margin: 0px;
+    padding: 15px 0px;
+    font-size: 25px;
+}
+
+#o_shop_collapse_category{
+    .nav-item {
+        #categ_icon_collapse{
+            display: inline-block !important;
+            padding-top: 2px;
+        }
+
+        .align-items-center{
+            align-items: initial !important;
+        }
+    }
+}
+
+#wsale_products_categories_collapse{
+//     .custom-radio .custom-control-label::before{
+//         display: none;
+//     }
+
+//     .custom-control{
+//         padding-left: 0;
+//     }
+//
+//     .custom-radio .custom-control-input:checked ~ .custom-control-label::after{
+//         background-image: none;
+//     }
+}

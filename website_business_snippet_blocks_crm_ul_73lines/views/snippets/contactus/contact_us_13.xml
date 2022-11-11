@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Contact us 13" id="contact_us_13">
+        <section class="s_website_form pt64 pb64" data-visible="contactus">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 pb16">
+                        <h1 class="o_default_snippet_text mb16">Get In Touch</h1>
+                        <p class="o_default_snippet_text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        </p>
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb16 media">
+                                <div class="media-left">
+                                    <i class="fa fa-2x mr-3 mt-2 pe-7s-map-marker fa-500px" data-original-title=""
+                                       title="" aria-describedby="tooltip928848" style=""/>
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="pt8 font-weight-bold o_default_snippet_text">Visit Us:
+                                    </h5>
+                                    <span class="o_default_snippet_text">1725 Slough Ave.</span>
+                                    <span class="o_default_snippet_text">Scranton</span>
+                                    <span class="o_default_snippet_text">Pennsylvania</span>
+                                    <span class="o_default_snippet_text">18540</span>
+                                    <span class="o_default_snippet_text">United States</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb16 media">
+                                <div class="media-left">
+                                    <i class="fa fa-2x mr-3 mt-2 pe-7s-mail fa-500px" data-original-title="" title=""
+                                       aria-describedby="tooltip376422" style=""/>
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="pt8 font-weight-bold o_default_snippet_text">Mail Us:
+                                    </h5>
+                                    <p class="mb0 o_default_snippet_text">info@yourcompany.example.com</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb16 media">
+                                <div class="media-left">
+                                    <i class="fa fa-2x mr-3 mt-2 pe-7s-call fa-500px" style=""/>
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="pt8 font-weight-bold o_default_snippet_text">Phone Us:</h5>
+                                    <p class="mb0 o_default_snippet_text">+1 555 123 8069</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <h1 class="o_default_snippet_text mb16">Drop Us a Line</h1>
+                        <form action="/website_form/" method="post" data-model_name="crm.lead"
+                              data-success-mode="redirect"
+                              data-success-page="/contactus-thank-you"
+                              class="s_website_form container-fluid o_mark_required"
+                              data-mark="*"
+                              enctype="multipart/form-data"
+                              data-editable-form="false">
+                            <div class="justify-content-center s_website_form_rows row s_col_no_bgcolor">
+                                <div class="col-md-12">
+                                    <div class="form-group s_website_form_field s_website_form_required">
+                                        <label class="col-form-label s_website_form_label d-none"
+                                               for="contact_name">
+                                            <span class="s_website_form_label_content"></span>
+                                        </label>
+                                        <input type="text" class="form-control s_website_form_input"
+                                               name="contact_name" placeholder="Your Name"
+                                               t-att-value="request.params.get('contact_name', '')"
+                                               required=""/>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group s_website_form_field s_website_form_required">
+                                        <label class="col-form-label s_website_form_label d-none"
+                                               for="contact_name">
+                                            <span class="s_website_form_label_content"></span>
+                                        </label>
+                                        <input type="text" class="form-control s_website_form_input"
+                                               name="email_from" required="" placeholder="Email"
+                                               t-att-value="request.params.get('email_from', '')"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group s_website_form_field s_website_form_required">
+                                        <label class="col-form-label s_website_form_label d-none"
+                                               for="contact_name">
+                                            <span class="s_website_form_label_content"></span>
+                                        </label>
+                                        <textarea class="form-control s_website_form_input"
+                                                  name="description" required=""
+                                                  placeholder="Your Question" rows="5">
+                                            <!--<t t-esc="request.params.get('description', '')"/>-->
+                                        </textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_submit">
+                                    <div class="s_btn text-left" data-name="Buttons">
+                                        <a href="#" role="button"
+                                           class="btn btn-primary btn-lg o_website_form_send">Send
+                                        </a>
+                                        <span id="o_website_form_result"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

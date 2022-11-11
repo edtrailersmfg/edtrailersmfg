@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="mega_menu_img_transition_6" name="Mega Menu Img Transition 6" groups="base.group_user">
+        <section id="menu_img_transition_6" class="pt32 pb32" data-visible="mega_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-3 col-md-4 col-sm-12 mb16 d-md-none d-lg-block">
+                        <div class="big_img">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/placeholders/placeholders-2.png"
+                                 alt="image" title="image"
+                                 class="img-fluid d-block"/>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-9 col-md-12 col-sm-12">
+                        <div class="row">
+                            <div class="col-12 col-lg-4 col-md-4 col-sm-12 menu_box mb24">
+                                <div class="media">
+                                    <div class="categ_img">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                             alt="image" title="image"
+                                             class="img-fluid d-block"/>
+                                    </div>
+                                    <div class="align-self-center media-body" style="margin-left:12px;">
+                                        <a href="#" class="font-weight-bold">Short Headline</a>
+                                        <p class="mb0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 col-md-4 col-sm-12 menu_box mb24">
+                                <div class="media">
+                                    <div class="categ_img">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                             alt="image" title="image"
+                                             class="img-fluid d-block"/>
+                                    </div>
+                                    <div class="align-self-center media-body" style="margin-left:12px;">
+                                        <a href="#" class="font-weight-bold">Short Headline</a>
+                                        <p class="mb0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 col-md-4 col-sm-12 menu_box mb24">
+                                <div class="media">
+                                    <div class="categ_img">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                             alt="image" title="image"
+                                             class="img-fluid d-block"/>
+                                    </div>
+                                    <div class="align-self-center media-body" style="margin-left:12px;">
+                                        <a href="#" class="font-weight-bold">Short Headline</a>
+                                        <p class="mb0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 col-md-4 col-sm-12 menu_box mb24">
+                                <div class="media">
+                                    <div class="categ_img">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                             alt="image" title="image"
+                                             class="img-fluid d-block"/>
+                                    </div>
+                                    <div class="align-self-center media-body" style="margin-left:12px;">
+                                        <a href="#" class="font-weight-bold">Short Headline</a>
+                                        <p class="mb0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 col-md-4 col-sm-12 menu_box mb24">
+                                <div class="media">
+                                    <div class="categ_img">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                             alt="image" title="image"
+                                             class="img-fluid d-block"/>
+                                    </div>
+                                    <div class="align-self-center media-body" style="margin-left:12px;">
+                                        <a href="#" class="font-weight-bold">Short Headline</a>
+                                        <p class="mb0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 col-md-4 col-sm-12 menu_box mb24">
+                                <div class="media">
+                                    <div class="categ_img">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                             alt="image" title="image"
+                                             class="img-fluid d-block"/>
+                                    </div>
+                                    <div class="align-self-center media-body" style="margin-left:12px;">
+                                        <a href="#" class="font-weight-bold">Short Headline</a>
+                                        <p class="mb0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 col-md-4 col-sm-12 menu_box mb24">
+                                <div class="media">
+                                    <div class="categ_img">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                             alt="image" title="image"
+                                             class="img-fluid d-block"/>
+                                    </div>
+                                    <div class="align-self-center media-body" style="margin-left:12px;">
+                                        <a href="#" class="font-weight-bold">Short Headline</a>
+                                        <p class="mb0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 col-md-4 col-sm-12 menu_box mb24">
+                                <div class="media">
+                                    <div class="categ_img">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                             alt="image" title="image"
+                                             class="img-fluid d-block"/>
+                                    </div>
+                                    <div class="align-self-center media-body" style="margin-left:12px;">
+                                        <a href="#" class="font-weight-bold">Short Headline</a>
+                                        <p class="mb0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 col-md-4 col-sm-12 menu_box mb24">
+                                <div class="media">
+                                    <div class="categ_img">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                             alt="image" title="image"
+                                             class="img-fluid d-block"/>
+                                    </div>
+                                    <div class="align-self-center media-body" style="margin-left:12px;">
+                                        <a href="#" class="font-weight-bold">Short Headline</a>
+                                        <p class="mb0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Progress Bar 1" id="progress_bar_1">
+        <section class="pt64 pb64" id="progressbar_one" data-visible="progressbar">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 pb16">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-57.png"
+                             class="img-fluid pb32"/>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 pb16">
+                        <h2>OUR SKILLS</h2>
+                        <p class="o_default_snippet_text pb24 pt24 text-justify">Lorem Ipsum is simply dummy text of the
+                            printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book.
+                        </p>
+                        <section id="progress-bar1" class="progress_bars">
+                            <div class="progress_bar">
+                                <div class="progress_title  mb-1">
+                                    <h4>SIMPLE WEBSITES</h4>
+                                </div>
+                                <span class="progress_number" contentEditable="False" style="opacity: 1;">
+                                    <span class="progress_bar_1">100</span>%
+                                </span>
+                                <div class="progress_content_outer">
+                                    <div data-percentage="100" data-active="#000"
+                                         data-nonactive="#ECF0F1"
+                                         class="progress_content"></div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="progress-bar2" class="progress_bars">
+                            <div class="progress_bar">
+                                <div class="progress_title mb-1">
+                                    <h4>STRETAGY</h4>
+                                </div>
+                                <span class="progress_number " contentEditable="False" style="opacity: 1;"><span
+                                        class="progress_bar_1">80</span>%
+                                </span>
+                                <div class="progress_content_outer">
+                                    <div data-percentage="80" data-active="#000"
+                                         data-nonactive="#ECF0F1"
+                                         class="progress_content"></div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="progress-bar3" class="progress_bars">
+                            <div class="progress_bar">
+                                <div class="progress_title mb-1">
+                                    <h4>ONLINE MARKETING
+                                    </h4>
+                                </div>
+                                <span class="progress_number " contentEditable="False" style="opacity: 1;"><span
+                                        class="progress_bar_1">60</span>%
+                                </span>
+                                <div class="progress_content_outer">
+                                    <div data-percentage="60" data-active="#000"
+                                         data-nonactive="#ECF0F1"
+                                         class="progress_content"></div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="progress-bar4" class="progress_bars">
+                            <div class="progress_bar">
+                                <div class="progress_title mb-1">
+                                    <h4>SOCIAL MEDIA
+                                    </h4>
+                                </div>
+                                <span class="progress_number " contentEditable="False" style="opacity: 1;"><span
+                                        class="progress_bar_1">30</span>%
+                                </span>
+                                <div class="progress_content_outer">
+                                    <div data-percentage="50" data-active="#000"
+                                         data-nonactive="#ECF0F1"
+                                         class="progress_content"></div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="progress-bar5" class="progress_bars">
+                            <div class="progress_bar">
+                                <div class="progress_title mb-1">
+                                    <h4>24/7 SUPPORT
+                                    </h4>
+                                </div>
+                                <span class="progress_number" contentEditable="False" style="opacity: 1;">
+                                    <span class="progress_bar_1">40</span>%
+                                </span>
+                                <div class="progress_content_outer">
+                                    <div data-percentage="40" data-active="#000"
+                                         data-nonactive="#ECF0F1"
+                                         class="progress_content"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

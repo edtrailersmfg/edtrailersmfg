@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="News 1" id="news_1">
+        <section class="pt64 pb64" id="news_one" data-visible="news">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb48">
+                        <h2>Recent News</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb-4">
+                        <div class="news_text">
+                            <div>
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid w-100"/>
+                            </div>
+                            <div class="p-4 news_post">
+                                <div class="pb16">
+                                    <span class="mr-2 d-md-block d-lg-inline">
+                                        <i class="fa fa-user"></i>
+                                        <a href="#">Williamson</a>
+                                    </span>
+                                    <span>
+                                        <i class="fa fa-comments"></i>
+                                        <a href="#">2 Comments</a>
+                                    </span>
+                                </div>
+                                <h5 class="font-weight-bold">
+                                    <a href="#">Latest News Post</a>
+                                </h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda culpa cumque
+                                    dicta sint soluta voluptas eius iusto modi reprehenderit sint soluta voluptas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb-4">
+                        <div class="news_text">
+                            <div>
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid w-100"/>
+                            </div>
+                            <div class="p-4 news_post">
+                                <div class="pb16">
+                                    <span class="mr-2 d-md-block d-lg-inline">
+                                        <i class="fa fa-user"></i>
+                                        <a href="#">Williamson</a>
+                                    </span>
+                                    <span>
+                                        <i class="fa fa-comments"></i>
+                                        <a href="#">2 Comments</a>
+                                    </span>
+                                </div>
+                                <h5 class="font-weight-bold">
+                                    <a href="#">Latest News Post</a>
+                                </h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda culpa cumque
+                                    dicta sint soluta voluptas eius iusto modi reprehenderit sint soluta voluptas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb-4">
+                        <div class="news_text">
+                            <div>
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid w-100"/>
+                            </div>
+                            <div class="p-4 news_post">
+                                <div class="pb16">
+                                    <span class="mr-2 d-md-block d-lg-inline">
+                                        <i class="fa fa-user"></i>
+                                        <a href="#">Williamson</a>
+                                    </span>
+                                    <span>
+                                        <i class="fa fa-comments"></i>
+                                        <a href="#">2 Comments</a>
+                                    </span>
+                                </div>
+                                <h5 class="font-weight-bold">
+                                    <a href="#">Latest News Post</a>
+                                </h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda culpa cumque
+                                    dicta sint soluta voluptas eius iusto modi reprehenderit sint soluta voluptas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

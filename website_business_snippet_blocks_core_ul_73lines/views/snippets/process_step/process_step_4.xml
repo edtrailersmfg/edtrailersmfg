@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Process Step 4" id="process_step_4">
+        <section class="pt64 pb64 text-light" id="process_step_4" data-visible="process_steps">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb16">
+                        <h2>Four Steps To Your Success</h2>
+                        <hr/>
+                        <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit aenean rhoncus posuere odio in.</p>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 text-center mb16">
+                       <div class="box">
+                           <i class="fa fa-lightbulb-o fa-2x mb16"></i>
+                            <h2 class="process_no">01</h2>
+                            <h3>Contact</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing
+                            </p>
+                       </div>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 text-center mb16">
+
+                       <div class="box">
+                           <i class="fa fa-address-card-o fa-2x mb16"></i>
+                            <h2 class="process_no">02</h2>
+                            <h3>Appointment</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing
+                            </p>
+                       </div>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 text-center mb16">
+
+                       <div class="box">
+                           <i class="fa fa-server fa-2x mb16"></i>
+                            <h2 class="process_no">03</h2>
+                            <h3>Analysis</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing
+                            </p>
+                       </div>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 text-center mb16">
+
+                       <div class="box">
+                           <i class="fa fa-empire fa-2x mb16"></i>
+                            <h2 class="process_no">04</h2>
+                            <h3>Success</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing
+                            </p>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

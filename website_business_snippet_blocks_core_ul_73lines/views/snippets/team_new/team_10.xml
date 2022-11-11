@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="team_10" name="Team10">
+        <section id="team_5" class="pt64 pb64" data-visible="team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Our Team</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Team Member 1 -->
+                    <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-4">
+                        <div class="card border-0 shadow">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg"
+                                 class="card-img-top" alt="..."/>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-0 text-alpha">Team
+                                    Member
+                                </h5>
+                                <div class="card-text text-black-50">Web
+                                    Developer
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team Member 2 -->
+                    <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-4">
+                        <div class="card border-0 shadow">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg"
+                                 class="card-img-top" alt="..."/>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-0 text-alpha">Team
+                                    Member
+                                </h5>
+                                <div class="card-text text-black-50">Designer
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team Member 3 -->
+                    <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-4">
+                        <div class="card border-0 shadow">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg"
+                                 class="card-img-top" alt="..."/>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-0 text-alpha">Team
+                                    Member
+                                </h5>
+                                <div class="card-text text-black-50">Programmer
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team Member 4 -->
+                    <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-4">
+                        <div class="card border-0 shadow">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg"
+                                 class="card-img-top" alt="..."/>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-0 text-alpha">Team
+                                    Member
+                                </h5>
+                                <div class="card-text text-black-50">
+                                    Developer
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+            </div>
+        </section>
+    </template>
+</odoo>

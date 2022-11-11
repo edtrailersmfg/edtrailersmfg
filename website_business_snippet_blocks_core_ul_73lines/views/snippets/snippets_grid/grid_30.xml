@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Grid 30" id="grid_30">
+        <section class="pt64 pb64" data-visible="grids">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2>Headline</h2>
+                        <p class="mb48">Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             alt="Image" title="Image"
+                             class="img-fluid mb8 mt8"/>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             alt="Image" title="Image"
+                             class="img-fluid mb8 mt8"/>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             alt="Image" title="Image"
+                             class="img-fluid mb8 mt8"/>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             alt="Image" title="Image"
+                             class="img-fluid mb8 mt8"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

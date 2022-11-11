@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="footer_6" name="Footer 6">
+        <section class="pt64 pb32" id="footer_6" data-visible="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 separator mb32">
+                        <img style="margin:0 auto;"
+                             class="img img-responsive img-fluid"
+                             src="/logo.png"
+                             t-att-alt="'Logo of %s' % res_company.name"
+                             t-att-title="res_company.name"/>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy.Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                        </p>
+                        <div class="media">
+                            <i class="fa fa-map-marker mr-2 mt-1"></i>
+                            <div class="media-body mb16">
+                                <p class="font-weight-bold mb8">Address :</p>
+                                <span t-field="res_company.street"/>
+                                <span t-field="res_company.city"/>
+                                <span t-field="res_company.state_id.name"/>
+                                <span t-field="res_company.zip"/>
+                                <span t-field="res_company.country_id.name"/>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <i class="fa fa-phone mr-2 mt-1"></i>
+                            <div class="media-body mb16">
+                                <p class="font-weight-bold mb8">Phone :</p>
+                                <span t-field="res_company.phone"/>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <i class="fa fa-envelope mr-2 mt-1"></i>
+                            <div class="media-body mb16">
+                                <p class="font-weight-bold mb8">Email :</p>
+                                <span t-field="res_company.email"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-2 separator mb32">
+                        <h5 class="text-uppercase font-weight-bold">links</h5>
+                        <hr style="width: 35px; margin: 0; padding: 0;" class="mb16"></hr>
+                        <ul class="list-unstyled">
+                            <li class="mb8">
+                                <a href="#" target="_blank">Theme Features</a>
+                            </li>
+                            <li class="mb8">
+                                <a href="#" target="_blank">Page Builder</a>
+                            </li>
+                            <li class="mb8">
+                                <a href="#" target="_blank">Private Policy</a>
+                            </li>
+                            <li class="mb8">
+                                <a href="#" target="_blank">Shop Ruler</a>
+                            </li>
+                            <li class="mb8">
+                                <a href="#" target="_blank">Services</a>
+                            </li>
+                            <li class="mb8">
+                                <a href="#" target="_blank">Gallary Layout</a>
+                            </li>
+                            <li class="mb8">
+                                <a href="#" target="_blank">Shop Ruler</a>
+                            </li>
+                            <li class="mb8">
+                                <a href="#" target="_blank">Services</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 separator mb32">
+                        <h5 class="text-uppercase font-weight-bold">latest posts</h5>
+                        <hr style="width: 35px; margin: 0; padding: 0;" class="mb16"></hr>
+                        <div class="media">
+                            <img alt="image" class="img-fluid mb8 mr-2"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"/>
+                            <div class="media-body">
+                                <a href="#" target="_blank">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                                <p>June 5,2014</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <img alt="image" class="img-fluid mb8 mr-2"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"/>
+                            <div class="media-body">
+                                <a href="#" target="_blank">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                                <p>June 5,2014</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <img alt="image" class="img-fluid mb8 mr-2"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"/>
+                            <div class="media-body">
+                                <a href="#" target="_blank">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                                <p>June 5,2014</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32">
+                        <h5 class="text-uppercase font-weight-bold">short links</h5>
+                        <hr style="width: 35px; margin: 0; padding: 0;" class="mb16"></hr>
+                        <a href="#" target="_blank">Lorem ipsum dolor sit amet</a>
+                        <hr class="mt8 mb8"/>
+                        <a href="#" target="_blank">Lorem ipsum dolor sit amet</a>
+                        <hr class="mt8 mb8"/>
+                        <a href="#" target="_blank">Lorem ipsum dolor sit amet</a>
+                        <hr class="mt8 mb8"/>
+                        <a href="#" target="_blank">Lorem ipsum dolor sit amet</a>
+                        <hr class="mt8 mb8"/>
+                        <a href="#" target="_blank">Lorem ipsum dolor sit amet</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light">
+            <div class="container">
+                <div class="row p-4">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div>
+                            Copyright &amp;copy;
+                            <span t-field="res_company.name">Company name
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-lg-right text-md-right">
+                        <a t-att-href="res_company.social_facebook">
+                            <i class="fa fa-facebook px-2 "></i>
+                        </a>
+                        <a t-att-href="res_company.social_twitter">
+                            <i class="fa fa-twitter px-2"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-dribbble px-2"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-behance px-2"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-pinterest-p px-2"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-google-plus px-2"></i>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mt16">
+                        <div>
+                            Responsive Odoo theme,
+                            <span>
+                                Made with
+                                <i class="fa fa-heart"/>
+                                by
+                                <strong>&lt;73Lines/&gt;</strong>
+                            </span>
+                        </div>
+<!--                        <div>-->
+<!--                            <t t-call="website.language_selector"/>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

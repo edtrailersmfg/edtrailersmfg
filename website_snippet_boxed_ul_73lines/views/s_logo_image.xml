@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+
+    <!-- Snippet's Body -->
+    <template id="s_logo_image" name="Logo Image">
+        <section class="s_logo_image">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <a href="/">
+                            <img class="img img-fluid"
+                                 src="/website_snippet_boxed_ul_73lines/static/src/img/logo_placeholder.png"></img>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+
+</odoo>

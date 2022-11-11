@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="footer_1" name="Footer 1">
+        <section class="pt64 pb64 bg-black-75 oe_custom_bg"
+                 id="footer_custom_d8" data-visible="footer">
+            <div class="container">
+                <div class="row s_nb_column_fixed">
+                    <div class="col-lg-12 s_title pb48"
+                         style="text-align: center;">
+                        <div class="s_share">
+                            <h4 class="s_share_title">&amp;nbsp;</h4>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A8069%2F%23"
+                               class="s_share_facebook" target="_blank">
+                                <i class="fa fa-1x fa-facebook rounded shadow-sm img-rounded"
+                                   data-original-title="" title=""
+                                   aria-describedby="tooltip704436"/>
+                            </a>
+                            <a href="https://twitter.com/intent/tweet?text=Home%20%7C%20Website-8&amp;url=http%3A%2F%2Flocalhost%3A8069%2F%23"
+                               class="s_share_twitter" target="_blank">
+                                <i class="fa fa-1x fa-twitter rounded shadow-sm"/>
+                            </a>
+                            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%3A8069%2F%23&amp;title=Home%20%7C%20Website-8&amp;"
+                               class="s_share_linkedin" target="_blank">
+                                <i class="fa fa-1x fa-linkedin rounded shadow-sm"/>
+                            </a>
+                            <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A8069%2F%23"
+                               class="s_share_google" target="_blank">
+                                <i class="fa fa-1x fa-google-plus rounded shadow-sm"/>
+                            </a>
+                            <a href="mailto:?body=http%3A%2F%2Flocalhost%3A8069%2F%23&amp;subject=Home%20%7C%20Website-8"
+                               class="s_share_email">
+                                <i class="fa fa-1x fa-envelope rounded shadow-sm"
+                                   data-original-title="" title=""
+                                   aria-describedby="tooltip186582"/>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="row col-lg-12">
+                        <div class="col-lg-5">
+                            <div>
+                                Responsive Odoo theme,
+
+                                <span>
+                                    Made with
+
+                                    <i class="fa fa-heart"/>
+                                    by
+
+                                    <strong>&lt;73Lines/&gt;</strong>
+                                </span>
+                            </div>
+<!--                            <div>-->
+<!--                                <t t-call="website.language_selector"/>-->
+<!--                            </div>-->
+                        </div>
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-4">
+                            <div class="pull-right">
+                                Copyright &amp;copy;
+
+                                <span t-field="res_company.name">Company name
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

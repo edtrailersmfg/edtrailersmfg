@@ -1,0 +1,27 @@
+.contact_us_4 {
+    .s_website_form input, textarea {
+        background: transparent !important;
+        border: 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .s_website_form {
+        .form-control:focus {
+            box-shadow: 0 0 0 0 transparent !important;
+            border-color: $-alpha !important;
+        }
+    }
+
+    ::placeholder {
+        /*color: white;*/
+        opacity: 1; /* Firefox */
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        /*color: white;*/
+    }
+
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        /*color: white;*/
+    }
+}

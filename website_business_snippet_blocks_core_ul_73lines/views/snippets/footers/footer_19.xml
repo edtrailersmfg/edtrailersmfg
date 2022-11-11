@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Footer 19" id="footer_19">
+        <section class="pt64 pb32" id="footer_19" data-visible="footer">
+            <div class="container">
+                <div class="row border py-4">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 border-right pb32">
+                        <h5 class="pb16 font-weight-bold">United Kingdom</h5>
+                        <div class="media">
+                            <h6>
+                                <i class="fa fa-phone-square mr-2 text-warning"></i>
+                            </h6>
+                            <div class="media-body">
+                                <h6>Call us :
+                                    <span t-field="res_company.phone"/>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <h6>
+                                <i class="fa fa-envelope-open mr-2 text-warning"></i>
+                            </h6>
+                            <div class="media-body">
+                                <h6>E-mail :
+                                    <span t-field="res_company.email"/>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <h6>
+                                <i class="fa fa-map-marker mr-2 text-warning"></i>
+                            </h6>
+                            <div class="media-body">
+                                <h6>Visit US :
+                                    <span t-field="res_company.street"/>
+                                    <span t-field="res_company.city"/>
+                                    <span t-field="res_company.state_id.name"/>
+                                    <span t-field="res_company.zip"/>
+                                    <span t-field="res_company.country_id.name"/>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="pt16">
+                            <a href="#" class="text-decoration-none" target="_blank">
+                                <i class="fa fa-google-plus p-2 box_hover"></i>
+                            </a>
+                            <a t-att-href="res_company.social_twitter" class="text-decoration-none" target="_blank">
+                                <i class="fa fa-twitter p-2 box_hover"></i>
+                            </a>
+                            <a t-att-href="res_company.social_linkedin" class="text-decoration-none" target="_blank">
+                                <i class="fa fa-linkedin p-2 box_hover "></i>
+                            </a>
+                            <a href="#" class="text-decoration-none" target="_blank">
+                                <i class="fa fa-pinterest p-2  box_hover"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 border-right pb32">
+                        <h5 class="pb16 font-weight-bold">United Kingdom</h5>
+                        <div class="media">
+                            <h6>
+                                <i class="fa fa-phone-square mr-2 text-warning"></i>
+                            </h6>
+                            <div class="media-body">
+                                <h6>Call us :
+                                    <span t-field="res_company.phone"/>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <h6>
+                                <i class="fa fa-envelope-open mr-2 text-warning"></i>
+                            </h6>
+                            <div class="media-body">
+                                <h6>E-mail :
+                                    <span t-field="res_company.email"/>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <h6>
+                                <i class="fa fa-map-marker mr-2 text-warning"></i>
+                            </h6>
+                            <div class="media-body">
+                                <h6>Visit US :
+                                    <span t-field="res_company.street"/>
+                                    <span t-field="res_company.city"/>
+                                    <span t-field="res_company.state_id.name"/>
+                                    <span t-field="res_company.zip"/>
+                                    <span t-field="res_company.country_id.name"/>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="pt16">
+                            <a href="#" class="text-decoration-none" target="_blank">
+                                <i class="fa fa-google-plus p-2 box_hover"></i>
+                            </a>
+                            <a t-att-href="res_company.social_twitter" class="text-decoration-none" target="_blank">
+                                <i class="fa fa-twitter p-2 box_hover"></i>
+                            </a>
+                            <a t-att-href="res_company.social_linkedin" class="text-decoration-none" target="_blank">
+                                <i class="fa fa-linkedin p-2 box_hover "></i>
+                            </a>
+                            <a href="#" class="text-decoration-none" target="_blank">
+                                <i class="fa fa-pinterest p-2  box_hover"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 border-right pb32">
+                        <h5 class="pb16 font-weight-bold">United Kingdom</h5>
+                        <div class="media">
+                            <h6>
+                                <i class="fa fa-phone-square mr-2 text-warning"></i>
+                            </h6>
+                            <div class="media-body">
+                                <h6>Call us :
+                                    <span t-field="res_company.phone"/>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <h6>
+                                <i class="fa fa-envelope-open mr-2 text-warning"></i>
+                            </h6>
+                            <div class="media-body">
+                                <h6>E-mail :
+                                    <span t-field="res_company.email"/>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <h6>
+                                <i class="fa fa-map-marker mr-2 text-warning"></i>
+                            </h6>
+                            <div class="media-body">
+                                <h6>Visit US :
+                                    <span t-field="res_company.street"/>
+                                    <span t-field="res_company.city"/>
+                                    <span t-field="res_company.state_id.name"/>
+                                    <span t-field="res_company.zip"/>
+                                    <span t-field="res_company.country_id.name"/>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="pt16">
+                            <a href="#" class="text-decoration-none" target="_blank">
+                                <i class="fa fa-google-plus p-2 box_hover"></i>
+                            </a>
+                            <a t-att-href="res_company.social_twitter" class="text-decoration-none" target="_blank">
+                                <i class="fa fa-twitter p-2 box_hover"></i>
+                            </a>
+                            <a t-att-href="res_company.social_linkedin" class="text-decoration-none" target="_blank">
+                                <i class="fa fa-linkedin p-2 box_hover "></i>
+                            </a>
+                            <a href="#" class="text-decoration-none" target="_blank">
+                                <i class="fa fa-pinterest p-2  box_hover"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <h4 class="font-weight-bold">Our Branches</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at,
+                            luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.
+                        </p>
+                    </div>
+                </div>
+                <div class="row pt64">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb32">
+                        <img style="margin:0 auto;"
+                             class="img img-responsive img-fluid"
+                             src="/logo.png"
+                             t-att-alt="'Logo of %s' % res_company.name"
+                             t-att-title="res_company.name"/>
+                        <p class="pt16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor,
+                            varius quam at,luctus dui. Mauris magna metus.
+                        </p>
+                        <div class="media">
+                            <h6>
+                                <i class="fa fa-phone-square mr-2 text-warning"></i>
+                            </h6>
+                            <div class="media-body">
+                                <h6>Call us :
+                                    <span t-field="res_company.phone"/>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <h6>
+                                <i class="fa fa-envelope-open mr-2 text-warning"></i>
+                            </h6>
+                            <div class="media-body">
+                                <h6>E-mail :
+                                    <span t-field="res_company.email"/>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <h6>
+                                <i class="fa fa-map-marker mr-2 text-warning"></i>
+                            </h6>
+                            <div class="media-body">
+                                <h6>Visit US :
+                                    <span t-field="res_company.street"/>
+                                    <span t-field="res_company.city"/>
+                                    <span t-field="res_company.state_id.name"/>
+                                    <span t-field="res_company.zip"/>
+                                    <span t-field="res_company.country_id.name"/>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb32">
+                        <h4 class="pb16 font-weight-bold border-bottom">Recent News</h4>
+                        <div class="pt16">
+                            <h6>Within the construction industry as their overdraft
+                            </h6>
+                            <h6>
+                                <i class="fa fa-clock-o text-warning"></i>
+                                January 22, 2016
+                            </h6>
+                        </div>
+                        <div class="pt16">
+                            <h6>Within the construction industry as their overdraft
+                            </h6>
+                            <h6>
+                                <i class="fa fa-clock-o text-warning"></i>
+                                January 22, 2016
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb32">
+                        <h4 class="pb16 font-weight-bold border-bottom">Navigation</h4>
+                        <div class="row pt16">
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-6">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">About US</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Contact</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Typography</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Carres</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Shop</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-6">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Testimonials</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Our Team</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Our Approach</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="input-group js_subscribe" data-list-id="0">
+                            <input type="email" name="email" class="js_subscribe_email form-control rounded-0"
+                                   placeholder="your email..."/>
+                            <span class="input-group-append">
+                                <a role="button" href="#"
+                                   class="btn btn-primary js_subscribe_btn rounded-0">Subscribe
+                                </a>
+                                <a role="button" href="#"
+                                   class="btn btn-success js_subscribed_btn d-none rounded-0"
+                                   disabled="disabled">Thanks
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <h4 class="pb16 font-weight-bold border-bottom">Gallery</h4>
+                        <div class="row pt16 pb16 px-3">
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-26.png"
+                                     class="img-fluid d-block mx-auto"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-26.png"
+                                     class="img-fluid d-block mx-auto"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-26.png"
+                                     class="img-fluid d-block mx-auto"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-26.png"
+                                     class="img-fluid d-block mx-auto"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-26.png"
+                                     class="img-fluid d-block mx-auto"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-26.png"
+                                     class="img-fluid d-block mx-auto"/>
+                            </div>
+                        </div>
+                        <h6>
+                            <a href="#" class="text-decoration-none text-warning" target="_blank">
+                                <i class="fa fa-arrow-circle-right"></i>View More Photos
+                            </a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light">
+            <div class="container">
+                <div class="row p-4">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb8">
+                        <div>
+                            Copyright &amp;copy;
+                            <span t-field="res_company.name">Company name
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-sm-6 text-md-right text-lg-right">
+                        <div>
+                            Responsive Odoo theme,
+                            <span>
+                                Made with
+                                <i class="fa fa-heart"/>
+                                by
+                                <strong>&lt; 73Lines &gt;
+                                </strong>
+                            </span>
+                        </div>
+<!--                        <div>-->
+<!--                            <t t-call="website.language_selector"/>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

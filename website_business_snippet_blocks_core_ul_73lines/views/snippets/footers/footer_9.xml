@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Footer 9" id="footer_9">
+        <section class="pt64" id="footer_9" data-visible="footer">
+            <div class="container">
+                <div class="row border p-5">
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus accumsan enim, quis
+                            feugiat
+                            risus auctor in. Nullam et congue augue.
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 ">
+
+                        <a href="#" type="button"
+                           class="col-12 col-sm-12 col-md-12 col-lg-5 mb8 btn btn-outline-info rounded-0">TAKE THE TOUR
+                        </a>
+                        <a href="#" type="button"
+                           class="col-12 col-sm-12 col-md-12 col-lg-5 mb8 btn btn-outline-info rounded-0">GET STARTED
+                        </a>
+
+                    </div>
+                </div>
+                <div class="row pt64">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 pb16">
+                        <img style="margin:0 auto;"
+                             class="img img-responsive img-fluid"
+                             src="/logo.png"
+                             t-att-alt="'Logo of %s' % res_company.name"
+                             t-att-title="res_company.name"/>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit.
+                        </p>
+                        <div>
+                            <a t-att-href="res_company.social_facebook">
+                                <i class="fa fa-facebook px-2"></i>
+                            </a>
+                            <a t-att-href="res_company.social_twitter">
+                                <i class="fa fa-twitter px-2"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-google plus px-2"></i>
+                            </a>
+                            <a t-att-href="res_company.social_linkedin">
+                                <i class="fa fa-linkedin px-2"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-2 pb16">
+                        <h5 class="mb16">Our Products</h5>
+                        <ul class="list-unstyled text-decoration-none">
+                            <li>
+                                <a href="#" target="_blank">Take The Tour</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Plans &amp; Planning</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Influencer Marketing</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Social Media Monitoring</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Free Tools</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">API</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-2 pb16">
+                        <h5 class="mb16">Explore</h5>
+                        <ul class="list-unstyled text-decoration-none">
+                            <li>
+                                <a href="#" target="_blank">Free Tools</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Find Influencer By Skill</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">PDF Social Analysis</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Dashboard</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-2 pb16">
+                        <h5 class="mb16">Need Help</h5>
+                        <ul class="list-unstyled text-decoration-none">
+                            <li>
+                                <a href="#" target="_blank">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Our Blog</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Metrics Help Desk</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Metrics System Status</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">FAQs</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <h5 class="mb16">Newslettes</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="input-group js_subscribe" data-list-id="0">
+                            <input type="email" name="email" class="js_subscribe_email form-control rounded-0"
+                                   placeholder="your email..."/>
+                            <span class="input-group-append">
+                                <a role="button" href="#"
+                                   class="btn btn-primary js_subscribe_btn rounded-0">Subscribe
+                                </a>
+                                <a role="button" href="#"
+                                   class="btn btn-success js_subscribed_btn d-none rounded-0"
+                                   disabled="disabled">Thanks
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                <hr></hr>
+            </div>
+        </section>
+        <section class="pb32">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-6">
+                        <ul class="d-flex d-inline list-unstyled p-0">
+                            <li class="px-2">
+                                <a href="#">Terms &amp; Conditions</a>
+                            </li>
+                            <li class="border-primary px-2" style="border-left:2px solid;">
+                                <a href="#">API Use Policy</a>
+                            </li>
+                            <li class="border-primary px-2" style="border-left:2px solid;">
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li class="border-primary px-2" style="border-left:2px solid;">
+                                <a href="#">Cookies</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-6 text-md-right text-lg-right text-center">
+                        <div>
+                            Copyright &amp;copy;
+                            <span t-field="res_company.name">Company name
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center pt16">
+                    <div>
+                        Responsive Odoo theme,
+                        <span>
+                            Made with
+                            <i class="fa fa-heart"/>
+                            by
+                            <strong>&lt;73Lines&gt;</strong>
+                        </span>
+                    </div>
+<!--                    <div>-->
+<!--                        <t t-call="website.language_selector"/>-->
+<!--                    </div>-->
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

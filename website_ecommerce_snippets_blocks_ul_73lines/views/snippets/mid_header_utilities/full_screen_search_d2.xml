@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Full Screen Search Two" id="full_screen_search_d2">
+        <section id="full_screen_search_d2" data-visible="mid_headears">
+            <div class="container">
+                <div class="row">
+                    <div class="oe_structure col-12 col-sm-12 col-md-12 col-lg-12 pt8 pb8">
+                        <div class="oe_structure oe_empty">
+                            <div class="open_btn">
+                                <a href="#">
+                                    <span class="btn btn-dark">SEARCH</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="my_full_search" class="full_search">
+                            <div class="close_search">
+                                <a href="#">
+                                    <i class="fa fa-remove close_btn"></i>
+                                </a>
+                            </div>
+                            <div class="full_search_content">
+                                <t t-call="website_ecommerce_snippets_blocks_ul_73lines.s_searchbar_input_ultimate"></t>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

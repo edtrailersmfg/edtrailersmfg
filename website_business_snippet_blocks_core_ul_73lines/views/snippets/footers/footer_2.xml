@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="footer_2" name="Footer 2">
+        <section class="s_call_to_action pt64 pb64 bg-epsilon oe_custom_bg"
+                 id="footer_custom_d6" data-visible="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 pb48">
+                        <h3 style="text-align: center; ">
+                            <img style="margin:0 auto;"
+                                 class="img img-responsive img-fluid"
+                                 src="/logo.png"
+                                 t-att-alt="'Logo of %s' % res_company.name"
+                                 t-att-title="res_company.name"/>
+                            <b class="o_default_snippet_text">
+                                <br/>
+                            </b>
+                        </h3>
+                        <h3 style="text-align: center; ">
+                            <br/>
+                        </h3>
+                        <h3 style="text-align: center; font-size:16px; ">
+                                Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna
+                                aliqua.Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex
+                                ea commodo consequat. Duis aute irure dolor in
+                                reprehenderit in voluptate veolores eos qui
+                                ratione voluptatem sequi nesciunt. Neque porro
+                                quisquam est, qui doerat voluptatem.
+                        </h3>
+                    </div>
+                </div>
+                <div class="row col-lg-12">
+                    <div class="col-lg-5">
+                        <div>
+                            Responsive Odoo theme,
+                            <span>
+                                Made with
+                                <i class="fa fa-heart"/>
+                                by
+                                <strong>&lt;73Lines/&gt;</strong>
+                            </span>
+                        </div>
+<!--                        <div>-->
+<!--                            <t t-call="website.language_selector"/>-->
+<!--                        </div>-->
+                    </div>
+
+                    <div class="col-lg-3">
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="pull-right">
+                            Copyright &amp;copy;
+                            <span t-field="res_company.name">Company name
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

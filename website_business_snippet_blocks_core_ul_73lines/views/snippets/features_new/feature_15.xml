@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Feature 15" id="feature_15">
+        <section class="pt64 pb64" data-visible="features">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                        <h2 class="pb32 px-3">Features</h2>
+                        <div class="col-12 col-sm-12 col-md-9 col-lg-12 pt8 pb8 media">
+                            <i class="fa fa-2x fa-check-circle-o mr-3"></i>
+                            <div class="media-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Ut at semper
+                                    metus.onsectetur adipiscing elit.onsectetur
+                                    adipiscing elit. Ut at semper metus.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-9 col-lg-12  pt8 pb8 media">
+                            <i class="fa fa-2x fa-check-circle-o mr-3 "></i>
+                            <div class="media-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Ut at semper
+                                    metus.onsectetur adipiscing elit. Ut at
+                                    semper metus.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-9 col-lg-12 pt8 pb8 media">
+                            <i class="fa fa-2x fa-check-circle-o mr-3"></i>
+                            <div class="media-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Ut at semper
+                                    metus.onsectetur adipiscing elit. Ut at
+                                    semper metus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 ">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-20.png"
+                             alt="molile"
+                             class="img-fluid pt8 pb8"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

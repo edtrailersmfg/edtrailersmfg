@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Tab 2" id="tab_2">
+        <section class="s_tabs pt64 pb64" id="tab_2" data-visible="tabs" data-vcss="001">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 pb48 text-center">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="s_tabs_main">
+                            <div class="s_tabs_nav">
+                                <ul class="nav nav-tabs  border-0" role="tablist">
+                                    <li class="nav-item list_style font-weight-bold text-center">
+                                        <a class="nav-link active nav_style" data-toggle="tab" href="#code">
+                                            <i class="fa fa-code mr-2"></i>
+                                            <span>Code</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item list_style font-weight-bold text-center">
+                                        <a class="nav-link nav_style" data-toggle="tab" href="#about">
+                                            <i class="fa fa-pencil-square-o mr-2"></i>
+                                            <span>About</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item list_style font-weight-bold text-center ">
+                                        <a class="nav-link nav_style" data-toggle="tab" href="#service">
+                                            <i class="fa fa-bar-chart-o mr-2"></i>
+                                            <span>Services</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item list_style font-weight-bold text-center">
+                                        <a class="nav-link nav_style" data-toggle="tab" href="#portfolio">
+                                            <i class="fa fa-folder-open-o mr-2"></i>
+                                            <span>Portfolio</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item list_style font-weight-bold text-center">
+                                        <a class="nav-link nav_style" data-toggle="tab" href="#contact">
+                                            <i class="fa fa-envelope-o mr-2"></i>
+                                            <span>Contact</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="s_tabs_content tab-content bg-white p-4">
+                                <div id="code" class="container tab-pane active content_style oe_structure oe_empty">
+                                    <h3 class="text-center">Headline 1</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                                    </p>
+
+                                </div>
+                                <div id="about" class="container tab-pane fade content_style oe_structure oe_empty">
+                                    <h3 class="text-center">Headline 2</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                                    </p>
+
+                                </div>
+                                <div id="service" class="container tab-pane fade content_style oe_structure oe_empty">
+                                    <h3 class="text-center">Headline 3</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                                    </p>
+
+                                </div>
+                                <div id="portfolio" class="container tab-pane fade content_style oe_structure oe_empty">
+                                    <h3 class="text-center">Headline 4</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                                    </p>
+
+                                </div>
+                                <div id="contact" class="container tab-pane fade content_style oe_structure oe_empty">
+                                    <h3 class="text-center">Headline 5</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,16 @@
+<odoo>
+    <!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+    <record id="view_blog_post_inherited" model="ir.ui.view">
+            <field name="name">blog.post.form.inherited</field>
+            <field name="model">blog.post</field>
+            <field name="inherit_id" ref="website_blog.view_blog_post_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='write_date']" position="after">
+                    <field name="background_url" invisible="1"/>
+                </xpath>
+            </field>
+    </record>
+</odoo>

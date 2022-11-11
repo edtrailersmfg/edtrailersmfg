@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Process Step 5" id="process_step_5">
+        <section class="pt64 pb64" id="process_five" data-visible="process_steps">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Working Process</h2>
+                        <hr/>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+                        <div class="row">
+                            <div class="col-12 col-sm-4 col-md-6 col-lg-3  process_step mb16">
+
+                                <i class="fa fa-desktop fa-2x mb16"></i>
+                                <h3>Analysis</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry been
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-4 col-md-6 col-lg-3  process_step  mb16">
+
+                                <i class="fa fa-send-o fa-2x mb16"></i>
+                                <h3>Planning</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry been
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-4 col-md-6 col-lg-3   process_step mb16">
+
+                                <i class="fa fa-database fa-2x mb16"></i>
+                                <h3>Devlopment Testing</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry been
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-4 col-md-6 col-lg-3  process_step  mb16">
+
+                                <i class="fa fa-tencent-weibo fa-2x mb16"></i>
+                                <h3>Support Maintanance</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry been
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

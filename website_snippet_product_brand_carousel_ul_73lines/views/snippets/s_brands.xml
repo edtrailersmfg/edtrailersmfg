@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <template id="dynamic_filter_template_custom_product_brand_1"
+              name="Brand Template">
+        <t t-foreach="records" t-as="record">
+            <div class="text-center">
+                <a itemprop="url"
+                   t-att-href="'/shop/?brands=%s-%s' % (record.name, record.id)"
+                   data-toggle="tooltip" t-att-title="record.name">
+                    <span itemprop="image" t-field="record.brand_image"
+                          t-options='{"widget": "image", "resize": None if brand_image else "300x300"}'
+                          t-att-alt="record.name"/>
+                </a>
+<!--                <div class="text-center mt16 mb16">-->
+<!--                    <strong>-->
+<!--                        <a t-att-href="'/shop/?brands=%s-%s' % (record.name, record.id)" t-raw="record.name"></a>-->
+<!--                    </strong>-->
+<!--                </div>-->
+            </div>
+        </t>
+    </template>
+</odoo>

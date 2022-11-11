@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="feature_26" name="Feature 26">
+        <section class="pt64 pb64 sni-block" id="feature_12" data-visible="features">
+            <div class="container">
+                <div class="row pb48">
+                    <div class="col text-center">
+                       <h2>Feature Blocks</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb16">
+                        <div class="sni-box sni-touch bg-white">
+                            <h3>Feature 1</h3>
+                            <p>Lorem Ipsum is
+                                simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the
+                                industry's standard dummy text ever
+                            </p>
+                            <p class="mt-4">
+                                <a href="#" class="o_default_snippet_text">
+                                    Learn More
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb16">
+                        <div class="sni-box sni-touch bg-white">
+                            <h3>Feature 2</h3>
+                            <p>Lorem Ipsum is
+                                simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the
+                                industry's standard dummy text ever
+                            </p>
+                            <p class="mt-4">
+                                <a href="#" class="o_default_snippet_text">
+                                    Learn More
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb16">
+                        <div class="sni-box sni-touch bg-white">
+                            <h3>Feature 3</h3>
+                            <p>Lorem Ipsum is
+                                simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the
+                                industry's standard dummy text ever
+                            </p>
+                            <p class="mt-4">
+                                <a href="#" class="o_default_snippet_text">
+                                    Learn More
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

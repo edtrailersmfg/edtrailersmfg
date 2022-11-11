@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="team_9" name="Team9">
+        <section class="sni-block pt64 pb64" data-visible="team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 s_title pb48">
+                        <h2 class="s_title_default">
+                            Few words about our team
+                        </h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+
+                <div class="row text-left">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 pb16">
+                        <div class="row">
+                            <div class="col-12 col-lg-5 col-md-12 col-sm-12 mb16">
+                                <img alt="image" class="img-fluid"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg"
+                                     data-original-title="" title=""
+                                     aria-describedby="tooltip658939"/>
+                            </div>
+                            <div class="col-12 col-lg-7 col-md-12 col-sm-12">
+                                <p>Loprem Ipsum
+                                </p>
+                                <h3>
+                                    Member One
+                                </h3>
+                                <p class="o_default_snippet_text">Lorem Ipsum
+                                    is simply dummy text of the printing and
+                                    typesetting industryLorem Ipsum is
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 pb16">
+                        <div class="row">
+                            <div class="col-12 col-lg-5 col-md-12 col-sm-12 mb16">
+                                <img alt="image" class="img-fluid"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg"
+                                     data-original-title="" title=""
+                                     aria-describedby="tooltip887455"/>
+                            </div>
+                            <div class="col-12 col-lg-7 col-md-12 col-sm-12">
+                                <p>
+                                    Loprem Ipsum
+                                </p>
+                                <h3>Member Two</h3>
+                                <p class="o_default_snippet_text">Lorem Ipsum
+                                    is simply dummy text of the printing and
+                                    typesetting industryLorem Ipsum is
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 pb16">
+                        <div class="row">
+                            <div class="col-12 col-lg-5 col-md-12 col-sm-12 mb16">
+                                <img alt="image" class="img-fluid"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg"
+                                     data-original-title="" title=""
+                                     aria-describedby="tooltip887455"/>
+                            </div>
+                            <div class="col-12 col-lg-7 col-md-12 col-sm-12">
+                                <p>Loprem Ipsum
+                                </p>
+                                <h3>Member Three
+                                </h3>
+                                <p class="o_default_snippet_text">Lorem Ipsum
+                                    is simply dummy text of the printing and
+                                    typesetting industryLorem Ipsum is
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 pb16">
+                        <div class="row">
+                            <div class="col-12 col-lg-5 col-md-12 col-sm-12 mb16">
+                                <img alt="image" class="img-fluid"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg"
+                                     data-original-title="" title=""
+                                     aria-describedby="tooltip887455"/>
+                            </div>
+                            <div class="col-12 col-lg-7 col-md-12 col-sm-12">
+                                <p>Loprem Ipsum
+                                </p>
+                                <h3>Member Four
+                                </h3>
+                                <p class="o_default_snippet_text">Lorem Ipsum
+                                    is simply dummy text of the printing and
+                                    typesetting industryLorem Ipsum is
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

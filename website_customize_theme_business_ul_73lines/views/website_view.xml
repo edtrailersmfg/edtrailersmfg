@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="website_menus_tree_view_inherit" model="ir.ui.view">
+            <field name="name">website.menu.tree</field>
+            <field name="model">website.menu</field>
+            <field name="inherit_id" ref="website.menu_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='is_mega_menu']" position="after">
+                    <field name="icon"/>
+                    <field name="is_highlighted"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="website_menus_form_view_inherit" model="ir.ui.view">
+            <field name="name">website.menu.form</field>
+            <field name="model">website.menu</field>
+            <field name="inherit_id" ref="website.website_menus_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='is_mega_menu']" position="after">
+                    <field name="icon"/>
+                    <field name="is_highlighted"/>
+                    <field name="menu_ribbon_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <template id="submenu_inherit" inherit_id="website.submenu">
+            <xpath expr="//span[@t-field='submenu.name']" position="before">
+                <t t-if="submenu.icon">
+                <i t-attf-class="#{submenu.icon} d-none"/>
+                </t>
+                <t t-else="">
+                    <i class="fa fa-camera d-none"></i>
+                </t>
+            </xpath>
+            <xpath expr="//span[@t-field='submenu.name']" position="attributes">
+                <attribute name="t-attf-class"
+                           add="#{'ul_highlighted_menu' if submenu.is_highlighted else ''}"></attribute>
+            </xpath>
+        </template>
+    </data>
+</odoo>

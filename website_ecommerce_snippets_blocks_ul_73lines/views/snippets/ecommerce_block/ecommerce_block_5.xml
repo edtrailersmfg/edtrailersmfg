@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Ecommerce Block 5" id="ecommerce_block_5">
+        <section class="pt64 pb64" id="ecommerce_block_5" data-visible="ecommerce_blocks">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb16">
+                        <div class="single_portfolio mb16">
+                            <a href="#">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-360x390.png"
+                                     class="img-fluid image"/>
+                            </a>
+                            <div class="overlay">
+                                <div class="single_portfolio_text">
+                                    <a href="#">
+                                        <h3>Category 1</h3>
+                                    </a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 mb16">
+                        <div class="single_portfolio mb16">
+                            <a href="#">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-750x390.png"
+                                     class="img-fluid image"/>
+                            </a>
+                            <div class="overlay">
+                                <div class="single_portfolio_text">
+                                    <a href="#">
+                                        <h3>Category 2</h3>
+                                    </a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 mb16">
+                        <div class="single_portfolio mb16">
+                            <a href="#">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-750x390.png"
+                                     class="img-fluid image"/>
+                            </a>
+                            <div class="overlay">
+                                <div class="single_portfolio_text">
+                                    <a href="#">
+                                        <h3>Category 3</h3>
+                                    </a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb16">
+                        <div class="single_portfolio mb16">
+                            <a href="#">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-360x390.png"
+                                     class="img-fluid image"/>
+                            </a>
+                            <div class="overlay">
+                                <div class="single_portfolio_text">
+                                    <a href="#">
+                                        <h3>Category 4</h3>
+                                    </a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="s_ecommerce_service" name="Ecommerce Service">
+        <section class="s_service">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12 mt16 mb16">
+                        <div class="oe_structure">
+                            <div id="ttcmsleftservices">
+                                <h2 class="title_block">Our Servies</h2>
+                                <div class="block_content container">
+                                    <div class="ttshipping v-12">
+                                        <div class="ttcontent_inner col-md-12 col-md-3">
+                                            <div class="service">
+                                                <div class="ttshipping_img service-icon"></div>
+                                                <div class="service-content">
+                                                    <div class="service-title">
+                                                        Free Shipping
+                                                    </div>
+                                                    <div class="service-desc">
+                                                        Deliver to door
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ttsupport v-12">
+                                        <div class="ttcontent_inner col-md-12 col-md-3">
+                                            <div class="service">
+                                                <div class="ttsupport_img service-icon"></div>
+                                                <div class="service-content">
+                                                    <div class="service-title">
+                                                        24x7 Support
+                                                    </div>
+                                                    <div class="service-desc">
+                                                        in safe hands
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ttmoneyback v-12">
+                                        <div class="ttcontent_inner col-md-12 col-md-3">
+                                            <div class="service">
+                                                <div class="ttmoneyback_img service-icon"></div>
+                                                <div class="service-content">
+                                                    <div class="service-title">
+                                                        Money Back
+                                                    </div>
+                                                    <div class="service-desc">
+                                                        Easy to return
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ttshopping v-12">
+                                        <div class="ttcontent_inner col-md-12 col-md-3">
+                                            <div class="service">
+                                                <div class="ttshopping_img service-icon"></div>
+                                                <div class="service-content">
+                                                    <div class="service-title">
+                                                        online store
+                                                    </div>
+                                                    <div class="service-desc">a
+                                                        huge branding
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="s_ecommerce_service_option"
+              inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-js='Blockquote']" position="after">
+
+            <div data-js='js_s_ecommerce_service'
+                 data-selector="#ttcmsleftservices">
+                <li class="divider"/>
+                <we-collapse-area>
+                    <we-toggler>
+                        <i class="fa fa-eye"/>
+                        Select View Type
+                    </we-toggler>
+                    <we-collapse id="view_type_option">
+                        <we-button data-view_type="v">
+                            Vertical
+                        </we-button>
+                        <we-button data-view_type="h">
+                            Horizontal
+                        </we-button>
+                    </we-collapse>
+                </we-collapse-area>
+                <li class="divider"/>
+            </div>
+
+        </xpath>
+    </template>
+</odoo>

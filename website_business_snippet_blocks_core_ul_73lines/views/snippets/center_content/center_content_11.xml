@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Center Content 11" id="center_content_11">
+        <section class=" pt64 pb64" data-visible="center_content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2 class="font-weight-bold pb24">Long headline to turn your<br/> visitors into users
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum est in tortor
+                            congue suscipit. Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.Suspendisse
+                            potenti. Aliquam finibus pharetra tellus at egestas. Aliquam finibus pharetra tellus at
+                            egestas.Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.
+                        </p>
+                        <p class="font-weight-bold pt24 pb24">
+                            <i class="fa fa-paypal px-3"> Paypal</i>
+                            <i class="fa fa-facebook px-3"> Facebook</i>
+                            <i class="fa fa-twitter px-3">  Twitter</i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

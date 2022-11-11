@@ -1,0 +1,9 @@
+#top_menu{
+    .nav-item .divider{
+        display:none !important;
+    }
+}
+
+.navbar-expand-md ul.nav > li.divider{
+        display:none !important;
+}

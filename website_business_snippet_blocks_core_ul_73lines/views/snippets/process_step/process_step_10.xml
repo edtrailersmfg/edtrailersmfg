@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Process Step 10" id="process_step_10">
+        <section class="pt64 pb64 text-center" id="process_step_10" data-visible="process_steps">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2 class="mb16">Our Working Process</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="main-timeline row mx-0">
+                            <div class="ver-timeline col-12">
+                                <div class="vertical-time">
+                                    <div class="vertical-date">
+                                        <h5 class="month font-weight-bold">1 January, 2018</h5>
+                                    </div>
+                                </div>
+                                <div class="timeline-content">
+                                    <h5 class="time_line_title font-weight-bold">Web Designing</h5>Lorem ipsum dolor sit amet,
+                                    consectetur adipis icing elit, sed do eiusmod tempor incid ut labore et dolore magna
+                                    aliqua Ut enim ad min.
+                                </div>
+                            </div>
+                            <div class="ver-timeline col-12">
+                                <div class="vertical-time">
+                                    <div class="vertical-date">
+                                        <h5 class="month font-weight-bold">1 January, 2018</h5>
+                                    </div>
+                                </div>
+                                <div class="timeline-content">
+                                    <h5 class="time_line_title font-weight-bold">Web Development</h5>Lorem ipsum dolor sit amet,
+                                    consectetur adipis icing elit, sed do eiusmod tempor incid ut labore et dolore magna
+                                    aliqua Ut enim ad min.
+                                </div>
+                            </div>
+                            <div class="ver-timeline col-12">
+                                <div class="vertical-time">
+                                    <div class="vertical-date">
+                                        <h5 class="month font-weight-bold">1 January, 2018</h5>
+                                    </div>
+                                </div>
+                                <div class="timeline-content">
+                                    <h5 class="time_line_title font-weight-bold">Web Designing</h5>Lorem ipsum dolor sit amet,
+                                    consectetur adipis icing elit, sed do eiusmod tempor incid ut labore et dolore magna
+                                    aliqua Ut enim ad min.
+                                </div>
+                            </div>
+                            <div class="ver-timeline col-12">
+                                <div class="vertical-time">
+                                    <div class="vertical-date">
+                                        <h5 class="month font-weight-bold">1 January, 2018</h5>
+                                    </div>
+                                </div>
+                                <div class="timeline-content">
+                                    <h5 class="time_line_title font-weight-bold">Web Development</h5>Lorem ipsum dolor sit amet,
+                                    consectetur adipis icing elit, sed do eiusmod tempor incid ut labore et dolore magna
+                                    aliqua Ut enim ad min.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

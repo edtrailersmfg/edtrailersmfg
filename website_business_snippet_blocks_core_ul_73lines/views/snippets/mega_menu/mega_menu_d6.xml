@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="mega_menu_6" name="Mega Menu 6" groups="base.group_user">
+        <section id="menu_design_6" class="pt32 pb32" data-visible="mega_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <h4 class="menu-heading">Heading</h4>
+                        <ul class="list-unstyled bullets mt8">
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <h4 class="menu-heading">Heading</h4>
+                        <ul class="list-unstyled bullets mt8">
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <h4 class="menu-heading">Heading</h4>
+                        <ul class="list-unstyled bullets mt8">
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <h4 class="menu-heading">Heading</h4>
+                        <ul class="list-unstyled bullets mt8">
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <h4 class="menu-heading">Heading</h4>
+                        <ul class="list-unstyled bullets mt8">
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <h4 class="menu-heading">Heading</h4>
+                        <ul class="list-unstyled bullets mt8">
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-right mr-2"></i>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+    </template>
+</odoo>

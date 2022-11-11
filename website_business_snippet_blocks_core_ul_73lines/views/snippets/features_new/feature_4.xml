@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Feature 4" id="feature_4">
+        <section class=" pt64 pb64" data-visible="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2 class="text-center">Features</h2>
+                        <p class="text-center">onsectetur adipiscing elit. Ut
+                            at semper metus.
+                        </p>
+                        <div class="row pt48  text-center">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-8 offset-lg-2">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb32">
+                                        <i class="fa fa-4x fa-calculator"></i>
+                                        <h3 class="pt16 pb16">Service One</h3>
+                                    </div>
+                                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb32">
+                                        <i class="fa fa-4x fa-life-ring"></i>
+                                        <h3 class="pt16 pb16">Service Two</h3>
+                                    </div>
+                                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb32">
+                                        <i class="fa fa-4x fa-user-o"></i>
+                                        <h3 class="pt16 pb16">Service Three
+                                        </h3>
+                                    </div>
+                                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb32">
+                                        <i class="fa fa-4x fa-file-text-o"></i>
+                                        <h3 class="pt16 pb16">Service Four</h3>
+                                    </div>
+                                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb32">
+                                        <i class="fa fa-4x fa-bar-chart"></i>
+                                        <h3 class="pt16 pb16">Service Five</h3>
+                                    </div>
+                                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb32">
+                                        <i class="fa fa-4x fa-newspaper-o"></i>
+                                        <h3 class="pt16 pb16">Service Six</h3>
+                                    </div>
+                                </div>
+                                <a href="#"
+                                   class="btn btn-primary btn-lg px-5 p-2 ">
+                                    Button
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

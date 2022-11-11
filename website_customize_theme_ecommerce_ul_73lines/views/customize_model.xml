@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="shop_page_style" inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-js='OptionsTab']"
+               position="inside">
+            <we-select string="Shop Style" data-variable="shop-style" data-reload="/">
+                <we-button data-name="Shop Style Default"
+                           data-customize-website-variable="'shop-style-default'"
+                           data-customize-website-views="">Shop Style Default
+                </we-button>
+                <we-button data-name="Shop Style 1"
+                           data-customize-website-variable="'shop-style-1'"
+                           data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.option_shop_style_1">
+                    Shop Style One
+                </we-button>
+                <we-button data-name="Shop Style 2"
+                           data-customize-website-variable="'shop-style-2'"
+                           data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.option_shop_style_2">
+                    Shop Style Two
+                </we-button>
+                <we-button data-name="Shop Style 3"
+                           data-customize-website-variable="'shop-style-3'"
+                           data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.option_shop_style_3">
+                    Shop Style Three
+                </we-button>
+                <we-button data-name="Shop Style 4"
+                           data-customize-website-variable="'shop-style-4'"
+                           data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.option_shop_style_4">
+                    Shop Style Four
+                </we-button>
+                <we-button data-name="Shop Style 5"
+                           data-customize-website-variable="'shop-style-5'"
+                           data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.option_shop_style_5">
+                    Shop Style Five
+                </we-button>
+                <we-button data-name="Shop Style 6"
+                           data-customize-website-variable="'shop-style-6'"
+                           data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.option_shop_style_6">
+                    Shop Style Six
+                </we-button>
+            </we-select>
+        </xpath>
+    </template>
+
+    <template id="customize_inherit_ecommerce"
+              inherit_id="website_customize_theme_business_ul_73lines.snippet_option_inherit">
+        <xpath expr="//we-button[@data-name='midheader_5']" position="after">
+            <we-button title="Bottom Mid Header 1"
+                       data-name="midheader_6"
+                       data-customize-website-variable="'mid-header-6'"
+                       data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.option_mid_header_2"
+                       data-img="/website_customize_theme_ecommerce_ul_73lines/static/src/imgs/header-icon/header-icon-12.svg">
+            </we-button>
+            <we-button title="Bottom Mid Header 2"
+                       data-name="midheader_7"
+                       data-customize-website-variable="'mid-header-7'"
+                       data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.option_mid_header_4"
+                       data-img="/website_customize_theme_ecommerce_ul_73lines/static/src/imgs/header-icon/header-icon-13.svg">
+            </we-button>
+            <we-button title="Top &amp; Bottom Mid Header 1"
+                       data-name="midheader_8"
+                       data-customize-website-variable="'mid-header-8'"
+                       data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.option_mid_header_3"
+                       data-img="/website_customize_theme_ecommerce_ul_73lines/static/src/imgs/header-icon/header-icon-14.svg">
+            </we-button>
+            <we-button title="Top &amp; Bottom Mid Header 2"
+                       data-name="midheader_9"
+                       data-customize-website-variable="'mid-header-9'"
+                       data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.option_mid_header_5"
+                       data-img="/website_customize_theme_ecommerce_ul_73lines/static/src/imgs/header-icon/header-icon-15.svg">
+            </we-button>
+            <we-button title="Top &amp; Bottom Mid Header 3"
+                       data-name="midheader_10"
+                       data-customize-website-variable="'mid-header-10'"
+                       data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.option_mid_header_10"
+                       data-img="/website_customize_theme_ecommerce_ul_73lines/static/src/imgs/header-icon/header-icon-16.svg">
+            </we-button>
+            <we-button title="Top &amp; Bottom Mid Header 4"
+                       data-name="midheader_11"
+                       data-customize-website-variable="'mid-header-11'"
+                       data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.option_mid_header_11"
+                       data-img="/website_customize_theme_ecommerce_ul_73lines/static/src/imgs/header-icon/header-icon-17.svg">
+            </we-button>
+            <we-button title="Top &amp; Bottom Mid Header 5"
+                       data-name="midheader_12"
+                       data-customize-website-variable="'mid-header-12'"
+                       data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.option_mid_header_12"
+                       data-img="/website_customize_theme_ecommerce_ul_73lines/static/src/imgs/header-icon/header-icon-18.svg">
+            </we-button>
+            <we-button title="Top &amp; Bottom Mid Header 6"
+                       data-name="midheader_13"
+                       data-customize-website-variable="'mid-header-13'"
+                       data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.option_mid_header_13"
+                       data-img="/website_customize_theme_ecommerce_ul_73lines/static/src/imgs/header-icon/header-icon-19.svg">
+            </we-button>
+            <we-button title="Top &amp; Bottom Mid Header 7"
+                       data-name="midheader_14"
+                       data-customize-website-variable="'mid-header-14'"
+                       data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.option_mid_header_14"
+                       data-img="/website_customize_theme_ecommerce_ul_73lines/static/src/imgs/header-icon/header-icon-20.svg">
+            </we-button>
+            <we-button title="Top &amp; Bottom Mid Header 8"
+                       data-name="midheader_15"
+                       data-customize-website-variable="'mid-header-15'"
+                       data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.option_mid_header_15"
+                       data-img="/website_customize_theme_ecommerce_ul_73lines/static/src/imgs/header-icon/header-icon-21.svg">
+            </we-button>
+            <we-button title="Top &amp; Bottom Mid Header 9"
+                       data-name="midheader_16"
+                       data-customize-website-variable="'mid-header-16'"
+                       data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.option_mid_header_16"
+                       data-img="/website_customize_theme_ecommerce_ul_73lines/static/src/imgs/header-icon/header-icon-22.svg">
+            </we-button>
+            <we-button title="Top &amp; Bottom Mid Header 10"
+                       data-name="midheader_17"
+                       data-customize-website-variable="'mid-header-17'"
+                       data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.option_mid_header_17"
+                       data-img="/website_customize_theme_ecommerce_ul_73lines/static/src/imgs/header-icon/header-icon-23.svg">
+            </we-button>
+        </xpath>
+
+        <xpath expr="//we-button[@data-name='navbar_option_14']" position="after">
+            <we-button title="Box Design With Search-Box"
+                       data-name="navbar_option_15"
+                       data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.template_navbar_15"
+                       data-customize-website-variable="'box-design-with-search-box'"
+                       data-img="/website_customize_theme_ecommerce_ul_73lines/static/src/imgs/header-icon/navbar-box-design-with-searchbox.svg"/>
+            <we-button title="Simple Header With Searchbox"
+                       data-name="navbar_option_16"
+                       data-customize-website-views="website_customize_theme_ecommerce_ul_73lines.template_navbar_16"
+                       data-customize-website-variable="'simple-header-with-searchbox'"
+                       data-img="/website_customize_theme_ecommerce_ul_73lines/static/src/imgs/header-icon/simple-header-searchbox.svg"/>
+        </xpath>
+    </template>
+
+    <template id="products_variants_rating_shop"
+              inherit_id="website_sale.products_item"
+              active="True" customize_show="True"
+              name="Variants On Product Card ">
+        <xpath expr="//div[hasclass('o_wsale_product_information')]"
+               position="after">
+            <div id="products_grid_before_">
+                <div class="js_attributes ">
+                    <ul class="nav nav-pills flex-column on_change_product_attribute">
+                        <li>
+                            <t t-foreach="product.sudo().attribute_line_ids"
+                               t-as="a">
+                                <t t-if="a.attribute_id.name == 'Color' ">
+                                    <!--                                    <t t-esc="len(a.value_ids)"/>-->
+                                    <t t-foreach="a.value_ids" t-as="v">
+                                        <label t-attf-style="background-color:#{v.html_color or v.name}"
+                                               class="css_attribute_color">
+                                            <input type="checkbox"
+                                                   name="attrib"
+                                                   t-att-value="'%s-%s' % (a.attribute_id.id,v.id)"
+                                                   t-att-data-product-id="product.id"
+                                                   t-att-checked="'checked' if v.id in attrib_set else None"
+                                                   t-att-title="v.name"/>
+                                        </label>
+                                    </t>
+                                </t>
+                            </t>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="snippet_options_inherit" inherit_id="website.snippet_options">
+        <xpath expr="//we-button[@data-set-ppr='4']" position="after">
+            <we-button data-set-ppr="5">5</we-button>
+            <we-button data-set-ppr="6">6</we-button>
+        </xpath>
+    </template>
+
+    <!--Wishlist Modification-->
+    <template id="product_wishlist_inherit" inherit_id="website_sale_wishlist.product_wishlist">
+        <xpath expr="//section[hasclass('wishlist-section')]" position="after">
+            <t t-if="request.env['ir.config_parameter'].sudo().get_param('website_customize_theme_ecommerce_ul_73lines.wishlist_layout') == 'ul_wishlist'">
+                <section class="wishlist-section ul-wishlist-section">
+                    <h3>My Wishlist</h3>
+                    <div class="checkbox">
+                        <label class='text-muted'><input type="checkbox" id='b2b_wish' value="1" class="mr8"/>Add
+                            product to
+                            my cart but keep it in my wishlist
+                        </label>
+                    </div>
+                    <div class="row mt32 mb32">
+                        <t t-foreach="wishes" t-as="wish">
+                            <t t-set="combination_info" t-value="wish.product_id._get_combination_info_variant()"/>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb16">
+                                <div class="card shadow">
+                                    <div t-att-data-wish-id='wish.id' t-att-data-product-id='wish.product_id.id'
+                                         class="wish_list_config"
+                                         t-att-data-product-tracking-info="json.dumps(request.env['product.template'].get_google_analytics_data(combination_info))">
+                                        <div class='wish_img'>
+                                            <a t-att-href="wish.product_id.website_url">
+                                                <img t-attf-src="/web/image/product.product/#{wish.product_id.id}/image_128"
+                                                     class="img img-fluid" style="margin:auto;" alt="Product image"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body border-top">
+                                        <div class='text-left'>
+                                            <strong>
+                                                <a t-att-href="wish.product_id.website_url"
+                                                   class="text-truncate d-block"
+                                                   t-att-title="wish.product_id.display_name">
+                                                    <t t-esc="wish.product_id.display_name"/>
+                                                </a>
+                                            </strong>
+<!--                                            <t t-if="wish.product_id.description_sale">-->
+                                                <small class='d-none d-md-block product_desc'>
+                                                    <p t-field="wish.product_id.description_sale" class="text-muted"/>
+                                                </small>
+                                            <!--                                            </t>-->
+                                            <div class="align-items-center d-flex mb-2">
+                                                <div class="font-weight-bold mr-auto">
+                                                    <t t-esc="combination_info['price']"
+                                                       t-options="{'widget': 'monetary', 'display_currency': website.pricelist_id.currency_id}"/>
+                                                    <small t-if="wish.product_id.base_unit_price"
+                                                           class="cart_product_base_unit_price d-block text-muted"
+                                                           groups="website_sale.group_show_uom_price">
+                                                        <t t-call='website_sale.base_unit_price'>
+                                                            <t t-set='product' t-value='wish.product_id'/>
+                                                        </t>
+                                                    </small>
+                                                </div>
+
+                                            </div>
+                                            <div class="d-flex border-top mt-3 pt-2">
+                                                <button type="button" class="btn o_wish_rm no-decoration">
+                                                    <small>
+                                                        <i class='fa fa-trash-o text-danger'></i>
+                                                    </small>
+                                                </button>
+                                                <div class="wish_compare mr-auto">
+                                                    <button type="button" class="btn o_add_to_compare no-decoration p-0"
+                                                            t-att-data-product-id='wish.product_id.id'>
+                                                        <i t-attf-class="fa fa-exchange"></i>
+                                                        Compare
+                                                    </button>
+                                                </div>
+                                                <div class='td-wish-btn w-auto'>
+                                                    <input name="product_id" t-att-value="wish.product_id.id"
+                                                           type="hidden"/>
+                                                    <button type="button" role="button"
+                                                            class="btn o_wish_add float-right p-0">
+                                                        <i class="fa fa-cart-plus"></i>Add to Cart
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </section>
+            </t>
+        </xpath>
+
+        <xpath expr="//section[hasclass('wishlist-section')]" position="attributes">
+            <attribute name="t-attf-class"
+                       add="#{request.env['ir.config_parameter'].sudo().get_param('website_customize_theme_ecommerce_ul_73lines.wishlist_layout') == 'ul_wishlist' and 'd-none' or 'container wishlist-section'}"
+                       separator=" "/>
+        </xpath>
+    </template>
+
+</odoo>

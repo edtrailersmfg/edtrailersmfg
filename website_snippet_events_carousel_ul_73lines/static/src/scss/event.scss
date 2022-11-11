@@ -1,0 +1,59 @@
+.custom_snippet_event{
+       .carousel-control-prev .fa, .carousel-control-next .fa{
+            background: unset !important;
+       }
+}
+.oe_event_block{
+    padding: 1%;
+    .o_record_cover_image{
+            background-size: cover !important;
+            min-height: 222px !important;
+            position: relative;
+    }
+
+    header a {
+        transition: all .25s ease-in-out;
+
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+
+    .o_wevent_event_date {
+        top: 1.25rem;
+        right: 1.25rem;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        justify-content: center;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        text-align: center;
+    }
+}
+
+
+//-----------------------------List View Style Start-----------------------//
+.event_style_list{
+    header{
+        float: left;
+        width:50%;
+    }
+
+    .single-item-body{
+        flex: 0 0 50%;
+        max-width: 50%;
+        position: absolute;
+        right: 0;
+    }
+
+    footer{
+        background:transparent;
+    }
+}
+//-----------------------------List View Style End-----------------------//

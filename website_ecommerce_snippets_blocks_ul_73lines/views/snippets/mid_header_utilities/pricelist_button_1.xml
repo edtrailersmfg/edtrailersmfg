@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Pricelist Button One" id="pricelist_button_1">
+        <!--        <section id="pricelist_button_1">-->
+        <!--            <t t-if="website_sale.pricelist_list">-->
+        <!--                <t t-call="website_sale.pricelist_list"/>-->
+        <!--            </t>-->
+        <!--            <t t-else="">-->
+        <!--                -->
+        <!--            </t>-->
+        <!--        </section>-->
+
+    </template>
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="submenu_inherit_menu_ribbon" inherit_id="website.submenu"
+              name="Submenu Ribbon">
+        <xpath expr="//span[@t-field='submenu.name']" position="after">
+            <span t-if="submenu.menu_ribbon_id"
+                  t-attf-style="background-color:#{submenu.menu_ribbon_id.menu_color_back or submenu.menu_ribbon_id.menu_color_back};color:#{submenu.menu_ribbon_id.menu_color_text or submenu.menu_ribbon_id.menu_color_text};"
+                  t-attf-class="website-menu-ribbon "
+                  t-field="submenu.menu_ribbon_id.name">
+            </span>
+            <span class="website-menu-ribbon-before"
+                  t-attf-style="background-color:#{submenu.menu_ribbon_id.menu_color_back or submenu.menu_ribbon_id.menu_color_back};}"/>
+        </xpath>
+        <xpath expr="//a[@data-toggle='dropdown']/span" position="after">
+            <span t-if="submenu.menu_ribbon_id"
+                  t-attf-style="background-color:#{submenu.menu_ribbon_id.menu_color_back or submenu.menu_ribbon_id.menu_color_back};color:#{submenu.menu_ribbon_id.menu_color_text or submenu.menu_ribbon_id.menu_color_text};"
+                  t-attf-class="website-menu-ribbon "
+                  t-field="submenu.menu_ribbon_id.name"/>
+        </xpath>
+    </template>
+</odoo>

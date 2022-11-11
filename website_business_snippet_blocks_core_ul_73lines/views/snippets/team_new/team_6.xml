@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="team_6" name="Team6">
+        <section class="sni-block pt64 pb64" id="team_6" data-visible="team">
+            <div class="container">
+                <div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb48 text-center">
+                        <h2>The Team</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+                <div class="team-grid" data-column="3">
+                    <div class="team-column">
+                        <div class="team-user">
+                            <div class="team-user-avatar">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-67.png"
+                                     class="img-fluid" alt="User_Image"/>
+                            </div>
+                            <div class="team-user-name">Member 1</div>
+                            <div class="team-user-title">Developer</div>
+                            <ul class="team-social">
+                                <li class="team-social-item">
+                                    <a href="">
+                                        <i class="fa fa-facebook"/>
+                                    </a>
+                                </li>
+                                <li class="team-social-item">
+                                    <a href="">
+                                        <i class="fa fa-twitter"/>
+                                    </a>
+                                </li>
+                                <li class="team-social-item">
+                                    <a href="">
+                                        <i class="fa fa-linkedin"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="team-column">
+                        <div class="team-user">
+                            <div class="team-user-avatar">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-67.png"
+                                     class="img-fluid" alt="User_Image"/>
+                            </div>
+                            <div class="team-user-name">Member 2</div>
+                            <div class="team-user-title">Manager</div>
+                            <ul class="team-social">
+                                <li class="team-social-item">
+                                    <a href="">
+                                        <i class="fa fa-facebook"/>
+                                    </a>
+                                </li>
+                                <li class="team-social-item">
+                                    <a href="">
+                                        <i class="fa fa-twitter"/>
+                                    </a>
+                                </li>
+                                <li class="team-social-item">
+                                    <a href="">
+                                        <i class="fa fa-linkedin"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="team-column">
+                        <div class="team-user">
+                            <div class="team-user-avatar">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-67.png"
+                                     class="img-fluid" alt="User_Image"/>
+                            </div>
+                            <div class="team-user-name">Member 3</div>
+                            <div class="team-user-title">Designer</div>
+                            <ul class="team-social">
+                                <li class="team-social-item">
+                                    <a href="">
+                                        <i class="fa fa-facebook"/>
+                                    </a>
+                                </li>
+                                <li class="team-social-item">
+                                    <a href="">
+                                        <i class="fa fa-twitter"/>
+                                    </a>
+                                </li>
+                                <li class="team-social-item">
+                                    <a href="">
+                                        <i class="fa fa-linkedin"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="team-column">
+                        <div class="team-user">
+                            <div class="team-user-avatar">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-67.png"
+                                     class="img-fluid" alt="User_Image"/>
+                            </div>
+                            <div class="team-user-name">Member 4</div>
+                            <div class="team-user-title">Designer</div>
+                            <ul class="team-social">
+                                <li class="team-social-item">
+                                    <a href="">
+                                        <i class="fa fa-facebook"/>
+                                    </a>
+                                </li>
+                                <li class="team-social-item">
+                                    <a href="">
+                                        <i class="fa fa-twitter"/>
+                                    </a>
+                                </li>
+                                <li class="team-social-item">
+                                    <a href="">
+                                        <i class="fa fa-linkedin"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="team-column">
+                        <div class="team-user">
+                            <div class="team-user-avatar">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-67.png"
+                                     class="img-fluid" alt="User_Image"/>
+                            </div>
+                            <div class="team-user-name">Member 5</div>
+                            <div class="team-user-title">Business</div>
+                            <ul class="team-social">
+                                <li class="team-social-item">
+                                    <a href="">
+                                        <i class="fa fa-facebook"/>
+                                    </a>
+                                </li>
+                                <li class="team-social-item">
+                                    <a href="">
+                                        <i class="fa fa-twitter"/>
+                                    </a>
+                                </li>
+                                <li class="team-social-item">
+                                    <a href="">
+                                        <i class="fa fa-linkedin"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="team-column">
+                        <div class="team-user">
+                            <div class="team-user-avatar">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-67.png"
+                                     class="img-fluid" alt="User_Image"/>
+                            </div>
+                            <div class="team-user-name">Member 6</div>
+                            <div class="team-user-title">Designer</div>
+                            <ul class="team-social">
+                                <li class="team-social-item">
+                                    <a href="">
+                                        <i class="fa fa-facebook"/>
+                                    </a>
+                                </li>
+                                <li class="team-social-item">
+                                    <a href="">
+                                        <i class="fa fa-twitter"/>
+                                    </a>
+                                </li>
+                                <li class="team-social-item">
+                                    <a href="">
+                                        <i class="fa fa-linkedin"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

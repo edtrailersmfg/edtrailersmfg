@@ -1,0 +1,62 @@
+//---------------------General Product Brand Design------------//
+.s_brand_carousel {
+
+}
+
+//----------------------Style 1-------------//
+.s_brand_transparent .oe_brand_image {
+  background: whitesmoke;
+  padding: 4px;
+  img {
+    border-radius: 50px;
+  }
+}
+
+//----------------------Style 2-------------//
+.s_brand_bg_dark .oe_brand_image {
+  background: #333;
+  padding: 4px;
+  img {
+    border-radius: 50px;
+  }
+}
+
+//----------------------Style 3-------------//
+.s_brand_bg_light .oe_brand_image {
+  background: whitesmoke;
+  padding: 20px;
+  border-radius: 20px;
+  img {
+    border-radius: 20px;
+  }
+}
+
+//----------------------Style 4-------------//
+.s_brand_4 .oe_brand_image {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+//----------------------Style 5-------------//
+.s_brand_5 img {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.s_brand_5 img:hover {
+  filter: none;
+  -webkit-filter: grayscale(0);
+  -webkit-transform: scale(1.01);
+}
+
+//----------------------Style 6-------------//
+.s_brand_6 img {
+  filter: none;
+  -webkit-filter: grayscale(0);
+  -webkit-transform: scale(1.01);
+}
+
+.s_brand_6 img:hover {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Feature 7" id="feature_7">
+        <section class="pt64 pb64" data-visible="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2 class="text-center">Features</h2>
+                        <p class="text-center">Lorem Ipsum is simply dummy text of the printing.</p>
+                        <div class="row pt48 align-items-center">
+                            <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-right">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <i class="fa fa-3x fa-calculator"></i>
+                                    <h3 class="pt8 pb8">Feature One</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut at semper metus.
+                                        Vestibulum gravida velit urna, ut
+                                        mattis leo ullamcorper sed.
+                                    </p>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <i class="fa fa-3x fa-life-ring"></i>
+                                    <h3 class="pt8 pb8">Feature Two</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut at semper metus.
+                                        Vestibulum gravida velit urna, ut
+                                        mattis leo ullamcorper sed.
+                                    </p>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <i class="fa fa-3x fa-user-o"></i>
+                                    <h3 class="pt8 pb8">Feature Three</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut at semper metus.
+                                        Vestibulum gravida velit urna, ut
+                                        mattis leo ullamcorper sed.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-6.png"
+                                     alt="molile" class="img-fluid pt8 pb8"/>
+                            </div>
+                            <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-left">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <i class="fa fa-3x fa-file-text-o"></i>
+                                    <h3 class="pt8 pb8">Feature Four</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut at semper metus.
+                                        Vestibulum gravida velit urna, ut
+                                        mattis leo ullamcorper sed.
+                                    </p>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <i class="fa fa-3x fa-bar-chart"></i>
+                                    <h3 class="pt8 pb8">Feature Five</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut at semper metus.
+                                        Vestibulum gravida velit urna, ut
+                                        mattis leo ullamcorper sed.
+                                    </p>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <i class="fa fa-3x fa-address-card-o"></i>
+                                    <h3 class="pt8 pb8">Feature Six</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut at semper metus.
+                                        Vestibulum gravida velit urna, ut
+                                        mattis leo ullamcorper sed.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

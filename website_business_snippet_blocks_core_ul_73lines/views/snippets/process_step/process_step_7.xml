@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Process Step 7" id="process_step_7">
+        <section class="pt64 pb64" id="process_seven" data-visible="process_steps">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>How we do it?</h2>
+                        <p class="col-lg-6 offset-lg-3">Lorem Ipsum is simply dummy text of the printing
+                            and typesetting industry
+                            been the industry's standard dummy text
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-4 col-md-6 col-lg-3 text-center step mb16">
+                        <h3>01</h3>
+                        <i class="fa fa-bank fa-3x mb16"></i>
+                        <h3>Analysis</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry been
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-6 col-lg-3 text-center step mb16">
+                        <h3>02</h3>
+                        <i class="fa fa-bank fa-3x mb16"></i>
+                        <h3>Planning</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry been
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-6 col-lg-3  text-center step mb16">
+                        <h3>03</h3>
+                        <i class="fa fa-database fa-3x mb16"></i>
+                        <h3>Devlopment Testing</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry been
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-6 col-lg-3 text-center mb16">
+                        <h3>04</h3>
+                        <i class="fa fa-tencent-weibo fa-3x mb16"></i>
+                        <h3>Support Maintanance</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry been
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

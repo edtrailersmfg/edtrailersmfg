@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="pricing_19" name="Pricing19">
+        <section id="pricing" class="pt64 pb64" data-visible="pricing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-12 col-md-12 text-center pb48">
+                        <div class="price-heading clearfix">
+                            <h2>Pricing Table</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-left align-items-center">
+                    <div class="col-12 col-md-4 col-lg-4 pt1 mb8">
+                        <div class="price_card pb16">
+                            <div class="header">
+                                <span class="price">$10</span>
+                                <span class="name">Alpha Pack</span>
+                            </div>
+                            <ul class="features">
+                                <li>Complete documentation</li>
+                                <li>Working materials in PSD and Sketch
+                                    format
+                                </li>
+                                <li>1 year access to the library</li>
+                                <li>2GB cloud storage</li>
+                            </ul>
+                            <button class="d-block mx-auto">Add to cart</button>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 col-lg-4 pt2 mb8">
+                        <div class="price_card pb16">
+                            <div class="header">
+                                <span class="price">$15</span>
+                                <span class="name">Bravo Pack</span>
+                            </div>
+                            <ul class="features">
+                                <li>Complete documentation</li>
+                                <li>Working materials in PSD, Sketch and EPS
+                                    format
+                                </li>
+                                <li>6 months access</li>
+                                <li>2GB cloud storage</li>
+                            </ul>
+                            <button class="d-block mx-auto">Add to cart</button>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 col-lg-4 pt3 mb8">
+                        <div class="price_card pb16">
+                            <div class="header bg-o-color-3">
+                                <span class="price">$25</span>
+                                <span class="name">Charlie Pack</span>
+                            </div>
+                            <ul class="features">
+                                <li>Complete documentation</li>
+                                <li>Working materials in PSD, Sketch and EPS
+                                    format
+                                </li>
+                                <li>1 year access to the library</li>
+                                <li>2GB cloud storage</li>
+                            </ul>
+                            <button class="d-block mx-auto bg-o-color-3">Add to cart</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+    </template>
+</odoo>

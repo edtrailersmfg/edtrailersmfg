@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Accordion 10" id="accordion_10">
+        <section class="pt64 pb64" id="accordion_10" data-visible="accordions">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Accordion Title</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse"
+                                           href="#collapseOne">
+                                            Section 1
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in show" data-parent="#accordion">
+                                    <div class="panel-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere augue
+                                        porta turpis ornare, nec commodo dui pellentesque. Sed at metus hendrerit,
+                                        varius nisl et, iaculis ex. Nulla vitae ipsum diam. Pellentesque vitae metus
+                                        vitae massa egestas posuere. Mauris ultricies vehicula tempor. Pellentesque
+                                        justo turpis, blandit nec ex eu, tempus placerat diam. Morbi a felis commodo
+                                        eros consectetur rhoncus sed eget lectus. Praesent non erat vehicula, posuere
+                                        massa id, ultricies est. Pellentesque sit amet venenatis est, quis posuere
+                                        ipsum.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            href="#collapseTwo">
+                                            Section 2
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" data-parent="#accordion">
+                                    <div class="panel-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere augue
+                                        porta turpis ornare, nec commodo dui pellentesque. Sed at metus hendrerit,
+                                        varius nisl et, iaculis ex. Nulla vitae ipsum diam. Pellentesque vitae metus
+                                        vitae massa egestas posuere. Mauris ultricies vehicula tempor. Pellentesque
+                                        justo turpis, blandit nec ex eu, tempus placerat diam. Morbi a felis commodo
+                                        eros consectetur rhoncus sed eget lectus. Praesent non erat vehicula, posuere
+                                        massa id, ultricies est. Pellentesque sit amet venenatis est, quis posuere
+                                        ipsum.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            href="#collapseThree">
+                                            Section 3
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" data-parent="#accordion">
+                                    <div class="panel-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere augue
+                                        porta turpis ornare, nec commodo dui pellentesque. Sed at metus hendrerit,
+                                        varius nisl et, iaculis ex. Nulla vitae ipsum diam. Pellentesque vitae metus
+                                        vitae massa egestas posuere. Mauris ultricies vehicula tempor. Pellentesque
+                                        justo turpis, blandit nec ex eu, tempus placerat diam. Morbi a felis commodo
+                                        eros consectetur rhoncus sed eget lectus. Praesent non erat vehicula, posuere
+                                        massa id, ultricies est. Pellentesque sit amet venenatis est, quis posuere
+                                        ipsum.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

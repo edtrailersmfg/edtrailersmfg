@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- ==================================== scss ================================= -->
+<!--    <template id="ecommerce_snippet_blocks_blog_assets" name="Blog Assets"-->
+<!--              inherit_id="website.assets_frontend" active="True">-->
+<!--        <xpath expr="." position="inside">-->
+<!--            <link href="/website_business_snippets_blocks_blog_ul_73lines/static/src/scss/blog_carousel.scss"-->
+<!--                  type="text/scss" rel="stylesheet"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+</odoo>

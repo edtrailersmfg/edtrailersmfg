@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Feature 3" id="feature_3">
+        <section class="pt64 pb64" data-visible="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2 class="text-center">Features</h2>
+                        <p class="text-center">Lorem Ipsum is simply dummy text of the printing.</p>
+                        <div class="row pt48">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                <i class="fa fa-3x fa-calculator mr-3 mt-2"></i>
+                                <div class="media-body">
+                                    <h3 class="pt8 pb8">Feature One</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut at semper metus.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                <i class="fa fa-3x fa-life-ring mr-3 mt-2"></i>
+                                <div class="media-body">
+                                    <h3 class="pt8 pb8">Feature Two</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut at semper metus.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                <i class="fa fa-3x fa-user-o mr-3 mt-2"></i>
+                                <div class="media-body">
+                                    <h3 class="pt8 pb8">Feature Three</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut at semper metus.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                <i class="fa fa-3x fa-file-text-o mr-3 mt-2"></i>
+                                <div class="media-body">
+                                    <h3 class="pt8 pb8">Feature Four</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut at semper metus.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                <i class="fa fa-3x fa-bar-chart mr-3 mt-2"></i>
+                                <div class="media-body">
+                                    <h3 class="pt8 pb8">Feature Five</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut at semper metus.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                <i class="fa fa-3x fa-newspaper-o mr-3 mt-2"></i>
+                                <div class="media-body">
+                                    <h3 class="pt8 pb8">Feature Six</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut at semper metus.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                <i class="fa fa-3x fa fa-calendar mr-3 mt-2"></i>
+                                <div class="media-body">
+                                    <h3 class="pt8 pb8">Feature Seven</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut at semper metus.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                <i class="fa fa-3x fa-address-card-o mr-3 mt-2"></i>
+                                <div class="media-body">
+                                    <h3 class="pt8 pb8">Feature Eight</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut at semper metus.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

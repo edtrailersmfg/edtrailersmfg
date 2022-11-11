@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Contact us 15" id="contact_us_15">
+        <section class="s_website_form pt64 pb64" data-visible="contactus">
+            <div class="container text-center">
+                <h2 class="text-uppercase mb24 o_default_snippet_text">Contact with us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac
+                    tortor at tellus feugiat
+                    congue quis ut nunc..
+                </p>
+                <div class="row pt32 pb32">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb16">
+                        <i class="fa fa-2x pb16 pe-7s-map-marker fa-500px" data-original-title="" title=""
+                           aria-describedby="tooltip916459" style=""/>
+                        <h5 class="o_default_snippet_text">Office Address</h5>
+                        <address class="o_default_snippet_text">123 Kathal St. Tampa City,</address>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb16">
+                        <i class="fa fa-2x pb16 pe-7s-call fa-500px" data-original-title="" title=""
+                           aria-describedby="tooltip265589" style=""/>
+                        <h5 class="o_default_snippet_text">Phone Number</h5>
+                        <p class="o_default_snippet_text">+55 417 634 7071</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb16">
+                        <i class="fa fa-2x pb16 pe-7s-mail fa-500px" style=""/>
+                        <h5 class="o_default_snippet_text">Email Address</h5>
+                        <p class="o_default_snippet_text">info@themevessel.com</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <i class="fa fa-2x pb16 pe-7s-news-paper fa-500px" data-original-title="" title=""
+                           aria-describedby="tooltip291429" style=""/>
+                        <h5 class="o_default_snippet_text">Fax</h5>
+                        <p class="o_default_snippet_text">+55 417 634 7071</p>
+                    </div>
+                </div>
+                <form action="/website_form/" method="post" data-model_name="crm.lead"
+                      data-success-mode="redirect"
+                      data-success-page="/contactus-thank-you"
+                      class="s_website_form container-fluid o_mark_required"
+                      data-mark="*"
+                      enctype="multipart/form-data"
+                      data-editable-form="false">
+                    <div class="justify-content-center s_website_form_rows row s_col_no_bgcolor">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group s_website_form_field s_website_form_required">
+                                <label class="col-form-label s_website_form_label d-none"
+                                       for="contact_name">
+                                    <span class="s_website_form_label_content"></span>
+                                </label>
+                                <input type="text" class="form-control s_website_form_input"
+                                       name="contact_name" placeholder="Full Name"
+                                       t-att-value="request.params.get('contact_name', '')"
+                                       required=""/>
+                            </div>
+                            <div class="form-group s_website_form_field s_website_form_required">
+                                <label class="col-form-label s_website_form_label d-none"
+                                       for="contact_name">
+                                    <span class="s_website_form_label_content"></span>
+                                </label>
+                                <input type="text" class="form-control s_website_form_input"
+                                       name="email_from" required="" placeholder="Enter email"
+                                       t-att-value="request.params.get('email_from', '')"/>
+                            </div>
+                            <div class="form-group s_website_form_field s_website_form_model_required">
+                                <label class="col-form-label s_website_form_label d-none"
+                                       for="contact_name">
+                                    <span class="s_website_form_label_content"></span>
+                                </label>
+                                <input type="text" class="form-control s_website_form_input"
+                                       name="name" required="" placeholder="Subject"
+                                       t-att-value="request.params.get('name', '')"/>
+                            </div>
+                            <div class="form-group s_website_form_field">
+                                <label class="col-form-label s_website_form_label d-none"
+                                       for="contact_name">
+                                    <span class="s_website_form_label_content"></span>
+                                </label>
+                                <input type="text" class="form-control s_website_form_input"
+                                       name="phone" placeholder="Phone Number"
+                                       t-att-value="request.params.get('phone', '')"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group s_website_form_field s_website_form_required">
+                                <label class="col-form-label s_website_form_label d-none"
+                                       for="contact_name">
+                                    <span class="s_website_form_label_content"></span>
+                                </label>
+                                <textarea class="form-control s_website_form_input"
+                                          name="description" required=""
+                                          placeholder="Write message" rows="11">
+                                    <!--<t t-esc="request.params.get('description', '')"/>-->
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="form-group text-center mt32 s_website_form_submit">
+                            <div class="s_btn text-left" data-name="Buttons">
+                                <a href="#" role="button"
+                                   class="btn btn-primary btn-lg o_website_form_send">Send Message
+                                </a>
+                                <span id="o_website_form_result"></span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </template>
+</odoo>

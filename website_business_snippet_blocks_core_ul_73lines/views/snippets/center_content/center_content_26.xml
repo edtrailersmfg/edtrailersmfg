@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Center Content 26" id="center_content_26">
+        <section class="pt64 pb64" data-visible="center_content">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center ">
+                        <h2 class="font-weight-bold pb24 ">Center Content Title</h2>
+                        <div class="text-center">
+                            <img alt="image" class="img-fluid"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-27.jpg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

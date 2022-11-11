@@ -1,0 +1,272 @@
+/*------------------------Blockquote 1 css Start------------------------*/
+
+#blockquote_d1{
+blockquote{
+    text-align: left;
+    padding: 0px 0px 0px 60px;
+}
+.blockquote_content p{
+    font-size: 24px;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 40px;
+}
+.blockquote_icon{
+    position: absolute;
+    top: 0px;
+    left: 16px;
+}
+}
+/*------------------------Blockquote 1 css End------------------------*/
+
+/*------------------------Blockquote 2 css Start------------------------*/
+#blockquote_d2{
+blockquote {
+    padding: 50px 62px 50px 56px;
+    position: relative;
+}
+.blockquote_content p{
+    font-size: 18px;
+    font-weight: 600;
+}
+blockquote .quote_img{
+    position: absolute;
+    top:0;
+    right:0;
+    max-width: unset !important;
+    margin-right: unset !important;
+    border-radius: unset !important;
+}
+}
+/*------------------------Blockquote 2 css End------------------------*/
+
+/*------------------------Blockquote 3 css Start------------------------*/
+#blockquote_d3{
+.blockquote_content{
+    padding: 15px 15px 35px;
+    border-top: 5px solid theme-color('primary');
+    border-bottom: 5px solid theme-color('primary');
+}
+.blockquote_content .description{
+    font-size: 18px;
+    margin-left: 24px;
+    font-weight: bold;
+    font-style: italic;
+}
+.blockquote_content .fa-quote-left{
+    padding: 10px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: theme-color('primary');
+    color: #ffffff;
+    border-radius: 50px;
+}
+}
+/*------------------------Blockquote 3 css End------------------------*/
+
+/*------------------------Blockquote 4 css Start------------------------*/
+#blockquote_d4{
+.blockquote_content .fa-quote-left{
+    position: absolute;
+    top: 10px;
+    left: 48%;
+    font-size: 40px;
+}
+.blockquote_content .content .description{
+    font-size: 18px;
+}
+.blockquote_content .content {
+    padding: 45px 35px;
+    font-weight: bold;
+    position: relative;
+    border: 3px solid theme-color('primary');
+    border-top: 0px none;
+}
+.blockquote_content .content:before {
+    content: "";
+    border-top: 3px solid theme-color('primary');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+}
+.blockquote_content .content:after {
+    content: "";
+    border-top: 3px solid theme-color('primary');
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+.blockquote_content .fa-quote-left{
+    font-size: 30px;
+}
+.blockquote_content .content:before {
+    width: 43%
+}
+.blockquote_content .content:after {
+    width: 43%
+}
+}
+@media (min-width: 320px) and (max-width: 767px) {
+.blockquote_content .fa-quote-left{
+    font-size: 30px;
+    left: 46%;
+}
+.blockquote_content .content:before {
+    width: 43%
+}
+.blockquote_content .content:after {
+    width: 43%
+}
+}
+}
+/*------------------------Blockquote 4 css End------------------------*/
+
+/*------------------------Blockquote 5 css Start------------------------*/
+#blockquote_d5{
+.blockquote_content {
+    font-size: 1.25rem;
+    border: 1px solid rgba(222, 226, 230, 0.54);
+    border-left: 0.5rem solid theme-color('primary');
+    font-style: italic;
+    line-height: 1.6;
+    padding: 30px 40px;
+}
+.blockquote_content .description{
+    font-size: 18px;
+}
+}
+/*------------------------Blockquote 5 css End------------------------*/
+
+/*------------------------Blockquote 6 css Start------------------------*/
+
+#blockquote_d6{
+.blockquote_content .description{
+    font-size: 18px;
+}
+.blockquote_content {
+    border-radius: 15px;
+    border: 2px solid theme-color('primary');
+    display: inline-block;
+}
+.blockquote_content .fa-quote-left{
+    border-radius: 50%;
+    background-color: theme-color('primary');
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    display: inline-block;
+    top: -10px;
+    left: -10px;
+    padding: 15px;
+
+}
+.blockquote_content .fa-quote-right{
+    right: -15px;
+    top: 15px;
+    float: right;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: theme-color('primary');
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    display: inline-block;
+}
+}
+/*------------------------Blockquote 6 css End------------------------*/
+
+/*------------------------Blockquote 7 css Start------------------------*/
+#blockquote_d7{
+.blockquote_content{
+    border: 2px solid theme-color('primary');
+    padding: 15px;
+}
+.blockquote_content .description{
+    font-size: 18px;
+}
+.blockquote_content .title{
+    color: #ffffff;
+    padding: 10px;
+    position: relative;
+    top: -28px;
+    border-radius: 6px;
+}
+}
+/*------------------------Blockquote 7 css End------------------------*/
+
+/*------------------------Blockquote 8 css Start------------------------*/
+#blockquote_d8{
+.quote_heading{
+    border-bottom: 2px solid theme-color('primary');
+    display: inline-block;
+}
+.blockquote_content .fa-quote-left{
+    position: absolute;
+    top: 0;
+    left: 12px;
+    font-size: 100px;
+    color: #000000;
+    opacity: 0.1;
+}
+.blockquote_content .description{
+    font-size: 30px;
+    text-align: center;
+}
+}
+/*------------------------Blockquote 8 css End------------------------*/
+
+/*------------------------Blockquote 9 css Start------------------------*/
+#blockquote_d9{
+.description{
+    padding: 40px;
+    position: relative;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25em;
+}
+.description .fa-quote-right, .description .fa-quote-left{
+    position: absolute;
+    padding: 10px;
+}
+.description .fa-quote-left{
+    top: 20px;
+    left: 10px;
+}
+.description .fa-quote-right{
+    bottom: 20px;
+    right: 10px;
+}
+.blockquote_content .title{
+    margin-top: 24px;
+    margin-left: 24px;
+}
+.description:after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    border-top: 15px solid rgba(255, 255, 255, 0.5);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+}
+/*------------------------Blockquote 9 css End------------------------*/
+
+/*------------------------Blockquote 10 css Start------------------------*/
+#blockquote_d10{
+.blockquote_content{
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    font-style: italic;
+}
+.blockquote_content .description{
+    font-size: 18px;
+}
+}
+
+/*------------------------Blockquote 10 css End------------------------*/

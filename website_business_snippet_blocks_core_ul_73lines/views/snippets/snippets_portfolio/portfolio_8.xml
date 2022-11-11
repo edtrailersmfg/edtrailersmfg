@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Portfolio 8" id="portfolio_8">
+        <section class="pt64 pb64" id="portfolio_8" data-visible="portfolios">
+            <div class="container">
+                <div class="text-center">
+                    <h2>Gallery</h2>
+                    <p class="pb48">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div class="justify-content-center pb32">
+                        <a class="btn text-primary  filter-button mt8 mb8" data-filter="all">All</a>
+                        <a class="btn text-primary  filter-button mt8 mb8" data-filter="one">Web Design</a>
+                        <a class="btn text-primary  filter-button mt8 mb8" data-filter="two">Wordpress</a>
+                        <a class="btn text-primary  filter-button mt8 mb8" data-filter="three">Web Development</a>
+                        <a class="btn text-primary  filter-button mt8 mb8" data-filter="four">Branding</a>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-12 filter one pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <a href="#" class="icon">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-12 filter two pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <a href="#" class="icon">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-12 filter one pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <a href="#" class="icon">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-12 filter four pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <a href="#" class="icon">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-12 filter three pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <a href="#" class="icon">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-12 filter four pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <a href="#" class="icon">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-12 filter three pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <a href="#" class="icon">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-12 filter four pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <a href="#" class="icon">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-12 filter four pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <a href="#" class="icon">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-12 filter one pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <a href="#" class="icon">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-12 filter three pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <a href="#" class="icon">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-12 filter two pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <a href="#" class="icon">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

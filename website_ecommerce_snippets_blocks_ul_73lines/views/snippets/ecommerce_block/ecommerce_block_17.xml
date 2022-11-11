@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="ecommerce_block_17" name="Ecommerce BLock 17">
+        <section class="pt64 pb64" id="ecommerce_blocks_17" data-visible="ecommerce_blocks">
+            <div class="container">
+                <h3 class="text-center font-weight-bold pt32 pb32">BRANDS EVERYONE LOVE</h3>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mb32">
+
+                        <div class="brand_img brand_img1 rounded-circle m-auto">
+                            <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                 class="img-fluid"/>
+                        </div>
+
+                        <div class="brand_logo d-block mx-auto">
+                            <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/brand_logo.png"
+                                 class="img-fluid d-block mx-auto"/>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mb32">
+
+                        <div class="brand_img brand_img1 rounded-circle m-auto">
+                            <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                 class="img-fluid"/>
+                        </div>
+
+                        <div class="brand_logo d-block mx-auto">
+                            <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/brand_logo.png"
+                                 class="img-fluid d-block mx-auto"/>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mb32">
+
+                        <div class="brand_img brand_img1 rounded-circle m-auto">
+                            <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                 class="img-fluid"/>
+                        </div>
+
+                        <div class="brand_logo d-block mx-auto">
+                            <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/brand_logo.png"
+                                 class="img-fluid d-block mx-auto"/>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mb32">
+
+                        <div class="brand_img brand_img1 rounded-circle m-auto">
+                            <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                 class="img-fluid"/>
+                        </div>
+
+                        <div class="brand_logo d-block mx-auto">
+                            <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/brand_logo.png"
+                                 class="img-fluid d-block mx-auto"/>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

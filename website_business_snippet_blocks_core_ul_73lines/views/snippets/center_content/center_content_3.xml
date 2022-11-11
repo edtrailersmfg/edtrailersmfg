@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Center Content 3" id="center_content_3">
+        <section class="pt64 pb64" data-visible="center_content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2 class="font-weight-bold pb24">Long headline to turn your<br/> visitors into users
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum est in tortor
+                            congue suscipit. Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.Suspendisse
+                            potenti. Aliquam finibus pharetra tellus at egestas.
+                        </p>
+                        <div class="mt24 mb24 col-12 col-sm-12 col-md-12 col-lg-12">
+                            <input class="col-12 col-sm-3 col-md-3 col-lg-3 mt16 mb16 py-3 bg-light border-0 rounded-0"
+                                   type="text" name="user" placeholder="placeholder"/>
+                            <input class="col-12 col-sm-3 col-md-3 col-lg-3 mt16 mb16 py-3 bg-light border-0 rounded-0"
+                                   type="text" name="user" placeholder="placeholder"/>
+                            <a href="#" class="btn btn-primary rounded-0  mt16 mb16 py-3 px-5">Action</a>
+                        </div>
+                        <p>Sepreted they live in Bookmarksgrove right.
+                            <a href="#">Link
+                                <i class="fa fa-chevron-right"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

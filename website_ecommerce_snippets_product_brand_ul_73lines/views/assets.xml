@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- ==================================== Scss ================================= -->
+<!--    <template id="website_ecommerce_snippets_product_brand_ul_73lines_assets"-->
+<!--              name="Product Brand Assets"-->
+<!--              inherit_id="website.assets_frontend" active="True">-->
+<!--        <xpath expr="." position="inside">-->
+<!--            <link href="/website_ecommerce_snippets_product_brand_ul_73lines/static/src/scss/product_brand_carousel.scss"-->
+<!--                  type="text/scss" rel="stylesheet"/>-->
+
+<!--            <link href="/website_ecommerce_snippets_product_brand_ul_73lines/static/src/scss/brand_carousel_design.scss"-->
+<!--                  type="text/scss" rel="stylesheet"/>-->
+
+<!--        </xpath>-->
+<!--    </template>-->
+
+
+</odoo>

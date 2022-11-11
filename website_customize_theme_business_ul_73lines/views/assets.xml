@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!--Navbar Shadow On/Off-->
+    <template id="navbar_shadow_on_off" inherit_id="portal.frontend_layout"
+              customize_show="True"
+              name="Navbar Shadow Off" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="#{'o_nav_shadow'}"
+                       separator=" "/>
+        </xpath>
+    </template>
+    <!--Navbar Border On/Off-->
+    <template id="navbar_border_on_off" inherit_id="portal.frontend_layout"
+              customize_show="True"
+              name="Navbar Border Off" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="#{'o_nav_border_off'}"
+                       separator=" "/>
+        </xpath>
+    </template>
+
+<!--    <template id="header_language_selector_flag_square" inherit_id="website.assets_frontend"-->
+<!--              active="False">-->
+<!--        <xpath expr="//link[last()]" position="after">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_customize_theme_business_ul_73lines/static/src/scss/square_flag.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+
+</odoo>

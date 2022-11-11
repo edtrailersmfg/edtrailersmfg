@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="s_icon_btn" name="Icon Button">
+        <div class="s_btn text-center pt16 pb16" data-name="Buttons">
+            <a href="#" class="btn btn-primary">
+                <i class="fa fa-user"/>
+                <span>Read more</span>
+            </a>
+        </div>
+    </template>
+    <template id="s_btn_icon" name="Button Icon">
+        <div class="s_btn text-center pt16 pb16" data-name="Buttons">
+            <a href="#" class="btn btn-primary">
+                <span>Read more</span>
+                <i class="fa fa-user"/>
+            </a>
+        </div>
+    </template>
+    <template id="s_icon_only_btn" name="Only Icon Button">
+        <div class="s_btn text-center pt16 pb16" data-name="Buttons">
+            <a href="#" class="btn btn-primary">
+                <i class="fa fa-home"/>
+            </a>
+        </div>
+    </template>
+    <template id="s_icon_btn_2" name="2 Icon Button">
+        <div class="s_btn text-center pt16 pb16" data-name="Buttons">
+            <a href="#" class="btn btn-primary">
+                <i class="fa fa-user"/>
+                <span>Read more</span>
+            </a>
+            <a href="#" class="btn btn-primary">
+                <i class="fa fa-user"/>
+                <span>Read more</span>
+            </a>
+        </div>
+    </template>
+
+    <template id="snippet_inherit" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_content']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="website_customize_theme_business_ul_73lines.s_icon_btn"
+               t-thumbnail="/website_customize_theme_business_ul_73lines/static/src/imgs/inner-btn/icon-button.png"/>
+            <t t-snippet="website_customize_theme_business_ul_73lines.s_btn_icon"
+               t-thumbnail="/website_customize_theme_business_ul_73lines/static/src/imgs/inner-btn/button-icon.png"/>
+            <t t-snippet="website_customize_theme_business_ul_73lines.s_icon_only_btn"
+               t-thumbnail="/website_customize_theme_business_ul_73lines/static/src/imgs/inner-btn/only-icon-button.png"/>
+            <t t-snippet="website_customize_theme_business_ul_73lines.s_icon_btn_2"
+               t-thumbnail="/website_customize_theme_business_ul_73lines/static/src/imgs/inner-btn/two-icon-button.png"/>
+        </xpath>
+    </template>
+
+    <template id="snippet_button_options" inherit_id="website.snippet_options">
+        <xpath expr="//t[@t-set='so_content_addition_selector']" position="after">
+            <t t-set="so_content_addition_selector_btn" t-translation="off">.s_btn
+            </t>
+            <div id="so_content_addition_btn"
+                 t-att-data-selector="so_content_addition_selector_btn"
+                 t-attf-data-drop-near="p, h1, h2, h3, blockquote, .s_btn, .s_card, .s_alert, .o_facebook_page, .s_share, .s_rating, .s_hr, .row > div > img, #{so_content_addition_selector_btn}"
+                 data-drop-in=".content, nav"/>
+
+            <div data-js="SnippetSave"
+                 t-attf-data-selector="#{so_content_addition_selector_btn}">
+                <we-button class="fa fa-fw fa-save o_we_link o_we_hover_warning"
+                           title="Save the block to use it elsewhere"
+                           data-save-snippet=""
+                           data-no-preview="true"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>

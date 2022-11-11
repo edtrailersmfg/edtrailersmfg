@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Process Step 18" id="process_step_18">
+        <section class="pt64 pb64" id="process_step_18" data-visible="process_steps">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Our Working Process</h2>
+                        <p class="col-lg-6 offset-lg-3">Lorem Ipsum is simply dummy text of the printing
+                            and typesetting industry
+                            been the industry's standard dummy text
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-6 col-lg-3 mb32 timeline">
+                        <div class="timeline-inner">
+                            <div class="year">2014</div>
+                            <div class="timeline-content">
+                                <h3 class="post">Javascript</h3>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ullamcorper
+                                    odio. Phasellus congue varius placerat. Quisque vel purus convallis.
+                                </p>
+                            </div>
+                            <div class="timeline-icon">
+                                <i class="fa fa-globe"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-6 col-lg-3 mb32 timeline">
+                        <div class="timeline-inner">
+                            <div class="year">2015</div>
+                            <div class="timeline-content">
+                                <h3 class="post">Web Developer</h3>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ullamcorper
+                                    odio. Phasellus congue varius placerat. Quisque vel purus convallis.
+                                </p>
+                            </div>
+                            <div class="timeline-icon">
+                                <i class="fa fa-rocket"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-6 col-lg-3 mb32 timeline">
+                        <div class="timeline-inner">
+                            <div class="year">2016</div>
+                            <div class="timeline-content">
+                                <h3 class="post">Web Desginer</h3>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ullamcorper
+                                    odio. Phasellus congue varius placerat. Quisque vel purus convallis.
+                                </p>
+                            </div>
+                            <div class="timeline-icon">
+                                <i class="fa fa-briefcase"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-6 col-lg-3 mb32 timeline">
+                        <div class="timeline-inner">
+                            <div class="year">2017</div>
+                            <div class="timeline-content">
+                                <h3 class="post">Digital Marketing</h3>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ullamcorper
+                                    odio. Phasellus congue varius placerat. Quisque vel purus convallis.
+                                </p>
+                            </div>
+                            <div class="timeline-icon">
+                                <i class="fa fa-camera"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

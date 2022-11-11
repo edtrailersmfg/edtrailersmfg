@@ -1,0 +1,17 @@
+<odoo>
+    <!--
+        Part of Odoo Module Developed by 73lines
+        See LICENSE file for full copyright and licensing details.
+    -->
+    <template id="assets_frontend" name="Frontend Assets"
+              inherit_id="website.assets_frontend">
+    <xpath expr="." position="inside">
+        <script src="/website_snippet_product_category_dynamic_ul_73lines/static/src/js/template_option.js"
+                type="text/javascript"/>
+        <link href="/website_snippet_product_category_dynamic_ul_73lines/static/src/scss/category_menu.scss"
+              rel="stylesheet" type="text/scss"/>
+
+    </xpath>
+    </template>
+
+</odoo>

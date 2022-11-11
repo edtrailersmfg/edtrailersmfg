@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Counter_6" id="counter_6">
+        <section class="pt64 pb64" id="counter_6"
+                 style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-24.jpg&quot;);
+    background-repeat: no-repeat;
+    background-size: cover;" data-visible="counters">
+            <div class="container">
+                <div class="row text-center text-white">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb48">
+                        <h2>Counter Design</h2>
+                        <p class="text-dark ">Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="counter-box">
+                            <h3 class="text-white">Team Workers</h3>
+                            <h3 class="text-white"><i class="fa fa-bullhorn mr-3 mb16 mt16"></i>8769
+                            </h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="counter-box">
+                            <h3 class="text-white">Happy Clients</h3>
+                            <h3 class="text-white"><i class="fa fa-child mr-3 mb16 mt16"></i>4243
+                            </h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="counter-box">
+                            <h3 class="text-white">Design Awards</h3>
+                            <h3 class="text-white"><i class="fa fa-trophy mr-3 mb16 mt16"></i>2378
+                            </h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="counter-box">
+                            <h3 class="text-white">Project Ideas</h3>
+                            <h3 class="text-white"><i class="fa fa-laptop mr-3 mb16 mt16"></i>5678
+                            </h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

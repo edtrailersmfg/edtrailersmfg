@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+
+    <!-- Snippet's Body -->
+    <template id="s_half_carousel_half_carousel" name="Half Carousel Half Carousel">
+        <section class="s_half_carousel_half_carousel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="oe_structure">
+                            <h3>Place Your Carousel Here.</h3>
+                            <h4>After placing the carousel remove this text.</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="oe_structure">
+                            <h3>Place Your Carousel Here.</h3>
+                            <h4>After placing the carousel remove this text.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+
+</odoo>

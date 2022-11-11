@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Footer 16" id="footer_16">
+        <section class="pt64" id="footer_16" data-visible="footer">
+            <div class="container">
+                <div class="row text-center pb48">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-2">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-58.png"
+                             alt="Jumla"
+                             class="img-fluid mb8"/>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-2">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-58.png"
+                             alt="Magento"
+                             class="img-fluid mb8"/>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-2">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-58.png"
+                             alt="Jumla"
+                             class="img-fluid mb8"/>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-2">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-58.png"
+                             alt="Magento"
+                             class="img-fluid mb8"/>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-2">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-58.png"
+                             alt="Jumla"
+                             class="img-fluid mb8"/>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-2">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-58.png"
+                             alt="Magento"
+                             class="img-fluid mb8"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 pb16">
+                        <h5 class="pb16">About Us</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla.
+                        </p>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-2 col-lg-2 pb16">
+                        <h5 class="pb16">Menu</h5>
+                        <ul class="list-unstyled">
+                            <li>Home</li>
+                            <li>About us</li>
+                            <li>Services</li>
+                            <li>Features</li>
+                            <li>Pricing</li>
+                            <li>Blog</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-2 col-lg-2 pb16">
+                        <h5 class="pb16">Support</h5>
+                        <ul class="list-unstyled">
+                            <li>Trial version</li>
+                            <li>Premium</li>
+                            <li>FAQs</li>
+                            <li>Privacy Policy</li>
+                            <li>Term of Use</li>
+                            <li>Copyright</li>
+                            <li>Help</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 pb16">
+                        <h5 class="pb16">Contact Us</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <address>
+                                    <b>Address</b>
+                                    <br/>
+                                    <span t-field="res_company.street"/>
+                                    <span t-field="res_company.city"/>
+                                    <br/>
+                                    <span t-field="res_company.state_id.name"/>
+                                    <span t-field="res_company.zip"/>
+                                    <span t-field="res_company.country_id.name"/>
+                                </address>
+                            </li>
+                            <li class="pb16">
+                                <b>Email</b>
+                                <br/>
+                                <span t-field="res_company.email"/>
+                            </li>
+                            <li>
+                                <b>Phone</b>
+                                <br/>
+                                <span t-field="res_company.phone"/>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-2">
+                        <h5 class="pb16">Business Hours</h5>
+                        <ul class="list-unstyled">
+                            <li>Monday - Saturday
+                                <br/>
+                                8 AM - 5 PM EST
+                            </li>
+
+                        </ul>
+                        <h5 class="pt16 pb16">Social Media</h5>
+                        <ul class="list-unstyled">
+                            <a t-att-href="res_company.social_facebook">
+                                <i class="fa fa-facebook px-2"></i>
+                            </a>
+                            <a t-att-href="res_company.social_twitter">
+                                <i class="fa fa-twitter px-2"></i>
+                            </a>
+                            <a t-att-href="res_company.social_linkedin">
+                                <i class="fa fa-linkedin px-2"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-pinterest px-2"></i>
+                            </a>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <a href="#">
+                                <i class="fa fa-behance px-2"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-dribbble px-2"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-google-plus px-2"></i>
+                            </a>
+                            <a t-att-href="res_company.social_facebook">
+                                <i class="fa fa-facebook px-2"></i>
+                            </a>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="bg-light">
+            <div class="container">
+                <div class="row p-4">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb8">
+                        <div>
+                            Copyright &amp;copy;
+                            <span t-field="res_company.name">Company name
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-md-right text-lg-right">
+                        <div>
+                            Responsive Odoo theme,
+                            <span>
+                                Made with
+                                <i class="fa fa-heart"/>
+                                by
+                                <strong>&lt; 73Lines &gt;
+                                </strong>
+                            </span>
+                        </div>
+<!--                        <div>-->
+<!--                            <t t-call="website.language_selector"/>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

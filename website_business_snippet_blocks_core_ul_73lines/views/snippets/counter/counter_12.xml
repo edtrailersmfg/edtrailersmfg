@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Counter 12" id="counter_12">
+        <section class="pt64 pb64" id="counter_12" data-visible="counters">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb48">
+                        <h2>Counter Design</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb16">
+                        <div class="border rounded border-beta ec-counter-item p-5 pt64 pb64">
+                            <div class="d-flex align-items-center icon_box">
+                                <div id="hexagon">
+                                    <i class="fa fa-3x fa-briefcase d-block mx-auto"></i>
+                                </div>
+
+                                <h1 class="mx-3 font-weight-bold">2688</h1>
+                            </div>
+                            <h3 class="pt48 pb8 font-weight-bold">Clients Worked</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac mi iaculis, facilisis
+                                mauris
+                                in, tempor diam.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb16">
+                        <div class="border rounded border-beta ec-counter-item p-5 pt64 pb64">
+                            <div class="d-flex  align-items-center icon_box">
+                                <div id="hexagon">
+                                    <i class="fa fa-3x fa-trophy d-block mx-auto"></i>
+                                </div>
+                                <h1 class="mx-3 font-weight-bold">88156</h1>
+                            </div>
+                            <h3 class="pt48 pb8 font-weight-bold">Awards Winner</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac mi iaculis, facilisis
+                                mauris
+                                in, tempor diam.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="border rounded border-beta ec-counter-item p-5 pt64 pb64">
+                            <div class="d-flex  align-items-center icon_box">
+                                <div id="hexagon">
+                                    <i class="fa fa-3x fa-image d-block mx-auto"></i>
+                                </div>
+                                <h1 class="mx-3 font-weight-bold">32548</h1>
+                            </div>
+                            <h3 class="pt48 pb8 font-weight-bold">Image Slider</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac mi iaculis, facilisis
+                                mauris
+                                in, tempor diam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

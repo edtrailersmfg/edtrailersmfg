@@ -1,0 +1,207 @@
+<odoo>
+    <template name="Image Grid 8" id="image_grid_8">
+        <section class="pt64 pb64" id="image_grid_8" data-visible="image_grid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6 col-sm-12 p-0 d-md-none d-lg-block">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid8">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-644x644.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <div class="grid_content">
+                                        <h5 class=" o_default_snippet_text title">BLOCK TITLE</h5>
+                                        <ul class="icon pl-0 icon_border">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-search"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-link"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-6 col-sm-12">
+                        <div class="row">
+                            <div class="col-12 col-md-12 col-lg-12 col-sm-12 p-0">
+                                <div class="oe_structure oe_empty">
+                                    <div class="grid8">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-644x322.png"
+                                             alt=""
+                                             class="img-fluid image"/>
+                                        <div class="overlay">
+                                            <div class="grid_content">
+                                                <h5 class=" o_default_snippet_text title">BLOCK TITLE</h5>
+                                                <ul class="icon pl-0 icon_border">
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-search"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-link"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 p-0">
+                                <div class="oe_structure oe_empty">
+                                    <div class="grid8">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-322x322.png"
+                                             alt=""
+                                             class="img-fluid image"/>
+                                        <div class="overlay">
+                                            <div class="grid_content">
+                                                <h5 class=" o_default_snippet_text title">BLOCK TITLE</h5>
+                                                <ul class="icon pl-0 icon_border">
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-search"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-link"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 p-0">
+                                <div class="oe_structure oe_empty">
+                                    <div class="grid8">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-322x322.png"
+                                             alt=""
+                                             class="img-fluid image"/>
+                                        <div class="overlay">
+                                            <div class="grid_content">
+                                                <h5 class=" o_default_snippet_text title">BLOCK TITLE</h5>
+                                                <ul class="icon pl-0 icon_border">
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-search"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-link"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 p-0">
+                                <div class="oe_structure oe_empty">
+                                    <div class="grid8">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-322x322.png"
+                                             alt=""
+                                             class="img-fluid image"/>
+                                        <div class="overlay">
+                                            <div class="grid_content">
+                                                <h5 class=" o_default_snippet_text title">BLOCK TITLE</h5>
+                                                <ul class="icon pl-0 icon_border">
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-search"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-link"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 p-0">
+                                <div class="oe_structure oe_empty">
+                                    <div class="grid8">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-322x322.png"
+                                             alt=""
+                                             class="img-fluid image"/>
+                                        <div class="overlay">
+                                            <div class="grid_content">
+                                                <h5 class=" o_default_snippet_text title">BLOCK TITLE</h5>
+                                                <ul class="icon pl-0 icon_border">
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-search"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-link"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-6 col-sm-12 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid8">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-644x322.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <div class="grid_content">
+                                        <h5 class=" o_default_snippet_text title">BLOCK TITLE</h5>
+                                        <ul class="icon pl-0 icon_border">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-search"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-link"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Pricing 16" id="pricing_16">
+        <section class="pt64 pb64" data-visible="pricing">
+            <div class="container">
+                <h2 class="text-center">Pricing Table</h2>
+                <p class="text-center mb48">Lorem Ipsum is simply dummy text of the printing.</p>
+                <div class="row text-center">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb32">
+                        <div class="border bg-white rounded">
+                            <div class="pt32 pb32">
+                                <p>Free</p>
+                                <h2>0$</h2>
+                            </div>
+                            <div class="px-4 pb32">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.consectetur adipiscing
+                                    elit.
+                                </p>
+                                <a href="#" class="btn btn-primary btn-block">Button</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb32">
+                        <div class="border bg-white rounded">
+                            <div class="pt32 pb32">
+                                <p>Basic</p>
+                                <h2>12$</h2>
+                            </div>
+                            <div class="px-4 pb32">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.consectetur adipiscing
+                                    elit.
+                                </p>
+                                <a href="#" class="btn btn-primary btn-block">Button</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="border bg-white rounded">
+                            <div class="pt32 pb32">
+                                <p>Pro</p>
+                                <h2>33$</h2>
+                            </div>
+                            <div class="px-4 pb32">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.consectetur adipiscing
+                                    elit.
+                                </p>
+                                <a href="#" class="btn btn-primary btn-block">Button</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

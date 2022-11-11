@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Grid 3" id="grid_3">
+        <section class="pt64 pb64" data-visible="grids">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-12 text-center mb48">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb16">
+                        <h3>Feature One</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy.
+                        </p>
+                        <a href="#" class="pt8 pb8">read more
+                            <i class="fa fa-chevron-right ml-2"></i>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb16">
+                        <h3>Feature Two</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy.
+                        </p>
+                        <a href="#" class="pt8 pb8">read more
+                            <i class="fa fa-chevron-right ml-2"></i>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb16">
+                        <h3>Feature Three</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy.
+                        </p>
+                        <a href="#" class="pt8 pb8">read more
+                            <i class="fa fa-chevron-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

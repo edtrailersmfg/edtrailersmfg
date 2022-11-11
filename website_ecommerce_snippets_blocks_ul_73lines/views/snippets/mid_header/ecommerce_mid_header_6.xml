@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Ecommerce Mid Header 6" id="ecommerce_mid_header_6">
+        <section class="bg-black oe_custom_bg" id="mid-header-top-6" data-visible="mid_headears">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 oe_structure col-lg-4 col-md-12 col-sm-12 align-self-center pt8 pb8 text-center text-lg-left text-md-center"
+                         id="mid-header-top-left">
+                        <div class="oe_structure oe_empty">
+                            <div id="company-profile"
+                                 t-ignore="true">
+                                <a href="/website/social/facebook"
+                                   class="fa_company_contact_links"
+                                   target="_blank">
+                                    <i class="fa fa-x mx-1 text-white fa-facebook share_facebook fa_company_contact_info"/>
+                                </a>
+                                <a href="/website/social/twitter"
+                                   class="fa_company_contact_links"
+                                   target="_blank">
+                                    <i class="fa fa-x mx-1 text-white fa-twitter share_twitter fa_company_contact_info"/>
+                                </a>
+                                <a href="/website/social/linkedin"
+                                   class="fa_company_contact_links"
+                                   target="_blank">
+                                    <i class="fa fa-x mx-1 text-white fa-linkedin share_linkedin fa_company_contact_info"/>
+                                </a>
+                                <a href="/website/social/youtube"
+                                   class="fa_company_contact_links"
+                                   target="_blank">
+                                    <i class="fa fa-x mx-1 text-white fa-youtube-play share_youtube fa_company_contact_info"/>
+                                </a>
+                                <a href="/website/social/instagram"
+                                   rel="publisher"
+                                   class="fa_company_contact_links"
+                                   target="_blank">
+                                    <i class="fa fa-x mx-1 text-white fa-instagram share_instagram fa_company_contact_info"/>
+                                </a>
+                                <a href="/website/social/github"
+                                   class="fa_company_contact_links"
+                                   target="_blank">
+                                    <i class="fa fa-x mx-1 text-white fa-github share_github fa_company_contact_info"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 oe_structure mt-1 mb-1 col-lg-8 col-md-12 col-sm-12 text-center text-lg-right text-md-center"
+                         id="mid-header-top-right">
+                        <li class="list-inline-item pt8 pb8">
+                            <div class="oe_structure oe_empty">
+                                <div class="d-flex">
+                                    <span>Have any questions?</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-inline-item pt8 pb8">
+                            <div class="oe_structure oe_empty">
+                                <div class="d-flex">
+                                    <span id="company-contact" class="ml16 mr16" t-ignore="true">
+                                        <i class="fa fa-phone mr-2"/>
+                                        <span t-field="res_company.phone"/>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-inline-item pt8 pb8">
+                            <div class="oe_structure oe_empty">
+                                <div class="d-flex">
+                                    <span class="ml8 mr8 d-block d-lg-inline d-md-inline" id="company-email"
+                                          t-ignore="true">
+                                        <i class="fa fa-envelope mr-2"/>
+                                        <span t-field="res_company.email"/>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="oe_custom_bg" id="mid-header-bottom-6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pt8 pb8 mt-2 oe_structure"
+                         id="mid-header-bottom-left">
+                        <div class="oe_structure oe_empty">
+                            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.s_searchbar_input_ultimate"></t>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-lg-4 col-md-4 pt8 pb8  text-center text-md-center text-lg-center oe_structure"
+                         id="mid-header-bottom-center">
+                        <div class="oe_structure oe_empty">
+                            <a href="/" class="img-fluid">
+                                <img src="/logo.png"
+                                     t-att-alt="'Logo of %s' % res_company.name"
+                                     t-att-title="res_company.name"/>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-lg-4 col-md-4 pt8 pb8 align-self-center text-center text-md-right text-lg-right oe_structure"
+                         id="mid-header-bottom-right">
+
+                        <li class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <div class="d-flex">
+                                    <span class="text-black o_default_snippet_text">
+                                        Free Delivery
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="my_wish" class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <t t-if="request.env.ref('website_sale_wishlist.add_to_wishlist').active">
+                                    <!--                                    <t t-set='wishcount'-->
+                                    <!--                                       t-value="len(request.env['product.wishlist'].current())"/>-->
+                                    <a href="/shop/wishlist" class="pr-2 text-black">
+                                        <i class="fa fa-heart" title="wishlist"
+                                           style="font-size:18px;"></i>
+                                        <!--                                        <sup t-attf-class="my_wish_quantity o_animate_blink badge badge-primary">-->
+                                        <!--                                            <t t-esc='wishcount'/>-->
+                                        <!--                                        </sup>-->
+                                    </a>
+                                </t>
+                            </div>
+                        </li>
+                        <li id="my_cart" class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <!--                                <t t-set="website_sale_order"-->
+                                <!--                                   t-value="website.sale_get_order()"/>-->
+                                <a href="/shop/cart" class="pr-2 text-black">
+                                    <i class="fa-2x fa fa-opencart" title="add to cart" style="font-size:18px;"></i>
+                                    <!--                                <sup t-attf-class="my_cart_quantity badge badge-primary"-->
+                                    <!--                                     t-esc="website_sale_order and website_sale_order.cart_quantity or ''"/>-->
+                                </a>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

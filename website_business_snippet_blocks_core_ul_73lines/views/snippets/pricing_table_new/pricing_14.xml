@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Pricing 14" id="pricing_14">
+        <section class="pt64 pb64" data-visible="pricing">
+            <div class="container ">
+                <div class="row text-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb48">
+                        <h2>Pricing Table</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb24">
+                        <div class="border bg-white rounded pt24 pb24">
+                            <div class="px-4">
+                                <i class="fa fa-3x fa-cubes pt8 pb8"></i>
+                                <h3 class="pt16">Item One</h3>
+                                <p>From $99</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb24">
+                        <div class="border bg-white rounded border-primary text-primary pt24 pb24">
+                            <div class="px-4">
+
+                                <i class="fa fa-3x fa-cubes pt8 pb8"></i>
+                                <h3 class="pt16">Item One</h3>
+                                <p>From $99</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="border bg-white rounded pt24 pb24">
+                            <div class="px-4">
+
+                                <i class="fa fa-3x fa-cubes pt8 pb8"></i>
+                                <h3 class="pt16">Item One</h3>
+                                <p>From $99</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

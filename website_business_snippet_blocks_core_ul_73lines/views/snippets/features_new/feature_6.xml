@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Feature 6" id="feature_6">
+        <section class="pt64 pb64" data-visible="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center pb48">
+                        <h2 class="text-center">Features</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                        <div class="row text-center pb64">
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                <i class="fa fa-3x fa-calculator"></i>
+                                <h3 class="pt32 pb8">Feature One</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Ut at semper metus.
+                                    Vestibulum gravida velit urna, ut mattis
+                                    leo ullamcorper sed.
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                <i class="fa fa-3x fa-life-ring"></i>
+                                <h3 class="pt32 pb8">Feature Two</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Ut at semper metus.
+                                    Vestibulum gravida velit urna, ut mattis
+                                    leo ullamcorper sed.
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                <i class="fa fa-3x fa-user-o"></i>
+                                <h3 class="pt32 pb8">Feature Three</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Ut at semper metus.
+                                    Vestibulum gravida velit urna, ut mattis
+                                    leo ullamcorper sed.
+                                </p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-lg px-4">
+                            <i class="fa fa-star"></i>
+                            Button with Icon
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

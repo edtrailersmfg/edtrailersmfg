@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="menu_tree_inherit_theme_ultimate" model="ir.ui.view">
+        <field name="name">website.menu.tree.inherit.theme.ultimate</field>
+        <field name="model">website.menu</field>
+        <field name="inherit_id" ref="website.menu_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='is_mega_menu']" position="after">
+                <field name="menu_ribbon_id"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

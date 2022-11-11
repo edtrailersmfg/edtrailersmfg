@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="testimonial_13" name="Testimonial 13">
+        <section class="pt64 pb64 bg-200" id="testimonials_d4" data-visible="testimonials">
+            <div class="container">
+                <div class="row content justify-content-md-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2>Testimonials</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="testimonials_d4"
+                 class="s_quotes_carousel s_carousel_default carousel slide"
+                 data-interval="10000">
+                <ol class="carousel-indicators">
+                    <li data-target="#testimonials_d4"
+                        data-slide-to="0" class="active"/>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active bg-200 pt80 pb80"
+                         data-name="Slide" style="min-height: 318px;">
+                        <div class="container">
+                            <div class="row d-flex align-items-stretch">
+                                <div class="col-lg-4 col-md-4 col-sm-4 s_col_no_bgcolor pt16 pb16">
+                                    <blockquote
+                                            class="carousel-content bg-white">
+                                        <div class="col-lg-12">
+                                            <div class="testi-icon">
+                                                <i class="fa fa-1x fa-quote-left rounded-0 bg-primary s_quotes_carousel_icon"/>
+                                            </div>
+                                            <p>
+                                                Write
+                                                a
+                                                quote here from one of your
+                                                customers.
+                                                Quotes are a great way to build
+                                                confidence in your products or
+                                                services.
+                                            </p>
+                                        </div>
+                                    </blockquote>
+                                    <div class="testi-footer">
+                                        <img class="img"
+                                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                             alt=""/>
+                                        <span>
+                                            —
+                                            Jane DOE, CEO of
+                                            <b>
+                                                MyCompany
+                                            </b>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-sm-4 s_col_no_bgcolor pt16 pb16">
+                                    <blockquote
+                                            class="carousel-content bg-white">
+                                        <div class="col-lg-12">
+                                            <div class="testi-icon">
+                                                <i class="fa fa-1x fa-quote-left rounded-0 bg-primary s_quotes_carousel_icon"/>
+                                            </div>
+                                            <p>
+                                                Write
+                                                a
+                                                quote here from one of your
+                                                customers.
+                                                Quotes are a great way to build
+                                                confidence in your products or
+                                                services.
+                                            </p>
+                                        </div>
+                                    </blockquote>
+                                    <div class="testi-footer">
+                                        <img class="img"
+                                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                             alt=""/>
+                                        <span>
+                                            —
+                                            Jane DOE, CEO of
+                                            <b>
+                                                MyCompany
+                                            </b>
+                                        </span>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-4 col-md-4 col-sm-4 s_col_no_bgcolor pt16 pb16">
+                                    <blockquote
+                                            class="carousel-content bg-white">
+                                        <div class="col-lg-12">
+                                            <div class="testi-icon">
+                                                <i class="fa fa-1x fa-quote-left rounded-0 bg-primary s_quotes_carousel_icon"/>
+                                            </div>
+                                            <p>
+                                                Write
+                                                a
+                                                quote here from one of your
+                                                customers.
+                                                Quotes are a great way to build
+                                                confidence in your products or
+                                                services.
+                                            </p>
+                                        </div>
+                                    </blockquote>
+                                    <div class="testi-footer">
+                                        <img class="img"
+                                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                             alt=""/>
+                                        <span>
+                                            —
+                                            Jane DOE, CEO of
+                                            <b>
+                                                MyCompany
+                                            </b>
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-control-prev"
+                     data-target="#testimonials_d4" data-slide="prev"
+                     role="img" aria-label="Previous" title="Previous">
+                    <span class="carousel-control-prev-icon"/>
+                    <span class="sr-only o_default_snippet_text">Previous
+                    </span>
+                </div>
+                <div class="carousel-control-next"
+                     data-target="#testimonials_d4" data-slide="next"
+                     role="img" aria-label="Next" title="Next">
+                    <span class="carousel-control-next-icon"/>
+                    <span class="sr-only o_default_snippet_text">Next</span>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

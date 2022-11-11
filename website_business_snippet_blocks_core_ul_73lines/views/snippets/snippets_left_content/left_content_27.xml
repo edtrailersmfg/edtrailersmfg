@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="left_content_27" name="Left Content 27">
+        <section class="pt64 pb64" data-visible="left_content">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 pb48 text-center">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb16">
+                        <p>Write one or two
+                            paragraphs describing your product or services.
+                            <br/>To be successful your content
+                        </p>
+                        <p>There are many variations of passages of Lorem
+                            Ipsum available, but the majority have suffered
+                            believable.
+                            <a href="#">[Read More]</a>
+                        </p>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb16">
+                        <img alt="image" class="img-fluid d-block mx-auto"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"/>
+                    </div>
+
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb16">
+                        <img alt="image" class="img-fluid d-block mx-auto"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

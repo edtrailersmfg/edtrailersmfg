@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Part of Odoo Module Developed by 73lines See LICENSE file for full copyright 
+	and licensing details. -->
+<odoo>
+
+    <template id="quick_view_products_item"
+              inherit_id="website_sale.products_item"
+              active="True" customize_show="True" name="Product Quick View">
+        <xpath expr="//div[hasclass('o_wsale_product_btn')]" position="inside">
+            <t t-set="var_quick_popup" t-value="True"/>
+            <button href="#" type="button"
+                    class="btn btn-outline-primary quick-view shop-page-quick-view"
+                    t-attf-data-target="#pro#{ product.id }"
+                    t-att-data-product_id="product.id"
+                    role="button" data-toggle="modal"
+                    title="Quick view">
+                <i class="fa fa-eye"/>
+            </button>
+        </xpath>
+    </template>
+
+    <template id="ul_quick_view_popup_modal_shop">
+        <div class="quick-modal quick_popup_modal">
+            <div class="oe_website_sale row mx-0 align-items-center">
+                <t t-set="first_possible_combination"
+                   t-value="product._get_first_possible_combination()"/>
+                <t t-set="combination_info"
+                   t-value="product._get_combination_info(first_possible_combination, add_qty=add_qty or 1, pricelist=pricelist)"/>
+                <t t-set="product_variant"
+                   t-value="product.env['product.product'].browse(combination_info['product_id'])"/>
+                <div class="col-12 col-md-6 col-lg-6 col-md-6">
+                    <a t-att-href="product_href" id="o-carousel-product"
+                       itemprop="url">
+                        <!--                        <img class="product_detail_img" t-if="product_variant"-->
+                        <!--                             t-att-src="'/web/image/product.product/%s/image_128' % product_variant.id"-->
+                        <!--                             alt="Product Image"/>-->
+                        <!--                        <img class="product_detail_img" t-else=""-->
+                        <!--                             t-att-src="'/web/image/product.template/%s/image_128' % product.id"-->
+                        <!--                             alt="Product Image"/>-->
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 col-md-6">
+                    <div class="text-left">
+                        <h3 class="product-name">
+                            <strong t-field="product.display_name"/>
+                        </h3>
+                        <div class="">
+                            <t t-if="is_view_active('website_product_page_layout_ul_73lines.product_comment_new')"
+                               t-call="portal_rating.rating_widget_stars_static">
+                                <t t-set="rating_avg" t-value="product.rating_avg"/>
+                                <t t-set="rating_count" t-value="product.rating_count"/>
+                            </t>
+                        </div>
+                        <t t-call="website_sale.product_price"/>
+                        <hr></hr>
+                        <div class="text-muted mb16">
+                            <div t-field="product.description_sale"/>
+                            <div class="js_attributes"/>
+                        </div>
+                        <hr t-if="product.description_sale"></hr>
+                    </div>
+                    <div class="text-left mb16 border-bottom">
+                        <form t-if="product._is_add_to_cart_possible()"
+                              class=""
+                              action="/shop/cart/update"
+                              method="POST">
+                            <input type="hidden" name="csrf_token"
+                                   t-att-value="request.csrf_token()"/>
+
+                            <div class="js_product js_main_product">
+                                <t t-placeholder="select">
+                                    <input type="hidden"
+                                           class="product_id"
+                                           name="product_id"
+                                           t-att-value="product_variant.id"/>
+                                    <input type="hidden"
+                                           class="product_template_id"
+                                           name="product_template_id"
+                                           t-att-value="product.id"/>
+                                </t>
+<!--                                <t t-call="website_sale.product_price"/>-->
+                                <p t-if="True"
+                                   class="css_not_available_msg alert alert-warning">
+                                    This
+                                    combination does not exist.
+                                </p>
+                                <t t-placeholder="select">
+                                    <input type="hidden" class="product_id" name="product_id"
+                                           t-att-value="product_variant.id"/>
+                                    <input type="hidden" class="product_template_id"
+                                           name="product_template_id" t-att-value="product.id"/>
+                                    <input t-if="product.public_categ_ids.ids" type="hidden"
+                                           class="product_category_id" name="product_category_id"
+                                           t-att-value="product.public_categ_ids.ids[0]"/>
+                                    <t t-set="combination" t-value="product_combination if product_combination else
+                                                    product._get_first_possible_combination()"/>
+                                    <t t-if="combination" t-call="sale.variants">
+                                        <t t-set="ul_class" t-valuef="flex-column"/>
+                                        <t t-set="parent_combination" t-value="None"/>
+                                    </t>
+                                    <t t-else="">
+                                        <ul class="d-none js_add_cart_variants"
+                                            t-att-data-attribute_exclusions="{'exclusions: []'}"/>
+                                    </t>
+                                </t>
+                                <div class="mb16 d-flex">
+                                    <div class="css_quantity input-group oe_website_spinner"
+                                         contenteditable="false">
+                                        <div class="input-group-prepend">
+                                            <a t-attf-href="#"
+                                               class="btn btn-secondary js_add_cart_json"
+                                               aria-label="Remove one"
+                                               title="Remove one">
+                                                <i class="fa fa-minus"/>
+                                            </a>
+                                        </div>
+                                        <input type="text"
+                                               class="form-control quantity"
+                                               data-min="1" name="add_qty"
+                                               value="1"/>
+                                        <div class="input-group-append">
+                                            <a t-attf-href="#"
+                                               class="btn btn-secondary float_left js_add_cart_json"
+                                               aria-label="Add one"
+                                               title="Add one">
+                                                <i class="fa fa-plus"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="cart-button">
+                                        <a role="button" id="add_to_cart"
+                                           class="btn btn-primary btn-flat font-weight-bold bg-primary border-primary js_check_product a-submit"
+                                           href="#"><i class="fa fa-cart-plus mr-2"></i>Add
+                                            to Cart
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <t t-if="product.brand_id">
+                        <div class="product-single-page-tags">
+                            <t t-foreach="product.brand_id" t-as="brand">
+                                <div class="align-items-center mx-0 row">
+                                    <div class="col-6 col-md-3">
+                                        <div itemprop="image" t-field="brand.brand_image"
+                                             t-options='{"widget": "image", "resize": None if brand_image else "300x300"}'
+                                             t-att-alt="brand.name"/>
+                                    </div>
+                                    <div class="col-12 col-md-9 mt-2 mt-md-0">
+                                        <h6>
+                                            <a class="text-dark font-weight-bold"
+                                               t-att-href="'/shop/?brands=%s-%s' % (brand.name, brand.id)">
+                                                <t t-esc="brand.name"/>
+                                            </a>
+                                        </h6>
+                                        <p class="mb-0 text-600">
+                                            <t t-esc="brand.brand_description"/>
+                                        </p>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                        <hr></hr>
+                    </t>
+                    <t t-if="product.tag_ids">
+                        <div class="product-single-page-tags">
+                            <h5 class="d-inline-block mb-0 font-weight-bold">Tags:</h5>
+                            <t t-foreach="product.tag_ids" t-as="tag">
+                                <a class="quick_view_badge px-1 text-decoration-none text-dark"
+                                   t-att-href="'/shop/?tags=%s-%s' % (tag.name, tag.id)">
+                                    <t t-esc="tag.name"/>
+                                </a>
+                                <span class="tag_separator">,</span>
+                            </t>
+                        </div>
+                    </t>
+                    <div class="h4 mt-3 d-flex align-items-center" contenteditable="false">
+                        <h5 class="d-inline-block mb-0 font-weight-bold mr-1">Share:</h5>
+                        <t t-snippet-call="website.s_share">
+                            <t t-set="_exclude_share_links" t-value="['whatsapp', 'linkedin']"/>
+                            <t t-set="_no_title" t-value="True"/>
+                            <t t-set="_link_classes" t-valuef="mx-1 my-0"/>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="products_add_to_cart_inherit" inherit_id="website_sale.products_add_to_cart" active="False"
+              customize_show="True" name="Product Cart Popup View">
+        <xpath expr="//t[@t-if='product_variant_id']" position="replace">
+            <t t-set="product_variant_id" t-value="product._get_first_possible_variant_id()"/>
+            <input name="product_id" t-att-value="product_variant_id" type="hidden"/>
+            <t t-set="var_cart_popup" t-value="True"/>
+            <t t-if="product_variant_id">
+                <a href="#" role="button" class="btn btn-primary ul_add_to_cart shop-page-cart-view"
+                   aria-label="Shopping cart" t-att-data-product_id="product.id"
+                   title="Shopping cart" data-toggle="modal" t-attf-data-target="#prod#{ product.id }">
+                    <span class="fa fa-shopping-cart"/>
+                </a>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="ul_cart_popup_modal_shop">
+        <div class="quick-modal cart_popup_modal">
+            <div class="oe_website_sale row mx-0 align-items-center">
+                <t t-set="first_possible_combination"
+                   t-value="product._get_first_possible_combination()"/>
+                <t t-set="combination_info"
+                   t-value="product._get_combination_info(first_possible_combination, add_qty=add_qty or 1, pricelist=pricelist)"/>
+                <t t-set="product_variant"
+                   t-value="product.env['product.product'].browse(combination_info['product_id'])"/>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <a t-att-href="product_href" id="o-carousel-product"
+                       itemprop="url">
+                    </a>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center border-top py-3">
+                    <div class="col-md-12">
+                        <h2 class="mt16 mb16 product_popup_title">
+                            <strong t-field="product.display_name"/>
+                        </h2>
+                        <div class="text-black">
+                            <div t-field="product.description_sale"
+                                 class="mt16 mb16"/>
+                            <div class="js_attributes"/>
+                        </div>
+                    </div>
+                    <t t-set="combination"
+                       t-value="product_combination if product_combination else product._get_first_possible_combination()"/>
+                    <div class="col-md-12">
+                        <form t-if="product._is_add_to_cart_possible()"
+                              action="/shop/cart/update"
+                              method="POST">
+                            <input type="hidden" name="csrf_token"
+                                   t-att-value="request.csrf_token()"/>
+                            <div class="col-md-12 mt16 mb16">
+                                <div class="css_quantity input-group oe_website_spinner justify-content-center"
+                                     contenteditable="false">
+                                    <div class="input-group-prepend">
+                                        <a t-attf-href="#"
+                                           class="btn btn-secondary js_add_cart_json"
+                                           aria-label="Remove one"
+                                           title="Remove one">
+                                            <i class="fa fa-minus"/>
+                                        </a>
+                                    </div>
+                                    <input type="text"
+                                           class="form-control quantity"
+                                           data-min="1" name="add_qty"
+                                           value="1"/>
+                                    <div class="input-group-append">
+                                        <a t-attf-href="#"
+                                           class="btn btn-secondary float_left js_add_cart_json"
+                                           aria-label="Add one"
+                                           title="Add one">
+                                            <i class="fa fa-plus"/>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="js_product js_main_product">
+                                <t t-placeholder="select">
+                                    <input type="hidden"
+                                           class="product_id"
+                                           name="product_id"
+                                           t-att-value="product_variant.id"/>
+                                    <input type="hidden"
+                                           class="product_template_id"
+                                           name="product_template_id"
+                                           t-att-value="product.id"/>
+                                </t>
+                                <t t-call="website_sale.product_price"/>
+                                <p t-if="True"
+                                   class="css_not_available_msg alert alert-warning">
+                                    This
+                                    combination does not exist.
+                                </p>
+                                <a role="button" id="add_to_cart"
+                                   class="btn btn-primary flat font-weight-bold js_check_product a-submit"
+                                   href="#" style="font-size: 15px;"><i class="fa fa-cart-plus mr-2"/>Add
+                                    to Cart
+                                </a>
+                                <a role="button"
+                                   class="btn btn-primary flat font-weight-bold o_we_buy_now"
+                                   href="#" style="font-size: 15px;"><i class="fa fa-bolt mr-2"/>Buy Now
+                                </a>
+                                <t t-placeholder="select">
+                                    <input type="hidden" class="product_id" name="product_id"
+                                           t-att-value="product_variant.id"/>
+                                    <input type="hidden" class="product_template_id"
+                                           name="product_template_id" t-att-value="product.id"/>
+                                    <input t-if="product.public_categ_ids.ids" type="hidden"
+                                           class="product_category_id" name="product_category_id"
+                                           t-att-value="product.public_categ_ids.ids[0]"/>
+                                    <t t-if="combination" t-call="sale.variants">
+                                        <t t-set="ul_class" t-valuef="flex-column"/>
+                                        <t t-set="parent_combination" t-value="None"/>
+                                    </t>
+                                    <t t-else="">
+                                        <ul class="d-none js_add_cart_variants"
+                                            t-att-data-attribute_exclusions="{'exclusions: []'}"/>
+                                    </t>
+                                </t>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</odoo>

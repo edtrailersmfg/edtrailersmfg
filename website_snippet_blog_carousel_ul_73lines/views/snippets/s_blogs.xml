@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <template id="dynamic_filter_template_custom_blog_post_1" name="Blog Post 01">
+        <t t-foreach="records" t-as="record">
+            <div class="post-thumb">
+                <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                    <div class="blog_image"
+                         t-att-style="'background-image:'+record.background_url+'; -webkit-background-size: cover; min-height:222px; opacity:1;'"></div>
+                </a>
+                <div class="latest-blog-info">
+                    <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                        <h4 t-field="record.name"/>
+                    </a>
+                    <div class="post-excerpt">
+                        <p t-field="record.subtitle"/>
+                    </div>
+                    <div class="post-meta">
+                        <div class="entry-date">
+                            <i class="fa fa-calendar"/>
+                            <span t-field="record.create_date"
+                                  t-field-options='{"format": "MMMM d, yyyy"}'/>
+                        </div>
+                        <div class="entry-comment">
+                            <i class="fa fa-user"/>
+                            <span t-field="record.author_id"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

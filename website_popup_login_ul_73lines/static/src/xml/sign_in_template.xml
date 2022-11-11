@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+
+    <t t-name="error_msg">
+        <p class="alert alert-danger" t-if="error" role="alert">
+            <t t-esc="error"/>
+        </p>
+    </t>
+
+    <t t-name="providers_template">
+        <em t-attf-class="d-block text-center text-muted small ">- or -</em>
+        <div class="o_auth_oauth_providers list-group mt-1 mb-1 text-left">
+            <a t-foreach="providers" t-as="p" class="list-group-item list-group-item-action py-2" t-att-href="p['auth_link']">
+                <i t-att-class="p['css_class']"/>
+                <t t-esc="p['body']"/>
+            </a>
+        </div>
+    </t>
+
+    <t t-name="reset_password_popup_template">
+        <div class="justify-content-between mt-2 d-flex small">
+            <a t-if="signup_enabled" t-attf-href="/web/signup">Don't have an account?</a>
+            <a t-if="reset_password_enabled" t-attf-href="/web/reset_password">Reset Password</a>
+        </div>
+    </t>
+
+    <t t-name="sign_in_pop_up_template_id">
+<!--        <form class="oe_login_form" role="form" action="/web/login_popup" method="post" onsubmit="/web/login">-->
+            <input type="hidden" name="csrf_token"/>
+
+            <div class="form-group field-db" t-if="databases and len(databases) &gt; 1">
+                <label for="db" class="col-form-label">Database</label>
+                <div t-attf-class="input-group ">
+                    <input type="text" name="db" t-att-value="request.db" id="db" t-attf-class="form-control" required="required" readonly="readonly"/>
+                    <span class="input-group-append">
+                        <a role="button" href="/web/database/selector" class="btn btn-secondary">Select <i class="fa fa-database" role="img" aria-label="Database" title="Database"></i></a>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-group field-login">
+                <label for="login">Email</label>
+                <input type="text" placeholder="Email" name="login" t-att-value="login" id="login" required="required"/>
+            </div>
+
+            <div class="form-group field-password">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Password" name="password" id="password" required="required" autocomplete="current-password"/>
+            </div>
+
+            <p class="alert alert-danger" t-if="error" role="alert">
+                <t t-esc="error"/>
+            </p>
+            <p class="alert alert-success" t-if="message" role="status">
+                <t t-esc="message"/>
+            </p>
+
+            <div t-attf-class="clearfix oe_login_buttons text-center mb-1">
+                <button type="submit" class="btn btn-primary btn-block login_pop_up">Log in</button>
+                <t t-if="debug">
+                    <button type="submit" class="btn btn-sm btn-block login_pop_up_superuser">Log in as superuser</button>
+                </t>
+                <div class="o_login_auth"/>
+            </div>
+
+            <input type="hidden" name="redirect" t-att-value="redirect"/>
+<!--        </form>-->
+    </t>
+</templates>

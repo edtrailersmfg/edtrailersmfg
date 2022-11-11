@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Counter 14" id="counter_14">
+        <section class="pt64 pb64" id="counter_14"
+                 style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-24.jpg &quot;);
+        background-repeat: no-repeat;
+        background-size: cover; background-attachment: fixed; position:relative;" data-visible="counters">
+            <div class="ec-common-overlay" style="background-color: rgba(0,0,0,0.44); z-index:0;"></div>
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb48">
+                        <h2 class="text-white">Counter Design</h2>
+                        <p class="text-white">Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="ec-counter-item d-flex text-white pt24 pb24">
+                            <div class=" px-3">
+                                <i class="fa fa-3x fa-code font-weight-bold"></i>
+                            </div>
+                            <div>
+                                <h2 class="border_content px-3 font-weight-bold text-white">2981</h2>
+                                <p class="px-3 text-uppercase">code of program</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="ec-counter-item d-flex text-white pt24 pb24">
+                            <div class=" px-3">
+                                <i class="fa fa-3x fa-css3 font-weight-bold  text-white"></i>
+                            </div>
+                            <div>
+                                <h2 class="border_content px-3 font-weight-bold text-white">4569</h2>
+                                <p class="px-3 text-uppercase">CODES OF DESIGN</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="ec-counter-item d-flex text-white pt24 pb24">
+
+                            <div class=" px-3">
+                                <i class=" fa fa-3x fa-html5 font-weight-bold"></i>
+                            </div>
+                            <div>
+                                <h2 class="border_content px-3 font-weight-bold text-white">8524</h2>
+                                <p class="px-3  text-uppercase">HTML CODES</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="ec-counter-item d-flex text-white pt24 pb24">
+                            <div class=" px-3">
+                                <i class="fa fa-3x fa-picture-o font-weight-bold"></i>
+                            </div>
+                            <div>
+                                <h2 class="border_content px-3 font-weight-bold text-white">106</h2>
+                                <p class="px-3 text-uppercase">GRAPHIC DESIGNS</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>
+
+

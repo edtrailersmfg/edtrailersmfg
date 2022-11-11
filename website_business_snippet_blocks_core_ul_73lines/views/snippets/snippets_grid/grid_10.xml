@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Grid 10" id="grid_10">
+        <section class="pt64 pb64" data-visible="grids">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-12 text-center mb48">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center mb16">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             alt="image" title="image"
+                             class="img-fluid mb8 mt8"/>
+                        <h3>Medium Length Headline</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy.
+                        </p>
+                        <p>caption</p>
+
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center mb16">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             alt="image" title="image"
+                             class="img-fluid mb8 mt8"/>
+                        <h3>Medium Length Headline</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy.
+                        </p>
+                        <p>caption</p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center mb16">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             alt="image" title="image"
+                             class="img-fluid mb8 mt8"/>
+                        <h3>Medium Length Headline</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy.
+                        </p>
+                        <p>caption</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

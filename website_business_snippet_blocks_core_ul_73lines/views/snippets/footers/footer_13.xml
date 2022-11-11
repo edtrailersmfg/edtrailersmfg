@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Footer 13" id="footer_13">
+        <section class="pt64" id="footer_13" data-visible="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">License</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Privacy Policy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Copyright</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Help</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt64 pb32">
+            <div class="container">
+               <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                    <div  class="pb24">
+                        Copyright &amp;copy;
+                        <span t-field="res_company.name">Company name
+                        </span>
+                    </div>
+                    <div>
+                        Responsive Odoo theme,
+                        <span>
+                            Made with
+                            <i class="fa fa-heart"/>
+                            by
+                            <strong>&lt;73Lines&gt;</strong>
+                        </span>
+                    </div>
+<!--                    <div>-->
+<!--                        <t t-call="website.language_selector"/>-->
+<!--                    </div>-->
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

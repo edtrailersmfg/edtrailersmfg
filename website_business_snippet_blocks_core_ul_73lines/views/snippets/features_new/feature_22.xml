@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="feature_22" name="Feature 22">
+        <section class="pt64 pb64" data-visible="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Features</h2>
+                        <p>Lorem Ipsum is simply dummy text of the
+                            printing and
+                            typesetting industryLorem Ipsum is simply dummy
+                            text of the printing and
+                            typesetting industry.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-12 col-sm-8 col-md-4 col-lg-4 mb16">
+                        <img alt="image" class="img-fluid mb16"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"/>
+                        <h3>Feature One</h3>
+                        <p>Lorem Ipsum is simply dummy text of the
+                            printing and
+                            typesetting industryLorem Ipsum is simply dummy
+                            text of the printing and
+                            typesetting industry.
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-sm-8 col-md-4 col-lg-4 mb16">
+                        <img alt="image" class="img-fluid mb16"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"/>
+                        <h3>Feature Two</h3>
+                        <p>Lorem Ipsum is simply dummy text of the
+                            printing and
+                            typesetting industryLorem Ipsum is simply dummy
+                            text of the printing and
+                            typesetting industry.
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-sm-8 col-md-4 col-lg-4 mb16">
+                        <img alt="image" class="img-fluid mb16"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"/>
+                        <h3>Feature Three</h3>
+                        <p>Lorem Ipsum is simply dummy text of the
+                            printing and
+                            typesetting industryLorem Ipsum is simply dummy
+                            text of the printing and
+                            typesetting industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="feature_35" name="Feature 35">
+        <section class="sni-block pt64 pb64" data-visible="features">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h2>Features</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+
+                <div class="row text-center mt-5">
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 mb16">
+                        <img alt="image" class="sni-block-icon mb8"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-38.svg"/>
+                        <h3>Feature 1</h3>
+                        <p>Lorem Ipsum is simply dummy text of
+                            the
+                            printing
+                            and
+                            typesetting
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 mb16">
+                        <img alt="image" class="sni-block-icon mb8"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-9.svg"/>
+                        <h3>Feature 2</h3>
+                        <p>Lorem Ipsum is simply dummy text of
+                            the
+                            printing
+                            and
+                            typesetting
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 mb16">
+                        <img alt="image" class="sni-block-icon mb8"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-31.svg"/>
+                        <h3>Feature 3</h3>
+                        <p>Lorem Ipsum is simply dummy text of
+                            the
+                            printing
+                            and
+                            typesetting
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 mb16">
+                        <img alt="image" class="sni-block-icon mb8"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-66.svg"/>
+                        <h3>Feature 4</h3>
+                        <p>Lorem Ipsum is simply dummy text of
+                            the
+                            printing
+                            and
+                            typesetting
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 mb16">
+                        <img alt="image" class="sni-block-icon mb8"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-23.svg"/>
+                        <h3>Feature 5</h3>
+                        <p>Lorem Ipsum is simply dummy text of
+                            the
+                            printing
+                            and
+                            typesetting
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 mb16">
+                        <img alt="image" class="sni-block-icon mb8"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-61.svg"/>
+                        <h3>Feature 6</h3>
+                        <p>Lorem Ipsum is simply dummy text of
+                            the
+                            printing
+                            and
+                            typesetting
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 mb16">
+                        <img alt="image" class="sni-block-icon mb8"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-70.svg"/>
+                        <h3>Feature 7</h3>
+                        <p>Lorem Ipsum is simply dummy text of
+                            the
+                            printing
+                            and
+                            typesetting
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 mb16">
+                        <img alt="image" class="sni-block-icon mb8"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-55.svg"/>
+                        <h3>Feature 8</h3>
+                        <p>Lorem Ipsum is simply dummy text of
+                            the
+                            printing
+                            and
+                            typesetting
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

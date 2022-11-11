@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="feature_27" name="Feature 27">
+        <section class="pt64 pb64 sni-block" data-visible="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Features</h2>
+                        <p>Lorem Ipsum is simply dummy text of
+                            the
+                            printing
+                            and
+                            typesetting industry. Lorem Ipsum has been
+                            the
+                            industry's standard dummy text ever
+                            Lorem Ipsum is simply dummy text of
+                            the
+                            printing
+                            and
+                            typesetting industry. Lorem Ipsum has been
+                            the
+                            industry's standard dummy text ever
+                        </p>
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-12 col-sm-12 col-md-5 col-lg-6 mb16">
+                        <img alt="image" class="sni-block-icon mb8"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-66.svg"/>
+                        <h3>Feature One</h3>
+                        <p>Lorem Ipsum is simply dummy text of
+                            the
+                            printing
+                            and
+                            typesetting industry. Lorem Ipsum has been
+                            the
+                            industry's standard dummy text ever
+                            Lorem Ipsum is simply dummy text of
+                            the
+                            printing
+                            and
+                            typesetting industry. Lorem Ipsum has been
+                            the
+                            industry's standard dummy text ever
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-5 col-lg-6 mb16">
+                        <img alt="image" class="sni-block-icon mb8"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-61.svg"/>
+                        <h3>Feature Two</h3>
+                        <p>Lorem Ipsum is simply dummy text of
+                            the
+                            printing
+                            and
+                            typesetting industry. Lorem Ipsum has been
+                            the
+                            industry's standard dummy text ever
+                            Lorem Ipsum is simply dummy text of
+                            the
+                            printing
+                            and
+                            typesetting industry. Lorem Ipsum has been
+                            the
+                            industry's standard dummy text ever
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

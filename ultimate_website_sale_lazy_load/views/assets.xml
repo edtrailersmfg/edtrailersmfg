@@ -1,0 +1,9 @@
+<odoo>
+
+    <template id="lazy_load_assets_frontend" inherit_id="website.assets_frontend">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript" src="/ultimate_website_sale_lazy_load/static/src/js/lazy_load.js"/>
+        </xpath>
+    </template>
+
+</odoo>

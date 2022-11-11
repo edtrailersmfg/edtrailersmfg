@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <template id="fonts_snippet_options" inherit_id="web_editor.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-js="replace_icons_73lines" data-selector="span.fa, i.fa">
+                <we-row string="Replace Icon">
+                    <we-button class="o_we_bg_brand_primary" data-no-preview="true">
+                        <i class="fa fa-gear"/>
+                    </we-button>
+                </we-row>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

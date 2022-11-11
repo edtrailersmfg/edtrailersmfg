@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Snippet Body -->
+    <template name="Client Boxes" id="s_client_intro">
+        <section class="s_client_intro">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pad0 item" data-name="Box item">
+                        <div class="hovereffect">
+                            <img class="img-fluid" src="/website_snippet_boxed_ul_73lines/static/src/img/person4.jpg" alt=""/>
+                            <h2 class="o_default_snippet_text">CEO</h2>
+                            <div class="overlay slide" data-name="Inner Slide">
+                                <div class="rotate">
+                                    <p class="group1">
+                                        <a href="#">
+                                            <span class="fa fa-twitter"/>
+                                        </a>
+                                        <a href="#">
+                                            <span class="fa fa-facebook"/>
+                                        </a>
+                                    </p>
+                                    <hr/>
+                                    <hr/>
+                                    <p class="group2">
+                                        <a href="#">
+                                            <span class="fa fa-instagram"/>
+                                        </a>
+                                        <a href="#">
+                                            <span class="fa fa-dribbble"/>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pad0 item" data-name="Box item">
+                        <div class="hovereffect">
+                            <img class="img-fluid" src="/website_snippet_boxed_ul_73lines/static/src/img/person3.jpg" alt=""/>
+                            <h2 class="o_default_snippet_text">Developer</h2>
+                            <div class="overlay slide" data-name="Inner Slide">
+                                <div class="rotate">
+                                    <p class="group1">
+                                        <a href="#">
+                                            <span class="fa fa-twitter"/>
+                                        </a>
+                                        <a href="#">
+                                            <span class="fa fa-facebook"/>
+                                        </a>
+                                    </p>
+                                    <hr/>
+                                    <hr/>
+                                    <p class="group2">
+                                        <a href="#">
+                                            <span class="fa fa-instagram"/>
+                                        </a>
+                                        <a href="#">
+                                            <span class="fa fa-dribbble"/>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pad0 item" data-name="Box item">
+                        <div class="hovereffect">
+                            <img class="img-fluid" src="/website_snippet_boxed_ul_73lines/static/src/img/person2.jpg" alt=""/>
+                            <h2 class="o_default_snippet_text">Designer</h2>
+                            <div class="overlay slide" data-name="Inner Slide">
+                                <div class="rotate">
+                                    <p class="group1">
+                                        <a href="#">
+                                            <span class="fa fa-twitter"/>
+                                        </a>
+                                        <a href="#">
+                                            <span class="fa fa-facebook"/>
+                                        </a>
+                                    </p>
+                                    <hr/>
+                                    <hr/>
+                                    <p class="group2">
+                                        <a href="#">
+                                            <span class="fa fa-instagram"/>
+                                        </a>
+                                        <a href="#">
+                                            <span class="fa fa-dribbble"/>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pad0 item" data-name="Box item">
+                        <div class="hovereffect">
+                            <img class="img-fluid" src="/website_snippet_boxed_ul_73lines/static/src/img/person1.jpg" alt=""/>
+                            <h2 class="o_default_snippet_text">Manager</h2>
+                            <div class="overlay slide" data-name="Inner Slide">
+                                <div class="rotate">
+                                    <p class="group1">
+                                        <a href="#">
+                                            <span class="fa fa-twitter"/>
+                                        </a>
+                                        <a href="#">
+                                            <span class="fa fa-facebook"/>
+                                        </a>
+                                    </p>
+                                    <hr/>
+                                    <hr/>
+                                    <p class="group2">
+                                        <a href="#">
+                                            <span class="fa fa-instagram"/>
+                                        </a>
+                                        <a href="#">
+                                            <span class="fa fa-dribbble"/>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- Snippet options -->
+    <template id="s_animated_boxes_options" inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-js='Blockquote']" position="before">
+            <div data-selector=".s_client_intro" data-drop-in=".oe_structure, [data-oe-type=html]"/>
+            <div data-js='s_client_intro' data-selector=".item">
+
+            </div>
+        </xpath>
+    </template>
+</odoo>

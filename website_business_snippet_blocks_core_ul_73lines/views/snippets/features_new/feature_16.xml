@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Feature 16" id="feature_16">
+        <section class="pt64 pb64" data-visible="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12  text-center pb32">
+                        <h2>Features</h2>
+                        <p class="mb48">Lorem Ipsum is simply dummy text of the printing.</p>
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-11.png"
+                             alt="img2" class="img-fluid"/>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6  media">
+                        <i class="fa fa-3x fa-user-o mr-4 mt-2"></i>
+                        <div class="media-body">
+                            <h3 class="pt8 pb8">First Section</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Ut at semper metus.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6  media">
+                        <i class="fa fa-3x fa-life-ring mr-3 mt-2"></i>
+                        <div class="media-body">
+                            <h3 class="pt8 pb8">Second Section</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Ut at semper metus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

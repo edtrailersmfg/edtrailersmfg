@@ -1,0 +1,322 @@
+.hotspot {
+    .hotspot_icon {
+        a.hotspot-icon-ultimate {
+            color: transparent;
+            position: relative;
+            &:before {
+                left: 0;
+                right: 0;
+                 content: "";
+                width: 25px;
+                height: 25px;
+                background: #000;
+                position: absolute;
+                margin: auto;
+                pointer-events: none;
+                border-radius: 50%;
+                border: 1px solid #fff;
+            }
+        }
+
+        margin: 0;
+
+        &.style1 {
+            a {
+                width: 25px;
+                height: 25px;
+                display: inline-block;
+                position: relative;
+                font-size: 0px;
+
+                &:after {
+                        content:"\f055";
+                        font-family: "FontAwesome" !important;
+                        color: theme-color('primary');
+                        font-size: 25px;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                }
+                &:before {
+                    display: none;
+                }
+            }
+        }
+        &.style2 {
+            a {
+                display: inline-block;
+                border-radius: 50%;
+                color: transparent;
+                font-size: 0px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                position: relative;
+                border: 4px dashed theme-color('primary');
+                animation: wheel 6s linear infinite;
+
+                &:after {
+                   content: "";
+                   width: 10px;
+                   height: 10px;
+                   border-radius: 50%;
+                   position: absolute;
+                   top: 50%;
+                   left: 50%;
+                   transform: translate(-50%, -50%);
+                   display: block;
+                   background-color: theme-color('primary');
+                }
+
+                &:before {
+                    display: none;
+                }
+            }
+        }
+        &.style3 {
+            a {
+                    height: 25px;
+                    width: 25px;
+                    padding: 0px;
+                    font-size: 0px;
+                    border-radius: 100%;
+                    background: theme-color('primary');
+                    animation: button-pulse 2s linear infinite;
+                    display: inline-block;
+                    border: 6px double white;
+
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@keyframes button-pulse {
+  0% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+  40% {
+    transform: scale(1.15, 1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+@keyframes hotspot_ani {
+    from {
+        box-shadow: 0 0 0 0px rgba(theme-color('primary'), 1);
+    }
+
+    to {
+        box-shadow: 0 0 0 15px rgba(theme-color('primary'), 0.3);
+    }
+}
+
+@keyframes wheel {
+  from { transform: rotateZ(0); }
+  to { transform: rotateZ(-360deg); }
+}
+
+@keyframes hotspot_fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.popover-hotspot {
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    z-index: 11;
+    .arrow {
+        &:before {
+            border-color:transparent;
+        }
+    }
+    .popover-body {
+        padding: 0;
+    }
+    .hotspot-empty {
+        padding: 15px;
+        h3 {
+            font-size: 14px;
+            margin: 0;
+            color: #c10a0a;
+        }
+    }
+    &.style1 {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        .popover-body {
+            max-width: 200px;
+            padding: 10px;
+            overflow: hidden;
+            position: relative;
+
+        }
+        .hotspot-body-content {
+            padding: 15px;
+        }
+        .hotspot-image img{
+            width: 100px;
+            margin-left: 15px;
+        }
+        .theme_light .hotspot-image img, .theme_light .hotspot-image img{
+            width: 100px;
+            margin-right: 10px;
+        }
+        .hotspot-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #343a40;
+        }
+        .product_price {
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+        .as-btn {
+            padding: 6px 10px;
+       }
+    }
+
+    &.style2 {
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        .popover-body {
+            max-width: 250px;
+            padding: 5px;
+        }
+       .hotspot-image img{
+            width: 90px;
+            display: block;
+            margin: 0 auto
+        }
+        .hotspot-media {
+            padding: 5px;
+            display: flex;
+        }
+        .hotspot-image {
+            flex: 0 0 90px;
+            max-width: 90px;
+        }
+        .hotspot-body-content {
+            padding-left: 10px;
+        }
+        .hotspot-title {
+            font-size: 15px;
+            font-weight: 500;
+            color: #343a40;
+        }
+        .product_price {
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+       .as-btn {
+            padding: 6px 10px;
+       }
+    }
+    &.style3 {
+        background: transparent;
+        .popover-body {
+            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+            padding: 10px;
+            max-width: 200px;
+        }
+        .hotspot-title {
+            font-size: 15px;
+            font-weight: 500;
+            color: #343a40;
+        }
+        .hotspot-image img{
+            width: 100px;
+            display: block;
+            margin: 0 auto
+        }
+        .product_price {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        .hotspot-body-content {
+            position: relative;
+            padding: 10px;
+            text-align: center;
+            .as-btn {
+//                 position: absolute;
+                bottom: 100%;
+                right: 15px;
+                margin-bottom: 15px;
+                padding: 6px 10px;
+            }
+        }
+    }
+
+    &.theme_dark {
+        &.bs-popover-right > .arrow::after,
+        &.bs-popover-auto[x-placement^="right"] > .arrow::after {
+            border-right-color: #000;
+        }
+        &.bs-popover-left > .arrow::after,
+        &.bs-popover-auto[x-placement^="left"] > .arrow::after {
+            border-left-color: #000;
+        }
+        &.bs-popover-top > .arrow::after,
+        &.bs-popover-auto[x-placement^="top"] > .arrow::after {
+            border-top-color: #000;
+        }
+        &.bs-popover-bottom > .arrow::after,
+        &.bs-popover-auto[x-placement^="bottom"] > .arrow::after {
+            border-bottom-color: #000;
+        }
+        .popover-body {
+            background: #000;
+        }
+        .hotspot-title {
+            color: #fff;
+        }
+        p {
+            color: rgba(#fff, 0.8);
+        }
+        .product_price {
+            color: rgba(#fff, 0.8);
+        }
+    }
+}
+
+.hotspot-image{
+    img{
+        //width: 100%;
+    }
+}
+
+body.editor_enable, body.editor_has_snippets{
+    .hotspot a{
+        animation: unset !important;
+    }
+}
+
+#Product_select_template{
+.select2-container .select2-choice, .select2-container .select2-choice .select2-arrow {
+    background-image: unset !important;
+    box-shadow: unset;
+}
+.select2-container .select2-choice .select2-arrow {
+    border-left: 0px !important;
+    background: #fff !important;
+}
+.select2-dropdown-open .select2-choice {
+    background-color: unset;
+}
+}

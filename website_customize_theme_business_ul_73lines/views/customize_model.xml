@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="snippet_option_inherit" inherit_id="website.snippet_options">
+        <t t-call="web_editor.snippet_options"/>
+
+        <!-- Navbar Style -->
+        <xpath expr="//we-button[@data-name='header_magazine_opt']"
+               position="after">
+            <we-button title="Navbar 1"
+                       data-name="navbar_option_1"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_1"
+                       data-customize-website-variable="'navbar-1'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/header-icon-1.svg"/>
+            <we-button title="Navbar 2"
+                       data-name="navbar_option_2"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_2"
+                       data-customize-website-variable="'navbar-2'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/header-icon-2.svg"/>
+            <we-button title="Navbar 3"
+                       data-name="navbar_option_3"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_3"
+                       data-customize-website-variable="'navbar-3'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/header-icon-3.svg"/>
+            <we-button title="Navbar 4"
+                       data-name="navbar_option_4"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_4"
+                       data-customize-website-variable="'navbar-4'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/header-icon-4.svg"/>
+            <we-button title="Navbar 5"
+                       data-name="navbar_option_5"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_5"
+                       data-customize-website-variable="'navbar-5'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/header-icon-5.svg"/>
+            <we-button title="Navbar 6"
+                       data-name="navbar_option_6"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_6"
+                       data-customize-website-variable="'navbar-6'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/header-icon-6.svg"/>
+            <we-button title="Navbar Box Design"
+                       data-name="navbar_option_7"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_7"
+                       data-customize-website-variable="'navbar-box-design'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/navbar-box-design.svg"/>
+            <we-button title="Navbar Modern Design"
+                       data-name="navbar_option_8"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_8"
+                       data-customize-website-variable="'navbar-modern-design'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/navbar-modern-design.svg"/>
+            <we-button title="Navbar Simple Design"
+                       data-name="navbar_option_9"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_9"
+                       data-customize-website-variable="'navbar-simple-design'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/navbar-simple-design.svg"/>
+            <we-button title="Navbar Semi Transparent"
+                       data-name="navbar_option_10"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_10"
+                       data-customize-website-variable="'navbar-semi-transparent'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/navbar-semi-transparent.svg"/>
+            <we-button title="Navbar Box Shadow"
+                       data-name="navbar_option_13"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_13"
+                       data-customize-website-variable="'navbar-box-shadow'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/navbar-box-shadow.svg"/>
+            <we-button title="Box Design With Dashed Border"
+                       data-name="navbar_option_14"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_14"
+                       data-customize-website-variable="'box-design-with-dashed-border'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/navbar-box-design-with-dashed-border.svg"/>
+            <we-button title="Side Navbar 1"
+                       data-name="navbar_option_17"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_17, website.no_autohide_menu, website_customize_theme_business_ul_73lines.option_side_nav_js_1"
+                       data-customize-website-variable="'side-navbar-1'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/sidebar-icons/side-navbar-1.svg"/>
+            <we-button title="Side Navbar 2"
+                       data-name="navbar_option_18"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_18, website.no_autohide_menu, website_customize_theme_business_ul_73lines.option_side_nav_js_2"
+                       data-customize-website-variable="'side-navbar-2'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/sidebar-icons/side-navbar-1.svg"/>
+            <we-button title="Side Navbar 3"
+                       data-name="navbar_option_19"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_19, website.no_autohide_menu, website_customize_theme_business_ul_73lines.option_side_nav_js_3"
+                       data-customize-website-variable="'side-navbar-3'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/sidebar-icons/side-navbar-3.svg"/>
+            <we-button title="Side Navbar 4"
+                       data-name="navbar_option_20"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_20, website.no_autohide_menu, website_customize_theme_business_ul_73lines.option_side_nav_js_1"
+                       data-customize-website-variable="'side-navbar-4'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/sidebar-icons/side-navbar-4.svg"/>
+            <we-button title="Side Navbar 5"
+                       data-name="navbar_option_21"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_21, website.no_autohide_menu, website_customize_theme_business_ul_73lines.option_side_nav_js_5"
+                       data-customize-website-variable="'side-navbar-5'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/sidebar-icons/side-navbar-5.svg"/>
+            <we-button title="Side Navbar 6"
+                       data-name="navbar_option_22"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_22, website.no_autohide_menu, website_customize_theme_business_ul_73lines.option_side_nav_js_6"
+                       data-customize-website-variable="'side-navbar-6'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/sidebar-icons/side-navbar-6.svg"/>
+            <we-button title="Side Navbar 1 Reverse"
+                       data-name="navbar_option_23"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_23, website.no_autohide_menu, website_customize_theme_business_ul_73lines.option_side_nav_js_1"
+                       data-customize-website-variable="'side-navbar-7'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/sidebar-icons/side-navbar-1-reverse.svg"/>
+            <we-button title="Side Navbar 2 Reverse"
+                       data-name="navbar_option_24"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_24, website.no_autohide_menu, website_customize_theme_business_ul_73lines.option_side_nav_js_2"
+                       data-customize-website-variable="'side-navbar-8'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/sidebar-icons/side-navbar-1-reverse.svg"/>
+            <we-button title="Side Navbar 3 Reverse"
+                       data-name="navbar_option_25"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_25, website.no_autohide_menu, website_customize_theme_business_ul_73lines.option_side_nav_js_3"
+                       data-customize-website-variable="'side-navbar-9'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/sidebar-icons/side-navbar-3-reverse.svg"/>
+            <we-button title="Side Navbar 4 Reverse"
+                       data-name="navbar_option_26"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_26, website.no_autohide_menu, website_customize_theme_business_ul_73lines.option_side_nav_js_4"
+                       data-customize-website-variable="'side-navbar-10'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/sidebar-icons/side-navbar-4-reverse.svg"/>
+            <we-button title="Side Navbar 5 Reverse"
+                       data-name="navbar_option_27"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_27, website.no_autohide_menu, website_customize_theme_business_ul_73lines.option_side_nav_js_5"
+                       data-customize-website-variable="'side-navbar-11'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/sidebar-icons/side-navbar-5-reverse .svg"/>
+            <we-button title="Side Navbar 6 Reverse"
+                       data-name="navbar_option_28"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.template_navbar_28, website.no_autohide_menu, website_customize_theme_business_ul_73lines.option_side_nav_js_6"
+                       data-customize-website-variable="'side-navbar-12'"
+                       data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/sidebar-icons/side-navbar-6-reverse.svg"/>
+
+
+            <!--            <more data-depends="">-->
+            <!--                <list string="Navbar Bottom">-->
+            <!--                    <opt id="option_header_11"-->
+            <!--                         string="Navbar Fix Bottom Default"-->
+            <!--                         data-reload="true"-->
+            <!--                         data-xmlid=""-->
+            <!--                         data-icon="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/default.png"/>-->
+            <!--                    <opt id="option_header_12"-->
+            <!--                         string="Navbar Fix Bottom"-->
+            <!--                         data-reload="true"-->
+            <!--                         data-xmlid="website_customize_theme_business_ul_73lines.option_header_12_js"-->
+            <!--                         data-icon="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/navbar-fix-bottom.png"/>-->
+            <!--                </list>-->
+            <!--            </more>-->
+
+        </xpath>
+
+        <!-- Navigation Style -->
+        <xpath expr="//we-button[@data-name='option_header_navbar_border_bottom']"
+               position="after">
+            <we-button data-name="option_header_navbar_hover_pills"
+                       data-customize-website-variable="'option-nav-pills'"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.option_nav_pills">Hover
+                Pills
+            </we-button>
+            <we-button data-name="option_header_navbar_pills_square"
+                       data-customize-website-variable="'option-nav-pills-square'"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.option_nav_pils_square">
+                Pills + Square
+            </we-button>
+            <we-button data-name="option_header_navbar_pills_round"
+                       data-customize-website-variable="'option-nav-pills-round'"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.option_nav_pils_round">
+                Pills + Round
+            </we-button>
+            <we-button data-name="option_header_navbar_color_primary_on_active"
+                       data-customize-website-variable="'option-nav-color-primary'"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.option_nav_color_primary">
+                Color Primary On
+                Active
+            </we-button>
+            <we-button data-name="option_header_navbar_strips"
+                       data-customize-website-variable="'option-nav-strips'"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.option_nav_strips">
+                Strips
+            </we-button>
+            <we-button data-name="option_header_navbar_hover_top_border"
+                       data-customize-website-variable="'option-nav-hover-top-border'"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.option_nav_hover_top_border">
+                Hover Top
+                Border
+            </we-button>
+            <we-button data-name="option_header_navbar_hover_bottom_border"
+                       data-customize-website-variable="'option-nav-hover-bottom-border'"
+                       data-customize-website-views="website_customize_theme_business_ul_73lines.option_nav_hover_bottom_border">
+                Hover
+                Bottom Border
+            </we-button>
+        </xpath>
+
+        <!-- Page Layout -->
+        <xpath expr="//we-select[@data-variable='layout']"
+               position="inside">
+            <we-button data-customize-website-variable="'fluid'">Fluid
+            </we-button>
+        </xpath>
+
+        <!-- Transparent Navbar -->
+        <xpath expr="//we-select[@data-variable='header-links-style']"
+               position="after">
+            <we-select string="Transparent Navbar" data-variable="transparent-navbar" data-reload="/">
+                <we-button title="Nav Transparent + Font Default"
+                           data-name="option_nav_transparent_font_default"
+                           data-customize-website-variable="'nav-transparent-font-default'"
+                           data-customize-website-views=""
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/header-icon-1.svg">
+                </we-button>
+                <we-button title="Nav Transparent + Font White"
+                           data-name="option_nav_transparent_font_white"
+                           data-customize-website-variable="'nav-transparent-font-white'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_nav_transparent_font_white"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/header-icon-1.svg">
+                </we-button>
+                <we-button title="Nav Transparent + Font Black"
+                           data-name="option_nav_transparent_font_black"
+                           data-customize-website-variable="'nav-transparent-font-black'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_nav_transparent_font_black"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/header-icon-1.svg">
+                </we-button>
+                <we-button title="Nav Transparent + Font Primary"
+                           data-name="option_nav_transparent_font_primary"
+                           data-customize-website-variable="'nav-transparent-font-primary'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_nav_transparent_font_primary"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/header-icon-1.svg">
+                </we-button>
+            </we-select>
+        </xpath>
+
+        <!-- Input Field -->
+        <xpath expr="//we-input[@data-variable='input-border-width']"
+               position="before">
+            <we-select string="Input Fields" data-variable="input-field" data-reload="/">
+                <we-button title="Input Field Default"
+                           data-name="input_field_default"
+                           data-customize-website-views=""
+                           data-customize-website-variable="'input-default'"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/input-icon/input-icon-1.png">
+                </we-button>
+                <we-button title="Input Field 1"
+                           data-name="option_input_1"
+                           data-customize-website-variable="'input-1'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_input_1"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/input-icon/input-icon-2.png">
+                </we-button>
+                <we-button title="Input Field 2"
+                           data-name="option_input_2"
+                           data-customize-website-variable="'input-2'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_input_2"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/input-icon/input-icon-3.png">
+                </we-button>
+                <we-button title="Input Field 3"
+                           data-name="option_input_3"
+                           data-customize-website-variable="'input-3'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_input_3"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/input-icon/input-icon-4.png">
+                </we-button>
+            </we-select>
+        </xpath>
+
+        <!-- Button Style -->
+        <xpath expr="//we-select[@data-variable='btn-secondary-outline']"
+               position="after">
+            <we-select string="Ultimate Button Style" data-variable="ultimate-button" data-reload="/">
+                <we-button title="None"
+                           data-name="button_option_none"
+                           data-customize-website-variable="'button-default'"
+                           data-customize-website-views=""
+                           data-img="">None
+                </we-button>
+                <we-button title="Button 1"
+                           data-name="button_option_1"
+                           data-customize-website-variable="'button-1'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_button_1"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/button_icons/button-style-1.png">
+                </we-button>
+                <we-button title="Button 2"
+                           data-name="button_option_2"
+                           data-customize-website-variable="'button-2'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_button_2"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/button_icons/button-style-2.png">
+                </we-button>
+                <we-button title="Button 3"
+                           data-name="button_option_3"
+                           data-customize-website-variable="'button-3'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_button_3"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/button_icons/button-style-3.png">
+                </we-button>
+                <we-button title="Button 4"
+                           data-name="button_option_4"
+                           data-customize-website-variable="'button-4'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_button_4"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/button_icons/button-style-4.png">
+                </we-button>
+                <we-button title="Button 5"
+                           data-name="button_option_5"
+                           data-customize-website-variable="'button-5'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_button_5"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/button_icons/button-style-5.png">
+                </we-button>
+                <we-button title="Button 6"
+                           data-name="button_option_6"
+                           data-customize-website-variable="'button-6'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_button_6"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/button_icons/button-style-6.png">
+                </we-button>
+                <we-button title="Button 7"
+                           data-name="button_option_7"
+                           data-customize-website-variable="'button-7'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_button_7"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/button_icons/button-style-7.png">
+                </we-button>
+                <we-button title="Button 8"
+                           data-name="button_option_8"
+                           data-customize-website-variable="'button-8'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_button_8"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/button_icons/button-style-8.png">
+                </we-button>
+                <we-button title="Button 9"
+                           data-name="button_option_9"
+                           data-customize-website-variable="'button-9'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_button_9"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/button_icons/button-style-9.png">
+                </we-button>
+                <we-button title="Button 10"
+                           data-name="button_option_10"
+                           data-customize-website-variable="'button-10'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_button_10"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/button_icons/button-style-10.png">
+                </we-button>
+            </we-select>
+        </xpath>
+
+        <!-- Midheader Style -->
+        <xpath expr="//we-select[@data-variable='layout']"
+               position="before">
+            <we-select string="Mid Header" data-variable="mid-header" data-reload="/">
+                <we-button title="Top Mid Header None"
+                           data-name="midheader_default"
+                           data-customize-website-variable="'mid-header-default'"
+                           data-customize-website-views="">Mid Header None
+                </we-button>
+                <we-button title="Top Mid Header 1"
+                           data-name="midheader_1"
+                           data-customize-website-variable="'mid-header-1'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_mid_header_1"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/header-icon-7.svg">
+                </we-button>
+                <we-button title="Top Mid Header 2"
+                           data-name="midheader_2"
+                           data-customize-website-variable="'mid-header-2'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_mid_header_6"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/header-icon-7.svg">
+                </we-button>
+                <we-button title="Top Mid Header 3"
+                           data-name="midheader_3"
+                           data-customize-website-variable="'mid-header-3'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_mid_header_7"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/header-icon-9.svg">
+                </we-button>
+                <we-button title="Top Mid Header 4"
+                           data-name="midheader_4"
+                           data-customize-website-variable="'mid-header-4'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_mid_header_8"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/header-icon-10.svg">
+                </we-button>
+                <we-button title="Top Mid Header 5"
+                           data-name="midheader_5"
+                           data-customize-website-variable="'mid-header-5'"
+                           data-customize-website-views="website_customize_theme_business_ul_73lines.option_mid_header_9"
+                           data-img="/website_customize_theme_business_ul_73lines/static/src/imgs/header-icon/header-icon-11.svg">
+                </we-button>
+            </we-select>
+        </xpath>
+
+        <!-- Ultimate Language Flag -->
+        <xpath expr="//we-button[@data-customize-website-views='website.header_language_selector_flag']"
+               position="before">
+            <we-button
+                    data-customize-website-views="website.header_language_selector_flag, website_customize_theme_business_ul_73lines.square_flag, website_customize_theme_business_ul_73lines.square_flag_img"
+                    data-customize-website-variable="'square-flag'">Square Flag
+            </we-button>
+        </xpath>
+    </template>
+
+    <template id="square_flag" inherit_id="portal.language_selector" active="False">
+        <xpath expr="//span[hasclass('align-middle')]" position="attributes">
+            <attribute name="class" add="d-none" separator=" "/>
+        </xpath>
+    </template>
+
+    <template id="square_flag_img" inherit_id="website.lang_flag" active="False">
+        <xpath expr="//img[hasclass('o_lang_flag')]" position="replace">
+            <img class="o_lang_flag" t-attf-src="#{flag_image_src}?height=25" style="width: 25px;height: 20px;border-radius: 0px;"/>
+        </xpath>
+    </template>
+</odoo>

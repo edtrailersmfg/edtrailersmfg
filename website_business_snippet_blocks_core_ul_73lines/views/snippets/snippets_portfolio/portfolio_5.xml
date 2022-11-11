@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Portfolio 5" id="portfolio_5">
+        <section class="pt64 pb64" data-visible="portfolios">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-12 col-sm-12 col-lg-12 text-center mb48">
+                        <h2>Portfolio</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 pb16 pt16">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             alt="" class="img-fluid"/>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 py-md-2 py-lg-5">
+                        <div class="pl32 pr32">
+                            <h3 class="pt16">Portfolio One</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing
+                                <br/>and typesetting industry. Lorem Ipsum has
+                                been the industry's standard dummy
+                                <br/>
+                                text ever since the 1500s,
+                            </p>
+                            <button class="btn btn-primary px-3">Button
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 py-md-2 py-lg-5">
+                        <div class="pl32 pr32">
+                            <h3 class="pt16">Portfolio Two</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing
+                                <br/>and typesetting industry. Lorem Ipsum has
+                                been the industry's standard dummy<br/>text
+                                ever since the 1500s,
+                            </p>
+                            <a href="#" class="btn btn-primary px-3">Button</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 pb16 pt16">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             alt="" class="img-fluid"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

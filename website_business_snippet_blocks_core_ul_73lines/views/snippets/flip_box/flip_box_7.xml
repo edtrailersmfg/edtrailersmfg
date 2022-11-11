@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Flip Box 7" id="flip_box_7">
+        <section class="pt64 pb48" id="flip_box_7" data-visible="flipbox">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 flip_box mb40">
+                        <img class="img"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                             alt=""/>
+                        <div class="row mx-0 flip_box_inner">
+                            <div class="col-12 flip_box_front text-center">
+                                <div class="flip_box_front_area">
+                                    <h3 class="mt16 mb16">Employee One</h3>
+                                    <h5 class="mb0">Position</h5>
+                                </div>
+                            </div>
+                            <div class="col-12 flip_box_back text-center">
+                                <div class="flip_box_back_area">
+                                    <p class="mt8">Lorem ipsum dolor sit amet cons adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna.
+                                    </p>
+                                    <div class="icon_bg">
+                                        <a t-att-href="res_company.social_facebook">
+                                            <i class="fa fa-facebook mx-1 "></i>
+                                        </a>
+                                        <a t-att-href="res_company.social_twitter">
+                                            <i class="fa fa-twitter mx-1"></i>
+                                        </a>
+                                        <a t-att-href="res_company.social_instagram">
+                                            <i class="fa fa-instagram mx-1"></i>
+                                        </a>
+                                        <a t-att-href="res_company.social_linkedin">
+                                            <i class="fa fa-linkedin mx-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 flip_box mb40">
+                        <img class="img"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                             alt=""/>
+                        <div class="row mx-0 flip_box_inner">
+                            <div class="col-12 flip_box_front text-center">
+                                <div class="flip_box_front_area">
+                                    <h3 class="mt16 mb16">Employee Two</h3>
+                                    <h5 class="mb0">Position</h5>
+                                </div>
+                            </div>
+                            <div class="col-12 flip_box_back text-center">
+                                <div class="flip_box_back_area">
+                                    <p class="mt8">Lorem ipsum dolor sit amet cons adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna.
+                                    </p>
+                                    <div class="icon_bg">
+                                        <a t-att-href="res_company.social_facebook">
+                                            <i class="fa fa-facebook mx-1 "></i>
+                                        </a>
+                                        <a t-att-href="res_company.social_twitter">
+                                            <i class="fa fa-twitter mx-1"></i>
+                                        </a>
+                                        <a t-att-href="res_company.social_instagram">
+                                            <i class="fa fa-instagram mx-1"></i>
+                                        </a>
+                                        <a t-att-href="res_company.social_linkedin">
+                                            <i class="fa fa-linkedin mx-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 flip_box mb40">
+                        <img class="img"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                             alt=""/>
+                        <div class="row mx-0 flip_box_inner">
+                            <div class="col-12 flip_box_front text-center">
+                                <div class="flip_box_front_area">
+                                    <h3 class="mt16 mb16">Employee Three</h3>
+                                    <h5 class="mb0">Position</h5>
+                                </div>
+                            </div>
+                            <div class="col-12 flip_box_back text-center">
+                                <div class="flip_box_back_area">
+                                    <p class="mt8">Lorem ipsum dolor sit amet cons adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna.
+                                    </p>
+                                    <div class="icon_bg">
+                                        <a t-att-href="res_company.social_facebook">
+                                            <i class="fa fa-facebook mx-1 "></i>
+                                        </a>
+                                        <a t-att-href="res_company.social_twitter">
+                                            <i class="fa fa-twitter mx-1"></i>
+                                        </a>
+                                        <a t-att-href="res_company.social_instagram">
+                                            <i class="fa fa-instagram mx-1"></i>
+                                        </a>
+                                        <a t-att-href="res_company.social_linkedin">
+                                            <i class="fa fa-linkedin mx-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

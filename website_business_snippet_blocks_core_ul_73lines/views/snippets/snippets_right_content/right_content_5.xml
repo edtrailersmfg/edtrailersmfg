@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template name="Right Content 5" id="right_content_5">
+        <section class="pt64 pb64 oe_img_bg oe_custom_bg"
+                 style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-8.jpg&quot;);" data-visible="right_content">
+            <div class="container">
+                <div class="row justify-content-end">
+                    <div class="col-12 col-sm-12 col-lg-12 text-center mb48">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 right bg-light text-center pt64 pb64">
+                        <h2>Title Name</h2>
+                        <p class="pt32 pb32 px-5">Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit. Pellentesque fermentum
+                            est in tortor congue suscipit. Suspendisse
+                            potenti.Aliquam finibus pharetra tellus at egestas.
+                        </p>
+                        <a href="#" class="text-decoration-none mt64 mb64">Lern
+                            More
+                            <i class="fa fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

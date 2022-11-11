@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="ecommerce_block_11" name="Ecommerce BLock 11">
+        <section class="pt64 pb64 bg-200" id="ecommerce_block_11" data-visible="ecommerce_blocks">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 pt8 pb8">
+                        <div class="oe_structure oe_empty">
+                            <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-250x300.png"
+                                 alt="" class="img-fluid image pt8 pb8"/>
+                            <div class="post-content">
+                                <h2>
+                                    <a href="#">Block Title</a>
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a class="read-more" href="#">Shop Now
+                                    <i class="fas fa-long-arrow-alt-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 pt8 pb8">
+                        <div class="oe_structure oe_empty">
+                            <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-250x300.png"
+                                 alt="" class="img-fluid image pt8 pb8"/>
+
+                            <div class="post-content">
+                                <h2>
+                                    <a href="#">Block Title</a>
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+                                <a class="read-more" href="#">Shop Now
+                                    <i class="fas fa-long-arrow-alt-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

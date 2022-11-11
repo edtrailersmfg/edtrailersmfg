@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Language Button Two" id="language_button_2">
+        <section id="language_button_2" data-visible="mid_headears">
+            <t t-call="website_language_flag_73lines.language_flags"/>
+        </section>
+    </template>
+</odoo>

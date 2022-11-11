@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Ecommerce Mid Header 17" id="ecommerce_mid_header_17">
+        <section class="bg-black" id="mid-header-top-17" data-visible="mid_headears">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-4 col-md-4 col-sm-12 pt8 pb8 text-center" id="icon-top-left">
+                        <li class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <div class="d-flex">
+                                    <i class="fa fa-2x mr-3 pt-1 pe-7s-like2 fa-500px text-500"
+                                       data-original-title=""
+                                       title=""
+                                       aria-describedby="tooltip712423"/>
+                                    <span class="o_default_snippet_text">SATISFACTION
+                                        <br/>
+                                        <sapn class="o_default_snippet_text text-500">100% guaranteed</sapn>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-4 col-sm-12  pt8 pb8 text-center" id="icon-top-center">
+                        <li class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <div class="d-flex">
+                                    <i class="fa fa-2x mr-3 pt-1 pe-7s-car fa-500px text-500"
+                                       data-original-title=""
+                                       title=""
+                                       aria-describedby="tooltip105119"/>
+                                    <span class="o_default_snippet_text">FREE SHIPPING
+                                        <br/>
+                                        <span class="o_default_snippet_text text-500">On orders over $99</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-4 col-sm-4  pt8 pb8 text-center" id="icon-top-right">
+                        <li class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <div class="d-flex">
+                                    <i class="fa fa-2x mr-3 pt-1 pe-7s-wallet fa-500px text-500"
+                                       data-original-title=""
+                                       title=""
+                                       aria-describedby="tooltip129820"/>
+                                    <span class="o_default_snippet_text">MONEY BACK
+                                        <br/>
+                                        <span class="o_default_snippet_text text-500">100% Easy return</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="mid-header-middle-17">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 oe_structure col-lg-4 col-md-3 col-sm-8 align-self-center text-center text-lg-left text-md-left"
+                         id="mid-header-middle-left">
+                        <li class="list-inline-item pt8 pb8">
+                            <div class="oe_structure oe_empty">
+                                <span class="mr-2">
+                                    <i class="fa fa-location-arrow"></i>
+                                    <a href="#" class="o_default_snippet_text text-black">Store Location</a>
+                                </span>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="col-12 oe_structure col-lg-8 col-md-9 col-sm-8 align-self-center  text-center text-lg-right text-md-right"
+                         id="mid-header-middle-right">
+                        <li class="list-inline-item account_custom pt8 pb8 px-2">
+                            <div class="dropdown">
+                                <a class="btn btn-link dropdown-toggle text-black px-1" type="button"
+                                   id="dropdownMenu1"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-user-circle icon_style d-inline text-black px-1"></i>
+                                    <span class="hide_content text-black">My Account</span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+                                    <a class="text-xs-center dropdown-item" href="/web/login"
+                                       id="ultimate_sign_in">
+                                        Sign in
+                                    </a>
+                                    <a href="/web/signup" class="text-xs-center dropdown-item"
+                                       id="ultimate_register">
+                                        <span>Register</span>
+                                    </a>
+
+                                    <a href="/my/home" role="menuitem" class="dropdown-item"
+                                       id="ultimate_my_account">My
+                                        Account
+                                    </a>
+                                    <a class="dropdown-item"
+                                       t-attf-href="/web/session/logout?redirect=/" role="menuitem"
+                                       id="ultimate_logout">
+                                        Logout
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="my_wish" class="list-inline-item pt8 pb8 px-2">
+                            <div class="oe_structure oe_empty">
+                                <div class="d-flex">
+                                    <t t-if="request.env.ref('website_sale_wishlist.add_to_wishlist').active">
+                                        <!--                                        <t t-set='wishcount'-->
+                                        <!--                                           t-value="len(request.env['product.wishlist'].current())"/>-->
+                                        <span class="nav-item">
+                                            <a href="/shop/wishlist" class="text-black" title="wishlist">
+                                                <i class="fa fa-heart text-black icon_style d-inline px-1"
+                                                   title="wishlist"></i>
+                                                <span class="hide_content text-black">Wishlist</span>
+                                                <!--                                        <sup t-attf-class="my_wish_quantity o_animate_blink badge badge-primary">-->
+                                                <!--                                            <t t-esc='wishcount'/>-->
+                                                <!--                                        </sup>-->
+                                            </a>
+                                        </span>
+                                    </t>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="my_cart" class="list-inline-item bg-black pt8 pb8">
+                            <div class="oe_structure oe_empty">
+                                <div class="d-flex">
+                                    <!--                                    <t t-set="website_sale_order"-->
+                                    <!--                                       t-value="website.sale_get_order()"/>-->
+                                    <a href="/shop/cart">
+                                        <i class="fa fa-1x fa-shopping-basket pl-2 pr-2 px-1 text-white"></i>
+                                        <!--                                <sup t-attf-class="my_cart_quantity badge badge-primary"-->
+                                        <!--                                     t-esc="website_sale_order and website_sale_order.cart_quantity or ''"/>-->
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="mid-header-bottom-17">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-6 align-self-center  pt8 pb8 text-center text-md-left text-lg-right oe_structure"
+                         id="mid-header-bottom-center">
+                        <div class="oe_structure oe_empty">
+                            <a href="/" class="img-fluid">
+                                <img src="/logo.png"
+                                     t-att-alt="'Logo of %s' % res_company.name"
+                                     t-att-title="res_company.name"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-6 align-self-center pt8 pb8 oe_structure text-lg-right text-md-right text-center"
+                         id="mid-header-bottom-right">
+                        <li class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <t t-call="website_ecommerce_snippets_blocks_ul_73lines.s_searchbar_input_ultimate"></t>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>
+
+
+

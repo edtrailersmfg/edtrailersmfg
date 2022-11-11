@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="feature_24" name="Feature 24">
+        <section class="pt64 pb64" data-visible="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center pb48">
+                        <h2>Features</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6 mb16">
+                        <h3>Feature One</h3>
+                        <p>Lorem Ipsum is simply dummy text of the
+                            printing and
+                            typesetting industryLorem Ipsum is
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 mb16">
+                        <h3>Feature Two</h3>
+                        <p>Lorem Ipsum is simply dummy text of the
+                            printing and
+                            typesetting industryLorem Ipsum is
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 mb16">
+                        <h3>Feature Three</h3>
+                        <p>Lorem Ipsum is simply dummy text of the
+                            printing and
+                            typesetting industryLorem Ipsum is
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 mb16">
+                        <h3>Feature Four</h3>
+                        <p>Lorem Ipsum is simply dummy text of the
+                            printing and
+                            typesetting industryLorem Ipsum is
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

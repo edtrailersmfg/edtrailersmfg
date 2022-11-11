@@ -1,0 +1,91 @@
+.website-menu-ribbon {
+    @include o-position-absolute();
+    z-index: 1;
+    display: inline-block;
+    margin-left: -20px;
+    border-radius: 2px;
+    //padding: 3px 5px;
+    padding: 3px 8px;
+    line-height: 10px;
+    font-weight:600;
+    font-size: 12px;
+    text-transform: uppercase;
+    top:3px;
+    @include media-breakpoint-down(md) {
+        position: relative;
+//         display: inline;
+        margin-left: 4px;
+    }
+    @include media-breakpoint-up(lg) {
+        &:before {
+            content: "";
+            @include o-position-absolute($top: 100%, $left: 10px);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-top-width: 4px;
+            border-bottom-width: 0;
+            border-right-width: 7px;
+            border-left-width: 0;
+            border-top-color: transparent;
+            border-left-color: transparent!important;
+            border-right-color: transparent!important;
+            border-bottom-color: transparent!important;
+        }
+    }
+
+     .website-menu-ribbon-color {
+                color: black;
+                background:black;
+                &:before {
+                    border-color:black;
+                }
+            }
+}
+
+.website-menu-ribbon{
+    &:after {
+       content: "";
+           background: inherit;
+           position: absolute;
+           width: 5px;
+           height: 5px;
+           bottom: -2px;
+           left: 8px;
+           -webkit-transform: rotate(
+       45deg
+       );
+           transform: rotate(
+       45deg
+       );
+    }
+}
+
+
+
+.o_extra_menu_items{
+    ul li .website-menu-ribbon{
+        position: relative;
+        top: 0px;
+        margin-left: 4px;
+    }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1023px) {
+.ultimate_nav .website-menu-ribbon {
+    position: absolute;
+    margin-left: unset;
+}
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+.website-menu-ribbon{
+    top: 0px;
+}
+}
+
+#sidebar{
+.website-menu-ribbon {
+    top: auto;
+    margin-left: 4px;
+}
+}

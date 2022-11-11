@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Footer 11" id="footer_11">
+        <section class="pt64 pb64" id="footer_11" data-visible="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 border_right mb32">
+                        <img style="margin:0 auto;"
+                             class="img img-responsive img-fluid"
+                             src="/logo.png"
+                             t-att-alt="'Logo of %s' % res_company.name"
+                             t-att-title="res_company.name"/>
+                        <p>Creative Agency From India</p>
+                        <p class="pt8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus accumsan
+                            enim, quis
+                            feugiat risus auctor in. Nullam et congue augue. Nulla scelerisque imperdiet purus, eget
+                            porttitor purus fringilla vitae.lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Nunc luctus accumsan enim, quis
+                            feugiat risus auctor in. Nullam et congue augue. Nulla scelerisque imperdiet purus, eget
+                            porttitor purus fringilla vitae.
+                        </p>
+                        <div class="pt16">
+                            <a t-att-href="res_company.social_facebook">
+                                <i class="fa fa-facebook social_icon_size facebook_bg mr-3"></i>
+                            </a>
+                            <a t-att-href="res_company.social_twitter">
+                                <i class="fa fa-twitter social_icon_size twitter_bg mr-3"></i>
+                            </a>
+                            <a t-att-href="res_company.social_instagram">
+                                <i class="fa fa-instagram social_icon_size insta_bg mr-3"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-behance social_icon_size behance_bg mr-3"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-pinterest social_icon_size pinterest_bg mr-3"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-google-plus social_icon_size google_plus_bg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-2 border_right mb32">
+                        <div class="px-3">
+                            <h5>LINKS</h5>
+                            <hr style="width:25px; padding:0; margin:0; border: 2px solid rgba(0, 0, 0, 0.1);"></hr>
+                            <ul class="list-unstyled pt16">
+                                <li class="pt8 pb8">
+                                    <a href="#">Theme Features</a>
+                                </li>
+                                <li class="pt8 pb8">
+                                    <a href="#">Page Builder</a>
+                                </li>
+                                <li class="pt8 pb8">
+                                    <a href="#">Private Policy</a>
+                                </li>
+                                <li class="pt8 pb8">
+                                    <a href="#">Shop Ruler</a>
+                                </li>
+                                <li class="pt8 pb8">
+                                    <a href="#">Services</a>
+                                </li>
+                                <li class="pt8 pb8">
+                                    <a href="#">Gallery Layuot</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 border_right mb32">
+                        <h5>LATEST POST</h5>
+                        <hr style="width:25px; padding:0; margin:0; border: 2px solid rgba(0, 0, 0, 0.1);"
+                            class="mb8"></hr>
+                        <div class="media pt16 pb8">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-16.png" class="img-fluid"/>
+                            <div class="media-body px-2">
+                                <h6 class="pb8">
+                                    <a href="#">An engaging embeded a the video posts</a>
+                                </h6>
+                                <i class="fa fa-user"></i>
+                                Selina
+                                <i class="fa fa-eye"></i>
+                                202 views
+                            </div>
+                        </div>
+                        <div class="media pb8">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-16.png" class="img-fluid"/>
+                            <div class="media-body px-2">
+                                <h6 class="pb8">
+                                    <a href="#">An engaging embeded a the video posts</a>
+                                </h6>
+                                <i class="fa fa-user"></i>
+                                Selina
+                                <i class="fa fa-eye"></i>
+                                202 views
+                            </div>
+                        </div>
+                        <div class="media pb8">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-16.png" class="img-fluid"/>
+                            <div class="media-body px-2">
+                                <h6 class="pb16">
+                                    <a href="#">An engaging embeded a the video posts</a>
+                                </h6>
+                                <i class="fa fa-user"></i>
+                                Selina
+                                <i class="fa fa-eye"></i>
+                                202 views
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <h5>INSTAGRAM</h5>
+                        <hr style="width:25px; padding:0; margin:0; border: 2px solid rgba(0, 0, 0, 0.1);"
+                            class="mb8"></hr>
+                        <div class="row pt16 px-2">
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-16.png" class="img-fluid"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-16.png" class="img-fluid"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-16.png" class="img-fluid"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-16.png" class="img-fluid"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-16.png" class="img-fluid"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-16.png" class="img-fluid"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-16.png" class="img-fluid"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-16.png" class="img-fluid"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-16.png" class="img-fluid"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light">
+            <div class="container">
+                <div class="row p-4">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb8">
+                        <div>
+                            Copyright &amp;copy;
+                            <span t-field="res_company.name">Company name
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-md-right text-lg-right">
+                        <div>
+                            Responsive Odoo theme,
+                            <span>
+                                Made with
+                                <i class="fa fa-heart"/>
+                                by
+                                <strong>&lt;73Lines/&gt;</strong>
+                            </span>
+                        </div>
+<!--                        <div>-->
+<!--                            <t t-call="website.language_selector"/>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

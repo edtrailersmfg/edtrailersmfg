@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="counters_time_deal_div" name="Timer">
+        <section class="pt64 pb64" data-visible="timer" id="timer_default">
+            <div class="container">
+                <div class="row">
+                    <div class="counters_timer_js  text-center" data-date="nan" data-msg='nun'
+             data-mins-1="" data-disp="timer_days"/>
+                </div>
+            </div>
+        </section>
+
+    </template>
+
+    <template id="counter_timer_options"
+              inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-js='counters_timer_js' data-selector=".counters_timer_js"
+                 data-drop-in=".timer_counter_div">
+<!--                <li data-date_configure="" data-no-preview="true">-->
+                    <we-button data-date_configure="" data-no-preview="true">
+                        <i class="fa fa-clock-o"/>
+                        Change Time
+                    </we-button>
+<!--                </li>-->
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

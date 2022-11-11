@@ -1,0 +1,205 @@
+@if o-website-value('mid-header') == 'mid-header-11' {
+    #mid_header_top,#mid_header_bottom{
+        display:block;
+    }
+
+    #company-profiles{
+        display:none;
+    }
+    .navbar-sign-in{
+        display:none !important;
+    }
+
+    #top_menu{
+        #my_wish,#my_cart{
+            display:none;
+        }
+    }
+
+    .divider{
+        display:none !important;
+    }
+    .user-details{
+        display:none;
+    }
+    #mid-header-top-left,#mid-header-top-center{
+     display:none;
+    }
+    .user-details_1{
+        ul{
+            text-align: left!important;
+        }
+    }
+    #mid-header-top-left{
+        #company-profiles{
+            display: none;
+        }
+    }
+    .fa_company_contact_links:hover, .fa_company_contact_links:focus {
+        text-decoration: none;
+    }
+    .fa_company_contact_info {
+        font-size: 20px;
+        padding: 5px 5px;
+    }
+
+    .center_logo{
+        display:none;
+    }
+    .left_logo{
+        display:none !important;
+    }
+    #top_menu{
+        #my_wish,#my_cart{
+            display:none;
+        }
+    }
+
+    .search_left{
+        display:none;
+    }
+    .logo_mid_center{
+        display:none;
+    }
+
+
+    /*------- mid_header_11 scss start here-----*/
+
+    #mid-header-top-right{
+       .user-details_1 .account_custom, .user-details_1 .lang_custom{
+            color:#ffffff;
+    }
+    }
+    #mid-header-top-right-welcome-msg{
+        display: block !important;
+    }
+    #mid-header-top-right-welcome-msg .text-right{
+        color:#ffffff !important;
+        margin: 0px !important
+    }
+    #mid-header-top-right{
+    .user-details_1 .lang_custom .language_flag {
+        display: inline-block;
+        font-weight: 400;
+        padding: 0.3rem 0rem;
+        font-size: 0.875rem;
+    }
+    .user-details_1 .lang_custom .dropdown-toggle::after{
+        color: #ffffff !important;
+    }
+
+    .user-details_1 .lang_custom .btn {
+        display: inline-block;
+        font-weight: 400;
+        padding: 0.5rem 0rem;
+        font-size: 0.875rem;
+    }
+    .js_language_selector .align-middle{
+        display: none;
+    }
+    .js_language_selector .o_lang_flag {
+        border-radius: 0rem;
+        width: 25px;
+        height: 20px;
+    }
+    .user-details_1 #pricelist_custom a{
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .user-details_1 #pricelist_custom a.text-white:hover, .user-details_1 #pricelist_custom a.text-white:focus {
+        color: unset !important;
+    }
+    .user-details_1 ul {
+        text-align: left !important;
+        display: inline-flex;
+    }
+    #company-profiles{
+            display: none;
+    }
+    .lang_custom .dropdown-menu.show{
+        margin: 0px;
+    }
+    .lang_custom .btn-outline-secondary.dropdown-toggle:focus {
+        box-shadow: unset;
+    }
+    #pricelist_custom, .account_custom, .lang_custom{
+        .btn-link, .dropdown-menu.show a{
+           font-size: 0.875rem;
+        }
+        .dropdown-menu.show{
+            top: 8px !important;
+        }
+            .dropdown-menu.show a:not(:last-child){
+            border-bottom: 1px solid #E9ECEF;
+        }
+    }
+    }
+    #mid-header-top-right .user-details_1 .dropdown-menu.show a {
+        padding: 12px;
+    }
+    #mid-header-bottom-left .text-center {
+        text-align: left !important;
+    }
+    @media only screen and (max-width: 440px) {
+        #mid-header-top-right .user-details_1 .dropdown-menu {
+             padding: 0px;
+        }
+         #mid-header-top-right  .user-details_1 ul {
+            text-align: center !important;
+            display:block;
+        }
+        #mid-header-top-right-welcome-msg .text-right {
+            text-align: center !important;
+        }
+        #mid-header-bottom-right .text-right {
+        text-align: center !important;
+        }
+        #mid-header-bottom-left .text-center {
+        text-align: center !important;
+        }
+    }
+    @media only screen and (min-width: 768px) {
+        #mid-header-top-right .user-details_1 .list-inline-item:not(:last-child) {
+            margin-right: 0rem;
+        }
+        #mid-header-top-right .user-details_1 .dropdown-menu {
+            padding:0px;
+        }
+    }
+    @media (min-width: 992px){
+    #mid-header-top-right-welcome-msg {
+        margin-left: 0;
+        flex: 0 0 66.66666667%;
+        max-width: 66.66666667%;
+    }
+    }
+    @media (min-width: 768px) and (max-width: 1023px) {
+    #mid-header-top-right-welcome-msg{
+        margin-left: 0;
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0;
+    }
+    #mid-header-top-right{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    }
+
+    #mid-header-bottom-right{
+        .fa-heart, .fa-shopping-cart{
+            font-size: 2em;
+        }
+    }
+
+    header#top:not(.o_header_affixed):not(.o_header_is_scrolled):not(.o_top_fixed_element) {
+        z-index: unset;
+    }
+    .btn-outline-secondary:hover, .btn-outline-secondary:not(:disabled):not(.disabled):active, .show > .btn-outline-secondary.dropdown-toggle {
+        background: unset;
+    }
+    .btn-outline-secondary:focus, .btn-outline-secondary.focus, .show > .btn-outline-secondary.dropdown-toggle:focus  {
+        box-shadow: unset;
+    }
+}
+ /*------- mid_header_11 scss end here-----*/

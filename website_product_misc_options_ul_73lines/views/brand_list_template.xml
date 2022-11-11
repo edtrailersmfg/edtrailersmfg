@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="brand-listing" name="Brand List">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure">
+                <section class="s_title pt64 pb64" id="ul_brand_listing">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 mt16 mb16">
+                                <h1 class="text-center o_default_snippet_text">Brand List</h1>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <t t-if="brands">
+                                    <div class="alpha_brand_name mb64">
+                                        <button t-att-data-alphabet="'all'" class="brand-list-anchor-link">
+                                            All
+                                        </button>
+                                        <t t-foreach="data" t-as="d">
+                                            <button t-att-data-alphabet="d"
+                                                    t-att-class="'brand-list-anchor-link ' + ('disabled' if not data[d] else '')">
+                                                <t t-esc="d"/>
+                                            </button>
+                                        </t>
+                                    </div>
+                                </t>
+                                <t t-else="">
+                                    <div class="text-center text-muted">
+                                        <h3 class="css_editable_display">
+                                            No
+                                            <i>'Brand'</i>
+                                            defined.
+                                        </h3>
+                                    </div>
+                                </t>
+
+                                <div class="alpha_brand_list">
+                                    <t t-foreach="data" t-as="d">
+                                        <div t-if="data[d]" t-att-id="d" t-att-data-brand="d" class="mt32">
+                                            <h6 class="brand_alpha_filter">
+                                                <t t-esc="d"/>
+                                            </h6>
+                                            <div class="brand_content">
+                                                <t t-foreach="data[d]" t-as="b">
+                                                    <div class="brand_img_col">
+                                                        <a class="text-dark font-weight-bold"
+                                                           t-att-href="'/shop/?brands=%s-%s' % (b.name, b.id)">
+                                                            <div itemprop="image" t-field="b.brand_image"
+                                                                 class="brand_img"
+                                                                 t-options='{"widget": "image", "resize": None if brand_image else "300x300"}'
+                                                                 t-att-alt="b.name"/>
+                                                            <span style="font-weight: normal"
+                                                                  t-field="b.name"/>
+                                                            <span t-if="brand_count.get(b.id, 0)">(<t
+                                                                    t-esc="brand_count.get(b.id, 0)"/>)
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </t>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+    <template id="brand_list" inherit_id="portal.frontend_layout"
+              customize_show="True"
+              name="Brand List" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="#{'o_show_brand_list'}"
+                       separator=" "/>
+        </xpath>
+    </template>
+
+</odoo>

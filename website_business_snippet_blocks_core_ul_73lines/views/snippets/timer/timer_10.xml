@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="timer_10" name="Timer 10">
+        <section class="pt64 pb64" id="timer_10"
+                 style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/image-1170.jpg&quot;);
+    background-repeat: no-repeat;
+    background-size: cover;" data-visible="timer">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-12 col-lg-12 col-md-12 col-sm-12 pb16">
+                        <h2 class="font-weight-bold">Deal Of The Day</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        </p>
+                    </div>
+                    <div class="counters_timer_js col-12 col-md-12 col-sm-12 col-lg-10 text-center"
+                         data-date="nan" data-msg='nun'
+                         data-mins-1="" data-disp="timer_days"/>
+                    <div class="col-12 col-lg-12 col-md-12 col-sm-12 pb16">
+                        <a href="#" class="btn btn-lg btn-primary text-decoration-none mt24 mb24 o_default_snippet_text">Order
+                            Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="counter_timer_options"
+              inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-js='counters_timer_js' data-selector=".counters_timer_js"
+                 data-drop-in=".timer_counter_div">
+<!--                <li data-date_configure="" data-no-preview="true">-->
+                    <we-button data-date_configure="" data-no-preview="true">
+                        <i class="fa fa-clock-o"/>
+                        Change Time
+                    </we-button>
+<!--                </li>-->
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

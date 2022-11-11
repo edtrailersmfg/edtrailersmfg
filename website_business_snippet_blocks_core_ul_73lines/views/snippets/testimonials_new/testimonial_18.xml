@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="testimonial_18" name="Testimonial 18">
+        <section class="pt64 pb64" id="testimonials_d9" data-visible="testimonials">
+            <div id="testimonials_d9"
+                 class="s_quotes_carousel s_carousel_default carousel slide"
+                 data-interval="10000">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1 offset-lg-2 col-lg-8 px-0">
+                            <div class="testimonial-bg">
+
+                                <!--                                <ol class="carousel-indicators">-->
+                                <!--                                    <li data-target="#testimonials_d9"-->
+                                <!--                                        data-slide-to="0" class="active"/>-->
+                                <!--                                </ol>-->
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active"
+                                         data-name="Slide" style="min-height: 318px;">
+                                        <div
+                                                class="carousel-content justify-content-md-center">
+                                            <p class="lead mb32 text-center description">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at augue
+                                                sed elit eleifend tempus. Etiam malesuada vulputate justo quis bibendum.
+                                                Nam maximus ultricies rhoncus. Ut non felis vel enim dapibus.
+                                            </p>
+                                            <div class="text-center">
+                                                <img class="img"
+                                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                                     alt=""/>
+                                                <h4 class="title">
+                                                    Jane DOE,
+                                                    <small>
+                                                        CEO of MyCompany
+                                                    </small>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-control justify-content-center mt16">
+                                    <div class="carousel-prev"
+                                         data-target="#testimonials_d9" data-slide="prev"
+                                         role="img" aria-label="Previous" title="Previous">
+                                        <span class="carousel-control-prev-icon"/>
+                                        <span class="sr-only o_default_snippet_text">Previous
+                                        </span>
+                                    </div>
+                                    <div class="carousel-next"
+                                         data-target="#testimonials_d9" data-slide="next"
+                                         role="img" aria-label="Next" title="Next">
+                                        <span class="carousel-control-next-icon"/>
+                                        <span class="sr-only o_default_snippet_text">Next</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

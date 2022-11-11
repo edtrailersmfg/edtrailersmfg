@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <template id="snippet_option_inherit" inherit_id="website.snippet_options">
+        <t t-call="web_editor.snippet_options"/>
+        <xpath expr="//we-select[@data-variable='header-links-style']"
+               position="after">
+            <we-select string="Category Menu" data-variable="category-menu" data-reload="/">
+                 <we-button title="None"
+                           data-name="category_menu_option_none"
+                           data-customize-website-variable="'category-menu-default'"
+                           data-customize-website-views=""
+                           data-img="">None
+                </we-button>
+                <we-button title="Category Menu Horizontal"
+                           data-name="option_category_menu_horizontal"
+                           data-customize-website-variable="'category-menu-horizontal'"
+                           data-customize-website-views="website_product_categ_menu_and_banner_ul_73lines.website_category_menu_horizontal"
+                           data-img="">Category Menu Horizontal
+                </we-button>
+                <we-button title="Category Menu Vertical"
+                           data-name="option_category_menu_vertical"
+                           data-customize-website-variable="'category-menu-vertical'"
+                           data-customize-website-views="website_product_categ_menu_and_banner_ul_73lines.website_category_menu_vertical"
+                           data-img="">Category Menu Vertical
+                </we-button>
+            </we-select>
+        </xpath>
+    </template>
+
+    <!-- Category Menu Template -->
+    <template id="website_category_menu_vertical" inherit_id="website.navbar_nav" active="False">
+        <xpath expr="//ul[@id='top_menu']/t" position="before">
+            <li class="dropdown d-lg-block nav-item categ-vertical" id="all_cate_menu">
+                <a href="#" class="dropdown-toggle menu-cate-link nav-link" data-toggle="dropdown">
+                    <i class="fa fa-bars" style="margin:0px 3px;"/>
+                    <span>ALL CATEGORIES</span>
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <t t-set="categories" t-value="website.get_categories() if website else None"/>
+                    <t t-if="categories">
+                        <t t-foreach="categories['categories']" t-as="categ">
+                            <t t-if="categ.visible_in_menu">
+                                <t t-call="website_product_categ_menu_and_banner_ul_73lines.menu_categories_recursive"/>
+                            </t>
+                        </t>
+                    </t>
+                </ul>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="website_category_menu_horizontal" inherit_id="website.navbar_nav" active="False">
+        <xpath expr="//ul[@id='top_menu']/t" position="before">
+            <li class="dropdown d-lg-block nav-item categ-menu-grid" id="all_cate_menu">
+                <a href="#" class="dropdown-toggle menu-cate-link nav-link" data-toggle="dropdown">
+                    <i class="fa fa-bars" style="margin:0px 3px;"/>
+                    <span>ALL CATEGORIES</span>
+                    <b class="caret"></b>
+                </a>
+                <div class="dropdown-menu o_mega_menu o_no_parent_editor o_mega_menu_container_size dropdown-menu-left">
+                    <section class="">
+                        <div class="row">
+                            <t t-set="categories" t-value="website.get_categories() if website else None"/>
+                            <t t-if="categories">
+                                <t t-foreach="categories['categories']" t-as="categ">
+                                    <t t-if="categ.visible_in_menu">
+                                        <div class="col-12 col-md-6 col-lg-4 col-xl-3 col-md-3 px-2">
+                                            <div class="media align-items-center">
+                                                <span itemprop="image" t-field="categ.image_1920"
+                                                      t-options="{'widget': 'image', 'resize': None if image else '64x64'}"
+                                                      t-att-alt="categ.name" class="mr-2 categ-img"/>
+                                                <div class="media-body">
+                                                    <h5>
+                                                        <a t-att-href="'/shop/category/%s' % (categ.id)"
+                                                           t-field="categ.name" class="categ-name"></a>
+                                                    </h5>
+                                                    <h6 class="mb-0">
+                                                        <span t-if="categories.get('category_counts').get(categ.id)"
+                                                              t-esc="categories.get('category_counts').get(categ.id)"></span>
+                                                        <span>Items</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </t>
+                            </t>
+                        </div>
+                    </section>
+                </div>
+            </li>
+        </xpath>
+    </template>
+
+    <!-- Child Category Template -->
+    <template id="menu_categories_recursive" name="Menu Category list">
+        <li class="dropdown dropdown-submenu nav-item align-items-center">
+            <a class="nav-link d-inline-block" t-att-href="'/shop/category/%s' % (categ.id)" t-field="categ.name"></a>
+            <span class="count-label" t-if="categories.get('category_counts').get(categ.id)"
+                  t-esc="categories.get('category_counts').get(categ.id)"></span>
+            <i t-if="categ.child_id"
+               class="fa fa-caret-right text-primary caret-icon-pos"/>
+            <ul t-if="categ.child_id"
+                class="dropdown-menu pr-0">
+                <t t-foreach="categ.child_id" t-as="categ">
+                    <t t-call="website_product_categ_menu_and_banner_ul_73lines.menu_categories_recursive"/>
+                </t>
+            </ul>
+        </li>
+    </template>
+
+</odoo>

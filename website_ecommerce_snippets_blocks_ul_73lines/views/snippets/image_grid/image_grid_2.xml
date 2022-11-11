@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Image Grid 2" id="image_grid_2">
+        <section class="pt64 pb64" id="image_grid_2" data-visible="image_grid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid2">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay"></div>
+                                <div class="grid_content">
+                                    <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/logo_01.png"
+                                         alt=""
+                                         class="img-fluid image2"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid2">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay"></div>
+                                <div class="grid_content">
+                                    <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/logo_01.png"
+                                         alt=""
+                                         class="img-fluid image2"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid2">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay"></div>
+                                <div class="grid_content">
+                                    <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/logo_01.png"
+                                         alt=""
+                                         class="img-fluid image2"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid2">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay"></div>
+                                <div class="grid_content">
+                                    <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/logo_01.png"
+                                         alt=""
+                                         class="img-fluid image2"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid2">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay"></div>
+                                <div class="grid_content">
+                                    <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/logo_01.png"
+                                         alt=""
+                                         class="img-fluid image2"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid2">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay"></div>
+                                <div class="grid_content">
+                                    <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/logo_01.png"
+                                         alt=""
+                                         class="img-fluid image2"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid2">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay"></div>
+                                <div class="grid_content">
+                                    <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/logo_01.png"
+                                         alt=""
+                                         class="img-fluid image2"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid2">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay"></div>
+                                <div class="grid_content">
+                                    <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/logo_01.png"
+                                         alt=""
+                                         class="img-fluid image2"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid2">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay"></div>
+                                <div class="grid_content">
+                                    <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/logo_01.png"
+                                         alt=""
+                                         class="img-fluid image2"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid2">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay"></div>
+                                <div class="grid_content">
+                                    <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/logo_01.png"
+                                         alt=""
+                                         class="img-fluid image2"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid2">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay"></div>
+                                <div class="grid_content">
+                                    <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/logo_01.png"
+                                         alt=""
+                                         class="img-fluid image2"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid2">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay"></div>
+                                <div class="grid_content">
+                                    <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/logo_01.png"
+                                         alt=""
+                                         class="img-fluid image2"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

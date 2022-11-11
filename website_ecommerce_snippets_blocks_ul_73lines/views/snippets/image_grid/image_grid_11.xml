@@ -1,0 +1,55 @@
+<odoo>
+    <template name="Image Grid 11" id="image_grid_11">
+        <section class="pt64 pb64" id="image_grid_11" data-visible="image_grid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-4 col-sm-12 pb16">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid11">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-352x264.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid_content">
+                                    <h3 class="title">BLOCK TITLE</h3>
+                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Nullam.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 col-sm-12 pb16">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid11">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-352x264.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid_content">
+                                    <h3 class="title">BLOCK TITLE</h3>
+                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Nullam.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 col-sm-12 pb16">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid11">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-352x264.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid_content">
+                                    <h3 class="title">BLOCK TITLE</h3>
+                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Nullam.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

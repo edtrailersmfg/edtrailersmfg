@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	
+
+		<!-- Snippet's Body -->
+		<template id="s_half_carousel_half_image_right" name="Half Carousel Half Image Right">
+			<section class="s_half_carousel_half_image_right">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="oe_structure">
+								<div class="container">
+									<div class="row">
+										<h3>Place Your Carousel Here.</h3>
+										<h4>After placing the carousel remove this text.</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-6 col-md-6 col-sm-12 image-box">
+							<div class="oe_structure">
+								<img class="img img-fluid"
+									src="/website_snippet_boxed_ul_73lines/static/src/img/585x493.png"></img>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</template>
+
+	
+</odoo>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Searchbox With Dropdown" id="searchbox_with_dropdown">
+        <section id="searchbox_with_dropdown" data-visible="mid_headears">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+                        <div>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:10px;">
+                                <span class="fa fa-search text-dark fa-2x"/>
+                            </a>
+                            <ul class="dropdown-menu py-0 px-3 border-0 bg-transparent" role="menu">
+                                <div>
+                                    <li class="navbar-form form-group m-0">
+                                        <t t-call="website_ecommerce_snippets_blocks_ul_73lines.s_searchbar_input_ultimate"></t>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

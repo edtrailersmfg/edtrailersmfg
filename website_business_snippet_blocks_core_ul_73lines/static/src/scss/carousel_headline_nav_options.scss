@@ -1,0 +1,838 @@
+.js_get_objects{
+    .owl-carousel{
+        padding: 30px 0;
+        
+    }
+}
+
+//---- Headline Styles Start ----//
+.s_headline_hidden .headline{
+    visibility: hidden;
+    display: none !important;
+}
+
+.s_headline_left{
+    .headline{
+        h2{
+            text-align:left;
+        }
+    }
+}
+
+.s_headline_center{
+    .headline{
+        h2{
+            text-align: center;
+        }
+    }
+}
+
+.s_headline_right{
+    .headline{
+        h2{
+            text-align: right;
+        }
+    }
+}
+
+.s_headline_style_1{
+    hr{
+        display:none;
+    }
+
+    .headline:after{
+            width: 40px;
+            position: absolute;
+            //bottom: 0;
+            height: 3px;
+            //left: 0;
+            background: theme-color('primary');
+            content: '';
+    }
+}
+
+.s_headline_style_2{
+    hr{
+        display:none;
+    }
+
+    .headline{
+          text-align:center;
+
+          h2::before,
+          h2::after {
+            display: inline-block;
+            content: "";
+            border-top: .3rem solid theme-color('primary');
+            width: 4rem;
+            margin: 0 1rem;
+            transform: translateY(-0.5rem);
+          }
+    }
+
+    @media (max-width: 768px) {
+        .headline{
+            h2::before,
+            h2::after {
+                width: 2rem;
+            }
+        }
+    }
+
+}
+
+.s_headline_style_3{
+    hr{
+        display:none;
+    }
+
+    .headline{
+        text-align:center;
+
+        h2::before,
+        h2::after {
+            display: inline-block;
+            width: auto;
+            height: 15px;
+            content: "~";
+            font-size: 1.2em;
+            padding: 0px 5px;
+            color:theme-color('primary');
+        }
+    }
+}
+
+.s_headline_style_4{
+    hr{
+        display:none;
+    }
+
+    .headline{
+        padding: 0 !important;
+        display: block;
+        margin-bottom: 24px;
+        margin-top: 12px;
+        text-align: center;
+        h2{
+            border-bottom: 3px solid theme-color('primary');
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+    }
+
+
+}
+
+.s_headline_style_5{
+    hr{
+        display:none;
+    }
+
+    .headline{
+        border-bottom: 1px solid #eee !important;
+        h2{
+            margin-top: 0 !important;
+            border-bottom: 2px solid theme-color('primary');
+            display: inline-block;
+            margin-bottom: -1px !important;
+            padding-bottom: 10px;
+        }
+    }
+
+
+}
+
+.s_headline_style_6{
+    hr{
+        display:none;
+    }
+
+    .headline{
+
+        h2{
+            padding: 15px 20px;
+            position: relative;
+
+            &:before{
+                border-left: 2px solid theme-color('primary');
+                border-top: 2px solid theme-color('primary');
+                content: ".";
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                text-indent: -5000px;
+            }
+        }
+    }
+
+
+}
+
+.s_headline_style_7{
+    hr{
+        display:none;
+    }
+
+    .headline{
+        background: url(/ecommerce_snippets_blocks/static/src/img/heading-title.png) top center no-repeat;
+        padding-top: 10px;
+        text-align:center;
+
+        h2{
+            margin-top: 30px;
+            width: 100%;
+            color:theme-color('primary');
+        }
+    }
+
+
+}
+
+.s_headline_style_8{
+    hr{
+        display:none;
+    }
+
+    h2{
+            text-align:left;
+        }
+
+}
+
+.s_headline_style_9{
+    hr{
+        display:none;
+    }
+
+    h2{
+            text-align:center;
+        }
+
+}
+
+
+//---- Headline Styles End ----//
+
+//---- Carousel Nav Changes Start ----//
+.js_get_objects{
+    .owl-nav{
+        margin:32px 0;
+    }
+}
+
+.s_product_carousel{
+    .product-single{
+        ul li a.btn-default,button{
+        @include button-variant(theme-color('secondary'), theme-color('secondary'));
+        }
+    }
+}
+//---- Carousel Nav Changes End ----//
+
+//---- Carousel Nav Design Start ----//
+
+@mixin reset-fa {
+     .dynamic_snippet_template{
+        .carousel-control-prev{
+            .fa-chevron-left{
+                &:before{
+                    content: "\f177";
+                }
+            }
+        }
+     }
+
+     .carousel-control-next{
+        .fa-chevron-right{
+             &:before{
+                 content: "\f178";
+             }
+        }
+     }
+
+    .carousel-control-prev,.carousel-control-next{
+         opacity:unset !important;
+         .fa{
+             display: inline-block;
+             padding: 6%;
+             position: absolute;
+             transition: all 0.3s ease 0s;
+             background: #000000;
+             font-size: 23px !important;
+         }
+     }
+}
+    .carousel-control-prev,.carousel-control-next{
+         .fa{
+            top: 45%;
+        }
+
+    }
+     .s_dynamic .carousel-control-prev{
+        left: -12px;
+        width: auto;
+        @media(min-width:767px){
+        left:-39px;
+     }
+   }
+
+  .s_dynamic .carousel-control-next{
+     right: -12px;
+     width: auto;
+     @media(min-width:767px){
+      right: -39px;
+   }
+}
+.s_dynamic .carousel-control-prev > span.fa, .s_dynamic .carousel-control-next > span.fa {
+    background: unset;
+}
+.s_dynamic.owl_nav_style_1{
+    @include reset-fa;
+
+    .carousel-control-prev,.carousel-control-next{
+         .fa{
+        color: #ffffff;
+        padding: 7px;
+        font-size: 18px !important;
+        }
+        width: auto;
+        bottom: auto;
+        top: 45%;
+    }
+    .carousel-control-prev{
+        left: 4px;
+        @media(min-width:767px){
+            left:-20px;
+        }
+    }
+
+    .carousel-control-next{
+        right: 4px;
+        @media(min-width:767px){
+            right: -20px;
+        }
+    }
+}
+
+.s_dynamic.owl_nav_style_2{
+    @include reset-fa;
+
+    .carousel-control-prev,.carousel-control-next{
+        top: -70px;
+        bottom: unset;
+    }
+
+    .carousel-control-next {
+        right: 0;
+    }
+
+    .carousel-control-prev {
+        right: 40px;
+        left:unset !important;
+    }
+    .carousel-control-prev .fa, .carousel-control-next .fa{
+      color: #ffffff;
+   }
+
+}
+
+//---- Carousel Nav Design End ----//
+.s_dynamic.owl_nav_style_3{
+
+    @include reset-fa;
+    .carousel-control-prev,.carousel-control-next{
+        top: -70px;
+        bottom: unset;
+        text-shadow: unset;
+    }
+
+    .carousel-control-next {
+         right: 0;
+         .fa{
+            &:before{
+                content: "\f105" !important;
+                font-weight: bold;
+             }
+
+             background: transparent;
+             color: black !important;
+             padding: 5px 10px;
+             font-size: 20px;
+             transform: scale(1);
+
+             &:hover{
+                color: theme-color('primary') !important;
+                transform: scale(1.5);
+             }
+        }
+    }
+
+     .carousel-control-prev {
+         right: 20px;
+         left:unset !important;
+
+         .fa{
+            &:before{
+             content: "\f104" !important;
+             font-weight: bold;
+             }
+
+             background: transparent;
+             color: black !important;
+             padding: 5px 10px;
+             font-size: 20px;
+             transform: scale(1);
+
+             &:hover{
+                 color: theme-color('primary') !important;
+                 transform: scale(1.5);
+             }
+         }
+     }
+
+
+    button:focus {
+        outline: 0;
+    }
+}
+
+.s_dynamic.owl_nav_style_4{
+     @include reset-fa;
+    .carousel-control-prev{
+        left: 4px;
+        width: auto;
+        bottom: auto;
+        top: 45%;
+
+        @media(min-width:767px){
+            left:-20px;
+        }
+
+        .fa{
+            &:before{
+                content: "\f104" !important;
+                font-size: 40px !important;
+            }
+
+             &:hover{
+                color: theme-color('primary') !important;
+            }
+            background: transparent !important;
+            color: black !important;
+            padding: 5px 10px !important;
+            text-shadow: none;
+        }
+    }
+
+    .carousel-control-next{
+        right: 4px;
+        width: auto;
+        bottom: auto;
+        top: 45%;
+
+        @media(min-width:767px){
+            right: -20px;
+        }
+
+        .fa{
+            &:before{
+                content: "\f105" !important;
+                font-size: 40px !important;
+            }
+             &:hover{
+                color: theme-color('primary') !important;
+            }
+            background: transparent !important;
+            color: black !important;
+            padding: 5px 10px !important;
+            text-shadow: none;
+        }
+    }
+}
+
+.s_dynamic.owl_nav_style_5{
+    @include reset-fa;
+    .carousel-control-prev{
+        left: 4px;
+        width: auto;
+        bottom: unset;
+        top: 45%;
+
+        @media(min-width:767px){
+            left:-20px;
+        }
+
+        .fa{
+            &:before{
+                content: "\f104" !important;
+                font-size: 35px !important;
+            }
+
+             &:hover{
+                color: theme-color('primary') !important;
+            }
+            background: #eae9e9 !important;
+            color: black !important;
+            text-shadow: none;
+            border-radius: 50%;
+            padding: 3px 13px 3px 13px;
+        }
+    }
+
+    .carousel-control-next{
+        right: 4px;
+        width: auto;
+        bottom: unset;
+        top: 45%;
+
+        @media(min-width:767px){
+            right: -20px;
+        }
+
+        .fa{
+            &:before{
+                content: "\f105" !important;
+                font-size: 35px !important;
+            }
+             &:hover{
+                color: theme-color('primary') !important;
+            }
+            background: #eae9e9 !important;
+            text-shadow: none;
+            color: black !important;
+            border-radius: 50%;
+            padding: 3px 13px 3px 13px;
+        }
+    }
+}
+
+.s_dynamic.owl_nav_style_6{
+
+    .dynamic_snippet_template{
+        .carousel-control-prev{
+            .fa-chevron-left{
+                &:before{
+                    content: "\f177";
+                }
+            }
+        }
+    }
+
+     .carousel-control-next{
+        .fa-chevron-right{
+             &:before{
+                 content: "\f178";
+             }
+        }
+     }
+
+    .carousel-control-prev,.carousel-control-next{
+         opacity:unset !important;
+         .fa{
+             display: inline-block;
+             padding: 6%;
+             position: absolute;
+             background: #000000;
+             font-size: 23px !important;
+             top: auto;
+         }
+    }
+
+    .carousel-control-prev,.carousel-control-next{
+          webkit-transform: scale(0.5);
+          transform: scale(0.5);
+          -webkit-transition: .3s ease-in-out;
+          transition: .3s ease-in-out;
+          visibility: hidden;
+
+            width: auto;
+            bottom: auto;
+            top: 45%;
+           @media (max-width: 768px){
+              visibility: visible;
+              -webkit-transform: scale(1);
+              transform: scale(1);
+          }
+    }
+
+    &:hover{
+        .carousel-control-prev,.carousel-control-next{
+            visibility: visible;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+
+        }
+    }
+
+    .carousel-control-prev{
+        left: 4px;
+
+        @media(min-width:767px){
+            left:-20px;
+        }
+
+        .fa{
+            &:before{
+                content: "\f104" !important;
+                font-size: 35px !important;
+            }
+
+             &:hover{
+                color: theme-color('primary') !important;
+            }
+            background: #eae9e9 !important;
+            color: black !important;
+            text-shadow: none;
+            border-radius: 50%;
+            padding: 3px 13px 3px 13px;
+        }
+    }
+
+    .carousel-control-next{
+        right: 4px;
+
+        @media(min-width:767px){
+            right: -20px;
+        }
+
+        .fa{
+            &:before{
+                content: "\f105" !important;
+                font-size: 35px !important;
+            }
+             &:hover{
+                color: theme-color('primary') !important;
+            }
+            background: #eae9e9 !important;
+            text-shadow: none;
+            color: black !important;
+            border-radius: 50%;
+            padding: 3px 13px 3px 13px;
+        }
+    }
+}
+
+.s_dynamic.owl_nav_style_7{
+
+    @include reset-fa;
+    .carousel-control-prev,.carousel-control-next{
+        top: -70px;
+        bottom: unset;
+
+        .fa{
+            background:transparent !important;
+            color: #ccc !important;
+            padding: 6px 10px !important;
+            font-size: 20px !important;
+            text-shadow:none !important;
+
+            position: absolute;
+            margin: 0;
+            border: .5px solid #eaeaea;
+        }
+    }
+
+    .carousel-control-next {
+        right: 0;
+
+
+         .fa{
+            border-left: none;
+            &:before{
+                content: "\f105" !important;
+            }
+         }
+
+    }
+
+    .carousel-control-prev {
+        right: 26px;
+        left:unset !important;
+
+
+         .fa{
+             border-right: none;
+            &:before{
+                content: "\f104" !important;
+            }
+         }
+    }
+}
+
+.s_dynamic.owl_nav_style_8{
+
+        @include reset-fa;
+        .carousel-control-prev,.carousel-control-next{
+            top:45%;
+            width: auto;
+            bottom: unset;
+
+            .fa{
+                background:transparent !important;
+                color: #ccc !important;
+                padding: 6px 10px !important;
+                font-size: 20px !important;
+                text-shadow:none !important;
+
+                position: absolute;
+                margin: 0;
+                border: .5px solid #eaeaea;
+            }
+        }
+
+        .carousel-control-next {
+            right: -20px;
+             .fa{
+                &:before{
+                    content: "\f105" !important;
+                }
+             }
+
+        }
+
+        .carousel-control-prev {
+            left: -20px;
+
+             .fa{
+                &:before{
+                    content: "\f104" !important;
+                }
+             }
+        }
+
+        &:hover{
+            .carousel-control-prev,.carousel-control-next{
+                .fa{
+                    border: theme-color('primary') !important;
+                    background: theme-color('primary') !important;
+                    color: white !important;
+                }
+
+            }
+
+        }
+
+        @media (max-width: 768px){
+            .carousel-control-prev {
+                left: 4px;
+             }
+             .carousel-control-next {
+                right: 4px;
+             }
+            .carousel-control-prev,.carousel-control-next{
+                 .fa{
+                     border: theme-color('primary') !important;
+                     background: theme-color('primary') !important;
+                     color: white !important;
+                 }
+             }
+        }
+
+}
+
+
+
+.s_dynamic.owl_nav_style_9{
+   @include reset-fa;
+
+      .carousel-inner{
+            margin-bottom:32px;
+      }
+
+      .carousel-control-prev,.carousel-control-next{
+            top:unset !important;
+            align-items: unset;
+            justify-content: unset;
+            bottom: -7px;
+
+           .fa{
+              padding: 4px 12px !important;
+              margin:8px 0;
+          }
+      }
+
+      .carousel-control-next {
+        left: 50%;
+         .fa{
+            background: theme-color('primary');
+            color: #ffffff;
+            padding: 0 12px;
+            font-size: 20px;
+            margin: 0 2px;
+
+             &:before{
+                content: "\f105" !important;
+            }
+         }
+      }
+
+      .carousel-control-prev {
+            left: 47%;
+           .fa{
+              background: theme-color('primary');
+              color: #ffffff;
+              padding: 0 12px;
+              font-size: 20px;
+              margin: 0 2px;
+
+              &:before{
+                  content: "\f104" !important;
+              }
+           }
+      }
+      @media (min-width: 320px) and (max-width: 767px) {
+      .carousel-control-prev {
+            left: 40%;
+        }
+      }
+}
+
+.s_dynamic.owl_nav_style_10{
+    @include reset-fa;
+        .carousel-control-prev,.carousel-control-next{
+            top: -70px;
+            bottom: unset;
+
+            .fa{
+                background: theme-color('primary');
+                color: #ffffff;
+                padding: 6px 10px !important;
+                font-size: 20px !important;
+                text-shadow:none !important;
+                position: absolute;
+            }
+        }
+
+        .carousel-control-next {
+            right:-4px;
+
+             .fa{
+                border-left: none;
+                &:before{
+                    content: "\f105" !important;
+                }
+             }
+
+        }
+
+        .carousel-control-prev {
+            right: 26px;
+            left:unset !important;
+
+
+             .fa{
+                 border-right: none;
+                &:before{
+                    content: "\f104" !important;
+                }
+             }
+        }
+}
+
+
+//---- Carousel Nav Design End ----//

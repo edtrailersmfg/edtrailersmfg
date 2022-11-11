@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="option_hotspot_extend"
+              name="Option Hotspot"
+              inherit_id="web_editor.snippet_options_image_optimization_widgets">
+        <xpath expr="." position="inside">
+            <we-row string="Add Hotspot">
+                <we-button class="add_img_hotspot">
+                    <i class="fa fa-fw fa-plus"/>
+                </we-button>
+            </we-row>
+        </xpath>
+    </template>
+
+    <template id="hotspot_img_tmplt" name="Image Dynamic Popover Template">
+        <div t-if='product' t-attf-class="hotspot-media {{cls}}">
+            <t t-set="combination_info"
+               t-value="product._get_combination_info(only_template=True, add_qty=add_qty or 1, pricelist=pricelist)"/>
+            <div class='hotspot-image'>
+                <img t-att-src='request.website.image_url(product, "image_1920")'
+                     alt='Image'/>
+            </div>
+            <div class='hotspot-body-content'>
+                <h3 class='hotspot-title'>
+                    <t t-esc="product.name"/>
+                </h3>
+                <div class="product_price" itemprop="offers"
+                     itemscope="itemscope" itemtype="http://schema.org/Offer">
+                    <del t-attf-class="text-danger mr-2 {{'' if combination_info['has_discounted_price'] else 'd-none'}}"
+                         style="white-space: nowrap;"
+                         t-esc="combination_info['list_price']"
+                         t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                    <span t-if="combination_info['price']"
+                          t-esc="combination_info['price']"
+                          t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                    <span itemprop="price" style="display:none;"
+                          t-esc="combination_info['price']"/>
+                    <span itemprop="priceCurrency" style="display:none;"
+                          t-esc="website.currency_id.name"/>
+                </div>
+                <a t-att-href="product.website_url"
+                   t-attf-class='as-btn btn-primary btn-sm'>Shop now
+                </a>
+            </div>
+        </div>
+        <div class="hotspot-empty" t-else="">
+            <h3>No Product Selected</h3>
+        </div>
+    </template>
+
+    <template id="hotspots_options" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-js="img_hotspots_slider_actions"
+                 data-selector="section .row > p.hotspot_icon ">
+                <we-row>
+                    <we-select class="hs_types" string="Type">
+                        <we-button data-name="hotspot_static"
+                                   data-select-class="static_type">Static
+                        </we-button>
+                        <we-button data-name="hotspot_dynamic"
+                                   data-select-class="design_dynamic">Dynamic
+                        </we-button>
+                    </we-select>
+                    <we-button class="add_preview"
+                               data-dependencies="hotspot_static">
+                        <i class="fa fa-fw fa-eye"/>
+                    </we-button>
+                </we-row>
+                <we-row>
+                    <we-select string="On Click" data-attribute-name="dynamic_type"
+                               data-dependencies="hotspot_dynamic">
+                        <we-button class="pop_tpy" data-name="product_dynamic"
+                                   data-select-data-attribute="popover">Popover
+                        </we-button>
+                    </we-select>
+                    <we-button class="add_product"
+                               data-dependencies="hotspot_dynamic">
+                        <i class="fa fa-fw fa-cart-plus"/>
+                    </we-button>
+                </we-row>
+                <we-select string="Theme" data-attribute-name="popup_theme"
+                           data-dependencies="hotspot_static">
+                    <we-button data-select-data-attribute="theme_light">Light
+                    </we-button>
+                    <we-button data-select-data-attribute="theme_dark">Dark
+                    </we-button>
+                </we-select>
+                <we-select string="Style" data-attribute-name="popup_style"
+                           data-dependencies="hotspot_static,product_dynamic">
+                    <we-button class="style_icon"
+                               data-select-data-attribute="style1">Style-1
+                    </we-button>
+                    <we-button class="style_icon"
+                               data-select-data-attribute="style2">Style-2
+                    </we-button>
+                    <we-button class="style_icon"
+                               data-select-data-attribute="style3">Style-3
+                    </we-button>
+
+                </we-select>
+                <we-input string="Title" placeholder="Add Title"
+                          data-select-data-attribute="Title"
+                          data-attribute-name="popup_title"
+                          class="o_we_large_input main_title"
+                          data-dependencies="hotspot_static"
+                          data-no-preview="true"/>
+                <we-input string="Description" placeholder="Add Description"
+                          data-select-data-attribute="Description"
+                          data-attribute-name="popup_desc"
+                          class="o_we_large_input short_desc"
+                          data-dependencies="hotspot_static"
+                          data-no-preview="true"/>
+                <we-input string="Text" placeholder="Add Button Text"
+                          data-select-data-attribute="Add Button Text"
+                          data-attribute-name="popup_btntext"
+                          class="o_we_large_input btn_txt"
+                          data-dependencies="hotspot_static"
+                          data-no-preview="true"/>
+                <we-input string="Url" data-select-data-attribute="/"
+                          class="o_we_large_input redirect_url"
+                          data-attribute-name="popup_btnurl"
+                          data-dependencies="hotspot_static"
+                          data-no-preview="true"/>
+                <we-row string="Image">
+                    <we-button class="imagebox" data-dependencies="hotspot_static"
+                               data-no-preview="true">
+                        <i class="fa fa-fw fa-image"/>
+                    </we-button>
+                </we-row>
+
+                <we-range string="Top-Bottom"
+                          data-no-preview="true"
+                          data-select-data-attribute=""
+                          data-attribute-name="pos_top"
+                          class="pos_top"
+                          data-attribute-default-value="50"
+                          data-min="0"
+                          data-max="100"
+                          data-step="1"/>
+
+                <we-range string="Left-Right"
+                          data-no-preview="true"
+                          data-select-data-attribute=""
+                          data-attribute-default-value="50"
+                          data-attribute-name="pos_left"
+                          class="pos_left"
+                          data-min="0"
+                          data-max="100"
+                          data-step="1"/>
+            </div>
+        </xpath>
+    </template>
+
+<!--    <template id="assets_img_hotspot_options"-->
+<!--              inherit_id="website.assets_frontend">-->
+<!--        <xpath expr="//script[last()]" position="after">-->
+<!--            <script type="text/javascript"-->
+<!--                    src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/snippets/img_hotspot/000.js"/>-->
+<!--        </xpath>-->
+<!--        <xpath expr="//link[last()]" position="after">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_ecommerce_snippets_blocks_ul_73lines/static/src/snippets/img_hotspot/000.scss"/>-->
+
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_ecommerce_snippets_blocks_ul_73lines/static/src/snippets/img_hotspot/hotspot.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+
+<!--    <template id="inherit_editor" inherit_id="website.assets_editor">-->
+<!--        <xpath expr="//script[last()]" position="after">-->
+<!--            <script type="text/javascript"-->
+<!--                    src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/snippets/img_hotspot/options.js"/>-->
+
+<!--        </xpath>-->
+<!--    </template>-->
+
+</odoo>

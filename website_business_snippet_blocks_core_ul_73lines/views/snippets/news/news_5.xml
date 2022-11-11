@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="News 5" id="news_5">
+        <section class="pt64 pb64" id="news_five" data-visible="news">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-8 offset-lg-2 mb64">
+                        <h2>Recent News</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda culpa cumque
+                            dicta sint soluta voluptas eius iusto modi reprehenderit sint soluta voluptas.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb-4">
+                        <div class="news_text">
+                            <div class="content">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid"/>
+                                <div class="content_overlay"></div>
+                            </div>
+                            <div class="p-4 news_post">
+                                <div>
+                                    <h5 class="font-weight-bold pb-2">
+                                        <a href="#">Latest News Post</a>
+                                    </h5>
+                                    <p class="border-bottom pb-3">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda culpa
+                                        cumque
+                                        dicta sint soluta voluptas eius iusto modi reprehenderit sint soluta voluptas.
+                                    </p>
+                                </div>
+
+                                <div class="news_meta">
+                                    <span class="mr-2">
+                                        <a href="#">
+                                            <a href="#">
+                                                <i class="fa fa-user"></i>
+                                                Admin
+                                            </a>
+                                        </a>
+                                    </span>
+                                    <span class="mr-2">
+                                        <a href="#">
+                                            <i class="fa fa-comments-o"></i>
+                                            24 Comments
+                                        </a>
+                                    </span>
+                                    <span class="mr-2">
+                                        <a href="#">
+                                            <i class="fa fa-heart-o"></i>
+                                            370 Likes
+                                        </a>
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb-4">
+                        <div class="news_text">
+                            <div class="content">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid"/>
+                                <div class="content_overlay"></div>
+                            </div>
+                            <div class="p-4 news_post">
+                                <div>
+                                    <h5 class="font-weight-bold pb-2">
+                                        <a href="#">Latest News Post</a>
+                                    </h5>
+                                    <p class="border-bottom pb-3">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda culpa
+                                        cumque
+                                        dicta sint soluta voluptas eius iusto modi reprehenderit sint soluta voluptas.
+                                    </p>
+                                </div>
+
+                                <div class="news_meta">
+                                    <span class="mr-2">
+                                        <a href="#">
+                                            <a href="#">
+                                                <i class="fa fa-user"></i>
+                                                Admin
+                                            </a>
+                                        </a>
+                                    </span>
+                                    <span class="mr-2">
+                                        <a href="#">
+                                            <i class="fa fa-comments-o"></i>
+                                            24 Comments
+                                        </a>
+                                    </span>
+                                    <span class="mr-2">
+                                        <a href="#">
+                                            <i class="fa fa-heart-o"></i>
+                                            370 Likes
+                                        </a>
+                                    </span>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb-4">
+                        <div class="news_text">
+                            <div class="content">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid"/>
+                                <div class="content_overlay"></div>
+                            </div>
+                            <div class="p-4 news_post">
+                                <div>
+                                    <h5 class="font-weight-bold pb-2">
+                                        <a href="#">Latest News Post</a>
+                                    </h5>
+                                    <p class="border-bottom pb-3">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda culpa
+                                        cumque
+                                        dicta sint soluta voluptas eius iusto modi reprehenderit sint soluta voluptas.
+                                    </p>
+                                </div>
+                                <div class="news_meta">
+                                    <span class="mr-2">
+                                        <a href="#">
+                                            <a href="#">
+                                                <i class="fa fa-user"></i>
+                                                Admin
+                                            </a>
+                                        </a>
+                                    </span>
+                                    <span class="mr-2">
+                                        <a href="#">
+                                            <i class="fa fa-comments-o"></i>
+                                            24 Comments
+                                        </a>
+                                    </span>
+                                    <span class="mr-2">
+                                        <a href="#">
+                                            <i class="fa fa-heart-o"></i>
+                                            370 Likes
+                                        </a>
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

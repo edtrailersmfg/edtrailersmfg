@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="team_8" name="Team8">
+        <section class="sni-block content pt64 pb64" id="team_8" data-visible="team">
+            <div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-12 mb48 text-center">
+                            <h2>Our Team</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                            <div class="team-block">
+                                <div class="team-img">
+                                    <img class="img-fluid" src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg" alt=""/>
+                                    <div class="team-content">
+                                        <h4 class="text-white mb0">Member 1
+                                        </h4>
+                                        <p class="team-meta mb0">-Web Designer</p>
+                                    </div>
+                                    <div class="overlay">
+                                        <div class="text">
+                                            <h4 class="mb0 text-white">Member 1
+                                            </h4>
+                                            <p class="mb30 team-meta">-
+                                                Web Designer
+                                            </p>
+                                            <p>Lorem Ipsum is simply dummy text
+                                                of the printing and typesetting
+                                                industry. Lorem Ipsum has been
+                                                the industry's standard dummy
+                                                text ever since the 1500s.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                            <div class="team-block">
+                                <div class="team-img">
+                                    <img class="img-fluid" src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg" alt=""/>
+                                    <div class="team-content">
+                                        <h4 class="text-white mb0">Member 2
+                                        </h4>
+                                        <p class="team-meta mb0">- Designer
+                                        </p>
+                                    </div>
+                                    <div class="overlay">
+                                        <div class="text">
+                                            <h4 class="mb0 text-white">Member 2
+                                            </h4>
+                                            <p class="mb30 team-meta">-
+                                                Designer
+                                            </p>
+                                            <p>Lorem Ipsum is simply dummy text
+                                                of the printing and typesetting
+                                                industry. Lorem Ipsum has been
+                                                the industry's standard dummy
+                                                text ever since the 1500s.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                            <div class="team-block">
+                                <div class="team-img">
+                                    <img class="img-fluid" src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg" alt=""/>
+                                    <div class="team-content">
+                                        <h4 class="text-white mb0">Member 3
+                                        </h4>
+                                        <p class="team-meta mb0">- Project
+                                            Manager
+                                        </p>
+                                    </div>
+                                    <div class="overlay">
+                                        <div class="text">
+                                            <h4 class="mb0 text-white">Member 3
+                                            </h4>
+                                            <p class="mb30 team-meta">- Project
+                                                Manager
+                                            </p>
+                                            <p>Lorem Ipsum is simply dummy text
+                                                of the printing and typesetting
+                                                industry. Lorem Ipsum has been
+                                                the industry's standard dummy
+                                                text ever since the 1500s.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                            <div class="team-block">
+                                <div class="team-img">
+                                    <img class="img-fluid" src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg" alt=""/>
+                                    <div class="team-content">
+                                        <h4 class="text-white mb0">Member 4
+                                        </h4>
+                                        <p class="team-meta mb0">- Developer</p>
+                                    </div>
+                                    <div class="overlay">
+                                        <div class="text">
+
+                                            <h4 class="text-white mb0">Member 4
+                                            </h4>
+                                            <p class="mb30 team-meta">-
+                                                Developer
+                                            </p>
+                                            <p>Lorem Ipsum is simply dummy text
+                                                of the printing and typesetting
+                                                industry. Lorem Ipsum has been
+                                                the industry's standard dummy
+                                                text ever since the 1500s.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                            <div class="team-block">
+                                <div class="team-img">
+                                    <img class="img-fluid" src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg" alt=""/>
+                                    <div class="team-content">
+                                        <h4 class="text-white mb0">Member 5
+                                        </h4>
+                                        <p class=" mb0 team-meta">- Tester
+                                        </p>
+                                    </div>
+                                    <div class="overlay">
+                                        <div class="text">
+                                            <h4 class="text-white mb0">Member 5
+                                            </h4>
+                                            <p class=" mb30 team-meta">-
+                                                Designer
+                                            </p>
+                                            <p>Lorem Ipsum is simply dummy text
+                                                of the printing and typesetting
+                                                industry. Lorem Ipsum has been
+                                                the industry's standard dummy
+                                                text ever since the 1500s.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                            <div class="team-block">
+                                <div class="team-img">
+                                    <img class="img-fluid" src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg" alt=""/>
+                                    <div class="team-content">
+                                        <h4 class="text-white mb0">Member 6
+                                        </h4>
+                                        <p class=" mb0 team-meta">-
+                                            BDE
+                                        </p>
+                                    </div>
+                                    <div class="overlay">
+                                        <div class="text">
+                                            <h4 class="text-white mb0">Member 6
+                                            </h4>
+                                            <p class="team-meta mb30">-
+                                               BDE
+                                            </p>
+                                            <p>Lorem Ipsum is simply dummy text
+                                                of the printing and typesetting
+                                                industry. Lorem Ipsum has been
+                                                the industry's standard dummy
+                                                text ever since the 1500s.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

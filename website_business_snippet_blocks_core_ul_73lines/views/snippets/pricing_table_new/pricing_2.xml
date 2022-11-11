@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Pricing 2" id="pricing_2">
+        <section class="pt64 pb64" data-visible="pricing">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb48">
+                        <h2>Pricing Table</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 border-right">
+                        <p class="pt8 pb8">Personal</p>
+                        <h2>$59
+                            <small>/ mo</small>
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum est
+                            in tortor congue suscipit. Suspendisse potenti. Aliquam finibus pharetra tellus at
+                            egestas.
+                        </p>
+                        <a href="#" class="btn btn-outline-info px-3 rounded-0 mt32 mb32">Action</a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                        <p class="pt8 pb8">Unlimited</p>
+                        <h2>$59
+                            <small>/ mo</small>
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum est
+                            in tortor congue suscipit. Suspendisse potenti. Aliquam finibus pharetra tellus at
+                            egestas.
+                        </p>
+                        <a href="#" class="btn btn-primary px-3 rounded-0 mt32 mb32">Action</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

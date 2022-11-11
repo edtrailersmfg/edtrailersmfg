@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Pricing 13" id="pricing_13">
+        <section class="pt64 pb64" data-visible="pricing">
+            <div class="container text-center">
+                <h2>Pricing Table</h2>
+                <p class="mb48">Lorem Ipsum is simply dummy text of the printing.</p>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-5 mb-5 pt48 pb24 border bg-white">
+                        <div class="px-4">
+                            <p>Personal</p>
+                            <i class="fa fa-3x fa-cubes  mt-3 mb-3"></i>
+                            <p class=" mt-3 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h3 class="mt24 mb24">Free</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pt48 pb24  border bg-white">
+                        <div class="px-4">
+                            <p>Professional</p>
+                            <i class="fa fa-3x fa-cubes mt-3 mb-3"></i>
+                            <p class="mt-3 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h3 class="mt24 mb24">$89</h3>
+                            <a href="#" class="btn btn-primary btn-block mt-5 mb-5">Button</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-5 mb-5 pt48 pb24 border bg-white">
+                        <div class="px-4">
+                            <p>Corporate</p>
+                            <i class="fa fa-3x fa-cubes  mt-3 mb-3"></i>
+                            <p class="mt-3 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h3 class="mt24 mb24">$159</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

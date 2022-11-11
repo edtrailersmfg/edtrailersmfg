@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+    <template id="assets_frontend_misc_options_73lines" inherit_id="website.assets_frontend">
+        <xpath expr="//link[last()]" position="after">
+            <link type="text/css" rel="stylesheet"
+                  href="/website_product_misc_options_ul_73lines/static/src/scss/ion.rangeSlider.css"/>
+            <link type="text/css" rel="stylesheet"
+                  href="/website_product_misc_options_ul_73lines/static/src/scss/ion.rangeSlider.skinNice.css"/>
+            <link type="text/css" rel="stylesheet"
+                  href="/website_product_misc_options_ul_73lines/static/src/scss/products_view_switcher.scss"/>
+            <link type="text/scss" rel="stylesheet"
+                  href="/website_product_misc_options_ul_73lines/static/src/scss/products_view_limit.scss"/>
+            <link type="text/scss" rel="stylesheet"
+                  href="/website_product_misc_options_ul_73lines/static/src/scss/brand_page.scss"/>
+            <link type="text/scss" rel="stylesheet"
+                  href="/website_product_misc_options_ul_73lines/static/src/scss/shop_page.scss"/>
+        </xpath>
+        <xpath expr="//script[last()]" position="after">
+            <script type="text/javascript"
+                    src="/website_product_misc_options_ul_73lines/static/src/js/ion.rangeSlider.js"/>
+            <script type="text/javascript"
+                    src="/website_product_misc_options_ul_73lines/static/src/js/products_view_limit.js"/>
+<!--            <script type="text/javascript"-->
+<!--                    src="/website_product_misc_options_ul_73lines/static/src/js/products_view_switcher.js"/>-->
+            <script type="text/javascript"
+                    src="/website_product_misc_options_ul_73lines/static/src/js/products_price_filter.js"/>
+            <script type="text/javascript"
+                    src="/website_product_misc_options_ul_73lines/static/src/js/products_tag_filter.js"/>
+            <script type="text/javascript"
+                    src="/website_product_misc_options_ul_73lines/static/src/js/filter_slidebar.js"/>
+        </xpath>
+    </template>
+</odoo>

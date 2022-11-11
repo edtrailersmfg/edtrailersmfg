@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Tab 3" id="tab_3">
+        <section class="s_tabs pt64 pb64" id="tab_3" data-visible="tabs" data-vcss="001">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 pb48 text-center">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+                <div class="s_tabs_main row s_col_no_resize">
+                    <div class="pb16 s_tabs_nav col-md-3">
+                        <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active navigation"  data-toggle="tab" href="#home">Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link navigation"  data-toggle="tab" href="#profile">Profile
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link navigation"  data-toggle="tab" href="#contact">Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="s_tabs_content tab-content">
+                            <div class="tab-pane fade show active oe_structure oe_empty" id="home">
+                                <h2>Home</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, eveniet
+                                    earum. Sed accusantium eligendi molestiae quo hic velit nobis et, tempora
+                                    placeat ratione rem blanditiis voluptates vel ipsam? Facilis, earum!
+                                </p>
+                            </div>
+                            <div class="tab-pane fade oe_structure oe_empty" id="profile">
+                                <h2>Profile</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, eveniet
+                                    earum. Sed accusantium eligendi molestiae quo hic velit nobis et, tempora
+                                    placeat ratione rem blanditiis voluptates vel ipsam? Facilis, earum!
+                                </p>
+                            </div>
+                            <div class="tab-pane fade oe_structure oe_empty" id="contact">
+                                <h2>Contact</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, eveniet
+                                    earum. Sed accusantium eligendi molestiae quo hic velit nobis et, tempora
+                                    placeat ratione rem blanditiis voluptates vel ipsam? Facilis, earum!
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col-md-8 -->
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

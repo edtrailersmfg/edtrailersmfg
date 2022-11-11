@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Process Step 2" id="process_step_2">
+        <section class="pt64 pb32" id="process_step_2" data-visible="process_steps">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb32">
+                        <h2>Working Process</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center mb32">
+                        <h3 class="text-light process_no">1</h3>
+                        <div class="box">
+                            <i class="fa fa-magic fa-2x mb16"></i>
+                            <h3>Making The Strategy</h3>
+                            <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
+                                aenean rhoncus posuere odio in.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center mb32">
+                        <h3 class="text-light process_no">2</h3>
+                        <div class="box">
+                            <i class="fa fa-bar-chart fa-2x mb16"></i>
+                            <h3>Watch Business Grow</h3>
+                            <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
+                                aenean rhoncus posuere odio in.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center mb32">
+                        <h3 class="text-light process_no">3</h3>
+                        <div class="box">
+                            <i class="fa fa-empire fa-2x mb16"></i>
+                            <h3>Make Sucessfull</h3>
+                            <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
+                                aenean rhoncus posuere odio in.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

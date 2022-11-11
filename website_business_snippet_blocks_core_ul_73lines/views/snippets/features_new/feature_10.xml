@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Feature 10" id="feature_10">
+        <section class="pt64" data-visible="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2>Features</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                        <div class="row text-center pt48 pb64">
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                <i class="fa fa-3x fa-calculator"></i>
+                                <h3 class="pt8 pb8">Feature One</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Ut at semper metus.
+                                    Vestibulum gravida velit urna, ut mattis
+                                    leo ullamcorper sed.
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                <i class="fa fa-3x  fa-life-ring"></i>
+                                <h3 class="pt8 pb8">Feature Two</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Ut at semper metus.
+                                    Vestibulum gravida velit urna, ut mattis
+                                    leo ullamcorper sed.
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                <i class="fa fa-3x fa-user-o"></i>
+                                <h3 class="pt8 pb8">Feature Three</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Ut at semper metus.
+                                    Vestibulum gravida velit urna, ut mattis
+                                    leo ullamcorper sed.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-62.png"
+                             alt="img3" class="img-fluid pt8"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

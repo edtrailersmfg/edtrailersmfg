@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="CTA 10" id="cta_10">
+        <section class="pt64" data-visible="cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2 class="mb32">Call to action</h2>
+
+                        <a href="#" target="_blank">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-41.png"
+                                 class="img-fluid   mb8 mt8" alt="App Store"
+                                 title="App Store"/>
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-5.png"
+                                 class="img-fluid   mb8 mt8" alt="Google Play"
+                                 title="Google Play"/>
+                        </a>
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-7.png"
+                             class="img-fluid mt32" alt="Mobile App"
+                             title="Mobile App"/>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

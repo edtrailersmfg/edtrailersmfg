@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Collapse Categories -->
+
+
+
+    <template id="products_categories_inherit"
+              inherit_id="website_sale.products_categories">s
+        <xpath expr="//ul" position="before">
+            <strong class="o_products_attributes_title text-uppercase d-block my-2 category-heading">Product Category</strong>
+        </xpath>
+        <xpath expr="//ul" position="attributes">
+            <attribute name="id">o_shop_collapse_category</attribute>
+        </xpath>
+    </template>
+
+    <!-- tag -->
+    <template id="tag_inherit" inherit_id="website_product_misc_options_ul_73lines.website_product_tags">
+        <xpath expr="//div[@id='tags_div']" position="replace">
+            <div id="tags_div" class="mb-3">
+                <div id="filter-attribute">
+                    <strong id="tag_title" class="o_products_attributes_title text-uppercase d-block my-2">Tags</strong>
+                    <t t-foreach="tags" t-as="tag">
+                        <label class="product-tag btn btn-primary btn-xs mb8">
+                            <input type="checkbox" name="tags" class="hidden product_tags"
+                                   t-att-title="tag.name" t-att-value="'%s-%s' % (tag.name,tag.id)"
+                                   t-att-checked="'checked' if tag.id in tag_set else None"/>
+                            <span style="font-weight: normal" t-field="tag.name"/>                            <span>
+                                <t t-if="tag_count.get(tag.id, 0)">
+                                    (<t t-esc="tag_count.get(tag.id, 0)"/>)
+                                </t>
+                            </span>
+
+                        </label>
+                    </t>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

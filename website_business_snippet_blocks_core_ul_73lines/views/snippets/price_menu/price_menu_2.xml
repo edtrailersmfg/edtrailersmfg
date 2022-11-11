@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Price Menu 2" id="price_menu_2">
+        <section class="pt64 pb64" id="price_menu_2" data-visible="price_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Price Menu</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                    <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                        <nav>
+                            <div class="nav nav-tabs nav-fill mb16" id="nav-tab"
+                                 role="tablist">
+                                <a class="nav-item nav-link active"
+                                   id="nav-home-tab" data-toggle="tab"
+                                   href="#nav-home" role="tab"
+                                   aria-controls="nav-home"
+                                   aria-selected="true">ALL
+                                </a>
+                                <a class="nav-item nav-link"
+                                   id="nav-profile-tab" data-toggle="tab"
+                                   href="#nav-starters" role="tab"
+                                   aria-controls="nav-starters"
+                                   aria-selected="false">STARTERS
+                                </a>
+                                <a class="nav-item nav-link"
+                                   id="nav-contact-tab" data-toggle="tab"
+                                   href="#nav-breakfast" role="tab"
+                                   aria-controls="nav-breakfast"
+                                   aria-selected="false">BREAKFAST
+                                </a>
+                                <a class="nav-item nav-link" id="nav-about-tab"
+                                   data-toggle="tab" href="#nav-lunch"
+                                   role="tab" aria-controls="nav-lunch"
+                                   aria-selected="false">LUNCH
+                                </a>
+                                <a class="nav-item nav-link" id="nav-about-tab"
+                                   data-toggle="tab" href="#nav-dinner"
+                                   role="tab" aria-controls="nav-dinner"
+                                   aria-selected="false">DINNER
+                                </a>
+                                <a class="nav-item nav-link" id="nav-about-tab"
+                                   data-toggle="tab" href="#nav-desserts"
+                                   role="tab" aria-controls="nav-desserts"
+                                   aria-selected="false">DESSERTS
+                                </a>
+                            </div>
+                        </nav>
+                        <div class="tab-content py-3 px-3 px-sm-0"
+                             id="nav-tabContent">
+                            <div class="tab-pane fade show oe_structure oe_empty active"
+                                 id="nav-home" role="tabpanel"
+                                 aria-labelledby="nav-home-tab">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 1</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 2</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 3</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 4</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 5</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 6</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 7</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 8</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 9</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 10</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade oe_structure oe_empty" id="nav-starters"
+                                 role="tabpanel"
+                                 aria-labelledby="nav-profile-tab">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 1</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 2</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 3</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 4</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade oe_structure oe_empty" id="nav-breakfast"
+                                 role="tabpanel"
+                                 aria-labelledby="nav-contact-tab">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 1</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 2</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 3</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 5</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade oe_structure oe_empty" id="nav-lunch"
+                                 role="tabpanel"
+                                 aria-labelledby="nav-about-tab">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 1</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 2</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 3</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 4</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade oe_structure oe_empty" id="nav-dinner"
+                                 role="tabpanel"
+                                 aria-labelledby="nav-profile-tab">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 1</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 2</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 3</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 4</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade oe_structure oe_empty" id="nav-desserts"
+                                 role="tabpanel"
+                                 aria-labelledby="nav-profile-tab">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 1</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 2</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 3</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                        <div class="tab-wrapper">
+                                            <h5>Menu Item 4</h5>
+                                            <span class="price">$14.95</span>
+                                            <div class="dotted-bg"></div>
+                                        </div>
+                                            <p>pellentesque enim. Aliquam tempor</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <a href="#" class="btn btn-lg btn-primary mt32">Full Menu</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

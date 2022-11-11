@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="team_11" name="Team11">
+        <section class="s_three_columns pt64 pb64" id="team_6" data-visible="team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Our Team</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+                <div class="row d-flex align-items-stretch">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 s_col_no_bgcolor pt16 pb16">
+                        <div class="bg-white">
+                            <img class="card-img-top"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg"
+                                 alt="Odoo - Sample 1 for three columns"/>
+                            <div class="card-body">
+                                <h3 class="card-title"
+                                    style="text-align: center; ">
+                                    <font style="">Member
+                                        1
+                                    </font>
+                                </h3>
+                                <p class="card-text"
+                                   style="text-align: center; ">Adapt these
+                                    three columns to fit you design need.
+                                </p>
+                                <p class="text-center mt8 mb8 ">
+                                    <a href="" class="m-2">
+                                        <i class="fa fa-facebook fa-2x"/>
+                                    </a>
+
+                                    <a href="" class="m-2">
+                                        <i class="fa fa-twitter fa-2x"/>
+                                    </a>
+
+                                    <a href="" class="m-2">
+                                        <i class="fa fa-linkedin fa-2x"/>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 s_col_no_bgcolor pt16 pb16">
+                        <div class="bg-white">
+                            <img class="card-img-top"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg"
+                                 alt="Odoo - Sample 2 for three columns"
+                                 data-original-title="" title=""
+                                 aria-describedby="tooltip888441"/>
+                            <div class="card-body">
+                                <h3 class="card-title"
+                                    style="color: rgb(33, 37, 41); text-align: center;">
+                                    <font>Member 2</font>
+                                </h3>
+                                <p class="card-text"
+                                   style="text-align: center; ">Adapt these
+                                    three columns to fit you design need.
+                                    <br/>
+                                </p>
+                                <p class="text-center mt8 mb8 ">
+                                    <a href="" class="m-2">
+                                        <i class="fa fa-facebook fa-2x"/>
+                                    </a>
+
+                                    <a href="" class="m-2">
+                                        <i class="fa fa-twitter fa-2x"/>
+                                    </a>
+
+                                    <a href="" class="m-2">
+                                        <i class="fa fa-linkedin fa-2x"/>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 s_col_no_bgcolor pt16 pb16">
+                        <div class="bg-white">
+                            <img class="card-img-top"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-39.jpg"
+                                 alt="Odoo - Sample 3 for three columns"/>
+                            <div class="card-body">
+                                <h3 class="card-title"
+                                    style="color: rgb(33, 37, 41); text-align: center;">
+                                    <font>Member 3</font>
+                                </h3>
+                                <p class="card-text"
+                                   style="text-align: center; ">Adapt these
+                                    three columns to fit you design need.
+                                    <br/>
+                                </p>
+                                <p class="text-center mt8 mb8 ">
+                                    <a href="" class="m-2">
+                                        <i class="fa fa-facebook fa-2x"/>
+                                    </a>
+
+                                    <a href="" class="m-2">
+                                        <i class="fa fa-twitter fa-2x"/>
+                                    </a>
+
+                                    <a href="" class="m-2">
+                                        <i class="fa fa-linkedin fa-2x"/>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,627 @@
+.counter_timer_div .time_digit{
+    display: inline-block;
+}
+#timer_default{
+#days, #hours, #minutes, #seconds, #day_lbl, #h_lbl, #m_lbl, #s_lbl{
+    color: theme-color('primary');
+}
+.time_over_msg p{
+    color: #000000;
+}
+}
+/*--------------------Timer 1 Css Start---------------------------*/
+#timer_1{
+.box_degit{
+    border: 2px solid theme-color('primary');
+    padding: 35px 5px;
+}
+#days, #hours, #minutes, #seconds{
+    font-weight: bold;
+    font-size: 40px;
+    color: theme-color('primary');
+}
+#day_lbl, #h_lbl, #m_lbl, #s_lbl{
+    font-weight: bold;
+    font-size: 18px;
+    color: theme-color('primary');
+}
+.time_over_msg{
+    padding-bottom: 16px;
+}
+.time_over_msg p{
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid theme-color('primary');
+    color: #000000;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+.counter_timer_div .col-3{
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 16px;
+}
+}
+}
+/*--------------------Timer 1 Css End---------------------------*/
+
+/*--------------------Timer 2 Css Start---------------------------*/
+#timer_2{
+.counter_timer_div .time_digit:before {
+    right: 0px;
+    position: absolute;
+    top: 22px;
+    background-color: theme-color('primary');
+    content: "";
+    width: 3px;
+    height: 60px;
+    }
+.counter_timer_div .time_digit:nth-last-child(1):before{
+    background-color: unset;
+}
+#days, #hours, #minutes, #seconds{
+    font-weight: bold;
+    font-size: 40px;
+    color: theme-color('primary');
+}
+#day_lbl, #h_lbl, #m_lbl, #s_lbl{
+    font-weight: bold;
+    font-size: 18px;
+    color: theme-color('primary');
+}
+.time_over_msg p{
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+.counter_timer_div .col-3{
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-bottom: 16px;
+}
+.counter_timer_div .time_digit:nth-last-child(3):before{
+    background-color: unset;
+}
+}
+}
+/*--------------------Timer 2 Css End---------------------------*/
+
+/*--------------------Timer 3 Css Start---------------------------*/
+#timer_3{
+.box_degit{
+    background-color: theme-color('primary');
+    border: 1px solid theme-color('primary');
+    border-radius: 10px;
+    padding: 15px 0px;
+    color: #ffffff;
+}
+#days, #hours, #minutes, #seconds{
+    font-size: 24px;
+    font-weight: bold;
+}
+.time_over_msg p{
+    border-bottom-style: dotted;
+    border-color: theme-color('primary');
+    border-bottom-width: 5px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+.counter_timer_div .col-3{
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 16px;
+}
+}
+}
+/*--------------------Timer 3 Css End---------------------------*/
+
+/*--------------------Timer 4 Css Start---------------------------*/
+#timer_4{
+.box_degit{
+    padding: 30px 10px;
+    border: 3px solid  theme-color('primary');
+    border-radius: 50px 0 50px 0;
+    text-align: center;
+}
+.d-count{
+    display: inline-block;
+    width: 160px;
+    height: 80px;
+    line-height: 80px;
+    background: theme-color('primary');
+    border-radius: 0 50px 0 50px;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+#day_lbl, #h_lbl, #m_lbl, #s_lbl{
+    font-weight: bold;
+    font-size: 18px;
+    color: theme-color('primary');
+}
+.time_over_msg{
+    padding-bottom: 16px;
+}
+.time_over_msg p{
+    border: 3px solid theme-color('primary');
+    border-radius: 18px 0 18px 0;
+    display: inline-block;
+    padding: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+.d-count{
+    width: 100px;
+}
+}
+@media (min-width: 320px) and (max-width: 767px) {
+.counter_timer_div .col-3{
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 16px;
+}
+}
+}
+/*--------------------Timer 4 Css End---------------------------*/
+
+/*--------------------Timer 5 Css Start---------------------------*/
+#timer_5{
+.counter_timer_div .time_digit{
+    font-weight: normal;
+    text-align: center;
+    width: 200px;
+    padding-top: 50px;
+    border-radius: 100px;
+    height: 200px;
+    border: 1px solid theme-color('primary');
+    margin-left: 16px;
+}
+#day_lbl, #h_lbl, #m_lbl, #s_lbl{
+    display: block;
+    border-top: 1px solid theme-color('primary');
+    padding-top: 3px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: theme-color('primary');
+}
+#days, #hours, #minutes, #seconds{
+    font-weight: bold;
+    font-size: 36px;
+    color: theme-color('primary');
+}
+.time_over_msg p{
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    border-bottom: 2px dashed theme-color('primary');
+    color: #000000;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+.counter_timer_div .time_digit{
+    font-weight: normal;
+    text-align: center;
+    width: 150px;
+    padding-top: 30px;
+    border-radius: 100px;
+    height: 150px;
+    border: 1px solid theme-color('primary');
+    margin-left: 10px;
+}
+#days, #hours, #minutes, #seconds{
+    font-size: 28px;
+}
+}
+@media (min-width: 320px) and (max-width: 767px) {
+.counter_timer_div .col-3{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 16px;
+}
+.counter_timer_div .time_digit{
+    margin-left: 0px;
+}
+}
+}
+/*--------------------Timer 5 Css End---------------------------*/
+
+/*--------------------Timer 6 Css Start---------------------------*/
+#timer_6{
+.counter_timer_div .time_digit:before {
+    position: absolute;
+    color: theme-color('primary');
+    content: ":";
+    right: -7px;
+    top: 0px;
+    font-size: 40px;
+}
+.counter_timer_div .time_digit:nth-last-child(1):before{
+    color: unset;
+    content: "";
+}
+.border{
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    border-radius: 20px;
+}
+#days, #hours, #minutes, #seconds{
+    font-size: 40px;
+    color: theme-color('primary');
+}
+#day_lbl, #h_lbl, #m_lbl, #s_lbl{
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px dashed theme-color('primary');
+    font-weight: bold;
+    margin-top: 16px;
+    color: theme-color('primary');
+}
+.time_over_msg{
+    padding: 24px 0px;
+}
+.time_over_msg p{
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px dashed theme-color('primary');
+    padding: -10px;
+    padding: 7px 12px;
+    color: #000000;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+.counter_timer_div .col-3{
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-bottom: 16px;
+}
+.counter_timer_div .time_digit:nth-last-child(3):before{
+    color: unset;
+    content: "";
+
+}
+}
+}
+/*--------------------Timer 6 Css End---------------------------*/
+
+/*--------------------Timer 7 Css Start---------------------------*/
+#timer_7{
+.border{
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    border-radius: 20px;
+}
+.box_degit{
+    border: 1px #646464 dashed;
+    border-bottom: 2px solid theme-color('primary');
+    padding: 12px 0px 22px;
+}
+#days, #hours, #minutes, #seconds{
+    font-size: 40px;
+    font-weight: bold;
+    color: theme-color('primary');
+}
+#day_lbl, #h_lbl, #m_lbl, #s_lbl{
+    font-size: 18px;
+    font-weight: bold;
+    color: theme-color('primary');
+}
+.time_over_msg{
+    text-align: left;
+    margin: 24px 15px;
+}
+.time_over_msg p{
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px #646464 dashed;
+    border-bottom: 2px solid theme-color('primary');
+    padding: 12px;
+    color: #000000;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+.counter_timer_div .col-3{
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 16px;
+}
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+#days, #hours, #minutes, #seconds{
+    font-size: 24px;
+}
+#day_lbl, #h_lbl, #m_lbl, #s_lbl{
+    font-size: 15px;
+}
+}
+}
+/*--------------------Timer 7 Css End---------------------------*/
+
+/*--------------------Timer 8 Css Start---------------------------*/
+#timer_8{
+.counter_timer_div{
+    background-color: #f6f6f6;
+    border: 10px solid #fff;
+    text-align: center;
+    padding: 25px 35px 35px;
+}
+.counter_timer_div .time_digit:before {
+    position: absolute;
+    color: theme-color('primary');
+    content: ":";
+    right: -7px;
+    top: -4px;
+    font-size: 40px;
+}
+.counter_timer_div .time_digit:nth-last-child(1):before{
+    color: unset;
+    content: "";
+}
+#days, #hours, #minutes, #seconds{
+    font-size: 40px;
+    color: theme-color('primary');
+}
+#day_lbl, #h_lbl, #m_lbl, #s_lbl{
+    font-size: 18px;
+    color: theme-color('primary');
+}
+.time_over_msg p{
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 17px;
+    color: #000000;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+.counter_timer_div .col-3{
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-bottom: 16px;
+}
+#days, #hours, #minutes, #seconds{
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+#day_lbl, #h_lbl, #m_lbl, #s_lbl{
+    font-size: 15px;
+}
+.counter_timer_div .time_digit:nth-last-child(3):before{
+    color: unset;
+    content: "";
+
+}
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+#days, #hours, #minutes, #seconds{
+    font-size: 24px;
+}
+#day_lbl, #h_lbl, #m_lbl, #s_lbl{
+    font-size: 15px;
+}
+.counter_timer_div{
+    padding: 12px 10px 20px;
+}
+.counter_timer_div .time_digit:before {
+    top: -12px;
+}
+}
+}
+
+/*--------------------Timer 8 Css End---------------------------*/
+
+/*--------------------Timer 9 Css Start---------------------------*/
+#timer_9{
+.counter_timer_div{
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+.time_digit:before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 50px solid rgba(0, 0, 0, 0.15);
+}
+.time_digit:after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-top: 50px solid rgba(0, 0, 0, 0.15);
+}
+.time_digit {
+    width: 150px;
+    height: 75px;
+    background: rgba(0, 0, 0, 0.15);
+    position: relative;
+    margin-left: 16px;
+    padding: 0px;
+}
+#days, #hours, #minutes, #seconds{
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+}
+#day_lbl, #h_lbl, #m_lbl, #s_lbl{
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.time_over_msg p{
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 17px;
+    color: #000000;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+.counter_timer_div .col-3{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.time_digit {
+    margin: 0px 16px;
+    margin-bottom: 35%;
+}
+}
+}
+/*--------------------Timer 9 Css End---------------------------*/
+
+/*--------------------Timer 10 Css Start---------------------------*/
+
+#timer_10{
+.counter_timer_div {
+    #day_lbl, #h_lbl, #m_lbl, #s_lbl{
+    display: inline-block !important;
+}
+}
+#days, #hours, #minutes, #seconds{
+    font-size: 50px;
+    font-weight: bold;
+    margin-right: 5px;
+    color: theme-color('primary');
+}
+#day_lbl, #h_lbl, #m_lbl, #s_lbl{
+    font-size: 12px;
+    font-weight: bold;
+    color: theme-color('primary');
+}
+.time_over_msg p{
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 17px;
+    color: #000000;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+.counter_timer_div .col-3{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+#days, #hours, #minutes, #seconds{
+    font-size: 36px;
+}
+}
+}
+/*--------------------Timer 10 Css End---------------------------*/
+
+/*--------------------Timer 11 Css Start---------------------------*/
+
+#timer_11{
+.timer_content{
+    position: absolute;
+    top: 10%;
+    left: 8%;
+}
+.timer_content h2, .time_over_msg p{
+    margin-left: 15px;
+}
+.time_digit{
+    border: 1px solid theme-color('primary');
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding-top: 15px;
+    margin-left: 5px;
+    background: #ffffff;
+}
+#days, #hours, #minutes, #seconds{
+    font-size: 18px;
+    font-weight: bold;
+    color: theme-color('primary');
+}
+#day_lbl, #h_lbl, #m_lbl, #s_lbl{
+    color: theme-color('primary');
+    font-weight: bold;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+.timer_content{
+    left: 5%;
+}
+.time_digit{
+    padding-top: 10px;
+    width: 75px;
+    height: 75px;
+}
+}
+@media (min-width: 320px) and (max-width: 767px) {
+.time_digit{
+    padding-top: 6px;
+    width: 65px;
+    height: 65px;
+}
+.timer_content{
+    left: 5%;
+}
+#day_lbl, #h_lbl, #m_lbl, #s_lbl{
+    font-size: 10px;
+}
+}
+}
+/*--------------------Timer 11 Css End---------------------------*/
+
+/*--------------------Timer 12 Css Start---------------------------*/
+#timer_12{
+.timer_content{
+    position: absolute;
+    top: 10%;
+    left: 8%;
+}
+.timer_content h2, .time_over_msg p{
+    margin-left: 15px;
+}
+.time_digit{
+    width: 80px;
+    height: 80px;
+    padding-top: 15px;
+    margin-left: 5px;
+    background: #ffffff;
+}
+#days, #hours, #minutes, #seconds{
+    font-size: 18px;
+    font-weight: bold;
+    color: theme-color('primary');
+}
+#day_lbl, #h_lbl, #m_lbl, #s_lbl{
+    color: theme-color('primary');
+    font-weight: bold;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+.timer_content{
+    left: 5%;
+}
+.time_digit{
+    padding-top: 10px;
+    width: 75px;
+    height: 75px;
+}
+}
+@media (min-width: 320px) and (max-width: 767px) {
+.time_digit{
+    padding-top: 6px;
+    width: 65px;
+    height: 65px;
+}
+.timer_content{
+    left: 5%;
+}
+#day_lbl, #h_lbl, #m_lbl, #s_lbl{
+    font-size: 10px;
+}
+}
+}

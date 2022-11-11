@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+    <data>
+        <record id="dynamic_snippet_event_filter" model="ir.filters">
+        <field name="name">All Events</field>
+        <field name="model_id">event.event</field>
+            <field name="user_id" eval="False" />
+        </record>
+
+        <record id="dynamic_snippet_data_source_event"
+                model="website.snippet.filter">
+            <field name="field_names">name,record_cover:image</field>
+            <field name="filter_id"
+                   ref="website_snippet_events_carousel_ul_73lines.dynamic_snippet_event_filter"/>
+            <field name="limit" eval="16"/>
+            <field name="name">Event</field>
+            <field name="website_id" ref="website.default_website"/>
+        </record>
+    </data>
+</odoo>

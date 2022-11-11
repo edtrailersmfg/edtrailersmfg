@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Portfolio 1" id="portfolio_1">
+        <section class="pt64 pb64" data-visible="portfolios">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Portfolio</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-center pb24">
+                        <div class="border">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 alt="" class="img-fluid"/>
+                            <div class="pl32 pr32">
+                                <h3 class="pt16">Portfolio One</h3>
+                                <p>
+                                    <i class="fa fa-map-marker mr-2 pt8 pb8"></i>
+                                    Location
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-center pb24">
+                        <div class="border">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 alt="" class="img-fluid"/>
+                            <div class="pl32 pr32">
+                                <h3 class="pt16">Portfolio Two</h3>
+                                <p>
+                                    <i class="fa fa-map-marker mr-2 pt8 pb8"></i>
+                                    Location
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-center pb24">
+                        <div class="border">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 alt="" class="img-fluid"/>
+                            <div class="pl32 pr32">
+                                <h3 class="pt16">Portfolio Three</h3>
+                                <p>
+                                    <i class="fa fa-map-marker mr-2 pt8 pb8"></i>
+                                    Location
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-center pb24">
+                        <div class="border">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 alt="" class="img-fluid"/>
+                            <div class="pl32 pr32">
+                                <h3 class="pt16">Portfolio Four</h3>
+                                <p>
+                                    <i class="fa fa-map-marker mr-2 pt8 pb8"></i>
+                                    Location
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="#" class="pt32 pb32"><i
+                            class="fa fa-star mr-2 pt8 pb8"></i>All Portfolio
+                    </a>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

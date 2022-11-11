@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="feature_36" name="Feature 36">
+        <section class="sni-block pt64 pb64" data-visible="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-10 col-lg-8">
+                        <h2>Lorem Ipsum is simply dummy text of
+                            the printing and type setting.
+                        </h2>
+                        <p>Lorem Ipsum is simply dummy text of
+                            the printing and typesettingLorem Ipsum is simply
+                            dummy text of the printing and typesetting.
+                            Lorem Ipsum is simply dummy text of
+                            the printing and typesettingLorem Ipsum is simply
+                            dummy text of the printing and typesetting
+                        </p>
+
+                        <p>
+                            <a href="#">Explore all
+                                features
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row text-center pt-5">
+                    <div class="col-12 col-sm-12 col-md-10 col-lg-8">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                                <img alt="image"
+                                     class="img-fluid sni-block-icon mb8"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-70.svg"/>
+                                <h3>Feature One</h3>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                                <img alt="image"
+                                     class="img-fluid sni-block-icon mb8"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-61.svg"/>
+                                <h3>Feature Two</h3>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                                <img alt="image"
+                                     class="img-fluid sni-block-icon mb8"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-66.svg"/>
+                                <h3>Feature Three</h3>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                                <img alt="image"
+                                     class="img-fluid sni-block-icon mb8"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-31.svg"/>
+                                <h3>Feature Four</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

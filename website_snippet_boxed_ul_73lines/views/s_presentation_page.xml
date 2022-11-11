@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="s_presentation_page" name="Presentation Page">
+        <section class="well presentation-page" id="well">
+            <div class="panel bg-primary">
+                <div class="container panel-container">
+                    <div class="row mt64 mb64 align-items-center">
+                        <div class="col-md-6 mt16 mb16">
+                            <h1 class="text-white">Discover new features, customization options and new effects</h1>
+                            <span class="divider">
+                                <span class="circle">
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                </span>
+                            </span>
+                            <p class="light-white">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+                                ipsam
+                                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+                                porro quisquam est.
+                            </p>
+                        </div>
+
+                        <div class="col-md-6 mt16 mb16">
+                            <img class="img img-fluid"
+                                 src="/website_snippet_boxed_ul_73lines/static/src/img/serv2-2.png"
+                                 alt=""/>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel bg-success">
+                <div class="container panel-container">
+                    <div class="row mt64 mb64 align-items-center">
+                        <div class="col-md-6 mt16 mb16">
+                            <img class="img img-fluid"
+                                 src="/website_snippet_boxed_ul_73lines/static/src/img/serv2-2.png"
+                                 alt=""/>
+
+                        </div>
+                        <div class="col-md-6 mt16 mb16">
+                            <h1 class="text-white">Discover new features, customization options and new effects</h1>
+                            <span class="divider">
+                                <span class="circle">
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                </span>
+                            </span>
+                            <p class="light-white">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+                                ipsam
+                                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+                                porro quisquam est.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel bg-info">
+                <div class="container panel-container">
+                    <div class="row mt64 mb64 align-items-center">
+                        <div class="col-md-6 mt16 mb16">
+                            <img class="img img-fluid"
+                                 src="/website_snippet_boxed_ul_73lines/static/src/img/serv2-2.png"
+                                 alt=""/>
+                        </div>
+                        <div class="col-md-6 mt16 mb16">
+                            <h1 class="text-white">Discover new features, customization options and new effects</h1>
+                            <span class="divider">
+                                <span class="circle">
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                </span>
+                            </span>
+                            <p class="light-white">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+                                ipsam
+                                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+                                porro quisquam est.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel bg-beta">
+                <div class="container panel-container">
+                    <div class="row mt64 mb64 align-items-center">
+                        <div class="col-md-6 mt16 mb16">
+                            <h1 class="text-white">Discover new features, customization options and new effects</h1>
+                            <span class="divider">
+                                <span class="circle">
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                </span>
+                            </span>
+                            <p class="light-white">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+                                ipsam
+                                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+                                porro quisquam est.
+                            </p>
+                        </div>
+
+                        <div class="col-md-6 mt16 mb16">
+                            <img class="img img-fluid"
+                                 src="/website_snippet_boxed_ul_73lines/static/src/img/serv2-2.png"
+                                 alt=""/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-footer bg-100 pt64 pb64">
+                <div class="container panel-container">
+                    <div class="row text-center">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                            <i class="fa fa-3x fa-phone-square pb24"></i>
+                            <h6>Toll Number</h6>
+                            <p>
+                                <span t-field="res_company.phone"/>
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                            <i class="fa fa-3x fa-envelope-o pb24"></i>
+                            <h6>Info Services</h6>
+                            <p>
+                                <span t-field="res_company.email"/>
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                            <i class="fa fa-3x fa-envelope-o pb24"></i>
+                            <h6>Support Service</h6>
+                            <p>
+                                <span t-field="res_company.email"/>
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                            <i class="fa fa-3x fa-map-marker pb24"></i>
+                            <h6>Address</h6>
+                            <p>
+                                <span t-field="res_company.street"/>
+                                <span t-field="res_company.country_id.name"/>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mt64">
+                            <a t-att-href="res_company.social_twitter">
+                                <i class="fa fa-2x fa-twitter social_icon_size social_twitter mx-2 mb8"></i>
+                            </a>
+                            <a t-att-href="res_company.social_facebook">
+                                <i class="fa fa-2x fa-facebook social_icon_size social_facebook mx-2 mb8"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-2x fa-google-plus social_icon_size social_g_plus mx-2 mb8"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-2x fa-dribbble social_icon_size social_dribbble mx-2 mb8"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-2x fa-behance social_icon_size social_behance mx-2 mb8"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row p-4"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <div class="pb24">
+                            Copyright &amp;copy;
+                            <span t-field="res_company.name">Company name
+                            </span>
+                        </div>
+                        <div>
+                            Responsive Odoo theme,
+                            <span>
+                                Made with
+                                <i class="fa fa-heart"/>
+                                by
+                                <strong>&lt;73Lines&gt;</strong>
+                            </span>
+                        </div>
+                        <!--                    <div>-->
+                        <!--                        <t t-call="website.language_selector"/>-->
+                        <!--                    </div>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

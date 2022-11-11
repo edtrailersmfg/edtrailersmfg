@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="timer_7" name="Timer 7">
+        <section class="pt64 pb64" id="timer_7"
+                 style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/image-1170.jpg&quot;);
+    background-repeat: no-repeat;
+    background-size: cover;" data-visible="timer">
+            <div class="container">
+                <div class="row justify-content-end">
+                    <div class="col-12 col-lg-8 col-md-8 col-sm-12 pb16 bg-white-50 border pt64 pb64">
+                        <h2 class="font-weight-bold ml-3">We Are Launching In!</h2>
+                        <p class="ml-3">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        </p>
+                        <div class="counters_timer_js text-center" data-date="nan" data-msg='nun'
+                             data-mins-1="" data-disp="timer_days"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="counter_timer_options"
+              inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-js='counters_timer_js' data-selector=".counters_timer_js"
+                 data-drop-in=".timer_counter_div">
+<!--                <li data-date_configure="" data-no-preview="true">-->
+                    <we-button data-date_configure="" data-no-preview="true">
+                        <i class="fa fa-clock-o"/>
+                        Change Time
+                    </we-button>
+<!--                </li>-->
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

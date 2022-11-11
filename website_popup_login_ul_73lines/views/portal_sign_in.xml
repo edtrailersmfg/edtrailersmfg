@@ -1,0 +1,170 @@
+<odoo>
+
+    <template id="pop_up_sign_in_portal_id" inherit_id="portal.user_sign_in">
+        <xpath expr="//a[@t-attf-class='#{_link_class}']" position="replace">
+            <a id="sign_in_pop_up_id" class="nav-link sign_in_without_popup">
+                <b>Sign in</b>
+            </a>
+            <a id="sign_in_sidebar_id" class="nav-link sign_in_sidebar my_login_sidebar d-none">
+                <b>Sign in</b>
+            </a>
+            <div role="dialog" class="modal fade" id="website_popup_login_ul_73lines_modal">
+                <div class="modal-dialog">
+                    <div id="accept_register" t-att-data-token="request.csrf_token()" class="modal-content">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <header class="modal-header">
+                            <h5 class="modal-title text-black font-weight-bold">Sign In</h5>
+                            <button type="button" id="close_modal_button" class="close" data-dismiss="modal"
+                                    aria-label="Close">&amp;times;
+                            </button>
+                        </header>
+                        <main class="modal-body" id="sign-register-dialog">
+                            <form class="oe_login_form pop_up_form text-black py-2" role="form"
+                                  t-attf-action="/web/login{{ '?debug' if debug else '' }}" method="post"
+                                  onsubmit="this.action = this.action + location.hash">
+                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                                <div class="form-group field-db" t-if="databases and len(databases) &gt; 1">
+                                    <label for="db" class="col-form-label">Database</label>
+                                    <div t-attf-class="input-group {{'input-group-sm' if form_small else ''}}">
+                                        <input type="text" name="db" t-att-value="request.db" id="db"
+                                               t-attf-class="form-control #{'form-control-sm' if form_small else ''}"
+                                               required="required" readonly="readonly"/>
+                                        <span class="input-group-append">
+                                            <a role="button" href="/web/database/selector" class="btn btn-secondary">
+                                                Select
+                                                <i class="fa fa-database" role="img" aria-label="Database"
+                                                   title="Database"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group field-login">
+                                    <label for="login">Email</label>
+                                    <input type="text" placeholder="Email" name="login" t-att-value="login" id="login"
+                                           t-attf-class="form-control #{'form-control-sm' if form_small else ''}"
+                                           required="required" autofocus="autofocus" autocapitalize="off"/>
+                                </div>
+
+                                <div class="form-group field-password">
+                                    <label for="password">Password</label>
+                                    <input type="password" placeholder="Password" name="password" id="password"
+                                           t-attf-class="form-control #{'form-control-sm' if form_small else ''}"
+                                           required="required" autocomplete="current-password"
+                                           t-att-autofocus="'autofocus' if login else None" maxlength="4096"/>
+                                </div>
+
+                                <p class="alert alert-danger" t-if="error" role="alert">
+                                    <t t-esc="error"/>
+                                </p>
+                                <p class="alert alert-success" t-if="message" role="status">
+                                    <t t-esc="message"/>
+                                </p>
+                                <p>
+                                    <div id="error_msg_div"/>
+                                </p>
+
+                                <div t-attf-class="clearfix oe_login_buttons text-center mb-1 {{'pt-2' if form_small else 'pt-3'}}">
+                                    <button type="submit" class="btn btn-primary btn-block login_popup">Log in</button>
+                                    <div class="reset_password_render_class"/>
+                                    <t t-if="debug">
+                                        <button type="submit" name="redirect" value="/web/become"
+                                                class="btn btn-link btn-sm btn-block popup_super_user">Log in as
+                                            superuser
+                                        </button>
+                                    </t>
+                                    <div class="o_login_auth"/>
+                                </div>
+                                <div class="provider_render_class"/>
+
+                                <input type="hidden" name="redirect" t-att-value="redirect"/>
+                            </form>
+                        </main>
+                    </div>
+                </div>
+            </div>
+
+            <div id="website_sidebar_login_ul_73lines" class="categories-filter-drawer-login sign_in_sidebar d-none">
+                <div id="accept_register" t-att-data-token="request.csrf_token()" class="">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <div class="container">
+                        <div class="row categories-filter-drawer-prop">
+                            <div class="col-lg-12 text-right modal-header mb-2 align-items-center pt-0">
+                                <h5 class="modal-title font-weight-bold text-black">Sign In</h5>
+                                <a href="#"
+                                   class="categories-filter-drawer-toggle-login d-block login_sidebar_remove my_login_sidebar">
+                                    <i class="pe-7s pe-7s-close"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <main class="" id="sign-register-dialog">
+                        <form class="oe_login_form pop_up_form text-black py-2" role="form"
+                              t-attf-action="/web/login{{ '?debug' if debug else '' }}" method="post"
+                              onsubmit="this.action = this.action + location.hash">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                            <div class="form-group field-db" t-if="databases and len(databases) &gt; 1">
+                                <label for="db" class="col-form-label">Database</label>
+                                <div t-attf-class="input-group {{'input-group-sm' if form_small else ''}}">
+                                    <input type="text" name="db" t-att-value="request.db" id="db"
+                                           t-attf-class="form-control #{'form-control-sm' if form_small else ''}"
+                                           required="required" readonly="readonly"/>
+                                    <span class="input-group-append">
+                                        <a role="button" href="/web/database/selector" class="btn btn-secondary">
+                                            Select
+                                            <i class="fa fa-database" role="img" aria-label="Database"
+                                               title="Database"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group field-login">
+                                <label for="login">Email</label>
+                                <input type="text" placeholder="Email" name="login" t-att-value="login" id="login"
+                                       t-attf-class="form-control #{'form-control-sm' if form_small else ''}"
+                                       required="required" autofocus="autofocus" autocapitalize="off"/>
+                            </div>
+
+                            <div class="form-group field-password">
+                                <label for="password">Password</label>
+                                <input type="password" placeholder="Password" name="password" id="password"
+                                       t-attf-class="form-control #{'form-control-sm' if form_small else ''}"
+                                       required="required" autocomplete="current-password"
+                                       t-att-autofocus="'autofocus' if login else None" maxlength="4096"/>
+                            </div>
+
+                            <p class="alert alert-danger" t-if="error" role="alert">
+                                <t t-esc="error"/>
+                            </p>
+                            <p class="alert alert-success" t-if="message" role="status">
+                                <t t-esc="message"/>
+                            </p>
+                            <p>
+                                <div id="error_msg_div"/>
+                            </p>
+
+                            <div t-attf-class="clearfix oe_login_buttons text-center mb-1 {{'pt-2' if form_small else 'pt-3'}}">
+                                <button type="submit" class="btn btn-primary btn-block login_popup">Log in</button>
+                                <div class="reset_password_render_class"/>
+                                <t t-if="debug">
+                                    <button type="submit" name="redirect" value="/web/become"
+                                            class="btn btn-link btn-sm btn-block popup_super_user">Log in as
+                                        superuser
+                                    </button>
+                                </t>
+                                <div class="o_login_auth"/>
+                            </div>
+                            <div class="provider_render_class"/>
+
+                            <input type="hidden" name="redirect" t-att-value="redirect"/>
+                        </form>
+                    </main>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

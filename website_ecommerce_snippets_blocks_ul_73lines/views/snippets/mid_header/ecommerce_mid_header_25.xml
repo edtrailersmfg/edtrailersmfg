@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Ecommerce Mid Header 25" id="ecommerce_mid_header_25">
+        <section class="border" id="mid-header-top-25" data-visible="mid_headears">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 oe_structure col-lg-4 col-md-6 col-sm-12 pt8 pb8 align-self-center text-center text-lg-left text-md-left"
+                         id="mid-header-top-left">
+                        <li class="list-inline-item">
+                            <div class="oe_structure oe_empty o_default_snippet_text">
+                                <a href="#" class="text-beta o_default_snippet_text">
+                                    <i class="fa fa-shopping-bag px-1"></i>
+                                    International collect
+                                </a>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="col-12 oe_structure col-lg-8 col-md-6 col-sm-12  align-self-center  text-center text-lg-right text-md-right"
+                         id="mid-header-top-right">
+                        <li class="list-inline-item account_custom">
+                            <div class="dropdown">
+                                <a class="dropdown-toggle o_default_snippet_text pl-2 pr-3 pt8 pb8"
+                                   type="button"
+                                   id="dropdownMenu1"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-user-circle text-beta icon_style d-inline px-1"></i>
+                                    <span class="hide_content text-beta">My Account</span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+                                    <a class="text-xs-center dropdown-item" href="/web/login"
+                                       id="ultimate_sign_in">
+                                        Sign in
+                                    </a>
+                                    <a href="/web/signup" class="text-xs-center dropdown-item"
+                                       id="ultimate_register">
+                                        <span>Register</span>
+                                    </a>
+
+                                    <a href="/my/home" role="menuitem" class="dropdown-item"
+                                       id="ultimate_my_account">My
+                                        Account
+                                    </a>
+                                    <a class="dropdown-item"
+                                       t-attf-href="/web/session/logout?redirect=/" role="menuitem"
+                                       id="ultimate_logout">
+                                        Logout
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="my_wish"
+                            class="list-inline-item pt8 pb8">
+                            <div class="oe_structure oe_empty">
+                                <div class="d-flex">
+                                    <t t-if="request.env.ref('website_sale_wishlist.add_to_wishlist').active">
+                                        <!--                                        <t t-set='wishcount'-->
+                                        <!--                                           t-value="len(request.env['product.wishlist'].current())"/>-->
+                                        <span class="nav-item">
+                                            <a href="/shop/wishlist"
+                                               class="text-black o_default_snippet_text"
+                                               title="wishlist">
+                                                <i class="fa fa-heart text-beta icon_style d-inline px-1"
+                                                   title="wishlist"></i>
+                                                <span class="hide_content text-beta">Wishlist</span>
+                                                <!--                                        <sup t-attf-class="my_wish_quantity o_animate_blink badge badge-primary">-->
+                                                <!--                                            <t t-esc='wishcount'/>-->
+                                                <!--                                        </sup>-->
+                                            </a>
+                                        </span>
+                                    </t>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="px-2 list-inline-item  pb8 pl-2 pr-3 pt8">
+                            <div class="oe_structure oe_empty">
+                                <a href="#" class="text-beta o_default_snippet_text">
+                                    <i class="fa fa-location-arrow"></i>
+                                    Store Location
+                                </a>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-0 pb-0" id="mid-header-bottom-25">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-3 col-md-4 pt8 pb8 align-self-center text-center text-md-center text-lg-left oe_structure"
+                         id="mid-header-bottom-left">
+                        <li class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <t t-call="website_ecommerce_snippets_blocks_ul_73lines.s_searchbar_input_ultimate"></t>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="col-12 col-sm-12 col-lg-4 col-md-4 pt8 pb8 align-self-center text-center text-md-right text-lg-right oe_structure"
+                         id="mid-header-bottom-center">
+                        <div class="oe_structure oe_empty">
+                            <a href="/" class="img-fluid">
+                                <img src="/logo.png"
+                                     t-att-alt="'Logo of %s' % res_company.name"
+                                     t-att-title="res_company.name"/>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-lg-5 col-md-4 oe_structure text-lg-right text-md-right text-center"
+                         id="mid-header-bottom-right">
+                        <li class="list-inline-item" style="margin-top: 10px;">
+                            <div class="oe_structure oe_empty">
+                                <div class="d-flex justify-content-center justify-content-lg-end align-self-center">
+                                    <i class="fa fa-2x pr-2 pt-2 pe-7s-call fa-500px" data-original-title="" title=""
+                                       aria-describedby="tooltip829965" style=""/>
+                                    <div class="text-left align-self-center">
+                                        <p class="o_default_snippet_text">Call us
+                                            <br/>
+                                            <span t-field="res_company.phone"/>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="my_cart" class="list-inline-item pt8 pb8">
+                            <div class="oe_structure oe_empty">
+                                <!--                                <t t-set="website_sale_order"-->
+                                <!--                                   t-value="website.sale_get_order()"/>-->
+                                <a href="/shop/cart" class="pr-2 text-black o_default_snippet_text">
+                                    <i class="fa fa-2x fa-shopping-basket text-danger align-self-center"
+                                       title="add to cart"></i>
+                                    <span class="hide_content">SHOPPING CART</span>
+
+                                </a>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

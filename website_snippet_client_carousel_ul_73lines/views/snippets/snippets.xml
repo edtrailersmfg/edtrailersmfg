@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <template id="s_dynamic_snippet_add_object_name" inherit_id="website.s_dynamic_snippet_template">
+        <xpath expr="//section" position="attributes">
+            <attribute name="t-att-data-object_name">object_name</attribute>
+            <attribute name="t-att-data-snippet_identifier">snippet_identifier</attribute>
+        </xpath>
+    </template>
+
+    <template id="custom_snippet_clients" name="Clients Carousel 73lines">
+        <t t-call="website.s_dynamic_snippet_template">
+            <t t-set="snippet_name" t-value="'custom_snippet_clients'"/>
+            <t t-set="object_name" t-value="'res.partner'"/>
+            <t t-set="snippet_identifier" t-value="'Client Template'"/>
+        </t>
+    </template>
+
+
+    <template id="s_dynamic_snippet_products_options" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <t t-call="website.dynamic_snippet_carousel_options_template">
+                <t t-set="snippet_name" t-value="'dynamic_snippet_clients'"/>
+                <t t-set="snippet_selector" t-value="'.custom_snippet_clients'"/>
+<!--                <we-select string="Filter" data-name="client_category_opt" data-attribute-name="filterId"-->
+<!--                           data-no-preview="true"/>-->
+                <we-select string="⌙ No Of Rows" data-name="number_of_row" data-attribute-name="rowSize"
+                           data-no-preview="true"><!-- &emsp; -->
+                    <we-button data-select-data-attribute="1">1</we-button>
+                    <we-button data-select-data-attribute="2">2</we-button>
+                    <we-button data-select-data-attribute="3">3</we-button>
+                </we-select>
+
+            </t>
+        </xpath>
+    </template>
+
+    <template id="snippets" inherit_id="website.snippets" name="custom snippets">
+        <xpath expr="//div[@id='snippet_effect']/div[@class='o_panel_body']" position="inside">
+            <t t-snippet="website_snippet_client_carousel_ul_73lines.custom_snippet_clients"
+               t-thumbnail="/website_snippet_client_carousel_ul_73lines/static/src/img/s-client-carousel.png"/>
+        </xpath>
+    </template>
+
+    <template id="dynamic_client_snippet_options_filter" inherit_id="website.s_dynamic_snippet_options_template">
+        <xpath expr="//we-select[@data-name='template_opt']"
+               position="after">
+            <we-select string="Filter" data-name="client_category_opt" data-attribute-name="filterId"
+                       data-no-preview="true"/>
+        </xpath>
+    </template>
+
+</odoo>

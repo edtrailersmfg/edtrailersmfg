@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Newsletter 1" id="newsletter_1">
+        <section class="pt64 pb64" id="newsletter_1" data-visible="newsletter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <p>Tagline</p>
+                        <h1 class="font-weight-bold mb32">Subscribe to get a free update
+                        </h1>
+                        <p class="mb32">Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit, sed do eiusmod tempor incid idunt ut labore<br/>et dolore
+                            magna
+                            aliqua. Ut enim ad minimol.
+                        </p>
+                        <div class="mt24 col-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="col-lg-6 col-md-8 mx-auto p-0 input-group js_subscribe" data-list-id="0">
+                                <input type="email" name="email" class="js_subscribe_email form-control"
+                                       placeholder="your email..."/>
+                                <span class="input-group-append">
+                                    <a role="button" href="#" class="btn btn-primary js_subscribe_btn">Subscribe</a>
+                                    <a role="button" href="#" class="btn btn-success js_subscribed_btn d-none"
+                                       disabled="disabled">Thanks
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

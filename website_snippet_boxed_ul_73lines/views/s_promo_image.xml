@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="s_promo_image" name="Promo Images">
+        <section class="s_promo_image">
+            <div class="homepage-grid-banner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="grid1" style="position:relative;">
+                                <img src="/website_snippet_boxed_ul_73lines/static/src/img/566x536.png"
+                                     alt=""/>
+                                <div class="ribbon theme-border-color"
+                                     style="position:absolute;right:0;top:0;color:#fff;">
+                                    <div
+                                            style="position:absolute;right:9%;top:10%;width:90%;text-align:right;">
+                                        <em
+                                                style="font-weight:300;font-style:normal;color:#fff;margin-right:26%;">
+                                            UP TO
+                                        </em>
+                                        <h4 style="font-weight:700;color:#fff;">
+                                            70%
+                                        </h4>
+                                        <h5 style="font-weight:600;color:#fff;">
+                                            OFF
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="content"
+                                     style="position:absolute;right:15%;bottom:14%;text-align:right;">
+                                    <h2
+                                            style="font-weight:800;font-style:italic;color:#fff;margin-bottom:0;">
+                                        HUGE
+                                        <b style="font-weight:600;">SALE</b>
+                                    </h2>
+                                    <p style="font-weight:300;color:#fff;">
+                                        Now starting at
+                                        <b style="font-weight:600;">$99</b>
+                                    </p>
+                                    <a href="#">Shop now &gt;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="grid2" style="position:relative;">
+                                <img src="/website_snippet_boxed_ul_73lines/static/src/img/279x536.png"
+                                     alt=""/>
+                                <div class="content"
+                                     style="position:absolute;right:10%;top:0%;text-align:right;">
+                                    <h3 style="font-weight:400;color:#121213;">
+                                        amazing
+                                    </h3>
+                                    <h2 style="font-weight:800;color:#121213;margin-bottom:10px;">
+                                        COLLECTION
+                                    </h2>
+                                    <a style="color:#121213;margin:0;"
+                                       href="#">Shop now &gt;
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="grid3 col-sm-margin"
+                                 style="position:relative;">
+                                <img src="/website_snippet_boxed_ul_73lines/static/src/img/279x264.png"
+                                     alt=""/>
+                                <div class="content"
+                                     style="position:absolute;right:11.55%;top:25%;text-align:right;">
+                                    <p style="font-weight:300;color:#313131;">
+                                        MOBILE
+                                    </p>
+                                    <p style="font-weight:700;color:#313131;">
+                                        MEGA SALE
+                                    </p>
+                                    <h4 style="font-weight:400;color:#888;">
+                                        <span>$</span>
+                                        450.
+                                        <span>00</span>
+                                    </h4>
+                                    <h3 class="theme-color"
+                                        style="font-weight:400">
+                                        <span>$</span>
+                                        350.
+                                        <span>00</span>
+                                    </h3>
+                                    <a href="/shop">Shop now &gt;</a>
+                                </div>
+                            </div>
+                            <div class="grid4" style="position:relative;">
+                                <img src="/website_snippet_boxed_ul_73lines/static/src/img/279x264.png"
+                                     alt=""/>
+                                <div class="content"
+                                     style="position:absolute;left:0;top:17%;text-align:center;width:100%;">
+                                    <h2 style="font-weight:300;color:#000;">
+                                        <b style="font-weight:600;font-style:italic;">
+                                            Deals
+                                        </b>
+                                        +
+                                        <br/>
+                                        PROMOS
+                                    </h2>
+                                    <p
+                                            style="font-weight:300;color:#000;opacity:0.7;filter:alpha(opacity=70);font-style:italic;">
+                                        Limited sales in
+                                        <br/>
+                                        our categories.
+                                    </p>
+                                    <a class="btn btn-primary" href="/shop">
+                                        SHOP NOW
+                                        <i class="icon-right-dir"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+</odoo>

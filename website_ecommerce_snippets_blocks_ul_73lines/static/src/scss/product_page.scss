@@ -1,0 +1,424 @@
+//----- Pager ------//
+#product_pager_top,#product_pager_bottom{
+    .btn{
+        border-radius:0 !important;
+        background: transparent !important;
+        color: #333333;
+        border: 1px solid #ededed;
+    }
+
+
+
+    .btn,.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus {
+        box-shadow:none;
+    }
+}
+
+#product_pager_top{
+    .pagination,.o_website_sale_search{
+        display:none;
+    }
+
+}
+
+#product_pager_top.justify-content-center,#product_pager_bottom > div{
+        webkit-box-pack: end !important;
+        justify-content: flex-end !important;
+    }
+//----- Pager ----//
+
+//----- Grid View Start ------//
+
+    .oe_grid{
+        .o_wsale_product_btn{
+                    background:#fff;
+
+                    a.btn.btn-secondary,button.btn.btn-secondary{
+                      display: block !important;
+                      float: left;
+                      padding: 8px;
+                      background: transparent;
+                      width: 25%;
+                      border-right: 1px solid #ededed;
+                      //border-right: 1px solid theme-color('primary');
+                      border-radius:0;
+                      border-color:#ededed;
+                  }
+
+                  a.btn.btn-secondary span.fa,button.btn.btn-secondary span.fa,button.btn.btn-secondary i.fa{
+                        font-size:18px;
+                        //color:theme-color('secondary');
+                        color:#323232 !important;
+                        transition: color 0.3s ease, background-color 0.3s ease;
+
+                        &:hover{
+                            color:theme-color('alpha');
+                        }
+                  }
+
+                  a.btn.btn-secondary:focus,button.btn.btn-secondary:focus{
+                         box-shadow: none;
+                  }
+
+                  .btn.btn-secondary:last-child{
+                    border-right: none;
+                  }
+
+          }
+        }
+
+@media (min-width: 767px) {
+    #grid_list.oe_grid{
+
+        padding-bottom:16px;
+        padding:0;
+
+         .o_wsale_product_btn{
+                    background:#fff;
+
+                    a.btn.btn-secondary,button.btn.btn-secondary{
+                      display: block !important;
+                      float: left;
+                      padding: 8px;
+                      background: transparent;
+                      width: 25%;
+                      border-right: 1px solid #ededed;
+                      //border-right: 1px solid theme-color('primary');
+                      border-radius:0;
+                  }
+
+                  a.btn.btn-secondary span.fa,button.btn.btn-secondary span.fa,button.btn.btn-secondary i.fa{
+                        font-size:18px;
+                        //color:theme-color('secondary');
+                        color:#323232 !important;
+                        transition: color 0.3s ease, background-color 0.3s ease;
+
+                        &:hover{
+                            color:theme-color('alpha') !important;
+                        }
+                  }
+
+                  a.btn.btn-secondary:focus,button.btn.btn-secondary:focus{
+                         box-shadow: none;
+                  }
+
+                  .btn.btn-secondary:last-child{
+                    //border-right: none;
+                  }
+
+          }
+
+         .oe_product_cart .oe_product_image img{
+             /*-------Uncomment This If You Want To Remove Description Over Div------*/
+              //position: absolute;
+              /*-------Uncomment This If You Want To Remove Description Over Div------*/
+            max-height: 100%;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            padding:5%;
+
+         }
+
+
+    }
+
+    #grid_list.oe_grid{
+
+        .product_price{
+            .btn.btn-secondary{
+                   // display: none !important;
+            }
+        }
+
+        &:hover{
+            .product_price{
+
+                // opacity:0;
+                  //border: 1px solid #ededed;
+        
+                  .btn-sm{
+                        border:none;
+                    }
+                        //text-align:center;
+
+                  b{
+                    display: none;
+                  }
+
+
+
+            }
+
+
+        }
+
+          //---- Quick View Issue Start ----//
+        .quick-modal{
+            .product_price{
+                -webkit-animation:unset !important;
+                animation: unet !important;
+                transition: unset;
+                position: unset;
+                width: unset;
+                display: unset;
+                background: unset;
+                left: unset;
+                padding-bottom: unset;
+                border-top: unset;
+                padding-top: unset;
+                text-align: unset;
+
+                b{
+                    display:block;
+                }
+            }
+
+        }
+        //----  Quick View Issue End ---//
+
+        .quick-btn{
+                color:inherit;
+            }
+
+        }
+
+    //---- Grid View End ----//
+
+
+    //---- List View Start ----//
+
+    .o_wsale_layout_list{
+        margin-bottom: 20px;
+        border: 1px solid #ededed;
+
+        > .o_wsale_product_information{
+            padding: 20px;
+            max-width: 70%;
+            margin: 5% 0;
+
+            div > section > div > b{
+                display: block;
+            }
+
+            .product_price{
+                text-align: left;
+                margin-bottom: 20px;
+                font-size: 25px;
+
+                a.btn,button.btn{
+                    border: none;
+                    margin-right: 5px;
+                    height: 40px;
+                    line-height: 40px;
+                    padding: 0;
+                    font-size: 20px;
+                    width: 40px;
+                    border-radius: 0;
+                }
+            }
+
+            section{
+                > h6{
+                    text-align: left;
+                    font-size: 20px;
+                    margin: 0 0 10px;
+                    line-height: 24px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+    }
+
+    //----List View End ----//
+
+    #grid_list{
+    //----Product Ribbon Start ----//
+        .ribbon{
+            font: unset;
+            font-size: 13px;
+            transform: unset;
+            top: 0px;
+            padding: 4px 0;
+
+            &:before,&:after{
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            top: -7px;
+            left: 0px;
+            }
+
+            &:after{
+                border-color: rgba(136, 183, 213, 0);
+                border-left-color: #ffffff;
+                border-width: 20px;
+                /* margin-top: -30px; */
+            }
+        }
+    //---- Product Ribbon End ----//
+    }
+}
+
+//---Responsive Screen Product Design Start (List/Grid View Same Design) ----//
+@media (max-width: 767px) {
+        #grid_list{
+            section{
+                background: rgba(255, 255, 255, 0.75) !important;
+            }
+
+            .product_price{
+                  /*-------Uncomment This If You Want To Remove Description Hover Div------*/
+                  //position: absolute;
+                  /*-------Uncomment This If You Want To Remove Description Hover Div------*/
+                  width: 100%;
+                  display: inline-block;
+                  background: #fff;
+                  left: 0;
+                  padding-bottom: 7px;
+                  border-top: 1px solid #ededed;
+                  padding-top: 7px;
+
+
+
+                  .btn-sm{
+                        border:none;
+                    }
+                        text-align:center;
+
+                  b{
+                    display: none;
+                  }
+
+                  a.btn.btn-secondary,button.btn.btn-secondary{
+                      display: block !important;
+                      float: left;
+                      padding: 8px;
+                      background: transparent;
+                      width: 25%;
+                      border-right: 1px solid #ededed;
+                      //border-right: 1px solid theme-color('primary');
+                      border-radius:0;
+                  }
+
+                  a.btn.btn-secondary span.fa,button.btn.btn-secondary span.fa,btn-secondary i{
+                        font-size:18px;
+                        //color:theme-color('secondary');
+                        color:#323232;
+                  }
+
+                  a.btn.btn-secondary:focus,button.btn.btn-secondary:focus{
+                         box-shadow: none;
+                  }
+
+                  .btn.btn-secondary:last-child{
+                    border-right: none;
+                  }
+
+            }
+
+        }
+
+}
+//---Responsive Screen Product Design End ----//
+
+//--- Common Design For List/Grid View Start ----//
+
+#grid_list{
+    //border:none;
+
+   /* &:hover,&:focus {
+        -webkit-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.14);
+        -moz-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.14);
+        -ms-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.14);
+        -o-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.14);
+        box-shadow: 0 1px 20px rgba(0, 0, 0, 0.14);
+        -webkit-transition: all 350ms ease 0s;
+        -moz-transition: all 350ms ease 0s;
+        -ms-transition: all 350ms ease 0s;
+        -o-transition: all 350ms ease 0s;
+        transition: all 350ms ease 0s;
+    }*/
+
+    .o_wsale_product_information_text{
+
+        text-align:left;
+        //padding: 10px 15px 5px 15px;
+
+        h6 a{
+            letter-spacing: 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            max-width: 280px;
+            -moz-transition: all 0.2s linear;
+            -webkit-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            color: #323232;
+        }
+    }
+
+    h6{
+        margin-bottom: 0px;
+        display: inline-block;
+        height: 24px;
+        position: relative;
+        width: 100%;
+    }
+
+    .text-info{
+        color:#323232 !important;
+    }
+
+}
+//--- Common Design For List/Grid View End ----//
+
+//---- Product Page Bottom Start----//
+#product_pager_bottom{
+    ul.pagination{
+        float:right;
+    }
+}
+//---- Product Page Bottom End----//
+
+//---- V13 Changes Start----//
+.oe_product_cart .o_wsale_product_btn{
+    position:unset !important;
+}
+
+.oe_grid{
+        margin: 16px 0;
+    .oe_product_cart:hover .o_wsale_product_information{
+        background:#fff !important;
+    }
+}
+
+.oe_grid > .oe_product_cart{
+    .o_wsale_product_information{
+        padding:2% !important;
+    }
+}
+
+@media (min-width: 767px){
+    .oe_grid {
+        padding:0 15px !important;
+    }
+}
+
+@media (max-width:1024px){
+    .o_wsale_product_btn .btn {
+        transform: scale(1) !important;
+    }
+}
+
+//---- V13 Changes End----//
+
+
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="cta_12" name="CTA 12">
+        <section class="s_call_to_action sni-block pt64 pb64" data-visible="cta">
+            <div class="container align-items-center justify-content-center d-flex">
+                <div class="row align-items-center text-left">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                        <img alt="image" class="img-fluid"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"/>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 pt-5">
+                        <h2>Call To Action</h2>
+                        <p class="lead">Lorem Ipsum is
+                            simply dummy text of the printing and typesetting
+                            industry.galley of type and scrambled
+                            it to make a type specimen book. It has survived
+                            electronic typesetting, remaining essentially
+                            Lorem Ipsum.
+                        </p>
+                        <p class="mt-4">
+                            <a href="/contactus"
+                               class="btn btn-secondary">Contact Us
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

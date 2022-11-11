@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="dynamic_filter_template_custom_blog_post_2" name="Blog Post 02">
+        <t t-foreach="records" t-as="record">
+            <div class="post-thumb s_blog_transparent">
+                <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                    <div class="blog_image"
+                         t-att-style="'background-image:'+record.background_url+'; -webkit-background-size: cover; min-height:222px; opacity:1;'"></div>
+                </a>
+                <div class="latest-blog-info">
+                    <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                        <h4 t-field="record.name"/>
+                    </a>
+                    <div class="post-excerpt">
+                        <p t-field="record.subtitle"/>
+                    </div>
+                    <div class="post-meta">
+                        <div class="entry-date">
+                            <i class="fa fa-calendar"/>
+                            <span t-field="record.create_date"
+                                  t-field-options='{"format": "MMMM d, yyyy"}'/>
+                        </div>
+                        <div class="entry-comment">
+                            <i class="fa fa-user"/>
+                            <span t-field="record.author_id"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_blog_post_3" name="Blog Post 03">
+        <t t-foreach="records" t-as="record">
+            <div class="post-thumb s_blog_bg_dark">
+                <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                    <div class="blog_image"
+                         t-att-style="'background-image:'+record.background_url+'; -webkit-background-size: cover; min-height:222px; opacity:1;'"></div>
+                </a>
+                <div class="latest-blog-info">
+                    <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                        <h4 t-field="record.name"/>
+                    </a>
+                    <div class="post-excerpt">
+                        <p t-field="record.subtitle"/>
+                    </div>
+                    <div class="post-meta">
+                        <div class="entry-date">
+                            <i class="fa fa-calendar"/>
+                            <span t-field="record.create_date"
+                                  t-field-options='{"format": "MMMM d, yyyy"}'/>
+                        </div>
+                        <div class="entry-comment">
+                            <i class="fa fa-user"/>
+                            <span t-field="record.author_id"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_blog_post_4" name="Blog Post 04">
+        <t t-foreach="records" t-as="record">
+            <div class="post-thumb s_blog_bg_light">
+                <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                    <div class="blog_image"
+                         t-att-style="'background-image:'+record.background_url+'; -webkit-background-size: cover; min-height:222px; opacity:1;'"></div>
+                </a>
+                <div class="latest-blog-info">
+                    <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                        <h4 t-field="record.name"/>
+                    </a>
+                    <div class="post-excerpt">
+                        <p t-field="record.subtitle"/>
+                    </div>
+                    <div class="post-meta">
+                        <div class="entry-date">
+                            <i class="fa fa-calendar"/>
+                            <span t-field="record.create_date"
+                                  t-field-options='{"format": "MMMM d, yyyy"}'/>
+                        </div>
+                        <div class="entry-comment">
+                            <i class="fa fa-user"/>
+                            <span t-field="record.author_id"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_blog_post_5" name="Blog Post 05">
+        <t t-foreach="records" t-as="record">
+            <div class="post-thumb blog_post_5">
+                <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                    <div class="blog_image"
+                         t-att-style="'background-image:'+record.background_url+'; -webkit-background-size: cover; min-height:222px; opacity:1;'"></div>
+                </a>
+                <div class="latest-blog-info">
+                    <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                        <h4 t-field="record.name"/>
+                    </a>
+                    <div class="post-excerpt">
+                        <p t-field="record.subtitle"/>
+                    </div>
+                    <div class="post-meta">
+                        <div class="entry-date">
+                            <i class="fa fa-calendar"/>
+                            <span t-field="record.create_date"
+                                  t-field-options='{"format": "MMMM d, yyyy"}'/>
+                        </div>
+                        <div class="entry-comment">
+                            <i class="fa fa-user"/>
+                            <span t-field="record.author_id"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_blog_post_6" name="Blog Post 06">
+        <t t-foreach="records" t-as="record">
+            <div class="post-thumb blog_post_6">
+                <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                    <div class="blog_image"
+                         t-att-style="'background-image:'+record.background_url+'; -webkit-background-size: cover; min-height:222px; opacity:1;'"></div>
+                </a>
+                <div class="latest-blog-info">
+                    <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                        <h4 t-field="record.name"/>
+                    </a>
+                    <div class="post-excerpt">
+                        <p t-field="record.subtitle"/>
+                    </div>
+                    <div class="post-meta">
+                        <div class="entry-date">
+                            <i class="fa fa-calendar"/>
+                            <span t-field="record.create_date"
+                                  t-field-options='{"format": "MMMM d, yyyy"}'/>
+                        </div>
+                        <div class="entry-comment">
+                            <i class="fa fa-user"/>
+                            <span t-field="record.author_id"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_blog_post_7" name="Blog Post 07">
+        <t t-foreach="records" t-as="record">
+            <div class="post-thumb blog_post_7">
+                <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                    <div class="blog_image"
+                         t-att-style="'background-image:'+record.background_url+'; -webkit-background-size: cover; min-height:222px; opacity:1;'"></div>
+                </a>
+                <div class="latest-blog-info">
+                    <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                        <h4 t-field="record.name"/>
+                    </a>
+                    <div class="post-excerpt">
+                        <p t-field="record.subtitle"/>
+                    </div>
+                    <div class="post-meta">
+                        <div class="entry-date">
+                            <i class="fa fa-calendar"/>
+                            <span t-field="record.create_date"
+                                  t-field-options='{"format": "MMMM d, yyyy"}'/>
+                        </div>
+                        <div class="entry-comment">
+                            <i class="fa fa-user"/>
+                            <span t-field="record.author_id"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_blog_post_8" name="Blog Post 08">
+        <t t-foreach="records" t-as="record">
+            <div class="post-thumb blog_post_8">
+                <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                    <div class="blog_image"
+                         t-att-style="'background-image:'+record.background_url+'; -webkit-background-size: cover; min-height:222px; opacity:1;'"></div>
+                </a>
+                <div class="latest-blog-info">
+                    <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                        <h4 t-field="record.name"/>
+                    </a>
+                    <div class="post-excerpt">
+                        <p t-field="record.subtitle"/>
+                    </div>
+                    <div class="post-meta">
+                        <div class="entry-date">
+                            <i class="fa fa-calendar"/>
+                            <span t-field="record.create_date"
+                                  t-field-options='{"format": "MMMM d, yyyy"}'/>
+                        </div>
+                        <div class="entry-comment">
+                            <i class="fa fa-user"/>
+                            <span t-field="record.author_id"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_blog_post_9" name="Blog Post 09">
+        <t t-foreach="records" t-as="record">
+            <div class="post-thumb blog_post_9">
+                <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                    <div class="blog_image"
+                         t-att-style="'background-image:'+record.background_url+'; -webkit-background-size: cover; min-height:222px; opacity:1;'"></div>
+                </a>
+                <div class="latest-blog-info">
+                    <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                        <h4 t-field="record.name"/>
+                    </a>
+                    <div class="post-excerpt">
+                        <p t-field="record.subtitle"/>
+                    </div>
+                    <div class="post-meta">
+                        <div class="entry-date">
+                            <i class="fa fa-calendar"/>
+                            <span t-field="record.create_date"
+                                  t-field-options='{"format": "MMMM d, yyyy"}'/>
+                        </div>
+                        <div class="entry-comment">
+                            <i class="fa fa-user"/>
+                            <span t-field="record.author_id"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_blog_post_10" name="Blog Post 10">
+        <t t-foreach="records" t-as="record">
+            <div class="post-thumb blog_post_10">
+                <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                    <div class="blog_image"
+                         t-att-style="'background-image:'+record.background_url+'; -webkit-background-size: cover; min-height:222px; opacity:1;'"></div>
+                </a>
+                <div class="latest-blog-info">
+                    <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                        <h4 t-field="record.name"/>
+                    </a>
+                    <div class="post-excerpt">
+                        <p t-field="record.subtitle"/>
+                    </div>
+                    <div class="post-meta">
+                        <div class="entry-date">
+                            <i class="fa fa-calendar"/>
+                            <span t-field="record.create_date"
+                                  t-field-options='{"format": "MMMM d, yyyy"}'/>
+                        </div>
+                        <div class="entry-comment">
+                            <i class="fa fa-user"/>
+                            <span t-field="record.author_id"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_blog_post_11" name="Blog Post 11">
+        <t t-foreach="records" t-as="record">
+            <div class="post-thumb blog_post_11">
+                <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                    <div class="blog_image"
+                         t-att-style="'background-image:'+record.background_url+'; -webkit-background-size: cover; min-height:222px; opacity:1;'"></div>
+                </a>
+                <div class="latest-blog-info">
+                    <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                        <h4 t-field="record.name"/>
+                    </a>
+                    <div class="post-excerpt">
+                        <p t-field="record.subtitle"/>
+                    </div>
+                    <div class="post-meta">
+                        <div class="entry-date">
+                            <i class="fa fa-calendar"/>
+                            <span t-field="record.create_date"
+                                  t-field-options='{"format": "MMMM d, yyyy"}'/>
+                        </div>
+                        <div class="entry-comment">
+                            <i class="fa fa-user"/>
+                            <span t-field="record.author_id"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_blog_post_12" name="Blog Post 12">
+        <t t-foreach="records" t-as="record">
+            <div class="post-thumb blog_post_12">
+                <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                    <div class="blog_image"
+                         t-att-style="'background-image:'+record.background_url+'; -webkit-background-size: cover; min-height:222px; opacity:1;'"></div>
+                </a>
+                <div class="latest-blog-info">
+                    <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                        <h4 t-field="record.name"/>
+                    </a>
+                    <div class="post-excerpt">
+                        <p t-field="record.subtitle"/>
+                    </div>
+                    <div class="post-meta">
+                        <div class="entry-date">
+                            <i class="fa fa-calendar"/>
+                            <span t-field="record.create_date"
+                                  t-field-options='{"format": "MMMM d, yyyy"}'/>
+                        </div>
+                        <div class="entry-comment">
+                            <i class="fa fa-user"/>
+                            <span t-field="record.author_id"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_blog_post_13" name="Blog Post 13">
+        <t t-foreach="records" t-as="record">
+            <div class="post-thumb blog_post_13">
+                <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                    <div class="blog_image"
+                         t-att-style="'background-image:'+record.background_url+'; -webkit-background-size: cover; min-height:222px; opacity:1;'"></div>
+                </a>
+                <div class="latest-blog-info">
+                    <a t-att-href="'/blog/%s/post/%s' % (record.blog_id.id, record.id)">
+                        <h4 t-field="record.name"/>
+                    </a>
+                    <div class="post-excerpt">
+                        <p t-field="record.subtitle"/>
+                    </div>
+                    <div class="post-meta">
+                        <div class="entry-date">
+                            <i class="fa fa-calendar"/>
+                            <span t-field="record.create_date"
+                                  t-field-options='{"format": "MMMM d, yyyy"}'/>
+                        </div>
+                        <div class="entry-comment">
+                            <i class="fa fa-user"/>
+                            <span t-field="record.author_id"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

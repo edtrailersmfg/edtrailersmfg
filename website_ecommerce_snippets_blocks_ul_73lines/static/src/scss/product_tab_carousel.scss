@@ -1,0 +1,220 @@
+/*-------------- Product Tab Carousel 2 Scss Start----------------*/
+#product_tab_carousel_2{
+.nav-tabs {
+    border-bottom: unset;
+}
+.nav-link {
+    border: 1px solid theme-color('primary');
+    border-radius: 50px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 8px 25px;
+    transition: all 0.3s ease 0s;
+}
+.nav-link.active, .nav-item.show .nav-link, .nav-link:hover, .nav-link:focus  {
+    background-color: theme-color('primary');
+    color: #ffffff;
+}
+}
+/*-------------- Product Tab Carousel 2 Scss End----------------*/
+
+/*-------------- Product Tab Carousel 3 Scss Start----------------*/
+#product_tab_carousel_3{
+.nav-tabs {
+    border-bottom: unset;
+}
+.nav-link {
+    border: 1px solid theme-color('primary');
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 0px;
+    font-weight: bold;
+    padding: 8px 25px;
+    transition: all 0.3s ease 0s;
+}
+.nav-link.active, .nav-item.show .nav-link, .nav-link:hover, .nav-link:focus  {
+    background-color: theme-color('primary');
+    color: #ffffff;
+}
+}
+/*-------------- Product Tab Carousel 3 Scss End----------------*/
+
+/*-------------- Product Tab Carousel 4 Scss Start----------------*/
+#product_tab_carousel_4{
+.nav-link {
+    border: unset;
+    padding: 8px 25px;
+//     margin-bottom: 5px;
+}
+.nav-link.active, .nav-item.show .nav-link {
+    border-bottom: 2px solid theme-color('primary');
+}
+}
+/*-------------- Product Tab Carousel 4 Scss End----------------*/
+
+/*-------------- Product Tab Carousel 5 Scss Start----------------*/
+#product_tab_carousel_5{
+.nav-tabs {
+    border-bottom: unset;
+}
+.nav-link {
+    border-top: 3px solid theme-color('primary');
+    border-bottom: 3px solid theme-color('primary');
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    background-color: theme-color('primary');
+    margin-right: 10px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease 0s;
+    padding: 8px 25px;
+}
+.nav-link.active, .nav-item.show .nav-link, .nav-link:hover, .nav-link:focus  {
+    background-color: transparent;
+    color: theme-color('primary');
+}
+.nav-link.active:before, .nav-item.show .nav-link:before, .nav-link:hover:before, .nav-link:focus:before  {
+    left: 0;
+}
+.nav-link:before {
+    content: "";
+    border-top: 8px solid theme-color('primary');
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    top: 0;
+    left: -50%;
+    transition: all 0.3s ease 0s;
+}
+.nav-link.active:after, .nav-item.show .nav-link:after, .nav-link:hover:after, .nav-link:focus:after  {
+    right: 0;
+}
+.nav-link:after {
+    content: "";
+    border-bottom: 8px solid theme-color('primary');
+    border-left: 8px solid transparent;
+    border-top: 8px solid transparent;
+    position: absolute;
+    bottom: 0;
+    right: -50%;
+    transition: all 0.3s ease 0s;
+}
+}
+/*-------------- Product Tab Carousel 5 Scss End----------------*/
+
+/*-------------- Product Tab Carousel 6 Scss Start----------------*/
+#product_tab_carousel_6{
+.nav-tabs {
+    border-bottom: unset;
+}
+.nav-link {
+    text-align: center;
+    padding:10px;
+    margin-bottom: 8px;
+    border-radius: 0;
+    transition: all 0.1s ease;
+}
+.nav-link.active, .nav-item.show .nav-link, .nav-link:hover, .nav-link:focus  {
+    background-color: theme-color('primary');
+    color: #ffffff;
+}
+}
+/*-------------- Product Tab Carousel 6 Scss End----------------*/
+
+/*-------------- Product Tab Carousel 7 Scss Start----------------*/
+#product_tab_carousel_7{
+.nav-tabs {
+    border-bottom: unset;
+}
+.nav-link {
+    text-align: center;
+    padding:10px;
+    margin-bottom: 8px;
+    border-radius: 0;
+    border: 1px solid theme-color('primary');
+    overflow: hidden;
+    position: relative;
+    font-weight: bold;
+}
+.nav-link:before {
+    content: '';
+    background-color: theme-color('primary');
+    height: 100%;
+    width: 4px;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all 0.3s;
+}
+.nav-link.active:before, .nav-item.show .nav-link:before, .nav-link:hover:before, .nav-link:focus:before  {
+    top: 0;
+}
+}
+/*-------------- Product Tab Carousel 7 Scss End----------------*/
+
+/*-------------- Product Tab Carousel 8 Scss Start----------------*/
+#product_tab_carousel_8{
+.nav-tabs {
+    border-bottom: unset;
+}
+.nav-link {
+    border: 1px solid theme-color('primary');
+    text-align: center;
+    padding:10px;
+    margin-bottom: 8px;
+    border-radius: 0px 20px 0px 20px;
+    font-weight: bold;
+    transition: all 0.3s ease 0s;
+}
+.nav-link.active, .nav-item.show .nav-link, .nav-link:hover, .nav-link:focus  {
+    background-color: theme-color('primary');
+    color: #ffffff;
+}
+}
+/*-------------- Product Tab Carousel 8 Scss End----------------*/
+
+/*-------------- Product Tab Carousel 9 Scss Start----------------*/
+#product_tab_carousel_9{
+.nav-tabs {
+    border-bottom: unset;
+}
+.nav-link {
+    border: 1px solid theme-color('primary');
+    text-align: center;
+    padding:10px;
+    margin-bottom: 8px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease 0s;
+}
+.nav-link.active, .nav-item.show .nav-link, .nav-link:hover, .nav-link:focus  {
+    background-color: theme-color('primary');
+    color: #ffffff;
+}
+}
+/*-------------- Product Tab Carousel 9 Scss End----------------*/
+
+/*-------------- Product Tab Carousel 10 Scss Start----------------*/
+#product_tab_carousel_10{
+.nav-tabs {
+    border-bottom: unset;
+}
+.nav-tabs .nav-link {
+    border: 0px;
+    border-right: 2px solid #ccc;
+    border-top-right-radius: 0;
+    padding:12px;
+    font-weight: bold;
+    transition: all 0.3s ease 0s;
+}
+.nav-tabs .nav-link.active {
+    border: 0px;
+    border-right: 2px solid theme-color('primary');
+    border-top-right-radius: 0;
+}
+}
+/*-------------- Product Tab Carousel 10 Scss End----------------*/

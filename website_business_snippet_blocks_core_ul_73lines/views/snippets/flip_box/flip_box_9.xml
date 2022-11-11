@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Flip Box 9" id="flip_box_9">
+        <section class="pt64 pb48" id="flip_box_9" data-visible="flipbox">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 flip_box_right mb16">
+                        <div class="row mx-0 d-block flip_box_inner">
+                            <div class="col-12 px-0 flip_box_front text-center">
+                                <div class="flip_box_front_area">
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                         alt="Image"
+                                         class="img-fluid"/>
+                                </div>
+                            </div>
+                            <div class="col-12 flip_box_back text-center">
+                                <div class="flip_box_back_area text-white">
+                                    <h3 class="text-white">Short Headline</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+                                    </p>
+                                    <a href="#" class="text-white border-bottom font-weight-bold">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 flip_box_bottom mb16">
+                        <div class="row mx-0 d-block flip_box_inner">
+                            <div class="col-12 px-0 flip_box_front text-center">
+                                <div class="flip_box_front_area">
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                         alt="Image"
+                                         class="img-fluid"/>
+                                </div>
+                            </div>
+                            <div class="col-12 flip_box_back text-center">
+                                <div class="flip_box_back_area text-white">
+                                    <h3 class="text-white">Short Headline</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+                                    </p>
+                                    <a href="#" class="text-white border-bottom font-weight-bold">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 flip_box_left mb16">
+                        <div class="row mx-0 d-block flip_box_inner">
+                            <div class="col-12 px-0 flip_box_front text-center">
+                                <div class="flip_box_front_area">
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                         alt="Image"
+                                         class="img-fluid"/>
+                                </div>
+                            </div>
+                            <div class="col-12 flip_box_back text-center">
+                                <div class="flip_box_back_area text-white">
+                                    <h3 class="text-white">Short Headline</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+                                    </p>
+                                    <a href="#" class="text-white border-bottom font-weight-bold">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

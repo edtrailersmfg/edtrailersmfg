@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Feature 8" id="feature_8">
+        <section class="pt64 pb64" data-visible="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2 class="text-center">Features</h2>
+                        <p class="text-center">Lorem Ipsum is simply dummy text of the printing.</p>
+                        <div class="row pt48">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6 pb8">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 mt32 mb32 media">
+                                    <i class="fa fa-3x fa-calculator mr-3 mt-2"></i>
+                                    <div class="media-body">
+                                        <h3 class="pt8 pb8">Feature One</h3>
+                                        <p>Lorem ipsum dolor sit amet,
+                                            consectetur<br/>adipiscing elit. Ut
+                                            at semper metus.<br/>Lorem ipsum
+                                            dolor sit amet, consectetur
+                                            adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 mt32 mb32 media">
+                                    <i class="fa fa-3x fa-life-ring mr-3 mt-2"></i>
+                                    <div class="media-body">
+                                        <h3 class="pt8 pb8">Feature Two</h3>
+                                        <p>Lorem ipsum dolor sit amet,
+                                            consectetur<br/>adipiscing elit. Ut
+                                            at semper metus.<br/>Lorem ipsum
+                                            dolor sit amet, consectetur
+                                            adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 mt32 mb32 media">
+                                    <i class="fa fa-3x fa-user-o mr-3 mt-2"></i>
+                                    <div class="media-body">
+                                        <h3 class="pt8 pb8">Feature Three</h3>
+                                        <p>Lorem ipsum dolor sit amet,
+                                            consectetur<br/>adipiscing elit. Ut
+                                            at semper metus.<br/>Lorem ipsum
+                                            dolor sit amet, consectetur
+                                            adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6 ">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-20.png"
+                                     alt="molile" class="img-fluid"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

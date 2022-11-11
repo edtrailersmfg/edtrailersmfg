@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Ecommerce Mid Header 8" id="ecommerce_mid_header_8">
+        <section class="bg-light oe_custom_bg" id="mid-header-top-8" data-visible="mid_headears">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 oe_structure col-lg-4 col-md-6 col-sm-5 align-self-center  pt8 pb8 text-center text-lg-left text-md-left"
+                         id="mid-header-top-left">
+                        <li class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <i class="fa fa-usd"></i>
+                                <span class="o_default_snippet_text">30 days money back guarantee</span>
+                            </div>
+                        </li>
+                    </div>
+
+                    <div class="col-12 oe_structure col-lg-8 col-md-6 col-sm-7 align-self-center pt8 pb8 text-center text-lg-right text-md-right"
+                         id="mid-header-top-right">
+                        <li class="list-inline-item account_custom">
+                            <div class="dropdown">
+                                <a class="btn btn-link text-dark dropdown-toggle" type="button"
+                                   id="dropdownMenu1"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-user-o d-inline icon_style"></i>
+                                    <span class="hide_content">My Account</span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+                                    <a class="text-xs-center dropdown-item" href="/web/login"
+                                       id="ultimate_sign_in">
+                                        Sign in
+                                    </a>
+                                    <a href="/web/signup" class="text-xs-center dropdown-item"
+                                       id="ultimate_register">
+                                        <span>Register</span>
+                                    </a>
+
+                                    <a href="/my/home" role="menuitem" class="dropdown-item"
+                                       id="ultimate_my_account">My
+                                        Account
+                                    </a>
+                                    <a class="dropdown-item"
+                                       t-attf-href="/web/session/logout?redirect=/" role="menuitem"
+                                       id="ultimate_logout">
+                                        Logout
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="my_wish" class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <div class="d-flex">
+                                    <t t-if="request.env.ref('website_sale_wishlist.add_to_wishlist').active">
+                                        <!--                                        <t t-set='wishcount'-->
+                                        <!--                                           t-value="len(request.env['product.wishlist'].current())"/>-->
+                                        <a href="/shop/wishlist" class="pr-2">
+                                            <i class="fa fa-heart-o text-dark" title="wishlist"
+                                               style="font-size:18px;"></i>
+                                            <!--                                        <sup t-attf-class="my_wish_quantity o_animate_blink badge badge-primary">-->
+                                            <!--                                            <t t-esc='wishcount'/>-->
+                                            <!--                                        </sup>-->
+                                        </a>
+                                    </t>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="my_cart" class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <div class="d-flex">
+                                    <!--                                    <t t-set="website_sale_order"-->
+                                    <!--                                       t-value="website.sale_get_order()"/>-->
+                                    <a href="/shop/cart" class="pr-2">
+                                        <i class="fa fa-opencart text-dark" title="add to cart"
+                                           style="font-size:18px;"></i>
+                                        <!--                                <sup t-attf-class="my_cart_quantity badge badge-primary"-->
+                                        <!--                                     t-esc="website_sale_order and website_sale_order.cart_quantity or ''"/>-->
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-white oe_custom_bg" id="mid-header-bottom-8">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-4 col-md-4  pt8 pb8 text-center text-md-left text-lg-left oe_structure"
+                         id="mid-header-bottom-left">
+                        <div class="oe_structure oe_empty">
+                            <a href="/" class="img-fluid">
+                                <img src="/logo.png" class="img-fluid"
+                                     t-att-alt="'Logo of %s' % res_company.name"
+                                     t-att-title="res_company.name"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-2 pt8 pb8 text-center oe_structure"
+                         id="mid-header-bottom-center">
+                        <div class="oe_structure oe_empty">
+                            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.s_searchbar_input_ultimate"></t>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-lg-4 col-md-4 pt8 pb8 align-self-center oe_structure"
+                         id="mid-header-bottom-right">
+                        <div class="oe_structure oe_empty">
+                            <div class="d-flex justify-content-center justify-content-lg-end">
+                                <div class="text-center text-lg-right text-md-right">
+                                    <span class="pl-2">
+                                        Call us Now :
+                                        <span t-field="res_company.phone"/>
+                                        <br/>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

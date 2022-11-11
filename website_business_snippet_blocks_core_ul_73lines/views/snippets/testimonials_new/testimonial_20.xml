@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="testimonial_20" name="Testimonial 20">
+        <section class="pt64 pb64" id="testimonials_d11" data-visible="testimonials">
+            <div id="testimonials_d11"
+                 class="s_quotes_carousel s_carousel_default carousel slide"
+                 data-interval="10000">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1 px-0">
+                            <div class="testimonial-bg">
+
+                                <!--                                <ol class="carousel-indicators">-->
+                                <!--                                    <li data-target="#testimonials_d11"-->
+                                <!--                                        data-slide-to="0" class="active"/>-->
+                                <!--                                </ol>-->
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active"
+                                         data-name="Slide" style="min-height: 318px;">
+                                        <div
+                                                class="carousel-content justify-content-md-center">
+                                            <div class="testimonial-img">
+                                                <img class="img img-fluid"
+                                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/placeholder-370x500.png"
+                                                     alt=""/>
+                                            </div>
+                                            <h4 class="title text-uppercase font-weight-bold pt32">
+                                                Jane DOE
+                                            </h4>
+                                            <b>
+                                                CEO of MyCompany
+                                            </b>
+                                            <p class="lead mt16 description pb-lg-48">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dolor
+                                                nibh, semper at pretium vitae, tincidunt non risus. Aenean mattis sit
+                                                amet ex nec venenatis. Pellentesque tempus pellentesque efficitur.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-control justify-content-center mt16">
+                                    <div class="carousel-prev"
+                                         data-target="#testimonials_d11" data-slide="prev"
+                                         role="img" aria-label="Previous" title="Previous">
+                                        <span class="carousel-control-prev-icon"/>
+                                        <span class="sr-only o_default_snippet_text">Previous
+                                        </span>
+                                    </div>
+                                    <div class="carousel-next"
+                                         data-target="#testimonials_d11" data-slide="next"
+                                         role="img" aria-label="Next" title="Next">
+                                        <span class="carousel-control-next-icon"/>
+                                        <span class="sr-only o_default_snippet_text">Next</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

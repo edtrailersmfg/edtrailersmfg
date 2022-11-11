@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="social_share_icon_1" name="Social Share Icon 1">
+        <section class="pt64 pb64"
+                 id="social_share_icon_1" data-visible="social_share_icons">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="icon_bg">
+                            <a href="/website/social/facebook" class="btn btn-primary">
+                                <i class="fa fa-facebook-square"/>
+                            </a>
+                            <a href="/website/social/twitter" class="btn btn-primary">
+                                <i class="fa fa-twitter"/>
+                            </a>
+                            <a href="/website/social/linkedin" class="btn btn-primary">
+                                <i class="fa fa-linkedin"/>
+                            </a>
+                            <a href="/website/social/youtube" class="btn btn-primary">
+                                <i class="fa fa-youtube-play"/>
+                            </a>
+                            <a href="/website/social/github" class="btn btn-primary">
+                                <i class="fa fa-github"/>
+                            </a>
+                            <a href="/website/social/instagram" class="btn btn-primary">
+                                <i class="fa fa-instagram"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

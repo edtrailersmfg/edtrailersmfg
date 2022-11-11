@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Image Grid 1" id="image_grid_1">
+        <section class="pt64 pb64" id="image_grid_1" data-visible="image_grid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid1">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <div class="grid_content">
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54 esgbox"
+                                               href="#"
+                                               data-width="800" data-height="450" data-esgbox="esg-fgc-2">
+                                                <i class="fa fa-search eg-icon-search"></i>
+                                            </a>
+                                        </div>
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54"
+                                               href="#"
+                                               target="_self">
+                                                <i class="fa fa-link eg-icon-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid1">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <div class="grid_content">
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54 esgbox"
+                                               href="#"
+                                               data-width="800" data-height="450" data-esgbox="esg-fgc-2">
+                                                <i class="fa fa-search eg-icon-search"></i>
+                                            </a>
+                                        </div>
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54"
+                                               href="#"
+                                               target="_self">
+                                                <i class="fa fa-link eg-icon-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid1">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <div class="grid_content">
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54 esgbox"
+                                               href="#"
+                                               data-width="800" data-height="450" data-esgbox="esg-fgc-2">
+                                                <i class="fa fa-search eg-icon-search"></i>
+                                            </a>
+                                        </div>
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54"
+                                               href="#"
+                                               target="_self">
+                                                <i class="fa fa-link eg-icon-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid1">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <div class="grid_content">
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54 esgbox"
+                                               href="#"
+                                               data-width="800" data-height="450" data-esgbox="esg-fgc-2">
+                                                <i class="fa fa-search eg-icon-search"></i>
+                                            </a>
+                                        </div>
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54"
+                                               href="#"
+                                               target="_self">
+                                                <i class="fa fa-link eg-icon-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid1">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <div class="grid_content">
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54 esgbox"
+                                               href="#"
+                                               data-width="800" data-height="450" data-esgbox="esg-fgc-2">
+                                                <i class="fa fa-search eg-icon-search"></i>
+                                            </a>
+                                        </div>
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54"
+                                               href="#"
+                                               target="_self">
+                                                <i class="fa fa-link eg-icon-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid1">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <div class="grid_content">
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54 esgbox"
+                                               href="#"
+                                               data-width="800" data-height="450" data-esgbox="esg-fgc-2">
+                                                <i class="fa fa-search eg-icon-search"></i>
+                                            </a>
+                                        </div>
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54"
+                                               href="#"
+                                               target="_self">
+                                                <i class="fa fa-link eg-icon-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid1">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <div class="grid_content">
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54 esgbox"
+                                               href="#"
+                                               data-width="800" data-height="450" data-esgbox="esg-fgc-2">
+                                                <i class="fa fa-search eg-icon-search"></i>
+                                            </a>
+                                        </div>
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54"
+                                               href="#"
+                                               target="_self">
+                                                <i class="fa fa-link eg-icon-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid1">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <div class="grid_content">
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54 esgbox"
+                                               href="#"
+                                               data-width="800" data-height="450" data-esgbox="esg-fgc-2">
+                                                <i class="fa fa-search eg-icon-search"></i>
+                                            </a>
+                                        </div>
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54"
+                                               href="#"
+                                               target="_self">
+                                                <i class="fa fa-link eg-icon-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid1">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <div class="grid_content">
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54 esgbox"
+                                               href="#"
+                                               data-width="800" data-height="450" data-esgbox="esg-fgc-2">
+                                                <i class="fa fa-search eg-icon-search"></i>
+                                            </a>
+                                        </div>
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54"
+                                               href="#"
+                                               target="_self">
+                                                <i class="fa fa-link eg-icon-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid1">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <div class="grid_content">
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54 esgbox"
+                                               href="#"
+                                               data-width="800" data-height="450" data-esgbox="esg-fgc-2">
+                                                <i class="fa fa-search eg-icon-search"></i>
+                                            </a>
+                                        </div>
+                                        <div class="eg-washington-element-0-a">
+                                            <a class="eg-washington-element-0 eg-post-54"
+                                               href="#"
+                                               target="_self">
+                                                <i class="fa fa-link eg-icon-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

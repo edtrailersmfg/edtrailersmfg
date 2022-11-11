@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="testimonial_12" name="Testimonial 12">
+        <section class="bg-o-color-5 pt64 pb64" id="testimonials_d3" data-visible="testimonials">
+            <div class="container">
+                <div class="row content justify-content-md-center pb48">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2>Testimonials</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="testimonials_d3"
+                 class="s_quotes_carousel s_carousel_default carousel slide"
+                 data-interval="10000">
+                <ol class="carousel-indicators">
+                    <li data-target="#testimonials_d3"
+                        data-slide-to="0" class="active"/>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active  oe_custom_bg"
+                         data-name="Slide" style="min-height: 318px;">
+                        <div class="container">
+                            <div class="row content justify-content-md-center mx-2">
+                                <div class="carousel-content col-12 col-sm-12 col-md-4 col-lg-4 bg-white ml-auto mr-auto mt-4 mt-md-0 sni-s-slide">
+                                    <div class="col-lg-12">
+                                        <p class="lead mt32 mb32 text-center">
+                                            Write a quote here from one
+                                            of your customers. Quotes are a
+                                            great
+                                            way to build confidence in your
+                                            products or services.
+                                        </p>
+                                        <div class="text-center">
+                                            <img class="img"
+                                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                                 alt=""/>
+                                            <div class="mt8 mb8">
+                                                —
+                                                Jane DOE, CEO of
+                                                <b>
+                                                    MyCompany
+                                                </b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-content col-12 col-sm-12 col-md-4 col-lg-4 bg-white ml-auto mr-auto mt-4 mt-md-0 sni-s-slide">
+                                    <div class="col-lg-12">
+                                        <p class="lead mt32 mb32 text-center">
+                                            Write a quote here from one
+                                            of your customers. Quotes are a
+                                            great
+                                            way to build confidence in your
+                                            products or services.
+                                        </p>
+                                        <div class="text-center">
+                                            <img class="img"
+                                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                                 alt=""/>
+                                            <div class="mt8 mb8">
+                                                —
+                                                Jane DOE, CEO of
+                                                <b>
+                                                    MyCompany
+                                                </b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-content col-12 col-sm-12 col-md-4 col-lg-4 bg-white ml-auto mr-auto mt-4 mt-md-0 sni-s-slide">
+                                    <div class="col-lg-12">
+                                        <p class="lead mt32 mb32 text-center">
+                                            Write a quote here from one
+                                            of your customers. Quotes are a
+                                            great
+                                            way to build confidence in your
+                                            products or services.
+                                        </p>
+                                        <div class="text-center">
+                                            <img class="img"
+                                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                                 alt=""/>
+                                            <div class="mt8 mb8">
+                                                —
+                                                Jane DOE, CEO of
+                                                <b>
+                                                    MyCompany
+                                                </b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-control-prev"
+                     data-target="#testimonials_d3" data-slide="prev"
+                     role="img" aria-label="Previous" title="Previous">
+                    <span class="carousel-control-prev-icon"/>
+                    <span class="sr-only o_default_snippet_text">Previous
+                    </span>
+                </div>
+                <div class="carousel-control-next"
+                     data-target="#testimonials_d3" data-slide="next"
+                     role="img" aria-label="Next" title="Next">
+                    <span class="carousel-control-next-icon"/>
+                    <span class="sr-only o_default_snippet_text">Next</span>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

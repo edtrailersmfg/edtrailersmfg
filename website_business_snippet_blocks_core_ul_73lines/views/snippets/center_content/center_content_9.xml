@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Center Content 9" id="center_content_9">
+<section class="pt64 pb64" data-visible="center_content">
+	<div class="container ">
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center ">
+				<i class="fa fa-3x fa-cubes"></i>
+				<h2 class="pt24 pb24">Medium length headline</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum est in tortor congue suscipit. Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.Suspendisse potenti. Aliquam finibus pharetra tellus at egestas. Aliquam finibus pharetra tellus at egestas.Suspendisse potenti. Aliquam finibus pharetra tellus at egestas. </p>
+			</div>
+		</div>
+	</div>
+</section>    </template>
+</odoo>

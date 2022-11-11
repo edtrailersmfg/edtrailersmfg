@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Tab 8" id="tab_8">
+        <section class="s_tabs pt64 pb64" id="tab_8" data-visible="tabs" data-vcss="001">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 pb48 text-center">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 s_tabs_main">
+                    <nav class="s_tabs_nav">
+                        <ul class="nav nav-tabs justify-content-center mb32" id="nav-tab"
+                            role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active"
+                                   id="nav-home-tab" data-toggle="tab"
+                                   href="#service-tab-1" role="tab"
+                                   aria-controls="nav-home"
+                                   aria-selected="true">Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   id="nav-profile-tab" data-toggle="tab"
+                                   href="#service-tab-2" role="tab"
+                                   aria-controls="nav-profile"
+                                   aria-selected="false">Profile
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   id="nav-contact-tab" data-toggle="tab"
+                                   href="#service-tab-3" role="tab"
+                                   aria-controls="nav-contact"
+                                   aria-selected="false">Contact
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="nav-about-tab"
+                                   data-toggle="tab" href="#service-tab-4"
+                                   role="tab" aria-controls="nav-about"
+                                   aria-selected="false">About
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="s_tabs_content tab-content service-tab py-3 px-3 px-sm-0"
+                         id="nav-tabContent">
+                        <div class="tab-pane fade show oe_structure oe_empty active"
+                             id="service-tab-1" role="tabpanel"
+                             aria-labelledby="nav-home-tab">
+                            <div class="container">
+                                <div class="row wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-0">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                             alt="img1" class="img-fluid d-block mx-auto"/>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-0">
+                                        <div class="tab-bg">
+                                            <h2>01</h2>
+                                            <h3>Lorem ipsum dolor sit amet</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+                                                perferendis
+                                                quod debitis ab sed sapiente. Ducimus tempore, doloremque asperiores
+                                                natus
+                                                reprehenderit dignissimos beatae molestias tenetur cupiditate
+                                                architecto
+                                                culpa quibusdam velit magnam sapiente accusantium, repellat earum!
+                                            </p>
+
+                                            <a class="btn btn-danger bg-danger rounded-circle" href="#"
+                                            >Get In Touch
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service Tab 02 -->
+                        <div class="tab-pane fade oe_structure oe_empty"
+                             id="service-tab-2" role="tabpanel"
+                             aria-labelledby="nav-home-tab">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-0">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                             alt="img1" class="img-fluid d-block mx-auto"/>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-0">
+                                        <div class="tab-bg">
+                                            <h2>02</h2>
+                                            <h3>All Web Needs Optimization to rank</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+                                                perferendis
+                                                quod debitis ab sed sapiente. Ducimus tempore, doloremque asperiores
+                                                natus
+                                                reprehenderit dignissimos beatae molestias tenetur cupiditate
+                                                architecto
+                                                culpa quibusdam velit magnam sapiente accusantium, repellat earum!
+                                            </p>
+                                            <a class="btn btn-danger bg-danger rounded-circle" href="#"
+                                            >Get In Touch
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service Tab 03 -->
+                        <div class="tab-pane fade oe_structure oe_empty"
+                             id="service-tab-3" role="tabpanel"
+                             aria-labelledby="nav-home-tab">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-0">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                             alt="img1" class="img-fluid d-block mx-auto"/>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-0">
+                                        <div class="tab-bg">
+                                            <h2>03</h2>
+                                            <h3>Design Which Makes Wow</h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+                                                perferendis
+                                                quod debitis ab sed sapiente. Ducimus tempore, doloremque asperiores
+                                                natus
+                                                reprehenderit dignissimos beatae molestias tenetur cupiditate
+                                                architecto
+                                                culpa quibusdam velit magnam sapiente accusantium, repellat earum!
+                                            </p>
+                                            <a class="btn btn-danger bg-danger rounded-circle" href="#"
+                                            >Get In Touch
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service Tab 04 -->
+                        <div class="tab-pane fade oe_structure oe_empty"
+                             id="service-tab-4" role="tabpanel"
+                             aria-labelledby="nav-home-tab">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-0">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                             alt="img1" class="img-fluid d-block mx-auto"/>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-0">
+                                        <div class="tab-bg">
+                                            <h2>04</h2>
+                                            <h3>Development and Interactivity in Web</h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+                                                perferendis
+                                                quod debitis ab sed sapiente. Ducimus tempore, doloremque asperiores
+                                                natus
+                                                reprehenderit dignissimos beatae molestias tenetur cupiditate
+                                                architecto
+                                                culpa quibusdam velit magnam sapiente accusantium, repellat earum!
+                                            </p>
+                                            <a class="btn btn-danger bg-danger rounded-circle" href="#"
+                                            >Get In Touch
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

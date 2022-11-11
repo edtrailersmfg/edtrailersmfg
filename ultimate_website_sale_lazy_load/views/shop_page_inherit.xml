@@ -1,0 +1,46 @@
+<odoo>
+
+    <template id="ultimate_website_sale_lazy_load" inherit_id="website_sale.products">
+        <xpath expr="//div[hasclass('o_wsale_products_grid_table_wrapper')]" position="replace">
+            <div t-if="bins" class="o_wsale_products_grid_table_wrapper" id="shop_lazy_load">
+            </div>
+        </xpath>
+    </template>
+
+    <template id="ultimate_website_sale_lazy_load_products">
+        <table class="table table-borderless m-0" t-att-data-ppg="ppg"
+               t-att-data-ppr="ppr">
+            <colgroup t-ignore="true">
+                <!-- Force the number of columns (useful when only one row of (x < ppr) products) -->
+                <col t-foreach="ppr" t-as="p"/>
+            </colgroup>
+            <tbody>
+                <tr t-foreach="bins" t-as="tr_product">
+                    <t t-foreach="tr_product" t-as="td_product">
+
+                        <t t-if="td_product">
+                            <t t-set="product"
+                               t-value="td_product['product']"/>
+                            <!-- We use t-attf-class here to allow easier customization -->
+                            <td t-att-colspan="td_product['x'] != 1 and td_product['x']"
+                                t-att-rowspan="td_product['y'] != 1 and td_product['y']"
+                                t-attf-class="oe_product"
+                                t-att-data-ribbon-id="td_product['ribbon'].id">
+                                <div id="grid_list"
+                                     t-attf-class="oe_grid o_wsale_product_grid_wrapper o_wsale_product_grid_wrapper_#{td_product['x']}_#{td_product['y']}">
+                                    <t t-call="website_sale.products_item">
+                                        <t t-set="product_image_big"
+                                           t-value="td_product['x'] + td_product['y'] &gt; 2"/>
+                                    </t>
+                                </div>
+                            </td>
+                        </t>
+                        <td t-else=""/>
+
+                    </t>
+                </tr>
+            </tbody>
+        </table>
+    </template>
+
+</odoo>

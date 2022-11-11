@@ -1,0 +1,15 @@
+@media only screen and (max-width: 767px) {
+    .ul_product_info_tab .nav-tabs li, .ul_product_info_tab .nav-tabs li a{
+        width: 100%;
+    }
+}
+
+#product_size_attribute_details{
+    table{
+        td,th{
+            min-width: 100px;
+            text-align: center;
+            border: 1px solid #DEE2E6;
+        }
+    }
+}

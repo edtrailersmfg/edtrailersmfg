@@ -1,0 +1,143 @@
+@if o-website-value('header-links-style') == 'option-nav-strips' {
+    #wrapwrap > header:not(.o_header_affixed):not(.o_header_is_scrolled):not(.o_top_fixed_element) > nav{
+        padding-top:0;
+        padding-bottom:0;
+    }
+    #top_menu{
+       > li{
+           > a{
+                //color: theme-color('alpha');
+                padding:25px 16px;
+            }
+             a{
+            &.active{
+                    background-color:theme-color('primary');
+                    color:lighten(theme-color('primary'),70%);
+            }
+            }
+            &.active,&:hover{
+                > a{
+                    background-color:theme-color('primary');
+                    color:lighten(theme-color('primary'),70%);
+                }
+            }
+            a[aria-expanded="true"]{
+                 background-color:theme-color('primary');
+                 color:lighten(theme-color('primary'),70%);
+            }
+
+            &.divider{
+                height:auto;
+            }
+        }
+
+        .js_language_selector{
+            margin-left: 0px !important;
+
+            .btn{
+                border-radius: 0px;
+            }
+        }
+        .js_language_selector.dropdown .btn{
+                padding:26px 16px;
+        }
+
+        .js_language_selector.dropdown:hover, .js_language_selector.dropdown.show{
+                background-color:theme-color('primary');
+                color:lighten(theme-color('primary'),70%);
+                border-radius: 0px;
+       }
+       .js_language_selector.dropdown:hover .btn{
+            background-color: transparent;
+       }
+        .js_language_selector.dropdown.show > .btn-outline-secondary.dropdown-toggle:focus, .btn-outline-secondary:focus {
+            box-shadow: unset;
+        }
+        .js_language_selector.dropdown.show > .btn-outline-secondary.dropdown-toggle {
+    //             color: #FFFFFF;
+                background-color:theme-color('primary');
+    }
+    }
+    header .navbar li .js_usermenu.dropdown-menu.show, header .js_language_selector .dropdown-menu.show {
+        top: 100% !important;
+        margin: 0px;
+    }
+    #wrapwrap > header.o_header_affixed.o_header_is_scrolled.o_top_fixed_element {
+        #top_menu{
+            li{
+                .nav-link{
+                    padding: 8px 12px;
+                }
+            }
+            .js_language_selector.dropdown{
+                padding:0px;
+            }
+            .js_language_selector.dropdown .btn{
+                padding: 8px 12px;
+            }
+            li .js_usermenu.dropdown-menu.show, .js_language_selector .dropdown-menu.show {
+                top: 48px !important;
+                margin: 0px;
+        }
+        }
+    }
+
+
+    #sidebar #top_menu{
+        li>a{
+            padding: 8px 16px !important;
+
+        }
+        .js_language_selector{
+            padding: 0px !important;
+        }
+        .js_language_selector.dropdown.show .dropdown-menu{
+            position: absolute;
+            width: 100%;
+        }
+        .js_language_selector .btn-outline-secondary{
+            padding: 10px;
+        }
+        .js_language_selector.dropdown:hover, .js_language_selector.dropdown.show {
+            background-color: transparent !important;
+            color: inherit !important;
+        }
+        .js_language_selector.dropdown .btn:hover, .js_language_selector.dropdown.show .btn {
+            background-color: theme-color('primary');
+            color: #fff;
+            border-radius: 0px;
+    }
+
+
+    }
+
+    @media only screen and (max-width: 440px) {
+     header .navbar #top_menu > li > a, header .js_language_selector {
+        display: inline-block;
+        padding: 10px 16px;
+     }
+     #top_menu .js_language_selector.dropdown .btn {
+        padding: 10px 16px;
+     }
+     header nav.navbar {
+        padding: 0.5rem 1rem !important;
+     }
+     header .js_language_selector{
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+     }
+     #top_menu .js_language_selector.dropdown.show {
+            background-color: transparent !important;
+     }
+     .js_language_selector.dropdown:hover .btn{
+        background-color: theme-color('primary') !important;
+      }
+     #top_menu .js_language_selector.dropdown:hover {
+        background-color: transparent !important;
+        color: inherit !important;
+     }
+     .js_language_selector.dropdown:hover span{
+        color: inherit;
+     }
+    }
+}

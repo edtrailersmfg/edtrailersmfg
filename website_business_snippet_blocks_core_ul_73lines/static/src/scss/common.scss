@@ -1,0 +1,117 @@
+body {
+    font-size: 0.875rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h1, .h1 {
+  font-size: 2.1875rem;
+}
+
+@media (max-width: 1200px) {
+  h1, .h1 {
+    font-size: calc(1.34375rem + 1.125vw) ;
+  }
+}
+
+h2, .h2 {
+  font-size: 1.75rem;
+}
+
+@media (max-width: 1200px) {
+  h2, .h2 {
+    font-size: calc(1.3rem + 0.6vw) ;
+  }
+}
+
+h3, .h3 {
+  font-size: 1.53125rem;
+}
+
+@media (max-width: 1200px) {
+  h3, .h3 {
+    font-size: calc(1.278125rem + 0.3375vw) ;
+  }
+}
+
+h4, .h4 {
+  font-size: 1.3125rem;
+}
+
+@media (max-width: 1200px) {
+  h4, .h4 {
+    font-size: calc(1.25625rem + 0.075vw) ;
+  }
+}
+
+h5, .h5 {
+  font-size: 1.09375rem;
+}
+
+h6, .h6 {
+  font-size: 0.875rem;
+}
+
+.lead {
+  font-size: 1.09375rem;
+  font-weight: 300;
+}
+
+.s_carousel.carousel.slide, .s_quotes_carousel.carousel.slide{
+.carousel-control-prev {
+    left: 12px;
+}
+.carousel-control-next {
+    right: 12px;
+}
+}
+
+
+@media(max-width: 767px){
+   [data-oe-shape-data] {
+       h1,h2,h3,h4,h5,h6,p,span,font{
+           color: inherit !important;
+        }
+   }
+}
+
+// .o_we_shape {
+//     @extend %o-we-background-layer;
+//
+//     @each $module, $shapes in $o-bg-shapes {
+//         @each $shape, $style in $shapes {
+//             $url-params: '';
+//             $colors: map-get($style, 'colors');
+//             @each $i in $colors {
+//                 // %23 is the url-encoded form of '#' which doesn't work as is in urls.
+//                 $color: str-replace("#{map-get($o-color-palette, "o-color-#{$i}")}", '#', '%23');
+//                 $url-params: '#{$url-params}&c#{$i}=#{$color}';
+//             }
+//
+//             // eg: o_website_shape_bg_1
+//             &.o_#{$module}_#{str-replace($shape, '/', '_')} {
+//                 // When not customized, this URL, built in SCSS, allows for the
+//                 // shape to be dynamic and adapted if future color changes.
+//                 background-image: url("/website_business_snippet_blocks_core_ul_73lines/shape/#{$module}/#{$shape}.svg?#{str-slice($url-params, 2)}");
+//                 background-position: map-get($style, 'position');
+//                 background-size: map-get($style, 'size');
+//                 @if map-get($style, 'repeat-y') {
+//                     background-repeat: repeat-y;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// $o-bg-shapes: ('website_business_snippet_blocks_core_ul_73lines': (
+//     'Blobs/14': ('position': bottom, 'size': 100% auto, 'colors': (1, 2), 'repeat-y': false),
+//
+// ));

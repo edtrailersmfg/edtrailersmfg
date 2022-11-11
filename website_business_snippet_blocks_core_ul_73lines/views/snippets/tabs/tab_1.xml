@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="custom_tab_1" name="Tab 1">
+        <section id="custom_tab_d1" class="s_tabs pt64 pb64" data-visible="tabs" data-vcss="001">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 pb48 text-center">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-xs-12 ">
+                        <div class="s_tabs_main">
+                            <nav class="s_tabs_nav">
+                                <ul class="nav nav-tabs nav-fill" id="nav-tab"
+                                    role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active"
+                                           id="nav-home-tab" data-toggle="tab"
+                                           href="#nav-home" role="tab"
+                                           aria-controls="nav-home"
+                                           aria-selected="true">Home
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                           id="nav-profile-tab" data-toggle="tab"
+                                           href="#nav-profile" role="tab"
+                                           aria-controls="nav-profile"
+                                           aria-selected="false">Profile
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                           id="nav-contact-tab" data-toggle="tab"
+                                           href="#nav-contact" role="tab"
+                                           aria-controls="nav-contact"
+                                           aria-selected="false">Contact
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="nav-about-tab"
+                                           data-toggle="tab" href="#nav-about"
+                                           role="tab" aria-controls="nav-about"
+                                           aria-selected="false">About
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="s_tabs_content tab-content py-3 px-3 px-sm-0"
+                                 id="nav-tabContent">
+                                <div class="tab-pane fade show oe_structure oe_empty active"
+                                     id="nav-home" role="tabpanel"
+                                     aria-labelledby="nav-home-tab">
+                                    Et et consectetur ipsum labore excepteur est
+                                    proident excepteur ad velit occaecat qui minim
+                                    occaecat veniam. Fugiat veniam incididunt anim
+                                    aliqua enim pariatur veniam sunt est aute sit
+                                    dolor anim. Velit non irure adipisicing aliqua
+                                    ullamco irure incididunt irure non esse
+                                    consectetur nostrud minim non minim occaecat.
+                                    Amet duis do nisi duis veniam non est eiusmod
+                                    tempor incididunt tempor dolor ipsum in qui
+                                    sit. Exercitation mollit sit culpa nisi culpa
+                                    non adipisicing reprehenderit do dolore. Duis
+                                    reprehenderit occaecat anim ullamco ad duis
+                                    occaecat ex.
+                                </div>
+                                <div class="tab-pane fade oe_structure oe_empty" id="nav-profile"
+                                     role="tabpanel"
+                                     aria-labelledby="nav-profile-tab">
+                                    Et et consectetur ipsum labore excepteur est
+                                    proident excepteur ad velit occaecat qui minim
+                                    occaecat veniam. Fugiat veniam incididunt anim
+                                    aliqua enim pariatur veniam sunt est aute sit
+                                    dolor anim. Velit non irure adipisicing aliqua
+                                    ullamco irure incididunt irure non esse
+                                    consectetur nostrud minim non minim occaecat.
+                                    Amet duis do nisi duis veniam non est eiusmod
+                                    tempor incididunt tempor dolor ipsum in qui
+                                    sit. Exercitation mollit sit culpa nisi culpa
+                                    non adipisicing reprehenderit do dolore. Duis
+                                    reprehenderit occaecat anim ullamco ad duis
+                                    occaecat ex.
+                                </div>
+                                <div class="tab-pane fade oe_structure oe_empty" id="nav-contact"
+                                     role="tabpanel"
+                                     aria-labelledby="nav-contact-tab">
+                                    Et et consectetur ipsum labore excepteur est
+                                    proident excepteur ad velit occaecat qui minim
+                                    occaecat veniam. Fugiat veniam incididunt anim
+                                    aliqua enim pariatur veniam sunt est aute sit
+                                    dolor anim. Velit non irure adipisicing aliqua
+                                    ullamco irure incididunt irure non esse
+                                    consectetur nostrud minim non minim occaecat.
+                                    Amet duis do nisi duis veniam non est eiusmod
+                                    tempor incididunt tempor dolor ipsum in qui
+                                    sit. Exercitation mollit sit culpa nisi culpa
+                                    non adipisicing reprehenderit do dolore. Duis
+                                    reprehenderit occaecat anim ullamco ad duis
+                                    occaecat ex.
+                                </div>
+                                <div class="tab-pane fade oe_structure oe_empty" id="nav-about"
+                                     role="tabpanel"
+                                     aria-labelledby="nav-about-tab">
+                                    Et et consectetur ipsum labore excepteur est
+                                    proident excepteur ad velit occaecat qui minim
+                                    occaecat veniam. Fugiat veniam incididunt anim
+                                    aliqua enim pariatur veniam sunt est aute sit
+                                    dolor anim. Velit non irure adipisicing aliqua
+                                    ullamco irure incididunt irure non esse
+                                    consectetur nostrud minim non minim occaecat.
+                                    Amet duis do nisi duis veniam non est eiusmod
+                                    tempor incididunt tempor dolor ipsum in qui
+                                    sit. Exercitation mollit sit culpa nisi culpa
+                                    non adipisicing reprehenderit do dolore. Duis
+                                    reprehenderit occaecat anim ullamco ad duis
+                                    occaecat ex.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

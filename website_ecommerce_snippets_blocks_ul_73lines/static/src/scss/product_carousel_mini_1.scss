@@ -1,0 +1,16 @@
+.box_shadow_mini.mini_product_carousel {
+    .product_dynamic_class > form {
+        -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        margin: 8px;
+       padding: 2px 0px;
+    }
+    .mini-image {
+        padding-right: 8px;
+    }
+    .mini-info ul .btn {
+        padding: 3px 6px;
+        font-size: 12px;
+}
+}

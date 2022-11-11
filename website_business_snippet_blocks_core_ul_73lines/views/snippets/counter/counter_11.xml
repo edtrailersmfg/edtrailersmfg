@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Counter 11" id="counter_11">
+        <section class="pt64 pb64" id="counter_11" data-visible="counters">
+            <div class="container-fluid">
+                <div class="row align-items-center text-center no-gutters">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb48">
+                        <h2>Counter Design</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 counter_img_effect">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg" alt=""
+                             class="img-fluid image"/>
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 p-4">
+                        <i class="fa fa-3x fa-check-square-o"></i>
+                        <h3 class="pt16 pb16">1234</h3>
+                        <h4>Secured Site Design</h4>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 counter_img_effect">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg" alt=""
+                             class="img-fluid image"/>
+                         <div class="overlay"></div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 p-4">
+                        <i class="fa fa-3x fa-file-code-o"></i>
+                        <h3 class="pt16 pb16">1834</h3>
+                        <h4>Codes Programmed</h4>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 p-4">
+                        <i class="fa fa-3x fa-user-circle-o"></i>
+                        <h3 class="pt16 pb16">1024</h3>
+                        <h4>Full Customer Support</h4>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 counter_img_effect">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg" alt=""
+                             class="img-fluid image"/>
+                         <div class="overlay"></div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 p-4">
+                        <i class="fa fa-3x fa-trophy"></i>
+                        <h3 class="pt16 pb16">264</h3>
+                        <h4>Awards Winner</h4>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 counter_img_effect">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg" alt="molile"
+                             class="img-fluid image"/>
+                        <div class="overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

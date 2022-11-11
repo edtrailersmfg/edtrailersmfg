@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Center Content 16" id="center_content_16">
+        <section class="pt64 pb64" data-visible="center_content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <p>Tagline</p>
+                        <h2 class="font-weight-bold pt8 pb24">Main headline to turn your
+                            <br/>
+                            visitors into users
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum est in tortor
+                            congue suscipit. Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.Suspendisse
+                            potenti. Aliquam finibus pharetra tellus at egestas.
+                        </p>
+                        <p>
+                            <a href="#" class="pt24 pb24 text-decoration-none">Learn More
+                                <i class="fa fa-chevron-right"></i>
+                            </a>
+                        </p>
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-44.jpg" alt="img2" class="img-fluid pt16 pb8"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

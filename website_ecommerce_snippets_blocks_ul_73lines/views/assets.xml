@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- ==================================== Assets ================================= -->
+
+    <template id="snippet_id_ecommerce"
+              inherit_id="website_business_snippet_blocks_core_ul_73lines.theme_ultimate_snippet_blocks_list">
+        <xpath expr="//select" position="inside">
+            <option value="ecommerce_blocks">Ecommerce Block</option>
+            <option value="image_grid">Image Grid</option>
+            <option value="product_tab_carousel">Product Tab Carousel</option>
+        </xpath>
+        <xpath expr="//div[@id='o_panel_body']" position="inside">
+            <!--Ecommerce Blocks-->
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_block_1"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/ecommerce_block/ecommerce-block-1.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_block_2"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/ecommerce_block/ecommerce-block-2.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_block_3"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/ecommerce_block/ecommerce-block-3.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_block_4"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/ecommerce_block/ecommerce-block-4.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_block_5"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/ecommerce_block/ecommerce-block-5.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_block_6"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/ecommerce_block/ecommerce-block-6.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_block_7"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/ecommerce_block/ecommerce-block-7.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_block_8"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/ecommerce_block/ecommerce-block-8.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_block_9"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/ecommerce_block/ecommerce-block-9.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_block_10"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/ecommerce_block/ecommerce-block-10.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_block_11"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/ecommerce_block/ecommerce-block-11.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_block_12"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/ecommerce_block/ecommerce-block-12.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_block_13"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/ecommerce_block/ecommerce-block-13.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_block_14"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/ecommerce_block/ecommerce-block-14.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_block_15"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/ecommerce_block/ecommerce-block-15.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_block_16"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/ecommerce_block/ecommerce-block-16.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_block_17"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/ecommerce_block/ecommerce-block-17.png"/>
+
+            <!--Image Grid-->
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_1"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-1.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_2"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-2.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_3"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-3.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_4"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-4.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_5"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-5.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_6"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-6.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_7"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-7.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_8"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-8.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_9"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-9.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_10"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-10.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_11"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-11.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_12"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-12.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_13"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-13.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_14"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-14.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_15"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-15.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_16"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-16.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_17"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-17.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_18"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-18.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_19"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-19.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.image_grid_20"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/image_grid/image-grid-20.png"/>
+
+            <!--Product Tab Carousel-->
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.product_tab_carousel_1"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/product_tab_carousel/product-tab-carousel-1.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.product_tab_carousel_2"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/product_tab_carousel/product-tab-carousel-2.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.product_tab_carousel_3"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/product_tab_carousel/product-tab-carousel-3.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.product_tab_carousel_4"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/product_tab_carousel/product-tab-carousel-4.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.product_tab_carousel_5"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/product_tab_carousel/product-tab-carousel-5.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.product_tab_carousel_6"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/product_tab_carousel/product-tab-carousel-6.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.product_tab_carousel_7"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/product_tab_carousel/product-tab-carousel-7.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.product_tab_carousel_8"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/product_tab_carousel/product-tab-carousel-8.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.product_tab_carousel_9"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/product_tab_carousel/product-tab-carousel-9.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.product_tab_carousel_10"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/product_tab_carousel/product-tab-carousel-10.png"/>
+
+            <!--Ecommerce Midheaders-->
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_1"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-1.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_2"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-2.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_3"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-3.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_4"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-4.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_5"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-5.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_6"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-6.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_7"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-7.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_8"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-8.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_9"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-9.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_10"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-10.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_11"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-11.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_12"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-12.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_13"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-13.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_14"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-14.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_15"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-15.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_16"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-16.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_17"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-17.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_18"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-18.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_19"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-19.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_20"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-20.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_21"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-21.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_22"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-22.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_23"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-23.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_24"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-24.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_25"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-25.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.ecommerce_mid_header_26"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header/mid-header-26.png"/>
+
+            <!--Mid Header Utilities-->
+            <!--            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.language_button_1"-->
+            <!--               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header_utilities/language-button-1.png"/>-->
+            <!--            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.language_button_2"-->
+            <!--               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header_utilities/language-button-2.png"/>-->
+            <!--                <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.pricelist_button_1"-->
+            <!--                   t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header_utilities/pricelist-button-1.png"/>-->
+            <!--                <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.pricelist_button_2"-->
+            <!--                   t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header_utilities/pricelist-button-2.png"/>-->
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.searchbox_1"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header_utilities/searchbox-1.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.searchbox_2"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header_utilities/searchbox-2.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.searchbox_3"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header_utilities/searchbox-3.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.searchbox_4"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header_utilities/searchbox-4.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.searchbox_5"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header_utilities/searchbox-5.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.searchbox_6"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header_utilities/searchbox-6.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.searchbox_with_dropdown"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header_utilities/searchbox-with-dropdown.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header_utilities/full-screen-search-1.png"/>
+            <t t-snippet="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d2"
+               t-thumbnail="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/snippet-icons/mid_header_utilities/full-screen-search-2.png"/>
+        </xpath>
+    </template>
+
+    <template id="s_object_carousel_style_option"
+              inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-js='Box']" position="after">
+            <div data-js=''
+                 data-selector=".mini_product_carousel">
+                <we-select string="Alignment" data-no-preview="true">
+                    <we-button data-select-class="">None</we-button>
+                    <we-button data-select-class="text-left">
+                        Left
+                    </we-button>
+                    <we-button data-select-class="text-center">
+                        Center
+                    </we-button>
+                    <we-button data-select-class="text-right">
+                        Right
+                    </we-button>
+                </we-select>
+
+                <we-select string="Box Shadow" data-no-preview="true">
+                    <we-button data-select-class="">
+                        None
+                    </we-button>
+                    <we-button data-select-class="box_shadow_mini">
+                        Box Shadow
+                    </we-button>
+                </we-select>
+            </div>
+        </xpath>
+    </template>
+
+    <!--Hide Sign In/Register Button From Ecommerce Mid Header Snippets-->
+    <template id="ecommerce_mid_header_hide_sign_in_ultimate"
+              inherit_id="portal.frontend_layout" customize_show="True"
+              name="Hide Sign In From Dropdown" active="False">
+        <xpath expr="//div[@id='wrapwrap']" position="attributes">
+            <attribute name="t-attf-class"
+                       add="#{'o_sign_in_hide_ultimate_ecommerce'}"
+                       separator=" "/>
+        </xpath>
+    </template>
+    <template id="ecommerce_mid_header_hide_register_ultimate"
+              inherit_id="portal.frontend_layout" customize_show="True"
+              name="Hide Register From Dropdown" active="False">
+        <xpath expr="//div[@id='wrapwrap']" position="attributes">
+            <attribute name="t-attf-class"
+                       add="#{'o_register_hide_ultimate_ecommerce'}"
+                       separator=" "/>
+        </xpath>
+    </template>
+    <template id="ecommerce_mid_header_hide_logout_ultimate"
+              inherit_id="portal.frontend_layout" customize_show="True"
+              name="Hide Logout From Navbar Dropdown" active="False">
+        <xpath expr="//div[@id='wrapwrap']" position="attributes">
+            <attribute name="t-attf-class"
+                       add="#{'o_logut_hide_ultimate_ecommerce'}"
+                       separator=" "/>
+        </xpath>
+    </template>
+
+    <!--Add Option For Hide Default Cart And Wishlist Button From Navbar-->
+    <template id="ecommerce_mid_header_hide_add_cart_ultimate"
+              inherit_id="portal.frontend_layout" customize_show="True"
+              name="Hide Cart Button From Navbar" active="False">
+        <xpath expr="//div[@id='wrapwrap']" position="attributes">
+            <attribute name="t-attf-class"
+                       add="#{'o_add_cart_hide_ultimate_ecommerce'}"
+                       separator=" "/>
+        </xpath>
+    </template>
+    <template id="ecommerce_mid_header_hide_wishlist_ultimate"
+              inherit_id="portal.frontend_layout" customize_show="True"
+              name="Hide Wishlist Button From Navbar" active="False">
+        <xpath expr="//div[@id='wrapwrap']" position="attributes">
+            <attribute name="t-attf-class"
+                       add="#{'o_wishlist_hide_ultimate_ecommerce'}"
+                       separator=" "/>
+        </xpath>
+    </template>
+
+
+    <template id="s_searchbar_input_ultimate" name="Search">
+        <t t-call="website.website_search_box_input">
+            <t t-set="search_type" t-valuef="products"/>
+            <t t-set="action" t-valuef="/website/search"/>
+            <t t-set="limit" t-valuef="5"/>
+            <t t-set="display_image" t-valuef="true"/>
+            <t t-set="display_description" t-valuef="true"/>
+            <t t-set="display_extra_link" t-valuef="true"/>
+            <t t-set="display_detail" t-valuef="true"/>
+        </t>
+    </template>
+
+</odoo>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Process Step 1" id="process_step_1">
+        <section class="pt64 pb64" id="process_step_1" data-visible="process_steps">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2 class="mb16">Our Working Process</h2>
+                        <hr/>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+                <div class=" process">
+                    <div class="row">
+                        <div class="col-12 col-sm-3 col-md-6 col-lg-3 text-center step mb16">
+                            <i class="fa fa-line-chart fa-2x mb16"></i>
+                            <h3>Steps For Success</h3>
+                            <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
+                                aenean rhoncus posuere odio in.
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-6 col-lg-3 text-center step mb16">
+                            <i class="fa fa-magic fa-2x mb16"></i>
+                            <h3>Making The Strategy</h3>
+                            <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
+                                aenean rhoncus posuere odio in.
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-6 col-lg-3 step text-center mb16">
+                            <i class="fa fa-bar-chart fa-2x mb16"></i>
+                            <h3>Watch Business Grow</h3>
+                            <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
+                                aenean rhoncus posuere odio in.
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-6 col-lg-3 text-center mb16">
+                            <i class="fa fa-empire fa-2x mb16"></i>
+                            <h3>Make Sucessfull</h3>
+                            <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
+                                aenean rhoncus posuere odio in.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

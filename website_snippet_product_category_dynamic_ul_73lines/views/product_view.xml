@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <record model="ir.ui.view" id="product_template_form_view_list_category">
+        <field name="name">product.template.product.category.snippet</field>
+        <field name="model">product.public.category</field>
+        <field name="inherit_id" ref="website_sale.product_public_category_form_view"/>
+        <field name="arch" type="xml">
+            <group position="inside">
+                    <field name="visible_in_snippet"/>
+            </group>
+        </field>
+    </record>
+</odoo>

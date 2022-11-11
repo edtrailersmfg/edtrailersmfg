@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="mid_header_language_selector">
+        <t id="mid_header_language_selector_call" t-call="portal.language_selector">
+            <t t-set="_div_classes" t-value="(_div_classes or '') + ' dropdown'"/>
+        </t>
+    </template>
+
+    <template id="mid_header_language_selector_flag" name="Header Language Selector Flag"
+              inherit_id="website_customize_theme_business_ul_73lines.mid_header_language_selector">
+        <xpath expr="//t[@id='mid_header_language_selector_call']" position="before">
+            <t t-set="flags" t-value="True"/>
+        </xpath>
+    </template>
+</odoo>

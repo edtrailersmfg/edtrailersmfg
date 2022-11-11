@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Price Menu 11" id="price_menu_11">
+        <section class="pt64 pb64" id="price_menu_11" data-visible="price_menu">
+            <div class="container-fluid">
+                <h2 class="text-center">Price Menu</h2>
+                <p class="text-center pb48">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <div class="row border align-items-center">
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 p-0">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             class="img-fluid"/>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 p-0">
+                        <div class="text-center p-4 align-self-center">
+                            <h4>Menu Item 1</h4>
+                            <div class="line-fm"></div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                            </p>
+                            <h3>$1.86</h3>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 p-0">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             class="img-fluid"/>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 p-0">
+                        <div class="text-center p-4 align-self-center">
+                            <h4>Menu Item 2</h4>
+                            <div class="line-fm"></div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                            </p>
+                            <h3>$1.80</h3>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 p-0">
+                        <div class="text-center p-4 align-self-center">
+                            <h4>Menu Item 3</h4>
+                            <div class="line-fm"></div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                            </p>
+                            <h3>$2.19</h3>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 p-0">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             class="img-fluid"/>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 p-0">
+                        <div class="text-center p-4 align-self-center">
+                            <h4>Menu Item 4</h4>
+                            <div class="line-fm"></div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                            </p>
+                            <h3>$1.69</h3>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 p-0">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             class="img-fluid"/>
+                    </div>
+                </div>
+                <div class="justify-content-center pt64 row">
+                    <a href="#" class="btn btn-primary btn-lg">EXPLORE FULL MENU</a>
+                </div>
+
+            </div>
+        </section>
+    </template>
+</odoo>

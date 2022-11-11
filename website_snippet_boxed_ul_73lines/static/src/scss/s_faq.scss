@@ -1,0 +1,87 @@
+
+.accordion.style_3 .accordion-group {
+  border-left:none;
+  border-top:none;
+  border-right:none;
+  margin-bottom:10px;
+  border-bottom:none;
+}
+
+.accordion.style_3 .accordion-heading .accordion-toggle {
+  position: relative;
+  padding: 8px 45px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 1px solid #f2f2f2;
+}
+.accordion.style_3 .accordion-heading .accordion-toggle.collapsed:before{
+  content: "\f105";
+  position: absolute;
+  left: 10px;
+  font-family: "FontAwesome";
+  top: 10px;
+  text-align: center;
+  font-size:19px;
+  width:20px;
+  line-height:20px;
+  height:20px;
+  -webkit-transition-duration:0.4s;
+  -moz-transition-duration:0.4s;
+  -o-transition-duration:0.4s;
+  -ms-transition-duration:0.4s;
+  transition-duration:0.4s;
+}
+a:hover, a:active {
+    outline: 0 !important;
+}
+a:hover, a:focus {
+    color: $-alpha;
+    text-decoration: none;
+}
+.accordion.style_3 .accordion-heading .accordion-toggle:before{
+  content: "\f107";
+   position: absolute;
+  left: 10px;
+  font-family: "FontAwesome";
+  top: 10px;
+  text-align: center;
+  font-size:19px;
+  width:20px;
+  line-height:20px;
+  height:20px;
+  -webkit-transition-duration:0.4s;
+  -moz-transition-duration:0.4s;
+  -o-transition-duration:0.4s;
+  -ms-transition-duration:0.4s;
+  transition-duration:0.4s;
+}
+.accordion-heading .accordion-toggle {
+    display: block;
+}
+.accordion.style_3 .accordion-inner {
+  border-top:none;
+  padding: 20px 15px;
+  padding-bottom: 10px;
+}
+.faq-section{
+    padding-top:30px;
+    padding-bottom:30px;
+}
+.accordion.style_2 .accordion-heading .accordion-toggle,
+.accordion.style_1 .accordion-heading .accordion-toggle,
+.accordion.style_3 .accordion-heading .accordion-toggle {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #555;
+    font-size: 13px;
+}
+.accordion.style_2 .accordion-heading .accordion-toggle,
+.accordion.style_3 .accordion-heading .accordion-toggle {
+    color: $-alpha;
+}
+ blockquote, .blockquote{border-left:2px solid $-alpha;}
+
+.accordion-inner ul{
+    list-style-type: disc;
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="s_ecommerce_terms" name="Ecommerce Terms">
+        <section
+                class="s_ecommerce_terms homepage-bar s_three_boxes_with_icon">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 feature-box mt8 ">
+                        <div class="col-md-2 mt8 mb8">
+                            <span class="fa fa-home fa-1x img-circle bg-primary"
+                                  style=""/>
+                        </div>
+                        <div class="col-md-10 mt8 mb8">
+                            <h4 class="o_default_snippet_text">FREE SHIPPING
+                                &amp;amp; RETURN
+                            </h4>
+                            <p class="o_default_snippet_text">Free shipping on
+                                all orders over $99.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 feature-box mt8 ">
+                        <div class="col-md-2 mt8 mb8">
+                            <span class="fa fa-check fa-1x img-circle bg-primary"/>
+                        </div>
+                        <div class="col-md-10 mt8 mb8">
+                            <h4 class="o_default_snippet_text">FREE SHIPPING
+                                &amp;amp; RETURN
+                            </h4>
+                            <p class="o_default_snippet_text">Free shipping on
+                                all orders over $99.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 feature-box mt8 ">
+                        <div class="col-md-2 mt8 mb8">
+                            <span class="fa fa-inr fa-1x img-circle bg-primary"/>
+                        </div>
+                        <div class="col-md-10 mt8 mb8">
+                            <h4>MONEY BACK GUARANTEE</h4>
+                            <p class="o_default_snippet_text">Free shipping on
+                                all orders over $99.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 feature-box mt8 ">
+                        <div class="col-md-2 mt8 mb8">
+                            <span class="fa fa-life-ring fa-1x img-circle bg-primary"
+                                  style=""/>
+                        </div>
+                        <div class="col-md-10 mt8 mb8">
+                            <h4 class="o_default_snippet_text">ONLINE SUPPORT
+                                24/7
+                            </h4>
+                            <p class="o_default_snippet_text">Free shipping on
+                                all orders over $99.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+</odoo>

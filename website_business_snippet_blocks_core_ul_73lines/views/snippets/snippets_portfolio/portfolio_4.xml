@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Portfolio 4" id="portfolio_4">
+        <section class="pt64 pb64" data-visible="portfolios">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <div class="border pt64 pb64">
+                            <i class="fa fa-2x fa-cubes"></i>
+                            <h3 class="pt16">Portfolio One</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <div class="border pt64 pb64">
+                            <i class="fa fa-2x fa-cubes"></i>
+                            <h3 class="pt16">Portfolio Two</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <div class="border pt64 pb64">
+                            <i class="fa fa-2x fa-cubes"></i>
+                            <h3 class="pt16">Portfolio Three</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <div class="border pt64 pb64">
+                            <i class="fa fa-2x fa-cubes"></i>
+                            <h3 class="pt16">Portfolio Four</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <div class="border pt64 pb64">
+                            <i class="fa fa-2x fa-cubes"></i>
+                            <h3 class="pt16">Portfolio Five</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <div class="border pt64 pb64">
+                            <i class="fa fa-2x fa-cubes"></i>
+                            <h3 class="pt16">Portfolio Six</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center pb24">
+                        <div class="border text-left pl-5  pt48 pb48">
+                            <p>11 April 2019</p>
+                            <h3>Our Portfolio</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <div class="border pt64 pb64">
+                            <i class="fa fa-2x fa-cubes"></i>
+                            <h3 class="pt16">Portfolio Seven</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <div class="border pt64 pb64">
+                            <i class="fa fa-2x fa-cubes"></i>
+                            <h3 class="pt16">Portfolio Eight</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <div class="border pt64 pb64">
+                            <i class="fa fa-2x fa-cubes"></i>
+                            <h3 class="pt16">Portfolio Nine</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <div class="border pt64 pb64">
+                            <i class="fa fa-2x fa-cubes"></i>
+                            <h3 class="pt16">Portfolio Ten</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

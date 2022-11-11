@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template id="template" xml:space="preserve">
+    <t t-extend="web_editor.dialog.link">
+        <t t-jquery="select[name='link_style_shape']" t-operation="append">
+            <option value="btn-1">Hover 1</option>
+            <option value="btn-2">Hover 2</option>
+            <option value="btn-3">Hover 3</option>
+            <option value="btn-4">Hover 4</option>
+            <option value="btn-5">Hover 5</option>
+            <option value="btn-6">Hover 6</option>
+            <!--<option value="btn-flat-outline">Flat + Outline</option>-->
+
+        </t>
+    </t>
+</template>

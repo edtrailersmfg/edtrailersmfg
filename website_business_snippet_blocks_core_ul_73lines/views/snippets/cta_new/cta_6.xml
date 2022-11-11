@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="CTA 6" id="cta_6">
+        <section class="pt64 pb64" data-visible="cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center bg-info">
+                        <h2 class="pb8 pt64">Call To Action</h2>
+                        <p class="pb16">Lorem Ipsum is simply dummy text of the
+                            printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy.
+                        </p>
+                        <a href="#" class="btn btn-primary mb64 px-4 py-2">
+                            button
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

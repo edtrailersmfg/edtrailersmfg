@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Footer 18" id="footer_18">
+        <section class="pt64 pb32" id="footer_18" data-visible="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 separator">
+                        <img style="margin:0 auto;"
+                             class="img img-responsive img-fluid"
+                             src="/logo.png"
+                             t-att-alt="'Logo of %s' % res_company.name"
+                             t-att-title="res_company.name"/>
+                        <h6 class="text-secondary pt8">POSTAL ADDRESS</h6>
+                        <address>
+                            <span t-field="res_company.street"/>
+                            <span t-field="res_company.city"/>
+                            <br>
+                                <span t-field="res_company.state_id.name"/>
+                                <span t-field="res_company.zip"/>
+                                <span t-field="res_company.country_id.name"/>
+                            </br>
+                        </address>
+                        <h6 class="text-secondary pt8">EMAIL</h6>
+                        <p>
+                            <span t-field="res_company.email"/>
+                        </p>
+                        <h6 class="text-secondary pt8">BUSINESS PHONE</h6>
+                        <p>
+                            <span t-field="res_company.phone"/>
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 separator pb32">
+                        <h5 class="font-weight-bold">RECENT POST</h5>
+                        <div class="media pt16">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                 class="align-self-start mr-3"></img>
+                            <div class="media-body">
+                                <h6 class="font-weight-bold mb0">
+                                    <a href="#" target="_blank">Best Montion Design</a>
+                                </h6>
+                                <h6 class="font-weight-bold">
+                                    <a href="#" target="_blank">is Here Download</a>
+                                </h6>
+                                <h6><i class="fa fa-clock-o"></i>NOV 12, 2018
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="media pt16">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                 class="align-self-start mr-3"></img>
+                            <div class="media-body">
+                                <h6 class="font-weight-bold mb0">
+                                    <a href="#" target="_blank">Best Montion Design</a>
+                                </h6>
+                                <h6 class="font-weight-bold">
+                                    <a href="#" target="_blank">is Here Download</a>
+                                </h6>
+                                <h6><i class="fa fa-clock-o"></i>NOV 12, 2018
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="media pt16">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                 class="align-self-start mr-3"></img>
+                            <div class="media-body">
+                                <h6 class="font-weight-bold mb0">
+                                    <a href="#" target="_blank">Best Montion Design</a>
+                                </h6>
+                                <h6 class="font-weight-bold">
+                                    <a href="#" target="_blank">is Here Download</a>
+                                </h6>
+                                <h6><i class="fa fa-clock-o"></i>NOV 12, 2018
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 separator pb32">
+                        <h5 class="font-weight-bold">TAG CLOUD</h5>
+                        <div class="pt16">
+                            <h5>
+                                <span class="badge badge-secondary o_default_snippet_text p-2 button_style">AUDIO</span>
+                                <span class="badge badge-secondary o_default_snippet_text p-2 button_style">BLOG</span>
+                                <span class="badge badge-secondary o_default_snippet_text p-2 button_style">EXAMPLE
+                                </span>
+                                <span class="badge badge-secondary o_default_snippet_text p-2 button_style">GALLARY
+                                </span>
+                                <span class="badge badge-secondary o_default_snippet_text p-2 button_style">MAGAZINE
+                                </span>
+                                <span class="badge badge-secondary o_default_snippet_text p-2 button_style">NEWS</span>
+                                <span class="badge badge-secondary o_default_snippet_text p-2">POST</span>
+                                <span class="badge badge-secondary o_default_snippet_text p-2">QUOTE</span>
+                                <span class="badge badge-secondary o_default_snippet_text p-2">VIDEO</span>
+                            </h5>
+                        </div>
+                        <h5 class="mt32 font-weight-bold">TWITTER</h5>
+                        <div class="media">
+                            <i class="fa fa-twitter align-self-start mr-3 text-primary"></i>
+                            <div class="media-body">
+                                <h6>
+                                    Recover WP updated to the version 1.3.4
+                                </h6>
+                                <h6>
+                                    <a href="#" target="_blank">https://t.co/PjMohnwz</a>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb32">
+                        <h5 class="font-weight-bold">SUBSCRIBE TO RSS</h5>
+                        <p class="pt16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor.</p>
+                        <div class="pt16">
+                            <a t-att-href="res_company.social_facebook" class="text-decoration-none" target="_blank">
+                                <i class="fa fa-facebook p-2  box_hover"></i>
+                            </a>
+                            <a href="#" class="text-decoration-none" target="_blank">
+                                <i class="fa fa-google-plus p-2 box_hover"></i>
+                            </a>
+                            <a t-att-href="res_company.social_twitter" class="text-decoration-none" target="_blank">
+                                <i class="fa fa-twitter p-2 box_hover"></i>
+                            </a>
+                            <a t-att-href="res_company.social_linkedin" class="text-decoration-none" target="_blank">
+                                <i class="fa fa-linkedin p-2 box_hover "></i>
+                            </a>
+                        </div>
+                        <div class="input-group js_subscribe" data-list-id="0">
+                            <input type="email" name="email" class="js_subscribe_email form-control rounded-0"
+                                   placeholder="your email..."/>
+                            <span class="input-group-append">
+                                <a role="button" href="#"
+                                   class="btn btn-primary js_subscribe_btn rounded-0">Subscribe
+                                </a>
+                                <a role="button" href="#"
+                                   class="btn btn-success js_subscribed_btn d-none rounded-0"
+                                   disabled="disabled">Thanks
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light">
+            <div class="container">
+                <div class="row p-4">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div>
+                            Copyright &amp;copy;
+                            <span t-field="res_company.name">Company name
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-sm-6 text-md-right text-lg-right">
+                        <div>
+                            Responsive Odoo theme,
+                            <span>
+                                Made with
+                                <i class="fa fa-heart"/>
+                                by
+                                <strong>&lt; 73Lines &gt;
+                                </strong>
+                            </span>
+                        </div>
+<!--                        <div>-->
+<!--                            <t t-call="website.language_selector"/>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </template>
+</odoo>

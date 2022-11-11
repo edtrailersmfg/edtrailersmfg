@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Tab 10" id="tab_10">
+        <section class="pt64 pb64 tab10" id="tab_10" data-visible="tabs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 pb48 text-center">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="tabs">
+                            <nav class="tabs-nav">
+                                <ul class="tabs-nav-items">
+                                    <li class="tabs-nav-item active-tab-nav-item">
+                                        <a href="#section-1" class="tabs-nav-btn">Home</a>
+                                    </li>
+                                    <li class="tabs-nav-item">
+                                        <a href="#section-2" class="tabs-nav-btn">Photos</a>
+                                    </li>
+                                    <li class="tabs-nav-item">
+                                        <a href="#section-3" class="tabs-nav-btn">About</a>
+                                    </li>
+                                    <li class="tabs-nav-item">
+                                        <a href="#section-4" class="tabs-nav-btn">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="tabs-content">
+                                <div id="section-1" class="tabs-content-item active-tab-content-item oe_structure oe_empty">
+                                    <p>Consectetur elementum ad ante nunc ad facilisis aenean adipiscing ipsum a a eu mi
+                                        in hac. Morbi habitant vitae rutrum tincidunt amet a suspendisse scelerisque
+                                        vestibulum semper scelerisque cum dis nisi nostra. Fusce parturient tellus
+                                        aliquet suspendisse parturient lorem nam scelerisque per dis scelerisque
+                                        vestibulum tortor per in a tincidunt quis. Ultricies ligula commodo condimentum
+                                        nam volutpat vestibulum pretium felis tristique integer eu leo a sem dui enim.
+                                        Sagittis massa a cum ut adipiscing semper ullamcorper a odio montes venenatis
+                                        ullamcorper id ullamcorper a hendrerit quisque conubia in condimentum ac felis
+                                        euismod adipiscing. Fames consequat mattis tempor massa fringilla taciti
+                                        adipiscing adipiscing cursus porttitor a adipiscing scelerisque ut pretium purus
+                                        phasellus a vulputate ad egestas parturient vestibulum a urna rhoncus ut
+                                        aliquam.
+                                    </p>
+                                </div>
+                                <div id="section-2" class="tabs-content-item oe_structure oe_empty">
+                                    <p>Orci vestibulum donec venenatis tempus gravida vestibulum parturient curabitur
+                                        est ac est viverra scelerisque a inceptos leo a parturient purus a turpis
+                                        lobortis semper condimentum phasellus vestibulum. Tempor conubia at ullamcorper
+                                        lobortis feugiat purus ad eros a fermentum eu ultricies dolor eu. Fusce elit a
+                                        rhoncus consequat egestas magnis eu vitae a a vivamus venenatis commodo
+                                        condimentum torquent nec erat tempor vestibulum scelerisque tellus magna nulla
+                                        eleifend suspendisse. Imperdiet nec nunc fusce torquent netus erat habitasse
+                                        dictum dolor conubia a dignissim a venenatis ullamcorper congue. Egestas tempus
+                                        a nam eleifend curabitur id augue odio ac a dui hendrerit a euismod lectus cum
+                                        aliquet sit mattis elementum lobortis litora hac a non eu massa. Malesuada dui
+                                        orci vestibulum a adipiscing vestibulum ipsum adipiscing scelerisque litora
+                                        volutpat nam integer neque ultrices nam nulla tristique sociosqu leo lacinia
+                                        ullamcorper ad sagittis.
+                                    </p>
+
+                                    <p>Platea porttitor egestas condimentum ullamcorper sociosqu donec blandit curae
+                                        consequat mauris dictum nec parturient maecenas adipiscing. Nam etiam vestibulum
+                                        eget habitasse scelerisque taciti consectetur nulla ut senectus a a phasellus
+                                        senectus hac varius cum faucibus vitae viverra cras sed adipiscing parturient.
+                                        Ornare a euismod dui sit suspendisse nisi enim pulvinar ultrices rhoncus a
+                                        imperdiet suspendisse parturient nibh facilisi.
+                                    </p>
+                                </div>
+                                <div id="section-3" class="tabs-content-item oe_structure oe_empty">
+                                    <p>Viverra consequat lobortis fringilla nascetur dapibus dis parturient vestibulum
+                                        sagittis parturient dis quis felis commodo senectus. Ipsum libero et hendrerit
+                                        viverra hac lorem donec dui in a iaculis quis scelerisque vestibulum blandit
+                                        accumsan mus scelerisque potenti dictum tempus quisque dapibus scelerisque elit.
+                                        Ut porttitor per a a ut metus justo a ullamcorper ad nec ut suspendisse cubilia.
+                                        Hac adipiscing vehicula condimentum aenean sem adipiscing lacus convallis
+                                        adipiscing quis primis mi condimentum lacinia orci ac lacinia in quam quisque
+                                        ultricies parturient platea lectus. Vel felis pretium vitae id natoque a
+                                        convallis adipiscing posuere eu porta erat risus libero habitant cubilia eu
+                                        feugiat condimentum. A parturient consequat nibh hac sem elit condimentum
+                                        dictumst parturient tellus malesuada porta ullamcorper nisl adipiscing mattis
+                                        adipiscing quam tortor mi a.
+                                    </p>
+                                </div>
+                                <div id="section-4" class="tabs-content-item oe_structure oe_empty">
+                                    <p>Vulputate per nec tempus duis a a semper taciti inceptos placerat dapibus a ad
+                                        enim praesent vestibulum sit bibendum luctus id odio dictum parturient
+                                        scelerisque sodales. Adipiscing id parturient maecenas fermentum ullamcorper
+                                        dictumst amet scelerisque suspendisse dolor felis duis dapibus adipiscing ac est
+                                        aliquet cubilia eget consectetur. Parturient a adipiscing condimentum
+                                        consectetur varius lectus ut pulvinar a tempor erat parturient a vestibulum
+                                        commodo habitant parturient parturient eu felis.
+                                    </p>
+
+                                    <p>Aptent dis euismod nec himenaeos nec aliquam nec convallis in mus vestibulum duis
+                                        feugiat accumsan eu placerat a id adipiscing scelerisque. Mi nibh donec elit a
+                                        semper cum parturient eget tellus a convallis vulputate in sit ac cras
+                                        parturient leo tortor lorem adipiscing a. Phasellus mi tincidunt in parturient a
+                                        parturient adipiscing et cum malesuada cras odio urna a risus habitant id.
+                                        Molestie dictumst duis interdum neque ultricies placerat at bibendum felis nibh
+                                        vestibulum aliquam dis cum elementum id at dignissim in. Parturient etiam
+                                        condimentum adipiscing sed et a ac scelerisque tortor in id varius in nisl
+                                        conubia vehicula.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

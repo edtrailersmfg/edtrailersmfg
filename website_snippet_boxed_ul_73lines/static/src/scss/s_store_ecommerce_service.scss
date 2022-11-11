@@ -1,0 +1,186 @@
+
+
+#ttcmsfooterservice .service-icon {
+    padding: 0;
+    left:0;
+    position:absolute;
+}
+#ttcmsfooterservice .title_block {
+    display: none;
+}
+#ttcmsfooterservice .service-desc > ul {
+    float: left;
+    list-style: outside none none;
+    width: 100%;
+    margin: 0;
+}
+#ttcmsfooterservice {
+    //float: left;
+    padding: 50px 0;
+    margin: 0;
+}
+#ttcmsfooterservice .ttcmsfooterservice .ttfooterservice .service-block-content:after {
+    content: "";
+    position: absolute;
+    border-right: 1px solid #f0f0f0;
+    height: 140px;
+    right: 0;
+    top: 0;
+}
+#ttcmsfooterservice .ttcmsfooterservice .ttfooterservice .service-block-content:last-child:after {
+    border: none;
+}
+#ttcmsfooterservice .ttcmsfooterservice .ttfooterservice .service-block-content .footer-service-img {
+    float: left;
+    height: 60px;
+    width: 70px;
+    background: url("../img/footer-services-sprite.png");
+}
+#ttcmsfooterservice .ttcmsfooterservice .ttfooterservice .service-block-content .footer-service-img.secure-payment-img {
+    background-position: -4px -14px;
+}
+
+#ttcmsfooterservice .ttcmsfooterservice .ttfooterservice .service-block-content .footer-service-img.trust-pay-img {
+    background-position: -4px -110px;
+}
+#ttcmsfooterservice .ttcmsfooterservice .ttfooterservice .service-block-content .footer-service-img.easy-returns-img {
+    background-position: -4px -205px;
+}
+#ttcmsfooterservice .ttcmsfooterservice .ttfooterservice .service-block-content .footer-service-img.app-block-img {
+    background-position: -4px -297px;
+}
+#ttcmsfooterservice .ttcmsfooterservice .ttfooterservice .service-block-content .footer-service-desc {
+    padding: 0 0 0 70px;
+}
+#ttcmsfooterservice .ttcmsfooterservice .ttfooterservice .service-block-content .footer-service-desc .service-heading {
+    color: $o-we-color;
+    letter-spacing: 0.4px;
+    margin: 0 0 10px;
+    text-transform: capitalize;
+}
+#ttcmsfooterservice .ttcmsfooterservice .ttfooterservice .service-block-content .footer-service-desc .service-sub-heading {
+    letter-spacing: 0;
+    margin: 0 0 10px;
+}
+#ttcmsfooterservice .ttcmsfooterservice .ttfooterservice .service-block-content .footer-service-desc .service-desc {
+    float: left;
+}
+#ttcmsfooterservice .ttcmsfooterservice .ttfooterservice .service-block-content .footer-service-desc .service-desc li {
+    float: left;
+    padding-left: 15px;
+    position: relative;
+}
+#ttcmsfooterservice .ttcmsfooterservice .ttfooterservice .service-block-content .footer-service-desc .service-desc li .service-icon:before {
+    content: "\f00c";
+    font-family: "FontAwesome";
+    font-size: 10px;
+    font-weight: bold;
+    position: absolute;
+    color: $-alpha;
+}
+#ttcmsfooterservice .ttcmsfooterservice .ttfooterservice .service-block-content .footer-service-desc .service-desc li .service-icon.service-icon-android:before {
+    content: "\f17b";
+    font-family: "FontAwesome";
+    font-size: 28px;
+    position: absolute;
+    font-weight: normal;
+}
+#ttcmsfooterservice .ttcmsfooterservice .ttfooterservice .service-block-content .footer-service-desc .service-desc li .service-icon.service-icon-iOs:before {
+    content: "\f179";
+    font-family: "FontAwesome";
+    font-size: 28px;
+    position: absolute;
+    font-weight: normal;
+}
+#ttcmsfooterservice .ttcmsfooterservice .ttfooterservice .service-block-content .footer-service-desc .service-desc li {
+    color: $o-we-color;
+    float: left;
+    margin: 0 0 3px;
+    padding: 0 0 0 17px;
+}
+#ttcmsfooterservice .ttcmsfooterservice .ttfooterservice .service-block-content .app-block .footer-service-desc li{
+    margin-bottom: 15px;
+}
+#ttcmsfooterservice .ttcmsfooterservice .ttfooterservice .service-block-content .footer-service-desc .service-desc li > span.android, #ttcmsfooterservice .ttcmsfooterservice .ttfooterservice .service-block-content .footer-service-desc .service-desc li > span.iOs {
+    padding: 0 0 0 15px;
+    margin: 0 20px 20px 0;
+}
+
+/**/
+#ttcmsleftservices,.ttcmsleftservices {
+    float: left;
+    width: 100%;
+}
+#ttcmsleftservices .title_block ,.ttcmsleftservices .title_block {
+    display: none;
+}
+#ttcmsleftservices .block_content,.ttcmsleftservices .block_content {
+    float: left;
+    width: 100%;
+    background: #ffffff none repeat scroll 0 0;
+}
+#ttcmsleftservices .block_content > div,.ttcmsleftservices .block_content > div {
+    border-bottom: 1px solid #f0f0f0;
+    float: left;
+    padding: 20px 0;
+    width: 100%;
+}
+#ttcmsleftservices .block_content > div:last-child,.ttcmsleftservices .block_content > div:last-child {
+    border: medium none;
+}
+#ttcmsleftservices .block_content > div .ttcontent_inner .service .service-icon,.ttcmsleftservices .block_content > div .ttcontent_inner .service .service-icon {
+    float: left;
+    height: 52px;
+    width: 62px;
+}
+#ttcmsleftservices .block_content > div .ttcontent_inner .service .service-icon.ttshipping_img,.ttcmsleftservices .block_content > div .ttcontent_inner .service .service-icon.ttshipping_img {
+    background: rgba(0, 0, 0, 0) url("../img/services-sprite.png") no-repeat scroll -4px -14px;
+}
+#ttcmsleftservices .block_content > div .ttcontent_inner .service .service-icon.ttsupport_img,.ttcmsleftservices .block_content > div .ttcontent_inner .service .service-icon.ttsupport_img {
+    background: rgba(0, 0, 0, 0) url("../img/services-sprite.png") no-repeat scroll -4px -110px;
+}
+#ttcmsleftservices .block_content > div .ttcontent_inner .service .service-icon.ttsaving_img,.ttcmsleftservices .block_content > div .ttcontent_inner .service .service-icon.ttsaving_img {
+    background: rgba(0, 0, 0, 0) url("../img/services-sprite.png") no-repeat scroll -4px -205px;
+}
+#ttcmsleftservices .block_content > div .ttcontent_inner .service .service-icon.ttmoneyback_img,.ttcmsleftservices .block_content > div .ttcontent_inner .service .service-icon.ttmoneyback_img {
+    background: rgba(0, 0, 0, 0) url("../img/services-sprite.png") no-repeat scroll -4px -297px;
+}
+#ttcmsleftservices .block_content > div .ttcontent_inner .service .service-icon.ttshopping_img,.ttcmsleftservices .block_content > div .ttcontent_inner .service .service-icon.ttshopping_img {
+    background: rgba(0, 0, 0, 0) url("../img/services-sprite.png") no-repeat scroll -4px -391px;
+}
+#ttcmsleftservices .block_content > div .ttcontent_inner .service .service-icon.ttawardwinner_img,.ttcmsleftservices .block_content > div .ttcontent_inner .service .service-icon.ttawardwinner_img {
+    background: rgba(0, 0, 0, 0) url("../img/services-sprite.png") no-repeat scroll -4px -486px;
+}
+#ttcmsleftservices .block_content > div .ttcontent_inner .service .service-content,.ttcmsleftservices .block_content > div .ttcontent_inner .service .service-content {
+    float: left;
+    padding: 5px 0 0 15px;
+}
+#ttcmsleftservices .block_content > div .ttcontent_inner .service .service-content .service-title,.ttcmsleftservices .block_content > div .ttcontent_inner .service .service-content .service-title {
+    color: $o-we-color;
+}
+
+#ttcmsleftservices .block_content > div:hover .ttcontent_inner .service .service-content .service-title,.ttcmsleftservices .block_content > div:hover .ttcontent_inner .service .service-content .service-title {
+    color: $-alpha;
+}
+#ttcmsleftservices.bottom_banner .block_content > div.col-sm-4{
+    width: 33.333%;
+    margin: 15px 0;
+    padding: 5px 0;
+    border-bottom: none;
+    border-right: 1px solid #f0f0f0;
+    text-align: center;
+}
+#ttcmsleftservices.bottom_banner .block_content > div.col-sm-4:last-child{
+    border-right: none;
+}
+#ttcmsleftservices.bottom_banner .block_content > div .ttcontent_inner {
+    display: inline-block;
+    float: none;
+    width: auto;
+}
+.ttfooterservice{
+	font-size:14px !important;
+}
+.pad0{
+padding:0px;
+}

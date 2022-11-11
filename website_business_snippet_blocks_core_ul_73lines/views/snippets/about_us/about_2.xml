@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="About 2" id="about_2">
+        <section data-visible="aboutus">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-53.png" alt="img13" class="img-fluid"/>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-4">
+                        <h2 class="font-weight-bold">Hi I am Jessica</h2>
+                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Pellentesque fermentum est in tortor congue suscipit. Suspendisse potenti. Aliquam finibus
+                            pharetra tellus at
+                            egestas.Suspendisse otenti. Aliquam finibus pharetra tellus at egestas.Lorem ipsum dolor sit
+                            amet,
+                            consectetur adipiscing elit.
+                        </p>
+                         <h3>EXPERIENCE</h3>
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                <h5>Aug 2017 - Present</h5>
+                                Djawaweb
+                                <p>UI/UX DESIGNER</p>
+                                <P>Pellentesque fermentum est in tortor congue suscipit.</P>
+                            </div>
+                             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                 <h5>Sup 2015 - Present</h5>
+                                Djawaweb
+                                <p>UI/UX DESIGNER</p>
+                                <P>Pellentesque fermentum est in tortor congue suscipit.</P>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                     <h5>Sup 2010 - Present</h5>
+                                Djawaweb
+                                <p>UI/UX DESIGNER</p>
+                                <P>Pellentesque fermentum est in tortor congue suscipit.</P>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-danger btn-lg rounded-circle px-5">Button</a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Accordion 8" id="accordion_8">
+        <section class="pt64 pb64" id="accordion_8" data-visible="accordions">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Accordion Title</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title mb0">
+                                        <a class="" role="button" data-toggle="collapse"
+                                           href="#collapseOne">
+                                            <i class="fa fa-comment"></i>
+                                            Section 1
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in show" data-parent="#accordion">
+                                    <div class="panel-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis ac leo
+                                        vel rutrum. Integer varius tristique magna vel dictum. Vestibulum augue magna,
+                                        convallis id velit a, porttitor fermentum sem.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title mb0">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            href="#collapseTwo">
+                                            <i class="fa fa-link"></i>
+                                            Section 2
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" data-parent="#accordion">
+                                    <div class="panel-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis ac leo
+                                        vel rutrum. Integer varius tristique magna vel dictum. Vestibulum augue magna,
+                                        convallis id velit a, porttitor fermentum sem.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title mb0">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            href="#collapseThree">
+                                            <i class="fa fa-bars"></i>
+                                            Section 3
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" data-parent="#accordion">
+                                    <div class="panel-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis ac leo
+                                        vel rutrum. Integer varius tristique magna vel dictum. Vestibulum augue magna,
+                                        convallis id velit a, porttitor fermentum sem.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </template>
+</odoo>

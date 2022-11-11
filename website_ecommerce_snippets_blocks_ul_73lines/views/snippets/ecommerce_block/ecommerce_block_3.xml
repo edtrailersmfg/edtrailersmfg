@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Ecommerce Block 3" id="ecommerce_block_3">
+        <section class="pt64 pb64" id="ecommerce_block_3" data-visible="ecommerce_blocks">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6 col-sm-6 mt8 mb8">
+                        <div class="hover_effect">
+                            <a href="#">
+                                <img class="img-fluid d-block mx-auto"
+                                     src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-570x532.png"
+                                     data-original-title="" title="" aria-describedby="tooltip867057"/>
+                            </a>
+                            <div class="col-12 img-content-1 px-3">
+                                <h2>
+                                    Amazing Collection
+                                </h2>
+                                <h1>
+                                    $9.99
+                                </h1>
+                                <p class="o_default_snippet_text">from 24/12 to 27/12
+                                </p>
+                                <div data-name="Buttons">
+                                    <a href="#"
+                                       class="btn mt8 mb8 btn-primary o_default_snippet_text"
+                                       contenteditable="true">View More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 col-sm-6">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-6 mt8 mb8">
+                                <div class="hover_effect">
+                                    <a href="#">
+                                        <img class="img-fluid d-block mx-auto"
+                                             src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-255.png"
+                                             data-original-title="" title="" aria-describedby="tooltip867057"/>
+                                    </a>
+                                    <div class="col-12 img-content-2 text-md-right text-lg-right">
+                                        <h5>
+                                            Huge Sale
+                                        </h5>
+                                        <h4>
+                                            $9.99
+                                        </h4>
+                                        <p class="o_default_snippet_text">from 24/12 to 27/12
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-6 mt8 mb8">
+                                <div class="hover_effect">
+                                    <a href="#">
+                                        <img class="img-fluid d-block mx-auto"
+                                             src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-255.png"
+                                             data-original-title="" title="" aria-describedby="tooltip867057"/>
+                                    </a>
+                                    <div class="col-12 img-content-3">
+                                        <h5>
+                                            SALE
+                                            <font style="font-size: 24px;">25%</font>
+                                        </h5>
+                                        <h2>
+                                            Today
+                                        </h2>
+                                        <div data-name="Buttons">
+                                            <a href="#"
+                                               class="btn mt8 mb8 btn-primary o_default_snippet_text"
+                                               contenteditable="true">View More
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-12 col-sm-12 mt8 mb8">
+                                <div class="hover_effect">
+                                    <a href="#">
+                                        <img class="img-fluid d-block mx-auto"
+                                             src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-540x229.png"
+                                             data-original-title="" title="" aria-describedby="tooltip867057"/>
+                                    </a>
+                                    <div class="col-12 img-content-4">
+                                        <h5>
+                                            SALE <font style="font-size: 28px;">20%</font> OFF
+                                        </h5>
+                                        <h5>
+                                            ALL CATEGORY
+                                        </h5>
+                                        <div data-name="Buttons">
+                                            <a href="#"
+                                               class="btn mt8 mb8 btn-primary o_default_snippet_text"
+                                               contenteditable="true">View More
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

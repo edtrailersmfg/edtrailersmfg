@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="s_counter_text" name="Counter Text Snippet">
+        <section class="state_section bg-primary" id="state_section_id">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="state_title">
+                            <h1 class="">Discover new features, customization
+                                options and new
+                                effects
+                            </h1>
+                            <span class="divider">
+                                <span class="circle">
+                                    <span class="line appeared"></span>
+                                </span>
+                            </span>
+                            <h4>Unlimited possibilities to create outstanding
+                                websites. Unique and useful
+                                demos
+                                for your next project.
+                            </h4>
+                        </div>
+                        <button class="btn btn-primary">
+                            <span class="mr8">Buy Now</span>
+                            <span class="fa fa-500px pe-7s-angle-right pe-va fa-2x"/>
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6 pad0 text-center state_text">
+                                <section class="state-col-inner bg-black-25">
+                                    <i class="fa fa-500px pe-7s-display1  fa-3x"/>
+                                    <div class="count_to animate_onoffset">
+                                        <div class="odometer"
+                                             data-number="1200"
+                                             data-duration="2000"/>
+                                    </div>
+                                    <h3>Happy clients</h3>
+                                </section>
+                            </div>
+                            <div class="col-md-6 pad0 text-center state_text">
+                                <section class="state-col-inner bg-black-25">
+                                    <i class="fa fa-500px pe-7s-drop  fa-3x "/>
+                                    <div class="count_to animate_onoffset">
+                                        <div class="odometer"
+                                             data-number="1000"
+                                             data-duration="2000"/>
+                                    </div>
+                                    <h3>Projects finished</h3>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 pad0 text-center state_text">
+                                <section class="state-col-inner bg-black-25">
+                                    <i class="fa fa-500px pe-7s-bicycle  fa-3x"/>
+                                    <div class="count_to animate_onoffset">
+                                        <div class="odometer" data-number="560"
+                                             data-duration="2000"/>
+                                    </div>
+                                    <h3>Support Tickets</h3>
+                                </section>
+                            </div>
+                            <div class="col-md-6 pad0 text-center state_text">
+                                <section class="state-col-inner bg-black-25">
+                                    <i class="fa fa-500px pe-7s-ball  fa-3x"/>
+                                    <div class="count_to animate_onoffset">
+                                        <div class="odometer" data-number="50"
+                                             data-duration="2000"/>
+                                    </div>
+                                    <h3>Members</h3>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- Snippet options -->
+    <template id="s_state_boxes_options" inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-js='Blockquote']" position="before">
+            <div data-js='js_state_section' data-selector=".state_text">
+<!--                <we-collapse-area>-->
+<!--                    <we-toggler>-->
+<!--                        <i class="fa fa-fw fa-cog"/>-->
+<!--                        Block Setting-->
+<!--                    </we-toggler>-->
+<!--                    <we-collapse data-no-preview="true" class="filter_div">-->
+<!--                        <we-button id="state_opt">-->
+<!--                            Settings-->
+<!--                        </we-button>-->
+<!--                    </we-collapse>-->
+<!--                </we-collapse-area>-->
+
+                <we-button-group class="o_we_user_value_widget">
+                    <we-title data-original-title="" title="" style="">
+                        Block Settings
+                    </we-title>
+                    <we-selection-items>
+                        <button class="state_opt progress_bar btn btn-secondary filter_div" data-no-preview="true">
+                            Settings
+                        </button>
+                    </we-selection-items>
+                </we-button-group>
+
+            </div>
+        </xpath>
+    </template>
+</odoo>

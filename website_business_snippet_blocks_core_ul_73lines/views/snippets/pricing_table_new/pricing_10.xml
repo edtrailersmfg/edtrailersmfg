@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Pricing 10" id="pricing_10">
+        <section class="pt64 pb64" data-visible="pricing">
+            <div class="container text-center">
+                <h2>Pricing Table</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                <div class="row pt48">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb24">
+                        <div class="border bg-white pt24 pb24">
+                            <div class="px-4">
+                                <h3>Personal</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h3 class="pt16 pb16">
+                                    <small>Free</small>
+                                </h3>
+                                <a href="#" class="btn btn-primary btn-block">Button</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb24">
+                        <div class="border bg-white pt24 pb24">
+                            <div class="px-4">
+                                <h3>Agency</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h3 class="pt16 pb16">
+                                    <small>$123</small>
+                                </h3>
+                                <a href="#" class="btn btn-primary btn-block">Button</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="border bg-white pt24 pb24">
+                            <div class="px-4">
+                                <h3>Unlimited</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                <h3 class="pt16 pb16">
+                                    <small>$232</small>
+                                </h3>
+                                <a href="#" class="btn btn-primary btn-block">Button</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

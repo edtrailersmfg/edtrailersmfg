@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Counter_9" id="counter_9">
+        <section class="pt64 pb48" id="counter_9" data-visible="counters">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb48">
+                        <h2>Counter Design</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="counter-box">
+                            <i class="fa fa-clock-o fa-2x text-muted"></i>
+                            <h2 class="mt32">10</h2>
+                            <h4 class="text-muted">Years</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="counter-box">
+                            <i class="fa fa-coffee fa-2x text-muted"></i>
+                            <h2 class="mt32">900</h2>
+                            <h4 class="text-muted">Coffee Cup</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="counter-box">
+                            <i class="fa fa-users fa-2x text-muted"></i>
+                            <h2 class="mt32">400</h2>
+                            <h4 class="text-muted">Clients</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="counter-box">
+                            <i class="fa fa-briefcase fa-2x text-muted"></i>
+                            <h2 class="mt32">700</h2>
+                            <h4 class="text-muted">Projects</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

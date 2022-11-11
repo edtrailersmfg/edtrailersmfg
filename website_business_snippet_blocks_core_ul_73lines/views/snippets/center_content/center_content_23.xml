@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Center Content 23" id="center_content_23">
+        <section class="pt64 pb64" data-visible="center_content">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="row  text-center">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="d-inline-flex mx-auto">
+                                    <i class="fa fa-2x fa-copyright px-2"></i>
+                                    <h3>Company</h3>
+                                </div>
+                                <h2 class="font-weight-bold pt24 pb24">Center Content Title</h2>
+                                <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+                                    fermentum est in tortor congue suscipit. Suspendisse potenti. Aliquam finibus
+                                    pharetra tellus at egestas.Suspendisse potenti. Aliquam finibus pharetra tellus at
+                                    egestas.
+                                </p>
+                                <i class="fa fa-cubes pt64 "></i>
+                                pharetra
+                                <p>pharetra tellus at egestas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

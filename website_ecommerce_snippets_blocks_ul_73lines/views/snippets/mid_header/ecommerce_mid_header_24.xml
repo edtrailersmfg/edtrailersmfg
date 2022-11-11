@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Ecommerce Mid Header 24" id="ecommerce_mid_header_24">
+        <section class="bg-400" id="mid-header-top-24" data-visible="mid_headears">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 oe_structure col-lg-4 col-md-6 col-sm-7 align-self-center text-center text-lg-left text-md-left"
+                         id="mid-header-top-left">
+                        <li class="list-inline-item  pt8 pb8">
+                            <div class="oe_structure oe_empty">
+                                <a href="#"
+                                   class="text-black border-right hide_border border-beta pr-3 o_default_snippet_text"
+                                   title="welcome">Welcome
+                                </a>
+                            </div>
+                        </li>
+                        <li class="list-inline-item pt8 pb8">
+                            <div class="oe_structure oe_empty">
+                            <div id="company-profile"
+                                 t-ignore="true">
+                                <a href="/website/social/facebook"
+                                   class="fa_company_contact_links"
+                                   target="_blank">
+                                    <i class="fa fa-x mx-1 text-black fa-facebook share_facebook fa_company_contact_info"/>
+                                </a>
+                                <a href="/website/social/twitter"
+                                   class="fa_company_contact_links"
+                                   target="_blank">
+                                    <i class="fa fa-x mx-1 text-black fa-twitter share_twitter fa_company_contact_info"/>
+                                </a>
+                                <a href="/website/social/linkedin"
+                                   class="fa_company_contact_links"
+                                   target="_blank">
+                                    <i class="fa fa-x mx-1 text-black fa-linkedin share_linkedin fa_company_contact_info"/>
+                                </a>
+                                <a href="/website/social/youtube"
+                                   class="fa_company_contact_links"
+                                   target="_blank">
+                                    <i class="fa fa-x mx-1 text-black fa-youtube-play share_youtube fa_company_contact_info"/>
+                                </a>
+                                <a href="/website/social/instagram"
+                                   rel="publisher"
+                                   class="fa_company_contact_links"
+                                   target="_blank">
+                                    <i class="fa fa-x mx-1 text-black fa-instagram share_instagram fa_company_contact_info"/>
+                                </a>
+                                <a href="/website/social/github"
+                                   class="fa_company_contact_links"
+                                   target="_blank">
+                                    <i class="fa fa-x mx-1 text-black fa-github share_github fa_company_contact_info"/>
+                                </a>
+                            </div>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="col-12 oe_structure col-lg-8 col-md-6 col-sm-5 align-self-center  text-center text-lg-right text-md-right"
+                         id="mid-header-top-right">
+                        <li class="list-inline-item account_custom">
+                            <div class="dropdown">
+                                <a class="btn btn-link dropdown-toggle o_default_snippet_text border-right hide_border border-beta pl-2 pr-3 pt8 pb8"
+                                   type="button"
+                                   id="dropdownMenu1"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-user-circle text-black icon_style d-inline px-1"></i>
+                                    <span class="hide_content text-black">My Account</span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+                                    <a class="text-xs-center dropdown-item" href="/web/login"
+                                       id="ultimate_sign_in">
+                                        Sign in
+                                    </a>
+                                    <a href="/web/signup" class="text-xs-center dropdown-item"
+                                       id="ultimate_register">
+                                        <span>Register</span>
+                                    </a>
+
+                                    <a href="/my/home" role="menuitem" class="dropdown-item"
+                                       id="ultimate_my_account">My
+                                        Account
+                                    </a>
+                                    <a class="dropdown-item"
+                                       t-attf-href="/web/session/logout?redirect=/" role="menuitem"
+                                       id="ultimate_logout">
+                                        Logout
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="my_wish"
+                            class="list-inline-item pt8 pb8">
+                            <div class="oe_structure oe_empty">
+                                <div class="d-flex">
+                                    <t t-if="request.env.ref('website_sale_wishlist.add_to_wishlist').active">
+                                        <!--                                        <t t-set='wishcount'-->
+                                        <!--                                           t-value="len(request.env['product.wishlist'].current())"/>-->
+                                        <span class="nav-item">
+                                            <a href="/shop/wishlist"
+                                               class="text-black o_default_snippet_text"
+                                               title="wishlist">
+                                                <i class="fa fa-heart text-black icon_style d-inline px-1"
+                                                   title="wishlist"></i>
+                                                <span class="hide_content text-black">Wishlist</span>
+                                                <!--                                        <sup t-attf-class="my_wish_quantity o_animate_blink badge badge-primary">-->
+                                                <!--                                            <t t-esc='wishcount'/>-->
+                                                <!--                                        </sup>-->
+                                            </a>
+                                        </span>
+                                    </t>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-200" id="mid-header-bottom-24">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-4 col-md-3  pt8 pb8 text-center text-md-left text-lg-left oe_structure"
+                         id="mid-header-bottom-left">
+                        <div class="oe_structure oe_empty">
+                            <a href="/" class="img-fluid">
+                                <img src="/logo.png" class="img-fluid"
+                                     t-att-alt="'Logo of %s' % res_company.name"
+                                     t-att-title="res_company.name"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-lg-8 col-md-9 align-self-center  oe_structure text-lg-right text-md-right text-center"
+                         id="mid-header-bottom-right">
+                        <li class="list-inline-item pt8 pb8">
+                            <div class="oe_structure oe_empty">
+                                <t t-call="website_ecommerce_snippets_blocks_ul_73lines.s_searchbar_input_ultimate"></t>
+                            </div>
+                        </li>
+                        <li id="my_cart" class="list-inline-item pt8 pb8">
+                            <div class="oe_structure oe_empty">
+                                <div class="bg-white">
+                                    <!--                                    <t t-set="website_sale_order"-->
+                                    <!--                                       t-value="website.sale_get_order()"/>-->
+                                    <a href="/shop/cart" class="pr-2 text-black">
+                                        <i class="bg-white text-black fa fa-shopping-basket" style="padding: 10px;"
+                                           title="add to cart"
+                                        ></i>
+                                        My Cart
+                                        <!--                                <sup t-attf-class="my_cart_quantity badge badge-primary"-->
+                                        <!--                                     t-esc="website_sale_order and website_sale_order.cart_quantity or ''"/>-->
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

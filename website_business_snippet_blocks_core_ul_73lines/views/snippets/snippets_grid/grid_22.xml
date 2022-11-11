@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Grid 22" id="grid_22">
+        <section class="pt64 pb64" data-visible="grids">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-12 text-center mb48">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-center mb16">
+                        <i class="fa fa-star fa-3x mb16"></i>
+                        <h3>Feature One</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy.
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-center mb16">
+                        <i class="fa fa-star fa-3x mb16"></i>
+                        <h3>Feature Two</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

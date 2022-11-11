@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="s_three_boxes_with_icon" name="Three Boxes With Icon">
+        <section class="s_three_boxes_with_icon">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 mt16 mb16 feature-box">
+                        <div class="col-lg-4 col-md-12 mt16">
+                            <span class="bg-primary fa fa-2x fa-paint-brush img-thumbnail"
+                                  style=""/>
+                        </div>
+                        <div class="col-lg-9 col-md-12">
+                            <h3 class="o_default_snippet_text mt16 mb16">Unlimited Colors</h3>
+                            <p class="o_default_snippet_text">You have never seen so many options! Change colors
+                                of
+                                dozens
+                                of elements, apply textures, upload background
+                                images...
+                            </p>
+                            <a href="#" class="o_default_snippet_text">See all features</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 mt16 mb16 feature-box">
+                        <div class="col-lg-4 col-md-12 mt16">
+                            <span class="bg-primary fa fa-2x fa-heart img-thumbnail"
+                                  style="animation: none;"/>
+                        </div>
+                        <div class="col-lg-9 col-md-12">
+                            <h3 class="o_default_snippet_text mt16 mb16">Responsive Layout</h3>
+                            <p class="o_default_snippet_text">You have never seen so many options! Change colors
+                                of
+                                dozens
+                                of elements, apply textures, upload background
+                                images...
+                            </p>
+                            <a href="#" class="o_default_snippet_text">See all features</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 mt16 mb16 feature-box">
+                        <div class="col-lg-4 col-md-12 mt16">
+                            <span class="bg-primary fa fa-2x fa-magic img-thumbnail"
+                                  style=""/>
+                        </div>
+                        <div class="col-lg-9 col-md-12">
+                            <h3 class="o_default_snippet_text mt16 mb16">Mega Menu</h3>
+                            <p class="o_default_snippet_text">You have never seen so many options! Change colors
+                                of
+                                dozens
+                                of elements, apply textures, upload background
+                                images...
+                            </p>
+                            <a href="#" class="o_default_snippet_text">See all features</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+</odoo>

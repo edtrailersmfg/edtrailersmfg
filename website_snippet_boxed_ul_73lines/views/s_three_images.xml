@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+
+    <!-- Snippet's Body -->
+    <template id="s_three_images" name="3 Images">
+        <section class="s_three_images mt16 mb16">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12 text-center">
+                        <img class="img img-fluid mt8 mb8"
+                             src="/website_snippet_boxed_ul_73lines/static/src/img/360x146.png"/>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-12 text-center">
+                        <img class="img img-fluid mt8 mb8"
+                             src="/website_snippet_boxed_ul_73lines/static/src/img/458x146.png"/>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-12 text-center">
+                        <img class="img img-fluid mt8 mb8"
+                             src="/website_snippet_boxed_ul_73lines/static/src/img/263x146.png"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+
+</odoo>

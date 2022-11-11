@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="timer_12" name="Timer 12">
+        <section class="pt64 pb64" id="timer_12" data-visible="timer">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                        <h2>Title Name</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum est in tortor
+                            congue suscipit. Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-6 col-md-6 col-sm-12 pb16">
+                        <img alt="image" class="img-fluid mx-auto d-block"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"/>
+                        <div class="timer_content">
+                            <h2 class="font-weight-bold">Flash Deal</h2>
+                            <div class="counters_timer_js" data-date="nan" data-msg='nun'
+                                 data-mins-1="" data-disp="timer_days"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </template>
+
+    <template id="counter_timer_options"
+              inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-js='counters_timer_js' data-selector=".counters_timer_js"
+                 data-drop-in=".timer_counter_div">
+<!--                <li data-date_configure="" data-no-preview="true">-->
+                    <we-button data-date_configure="" data-no-preview="true">
+                        <i class="fa fa-clock-o"/>
+                        Change Time
+                    </we-button>
+<!--                </li>-->
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

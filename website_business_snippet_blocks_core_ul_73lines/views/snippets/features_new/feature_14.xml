@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Feature 14" id="feature_14">
+        <section class="pt64 pb64" data-visible="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                <h2>Features</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Ut at semper metus.
+                                    Vestibulum gravida velit urna, ut mattis
+                                    leo ullamcorper sed. consectetur adipiscing
+                                    elit.
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb48">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     alt="molile" class="img-fluid pt8 pb8"/>
+                            </div>
+                        </div>
+                        <div class="headline"></div>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-12 col-sm-3 col-md-6 col-lg-3 ">
+                                <h3 class="pt8 pb8">Feature One</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Ut at semper metus.L
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-3 col-md-6 col-lg-3 ">
+                                <h3 class="pt8 pb8">Feature Two</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Ut at semper metus.L
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-3 col-md-6 col-lg-3 ">
+                                <h3 class="pt8 pb8">Feature Three</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Ut at semper metus.L
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-3 col-md-6 col-lg-3 ">
+                                <h3 class="pt8 pb8">Feature Four</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Ut at semper metus.L
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

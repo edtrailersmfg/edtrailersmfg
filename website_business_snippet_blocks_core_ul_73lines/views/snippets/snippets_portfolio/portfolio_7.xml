@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Portfolio 7" id="portfolio_7">
+        <section class="pt64 pb64" id="portfolio_7" data-visible="portfolios">
+            <div class="container">
+                <div class="text-center">
+                    <h2>Gallery</h2>
+                    <p class="pb48">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div class="justify-content-center pb32">
+                        <a class="btn text-primary  filter-button mt8 mb8" data-filter="all">All</a>
+                        <a class="btn text-primary  filter-button mt8 mb8" data-filter="one">Branding</a>
+                        <a class="btn text-primary  filter-button mt8 mb8" data-filter="two">Design</a>
+                        <a class="btn text-primary  filter-button mt8 mb8" data-filter="three">Photography</a>
+                        <a class="btn text-primary  filter-button mt8 mb8" data-filter="four">Web</a>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter one pb24 ">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid image"/>
+                                <div class="overlay">Artistic 3d</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter two pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid"/>
+                                <div class="overlay">Creative Art</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter one pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid"/>
+                                <div class="overlay">Artwork</div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter four pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid"/>
+                                <div class="overlay">Ice Cream Mockup</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter three pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid"/>
+                                <div class="overlay">Man Potraits</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter four pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid"/>
+                                <div class="overlay">Changes</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter three pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid"/>
+                                <div class="overlay">Musician</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter four pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid"/>
+                                <div class="overlay">Model Potraits</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter four pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid"/>
+                                <div class="overlay">Icecream Box</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter one pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid"/>
+                                <div class="overlay">Sophmore</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter three pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid"/>
+                                <div class="overlay">Effervecent</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter two pb24">
+                            <div class="single_portfolio">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid"/>
+                                <div class="overlay">Portraits</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

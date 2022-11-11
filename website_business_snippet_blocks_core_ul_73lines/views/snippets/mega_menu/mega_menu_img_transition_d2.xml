@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="mega_menu_img_transition_2" name="Mega Menu Img Transition 2" groups="base.group_user">
+        <section id="menu_img_transition_2" class="pt32 pb32" data-visible="mega_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-2 col-md-4 col-sm-12 menu_box mb16">
+                        <div class="categ_img">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             alt="image" title="image"
+                             class="img-fluid"/>
+                        </div>
+                        <div class="text-center mt16">
+                            <a href="#" class="text-uppercase">Short Headline</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-md-4 col-sm-12 menu_box mb16">
+                        <div class="categ_img">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             alt="image" title="image"
+                             class="img-fluid"/>
+                        </div>
+                        <div class="text-center mt16">
+                            <a href="#" class="text-uppercase">Short Headline</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-md-4 col-sm-12 menu_box mb16">
+                        <div class="categ_img">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             alt="image" title="image"
+                             class="img-fluid"/>
+                        </div>
+                        <div class="text-center mt16">
+                            <a href="#" class="text-uppercase">Short Headline</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-md-4 col-sm-12 menu_box mb16">
+                        <div class="categ_img">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             alt="image" title="image"
+                             class="img-fluid"/>
+                        </div>
+                        <div class="text-center mt16">
+                            <a href="#" class="text-uppercase">Short Headline</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-md-4 col-sm-12 menu_box mb16">
+                        <div class="categ_img">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             alt="image" title="image"
+                             class="img-fluid"/>
+                        </div>
+                        <div class="text-center mt16">
+                            <a href="#" class="text-uppercase">Short Headline</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-md-4 col-sm-12 menu_box mb16">
+                        <div class="categ_img">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             alt="image" title="image"
+                             class="img-fluid"/>
+                        </div>
+                        <div class="text-center mt16">
+                            <a href="#" class="text-uppercase">Short Headline</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,49 @@
+<odoo>
+    <template name="Image Grid 15" id="image_grid_15">
+        <section class="pt64 pb64" id="image_grid_15" data-visible="image_grid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-4 col-sm-12 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid15">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-307x307.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid_content">
+                                    <h3 class="title">BLOCK TITLE</h3>
+                                    <span class="post">Lorem ipsum dolor sit amet</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 col-sm-12 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid15">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-307x307.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid_content">
+                                    <h3 class="title">BLOCK TITLE</h3>
+                                    <span class="post">Lorem ipsum dolor sit amet</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 col-sm-12 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid15">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-307x307.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid_content">
+                                    <h3 class="title">BLOCK TITLE</h3>
+                                    <span class="post">Lorem ipsum dolor sit amet</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="s_store_ecommerce_service" name="Ecommerce Store Service">
+        <section class="s_store_service">
+            <div class="container-fluid">
+                <div class="row mt16 mb16">
+                    <div class="col-lg-12 oe_structure">
+                        <div id="ttcmsfooterservice" class="widget">
+                            <h2 class="title_block">Store Servies</h2>
+                            <div class="ttcmsfooterservice container" style="display: block;">
+                                <div class="ttfooterservice row">
+                                    <div class="trust-pay service-block-content mt16 mb16 col-lg-3 col-md-6 col-12">
+                                        <div class="footer-service-img trust-pay-img"/>
+                                        <div class="footer-service-desc">
+                                            <div class="service-heading">Assured Purchase</div>
+                                            <div class="service-sub-heading">Provide genuine service &amp; store
+                                                products
+                                            </div>
+                                            <div class="service-desc">
+                                                <ul class="pad0">
+                                                    <li>
+                                                        <div class="service-icon"/>
+                                                        100% genuine products
+                                                    </li>
+                                                    <li>
+                                                        <div class="service-icon"/>
+                                                        Deliver items at door
+                                                    </li>
+                                                    <li>
+                                                        <div class="service-icon"/>
+                                                        Free to return products
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="easy-returns service-block-content mt16 mb16 col-lg-3 col-md-6 col-12">
+                                        <div class="footer-service-img easy-returns-img"/>
+                                        <div class="footer-service-desc">
+                                            <div class="service-heading">Esay to buy &amp; return</div>
+                                            <div class="service-sub-heading">Single click to buy &amp; return
+                                                products
+                                            </div>
+                                            <div class="service-desc">
+                                                <ul class="pad0">
+                                                    <li>
+                                                        <div class="service-icon"/>
+                                                        Same day devilery available
+                                                    </li>
+                                                    <li>
+                                                        <div class="service-icon"/>
+                                                        Click to return products
+                                                    </li>
+                                                    <li>
+                                                        <div class="service-icon"/>
+                                                        Quick support links available
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="secure-payment service-block-content mt16 mb16 col-lg-3 col-md-6 col-12">
+                                        <div class="footer-service-img secure-payment-img"/>
+                                        <div class="footer-service-desc">
+                                            <div class="service-heading">secure payments</div>
+                                            <div class="service-sub-heading">Accepts all credit &amp; debit cards
+                                            </div>
+                                            <div class="service-desc">
+                                                <ul class="pad0">
+                                                    <li>
+                                                        <div class="service-icon"/>
+                                                        100% payment security
+                                                    </li>
+                                                    <li>
+                                                        <div class="service-icon"/>
+                                                        Confirmation authentity
+                                                    </li>
+                                                    <li>
+                                                        <div class="service-icon"/>
+                                                        delivery items at door
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="app-block service-block-content mt16 mb16 col-lg-3 col-md-6 col-12">
+                                        <div class="footer-service-img app-block-img"/>
+                                        <div class="footer-service-desc">
+                                            <div class="service-heading">Download center</div>
+                                            <div class="service-sub-heading">Use mobile app and get biggest
+                                                discounts
+                                            </div>
+                                            <div class="service-desc">
+                                                <ul class="pad0">
+                                                    <li>
+                                                        <div class="service-icon-android service-icon"/>
+                                                        <span class="android">Android</span>
+                                                    </li>
+                                                    <li>
+                                                        <div class="service-icon-iOs service-icon"/>
+                                                        <span class="iOs">iOs</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+</odoo>

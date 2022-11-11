@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template name="Left Content 23" id="left_content_23">
+        <section class="pt64 pb64" data-visible="left_content">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-sm-12 col-lg-12 text-center mb48">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <h2 class="pt16 pb16">Medium lenght headline</h2>
+                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+                            fermentum est in tortor congue suscipit.Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Pellentesque fermentum est in tortor congue suscipit. Pellentesque fermentum est in
+                            tortor congue suscipit. Suspendisse potenti.
+                        </p>
+
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+
+                                <h2 class="display-1">32
+                                    <span style="font-size: 20px;">GB</span>
+                                </h2>
+                                <p>Pellentesque fermentum est in tortor congue suscipit.</p>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+
+                                <h2 class="display-1">2.6
+                                    <span style="font-size: 20px;">Million</span>
+                                </h2>
+                                <p>Pellentesque fermentum est in tortor congue suscipit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 pt16 pb16">
+                        <div id="wrap" class="oe_structure oe_empty">
+                            <div id="myCarousel1560229966395" class="s_carousel carousel slide s_carousel_default"
+                                 data-interval="10000">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel1560229966395" data-slide-to="0" class="active"/>
+                                    <li data-target="#myCarousel1560229966395" data-slide-to="1"/>
+                                    <li data-target="#myCarousel1560229966395" data-slide-to="2"/>
+                                    <li data-target="#myCarousel1560229966395" data-slide-to="3"/>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item oe_custom_bg oe_img_bg pt152 pb152 active"
+                                         style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg&quot;);"
+                                         data-name="Slide">
+                                    </div>
+                                    <div class="carousel-item oe_custom_bg oe_img_bg pt152 pb152"
+                                         style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg&quot;);"
+                                         data-name="Slide">
+
+                                    </div>
+                                    <div class="carousel-item oe_custom_bg oe_img_bg pt96 pb96"
+                                         style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg&quot;);"
+                                         data-name="Slide">
+
+                                    </div>
+                                    <div class="carousel-item oe_custom_bg oe_img_bg pt128 pb128"
+                                         style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg&quot;);"
+                                         data-name="Slide">
+
+                                    </div>
+                                </div>
+                                <div class="carousel-control-prev" data-target="#myCarousel1560229966395"
+                                     data-slide="prev" role="img" aria-label="Previous" title="Previous">
+                                    <span class="carousel-control-prev-icon"/>
+                                    <span class="sr-only o_default_snippet_text">Previous</span>
+                                </div>
+                                <div class="carousel-control-next" data-target="#myCarousel1560229966395"
+                                     data-slide="next" role="img" aria-label="Next" title="Next">
+                                    <span class="carousel-control-next-icon"/>
+                                    <span class="sr-only o_default_snippet_text">Next</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

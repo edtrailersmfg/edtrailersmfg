@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template name="Contact us 11" id="contact_us_11">
+        <section class="s_website_form pt64 pb64" data-visible="contactus">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb16">
+                        <h1>Get In Touch With Us</h1>
+                        <p class="mb32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut
+                            labore et dolore magna aliqua.
+                        </p>
+                        <form action="/website_form/" method="post" data-model_name="crm.lead"
+                              data-success-mode="redirect"
+                              data-success-page="/contactus-thank-you"
+                              class="s_website_form container-fluid o_mark_required"
+                              data-mark="*"
+                              enctype="multipart/form-data"
+                              data-editable-form="false">
+                            <div class="justify-content-center s_website_form_rows row s_col_no_bgcolor">
+                                <div class="col-md-6">
+                                    <div class="form-group s_website_form_field s_website_form_required">
+                                        <label class="col-form-label s_website_form_label d-none"
+                                               for="contact_name">
+                                            <span class="s_website_form_label_content"></span>
+                                        </label>
+                                        <input type="text" class="form-control s_website_form_input"
+                                               name="contact_name" placeholder="Your Name"
+                                               t-att-value="request.params.get('contact_name', '')"
+                                               required=""/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group s_website_form_field">
+                                        <label class="col-form-label s_website_form_label d-none"
+                                               for="contact_name">
+                                            <span class="s_website_form_label_content"></span>
+                                        </label>
+                                        <input type="text" class="form-control s_website_form_input"
+                                               name="phone" placeholder="Phone Number"
+                                               t-att-value="request.params.get('phone', '')"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group s_website_form_field s_website_form_required">
+                                        <label class="col-form-label s_website_form_label d-none"
+                                               for="contact_name">
+                                            <span class="s_website_form_label_content"></span>
+                                        </label>
+                                        <input type="text" class="form-control s_website_form_input"
+                                               name="email_from" required="" placeholder="Email"
+                                               t-att-value="request.params.get('email_from', '')"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group s_website_form_field">
+                                        <label class="col-form-label s_website_form_label d-none"
+                                               for="contact_name">
+                                            <span class="s_website_form_label_content"></span>
+                                        </label>
+                                        <input type="text" class="form-control s_website_form_input"
+                                               name="partner_name" required=""
+                                               placeholder="Your Company"
+                                               t-att-value="request.params.get('partner_name', '')"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group s_website_form_field s_website_form_model_required">
+                                        <label class="col-form-label s_website_form_label d-none"
+                                               for="contact_name">
+                                            <span class="s_website_form_label_content"></span>
+                                        </label>
+                                        <input type="text" class="form-control s_website_form_input"
+                                               name="name" required="" placeholder="Subject"
+                                               t-att-value="request.params.get('name', '')"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group s_website_form_field s_website_form_required">
+                                        <label class="col-form-label s_website_form_label d-none"
+                                               for="contact_name">
+                                            <span class="s_website_form_label_content"></span>
+                                        </label>
+                                        <textarea class="form-control s_website_form_input"
+                                                  name="description" required=""
+                                                  placeholder="Your Question" rows="5">
+                                            <!--<t t-esc="request.params.get('description', '')"/>-->
+                                        </textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_submit">
+                                    <div class="s_btn text-left" data-name="Buttons">
+                                        <a href="#" role="button"
+                                           class="btn btn-primary btn-lg o_website_form_send">Send Message
+                                        </a>
+                                        <span id="o_website_form_result"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb16">
+                        <h1>Contact Information</h1>
+                        <p class="mb32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut
+                            labore et dolore magna aliqua.
+                        </p>
+                        <div class="media mb32">
+                            <div class="media-left">
+                                <i class="pe-7s-map-marker fa-2x mr-3">
+                                </i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Address</h4>
+                                <!--<p>123 Main Street, Anytown, CA 12345 – USA</p>-->
+                                <span t-field="res_company.street"/>
+                                <span t-field="res_company.city"/>
+                                <span t-field="res_company.state_id.name"/>
+                                <br/>
+                                <span t-field="res_company.zip"/>
+                                <span t-field="res_company.country_id.name"/>
+                            </div>
+                        </div>
+                        <div class="media mb32">
+                            <div class="media-left">
+                                <i class="pe-7s-mail mr-3 fa-2x">
+                                </i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Mail Us</h4>
+                                <p class="mb0" t-field="res_company.email"/>
+                            </div>
+                        </div>
+                        <div class="media mb32">
+                            <div class="media-left">
+                                <i class="pe-7s-call fa-2x mr-3">
+                                </i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Call Us</h4>
+                                <p class="mb0" t-field="res_company.phone"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

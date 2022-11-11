@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Counter_7" id="counter_7">
+        <section class="pt64 pb64" id="counter_7"
+                 style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-24.jpg&quot;);
+    background-repeat: no-repeat;
+    background-size: cover; background-attachment: fixed; position:relative;" data-visible="counters">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row text-center text-white">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb48">
+                        <h2>Counter Design</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb48 mt48">
+                        <div class="counter-box">
+                            <i class="fa fa-play fa-2x"></i>
+                            <h3 class="mt32">1500</h3>
+                            <h4>Video Player</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb48 mt48">
+                        <div class="counter-box">
+                            <i class="fa fa-music fa-2x"></i>
+                            <h3 class="mt32">714</h3>
+                            <h4>Music Player</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb48 mt48">
+                        <div class="counter-box">
+                            <i class="fa fa-camera fa-2x"></i>
+                            <h3 class="mt32">609</h3>
+                            <h4>Photography</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

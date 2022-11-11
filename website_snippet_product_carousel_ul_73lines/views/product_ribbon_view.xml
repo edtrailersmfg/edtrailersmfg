@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="product_ribbon_view_inherit" model="ir.ui.view">
+        <field name="name">product.ribbon.view.inherit</field>
+        <field name="model">product.ribbon</field>
+        <field name="inherit_id" ref="website_sale.product_ribbon_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='html_class']" position="after">
+                <field name="carousel_ribbon_style"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

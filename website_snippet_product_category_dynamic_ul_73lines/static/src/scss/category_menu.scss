@@ -1,0 +1,117 @@
+/*
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+*/
+
+.dropdown-submenu-dy > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+
+
+    .categ-img{
+        display:none;
+    }
+}
+
+.dropdown-submenu-dy{
+    list-style-type:none;
+
+    .nav-link{
+        display: inline-block;
+    }
+}
+
+.dropdown-submenu-dy:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu-dy.pull-left {
+    float: none;
+}
+
+.dropdown-submenu-dy.pull-left > .dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.caret-icon-pos{
+    position: absolute;
+    //top: 6px;
+    top: 11px;
+    right: 10px;
+    color: #999999 !important;
+}
+
+#all_categ_menu_dynamic {
+    //background: #999999;
+
+    padding:0 !important;
+
+    ul{
+        list-style-type:none !important;
+        padding:0;
+    }
+
+    .nav-link{
+        display:inline-block;
+    }
+}
+
+#all_categ_menu_dynamic a.menu-cate-link{
+    color: #FFFFFF;
+}
+
+.open > a.menu-cate-link{
+     background: #999999 !important;
+}
+
+#top_menu .dropdown-menu{
+    min-width: 185px;
+}
+
+.categ-img{
+    &:hover{
+        text-decoration:none;
+    }
+}
+
+//--------------Hide Category Icon Show/Hide Options Start-----------//
+.category-icons-hidden-sni{
+    #all_categ_menu_dynamic{
+        .categ-img{
+            display:none;
+        }
+    }
+}
+//--------------Hide Category Icon Show/Hide Options End -----------//
+
+
+.s_product_category_snippet_dynamic.category-icons-hidden-sni{
+.all_categ_menu_dynamic{
+    li a{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow:hidden;
+        width: 90%;
+        padding: 8px 0px 8px 0px;
+    }
+    }
+}
+.s_product_category_snippet_dynamic{
+.all_categ_menu_dynamic{
+    li a{
+        width: 65%;
+    }
+    li ul li a{
+        width: 95%;
+        padding: 0.5rem 1rem;
+    }
+}
+}

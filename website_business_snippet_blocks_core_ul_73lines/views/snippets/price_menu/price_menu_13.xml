@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Price Menu 13" id="price_menu_13">
+        <section class="pt64 pb64" id="price_menu_13" data-visible="price_menu">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2>Price Menu</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <ul class="nav nav-tabs justify-content-center pb64 pt48 border-0" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active border-0" data-toggle="tab" href="#all">All</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link border-0" data-toggle="tab" href="#breads">Breads</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link border-0" data-toggle="tab" href="#cakes">Cakes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link border-0" data-toggle="tab" href="#cookies">Cookies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link border-0" data-toggle="tab" href="#pestries">Pestries</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link border-0" data-toggle="tab" href="#muffins">Muffins</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div id="all" class="container tab-pane active">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb32">
+                                <div class="media row align-items-center">
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-3">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-68.png" class=""/>
+                                    </div>
+                                    <div class="col-8 col-sm-8 col-md-8 col-lg-9">
+                                        <div class="media-body">
+                                            <h5>Menu Item 1</h5>
+                                            <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur
+                                                adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.
+                                            </p>
+                                            <h5>$3.99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb32">
+                                <div class="media row align-items-center">
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-3">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-68.png" class=""/>
+                                    </div>
+                                    <div class="col-8 col-sm-8 col-md-8 col-lg-9">
+                                        <div class="media-body">
+                                            <h5>Menu Item 2</h5>
+                                            <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur
+                                                adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.
+                                            </p>
+                                            <h5>$12.25</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb32">
+                                <div class="media row align-items-center">
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-3">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-68.png" class=""/>
+                                    </div>
+                                    <div class="col-8 col-sm-8 col-md-8 col-lg-9">
+                                        <div class="media-body">
+                                            <h5>Menu Item 3</h5>
+                                            <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur
+                                                adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.
+                                            </p>
+                                            <h5>$34.00</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb32">
+                                <div class="media row align-items-center">
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-3">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-68.png" class=""/>
+                                    </div>
+                                    <div class="col-8 col-sm-8 col-md-8 col-lg-9">
+                                        <div class="media-body">
+                                            <h5>Menu Item 4</h5>
+                                            <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur
+                                                adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.
+                                            </p>
+                                            <h5>$34.00</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb32">
+                                <div class="media row align-items-center">
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-3">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-68.png" class=""/>
+                                    </div>
+                                    <div class="col-8 col-sm-8 col-md-8 col-lg-9">
+                                        <div class="media-body">
+                                            <h5>Menu Item 5</h5>
+                                            <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur
+                                                adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.
+                                            </p>
+                                            <h5>$34.00</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb32">
+                                <div class="media row align-items-center">
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-3">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-68.png" class=""/>
+                                    </div>
+                                    <div class="col-8 col-sm-8 col-md-8 col-lg-9">
+                                        <div class="media-body">
+                                            <h5>Menu Item 6</h5>
+                                            <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur
+                                                adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.
+                                            </p>
+                                            <h5>$34.00</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="breads" class="container tab-pane fade">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb32">
+                                <div class="media row align-items-center">
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-3">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-68.png" class=""/>
+                                    </div>
+                                    <div class="col-8 col-sm-8 col-md-8 col-lg-9">
+                                        <div class="media-body">
+                                            <h5>Menu Item 1</h5>
+                                            <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur
+                                                adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.
+                                            </p>
+                                            <h5>$3.99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb32">
+                                <div class="media row align-items-center">
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-3">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-68.png" class=""/>
+                                    </div>
+                                    <div class="col-8 col-sm-8 col-md-8 col-lg-9">
+                                        <div class="media-body">
+                                            <h5>Menu Item 2</h5>
+                                            <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur
+                                                adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.
+                                            </p>
+                                            <h5>$3.99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="cakes" class="container tab-pane fade">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb32">
+                                <div class="media row align-items-center">
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-3">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-68.png" class=""/>
+                                    </div>
+                                    <div class="col-8 col-sm-8 col-md-8 col-lg-9">
+                                        <div class="media-body">
+                                            <h5>Menu Item 1</h5>
+                                            <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur
+                                                adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.
+                                            </p>
+                                            <h5>$3.99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="cookies" class="container tab-pane fade">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb32">
+                                <div class="media row align-items-center">
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-3">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-68.png" class=""/>
+                                    </div>
+                                    <div class="col-8 col-sm-8 col-md-8 col-lg-9">
+                                        <div class="media-body">
+                                            <h5>Menu Item 1</h5>
+                                            <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur
+                                                adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.
+                                            </p>
+                                            <h5>$3.99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="pestries" class="container tab-pane fade">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb32">
+                                <div class="media row align-items-center">
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-3">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-68.png" class=""/>
+                                    </div>
+                                    <div class="col-8 col-sm-8 col-md-8 col-lg-9">
+                                        <div class="media-body">
+                                            <h5>Menu Item 1</h5>
+                                            <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur
+                                                adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.
+                                            </p>
+                                            <h5>$3.99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="muffins" class="container tab-pane fade">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb32">
+                                <div class="media row align-items-center">
+                                    <div class="col-4 col-sm-4 col-md-4 col-lg-3">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-68.png" class=""/>
+                                    </div>
+                                    <div class="col-8 col-sm-8 col-md-8 col-lg-9">
+                                        <div class="media-body">
+                                            <h5>Menu Item 1</h5>
+                                            <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur
+                                                adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.
+                                            </p>
+                                            <h5>$3.99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <button type="button" class="btn btn-primary btn-lg">View All Products</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

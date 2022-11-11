@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="CTA 9" id="cta_9">
+        <section class="pt64 pb64" data-visible="cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2>Lorem Ipsum is simply dummy text of the printing
+                            and typesetting industry.
+                        </h2>
+                        <a href="#" class="btn btn-primary px-4 py-2 mt16">
+                            button
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

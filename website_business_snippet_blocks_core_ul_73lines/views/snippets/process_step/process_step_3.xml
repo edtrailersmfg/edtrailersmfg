@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Process Step 3" id="process_step_3">
+        <section class="pt64 pb64" id="process_step_3" data-visible="process_steps">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <p>Process Steps</p>
+                        <h2>Create Your First Process Step</h2>
+                    </div>
+                </div>
+                <div class=" process">
+                    <div class="row">
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center step mb32">
+                            <h3 class="process_no">01</h3>
+                            <i class="fa fa-users fa-2x mb32"></i>
+                            <p>Sign Up</p>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center step mb32">
+                            <h3 class="process_no">02</h3>
+                            <i class="fa fa-empire fa-2x mb32"></i>
+                            <p>Generate API Gedential</p>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center mb32">
+                            <h3 class="process_no">03</h3>
+                            <i class="fa fa-laptop fa-2x mb32"></i>
+                            <p>Setup CLI On Your Laptop</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mt16">
+                    <a href="#" target="_blank" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

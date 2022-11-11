@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <template id="dynamic_filter_template_custom_product_public_category_2"
+              name="Category Template 02">
+        <t t-foreach="records" t-as="record">
+            <div class="text-center category_grid2 mb16">
+                <a t-att-href="'/shop/category/%s' % slug(record)">
+                    <span itemprop="image" t-field="record.image_1920"
+                          t-options="{'widget': 'image', 'resize': None if image else '300x300'}"
+                          t-att-alt="record.name" class="category_image"/>
+                </a>
+                <div class="category_content">
+                    <h5 class="text-center py-3">
+                        <strong>
+                            <a itemprop="name"
+                               t-att-href="'/shop/category/%s' % slug(record)"
+                               t-field="record.name"/>
+                        </strong>
+                    </h5>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_product_public_category_3"
+              name="Category Template 03">
+        <t t-foreach="records" t-as="record">
+            <div class="text-center mb16">
+                <a class="category_grid3" t-att-href="'/shop/category/%s' % slug(record)">
+                    <span itemprop="image" t-field="record.image_1920"
+                          t-options="{'widget': 'image', 'resize': None if image else '300x300'}"
+                          t-att-alt="record.name" class="category_image"/>
+                </a>
+                <div class="category_content">
+                    <h5 class="text-center py-3">
+                        <strong>
+                            <a itemprop="name"
+                               t-att-href="'/shop/category/%s' % slug(record)"
+                               t-field="record.name"/>
+                        </strong>
+                    </h5>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_product_public_category_4"
+              name="Category Template 04">
+        <t t-foreach="records" t-as="record">
+            <div class="text-center category_grid4 mb16">
+                <a class="category_image" t-att-href="'/shop/category/%s' % slug(record)">
+                    <span itemprop="image" t-field="record.image_1920"
+                          t-options="{'widget': 'image', 'resize': None if image else '300x300'}"
+                          t-att-alt="record.name" class="category_image"/>
+                </a>
+                <div class="category_content">
+                    <h5 class="text-center py-3">
+                        <strong>
+                            <a itemprop="name"
+                               t-att-href="'/shop/category/%s' % slug(record)"
+                               t-field="record.name"/>
+                        </strong>
+                    </h5>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_product_public_category_5"
+              name="Category Template 05">
+        <t t-foreach="records" t-as="record">
+            <div class="text-center category_grid5 mb16">
+                <a class="category_image" t-att-href="'/shop/category/%s' % slug(record)">
+                    <span itemprop="image" t-field="record.image_1920"
+                          t-options="{'widget': 'image', 'resize': None if image else '300x300'}"
+                          t-att-alt="record.name" class="category_image"/>
+                </a>
+                <div class="category_content">
+                    <h5 class="text-center py-3">
+                        <strong>
+                            <a itemprop="name"
+                               t-att-href="'/shop/category/%s' % slug(record)"
+                               t-field="record.name"/>
+                        </strong>
+                    </h5>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_product_public_category_6"
+              name="Category Template 06">
+        <t t-foreach="records" t-as="record">
+            <div class="text-center category_grid6 mb16">
+                <a class="category_image" t-att-href="'/shop/category/%s' % slug(record)">
+                    <span itemprop="image" t-field="record.image_1920"
+                          t-options="{'widget': 'image', 'resize': None if image else '300x300'}"
+                          t-att-alt="record.name" class="category_image"/>
+                </a>
+                <div class="category_content">
+                    <h5 class="text-center py-3">
+                        <strong>
+                            <a itemprop="name"
+                               t-att-href="'/shop/category/%s' % slug(record)"
+                               t-field="record.name"/>
+                        </strong>
+                    </h5>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_product_public_category_7"
+              name="Category Template 07">
+        <t t-foreach="records" t-as="record">
+            <div class="text-center category_grid7 mb16">
+                <div class="category_image">
+                    <a class="category_image" t-att-href="'/shop/category/%s' % slug(record)">
+                        <span itemprop="image" t-field="record.image_1920"
+                              t-options="{'widget': 'image', 'resize': None if image else '300x300'}"
+                              t-att-alt="record.name" class="category_image"/>
+                    </a>
+                </div>
+                <div class="category_content">
+                    <h5 class="text-center py-3">
+                        <strong>
+                            <a itemprop="name"
+                               t-att-href="'/shop/category/%s' % slug(record)"
+                               t-field="record.name"/>
+                        </strong>
+                    </h5>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_product_public_category_8"
+              name="Category Template 08">
+        <t t-foreach="records" t-as="record">
+            <div class="text-center category_grid8 mb16">
+                <a class="category_image" t-att-href="'/shop/category/%s' % slug(record)">
+                    <span itemprop="image" t-field="record.image_1920"
+                          t-options="{'widget': 'image', 'resize': None if image else '300x300'}"
+                          t-att-alt="record.name" class="category_image"/>
+                </a>
+                <div class="category_content">
+                    <h5 class="text-center py-3">
+                        <strong>
+                            <a itemprop="name"
+                               t-att-href="'/shop/category/%s' % slug(record)"
+                               t-field="record.name"/>
+                        </strong>
+                    </h5>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_product_public_category_9"
+              name="Category Template 09">
+        <t t-foreach="records" t-as="record">
+            <div class="text-center category_grid9 mb16">
+                <a class="category_image" t-att-href="'/shop/category/%s' % slug(record)">
+                    <span itemprop="image" t-field="record.image_1920"
+                          t-options="{'widget': 'image', 'resize': None if image else '300x300'}"
+                          t-att-alt="record.name" class="category_image"/>
+                </a>
+                <div class="category_content">
+                    <h5 class="text-center py-3">
+                        <strong>
+                            <a itemprop="name"
+                               t-att-href="'/shop/category/%s' % slug(record)"
+                               t-field="record.name"/>
+                        </strong>
+                    </h5>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_product_public_category_10"
+              name="Category Template 10">
+        <t t-foreach="records" t-as="record">
+            <div class="text-center category_grid10 mb16">
+                <a class="category_image" t-att-href="'/shop/category/%s' % slug(record)">
+                    <span itemprop="image" t-field="record.image_1920"
+                          t-options="{'widget': 'image', 'resize': None if image else '300x300'}"
+                          t-att-alt="record.name" class="category_image"/>
+                </a>
+                <div class="category_content">
+                    <h5 class="text-center py-3">
+                        <strong>
+                            <a itemprop="name"
+                               t-att-href="'/shop/category/%s' % slug(record)"
+                               t-field="record.name"/>
+                        </strong>
+                    </h5>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_product_public_category_11"
+              name="Category Template 11">
+        <t t-foreach="records" t-as="record">
+            <div class="text-center category_grid11 mb16">
+                <a class="category_image" t-att-href="'/shop/category/%s' % slug(record)">
+                    <span itemprop="image" t-field="record.image_1920"
+                          t-options="{'widget': 'image', 'resize': None if image else '300x300'}"
+                          t-att-alt="record.name" class="category_image"/>
+                </a>
+                <div class="category_content">
+                    <h5 class="text-center py-3">
+                        <strong>
+                            <a itemprop="name"
+                               t-att-href="'/shop/category/%s' % slug(record)"
+                               t-field="record.name"/>
+                        </strong>
+                    </h5>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_product_public_category_12"
+              name="Category Template 12">
+        <t t-foreach="records" t-as="record">
+            <div class="text-center category_grid12 mb16">
+                <a class="category_image" t-att-href="'/shop/category/%s' % slug(record)">
+                    <span itemprop="image" t-field="record.image_1920"
+                          t-options="{'widget': 'image', 'resize': None if image else '300x300'}"
+                          t-att-alt="record.name" class="category_image"/>
+                </a>
+                <div class="category_content">
+                    <h5 class="text-center py-3">
+                        <strong>
+                            <a itemprop="name"
+                               t-att-href="'/shop/category/%s' % slug(record)"
+                               t-field="record.name"/>
+                        </strong>
+                    </h5>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_product_public_category_13"
+              name="Category Template 13">
+        <t t-foreach="records" t-as="record">
+            <div class="text-center category_grid13 mb16">
+                <a class="category_image" t-att-href="'/shop/category/%s' % slug(record)">
+                    <span itemprop="image" t-field="record.image_1920"
+                          t-options="{'widget': 'image', 'resize': None if image else '300x300'}"
+                          t-att-alt="record.name" class="category_image"/>
+                </a>
+                <div class="overlay">
+                    <div class="category_content">
+                        <h5 class="text-center py-3">
+                            <strong>
+                                <a itemprop="name"
+                                   t-att-href="'/shop/category/%s' % slug(record)"
+                                   t-field="record.name"/>
+                            </strong>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_product_public_category_14"
+              name="Category Template 14">
+        <t t-foreach="records" t-as="record">
+            <div class="text-center category_grid14 mb16">
+                <a class="category_image" t-att-href="'/shop/category/%s' % slug(record)">
+                    <span itemprop="image" t-field="record.image_1920"
+                          t-options="{'widget': 'image', 'resize': None if image else '300x300'}"
+                          t-att-alt="record.name" class="category_image"/>
+                </a>
+                <div class="category_content">
+                    <h5 class="text-center py-3">
+                        <strong>
+                            <a itemprop="name"
+                               t-att-href="'/shop/category/%s' % slug(record)"
+                               t-field="record.name"/>
+                        </strong>
+                    </h5>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_product_public_category_15"
+              name="Category Template 15">
+        <t t-foreach="records" t-as="record">
+            <div class="text-center category_grid15">
+                <a class="category_image" t-att-href="'/shop/category/%s' % slug(record)">
+                    <span itemprop="image" t-field="record.image_1920"
+                          t-options="{'widget': 'image', 'resize': None if image else '300x300'}"
+                          t-att-alt="record.name" class="category_image"/>
+                </a>
+                <div class="category_content">
+                    <h5 class="text-center py-3">
+                        <strong>
+                            <a itemprop="name"
+                               t-att-href="'/shop/category/%s' % slug(record)"
+                               t-field="record.name"/>
+                        </strong>
+                    </h5>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_custom_product_public_category_16"
+              name="Category Template 16">
+        <t t-foreach="records" t-as="record">
+            <div class="text-center category_grid16 mb16">
+                <a class="category_image" t-att-href="'/shop/category/%s' % slug(record)">
+                    <span itemprop="image" t-field="record.image_1920"
+                          t-options="{'widget': 'image', 'resize': None if image else '300x300'}"
+                          t-att-alt="record.name" class="category_image"/>
+                </a>
+                <div class="category_content">
+                    <h5 class="text-center py-3">
+                        <strong>
+                            <a itemprop="name"
+                               t-att-href="'/shop/category/%s' % slug(record)"
+                               t-field="record.name"/>
+                        </strong>
+                    </h5>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

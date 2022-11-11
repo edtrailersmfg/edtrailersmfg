@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="pricing_18" name="Pricing18">
+        <section class="pricing_1 pt64 pb64" id="bs_price_table" data-visible="pricing">
+            <div class="container">
+                <div>
+                    <div class="row">
+                        <div class=" col-12 col-sm-12 col-lg-12 col-md-12 pb48 text-center">
+                            <h2>Pricing Table</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-lg 4 col-md-4 mb16">
+                            <div class="bs_content clearfix">
+                                <div class="bs_head_price clearfix">
+                                    <div class="bs_head_content clearfix">
+                                        <div class="head_bg"/>
+                                        <div class="head">
+                                            <span>Basic</span>
+                                        </div>
+                                    </div>
+                                    <div class="bs_price_tag clearfix">
+                                        <span class="price">
+                                            <span class="sign">$
+                                            </span>
+                                            <span class="currency">
+                                                99
+                                            </span>
+                                            <span class="cent">
+                                                .99
+                                            </span>
+                                            <span class="month">
+                                                /MON
+                                            </span>
+                                        </span>
+                                    </div>
+
+                                </div>
+
+                                <div class="bs_feature_list">
+                                    <ul>
+                                        <li>
+                                            <span>2GB</span>
+                                            Bandwidth
+                                        </li>
+                                        <li>
+                                            <span>150GB</span>
+                                            Storage
+                                        </li>
+                                        <li>
+                                            <span>12</span>
+                                            Accounts
+                                        </li>
+                                        <li>
+                                            <span>7</span>
+                                            Host Domain
+                                        </li>
+                                        <li>
+                                            <span>24/7</span>
+                                            Support
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bs_price_btn clearfix">
+                                    <a class="" href="">Sign up</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-lg 4 col-md-4 mb16">
+                            <div class="bs_content active clearfix">
+                                <div class="bs_head_price clearfix">
+                                    <div class="bs_head_content clearfix">
+                                        <div class="head_bg"/>
+                                        <div class="head">
+                                            <span>Standard</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="bs_price_tag clearfix">
+                                        <span class="price">
+                                            <span class="sign">$
+                                            </span>
+                                            <span class="currency">
+                                                199
+                                            </span>
+                                            <span class="cent">
+                                                .99
+                                            </span>
+                                            <span class="month">
+                                                /MON
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="bs_feature_list">
+                                    <ul>
+                                        <li>
+                                            <span>2GB</span>
+                                            Bandwidth
+                                        </li>
+                                        <li>
+                                            <span>150GB</span>
+                                            Storage
+                                        </li>
+                                        <li>
+                                            <span>12</span>
+                                            Accounts
+                                        </li>
+                                        <li>
+                                            <span>7</span>
+                                            Host Domain
+                                        </li>
+                                        <li>
+                                            <span>24/7</span>
+                                            Support
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="bs_price_btn clearfix">
+                                    <a class="" href="">Sign up</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-12 col-sm-12 col-lg 4 col-md-4 mb16">
+                            <div class="bs_content clearfix">
+                                <div class="bs_head_price clearfix">
+                                    <div class="bs_head_content clearfix">
+                                        <div class="head_bg"/>
+                                        <div class="head">
+                                            <span>Unlimited</span>
+                                        </div>
+                                    </div>
+                                    <div class="bs_price_tag clearfix">
+                                        <span class="price">
+                                            <span class="sign">$
+                                            </span>
+                                            <span class="currency">
+                                                299
+                                            </span>
+                                            <span class="cent">
+                                                .99
+                                            </span>
+                                            <span class="month">
+                                                /MON
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="bs_feature_list">
+                                    <ul>
+                                        <li>
+                                            <span>2GB</span>
+                                            Bandwidth
+                                        </li>
+                                        <li>
+                                            <span>150GB</span>
+                                            Storage
+                                        </li>
+                                        <li>
+                                            <span>12</span>
+                                            Accounts
+                                        </li>
+                                        <li>
+                                            <span>7</span>
+                                            Host Domain
+                                        </li>
+                                        <li>
+                                            <span>24/7</span>
+                                            Support
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bs_price_btn clearfix">
+                                    <a class="" href="">Sign up</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

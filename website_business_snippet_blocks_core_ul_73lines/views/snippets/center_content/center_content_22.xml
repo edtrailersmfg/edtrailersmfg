@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Center Content 22" id="center_content_22">
+        <section class="pt64 pb64" data-visible="center_content">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2 class="font-weight-bold pb32 text-center">Contents</h2>
+                        <div class="row  text-center align-items-center">
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt16 mb16">
+                                <div class="border border-1 p-5">
+                                    <h3 class="font-weight-bold pt24 pb24">Item One</h3>
+                                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Pellentesque fermentum est in tortor congue suscipit. Suspendisse potenti.
+                                    </p>
+                                    <a href="#">Learn More
+                                        <i class="fa fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt16 mb16 ">
+                                <div class="border border-1 p-5">
+                                    <h3 class="font-weight-bold pt24 pb24">Item Two</h3>
+                                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Pellentesque fermentum est in tortor congue suscipit. Suspendisse potenti.
+                                    </p>
+                                    <a href="#">Learn More
+                                        <i class="fa fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt16 mb16">
+                                <div class="border border-1  p-5">
+                                    <h3 class="font-weight-bold pt24 pb24">Item Three</h3>
+                                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Pellentesque fermentum est in tortor congue suscipit. Suspendisse potenti.
+                                    </p>
+                                    <a href="#">Learn More
+                                        <i class="fa fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

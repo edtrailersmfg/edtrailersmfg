@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Team 5" id="team_5">
+        <section class="pt64 pb64" data-visible="team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Our Team</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                        <div class="row ">
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 pt24 pb24">
+                                <div class="media align-items-center">
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-67.png" class="align-self-start rounded-circle w-25"/>
+                                    <div class="media-body ml-4">
+                                        <h3>Employee One</h3>
+                                        <p>Position</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 pt24 pb24">
+                                <div class="media align-items-center">
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-67.png" class="align-self-start rounded-circle w-25"/>
+                                    <div class="media-body ml-4">
+                                        <h3>Employee Two</h3>
+                                        <p>Position</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 pt24 pb24">
+                                <div class="media align-items-center">
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-67.png" class="align-self-start rounded-circle w-25"/>
+                                    <div class="media-body ml-4">
+                                        <h3>Employee Three</h3>
+                                        <p>Position</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 pt24 pb24">
+                                <div class="media align-items-center">
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-67.png" class="align-self-start rounded-circle w-25"/>
+                                    <div class="media-body ml-4">
+                                        <h3>Employee Four</h3>
+                                        <p>Position</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 pt24 pb24">
+                                <div class="media align-items-center">
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-67.png" class="align-self-start rounded-circle w-25"/>
+                                    <div class="media-body ml-4">
+                                        <h3>Employee Five</h3>
+                                        <p>Position</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 pt24 pb24">
+                                <div class="media align-items-center">
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-67.png" class="align-self-start rounded-circle w-25"/>
+                                    <div class="media-body ml-4">
+                                        <h3>Employee Six</h3>
+                                        <p>Position</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 pt24 pb24">
+                                <div class="media align-items-center">
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-67.png" class="align-self-start rounded-circle w-25"/>
+                                    <div class="media-body ml-4">
+                                        <h3>Employee Seven</h3>
+                                        <p>Position</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 pt24 pb24">
+                                <div class="media align-items-center">
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-67.png" class="align-self-start rounded-circle w-25"/>
+                                    <div class="media-body ml-4">
+                                        <h3>Employee Eight</h3>
+                                        <p>Position</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 pt24 pb24">
+                                <div class="media align-items-center">
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-67.png" class="align-self-start rounded-circle w-25"/>
+                                    <div class="media-body ml-4">
+                                        <h3>Employee Nine</h3>
+                                        <p>Position</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

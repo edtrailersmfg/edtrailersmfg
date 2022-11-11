@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="footer_4" name="Footer 4">
+        <section class="pt64" id="footer_4" data-visible="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb32">
+                        <img style="margin:0 auto;"
+                             class="img img-responsive img-fluid mb16"
+                             src="/logo.png"
+                             t-att-alt="'Logo of %s' % res_company.name"
+                             t-att-title="res_company.name"/>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veolores eos qui
+                            ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui doerat voluptatem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light">
+            <div class="container">
+                <div class="row p-4">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                        <div class="py-1">
+                            Copyright &amp;copy;
+                            <span t-field="res_company.name">Company name
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-right mb16">
+                        <div class="icon_bg">
+                            <a t-att-href="res_company.social_facebook">
+                                <i class="fa fa-facebook mx-1 "></i>
+                            </a>
+                            <a t-att-href="res_company.social_twitter">
+                                <i class="fa fa-twitter mx-1"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-dribbble mx-1"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-behance mx-1"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-pinterest-p mx-1"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-google-plus mx-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <div>
+                            Responsive Odoo theme,
+                            <span>
+                                Made with
+                                <i class="fa fa-heart"/>
+                                by
+                                <strong>&lt;73Lines/&gt;</strong>
+                            </span>
+                        </div>
+<!--                        <div>-->
+<!--                            <t t-call="website.language_selector"/>-->
+<!--                        </div>-->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

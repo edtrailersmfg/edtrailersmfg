@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Footer 15" id="footer_15">
+        <section class="pt64 pb32" id="footer_15" data-visible="footer">
+            <div class="container">
+                <div class="row border bg-light rounded mb64 py-2">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 d-lg-flex d-lg-flex d-md-flex">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-46.png" alt="C_IMAGE"
+                             class="img-fluid" style="width: 200px;"/>
+                        <h4 class="call_us_padding">Have question?<br/>Call us now!
+                        </h4>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+                        <div class="row box_padding">
+                            <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+                                <div class="media">
+                                    <i class="fa fa-phone fa-2x py-2"></i>
+                                    <div class="media-body px-2">
+                                        <h6>Toll Free Number</h6>
+                                        <h6>
+                                            <span t-field="res_company.phone"/>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                                <div class="media">
+                                    <i class="fa fa-envelope-o fa-2x py-2"></i>
+                                    <div class="media-body px-2">
+                                        <h6>Email Support</h6>
+                                        <h6>
+                                            <span t-field="res_company.email"/>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                <div class="media">
+                                    <i class="fa fa-comment-o fa-2x py-2"></i>
+                                    <div class="media-body px-2">
+                                        <h6>Live Chat</h6>
+                                        <h6>Click here to chat</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                        <h5 class="pb16">About BooHost</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim adminim veniam, quis nostrud exercitation ullamco
+                            labo ris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            volup tate velit esse cillum dolore eu fugiat nulla pari atur. Excepteur sint occaecat
+                            cupidatat non proidentsunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-2">
+                        <h5 class="pb16">About BooHost</h5>
+                        <ul class="list-unstyled">
+                            <li>Home</li>
+                            <li>Domain</li>
+                            <li>Web Hosting</li>
+                            <li>Features</li>
+                            <li>Pricing</li>
+                            <li>Testimonals</li>
+                            <li>Blog</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-2">
+                        <h5 class="pb16">My Account</h5>
+                        <ul class="list-unstyled">
+                            <li>Create an Account</li>
+                            <li>My Renewals</li>
+                            <li>Sign in</li>
+                            <li>Forget Password</li>
+                            <li>Protect Account</li>
+                            <li>Delete Account</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-2">
+                        <h5 class="pb16">Resources</h5>
+                        <ul class="list-unstyled">
+                            <li>Website Builder</li>
+                            <li>Domain Transfer</li>
+                            <li>Hot Deal</li>
+                            <li>VPS Server</li>
+                            <li>Cloud Server</li>
+                            <li>cPanel Setup</li>
+                            <li>Server Optimized</li>
+                            <li>Site Protection</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-2">
+                        <h5 class="pb16">Support</h5>
+                        <ul class="list-unstyled">
+                            <li>Submit Ticket</li>
+                            <li>FAQs</li>
+                            <li>Help</li>
+                            <li>Contact Us</li>
+                            <li>Knowledge</li>
+                            <li>Report Abuse</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light pt32 pb32">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <p>Use of this Site is subject to express terms of use. By using this site, you signify that you
+                            agree to be bound by these Universal Terms of Service.
+                        </p>
+                        <ul class="nav justify-content-center">
+                            <li>
+                                <a href="#" class="text-decoration-none px-3" target="_blank">Legal</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none px-3" target="_blank">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none px-3" target="_blank">Advertising Preferences</a>
+                            </li>
+
+                        </ul>
+                        <div class="pt16 pb16">
+                            Copyright &amp;copy;
+                            <span t-field="res_company.name">Company name
+                            </span>
+                        </div>
+                        <div>
+                            Responsive Odoo theme,
+                            <span>
+                                Made with
+                                <i class="fa fa-heart"/>
+                                by
+                                <strong>&lt; 73Lines &gt;
+                                </strong>
+                            </span>
+                        </div>
+<!--                        <div>-->
+<!--                            <t t-call="website.language_selector"/>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

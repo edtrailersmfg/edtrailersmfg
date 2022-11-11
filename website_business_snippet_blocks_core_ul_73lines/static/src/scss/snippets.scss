@@ -1,0 +1,219 @@
+.mh100{
+    min-height:100px;
+}
+.sni-block{
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+
+
+    .sni-block-icon{
+        height: 50px;
+        width: 50px;
+        display: inline-block;
+    }
+
+
+    .sni-box {
+        padding: 3.75rem 2.5rem;
+        overflow: hidden;
+        color: #333333;
+        @include border-radius(0.25rem);
+     }
+
+
+    .sni-touch {
+        border-top: solid 0.3125rem theme-color('primary');
+        z-index: 2;
+    }
+
+    .text-white{
+        color:#ffffff !important;
+    }
+
+    .s_title .s_title_boxed{
+        padding: 0;
+        border: none;
+    }
+
+    .sni-headline-text{
+         color: #333333 !important;
+        font-size: 20px;
+    }
+
+    .bg-unset{
+        background-size: unset;
+    }
+
+
+}
+
+
+.sni-block.bg-100{
+    h1,h2,h3,h4,h5,h6,h3 >  strong{
+        color: rgba(0, 0, 0, 0.9) !important;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .sni-block .sni-box{
+        padding:inherit !important
+    }
+}
+
+
+@media only screen and (max-width: 767px){
+    #feature_12{
+         .sni-box{
+            padding: 1.75rem 1.5rem !important;
+        }
+    }
+}
+
+//---- Overlay Section Start----//
+section.s_overlay_section{
+    padding: 0 1%;
+    margin-top: -160px !important;
+    position: relative;
+
+}
+@media only screen and (max-width: 767px){
+    section.s_overlay_section{
+        margin-top: 0!important;
+        position: unset;
+    }
+}
+//---- Overlay Section End----//
+
+//---- Overlay Section Right Start----//
+
+div.s_overlay_section_right{
+     right: 108px;
+     z-index: 50;
+}
+@media only screen and (max-width: 767px){
+    div.s_overlay_section_right{
+         right: auto;
+    }
+}
+
+//---- Overlay Section Left End----//
+
+
+//---- Overlay Section Left Start----//
+
+div.s_overlay_section_left{
+    left: 108px;
+     z-index: 50;
+}
+@media only screen and (max-width: 767px){
+    div.s_overlay_section_left{
+       left:auto;
+    }
+}
+//---- Margin Settings Start----//
+.plr-0{
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+.ptb-0{
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+}
+//---- Margin Settings End----//
+
+//---- Overlay Section Left End----//
+
+//---- Full Container Start----//
+.container-full{
+    max-width:100% !important;
+}
+
+@media only screen and (max-width: 767px){
+    .container-full{
+        max-width:auto !important;
+    }
+}
+
+//---- Full Container End----//
+
+//---- 4 Counters Horizontal Start ----//
+.state_section_hr{
+    .state-col-inner{
+        padding:0 !important;
+        margin:0 !important;
+    }
+
+    .odometer{
+        font-size: 30px;
+        margin-top:0;
+    }
+}
+//---- 4 Counters Horizontal End ----//
+
+//---- Z Index Style Start----//
+.z_index_minus{
+    z-index: -1;
+}
+
+.z_index_plus{
+    z-index: 1;
+}
+.z_index_100{
+    z-index: 100;
+}
+//---- Z Index Style End----//
+//---- Dashed Border Style Start----//
+    .border-dashed{
+        border:1px dashed;
+        margin-right:-1px;
+    }
+//---- Dashed Border Style End----//
+
+//---- Paragraph,H1,H2,H3,H4,H5,H6,Span(Line-height,Letter Spacing) Start----//
+.s_line_height_1{
+    line-height:1;
+}
+.s_line_height_2{
+    line-height:2;
+}
+.s_line_height_3{
+    line-height:3;
+}
+.s_line_height_auto{
+    line-height: inherit;
+}
+
+.s_letter_spacing_1{
+    letter-spacing: 1px;
+}
+.s_letter_spacing_2{
+    letter-spacing: 2px;
+}
+.s_letter_spacing_3{
+    letter-spacing: 3px;
+}
+.s_letter_spacing_auto{
+    letter-spacing: inherit;
+}
+//---- Paragraph,H1,H2,H3,H4,H5,H6,Span(Line-height,Letter Spacing) End----//
+
+/* -----------div border scss end here -------------*/
+
+.border-left-ultimate{
+    border-left: 1px solid;
+}
+
+.border-right-ultimate{
+    border-right: 1px solid;
+}
+
+.border-top-ultimate{
+    border-top: 1px solid;
+}
+
+.border-bottom-ultimate{
+    border-bottom: 1px solid;
+}

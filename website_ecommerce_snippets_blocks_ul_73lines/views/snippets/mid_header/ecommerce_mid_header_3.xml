@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Ecommerce Mid Header 3" id="ecommerce_mid_header_3">
+        <section class="bg-light oe_custom_bg pb-1 pb-1" id="mid-header-top-3" data-visible="mid_headears">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 oe_structure mt-1 mb-1 col-lg-8 col-md-12 col-sm-12 text-center text-lg-left text-md-center"
+                         id="mid-header-top-left">
+                        <li class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <span id="phone-header" class="col ml8 mr8">
+                                    <i class="fa fa-phone mr-2"/>
+                                    <span t-field="res_company.phone"/>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <span class="text-center col ml8 mr8"
+                                      id="email-header">
+                                    <i class="fa fa-envelope mr-2"/>
+                                    <span t-field="res_company.email"/>
+                                </span>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="col-12 oe_structure col-lg-4 col-md-12 col-sm-12 my-1 text-center text-lg-right text-md-center"
+                         id="mid-header-top-right">
+                        <li class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <span class="mr-2">
+                                    <i class="fa fa-location-arrow"></i>
+                                    <a href="#" style="color: rgb(0, 0, 0);">Store Location</a>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <span>
+                                    <i class="fa fa-first-order"></i>
+                                    <a href="#" style="color: rgb(0, 0, 0);">Track Order</a>
+                                </span>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-white oe_custom_bg pb-1 pb-1" id="mid-header-bottom-3">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-sm-12 col-lg-4 col-md-4 pt8 pb8 text-center text-md-left text-lg-left oe_structure"
+                         id="mid-header-bottom-left">
+                        <div class="oe_structure oe_empty">
+                            <a href="/" class="img-fluid">
+                                <img src="/logo.png"
+                                     t-att-alt="'Logo of %s' % res_company.name"
+                                     t-att-title="res_company.name"/>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="oe_structure col col-12 col-sm-12 col-md-4 col-lg-4 pt8 pb8 align-self-center text-lg-left"
+                         id="mid-header-bottom-center">
+                        <t t-call="website_ecommerce_snippets_blocks_ul_73lines.s_searchbar_input_ultimate"></t>
+<!--                        <div class="oe_structure oe_empty">-->
+<!--                            <span>-->
+<!--                                <t t-if="category">-->
+<!--                                    <form-->
+<!--                                            t-att-action="keep('/shop'+ ('/category/'+slug(category)) if category else '', search=0)"-->
+<!--                                            method="get"-->
+<!--                                            t-att-class="search_class">-->
+
+<!--                                        <t t-if="attrib_values">-->
+<!--                                            <t t-foreach="attrib_values"-->
+<!--                                               t-as="a">-->
+<!--                                                <input type="hidden"-->
+<!--                                                       name="attrib"-->
+<!--                                                       t-att-value="'%s-%s' % (a[0], a[1])"/>-->
+<!--                                            </t>-->
+<!--                                        </t>-->
+<!--                                        <div class="input-group">-->
+<!--                                            <input type="text" name="search"-->
+<!--                                                   class="search-query form-control oe_search_box search_input"-->
+<!--                                                   placeholder="Enter Keyword to Search..."-->
+<!--                                                   t-att-value="search"/>-->
+<!--                                            <div class="input-group-append">-->
+<!--                                                <button type="submit"-->
+<!--                                                        class="btn btn-dark oe_search_button search_button"-->
+<!--                                                        aria-label="Search" title="Search">-->
+<!--                                                    <i class="fa fa-search text-white"></i>-->
+<!--                                                </button>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </form>-->
+<!--                                </t>-->
+<!--                                <t t-if="not category">-->
+<!--                                    <form action="/shop" method="get"-->
+<!--                                          t-att-class="search_class">-->
+
+<!--                                        <t t-if="attrib_values">-->
+<!--                                            <t t-foreach="attrib_values"-->
+<!--                                               t-as="a">-->
+<!--                                                <input type="hidden"-->
+<!--                                                       name="attrib"-->
+<!--                                                       t-att-value="'%s-%s' % (a[0], a[1])"/>-->
+<!--                                            </t>-->
+<!--                                        </t>-->
+<!--                                        <div class="input-group">-->
+<!--                                            <input type="text" name="search"-->
+<!--                                                   class="search-query form-control oe_search_box search_input"-->
+<!--                                                   placeholder="Enter Keyword to Search..."-->
+<!--                                                   t-att-value="search"/>-->
+<!--                                            <div class="input-group-append">-->
+<!--                                                <button type="submit"-->
+<!--                                                        class="btn btn-dark oe_search_button search_button"-->
+<!--                                                        aria-label="Search" title="Search">-->
+<!--                                                    <i class="fa fa-search text-white"></i>-->
+<!--                                                </button>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </form>-->
+<!--                                </t>-->
+<!--                            </span>-->
+<!--                        </div>-->
+                    </div>
+                    <div class="col-12 col-sm-12 col-lg-4 col-md-4 text-center text-md-right text-lg-right align-self-center pt8 pb8  oe_structure"
+                         id="mid-header-bottom-right">
+                        <li class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <a href="#" class="text-black o_default_snippet_text" title="Help">FAQ</a>
+                            </div>
+                        </li>
+                        <li id="my_wish" class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <t t-if="request.env.ref('website_sale_wishlist.add_to_wishlist').active">
+                                    <!--                                    <t t-set='wishcount'-->
+                                    <!--                                       t-value="len(request.env['product.wishlist'].current())"/>-->
+                                    <a href="/shop/wishlist" class="pr-2">
+                                        <i class="fa fa-heart-o text-black" title="wishlist"
+                                           style="font-size:18px;"></i>
+                                        <!--                                        <sup t-attf-class="my_wish_quantity o_animate_blink badge badge-primary">-->
+                                        <!--                                            <t t-esc='wishcount'/>-->
+                                        <!--                                        </sup>-->
+                                    </a>
+                                </t>
+                            </div>
+                        </li>
+                        <li id="my_cart" class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <!--                                <t t-set="website_sale_order"-->
+                                <!--                                   t-value="website.sale_get_order()"/>-->
+                                <a href="/shop/cart" class="pr-2">
+                                    <i class="fa fa-opencart text-black" title="add to cart"
+                                       style="font-size:18px;"></i>
+                                    <!--                                <sup t-attf-class="my_cart_quantity badge badge-primary"-->
+                                    <!--                                     t-esc="website_sale_order and website_sale_order.cart_quantity or ''"/>-->
+                                </a>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

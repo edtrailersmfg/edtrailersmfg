@@ -1,0 +1,115 @@
+.btn-1:hover {
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+  outline: 0;
+}
+
+.btn-2 {
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  box-shadow: 0 5px #999;
+}
+
+.btn-2:hover,
+.btn-2:focus,
+.btn-2:active {
+  box-shadow: 0 5px #999;
+  outline: none;
+  -webkit-transform: rotateX(15deg);
+  -moz-transform: rotateX(15deg);
+  -ms-transform: rotateX(15deg);
+  transform: rotateX(15deg);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.btn-3 {
+  border-width: 2px;
+  background: transparent;
+  outline: none;
+  color: #000;
+}
+
+.btn-3:focus,
+.btn-3:hover,
+.btn-3:active {
+  border-width: 2px;
+  outline: none;
+  border-style: dashed;
+  background: transparent;
+  color: #000;
+}
+
+.btn-4 {
+  border-width: 4px;
+  background: transparent;
+  color: #000;
+  outline: none;
+}
+
+.btn-4:focus,
+.btn-4:hover,
+.btn-4:active {
+  border-width: 4px;
+  border-style: double;
+  background: transparent;
+  color: #000;
+  outline: none;
+}
+
+.btn-5 {
+  outline: none;
+}
+
+.btn-5:hover,
+.btn-5:focus,
+.btn-5:active {
+  box-shadow: -3px -3px 3px 1px #999;
+  outline: none;
+}
+
+.btn-6 {
+  border-width: 4px;
+  border-style: inset;
+  background: transparent;
+  color: #000;
+  outline: none;
+}
+
+.btn-6:focus,
+.btn-6:hover,
+.btn-6:active {
+  border-width: 4px;
+  outline: none;
+  border-style: outset;
+  background: transparent;
+  color: #000;
+}
+
+.btn.btn-outline-alpha,
+.btn.btn-outline-beta,
+.btn.btn-outline-gamma,
+.btn.btn-outline-delta,
+.btn.btn-outline-epsilon,
+.btn.btn-outline-success,
+.btn.btn-outline-info,
+.btn.btn-outline-warning,
+.btn.btn-outline-danger{
+    border-radius: 0;
+}
+
+.btn-outline-alpha:hover,
+.btn-outline-beta:hover,
+.btn-outline-gamma:hover
+.btn-outline-delta:hover,
+.btn-outline-epsilon:hover,
+.btn-outline-success:hover,
+.btn-outline-info:hover,
+.btn-outline-warning:hover,
+.btn-outline-danger:hover,
+{
+    color:#ffffff !important;
+}

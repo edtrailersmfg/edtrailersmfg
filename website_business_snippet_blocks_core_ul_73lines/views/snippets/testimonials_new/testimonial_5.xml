@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Testimonial 5" id="testimonial_5">
+        <section class="pt64 pb64" data-visible="testimonials">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Testimonials</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb16">
+                        <div class="border rounded px-3 py-3">
+                            <p>Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text ever since
+                                the 1500s.
+                            </p>
+                            <div class="media mt48">
+                                <i class="fa fa-user fa-4x pr-3"></i>
+                                <div class="media-body">
+                                    <h3>Name Surname</h3>
+                                    <p>Discription</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb16">
+                        <div class="border rounded px-3 py-3">
+                            <p>Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text ever since
+                                the 1500s.
+                            </p>
+                            <div class="media mt48">
+                                <i class="fa fa-user fa-4x pr-3"></i>
+                                <div class="media-body">
+                                    <h3>Name Surname</h3>
+                                    <p>Discription</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb16">
+                        <div class="border rounded px-3 py-3">
+                            <p>Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text ever since
+                                the 1500s.
+                            </p>
+                            <div class="media mt48">
+                                <i class="fa fa-user fa-4x pr-3"></i>
+                                <div class="media-body">
+                                    <h3>Name Surname</h3>
+                                    <p>Discription</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb16">
+                        <div class="border rounded px-3 py-3">
+                            <p>Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text ever since
+                                the 1500s.
+                            </p>
+                            <div class="media mt48">
+                                <i class="fa fa-user fa-4x pr-3"></i>
+                                <div class="media-body">
+                                    <h3>Name Surname</h3>
+                                    <p>Discription</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

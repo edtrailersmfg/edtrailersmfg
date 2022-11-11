@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="img_block_8" name="Image Hover 2">
+        <section class="pt64 pb64" id="img_hover_effect_2" data-visible="image_blocks">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 pb48 text-center">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 co-md-4 col-lg-4 col-sm-4 mt8 mb8">
+                        <div class="hovereffect">
+                            <img class="img-fluid d-block mx-auto"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/placeholders/placeholders-3.png"/>
+                            <div class="overlay">
+                                <h2>Lorem Ipsum is</h2>
+                                <a class="info p-2" href="#">Your Text</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 co-md-4 col-lg-4 col-sm-4 mt8 mb8">
+                        <div class="hovereffect">
+                            <img class="img-fluid d-block mx-auto"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/placeholders/placeholders-3.png"/>
+                            <div class="overlay">
+                                <h2>Lorem Ipsum is</h2>
+                                <a class="info p-2" href="#">Your Text</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 co-md-4 col-lg-4 col-sm-4 mt8 mb8">
+                        <div class="hovereffect">
+                            <img class="img-fluid d-block mx-auto"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/placeholders/placeholders-3.png"/>
+                            <div class="overlay">
+                                <h2>Lorem Ipsum is</h2>
+                                <a class="info p-2" href="#">Your Text</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

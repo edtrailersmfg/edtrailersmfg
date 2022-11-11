@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Center Content 21" id="center_content_21">
+        <section class="pt64 pb64" data-visible="center_content">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <p class="pb32 font-weight-bold">Lorem ipsum dolor sit amet.</p>
+                        <i class="fa fa-3x fa-cubes px-4"></i>
+                        <i class="fa fa-3x fa-cubes px-4"></i>
+                        <i class="fa fa-3x fa-cubes px-4"></i>
+                        <h3 class="pt32">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum
+                            est in tortor congue suscipit. Suspendisse potenti. Aliquam finibus pharetra tellus at
+                            egestas.Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

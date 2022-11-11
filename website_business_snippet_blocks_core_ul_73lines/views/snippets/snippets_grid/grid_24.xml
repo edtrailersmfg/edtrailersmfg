@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Grid 24" id="grid_24">
+        <section class="pt64 pb16" data-visible="grids">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-12 text-center mb48">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb48">
+                        <h3>Feature One</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy.
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb48">
+                        <h3>Feature Two</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy.
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb48">
+                        <h3>Feature Three</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy.
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb48">
+                        <h3>Feature Four</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy.
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3  mb48">
+                        <h3>Feature Five</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy.
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb48">
+                        <h3>Feature Six</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy.
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb48">
+                        <h3>Feature Seven</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy.
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb48">
+                        <h3>Feature Eight</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

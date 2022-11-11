@@ -1,0 +1,92 @@
+/* ----------------------------------------------------------------------- */
+.services-square-section{
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+.services-square-section p{
+    padding:0 11%;
+    text-align:center;
+}
+
+
+// large icon set snippets
+
+.services_large{
+    text-align: center;
+    padding: 50px;
+    float: left;
+    position: relative;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.services_large h4 {
+    margin-top: 25px;
+    letter-spacing: 1px;
+     margin-bottom: 25px;
+}
+.services_large h4 a:hover{
+    color:$-alpha !important;
+}
+.services_large p {
+    margin-top: 7px;
+    color:#999999;
+    font-size:16px;
+}
+.services_large .style_1 p{
+    padding:0px !important;
+}
+.services-square-section i{
+    color:$-alpha;
+}
+.services_large{
+    border: 3px solid #f9f9f9;
+}
+.services_large:hover{
+    border: 3px solid $-alpha;
+}
+.services-text-effect{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+/*--------------------- Chart Skill ------------------------------*/
+.chart_skill .new_color {
+  display:none;
+}
+.chart_skill {
+  position:relative;
+}
+.chart_skill .text {
+  line-height: 37px;
+  width: 200px;
+  float: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 32px;
+  margin-left: -100px;
+  margin-top: -18px;
+      font-weight: 300;
+    font-family: Lato;
+}
+.chart_skill i.base {
+  -webkit-background-clip:text;
+  -webkit-text-fill-color: transparent;
+}
+
+.chart_skill h5{
+  width:100%;
+  text-align: center;
+  margin-top:20px;
+  font-weight:600;
+}
+.chart_skill .description {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.light .chart_skill h5{color:#fff;}
+.light .chart_skill .text{color:#ddd;}
+/* ---------------------- End Chart Skill ------------------------*/

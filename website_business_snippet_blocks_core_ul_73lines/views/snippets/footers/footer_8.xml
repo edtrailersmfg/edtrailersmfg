@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="footer_8" name="Footer 8">
+        <section class="pt64 pb32" id="footer_8" data-visible="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32">
+                        <img style="margin:0 auto;"
+                             class="img img-responsive img-fluid"
+                             src="/logo.png"
+                             t-att-alt="'Logo of %s' % res_company.name"
+                             t-att-title="res_company.name"/>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy.
+                        </p>
+                        <div class="media">
+                            <i class="fa fa-map-marker mr-2 mt-1"></i>
+                            <div class="media-body">
+                                <p class="font-weight-bold mb8">Postal Address :</p>
+                                <p>
+                                    <span t-field="res_company.street"/>
+                                    <span t-field="res_company.city"/>
+                                    <span t-field="res_company.state_id.name"/>
+                                    <span t-field="res_company.zip"/>
+                                    <span t-field="res_company.country_id.name"/>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <i class="fa fa-phone mr-2 mt-1"></i>
+                            <div class="media-body">
+                                <p class="font-weight-bold mb8">Business Phone :</p>
+                                <p>
+                                    <span t-field="res_company.phone"/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32">
+                        <h5 class="text-uppercase font-weight-bold mb32">Top Rated Products</h5>
+                        <div class="media">
+                            <img alt="image" class="img-fluid mb16 mr-2"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"/>
+                            <div class="media-body">
+                                <a href="#" target="_blank" class="font-weight-bold">Creator Of Quality</a>
+                                <h6>$125.00</h6>
+                                <i class="fa fa-star mr-2"></i>
+                                <i class="fa fa-star mr-2"></i>
+                                <i class="fa fa-star mr-2"></i>
+                                <i class="fa fa-star mr-2"></i>
+                                <i class="fa fa-star mr-2"></i>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <img alt="image" class="img-fluid mb16 mr-2"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"/>
+                            <div class="media-body">
+                                <a href="#" target="_blank" class="font-weight-bold">Creator Of Quality</a>
+                                <h6>$125.00</h6>
+                                <i class="fa fa-star mr-2"></i>
+                                <i class="fa fa-star mr-2"></i>
+                                <i class="fa fa-star mr-2"></i>
+                                <i class="fa fa-star mr-2"></i>
+                                <i class="fa fa-star mr-2"></i>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <img alt="image" class="img-fluid mb16 mr-2"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"/>
+                            <div class="media-body">
+                                <a href="#" target="_blank" class="font-weight-bold">Creator Of Quality</a>
+                                <h6>$125.00</h6>
+                                <i class="fa fa-star mr-2"></i>
+                                <i class="fa fa-star mr-2"></i>
+                                <i class="fa fa-star mr-2"></i>
+                                <i class="fa fa-star mr-2"></i>
+                                <i class="fa fa-star mr-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32">
+                        <h5 class="text-uppercase font-weight-bold mb32">Our Products</h5>
+                        <div class="media">
+                            <img alt="image" class="img-fluid mb16 mr-2"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"/>
+                            <div class="media-body">
+                                <a href="#" target="_blank" class="font-weight-bold">Lorem ipsum</a>
+                                <h6>$119.0</h6>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <img alt="image" class="img-fluid mb16 mr-2"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"/>
+                            <div class="media-body">
+                                <a href="#" target="_blank" class="font-weight-bold">Lorem ipsum</a>
+                                <h6>$119.0</h6>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <img alt="image" class="img-fluid mb16 mr-2"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"/>
+                            <div class="media-body">
+                                <a href="#" target="_blank" class="font-weight-bold">Lorem ipsum</a>
+                                <h6>$119.0</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32">
+                        <h5 class="text-uppercase font-weight-bold mb32">Our Gallary</h5>
+                        <div class="row px-3">
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img alt="image" class="img-fluid"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-26.png"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img alt="image" class="img-fluid"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-26.png"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img alt="image" class="img-fluid"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-26.png"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img alt="image" class="img-fluid"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-26.png"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img alt="image" class="img-fluid"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-26.png"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                <img alt="image" class="img-fluid"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-26.png"/>
+                            </div>
+                            <a href="#" target="_blank" class="my-1"><i class="fa fa-arrow-circle-o-right mr-2"></i>view
+                                more photos
+                            </a>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <p class="text-uppercase mb8 mt8">subscribe to rss</p>
+                                <div class="input-group js_subscribe" data-list-id="0">
+                                    <input type="email" name="email" class="js_subscribe_email form-control rounded-0"
+                                           placeholder="your email..."/>
+                                    <span class="input-group-append">
+                                        <a role="button" href="#"
+                                           class="btn btn-primary js_subscribe_btn rounded-0">Subscribe
+                                        </a>
+                                        <a role="button" href="#"
+                                           class="btn btn-success js_subscribed_btn d-none rounded-0"
+                                           disabled="disabled">Thanks
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light">
+            <div class="container">
+                <div class="row p-4">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb8">
+                        <div>
+                            Copyright &amp;copy;
+                            <span t-field="res_company.name">Company name
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-md-right text-lg-right">
+                        <div>
+                            Responsive Odoo theme,
+                            <span>
+                                Made with
+                                <i class="fa fa-heart"/>
+                                by
+                                <strong>&lt;73Lines/&gt;</strong>
+                            </span>
+                        </div>
+<!--                        <div>-->
+<!--                            <t t-call="website.language_selector"/>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </template>
+</odoo>

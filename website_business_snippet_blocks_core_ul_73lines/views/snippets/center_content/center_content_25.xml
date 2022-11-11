@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Center Content 25" id="center_content_25">
+        <section class="pt64 pb64" data-visible="center_content">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-center border-right">
+                        <div>
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-3.png" alt="picture"
+                                 class="img-fluid pt8 pb8"/>
+                        </div>
+                        <h2 class="pt16 pb16">Title Name</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum est in tortor
+                            congue suscipit. Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.Suspendisse
+                            potenti. Aliquam finibus pharetra tellus at egestas.
+                        </p>
+                        <p class="mt48">
+                            <a href="#">Action
+                                <i class="fa fa-chevron-right"></i>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                        <div>
+                             <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-3.png" alt="picture"
+                                 class="img-fluid pt8 pb8"/>
+                        </div>
+                        <h2 class="pt16 pb16">Title Name</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum est in tortor
+                            congue suscipit. Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.Suspendisse
+                            potenti. Aliquam finibus pharetra tellus at egestas.
+                        </p>
+                        <p class="mt48">
+                            <a href="#">
+                                <i class="fa fa-star"></i>
+                                Watch Slideshow
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

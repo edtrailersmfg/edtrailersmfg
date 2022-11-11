@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Ultimate Language Selector Templates -->
+    <template id="ultimate_language_selector"></template>
+
+    <template id="footer_language_selector_ultimate"
+              inherit_id="website_business_snippet_blocks_core_ul_73lines.ultimate_language_selector"
+              name="Footer Language Selector Ultimate">
+        <xpath expr="." position="inside">
+            <t id="language_selector_call_ultimate" t-call="portal.language_selector">
+                <t t-set="_div_classes" t-value="(_div_classes or '') + ' dropup'"/>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="footer_language_selector_flag_ultimate" name="Footer Language Selector Flag Ultimate"
+              inherit_id="website_business_snippet_blocks_core_ul_73lines.footer_language_selector_ultimate"
+              active="True">
+        <xpath expr="//t[@id='language_selector_call_ultimate']" position="before">
+            <t t-set="flags" t-value="True"/>
+        </xpath>
+    </template>
+
+    <template id="footer_language_selector_no_text_ultimate" name="Footer Language Selector No Text Ultimate"
+              inherit_id="website_business_snippet_blocks_core_ul_73lines.footer_language_selector_ultimate"
+              active="False">
+        <xpath expr="//t[@id='language_selector_call_ultimate']" position="before">
+            <t t-set="no_text" t-value="True"/>
+        </xpath>
+    </template>
+
+    <template id="footer_language_selector_inline_ultimate" name="Footer Language Selector Inline Ultimate"
+              inherit_id="website_business_snippet_blocks_core_ul_73lines.footer_language_selector_ultimate"
+              active="False">
+        <xpath expr="//t[@id='language_selector_call_ultimate']" position="replace">
+            <t id="language_selector_call_ultimate" t-call="website.language_selector_inline"/>
+        </xpath>
+    </template>
+
+
+    <!-- Ultimate Copyright Option Templates -->
+
+    <!-- Copyright 1 -->
+    <template id="copyright_1" inherit_id="web.frontend_layout" active="False">
+        <xpath expr="//div[hasclass('o_footer_copyright')]" position="replace">
+            <div class="pt32 pb32 o_footer_copyright" t-if="not no_copyright"
+                 data-name="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-8 col-md-6 col-sm-12 text-center text-lg-left text-md-left">
+                            <div>
+                                Responsive Odoo theme,
+
+                                <span>
+                                    Made with
+
+                                    <i class="fa fa-heart"/>
+                                    by
+
+                                    <strong>&lt;73Lines/&gt;</strong>
+                                </span>
+                            </div>
+                            <div>
+                                <t t-call="website_business_snippet_blocks_core_ul_73lines.ultimate_language_selector"></t>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 text-center text-lg-right text-md-right">
+                            <div>
+                                <t t-call="web.debug_icon"/>
+                                Copyright &amp;copy;
+
+                                <span t-field="res_company.name">Company name
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Copyright 2 -->
+    <template id="copyright_2" inherit_id="web.frontend_layout" active="False">
+        <xpath expr="//div[hasclass('o_footer_copyright')]" position="replace">
+            <div class="o_footer_copyright" t-if="not no_copyright"
+                 data-name="copyright">
+                <div class="container">
+                    <div class="row p-4">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb8 text-center text-md-left text-lg-left">
+                            <div>
+                                <t t-call="web.debug_icon"/>
+                                Copyright &amp;copy;
+                                <span t-field="res_company.name">Company name
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-center text-md-right text-lg-right">
+                            <div>
+                                Responsive Odoo theme,
+                                <span>
+                                    Made with
+                                    <i class="fa fa-heart"/>
+                                    by
+                                    <strong>&lt;73Lines/&gt;</strong>
+                                </span>
+                            </div>
+                            <div>
+                                <t t-call="website_business_snippet_blocks_core_ul_73lines.ultimate_language_selector"></t>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Copyright 3 -->
+    <template id="copyright_3" inherit_id="web.frontend_layout" active="False">
+        <xpath expr="//div[hasclass('o_footer_copyright')]" position="replace">
+            <div class="o_footer_copyright" t-if="not no_copyright"
+                 data-name="copyright">
+                <div class="container">
+                    <div class="row p-4">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16 text-center text-lg-left text-md-left">
+                            <div class="py-1">
+                                <t t-call="web.debug_icon"/>
+                                Copyright &amp;copy;
+                                <span t-field="res_company.name">Company name
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-right mb16 text-center text-lg-right text-md-right">
+                            <div class="icon_bg">
+                                <a href="/website/social/facebook">
+                                    <i class="fa fa-facebook mx-1 "></i>
+                                </a>
+                                <a href="/website/social/twitter">
+                                    <i class="fa fa-twitter mx-1"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-dribbble mx-1"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-behance mx-1"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-pinterest-p mx-1"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-google-plus mx-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                            <div>
+                                Responsive Odoo theme,
+                                <span>
+                                    Made with
+                                    <i class="fa fa-heart"/>
+                                    by
+                                    <strong>&lt;73Lines/&gt;</strong>
+                                </span>
+                            </div>
+                            <div>
+                                <t t-call="website_business_snippet_blocks_core_ul_73lines.ultimate_language_selector"/>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Copyright 4 -->
+    <template id="copyright_4" inherit_id="web.frontend_layout" active="False">
+        <xpath expr="//div[hasclass('o_footer_copyright')]" position="replace">
+            <div class="pt32 pb32 o_footer_copyright" t-if="not no_copyright"
+                 data-name="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-8 col-lg-6">
+                            <ul class="d-flex d-inline list-unstyled p-0">
+                                <li class="px-2">
+                                    <a href="#">Terms &amp; Conditions</a>
+                                </li>
+                                <li class="border-primary px-2" style="border-left:2px solid;">
+                                    <a href="#">API Use Policy</a>
+                                </li>
+                                <li class="border-primary px-2" style="border-left:2px solid;">
+                                    <a href="#">Privacy Policy</a>
+                                </li>
+                                <li class="border-primary px-2" style="border-left:2px solid;">
+                                    <a href="#">Cookies</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-6 text-md-right text-lg-right text-center">
+                            <div>
+                                Copyright &amp;copy;
+                                <span t-field="res_company.name">Company name
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center pt16">
+                        <div>
+                            Responsive Odoo theme,
+                            <span>
+                                Made with
+                                <i class="fa fa-heart"/>
+                                by
+                                <strong>&lt;73Lines&gt;</strong>
+                            </span>
+                        </div>
+                        <div>
+                            <t t-call="website_business_snippet_blocks_core_ul_73lines.ultimate_language_selector"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Copyright 5 -->
+    <template id="copyright_5" inherit_id="web.frontend_layout" active="False">
+        <xpath expr="//div[hasclass('o_footer_copyright')]" position="replace">
+            <div class="pt32 pb32 o_footer_copyright" t-if="not no_copyright"
+                 data-name="copyright">
+                <div class="container">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <div class="pb24">
+                            Copyright &amp;copy;
+                            <span t-field="res_company.name">Company name
+                            </span>
+                        </div>
+                        <div>
+                            Responsive Odoo theme,
+                            <span>
+                                Made with
+                                <i class="fa fa-heart"/>
+                                by
+                                <strong>&lt;73Lines&gt;</strong>
+                            </span>
+                        </div>
+                        <div>
+                            <t t-call="website_business_snippet_blocks_core_ul_73lines.ultimate_language_selector"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Copyright 6 -->
+    <template id="copyright_6" inherit_id="web.frontend_layout" active="False">
+        <xpath expr="//div[hasclass('o_footer_copyright')]" position="replace">
+            <div class="pt32 pb32 o_footer_copyright" t-if="not no_copyright"
+                 data-name="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                            <ul class="nav justify-content-center">
+                                <li>
+                                    <a href="#" class="text-decoration-none px-3" target="_blank">HOME</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none px-3" target="_blank">ABOUT</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none px-3" target="_blank">SERVICES</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none px-3" target="_blank">WORKS</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none px-3" target="_blank">PRICING</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none px-3" target="_blank">CLIENTS</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none px-3" target="_blank">BLOG</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none px-3" target="_blank">FAQs</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none px-3" target="_blank">TERM OF USE</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none px-3" target="_blank">PRIVACY POLICY</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none" target="_blank">CONTACT</a>
+                                </li>
+                            </ul>
+                            <div class="pt16 pb16">
+                                Copyright &amp;copy;
+                                <span t-field="res_company.name">Company name
+                                </span>
+                            </div>
+                            <div>
+                                Responsive Odoo theme,
+                                <span>
+                                    Made with
+                                    <i class="fa fa-heart"/>
+                                    by
+                                    <strong>&lt; 73Lines &gt;
+                                    </strong>
+                                </span>
+                            </div>
+                            <div>
+                                <t t-call="website_business_snippet_blocks_core_ul_73lines.ultimate_language_selector"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Copyright 7 -->
+    <template id="copyright_7" inherit_id="web.frontend_layout" active="False">
+        <xpath expr="//div[hasclass('o_footer_copyright')]" position="replace">
+            <div class="pt32 pb32 o_footer_copyright" t-if="not no_copyright"
+                 data-name="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                            <p>Use of this Site is subject to express terms of use. By using this site, you signify
+                                that you
+                                agree to be bound by these Universal Terms of Service.
+                            </p>
+                            <ul class="nav justify-content-center">
+                                <li>
+                                    <a href="#" class="text-decoration-none px-3" target="_blank">Legal</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none px-3" target="_blank">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none px-3" target="_blank">Advertising
+                                        Preferences
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <div class="pt16 pb16">
+                                Copyright &amp;copy;
+                                <span t-field="res_company.name">Company name
+                                </span>
+                            </div>
+                            <div>
+                                Responsive Odoo theme,
+                                <span>
+                                    Made with
+                                    <i class="fa fa-heart"/>
+                                    by
+                                    <strong>&lt; 73Lines &gt;
+                                    </strong>
+                                </span>
+                            </div>
+                            <div>
+                                <t t-call="website_business_snippet_blocks_core_ul_73lines.ultimate_language_selector"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Copyright 8 -->
+    <template id="copyright_8" inherit_id="web.frontend_layout" active="False">
+        <xpath expr="//div[hasclass('o_footer_copyright')]" position="replace">
+            <div class="o_footer_copyright" t-if="not no_copyright"
+                 data-name="copyright">
+                <div class="container">
+                    <div class="row p-4">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb16 text-center">
+                            <ul>
+                                <a href="/website/social/facebook">
+                                    <i class="fa fa-facebook px-2"></i>
+                                </a>
+                                <a href="/website/social/twitter">
+                                    <i class="fa fa-twitter px-2"></i>
+                                </a>
+                                <a href="/website/social/linkedin">
+                                    <i class="fa fa-linkedin px-2"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-pinterest px-2"></i>
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb8 text-center text-md-left text-lg-left">
+                            <div>
+                                Copyright &amp;copy;
+                                <span t-field="res_company.name">Company name
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-center text-md-right text-lg-right">
+                            <div>
+                                Responsive Odoo theme,
+                                <span>
+                                    Made with
+                                    <i class="fa fa-heart"/>
+                                    by
+                                    <strong>&lt; 73Lines &gt;
+                                    </strong>
+                                </span>
+                            </div>
+                            <div>
+                                <t t-call="website_business_snippet_blocks_core_ul_73lines.ultimate_language_selector"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

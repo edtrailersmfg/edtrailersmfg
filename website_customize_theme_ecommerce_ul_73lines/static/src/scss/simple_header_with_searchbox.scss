@@ -1,0 +1,125 @@
+#top_menu{
+    margin-right: auto !important;
+}
+.center_logo{
+    display:none;
+}
+
+@media (min-width: 425px) and (max-width:768px){
+    .search-hide{
+        display: none;
+    }
+
+    /*.input-group{
+            position: absolute;
+            left: -90px;
+            right: 0;
+    }*/
+
+    .search-dropdown-hide .dropdown-menu {
+        left: inherit;
+        right: 0;
+    }
+
+    .yamm .dropdown-menu {
+        right: 0;
+        left: inherit;
+    }
+
+    .navbar.navbar-expand-md .container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .search-dropdown-hide{
+        position:relative;
+    }
+}
+
+@media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2){
+
+    .search-dropdown-hide{
+        display: block !important;
+    }
+
+    .search-hide{
+        display: none !important;
+    }
+
+    /*.input-group{
+            position: absolute;
+            left: -90px;
+            right: 0;
+    }*/
+
+    .search-dropdown-hide .dropdown-menu {
+        left: inherit;
+        right: 0;
+    }
+
+    .yamm .dropdown-menu {
+        right: 0;
+        left: inherit;
+    }
+
+    .search-dropdown-hide{
+        position:relative;
+    }
+}
+
+@media (max-width: 425px){
+    .search-dropdown-hide{
+        display: none;
+    }
+
+    .search-hide .input-group{
+        margin-top: 8px;
+    }
+}
+
+@media (min-width: 992px){
+.search-dropdown-hide{
+    display: none;
+}
+}
+
+.search_button{
+    border-radius: 0;
+    background: theme-color('primary');
+    border: theme-color('primary');
+}
+
+.search-hide{
+    .btn:focus, .btn.focus {
+        outline: 0;
+        box-shadow: unset;
+    }
+
+    .btn-dark:focus, .btn-dark.focus {
+        outline: 0;
+        box-shadow: unset;
+    }
+
+    .btn-dark:not(:disabled):not(.disabled):active, .btn-dark:not(:disabled):not(.disabled).active, .show > .btn-dark.dropdown-toggle {
+        color: #222529;
+        background-color: #fff;
+        border-color: transparent;
+    }
+
+    .btn-dark:not(:disabled):not(.disabled):active:focus, .btn-dark:not(:disabled):not(.disabled).active:focus, .show > .btn-dark.dropdown-toggle:focus {
+        box-shadow: unset;
+    }
+}
+
+.navbar-dark .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link {
+    font-weight: bold;
+}
+
+@media (max-width: 991.98px){
+    header.o_affix_enabled > .navbar > * .dropdown-menu {
+        max-height: inherit;
+    }
+}

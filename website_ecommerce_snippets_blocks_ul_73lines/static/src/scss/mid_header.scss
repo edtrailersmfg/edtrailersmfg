@@ -1,0 +1,1003 @@
+/*------------social media icon scss start here ----------------*/
+
+
+.fa_company_contact_info {
+    font-size: 14px !important;
+}
+
+.fa-16{
+ font-size: 16px !important;
+}
+
+/*------------ecommerce mid header - 1 scss start here ----------------*/
+#mid-header-bottom-1 {
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+    .oe_search_button{
+        color: rgb(255, 255, 255);
+        background-color: rgb(20, 31, 30);
+        border-color: rgb(20, 31, 30);
+    }
+}
+
+/*------------ecommerce mid header - 3 scss start here ----------------*/
+#mid-header-bottom-3 {
+    .oe_search_button{
+        color: rgb(255, 255, 255);
+        background-color: rgb(20, 31, 30);
+        border-color: rgb(20, 31, 30);
+    }
+}
+
+/*------------ecommerce mid header - 4 scss start here ----------------*/
+#mid-header-bottom-4 {
+    .oe_search_button{
+        color: rgb(255, 255, 255);
+        background-color: rgb(20, 31, 30);
+        border-color: rgb(20, 31, 30);
+    }
+}
+
+/*------------ecommerce mid header - 6 scss start here ----------------*/
+#mid-header-bottom-6 {
+    .oe_search_button{
+        color: rgb(255, 255, 255);
+        background-color: rgb(20, 31, 30);
+        border-color: rgb(20, 31, 30);
+    }
+}
+
+/*------------ecommerce mid header - 7 scss start here ----------------*/
+#mid-header-bottom-7 {
+    .oe_search_button{
+        color: rgb(255, 255, 255);
+        background-color: rgb(20, 31, 30);
+        border-color: rgb(20, 31, 30);
+    }
+}
+
+
+/*------------ecommerce mid header - 8 scss start here ----------------*/
+#mid-header-top-8 {
+        .icon_style{
+            display:none;
+        }
+        .hide_content{
+
+        }
+
+        .oe_search_button{
+            color: rgb(255, 255, 255);
+            background-color: rgb(20, 31, 30);
+            border-color: rgb(20, 31, 30);
+        }
+ @media only screen and (max-width: 414px) {
+        .hide_content{
+            display:none;
+        }
+        .icon_style{
+           display:block;
+        }
+
+     }
+}
+/*------------ecommerce mid header - 8 scss end here ----------------*/
+
+/*------------ecommerce mid header - 9 scss start here ----------------*/
+#mid-header-middle-9 {
+    .oe_search_button{
+        color: rgb(255, 255, 255);
+        background-color: rgb(20, 31, 30);
+        border-color: rgb(20, 31, 30);
+    }
+
+    @media only screen and (max-width: 414px) {
+        .hide_border{
+            border-right:none !important;
+        }
+
+        #my_cart{
+            margin-right: 1.5rem;
+        }
+    }
+}
+/*------------ecommerce mid header - 9 scss end here ----------------*/
+
+/*------------ecommerce mid header - 10 scss start here ----------------*/
+#mid-header-bottom-10{
+    .oe_search_button{
+        color: rgb(255, 255, 255);
+        background-color: rgb(20, 31, 30);
+        border-color: rgb(20, 31, 30);
+    }
+
+    @media only screen and (max-width: 414px) {
+        .hide_border{
+            border-right:none !important;
+        }
+    }
+}
+/*------------ecommerce mid header - 10 scss end here ----------------*/
+
+/*------------ecommerce mid header - 11 scss start here ----------------*/
+#mid-header-top-11{
+    .oe_search_button{
+        color: rgb(255, 255, 255);
+        background-color: rgb(20, 31, 30);
+        border-color: rgb(20, 31, 30);
+    }
+    .icon_style{
+        display:none;
+    }
+    .hide_content{
+
+    }
+
+    @media only screen and (max-width: 414px) {
+        .hide_border{
+            border-right:none !important;
+        }
+          .hide_content{
+            display:none;
+        }
+        .icon_style{
+           display:block;
+        }
+
+    }
+    @media only screen and (max-width: 768px) {
+        .hide_border{
+            border-right:none !important;
+        }
+    }
+}
+/*------------ecommerce mid header - 11 scss end here ----------------*/
+/*------------ecommerce mid header - 12 scss start here ----------------*/
+#mid-header-top-12{
+    .hide_border{
+
+    }
+     .icon_style{
+            display:none;
+        }
+        .hide_content{
+
+        }
+    .search_input{
+            width: 450px;
+    }
+
+    @media only screen and (max-width: 414px) {
+        .hide_border{
+            border-right:none !important;
+            border-left:none !important;
+        }
+          .hide_content{
+            display:none;
+        }
+        .icon_style{
+           display:block;
+        }
+    }
+     @media only screen and (min-width: 320px) and (max-width:768px) {
+        .search_input{
+            width: 291px;
+        }
+     }
+     @media only screen and (min-width: 769px) and (max-width:1024px) {
+        .search_input{
+            width: 385px;
+        }
+     }
+
+}
+
+#mid-header-bottom-12{
+    .oe_search_box{
+        border-radius: 0px !important;
+    }
+
+    .o_wsale_products_searchbar_form{
+        display: flex;
+    }
+
+    .oe_search_button{
+        display: none;
+    }
+
+    .oe_search_button.search_btn{
+        display: block !important;
+        border-radius: 0px;
+        border-radius: 0px !important;
+        border-color: #ced4da;
+        color: #FFFFFF;
+        background-color: #5B899E;
+        border-color: #5B899E;
+    }
+}
+
+/*------------ecommerce mid header - 12 scss end here ----------------*/
+
+/*------------ecommerce mid header - 13 scss start here ----------------*/
+#mid-header-top-13{
+  .icon_style{
+            display:none;
+        }
+        .hide_content{
+
+        }
+   .hide_border{
+
+    }
+     @media only screen and (max-width: 414px) {
+        .hide_border{
+            border-right:none !important;
+            border-left:none !important;
+        }
+          .hide_content{
+            display:none;
+        }
+        .icon_style{
+           display:block;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .hide_border{
+            border-right:none !important;
+            border-left:none !important;
+        }
+    }
+
+}
+/*------------ecommerce mid header - 13 scss end here ----------------*/
+
+
+/*------------ecommerce mid header - 14 scss start here ----------------*/
+#mid-header-top-14{
+    .hide_border{
+
+    }
+     .icon_style{
+            display:none;
+        }
+        .hide_content{
+
+        }
+   .hide_border{
+
+    }
+    @media only screen and (max-width: 414px) {
+        .hide_border{
+            border-right:none !important;
+            border-left:none !important;
+        }
+           .hide_content{
+            display:none;
+        }
+        .icon_style{
+           display:block;
+        }
+    }
+
+ }
+/*------------ecommerce mid header - 14 scss end here ----------------*/
+
+/*------------ecommerce mid header - 15 scss start here ----------------*/
+#mid-header-top-15{
+    .hide_border{
+
+    }
+      .icon_style{
+            display:none;
+        }
+        .hide_content{
+
+        }
+    @media only screen and (max-width: 414px) {
+        .hide_border{
+            border-right:none !important;
+            border-left:none !important;
+            }
+                .hide_content{
+            display:none;
+        }
+        .icon_style{
+           display:block;
+        }
+    }
+}
+/*------------ecommerce mid header - 15 scss end here ----------------*/
+
+/*------------ecommerce mid header - 16 scss start here ----------------*/
+#mid-header-top-16, #mid-header-bottom-16{
+  .icon_style{
+            display:none;
+        }
+        .hide_content{
+
+        }
+    .oe_search_box{
+        width: 245px;
+        padding-left: 20px;
+        height: 40px;
+        border-top-left-radius: 20px;
+        -webkit-border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        -webkit-border-bottom-left-radius: 20px;
+    }
+    .oe_search_button{
+        opacity: 1;
+        text-align: center;
+        padding: 0 !important;
+        height: 40px;
+        width: 54px;
+        line-height: 30px;
+        border-top-right-radius: 20px;
+        -webkit-border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        -webkit-border-bottom-right-radius: 20px;
+        background-color: #5b899e;
+    }
+     @media only screen and (max-width: 414px) {
+        .hide_content{
+            display:none;
+        }
+        .icon_style{
+           display:block;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .oe_search_box{
+            width: 215px;
+        }
+         .hide_content{
+            display:none;
+        }
+        .icon_style{
+           display:block;
+        }
+    }
+    @media only screen and (max-width: 1024px) {
+        .oe_search_box{
+            width: 215px;
+        }
+    }
+}
+/*------------ecommerce mid header - 16 scss end here ----------------*/
+
+
+/*------------ecommerce mid header - 17 scss start here ----------------*/
+#mid-header-middle-17 , #mid-header-bottom-17{
+.icon_style{
+            display:none;
+        }
+        .hide_content{
+
+        }
+ .oe_search_box{
+        width: 245px;
+        padding-left: 20px;
+        height: 40px;
+        border-top-left-radius: 20px;
+        -webkit-border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        -webkit-border-bottom-left-radius: 20px;
+    }
+    .oe_search_button{
+        opacity: 1;
+        text-align: center;
+        padding: 0 !important;
+        height: 40px;
+        width: 54px;
+        line-height: 30px;
+        border-top-right-radius: 20px;
+        -webkit-border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        -webkit-border-bottom-right-radius: 20px;
+        //background-color: #f4a137;
+        background-color: #000;
+        border-color: #000;
+    }
+
+     @media only screen and (max-width: 414px) {
+        .hide_content{
+            display:none;
+        }
+        .icon_style{
+           display:block;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .oe_search_box{
+            width: 215px;
+        }
+    }
+    @media only screen and (max-width: 1024px) {
+        .oe_search_box{
+            width: 215px;
+        }
+    }
+}
+/*------------ecommerce mid header - 17 scss end here ----------------*/
+
+/*------------ecommerce mid header - 18 scss start here ----------------*/
+#mid-header-bottom-18{
+ .oe_search_box{
+        width: 245px;
+        padding-left: 20px;
+        height: 40px;
+        border-top-left-radius: 20px;
+        -webkit-border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        -webkit-border-bottom-left-radius: 20px;
+    }
+    .oe_search_button{
+        opacity: 1;
+        text-align: center;
+        padding: 0 !important;
+        height: 40px;
+        width: 54px;
+        line-height: 30px;
+        border-top-right-radius: 20px;
+        -webkit-border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        -webkit-border-bottom-right-radius: 20px;
+        //background-color: #f4a137;
+        background-color: #000;
+        border-color: #000;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .oe_search_box{
+            width: 215px;
+        }
+    }
+    @media only screen and (max-width: 1024px) {
+        .oe_search_box{
+            width: 215px;
+        }
+    }
+}
+/*------------ecommerce mid header - 18 scss end here ----------------*/
+
+
+/*------------ecommerce mid header - 19 scss start here ----------------*/
+#mid-header-bottom-19 , #mid-header-top-19{
+    .social_icon{
+        border-radius: 2px;
+        padding: 8px 8px 8px 11px;
+        background-color:#ffffff;
+        color:#000000;
+    }
+    .myaccount_icon{
+        background-color:#ffffff;
+        color:#ff5777;
+    }
+    .social_icon:hover{
+        background-color:#ff5777;
+        color:#ffffff;
+    }
+      .myaccount_icon:hover{
+        background-color:#ff5777;
+        color:#ffffff;
+    }
+    .button_header{
+        background-color:#ffffff;
+        color:#000000;
+    }
+    .button_header:hover{
+        background-color:#ff5777;
+        color:#ffffff;
+    }
+    .oe_search_box{
+        width: 245px;
+        padding-left: 20px;
+        height: 40px;
+        border-top-left-radius: 20px;
+        -webkit-border-top-left-radius: 5px;
+        border-bottom-left-radius: 20px;
+        -webkit-border-bottom-left-radius: 5px;
+    }
+    .oe_search_button{
+        opacity: 1;
+        text-align: center;
+        padding: 0 !important;
+        height: 40px;
+        width: 54px;
+        line-height: 30px;
+        border-top-right-radius: 20px;
+        -webkit-border-top-right-radius: 5px;
+        border-bottom-right-radius: 20px;
+        -webkit-border-bottom-right-radius: 5px;
+        background-color: #E46F78;
+        border-color: #E46F78;
+    }
+
+    #my_cart{
+        background-color: #E46F78;
+    }
+     .hide_content{
+                    }
+    @media only screen and (max-width: 768px) {
+        .oe_search_box{
+            width: 170px;
+        }
+        .hide_content{
+            display:none;
+        }
+    }
+    @media only screen and (max-width: 1024px) {
+        .oe_search_box{
+            width: 215px;
+        }
+         .hide_content{
+            display:none;
+        }
+    }
+}
+/*------------ecommerce mid header - 19 scss end here ----------------*/
+
+
+/*------------ecommerce mid header - 20 scss start here ----------------*/
+#mid-header-top-20{
+    .hide_border{
+
+    }
+    .icon_style{
+            display:none;
+        }
+        .hide_content{
+
+        }
+    @media only screen and (max-width: 414px) {
+    .hide_border{
+          border:none !important;
+        }
+         .hide_content{
+            display:none;
+        }
+        .icon_style{
+           display:block;
+        }
+    }
+}
+
+#mid-header-bottom-20{
+    .oe_search_box{
+        border-radius: 0px !important;
+    }
+
+    .oe_search_button{
+        border-radius: 0px !important;
+        color: #FFFFFF;
+        background-color: #141f1e;
+        border-color: #141f1e;
+    }
+}
+/*------------ecommerce mid header - 20 scss end here ----------------*/
+
+/*------------ecommerce mid header - 21 scss start here ----------------*/
+#mid-header-top-21{
+    .hide_border{
+
+    }
+     .hide_border{
+
+    }
+    .icon_style{
+            display:none;
+        }
+        .hide_content{
+
+        }
+    @media only screen and (max-width: 414px) {
+        .hide_border{
+          border:none !important;
+        }
+         .hide_content{
+            display:none;
+        }
+        .icon_style{
+           display:block;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+     .hide_border{
+          border:none !important;
+        }
+
+    }
+}
+
+#mid-header-bottom-21{
+    .oe_search_button{
+        border-radius: 0 !important;
+        border-left: 0px;
+        border-bottom: 1px solid #CED4DA !important;
+        border-top: 1px solid #CED4DA !important;
+        border-right: 1px solid #CED4DA !important;
+        background-color: #FFFFFF !important;
+        color: #212529;
+    }
+
+    .oe_search_box{
+        border-radius: 0 !important;
+    }
+}
+/*------------ecommerce mid header - 21 scss end here ----------------*/
+
+/*------------ecommerce mid header - 22 scss start here ----------------*/
+#mid-header-bottom-22 {
+    .hide_border{
+
+    }
+    .text_hover{
+       color:#00A09D;
+    }
+    .text_hover:hover{
+       color:#ffffff;
+    }
+
+    .oe_search_box{
+        border-radius: 0px !important;
+        background-color: #212529 !important;
+        color: #FFFFFF;
+        border-color: #00A09D !important;
+        border-right: 0 !important;
+        padding: 1.5rem !important;
+    }
+
+    .oe_search_button{
+        background-color: #212529 !important;
+        color: #875A7B;
+        border-radius: 0 !important;
+        border-color: #00A09D !important;
+        border-left: 0 !important;
+    }
+
+
+    @media only screen and (max-width: 414px) {
+        .hide_border{
+             border-right:none !important;
+             border-left:none !important;
+             padding-left:10px !important;
+             padding-right:10px !important;
+        }
+        .hide_content{
+            display:none;
+        }
+        .dropdown-toggle::after {
+            content: none;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .hide_border{
+            border-right:none !important;
+            border-left:none !important;
+            padding-left:10px !important;
+            padding-right:10px !important;
+        }
+        .hide_content{
+            display:none;
+        }
+         .dropdown-toggle::after {
+            content: none;
+        }
+    }
+}
+/*------------ecommerce mid header - 22 scss end here ----------------*/
+
+/*------------ecommerce mid header - 23 scss start here ----------------*/
+#mid-header-top-23 , #mid-header-middle-23 , #mid-header-bottom-23{
+    .hide_content{
+
+    }
+    .icon_buttton{
+        background-color: #ffffff;
+    }
+    .icon_buttton:hover{
+        background-color:#ded9da;
+        border-radius:5px;
+    }
+    .oe_search_box{
+        width: 245px;
+        padding-left: 20px;
+        height: 40px;
+        border: 1px solid #ceb5b5 ;
+        border-top-left-radius: 20px;
+        -webkit-border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        -webkit-border-bottom-left-radius: 20px;
+    }
+    .oe_search_button{
+        opacity: 1;
+        text-align: center;
+        padding: 0 !important;
+        height: 40px;
+        width: 54px;
+        line-height: 30px;
+        border-top-right-radius: 20px;
+        -webkit-border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        -webkit-border-bottom-right-radius: 20px;
+        border-color: darkgray;
+        background-color: #5b899e;
+    }
+
+    #my_cart .fa-shopping-basket{
+        background-color: #E46F78 !important;
+        color: #FFFFFF;
+    }
+    @media only screen and (max-width: 414px) {
+        .hide_border{
+             border-right:none !important;
+             border-left:none !important;
+             padding-left:10px !important;
+             padding-right:10px !important;
+        }
+         .hide_content{
+            display:none;
+        }
+
+     }
+    @media only screen and (max-width: 768px) {
+        .hide_border_right_4{
+            border-right:none !important;
+        }
+
+        .oe_search_box{
+               width: 215px;
+        }
+    }
+    @media only screen and (max-width: 1024px) {
+        .hide_border_right_5{
+            border-right:none !important;
+        }
+
+        .oe_search_box{
+            width: 215px;
+        }
+      }
+}
+/*------------ecommerce mid header - 23 scss end here ----------------*/
+
+/*------------ecommerce mid header - 24 scss start here ----------------*/
+#mid-header-top-24{
+    .hide_border{
+
+    }
+    .icon_style{
+            display:none;
+        }
+        .hide_content{
+
+        }
+    @media only screen and (max-width: 414px) {
+       .hide_content{
+            display:none;
+        }
+        .icon_style{
+           display:block;
+        }
+    }
+}
+#mid-header-bottom-24{
+    .oe_search_box{
+        border-radius: 0px !important;
+        border: 0;
+    }
+
+    .oe_search_button{
+        border-radius: 0 !important;
+        color: #212529;
+        background-color: #f6f9f9;
+        border: 0;
+    }
+
+}
+/*------------ecommerce mid header - 24 scss end here ----------------*/
+
+/*------------ecommerce mid header - 25 scss start here ----------------*/
+#mid-header-top-25,#mid-header-bottom-25{
+    .icon_style{
+            display:none;
+        }
+     .hide_content{
+
+        }
+    .oe_search_box{
+        //width: 245px;
+        padding-left: 20px;
+        height: 40px;
+        border-top-left-radius: 20px;
+        -webkit-border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        -webkit-border-bottom-left-radius: 20px;
+    }
+    .oe_search_button{
+        opacity: 1;
+        text-align: center;
+        padding: 0 !important;
+        height: 40px;
+        width: 54px;
+        line-height: 30px;
+        border-top-right-radius: 20px;
+        -webkit-border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        -webkit-border-bottom-right-radius: 20px;
+        background-color: #f4a137;
+        border: #f4a137;
+    }
+    @media only screen and (max-width: 414px) {
+        .hide_border{
+             border-right:none !important;
+             border-left:none !important;
+             padding-left:10px !important;
+             padding-right:10px !important;
+        }
+        .hide_content{
+            display:none;
+        }
+        .icon_style{
+           display:block;
+        }
+     }
+    @media only screen and (max-width: 768px) {
+        .hide_border{
+            border-right:none !important;
+            border-left:none !important;
+             padding-left:10px !important;
+             padding-right:10px !important;
+        }
+    }
+     @media only screen and (max-width: 1024px) {
+                .hide_content{
+            display:none;
+        }
+    }
+}
+/*------------ecommerce mid header - 25 scss end here ----------------*/
+
+/*------------ecommerce mid header - 26 scss start here ----------------*/
+#mid-header-bottom-26{
+      .icon_style{
+            display:none;
+        }
+        .hide_content{
+
+        }
+   .oe_search_box{
+        //width: 245px;
+        padding-left: 20px;
+        height: 40px;
+        border-top-left-radius: 20px;
+        -webkit-border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        -webkit-border-bottom-left-radius: 20px;
+    }
+    .oe_search_button{
+        opacity: 1;
+        text-align: center;
+        padding: 0 !important;
+        height: 40px;
+        width: 54px;
+        line-height: 30px;
+        border-top-right-radius: 20px;
+        -webkit-border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        -webkit-border-bottom-right-radius: 20px;
+        background-color: #f4a137;
+        border: #f4a137;
+    }
+    @media only screen and (max-width: 414px) {
+    .hide_border{
+         border-right:none !important;
+         border-left:none !important;
+         padding-left:10px !important;
+         padding-right:10px !important;
+        }
+     }
+    @media only screen and (max-width: 768px) {
+         .hide_content{
+            display:none;
+        }
+        .icon_style{
+           display:block;
+        }
+        .hide_border{
+            border-right:none !important;
+            border-left:none !important;
+             padding-left:10px !important;
+             padding-right:10px !important;
+        }
+    }
+
+}
+/*------------ecommerce mid header - 26 scss end here ----------------*/
+
+
+/*-------------------------Options For Ecommerce Mid Header On/Off Buttons Start--------------*/
+
+.o_connected_user {
+    #ultimate_sign_in,#ultimate_register{
+        display:none;
+    }
+
+}
+body:not(.o_connected_user) {
+  #ultimate_my_account,#ultimate_logout{
+        display:none;
+    }
+}
+.o_sign_in_hide_ultimate_ecommerce{
+      #ultimate_sign_in{
+        display:none;
+    }
+}
+
+.o_register_hide_ultimate_ecommerce{
+    #ultimate_register{
+        display:none;
+    }
+}
+
+.o_logut_hide_ultimate_ecommerce{
+    .navbar-sign-in, .o_no_autohide_item{
+        display:none;
+    }
+}
+
+.o_add_cart_hide_ultimate_ecommerce{
+    #top_menu{
+        #my_cart, .o_wsale_my_cart{
+            display:none;
+        }
+    }
+}
+
+.o_wishlist_hide_ultimate_ecommerce{
+     #top_menu{
+        #my_wish, .o_wsale_my_wish{
+            display:none;
+        }
+    }
+}
+
+/*-------------------------Options For Ecommerce Mid Header On/Off Buttons End--------------*/
+
+/*-------------------------css for language and pricelist button start--------------*/
+
+#language_button_1{
+    .language_dropdown{
+        color: #b0b1b0;
+        background-color: #0a2c4e;
+        border-color: #0a2c4e;
+        padding: 0;
+        border-radius: 0.25rem;
+        margin-right: 0 !important;
+    }
+}
+
+#language_button_2{
+    .language_dropdown{
+        margin-right: 0 !important;
+    }
+}
+
+#pricelist_button_2{
+    .btn-secondary{
+        color: theme-color('primary');
+        background-color: transparent;
+        border: 0;
+    }
+
+    .btn-secondary:focus{
+        box-shadow: none;
+    }
+
+    .btn:focus{
+        box-shadow: none;
+    }
+}

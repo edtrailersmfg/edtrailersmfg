@@ -1,0 +1,398 @@
+.o_editable{
+    .js_subscribe_btn, .js_subscribed_btn{
+        position: relative !important;
+    }
+}
+
+#newsletter_1{
+    .js_subscribe{
+        .form-control {
+            height: 50px;
+            font-weight: 300;
+            border-style: solid;
+            border-width: 1px 1px 1px 1px;
+            border-color: theme-color('primary');
+            border-radius: 25px 25px 25px 25px !important;
+            padding: 0px 138px 0px 15px;
+        }
+
+        .js_subscribe_btn, .js_subscribed_btn{
+            height: 40px;
+            text-transform: uppercase;
+            line-height: 42px;
+            padding: 0px 20px 0px 20px;
+            border-radius: 20px 20px 20px 20px !important;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            outline: none;
+            border: 0 none;
+            transition: 0.4s;
+        }
+
+        .form-control:disabled, .form-control[readonly] {
+            border-color: #ced4da !important;
+        }
+
+        .form-control:focus{
+            z-index: unset;
+            box-shadow: none;
+        }
+
+        .btn:focus, .btn.focus {
+            outline: 0;
+            box-shadow: none;
+        }
+    }
+}
+
+#newsletter_2{
+    .js_subscribe{
+        .form-control {
+            height: 40px;
+            background-color: rgba(117,117,117,0);
+            border-style: solid;
+            border-width: 0px 0px 1px 0px;
+            border-color: #828282;
+            border-radius: 0px 0px 0px 0px;
+        }
+
+        .js_subscribe_btn, .js_subscribed_btn{
+            height: 40px;
+            text-transform: uppercase;
+            font-style: normal;
+            color: theme-color('primary');
+            background-color: rgba(211,211,211,0);
+            margin: 0px 0px 0px 30px;
+            border-style: solid;
+            border-width: 0px 0px 1px 0px;
+            border-color: theme-color('primary');
+            border-radius: 0px 0px 0px 0px;
+        }
+
+        .js_subscribe_btn:hover, .js_subscribed_btn:hover{
+            color: #18012c;
+            border-style: solid;
+            border-color: #18012c;
+        }
+
+        .form-control:focus{
+            z-index: unset;
+            box-shadow: none;
+        }
+
+        .btn:focus, .btn.focus {
+            outline: 0;
+            box-shadow: none;
+        }
+    }
+
+    .social_icon .icon_view i{
+            border-radius: 50%;
+            color: #fff;
+            background-color: #ccc;
+            padding: 12px;
+            line-height: 0.8;
+            height: 35px;
+            width: 35px;
+            text-align: center;
+        }
+
+    .social_icon{
+        .icon_fb i{
+            background-color: #3b5998;
+        }
+        .icon_tw i{
+            background-color: #1da1f2;
+        }
+        .icon_insta i{
+            background-color: #C13584;
+        }
+        .icon_youtube i{
+            background-color: #FF0000;
+            padding: 12px 0px;
+        }
+        .icon_ln i{
+            background-color: #2867B2;
+        }
+    }
+}
+
+#newsletter_3, #newsletter_5{
+    .js_subscribe{
+        .form-control {
+            height: 50px;
+            font-family: "Source Sans Pro", Sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            background-color: rgba(94,94,94,0);
+            border-style: solid;
+            border-width: 1px 1px 1px 1px;
+            border-color: rgba(255,255,255,0.4);
+            border-radius: 5px 5px 5px 5px;
+            border: 1px solid #ababab;
+            border-radius: 3px !important;
+        }
+
+        .js_subscribe_btn, .js_subscribed_btn{
+            height: 50px;
+            text-transform: uppercase;
+            margin: 0px 0px 0px 15px;
+            line-height: 40px;
+            border-radius: 3px !important;
+            padding: 5px 30px;
+            font-weight: bold;
+            border: none;
+        }
+
+        .alert-success {
+            height: 50px;
+            border-radius: 3px !important;
+        }
+
+        .form-control:focus{
+            z-index: unset;
+            box-shadow: none;
+        }
+
+        .btn:focus, .btn.focus {
+            outline: 0;
+            box-shadow: none;
+        }
+
+        @media(max-width:425px){
+            .js_subscribe_btn, .js_subscribed_btn{
+                padding: 5px 15px !important;
+            }
+        }
+    }
+}
+
+#newsletter_5{
+    .form-control {
+        border-radius: 0 !important;
+    }
+
+    .js_subscribe_btn, .js_subscribed_btn{
+        padding: 5px 45px !important;
+        border-radius: 0 !important;
+    }
+}
+
+#newsletter_4{
+    .social_icon .icon_view i{
+            border-radius: 50%;
+            color: #fff;
+            background-color: #ccc;
+            padding: 12px;
+            line-height: 0.8;
+            height: 35px;
+            width: 35px;
+            text-align: center;
+        }
+
+    .social_icon{
+        .icon_fb i{
+            background-color: #3b5998;
+        }
+        .icon_tw i{
+            background-color: #1da1f2;
+        }
+        .icon_insta i{
+            background-color: #C13584;
+        }
+        .icon_youtube i{
+            background-color: #FF0000;
+            padding: 12px 0px;
+        }
+        .icon_ln i{
+            background-color: #2867B2;
+        }
+    }
+
+    .input-group{
+        display: block;
+    }
+
+    .js_subscribe{
+        .form-control {
+            height: 40px;
+            width: 100%;
+            line-height: 40em;
+            border: 1px solid #e0e0e0;
+            border-radius: 3px !important;
+            border-radius: 5px 5px 5px 5px;
+            margin: 0px 0px 15px 0px;
+        }
+
+        .js_subscribe_btn, .js_subscribed_btn{
+            height: 40px;
+            width: 100%;
+            padding: 9px;
+            text-transform: uppercase;
+            font-style: normal;
+            border-radius: 3px !important;
+            margin: 15px 0px 0px 0px;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        .btn:focus, .btn.focus {
+            outline: 0;
+            box-shadow: none;
+        }
+    }
+}
+
+#newsletter_6{
+
+    .js_subscribe{
+        .form-control {
+            height: 50px;
+            line-height: 24px;
+            background-color: transparent;
+            border-style: solid;
+            border-width: 1px 1px 1px 1px;
+            border-color: #ababab;
+            border-radius: 30px 30px 30px 30px !important;
+            padding: 0px 50px 0px 20px;
+        }
+
+        .js_subscribe_btn{
+            height: 40px;
+            font-size: 20px;
+            font-weight: 400;
+            color: #f3f3f3;
+            line-height: 1.3;
+            padding: 6px;
+            border-radius: 100px 100px 100px 100px !important;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            width: 40px;
+            transform: translateY(-50%);
+            transition: 0.4s;
+        }
+
+        .js_subscribed_btn{
+            height: 40px;
+            text-transform: uppercase;
+            line-height: 42px;
+            padding: 0px 20px 0px 20px;
+            border-radius: 20px 20px 20px 20px !important;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            outline: none;
+            border: 0 none;
+            transition: 0.4s;
+        }
+
+        .form-control:focus{
+            z-index: unset;
+            box-shadow: none;
+        }
+
+        .btn:focus, .btn.focus {
+            outline: 0;
+            box-shadow: none;
+        }
+    }
+}
+
+#newsletter_7{
+    .js_subscribe{
+        .form-control {
+            height: 50px;
+            font-weight: 300;
+            border-style: solid;
+            border-width: 1px 1px 1px 1px;
+            border-color: theme-color('primary');
+            padding: 0px 138px 0px 15px;
+            border-radius: 0;
+        }
+
+        .js_subscribe_btn, .js_subscribed_btn{
+            height: 40px;
+            text-transform: uppercase;
+            line-height: 42px;
+            padding: 0px 20px 0px 20px;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            outline: none;
+            border: 0 none;
+            transition: 0.4s;
+            border-radius: 0;
+        }
+
+        .form-control:disabled, .form-control[readonly] {
+            border-color: #ced4da !important;
+        }
+
+        .form-control:focus{
+            z-index: unset;
+            box-shadow: none;
+        }
+
+        .btn:focus, .btn.focus {
+            outline: 0;
+            box-shadow: none;
+        }
+
+        @media(max-width:425px){
+            .js_subscribe_btn, .js_subscribed_btn{
+                padding: 0px 10px 0px 10px;
+            }
+        }
+    }
+}
+
+#newsletter_8{
+    .js_subscribe{
+        .form-control {
+            height: 50px;
+            line-height: 24px;
+            background-color: transparent;
+            border-style: solid;
+            border-width: 1px 1px 1px 1px;
+            border-color: #ababab;
+            padding: 0px 50px 0px 20px;
+            border-radius: 0;
+        }
+
+        .js_subscribe_btn, .js_subscribed_btn{
+            height: 40px;
+            text-transform: uppercase;
+            line-height: 42px;
+            padding: 0px 20px 0px 20px;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            outline: none;
+            border: 0 none;
+            transition: 0.4s;
+            border-radius: 0;
+        }
+
+        .form-control:focus{
+            z-index: unset;
+            box-shadow: none;
+        }
+
+        .btn:focus, .btn.focus {
+            outline: 0;
+            box-shadow: none;
+        }
+
+        @media(max-width:425px){
+            .js_subscribe_btn, .js_subscribed_btn{
+                padding: 0px 10px 0px 10px;
+            }
+        }
+    }
+}

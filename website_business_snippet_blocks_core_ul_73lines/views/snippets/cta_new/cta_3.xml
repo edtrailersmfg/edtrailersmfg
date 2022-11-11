@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="CTA 3" id="cta_3">
+        <section class="pt64 pb64" data-visible="cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2>Call To Action</h2>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-center mb16">
+                        <i class="fa fa-user fa-4x pr-3 pt16 pb16"></i>
+                        <h3>Title Name</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <a href="#" class="btn btn-primary px-4 py-2 mt16">button</a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-center mb16">
+                        <i class="fa fa-user fa-4x pr-3 pt16 pb16"></i>
+                        <h3>Title Name</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <a href="#" class="btn btn-primary px-4 py-2 mt16">button</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

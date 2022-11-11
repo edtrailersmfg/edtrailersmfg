@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Process Step 12" id="process_step_12">
+        <section class="pt64 pb64 text-center" id="process_step_12" data-visible="process_steps">
+            <div class="container">
+                <div class="row p-md-4">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2 class="mb16">Our Working Process</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="main-timeline row mx-0">
+                            <div class="timeline col-12">
+                                <div class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="fa fa-rocket"></i>
+                                    </div>
+                                    <h3 class="title">Web Designing</h3>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada
+                                        tellus lorem, et condimentum neque commodo.Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline col-12">
+                                <div class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="fa fa-briefcase"></i>
+                                    </div>
+                                    <h3 class="title">Web Development</h3>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada
+                                        tellus lorem, et condimentum neque commodo.Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline col-12">
+                                <div class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="fa fa-rocket"></i>
+                                    </div>
+                                    <h3 class="title">Web Designing</h3>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada
+                                        tellus lorem, et condimentum neque commodo.Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline col-12">
+                                <div class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="fa fa-briefcase"></i>
+                                    </div>
+                                    <h3 class="title">Web Development</h3>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada
+                                        tellus lorem, et condimentum neque commodo.Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

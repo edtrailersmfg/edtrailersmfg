@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="mega_menu_4" name="Mega Menu 4" groups="base.group_user">
+        <section id="menu_design_1" class="sni-block pt48 pb48" data-visible="mega_menu">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb16">
+                        <img alt="image" class="img-fluid d-block mx-auto"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-28.jpg"/>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb16 mega-menu">
+                                <h4 class="menu-heading">Heading</h4>
+                                <ul class="list-unstyled bullets mt8">
+                                    <li>
+                                        <a href="#">
+                                            <span>Link</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>Link</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>Link</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>Link</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb16 mega-menu">
+                                <h4 class="menu-heading">Heading</h4>
+                                <ul class="list-unstyled bullets mt8">
+                                    <li>
+                                        <a href="#">
+                                            <span>Link</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>Link</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>Link</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>Link</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb16 mega-menu">
+                                <h4 class="menu-heading">Heading</h4>
+                                <ul class="list-unstyled bullets mt8">
+                                    <li>
+                                        <a href="#">
+                                            <span>Link</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>Link</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>Link</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>Link</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb16 mega-menu">
+                                <h4 class="menu-heading">Heading</h4>
+                                <ul class="list-unstyled bullets mt8">
+                                    <li>
+                                        <a href="#">
+                                            <span>Link</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>Link</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>Link</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>Link</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </template>
+</odoo>

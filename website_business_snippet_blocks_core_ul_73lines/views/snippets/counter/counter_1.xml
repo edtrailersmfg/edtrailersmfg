@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="counter_1" name="Counter 1">
+        <section class="state_section_hr pt64 pb64" id="state_section_id" data-visible="counters">
+            <div class="container">
+                <div class="row text-center justify-content-sm-center no-gutters state_text">
+                    <div class="col-12 pb48 text-center">
+                        <h2>Counter Design</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="state-col-inner col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="col-12 col-sm-8 col-lg-12 m-auto state_text">
+                            <div class="col-lg-3 pull-left">
+                                <i class="fa fa-500px pe-7s-display1  fa-3x"/>
+                            </div>
+                            <div class="col-lg-9 pull-left text-center">
+                                <div class="count_to animate_onoffset">
+                                    <div class="odometer"
+                                         data-number="1200"
+                                         data-duration="2000"/>
+                                </div>
+                                <h3 class="o_default_snippet_text">Happy
+                                    clients
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="state-col-inner col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="col-12 col-sm-8 col-lg-12 m-auto state_text">
+                            <div class="col-lg-3 pull-left">
+                                <i class="fa fa-500px pe-7s-drop  fa-3x"/>
+                            </div>
+                            <div class="col-lg-9 pull-left text-center">
+                                <div class="count_to animate_onoffset">
+                                    <div class="odometer"
+                                         data-number="1000"
+                                         data-duration="2000"/>
+                                </div>
+                                <h3 class="o_default_snippet_text">Projects
+                                    finished
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="state-col-inner col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="col-12 col-sm-8 col-lg-12  m-auto state_text">
+                            <div class="col-lg-3 pull-left">
+                                <i class="fa fa-500px pe-7s-bicycle  fa-3x"/>
+                            </div>
+                            <div class="col-lg-9 pull-left text-center">
+                                <div class="count_to animate_onoffset">
+                                    <div class="odometer" data-number="560"
+                                         data-duration="2000"/>
+                                </div>
+                                <h3 class="o_default_snippet_text">Support
+                                    Tickets
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="state-col-inner col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="col-12 col-sm-8 col-lg-12 m-auto state_text">
+                            <div class="col-lg-3 pull-left">
+                                <i class="fa fa-500px pe-7s-ball  fa-3x"/>
+                            </div>
+                           <div class="col-lg-9 pull-left text-center">
+                                <div class="count_to animate_onoffset">
+                                    <div class="odometer" data-number="50"
+                                         data-duration="2000"/>
+                                </div>
+                                <h3 class="o_default_snippet_text">
+                                    Members
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+    </template>
+</odoo>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Portfolio 3" id="portfolio_3">
+        <section class=" pt64 pb64" data-visible="portfolios">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Portfolio</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <div class="img-container">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 alt="" class="img-fluid"/>
+                            <div class="overlay">
+                                <h3 class="pt16">Portfolio One</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit.
+                                </p>
+                                <a href="#">Link ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <div class="img-container">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 alt="" class="img-fluid"/>
+                            <div class="overlay">
+                                <h3 class="pt16">Portfolio Two</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit.
+                                </p>
+                                <a href="#">Link ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <div class="img-container">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 alt="" class="img-fluid"/>
+                            <div class="overlay">
+                                <h3 class="pt16">Portfolio Three</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit.
+                                </p>
+                                <a href="#">Link ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <div class="img-container">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 alt="" class="img-fluid"/>
+                            <div class="overlay">
+                                <h3 class="pt16">Portfolio Four</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit.
+                                </p>
+                                <a href="#">Link ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <div class="img-container">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 alt="" class="img-fluid"/>
+                            <div class="overlay">
+                                <h3 class="pt16">Portfolio Five</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit.
+                                </p>
+                                <a href="#">Link ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <div class="img-container">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 alt="" class="img-fluid"/>
+                            <div class="overlay">
+                                <h3 class="pt16">Portfolio Six</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit.
+                                </p>
+                                <a href="#">Link ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <div class="img-container">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 alt="" class="img-fluid"/>
+                            <div class="overlay">
+                                <h3 class="pt16">Portfolio Seven</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit.
+                                </p>
+                                <a href="#">Link ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center pb24">
+                        <div class="img-container">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 alt="" class="img-fluid"/>
+                            <div class="overlay">
+                                <h3 class="pt16">Portfolio Eight</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit.
+                                </p>
+                                <a href="#">Link ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

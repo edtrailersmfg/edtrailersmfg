@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="CTA 7" id="cta_7">
+        <section class="pt64 pb64" data-visible="cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h3>follow us and ask for more:</h3>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb32">
+                        <i class="fa fa-google-plus mr-4 fa-2x"></i>
+                        <i class="fa fa-facebook-official mr-4 fa-2x"></i>
+                        <i class="fa fa-twitter mr-4 fa-2x"></i>
+                        <i class="fa fa-instagram mr-4 fa-2x"></i>
+                        <i class="fa fa-behance mr-4 fa-2x"></i>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

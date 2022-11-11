@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Center Content 17" id="center_content_17">
+        <section class="pt64 pb64" data-visible="center_content">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center ">
+
+                        <h2 class="pt24 pb24">Long headline for two lines
+                            <br/>
+                            for attention and evolving
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum est in tortor
+                            congue suscipit. Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.Suspendisse
+                            potenti. Aliquam finibus pharetra tellus at egestas. Aliquam finibus pharetra tellus at
+                            egestas.Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.
+                        </p>
+                         <a href="#" class="btn btn-primary rounded-0 mt16 mb16">Action</a>
+                        <div>
+                         <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-44.jpg" alt="img2" class="img-fluid pt16 pb8"/>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

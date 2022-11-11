@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="pricing_20" name="Pricing20">
+        <section class="pricing_3 pt64 pb64 bg-200 oe_custom_bg"
+                 id="bs_price_table3" data-visible="pricing">
+            <div class="">
+                <div class="col-12 col-sm-12 col-lg-12 col-md-12 text-center pb48">
+                    <div class="price-heading clearfix">
+                        <h2>Pricing Table</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-wrapper clearfix">
+                <div class="pricing-table">
+                    <h3 class="pricing-title bg-alpha">Basic</h3>
+                    <div class="price">$60
+                        <sup>/ month</sup>
+                    </div>
+                    <!-- Lista de Caracteristicas / Propiedades -->
+                    <ul class="table-list">
+                        <li>Complete documentation</li>
+                        <li>Working materials in PSD
+                        </li>
+                        <li>1 year access to the library</li>
+                        <li>2GB cloud storage
+                            <span class="unlimited bg-alpha">unlimited</span>
+                        </li>
+                    </ul>
+                    <!-- Contratar / Comprar -->
+                    <div class="table-buy">
+                        <p>$60
+                            <sup>/ month</sup>
+                        </p>
+                        <a href="#" class="pricing-action bg-alpha">Compare</a>
+                    </div>
+                </div>
+
+                <div class="pricing-table recommended">
+                    <h3 class="pricing-title bg-epsilon">Premium</h3>
+                    <div class="price">$100
+                        <sup>/ month</sup>
+                    </div>
+                    <!-- Lista de Caracteristicas / Propiedades -->
+                    <ul class="table-list">
+                        <li>Complete documentation</li>
+                        <li>Working materials in PSD
+                        </li>
+                        <li>1 year access to the library</li>
+                        <li>2GB cloud storage
+                            <span class="unlimited bg-epsilon">unlimited</span>
+                        </li>
+                    </ul>
+                    <!-- Contratar / Comprar -->
+                    <div class="table-buy">
+                        <p>$100
+                            <sup>/ month</sup>
+                        </p>
+                        <a href="#" class="pricing-action bg-epsilon">Compare
+                        </a>
+                    </div>
+                </div>
+
+                <div class="pricing-table">
+                    <h3 class="pricing-title bg-alpha">Ultimate</h3>
+                    <div class="price">$200
+                        <sup>/ month</sup>
+                    </div>
+                    <!-- Lista de Caracteristicas / Propiedades -->
+                    <ul class="table-list">
+                        <li>Complete documentation</li>
+                        <li>Working materials in PSD
+                        </li>
+                        <li>1 year access to the library</li>
+                        <li>2GB cloud storage
+                            <span class="unlimited bg-alpha">unlimited</span>
+                        </li>
+                    </ul>
+                    <!-- Contratar / Comprar -->
+                    <div class="table-buy">
+                        <p>$200
+                            <sup>/ month</sup>
+                        </p>
+                        <a href="#" class="pricing-action bg-alpha">Compare</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </template>
+</odoo>

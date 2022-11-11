@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="blank_grid_snippet_7" name="Grid 1 + 1 + 1 + 1 ...">
+        <section class="bg-200" data-visible="grid_structure">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-1 mh100">
+                        <div class="oe_structure oe_empty">
+                            <h3 class="text-center">1</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-1 mh100">
+                        <div class="oe_structure oe_empty">
+                            <h3 class="text-center">1</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-1 mh100">
+                        <div class="oe_structure oe_empty">
+                            <h3 class="text-center">1</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-1 mh100">
+                        <div class="oe_structure oe_empty">
+                           <h3 class="text-center">1</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-1 mh100">
+                        <div class="oe_structure oe_empty">
+                            <h3 class="text-center">1</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-1 mh100">
+                        <div class="oe_structure oe_empty">
+                           <h3 class="text-center">1</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-1 mh100">
+                        <div class="oe_structure oe_empty">
+                            <h3 class="text-center">1</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-1 mh100">
+                        <div class="oe_structure oe_empty">
+                            <h3 class="text-center">1</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-1 mh100">
+                        <div class="oe_structure oe_empty">
+                           <h3 class="text-center">1</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-1 mh100">
+                        <div class="oe_structure oe_empty">
+                            <h3 class="text-center">1</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-1 mh100">
+                        <div class="oe_structure oe_empty">
+                           <h3 class="text-center">1</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-1 mh100">
+                        <div class="oe_structure oe_empty">
+                           <h3 class="text-center">1</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

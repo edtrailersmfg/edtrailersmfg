@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+<div t-name="website_snippet_boxed_ul_73lines.progress_bar" class="modal">
+    <div class="modal-dialog">
+        <div id="progress_bar" class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Progress Bar States</h3>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            </div>
+
+            <form class="modal-body form-horizontal" role="form">
+                <div class="form-group mb0">
+                    <label for="media_block_src" class="col-sm-3 control-label">Progress</label>
+                    <div class="col-sm-9">
+                        <input id="number" type="number" class="form-control progress1" name="src"></input>
+                    </div>
+                     <hr/>
+                </div>
+                <div class="form-group mb0">
+                    <label for="media_block_src" class="col-sm-3 control-label">Active Color</label>
+                    <div class="col-sm-3">
+                        <input type="color" name="color" class="color_active form-control"  value="#333" />
+                    </div>
+                     <hr/>
+                </div>
+                <div class="form-group mb0">
+                    <label for="media_block_src" class="col-sm-3 control-label">Nonactive Color</label>
+                    <div class="col-sm-3">
+                        <input type="color" name="color" class="color_nonactive form-control"  value="#ECF0F1" />
+                    </div>
+                     <hr/>
+                </div>
+            </form><!-- modal-body -->
+
+            <div class="modal-footer">
+                <button id="cancel" data-dismiss="modal" class="btn btn-primary">Cancel</button>
+                <button id="sub_data" data-dismiss="modal" class="btn btn-danger">Apply</button>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- / .modal -->
+
+</templates>

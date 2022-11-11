@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="ecommerce_block_13" name="Ecommerce BLock 13">
+        <section class="pt64 pb64" id="ecommerce_block_13" data-visible="ecommerce_blocks">
+            <div class="container page-builder-ltr">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="ttbannerblock layout2 style1">
+                            <div class="ttbanner1 ttbanner">
+                                <div class="ttbanner-img">
+                                    <a href="#">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                             class="img-fluid"/>
+                                    </a>
+                                    <span class="hover1 hover"></span>
+                                    <span class="hover2 hover"></span>
+                                    <span class="hover3 hover"></span>
+                                    <span class="hover4 hover"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="ttbannerblock layout2 style1">
+                            <div class="ttbanner1 ttbanner">
+                                <div class="ttbanner-img editor_enable">
+                                    <a href="#">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                             class="img-fluid"/>
+                                    </a>
+                                    <span class="hover1 hover"></span>
+                                    <span class="hover2 hover"></span>
+                                    <span class="hover3 hover"></span>
+                                    <span class="hover4 hover"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

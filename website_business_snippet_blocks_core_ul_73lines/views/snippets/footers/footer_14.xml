@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Footer 14" id="footer_14">
+        <section class="pt64 pb32" id="footer_14"
+                 style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-10.jpg&quot;);
+    background-repeat: no-repeat;
+    background-size: cover;" data-visible="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 pb32">
+                        <h5 class="text-uppercase">GET IN TOUCH WITH US</h5>
+                        <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
+                            tempor,
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-5 d-flex">
+                        <div class="media">
+                            <i class="fa fa-map-marker fa-2x mt-2"></i>
+                            <div class="media-body">
+                                <address class="icon_style px-3">Address:
+                                    <span t-field="res_company.street"/>
+                                    <span t-field="res_company.city"/>
+                                    <span t-field="res_company.state_id.name"/>
+                                    <span t-field="res_company.zip"/>
+                                    <span t-field="res_company.country_id.name"/>
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-5 d-flex">
+                        <div class="media">
+                            <i class="fa fa-mobile fa-2x"></i>
+                            <div class="media-body">
+                                <p class="icon_style px-2">Mobile:
+                                    <span t-field="res_company.phone"/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-5 d-flex">
+                        <div class="media">
+                            <i class="fa fa-envelope-o fa-2x"></i>
+                            <div class="media-body">
+                                <p class="icon_style px-2">E-mail:
+                                    <span t-field="res_company.email"/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-5 d-flex">
+                        <div class="media">
+                            <i class="fa fa-phone fa-2x"></i>
+                            <div class="media-body">
+                                <p class="icon_style px-2">Phone:
+                                    <span t-field="res_company.phone"/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 pt32">
+                        <a t-att-href="res_company.social_facebook" class="text-decoration-none" target="_blank">
+                            <i class="fa fa-facebook fa-2x p-2"></i>
+                        </a>
+                        <a href="#" class="text-decoration-none" target="_blank">
+                            <i class="fa fa-google-plus fa-2x p-2"></i>
+                        </a>
+                        <a t-att-href="res_company.social_twitter" class="text-decoration-none" target="_blank">
+                            <i class="fa fa-twitter fa-2x p-2"></i>
+                        </a>
+                        <a t-att-href="res_company.social_linkedin" class="text-decoration-none" target="_blank">
+                            <i class="fa fa-linkedin fa-2x p-2"></i>
+                        </a>
+                        <a href="#" class="text-decoration-none" target="_blank">
+                            <i class="fa fa-dribbble fa-2x p-2"></i>
+                        </a>
+                        <a href="#" class="text-decoration-none" target="_blank">
+                            <i class="fa fa-behance fa-2x p-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light pt32 pb32">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <ul class="nav justify-content-center">
+                            <li>
+                                <a href="#" class="text-decoration-none px-3" target="_blank">HOME</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none px-3" target="_blank">ABOUT</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none px-3" target="_blank">SERVICES</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none px-3" target="_blank">WORKS</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none px-3" target="_blank">PRICING</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none px-3" target="_blank">CLIENTS</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none px-3" target="_blank">BLOG</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none px-3" target="_blank">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none px-3" target="_blank">TERM OF USE</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none px-3" target="_blank">PRIVACY POLICY</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-decoration-none" target="_blank">CONTACT</a>
+                            </li>
+                        </ul>
+                        <div class="pt16 pb16">
+                            Copyright &amp;copy;
+                            <span t-field="res_company.name">Company name
+                            </span>
+                        </div>
+                        <div>
+                            Responsive Odoo theme,
+                            <span>
+                                Made with
+                                <i class="fa fa-heart"/>
+                                by
+                                <strong>&lt; 73Lines &gt;
+                                </strong>
+                            </span>
+                        </div>
+<!--                        <div>-->
+<!--                            <t t-call="website.language_selector"/>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

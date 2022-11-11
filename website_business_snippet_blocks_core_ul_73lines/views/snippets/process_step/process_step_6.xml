@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Process Step 6" id="process_step_6">
+        <section class="pt64 pb64" id="process_six" data-visible="process_steps">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Working Process</h2>
+                        <p class="col-lg-6 offset-lg-3">Lorem Ipsum is simply dummy text of the printing
+                            and typesetting industry
+                            been the industry's standard dummy text
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center mb16">
+
+                        <p class=" text-300 number_trasperant display-1">1</p>
+                        <h3 class="content">Collect Idea</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry been
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center   mb16">
+                        <p class=" text-300 number_trasperant display-1">2</p>
+                        <h3 class="content">Create Prototype</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry been
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center   mb16">
+                        <p class="text-300 number_trasperant display-1">3</p>
+                        <h3 class="content">Launch Product</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry been
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

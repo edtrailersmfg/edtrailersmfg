@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Center Content 7" id="center_content_7">
+        <section class="pt64 pb64" data-visible="center_content">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <p>Tagline</p>
+                        <h2 class="font-weight-bold pt24 pb24">Long headline to turn your<br/> visitors into users
+                        </h2>
+                        <a href="#" class="btn btn-primary rounded-0 ">Action</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

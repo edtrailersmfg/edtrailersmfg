@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<templates id="template" xml:space="preserve">
+
+    <!-- Hide the original Font Awesome Tab -->
+    <t t-extend="web_editor.dialog.media">
+        <t t-jquery="li:nth-child(3)" t-operation="replace"></t>
+        <t t-jquery="#editor-media-icon" t-operation="replace"></t>
+    </t>
+
+    <!-- All Icons Dialog -->
+    <div t-name="icon_fonts.dialog.all-fonts">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item"><a role="tab" href="#editor-fa-icons" data-toggle="tab" class="nav-link active show">Font Awesome</a></li>
+            <li class="nav-item"><a role="tab" href="#editor-pe-icons" data-toggle="tab" class="nav-link">Stroke</a></li>
+            <li class="nav-item"><a role="tab" href="#editor-emo-icons" data-toggle="tab" class="nav-link">Fontelico</a></li>
+            <li class="nav-item"><a role="tab" href="#editor-ti-icons" data-toggle="tab" class="nav-link">Tabler</a></li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active show" id="editor-fa-icons"/>
+            <div role="tabpanel" class="tab-pane fade" id="editor-pe-icons"/>
+            <div role="tabpanel" class="tab-pane fade" id="editor-emo-icons"/>
+            <div role="tabpanel" class="tab-pane fade" id="editor-ti-icons"/>
+        </div>
+    </div>
+
+    <!-- fa-Icons choosing part of the All Icons Dialog -->
+    <t t-name="icon_fonts.dialog.fa-icons">
+        <div class="fa-icons-icons">
+            <t t-call="icon_fonts.dialog.fa-icons.icons">
+                <t t-set="iconsFaParser" t-value="widget.iconsFaParser"/>
+            </t>
+        </div>
+    </t>
+    <t t-name="icon_fonts.dialog.fa-icons.icons">
+        <t t-as="data" t-foreach="iconsFaParser">
+            <span t-as="cssData" t-att-data-id="cssData[2]"
+                  t-att-title="cssData[3].join(', ')"
+                  t-attf-class="#{data.base} all-font-icons-icon #{cssData[2]}"
+                  t-attf-data-alias=",#{cssData[3]},"
+                  t-foreach="data.cssData"/>
+        </t>
+    </t>
+
+    <!-- pe-Icons choosing part of the All Icons Dialog -->
+    <t t-name="icon_fonts.dialog.pe-icons">
+        <div class="pe-icons-icons">
+            <t t-call="icon_fonts.dialog.pe-icons.icons">
+                <t t-set="iconsPeParser" t-value="widget.iconsPeParser"/>
+            </t>
+        </div>
+    </t>
+    <t t-name="icon_fonts.dialog.pe-icons.icons">
+        <t t-as="data" t-foreach="iconsPeParser">
+            <span t-as="cssData" t-att-data-id="cssData[2]"
+                  t-att-title="cssData[3].join(', ')"
+                  t-attf-class="#{data.base} all-font-icons-icon #{cssData[2]}"
+                  t-attf-data-alias=",#{cssData[3]},"
+                  t-foreach="data.cssData"/>
+        </t>
+    </t>
+
+    <!-- emo-Icons choosing part of the All Icons Dialog -->
+    <t t-name="icon_fonts.dialog.emo-icons">
+        <div class="emo-icons-icons">
+            <t t-call="icon_fonts.dialog.emo-icons.icons">
+                <t t-set="iconsEmoParser" t-value="widget.iconsEmoParser"/>
+            </t>
+        </div>
+    </t>
+    <t t-name="icon_fonts.dialog.emo-icons.icons">
+        <t t-as="data" t-foreach="iconsEmoParser">
+            <span t-as="cssData" t-att-data-id="cssData[2]"
+                  t-att-title="cssData[3].join(', ')"
+                  t-attf-class="#{data.base} all-font-icons-icon #{cssData[2]}"
+                  t-attf-data-alias=",#{cssData[3]},"
+                  t-foreach="data.cssData"/>
+        </t>
+    </t>
+
+    <!-- -Icons choosing part of the All Icons Dialog -->
+    <t t-name="icon_fonts.dialog.ti-icons">
+        <div class="ti-icons-icons">
+            <t t-call="icon_fonts.dialog.ti-icons.icons">
+                <t t-set="iconsTiParser" t-value="widget.iconsTiParser"/>
+            </t>
+        </div>
+    </t>
+    <t t-name="icon_fonts.dialog.ti-icons.icons">
+        <t t-as="data" t-foreach="iconsTiParser">
+            <span t-as="cssData" t-att-data-id="cssData[2]"
+                  t-att-title="cssData[3].join(', ')"
+                  t-attf-class="#{data.base} all-font-icons-icon #{cssData[2]}"
+                  t-attf-data-alias=",#{cssData[3]},"
+                  t-foreach="data.cssData"/>
+        </t>
+    </t>
+
+</templates>

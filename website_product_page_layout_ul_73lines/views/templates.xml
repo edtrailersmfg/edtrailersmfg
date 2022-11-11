@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Part of Odoo Module Developed by 73lines See LICENSE file for full copyright 
+	and licensing details. -->
+<odoo>
+
+    <!-- Give Space besides Add to Cart button -->
+    <template id="product_side_block" inherit_id="website_sale.product"
+              name="Product Side Block" active="False" customize_show="True">
+        <xpath expr="//div[hasclass('col-md-6')]" position="attributes">
+            <attribute name="class">col-sm-5</attribute>
+        </xpath>
+        <xpath expr="//div[@id='product_details']" position="attributes">
+            <attribute name="class">col-sm-5 col-lg-3 col-lg-offset-1
+            </attribute>
+        </xpath>
+        <xpath expr="//section[@id='product_detail']/div[2]" position="inside">
+            <div class="col-sm-2 col-lg-3 oe_structure">
+                <h4>Put Your Content Here Like Images,Carousel,Ecommerce Terms
+                    etc...
+                </h4>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Remove Default Product Description & Added again with Some Style :D -->
+    <template id="product_description_new_style"
+              inherit_id="website_sale.product"
+              name="Product Info Tabs">
+        <xpath expr="//section[@id='product_detail']" position="inside">
+            <div id="product_description_reviews" class="mt32 ul_product_info_tab">
+                <ul class="nav nav-tabs">
+                </ul>
+                <div class="tab-content border-top-0">
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Remove Default Product Discussion & Rating -->
+    <template id="website_sale.product_comment"
+              inherit_id="website_sale.product"
+              active="False" customize_show="False"
+              name="Discussion and Rating">
+    </template>
+
+    <template id="product_comment_new"
+              inherit_id="website_product_page_layout_ul_73lines.product_description_new_style"
+              active="False" customize_show="True"
+              name="Discussion and Rating">
+        <xpath expr="//ul[hasclass('nav-tabs')]" position="inside">
+            <li id="li-comment">
+                <a class="nav-link" href="#full-comment" data-toggle="tab">
+                    <strong>Discussion and Rating</strong>
+                </a>
+            </li>
+        </xpath>
+        <xpath expr="//div[hasclass('tab-content')]" position="inside">
+            <div class="tab-pane fade" id="full-comment">
+                <div class="section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1 pt32 pb32">
+                                <div class="text-muted">
+                                    <h5>
+                                        <i class="fa fa-comment-o"/>
+                                        <a id="comments">
+                                            <t t-if="len(product.website_message_ids) &lt;= 1">
+                                                <t t-esc="len(product.website_message_ids)"/>
+                                                comment
+                                            </t>
+                                            <t t-if="len(product.website_message_ids) > 1">
+                                                <t t-esc="len(product.website_message_ids)"/>
+                                                comments
+                                            </t>
+                                        </a>
+                                    </h5>
+                                </div>
+                                <t t-call="portal.message_thread">
+                                    <t t-set="object" t-value="product"/>
+                                    <t t-set="display_rating" t-value="True"/>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="product_rating_star" inherit_id="website_sale.product">
+        <xpath expr="//h1[contains(@t-field, 'product.name')]" position="after">
+            <t t-if="is_view_active('website_product_page_layout_ul_73lines.product_comment_new')">
+                <a href="#o_product_page_reviews" class="o_product_page_reviews_link text-decoration-none">
+                    <t t-call="portal_rating.rating_widget_stars_static">
+                        <t t-set="rating_avg" t-value="product.rating_avg"/>
+                        <t t-set="trans_text_plural">%s reviews</t>
+                        <t t-set="trans_text_singular">%s review</t>
+                        <t t-set="rating_count"
+                           t-value="(trans_text_plural if product.rating_count > 1 else trans_text_singular) % product.rating_count"/>
+                    </t>
+                </a>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Add Product Documents Tab -->
+    <template id="ul_product_document_tab"
+              inherit_id="website_product_page_layout_ul_73lines.product_description_new_style"
+              active="False" customize_show="True"
+              name="Product Document">
+        <xpath expr="//ul[hasclass('nav-tabs')]" position="inside">
+            <t t-if="attachments">
+                <li id="li-product-attachment">
+                    <a class="nav-link" href="#product-attachment" data-toggle="tab">
+                        <strong>Document</strong>
+                    </a>
+                </li>
+            </t>
+        </xpath>
+        <xpath expr="//div[hasclass('tab-content')]" position="inside">
+            <t t-if="attachments">
+                <div class="tab-pane fade" id="product-attachment">
+                    <div class="section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-12 pt32 pb32">
+                                    <h3>
+                                        Product Attachments
+                                    </h3>
+                                </div>
+                                <t t-foreach="attachments" t-as="attachment">
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div class="border p-2 mb16">
+                                            <a t-att-href="'/attachment/download?attachment_id=%i' % attachment.id"
+                                               class="text-dark media align-items-center" t-att-title="attachment.name">
+                                                <div class='oe_attachment_embedded o_image'
+                                                     t-att-data-mimetype="attachment.mimetype"/>
+                                                <div class="oe_attachment_name ml-2 media-body"
+                                                     style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+                                                    <t t-esc="attachment.name.split('.')[0].capitalize().replace('_',' ').replace('-',' ') if attachment.name else ''"/>
+                                                </div>
+                                                <span class="fa fa-download ml-2"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Add Product Description Tab -->
+    <template id="ul_product_description_tab"
+              inherit_id="website_product_page_layout_ul_73lines.product_description_new_style"
+              active="True" customize_show="True"
+              name="Product Description">
+        <xpath expr="//div[@t-field='product.website_description']"
+               position="replace"></xpath>
+        <xpath expr="//div[@id='product_details']" position="attributes">
+            <attribute name="data-name">product_details</attribute>
+        </xpath>
+        <xpath expr="//ul[hasclass('nav-tabs')]" position="inside">
+            <li class="nav-item" id="li-full-desc">
+                <a class="nav-link" href="#full-desc"
+                   data-toggle="tab">
+                    <strong>Description</strong>
+                </a>
+            </li>
+        </xpath>
+        <xpath expr="//div[hasclass('tab-content')]" position="inside">
+            <div class="tab-pane fade in" id="full-desc">
+                <div itemprop="description"
+                     t-field="product.website_description"
+                     class="oe_structure pt16 px-4"
+                     id="product_full_description"/>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Add Product Specification Tab -->
+    <template id="ul_product_specification_tab"
+              inherit_id="website_product_page_layout_ul_73lines.product_description_new_style"
+              active="False" customize_show="True"
+              name="Product Specification">
+        <xpath expr="//ul[hasclass('nav-tabs')]" position="inside">
+            <t t-if="product.attribute_line_ids">
+                <li role="presentation" class="nav-item"
+                    id="product_specification_tab">
+                    <a class="nav-link" href="#product-additional-info"
+                       aria-controls="full" role="tab"
+                       data-toggle="tab" aria-expanded="true">
+                        <strong>Specifications</strong>
+                    </a>
+                </li>
+            </t>
+        </xpath>
+        <xpath expr="//div[hasclass('tab-content')]" position="inside">
+            <t t-if="product.attribute_line_ids">
+                <div class="tab-pane fade" id="product-additional-info">
+                    <div id="product_attribute_details"
+                         class="pt32 pb32">
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="mb32">Specifications</h3>
+                                        <t t-call="website_sale_comparison.add_to_compare_button"/>
+                                    </div>
+                                </tr>
+                                <tr t-foreach="product.attribute_line_ids"
+                                    t-as="pfl">
+                                    <td>
+                                        <strong>
+                                            <p t-esc="pfl.attribute_id.name"
+                                               style="margin: 0 0 0px;"/>
+                                        </strong>
+                                    </td>
+                                    <td>
+                                        <p style="margin: 0 0 0px;">
+                                            <t t-set="i" t-value="0"/>
+                                            <t t-foreach="pfl.value_ids"
+                                               t-as="pfv">
+                                                <t t-esc="pfv.name"/>
+                                                <span t-if="i != len(pfl.value_ids)-1">
+                                                    ,
+                                                </span>
+                                                <t t-set="i"
+                                                   t-value="i+1"/>
+                                            </t>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Add Product Extra Info Tab -->
+    <template id="ul_product_extra_info"
+              inherit_id="website_product_page_layout_ul_73lines.product_description_new_style"
+              active="False" customize_show="True"
+              name="Product Extra Info">
+        <xpath expr="//ul[hasclass('nav-tabs')]" position="inside">
+            <t t-if="product.extra_info">
+                <li id="li-product-extra-info">
+                    <a class="nav-link" href="#extra-info" data-toggle="tab">
+                        <strong>Extra Info</strong>
+                    </a>
+                </li>
+            </t>
+        </xpath>
+        <xpath expr="//div[hasclass('tab-content')]" position="inside">
+            <t t-if="product.extra_info">
+                <div class="tab-pane fade" id="extra-info">
+                    <div class="section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-12 pt32 pb32">
+                                    <div t-field="product.extra_info" class="oe_structure oe_empty"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Add Product Size Chart Tab -->
+    <template id="ul_product_size_chart_tab"
+              inherit_id="website_product_page_layout_ul_73lines.product_description_new_style"
+              active="False" customize_show="True"
+              name="Product Size Chart">
+        <xpath expr="//ul[hasclass('nav-tabs')]" position="inside">
+            <t t-if="product.size_chart_ids">
+                <li role="presentation" class="nav-item"
+                    id="product_size_chart_tab">
+                    <a class="nav-link" href="#product-size-info"
+                       aria-controls="full" role="tab"
+                       data-toggle="tab" aria-expanded="true">
+                        <strong>Size Chart</strong>
+                    </a>
+                </li>
+            </t>
+        </xpath>
+        <xpath expr="//div[hasclass('tab-content')]" position="inside">
+            <t t-if="product.size_chart_ids">
+                <div class="tab-pane fade" id="product-size-info">
+                    <div id="product_size_attribute_details"
+                         class="pt32 pb32">
+                        <t t-foreach="product.size_chart_ids" t-as="size_chart">
+                            <div class="row">
+                                <div class="col-12 mb32 mt32 text-center">
+                                    <h3 t-esc="size_chart.name"></h3>
+                                    <hr style="width:100px; border-width: 2px;"></hr>
+                                </div>
+                                <div class="col-auto" t-if="size_chart.attribute_line">
+                                    <table class="table table-responsive">
+                                        <tbody>
+                                            <tr class="bg-100">
+                                                <th t-foreach="size_chart.attribute_line"
+                                                    t-as="attr_line">
+                                                    <p t-esc="attr_line.name"
+                                                       style="margin: 0 0 0px;"/>
+                                                </th>
+                                            </tr>
+                                            <tr t-if="size_chart.attribute_line"
+                                                t-foreach="range(0, len(size_chart.attribute_line[0].size_value_ids))"
+                                                t-as="att">
+                                                <t t-foreach="size_chart.attribute_line" t-as="line">
+                                                    <td>
+                                                        <t t-if="line.size_value_ids[att]"
+                                                           t-esc="line.size_value_ids[att].name"/>
+                                                    </td>
+                                                </t>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-12 col-md" t-if="size_chart.description">
+                                    <t t-esc="size_chart.description"/>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

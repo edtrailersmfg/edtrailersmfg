@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Ecommerce Block 4" id="ecommerce_block_4">
+        <section class="pt64 pb64" id="ecommerce_block_1" data-visible="ecommerce_blocks">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-4 col-sm-12">
+                        <a href="#">
+                            <img class="img-fluid d-block mx-auto mb8 mt8"
+                                 src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-370x500.png"
+                                 data-original-title="" title="" aria-describedby="tooltip867057"/>
+                        </a>
+                        <div class="col-12 img-content px-5">
+                            <h2>Amazing Collection</h2>
+                            <a href="#"
+                               class="mt8 mb8 o_default_snippet_text"
+                               contenteditable="true">Shop Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 col-sm-12">
+                        <div class="row">
+                            <div class="col-12 col-md-12 col-lg-12 col-sm-12">
+                                <a href="#">
+                                    <img class="d-block img-fluid  mx-auto mb8 mt8"
+                                         src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-370x240.png"
+                                         data-original-title="" title="" aria-describedby="tooltip867057"/>
+                                </a>
+                                <div class="col-12 img-content px-5">
+                                    <h2>Huge Sale</h2>
+                                    <h5>Upto 50% Off</h5>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-12 col-sm-12">
+                                <img class="img-fluid d-block mx-auto mb8 mt8"
+                                     src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-370x240.png"
+                                     data-original-title="" title="" aria-describedby="tooltip867057"/>
+                                <div class="col-12 img-content px-5">
+                                    <h2>Mega Sale</h2>
+                                    <h5 class="o_default_snippet_text">$9.99</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 col-sm-12 mb16">
+                        <a href="#">
+                            <img class="img-fluid d-block mx-auto mb8 mt8"
+                                 src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-370x500.png"
+                                 data-original-title="" title="" aria-describedby="tooltip867057"/>
+                        </a>
+                        <div class="col-12 img-content px-5">
+                            <h2>Deals + Promos</h2>
+                            <h5>Now Starting at $99</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

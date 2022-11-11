@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="About 3" id="about_3">
+        <section class="pt64 pb64" data-visible="aboutus">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <h2 class="font-weight-bold">I Make <br/> Wonderful Things</h2>
+                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Pellentesque fermentum est in tortor congue suscipit. Suspendisse potenti. Aliquam finibus
+                            pharetra tellus at
+                            egestas.Suspendisse otenti. Aliquam finibus pharetra tellus at egestas.Lorem ipsum dolor sit
+                            amet,
+                            consectetur adipiscing elit.
+                        </p>
+                        <div class="pt16 pb32">
+                            <i class="fa fa-instagram rounded-circle px-2"></i>
+                            <i class="fa fa-twitter rounded-circle px-2"></i>
+                            <i class="fa fa-facebook rounded-circle  px-2"></i>
+                            <i class="fa fa-pinterest rounded-circle px-2"></i>
+                            <i class="fa fa-google-plus rounded-circle px-2"></i>
+
+                        </div>
+                        <a href="#" class="btn btn-danger btn-lg rounded-circle px-5">Portfolio</a>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="row pt24">
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-63.png" alt="img3" class="img-fluid pt8 pb8"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-63.png" alt="img4" class="img-fluid pt8 pb8"/>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-63.png" alt="img7" class="img-fluid pt8 pb8"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

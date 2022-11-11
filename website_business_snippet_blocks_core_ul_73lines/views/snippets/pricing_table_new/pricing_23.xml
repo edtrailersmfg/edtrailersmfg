@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="pricing_23" name="Pricing23">
+        <section id="bs_price_table_6" class="pt64 pb64" data-visible="pricing">
+            <div class="container table-padding">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-12 col-md-12 text-center pb48">
+                        <div class="table-title">
+                            <h2>Pricing Table</h2>
+                            <p class="mt32 mb32">Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Aliquid in ullam labore optio
+                                temporibus ex recusandae minima et ipsa
+                                aliquam!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="single-table-pricing bg-white">
+                            <h3>Starter</h3>
+                            <div class="pricing-icon">
+                                <i class="fa fa-bullhorn"/>
+                            </div>
+                            <div class="pricing-list">
+                                <ul>
+                                    <li>1GB web Space</li>
+                                    <li>5+ Mysql Database</li>
+                                    <li class="off">Managed CMS</li>
+                                    <li>Unlimited Bandwidth</li>
+                                    <li>Other features</li>
+                                </ul>
+                            </div>
+                            <h3 class="pricing-count">$30/mo</h3>
+                            <a href="" class="bordered-btn">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="single-table-pricing bg-white">
+                            <h3>Personal</h3>
+                            <div class="pricing-icon">
+                                <i class="fa fa-user-secret"/>
+                            </div>
+                            <div class="pricing-list">
+                                <ul>
+                                    <li>2GB web Space</li>
+                                    <li>10+ Mysql Database</li>
+                                    <li class="off">Managed CMS</li>
+                                    <li>Unlimited Bandwidth</li>
+                                    <li>Other features</li>
+                                </ul>
+                            </div>
+                            <h3 class="pricing-count">$50/mo</h3>
+                            <a href="" class="bordered-btn">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="single-table-pricing bg-white">
+                            <h3>Premium</h3>
+                            <div class="pricing-icon">
+                                <i class="fa fa-star"/>
+                            </div>
+                            <div class="pricing-list">
+                                <ul>
+                                    <li>5GB web Space</li>
+                                    <li>15+ Mysql Database</li>
+                                    <li>Managed CMS</li>
+                                    <li>Unlimited Bandwidth</li>
+                                    <li>Other features</li>
+                                </ul>
+                            </div>
+                            <h3 class="pricing-count">$65/mo</h3>
+                            <a href="" class="bordered-btn">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="single-table-pricing bg-white">
+                            <h3>Business</h3>
+                            <div class="pricing-icon">
+                                <i class="fa fa-rocket"/>
+                            </div>
+                            <div class="pricing-list">
+                                <ul>
+                                    <li>10GB web Space</li>
+                                    <li>20+ Mysql Database</li>
+                                    <li>Managed CMS</li>
+                                    <li>Unlimited Bandwidth</li>
+                                    <li>Other features</li>
+                                </ul>
+                            </div>
+                            <h3 class="pricing-count">$75/mo</h3>
+                            <a href="" class="bordered-btn">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

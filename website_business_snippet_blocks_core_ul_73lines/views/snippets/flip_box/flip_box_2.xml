@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Flip Box 2" id="flip_box_2">
+        <section class="pt64 pb64" id="flip_box_2" data-visible="flipbox">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 flip_box mb16">
+                        <div class="row mx-0 flip_box_inner">
+                            <div class="col-12 flip_box_front text-center">
+                                <div class="flip_box_front_area">
+                                    <i class="fa fa-star-o fa-4x"></i>
+                                    <h3 class="mt16 ">Feature One</h3>
+                                </div>
+                            </div>
+                            <div class="col-12 flip_box_back text-center">
+                                <div class="flip_box_back_area text-white">
+                                    <p>Lorem ipsum dolor sit amet cons adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna.
+                                    </p>
+                                    <a href="#" class="text-white border-bottom font-weight-bold">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 flip_box mb16">
+                        <div class="row mx-0 flip_box_inner">
+                            <div class="col-12 flip_box_front text-center">
+                                <div class="flip_box_front_area">
+                                    <i class="fa fa-star-o fa-4x"></i>
+                                    <h3 class="mt16 ">Feature Two</h3>
+                                </div>
+                            </div>
+                            <div class="col-12 flip_box_back text-center">
+                                <div class="flip_box_back_area text-white">
+                                    <p>Lorem ipsum dolor sit amet cons adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna.
+                                    </p>
+                                    <a href="#" class="text-white border-bottom font-weight-bold">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 flip_box mb16">
+                        <div class="row mx-0 flip_box_inner">
+                            <div class="col-12 flip_box_front text-center">
+                                <div class="flip_box_front_area">
+                                    <i class="fa fa-star-o fa-4x"></i>
+                                    <h3 class="mt16 ">Feature Three</h3>
+                                </div>
+                            </div>
+                            <div class="col-12 flip_box_back text-center">
+                                <div class="flip_box_back_area text-white">
+                                    <p>Lorem ipsum dolor sit amet cons adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna.
+                                    </p>
+                                    <a href="#" class="text-white border-bottom font-weight-bold">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 flip_box mb16">
+                        <div class="row mx-0 flip_box_inner">
+                            <div class="col-12 flip_box_front text-center">
+                                <div class="flip_box_front_area">
+                                    <i class="fa fa-star-o fa-4x"></i>
+                                    <h3 class="mt16 ">Feature Four</h3>
+                                </div>
+                            </div>
+                            <div class="col-12 flip_box_back text-center">
+                                <div class="flip_box_back_area text-white">
+                                    <p>Lorem ipsum dolor sit amet cons adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna.
+                                    </p>
+                                    <a href="#" class="text-white border-bottom font-weight-bold">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

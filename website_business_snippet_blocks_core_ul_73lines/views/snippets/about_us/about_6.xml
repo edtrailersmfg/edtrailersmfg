@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="About 6" id="about_6">
+        <section class="pt64 pb64" id="about_six" data-visible="aboutus">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb32">
+                        <h2 class="font-weight-bold">We Think and Deliver Our<br/>Area of Expertise
+                        </h2>
+                        <h3>We Expect Perfect No Metter You Said</h3>
+                        <p class="text-justify pt16 pb16">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Pellentesque fermentum est in tortor congue suscipit. Suspendisse potenti.lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit.
+                            Pellentesque fermentum est in tortor congue suscipit. Suspendisse potenti.
+                            orem ipsum dolor
+                            sit amet, consectetur adipiscing elit.
+                            Pellentesque fermentum est in tortor congue suscipit. Suspendisse potenti.
+                            orem ipsum dolor
+                            sit amet, consectetur adipiscing elit.
+                            Pellentesque fermentum est in tortor congue suscipit.
+                        </p>
+                        <a href="#" class="btn btn-danger btn-lg rounded-circle px-5">LEARN MORE</a>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-6.png" alt="img16"
+                                     class="img-fluid px-3 pb32"/>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                <div class="media media_object">
+                                    <i class="fa fa-wrench rounded-circle bg-danger mt16"></i>
+                                    <div class="media-body px-2">
+                                        <h5 class="font-weight-bold">
+                                            HIGH PERFORMANCE UI
+                                        </h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt.
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div class="media media_object">
+                                   <i class="fa fa-envelope rounded-circle bg-danger mt16"></i>
+                                    <div class="media-body px-2">
+                                         <h5 class="font-weight-bold">BACK-END AND FRONT-END</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt.
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div class="media media_object">
+                                    <i class="fa fa-send-o rounded-circle bg-danger mt16"></i>
+
+                                    <div class="media-body px-2">
+                                        <h5 class="font-weight-bold">MAXIMUM OPTIMIZATION</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt.
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

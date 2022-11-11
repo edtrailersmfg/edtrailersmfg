@@ -1,0 +1,45 @@
+.contact_us_3 {
+    .contact-page-side-content {
+        background-color: #F2F2F2;
+        padding: 30px;
+    }
+
+    h3.contact-page-title {
+        font-size: 32px;
+        line-height: 32px;
+        color: #363f4d;
+        font-weight: 500;
+        margin-bottom: 25px;
+    }
+
+    .single-contact-block {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .single-contact-block h4 {
+        font-size: 20px;
+        line-height: 27px;
+        font-weight: 500;
+        color: #222222;
+    }
+
+    .single-contact-block p {
+        margin-bottom: 0px;
+        font-size: 15px;
+        line-height: 29px;
+        color: #666666;
+    }
+    .single-contact-block span {
+        margin-bottom: 0px;
+        font-size: 15px;
+        line-height: 29px;
+        color: #666666;
+    }
+    .single-contact-block:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}

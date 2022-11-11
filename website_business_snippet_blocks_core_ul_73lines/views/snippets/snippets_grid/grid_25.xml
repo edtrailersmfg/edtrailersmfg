@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Grid 25" id="grid_25">
+        <section class="pt64 pb32" data-visible="grids">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-12 text-center mb48">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb32">
+                        <h3>Feature One</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the
+                            1500s, when an unknown printer took a galley of
+                            type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb32">
+                        <h3>Feature Two</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the
+                            1500s, when an unknown printer took a galley of
+                            type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb32">
+                        <h3>Feature Three</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the
+                            1500s, when an unknown printer took a galley of
+                            type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb32">
+                        <h3>Feature Four</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the
+                            1500s, when an unknown printer took a galley of
+                            type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="0">
+		<record id="ribbon_one" model="product.ribbon">
+            <field name="html">Ribbon One</field>
+            <field name="html_class">ribbon_style_one bg-danger o_tag_left</field>
+        </record>
+
+        <record id="ribbon_two" model="product.ribbon">
+            <field name="html">Ribbon Two</field>
+            <field name="html_class">ribbon_style_two bg-success o_tag_left</field>
+        </record>
+
+        <record id="ribbon_three" model="product.ribbon">
+            <field name="html">Ribbon Three</field>
+            <field name="html_class">ribbon_style_three bg-primary o_tag_left</field>
+        </record>
+
+        <record id="ribbon_four" model="product.ribbon">
+            <field name="html">Ribbon Four</field>
+            <field name="html_class">ribbon_style_four bg-danger o_tag_left</field>
+        </record>
+
+        <record id="ribbon_five" model="product.ribbon">
+            <field name="html">Ribbon Five</field>
+            <field name="html_class">ribbon_style_five bg-success o_tag_left</field>
+        </record>
+
+        <record id="ribbon_six" model="product.ribbon">
+            <field name="html">Ribbon Six</field>
+            <field name="html_class">ribbon_style_six bg-primary o_tag_left</field>
+        </record>
+
+        <record id="ribbon_seven" model="product.ribbon">
+            <field name="html">Ribbon Seven</field>
+            <field name="html_class">ribbon_style_seven bg-danger o_tag_right</field>
+        </record>
+
+        <record id="ribbon_eight" model="product.ribbon">
+            <field name="html">Ribbon Eight</field>
+            <field name="html_class">ribbon_style_eight bg-success o_tag_left</field>
+        </record>
+
+        <record id="ribbon_nine" model="product.ribbon">
+            <field name="html">Ribbon Nine</field>
+            <field name="html_class">ribbon_style_nine bg-primary o_tag_left</field>
+        </record>
+
+        <record id="ribbon_ten" model="product.ribbon">
+            <field name="html">Ribbon Ten</field>
+            <field name="html_class">ribbon_style_ten bg-danger o_tag_left</field>
+        </record>
+
+	</data>
+</odoo>

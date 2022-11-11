@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Center Content 24" id="center_content_24">
+        <section class="pt64 pb64" data-visible="center_content">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2 class="pb32">Wireframe connects underlying
+                            <br/>
+                            conceptual structure
+                        </h2>
+                        <div>
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-44.jpg"
+                                 alt="image" class="img-fluid pt16 pb8"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

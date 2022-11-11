@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Counter_10" id="counter_10">
+        <section class="pt64 pb64" id="counter_10" style="background-color:#f1f5f8;" data-visible="counters">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb48">
+                        <h2>Counter Design</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="counter-box">
+                            <span class="counter-corner"
+                                  style="border-color:#ff6b6b transparent transparent transparent;"></span>
+                            <h2>10</h2>
+                            <h4>Years</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="counter-box">
+                            <span class="counter-corner"
+                                  style="border-color:#dc90ff transparent transparent transparent;"></span>
+                            <h2>900</h2>
+                            <h4>Coffee Cup</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="counter-box">
+                            <span class="counter-corner"
+                                  style="border-color:#3beec2 transparent transparent transparent;"></span>
+                            <h2>400</h2>
+                            <h4>Clients</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16">
+                        <div class="counter-box">
+                            <span class="counter-corner"
+                                  style="border-color:#f7db88 transparent transparent transparent;"></span>
+                            <h2>700</h2>
+                            <h4>Projects</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

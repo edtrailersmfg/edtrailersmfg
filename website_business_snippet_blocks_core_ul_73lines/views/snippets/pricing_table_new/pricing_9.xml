@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Pricing 9" id="pricing_9">
+        <section class="s_comparisons pt48 pb24" data-visible="pricing">
+            <div class="container">
+                <div class="row s_nb_column_fixed">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Pricing Table</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 s_col_no_bgcolor text-center pt16 pb16" data-name="Box">
+                        <div class="card bg-200">
+                            <div class="card-header  border-0">
+                                <h4 class=" o_default_snippet_text">Beginner</h4>
+                                <p>Lorem ipsum dolor sit amet</p>
+                            </div>
+                            <div class="card-body text-center">
+                                <h2 class="card-title">
+                                    <span class="s_comparisons_currency o_default_snippet_text">$</span>
+                                    <span class="s_comparisons_price">
+                                        <b class="o_default_snippet_text">35</b>
+                                    </span>
+                                    <span class="s_comparisons_decimal o_default_snippet_text">.00</span>
+                                </h2>
+                                <h3><small class="o_default_snippet_text">/ month</small></h3>
+                                <p>Lorem ipsum dolor sit amet</p>
+                            </div>
+                            <ul class="list-group list-group-flush border-0">
+                                <li class="list-group-item o_default_snippet_text">Item One</li>
+                                <li class="list-group-item  border-0 o_default_snippet_text">Item Two</li>
+                                <li class="list-group-item  border-0 o_default_snippet_text">Item Three</li>
+                            </ul>
+                            <div class="card-footer  border-0">
+
+                                <a href="/contactus" class="btn btn-secondary btn-block o_default_snippet_text">Order
+                                    now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 s_col_no_bgcolor text-center pt16 pb16" data-name="Box">
+                        <div class="card bg-200">
+                            <div class="card-header  border-0">
+                                <h4 class=" o_default_snippet_text">Beginner</h4>
+                                <p>Lorem ipsum dolor sit amet</p>
+                            </div>
+                            <div class="card-body text-center">
+                                <h2 class="card-title">
+                                    <span class="s_comparisons_currency o_default_snippet_text">$</span>
+                                    <span class="s_comparisons_price">
+                                        <b class="o_default_snippet_text">35</b>
+                                    </span>
+                                    <span class="s_comparisons_decimal o_default_snippet_text">.00</span>
+                                </h2>
+                                <h3><small class="o_default_snippet_text">/ month</small></h3>
+                                <p>Lorem ipsum dolor sit amet</p>
+                            </div>
+                            <ul class="list-group list-group-flush border-0">
+                                <li class="list-group-item o_default_snippet_text">Item One</li>
+                                <li class="list-group-item  border-0 o_default_snippet_text">Item Two</li>
+                                <li class="list-group-item  border-0 o_default_snippet_text">Item Three</li>
+                            </ul>
+                            <div class="card-footer  border-0">
+
+                                <a href="/contactus" class="btn btn-secondary btn-block o_default_snippet_text">Order
+                                    now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 s_col_no_bgcolor text-center pt16 pb16" data-name="Box">
+                        <div class="card bg-200">
+                            <div class="card-header  border-0">
+                                <h4 class=" o_default_snippet_text">Beginner</h4>
+                                <p>Lorem ipsum dolor sit amet</p>
+                            </div>
+                            <div class="card-body text-center">
+                                <h2 class="card-title">
+                                    <span class="s_comparisons_currency o_default_snippet_text">$</span>
+                                    <span class="s_comparisons_price">
+                                        <b class="o_default_snippet_text">35</b>
+                                    </span>
+                                    <span class="s_comparisons_decimal o_default_snippet_text">.00</span>
+                                </h2>
+                               <h3><small class="o_default_snippet_text">/ month</small></h3>
+                                <p>Lorem ipsum dolor sit amet</p>
+                            </div>
+                            <ul class="list-group list-group-flush border-0">
+                                <li class="list-group-item o_default_snippet_text">Item One</li>
+                                <li class="list-group-item  border-0 o_default_snippet_text">Item Two</li>
+                                <li class="list-group-item  border-0 o_default_snippet_text">Item Three</li>
+                            </ul>
+                            <div class="card-footer  border-0">
+
+                                <a href="/contactus" class="btn btn-secondary btn-block o_default_snippet_text">Order
+                                    now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

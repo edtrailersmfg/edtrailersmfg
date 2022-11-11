@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template name="Progress Bar 10" id="progress_bar_10">
+        <section class="services-square-section pt64 pb64" id="progressbar_ten" data-visible="progressbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-3 col-md-3 pb16">
+                        <div class="chart_skill">
+                            <div class="chart" data-percent="100%" data-color="#212121"
+                                 data-color2="#ebebeb">
+                                <span class="text" style="">100%</span>
+                            </div>
+                            <h5>Section</h5>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-lg-3 col-md-3 pb16">
+                        <div class="chart_skill">
+                            <div class="chart" data-percent="75%" data-color="#212121"
+                                 data-color2="#ebebeb">
+                                <span class="text" style="">75%</span>
+                            </div>
+                            <h5>Section</h5>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-lg-3 col-md-3 pb16">
+                        <div class="chart_skill">
+                            <div class="chart" data-percent="20%" data-color="#212121"
+                                 data-color2="#ebebeb">
+                                <span class="text" style="">20%</span>
+                            </div>
+                            <h5>Section</h5>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-lg-3 col-md-3 pb16">
+                        <div class="chart_skill">
+                            <div class="chart" data-percent="20%" data-color="#212121"
+                                 data-color2="#ebebeb">
+                                <span class="text" style="">20%</span>
+                            </div>
+                            <h5>Section</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

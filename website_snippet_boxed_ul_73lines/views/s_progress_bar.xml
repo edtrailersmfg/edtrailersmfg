@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="s_progress_bar" name="Progress Text Snippet">
+        <section class="progress-bar-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1>We're all working together, that's the secret.</h1>
+                        <span class="divider">
+                            <span class="circle">
+                                <span class="line appeared"></span>
+                            </span>
+                        </span>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.
+                            Excepteur sint occaecat aute irure
+                            dolor in reprehenderit.
+                        </h4>
+                    </div>
+                    <div class="col-md-6 mt32 s_progress_bar_change">
+                        <section id="progress-bar1" class="progress_bars">
+                            <div class="progress_bar">
+                                <div class="progress_title">
+                                    <h4>Section</h4>
+                                </div>
+                                <span class="progress_number"
+                                      contentEditable="False"
+                                      style="opacity: 1;">
+                                    <span class="progress_bar_1">100</span>%
+                                </span>
+                                <div class="progress_content_outer">
+                                    <div data-percentage="100"
+                                         data-active="#000"
+                                         data-nonactive="#ECF0F1"
+                                         class="progress_content"></div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="progress-bar2" class="progress_bars">
+                            <div class="progress_bar">
+                                <div class="progress_title">
+                                    <h4>Section</h4>
+                                </div>
+                                <span class="progress_number"
+                                      contentEditable="False"
+                                      style="opacity: 1;"><span
+                                        class="progress_bar_1">80</span>%
+                                </span>
+                                <div class="progress_content_outer">
+                                    <div data-percentage="80"
+                                         data-active="#000"
+                                         data-nonactive="#ECF0F1"
+                                         class="progress_content"></div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="progress-bar3" class="progress_bars">
+                            <div class="progress_bar">
+                                <div class="progress_title">
+                                    <h4>Section</h4>
+                                </div>
+                                <span class="progress_number"
+                                      contentEditable="False"
+                                      style="opacity: 1;"><span
+                                        class="progress_bar_1">60</span>%
+                                </span>
+                                <div class="progress_content_outer">
+                                    <div data-percentage="60"
+                                         data-active="#000"
+                                         data-nonactive="#ECF0F1"
+                                         class="progress_content"></div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="progress-bar4" class="progress_bars">
+                            <div class="progress_bar">
+                                <div class="progress_title">
+                                    <h4>Section</h4>
+                                </div>
+                                <span class="progress_number"
+                                      contentEditable="False"
+                                      style="opacity: 1;"><span
+                                        class="progress_bar_1">30</span>%
+                                </span>
+                                <div class="progress_content_outer">
+                                    <div data-percentage="50"
+                                         data-active="#000"
+                                         data-nonactive="#ECF0F1"
+                                         class="progress_content"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <!-- Snippet options -->
+    <template id="s_progress_bar_options" inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-js='Blockquote']" position="before">
+            <div data-js='js_progress_bar' data-selector=".progress_bars">
+                    <we-button-group class="o_we_user_value_widget">
+                        <we-title data-original-title="" title="" style="">
+                            Block Settings
+                        </we-title>
+                            <we-selection-items>
+                                <button class="progress_bar btn btn-secondary">
+                                    Settings
+                                </button>
+                            </we-selection-items>
+                    </we-button-group>
+            </div>
+        </xpath>
+    </template>
+</odoo>

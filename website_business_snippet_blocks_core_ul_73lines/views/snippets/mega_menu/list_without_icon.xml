@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="list_without_icon" name="List Without Icon" groups="base.group_user">
+        <section id="list_without_icon" class="pt32 pb32" data-visible="mega_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 mega-menu">
+                        <h4 class="menu-heading">Heading</h4>
+                        <ul class="list-unstyled bullets mt8">
+                            <li>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 mega-menu">
+                        <h4 class="menu-heading">Heading</h4>
+                        <ul class="list-unstyled bullets mt8">
+                            <li>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 mega-menu">
+                        <h4 class="menu-heading">Heading</h4>
+                        <ul class="list-unstyled bullets mt8">
+                            <li>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 mega-menu">
+                        <h4 class="menu-heading">Heading</h4>
+                        <ul class="list-unstyled bullets mt8">
+                            <li>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+    </template>
+</odoo>

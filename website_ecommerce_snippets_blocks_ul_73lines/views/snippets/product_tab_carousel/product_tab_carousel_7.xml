@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="product_tab_carousel_7" name="Product Tab Carousel 7">
+        <section class="s_tabs pt64 pb64" id="product_tab_carousel_7" data-visible="product_tab_carousel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 pb48 text-center">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+                <div class="row s_tabs_main">
+                    <div class="col-md-3 pb16 s_tabs_nav">
+                        <ul class="flex-column nav nav-tabs justify-content-center" role="tablist" id="proTab">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tab1" role="tab">Tab 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tab2" role="tab">Tab 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tab3" role="tab">Tab 3</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="s_tabs_content tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                                <div class="oe_structure oe_empty pt8 pb8"/>
+                            </div>
+                            <div class="tab-pane fade in" id="tab2" role="tabpanel">
+                                <div class="oe_structure oe_empty pt8 pb8"/>
+                            </div>
+                            <div class="tab-pane fade in" id="tab3" role="tabpanel">
+                                <div class="oe_structure oe_empty pt8 pb8"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

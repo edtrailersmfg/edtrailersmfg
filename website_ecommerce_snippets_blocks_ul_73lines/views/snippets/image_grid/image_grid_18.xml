@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Image Grid 18" id="image_grid_18">
+        <section class="pt64 pb64" id="image_grid_18" data-visible="image_grid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb16 px-1">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid18">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-320x320.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid_content">
+                                    <h2>Block Title</h2>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb16 px-1">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid18">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-320x320.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid_content">
+                                    <h2>Block Title</h2>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb16 px-1">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid18">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-320x320.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid_content">
+                                    <h2>Block Title</h2>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb16 px-1">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid18">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-320x320.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid_content">
+                                    <h2>Block Title</h2>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

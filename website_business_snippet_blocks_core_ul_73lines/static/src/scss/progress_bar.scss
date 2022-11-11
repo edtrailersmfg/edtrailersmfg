@@ -1,0 +1,307 @@
+/*---------------------------Progressbar 1 Css Start--------------------------*/
+#progressbar_one{
+.progress_bars .progress_content_outer {
+    height: 4px;
+    display: flex;
+    width: 88%;
+}
+.progress_bars .progress_content {
+    position: relative;
+}
+.progress_bars .progress_number {
+    line-height: unset;
+    top: 15px;
+}
+.progress_bars .progress_title h4 {
+    font-size: 18px;
+    line-height: unset;
+
+}
+@media (min-width: 320px) and (max-width: 768px) {
+.progress_bars .progress_number {
+    top: 5px;
+}
+}
+}
+/*---------------------------Progressbar 1 Css End--------------------------*/
+
+/*---------------------------Progressbar 2 Css Start--------------------------*/
+#progressbar_two{
+.progress_bars .progress_content_outer {
+    display: flex;
+    height: 24px;
+    width: auto;
+}
+.progress_bars .progress_title h4 {
+    margin-bottom: 4px;
+    line-height: unset;
+}
+.progress_bars .progress_content {
+    position: relative;
+}
+.progress_bars .progress_number{
+    position: absolute;
+    right: 45%;
+    top: 4px;
+    color: #ffffff;
+    font-weight: bold;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+.progress_bars .progress_content_outer {
+    width: auto;
+}
+}
+}
+/*---------------------------Progressbar 2 Css End--------------------------*/
+
+/*---------------------------Progressbar 3 Css Start--------------------------*/
+#progressbar_three{
+.progress_bars .progress_content_outer {
+    display: flex;
+    height: 30px;
+}
+.progress_bars .progress_title h4 {
+    margin-bottom: 4px;
+    line-height: unset;
+}
+.progress_bars .progress_content {
+    position: relative;
+}
+.progress_bars .progress_number{
+    background: hsla(0, 0%, 0%, 0.24);
+    color: hsl(0, 0%, 98%);
+    width: 60px;
+    height: 30px;
+    line-height: 32px;
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    font-weight: bold;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+.progress_bars .progress_content_outer {
+    width: auto;
+}
+}
+}
+/*---------------------------Progressbar 3 Css End--------------------------*/
+
+/*---------------------------Progressbar 4 Css Start--------------------------*/
+
+#progressbar_four{
+.progress_bars .progress_title h4 {
+    line-height: unset;
+    margin-bottom: 10px;
+}
+.progress_bars .progress_number {
+    top:unset;
+}
+.progress_bars .progress_content_outer{
+        border-radius: 30px;
+        height: 20px;
+        display: flex;
+}
+.progress_bars .progress_content{
+    border-radius: 30px;
+    position: relative;
+}
+.progress_bars .progress_content:before {
+    content: "";
+    width: 100%;
+    height: 50%;
+    background: rgba(0,0,0,0.3);
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@media (max-width: 1200px) and (min-width: 768px){
+.progress_bars .progress_content_outer {
+    width: 83%;
+}
+}
+@media (max-width: 768px){
+.progress_bars .progress_content_outer {
+    width: 83%;
+}
+}
+}
+/*---------------------------Progressbar 4 Css End--------------------------*/
+
+/*---------------------------Progressbar 5 Css Start--------------------------*/
+
+#progressbar_five{
+.progress_bars .progress_content_outer{
+        border-radius: 30px;
+        height: 20px;
+        width: auto;
+        position: relative;
+        display: flex;
+}
+.progress_bars .progress_title h4 {
+    line-height: unset;
+    margin: 0px 0px 10px 10px;
+}
+.progress_bars .progress_content{
+    border-radius: 30px;
+    position: relative;
+}
+.progress_content_outer .progress-bar-striped {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 30px 30px;
+}
+.progress_border{
+    padding: 5px 80px 5px 10px;
+    border: 5px solid #bebfbf;
+    border-radius: 45px;
+    position: relative;
+}
+.progress_bars .progress_number {
+    font-size: 20px;
+    font-weight: 700;
+    color: #6b7880;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+}
+}
+/*---------------------------Progressbar 5 Css End--------------------------*/
+
+/*---------------------------Progressbar 6 Css Start--------------------------*/
+#progressbar_six{
+.progress_bars .progress_content{
+    overflow: visible;
+    position: relative;
+}
+.progress_bars .progress_title h4 {
+    margin: 0 0 20px;
+    line-height: unset;
+}
+.progress_bars .progress_content_outer {
+    height: 25px;
+    position: relative;
+    display: flex;
+    width: auto;
+}
+.progress_bars .progress_number {
+    position: absolute;
+    right: 0;
+    top: -25px;
+}
+.progress_content_outer .progress-bar-striped {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    animation: progress-bar-stripes 2s linear infinite;
+}
+}
+/*---------------------------Progressbar 6 Css End--------------------------*/
+
+/*---------------------------Progressbar 7 Css Start--------------------------*/
+#progressbar_seven{
+.progress_bars .progress_title h4 {
+    margin: unset;
+    line-height: unset;
+}
+.progress_bars .progress_number {
+    position: relative;
+    top: unset;
+    display: inline-block;
+    float: right;
+    line-height: unset;
+}
+.progress_bars .progress_content_outer {
+    height: 4px;
+    width: auto;
+    display: flex;
+    overflow: visible;
+}
+.progress_bars .progress_content {
+    position: relative;
+    overflow: visible;
+}
+.progress_bars .progress_content:before{
+    content: "";
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    right: 0px;
+    top: 0;
+}
+.progress_bars .progress_content:after{
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: inherit;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    top: -5px;
+}
+}
+/*---------------------------Progressbar 7 Css End--------------------------*/
+
+/*---------------------------Progressbar 8 Css Start--------------------------*/
+#progressbar_eight{
+.progress_bars .progress_content_outer {
+    height: 28px;
+    display: flex;
+}
+.progress_bars .progress_title{
+    position: absolute;
+}
+.progress_bars .progress_title h4{
+    background: hsla(0, 0%, 0%, 0.35);
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    line-height: 28px;
+    padding: 0 20px;
+    color: #ffffff;
+}
+.progress_bars .progress_number{
+    position: absolute;
+    top: 0;
+    line-height: unset;
+}
+.progress_bars .progress_content {
+    position: relative;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+.progress_bars .progress_content_outer {
+    width: auto;
+}
+.progress_bars .progress_number {
+    position: relative;
+    text-align: right;
+}
+}
+}
+/*---------------------------Progressbar 8 Css End--------------------------*/
+
+/*---------------------------Progressbar 9 Css Start--------------------------*/
+#progressbar_nine{
+.progress_bars .progress_content_outer{
+    display: flex;
+    overflow: visible;
+    height: 16px;
+    border-radius: 0 15px 0 15px;
+}
+.progress_bars .progress_content{
+    position: relative;
+    overflow: visible;
+    border-radius: 0 15px 0 15px;
+}
+.progress_bars .progress_number {
+    display: inline-block;
+    top: 0px;
+    position: relative;
+    overflow: visible;
+    margin-left: 16px;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+.progress_bars .progress_content_outer{
+    width: auto;
+}
+}
+}
+/*---------------------------Progressbar 9 Css End--------------------------*/

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="testimonial_16" name="Testimonial 16">
+        <section class="pt64 pb64" id="testimonials_d7" data-visible="testimonials">
+            <div class="container">
+                <div class="row content justify-content-md-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb32">
+                        <h2>Testimonials</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="testimonials_d7"
+                 class="s_quotes_carousel s_carousel_default carousel slide"
+                 data-interval="10000">
+                <ol class="carousel-indicators">
+                    <li data-target="#testimonials_d7"
+                        data-slide-to="0" class="active"/>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active"
+                         data-name="Slide" style="min-height: 318px;">
+                        <div class="container">
+                            <div class="row content justify-content-md-center mx-2 pt32 pb64">
+                                <div
+                                        class="carousel-content col-12 col-sm-12 col-md-6 col-lg-6">
+                                    <div class="testimonial">
+                                        <div class="testimonial-img">
+                                            <img class="img img-fluid"
+                                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/placeholder-320x320.png"
+                                                 alt=""/>
+                                        </div>
+                                        <div class="testimonial-prof">
+                                            <h5 class="font-weight-bold title mb0 text-primary">
+                                                JANE DOE
+                                                <small class="post text-dark">
+                                                    CEO of MyCompany
+                                                </small>
+                                            </h5>
+                                            <p class="mt16 mb32 description">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo
+                                                nulla
+                                                dictum felis sollicitudin, euismod finibus augue vulputate. Sed aliquam,
+                                                elit eu
+                                                gravida dignissim, justo dolor vulputate ipsum, a dapibus purus dui
+                                                vitae
+                                                purus..
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                        class="carousel-content col-12 col-sm-12 col-md-6 col-lg-6">
+                                    <div class="testimonial">
+                                        <div class="testimonial-img">
+                                            <img class="img img-fluid"
+                                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/placeholder-320x320.png"
+                                                 alt=""/>
+                                        </div>
+                                        <div class="testimonial-prof">
+                                            <h5 class="font-weight-bold title mb0 text-primary">
+                                                JANE DOE
+                                                <small class="post text-dark">
+                                                    CEO of MyCompany
+                                                </small>
+                                            </h5>
+                                            <p class="mt16 mb32 description">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo
+                                                nulla
+                                                dictum felis sollicitudin, euismod finibus augue vulputate. Sed aliquam,
+                                                elit eu
+                                                gravida dignissim, justo dolor vulputate ipsum, a dapibus purus dui
+                                                vitae
+                                                purus..
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-control-prev"
+                     data-target="#testimonials_d7" data-slide="prev"
+                     role="img" aria-label="Previous" title="Previous">
+                    <span class="carousel-control-prev-icon"/>
+                    <span class="sr-only o_default_snippet_text">Previous
+                    </span>
+                </div>
+                <div class="carousel-control-next"
+                     data-target="#testimonials_d7" data-slide="next"
+                     role="img" aria-label="Next" title="Next">
+                    <span class="carousel-control-next-icon"/>
+                    <span class="sr-only o_default_snippet_text">Next</span>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

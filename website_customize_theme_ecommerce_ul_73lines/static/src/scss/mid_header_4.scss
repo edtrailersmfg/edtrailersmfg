@@ -1,0 +1,52 @@
+@if o-website-value('mid-header') == 'mid-header-7' {
+    #mid_header_top,#mid_header_bottom{
+        display:block;
+    }
+
+    .fa_company_contact_links:hover, .fa_company_contact_links:focus {
+        text-decoration: none;
+    }
+    .fa_company_contact_info {
+        font-size: 20px;
+        padding: 5px 5px;
+    }
+
+    .center_logo{
+        display:none;
+    }
+    .left_logo{
+        display:none;
+    }#mid_header_top{
+        display:none;
+    }
+    #top_menu{
+        #my_wish,#my_cart{
+            display:none;
+        }
+    }
+    .search_left{
+        display:none;
+    }
+    .logo_mid_center{
+        display:none;
+    }
+    /*------- mid_header_4 scss start here-----*/
+    #mid-header-bottom-left .text-center {
+        text-align: left !important;
+    }
+    @media only screen and (max-width: 440px) {
+      #mid-header-bottom-right .text-right {
+        text-align: center !important;
+      }
+      #mid-header-bottom-left .text-center {
+        text-align: center !important;
+    }
+    }
+
+    #mid-header-bottom-right{
+        .fa-heart, .fa-shopping-cart{
+            font-size: 2em;
+        }
+    }
+}
+/*------- mid_header_4 scss end here-----*/

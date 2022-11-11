@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Footer 17" id="footer_17">
+        <section class="pt64 pb32" id="footer_17" data-visible="footer">
+            <div class="container">
+                <div class="row border bg-dark p-4">
+
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="media sepretor">
+                            <i class="fa fa-envelope-o fa-3x text_style"></i>
+                            <div class="icon_border"></div>
+                            <div class="media-body px-3">
+                                <p class="mb0">Email US</p>
+                                <p>
+                                    <span t-field="res_company.email"/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="media sepretor">
+                            <i class="fa fa-phone fa-3x text_style"></i>
+                            <div class="icon_border"></div>
+                            <div class="media-body px-3">
+                                <p class="mb0">Call US</p>
+                                <p>
+                                    <span t-field="res_company.phone"/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                        <div class="media">
+                            <i class="fa fa-map-o  fa-3x text_style"></i>
+                            <div class="icon_border"></div>
+                            <div class="media-body px-3">
+                                <p class="mb0">Visit US</p>
+                                <p>
+                                    <span t-field="res_company.street"/>
+                                    <span t-field="res_company.country_id.name"/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt64">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                        <div class="d-flex">
+                            <i class=" fa fa-id-card-o  fa-3x mb8"></i>
+                            <h5 class="font-weight-bold p-2">Yellow Hats</h5>
+                        </div>
+                        <p>Yellow hats is a leading of A-grade commercials, industrial and residentials projects
+                            in
+                            USA.Since its foundations the company has doubled turnover year on year.
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+                        <h5 class="font-weight-bold">Navigation</h5>
+                        <div class="row">
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-5">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">About US</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Careers</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Pricing Plans</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-6">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Team</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Projects</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">FAQs</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-5">
+                        <h5 class="font-weight-bold">Services</h5>
+                        <div class="row">
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Design &amp; Build</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Tilling &amp;
+                                            Painitaing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Renovations</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Management</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Wood Floring</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Work Consulting</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Metal Roofing</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none" target="_blank">Green Building</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr></hr>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 pb32">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                                <h6>Follow US On Social Networks</h6>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+                                <a t-att-href="res_company.social_facebook" class="text-decoration-none"
+                                   target="_blank">
+                                    <i class="fa fa-facebook p-2  box_hover"></i>
+                                </a>
+                                <a href="#" class="text-decoration-none" target="_blank">
+                                    <i class="fa fa-google-plus p-2 box_hover"></i>
+                                </a>
+                                <a t-att-href="res_company.social_twitter" class="text-decoration-none" target="_blank">
+                                    <i class="fa fa-twitter p-2 box_hover"></i>
+                                </a>
+                                <a t-att-href="res_company.social_linkedin" class="text-decoration-none"
+                                   target="_blank">
+                                    <i class="fa fa-linkedin p-2 box_hover "></i>
+                                </a>
+                                <a href="#" class="text-decoration-none" target="_blank">
+                                    <i class="fa fa-vimeo p-2 box_hover"></i>
+                                </a>
+                                <a href="#" class="text-decoration-none" target="_blank">
+                                    <i class="fa fa-pinterest p-2 box_hover"></i>
+                                </a>
+                                <a href="#" class="text-decoration-none" target="_blank">
+                                    <i class="fa fa-flickr p-2 box_hover"></i>
+                                </a>
+                                <a href="#" class="text-decoration-none" target="_blank">
+                                    <i class="fa fa-wifi p-2 box_hover"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 pb32">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                                <h6>Subscribe On our Newsletter</h6>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+                                <div class="input-group js_subscribe" data-list-id="0">
+                                    <input type="email" name="email" class="js_subscribe_email form-control rounded-0"
+                                           placeholder="your email..."/>
+                                    <span class="input-group-append">
+                                        <a role="button" href="#"
+                                           class="btn btn-primary js_subscribe_btn rounded-0">Subscribe
+                                        </a>
+                                        <a role="button" href="#"
+                                           class="btn btn-success js_subscribed_btn d-none rounded-0"
+                                           disabled="disabled">Thanks
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light">
+            <div class="container">
+                <div class="row p-4">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb8">
+                        <div>
+                            Copyright &amp;copy;
+                            <span t-field="res_company.name">Company name
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-sm-6 text-md-right text-lg-right">
+                        <div>
+                            Responsive Odoo theme,
+                            <span>
+                                Made with
+                                <i class="fa fa-heart"/>
+                                by
+                                <strong>&lt; 73Lines &gt;
+                                </strong>
+                            </span>
+                        </div>
+<!--                        <div>-->
+<!--                            <t t-call="website.language_selector"/>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

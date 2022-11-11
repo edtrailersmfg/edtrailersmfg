@@ -1,0 +1,16 @@
+<odoo>
+    <data noupdate="1">
+
+        <record id="ultimate_pwa_config_data" model="pwa.config">
+            <field name="pwa_name">Ultimate</field>
+            <field name="pwa_short_name">Ultimate</field>
+            <field name="pwa_display">standalone</field>
+            <field name="pwa_theme_color">#009efb</field>
+            <field name="pwa_background_color">#F2F7FB</field>
+            <field name="pwa_icon_128" type="base64" file="pwa_ultimate/static/img/128x128.png"/>
+            <field name="pwa_icon_192" type="base64" file="pwa_ultimate/static/img/192x192.png"/>
+            <field name="pwa_icon_512" type="base64" file="pwa_ultimate/static/img/512x512.png"/>
+        </record>
+
+    </data>
+</odoo>

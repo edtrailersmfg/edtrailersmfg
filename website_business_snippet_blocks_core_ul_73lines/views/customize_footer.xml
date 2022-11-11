@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="footer_option_inherit" inherit_id="website.snippet_options">
+        <t t-call="web_editor.snippet_options"/>
+
+        <!-- Ultimate Footer Templates -->
+        <xpath expr="//we-button[@data-customize-website-views='website.template_footer_headline']"
+               position="after">
+            <we-button title="Footer 1"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_1"
+                       data-customize-website-variable="'footer_1'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-1.svg"/>
+            <we-button title="Footer 2"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_2"
+                       data-customize-website-variable="'footer_2'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-2.svg"/>
+            <we-button title="Footer 3"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_3"
+                       data-customize-website-variable="'footer_3'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-3.svg"/>
+            <we-button title="Footer 4"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_4"
+                       data-customize-website-variable="'footer_4'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-4.svg"/>
+            <we-button title="Footer 5"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_5"
+                       data-customize-website-variable="'footer_5'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-5.svg"/>
+            <we-button title="Footer 6"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_6"
+                       data-customize-website-variable="'footer_6'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-6.svg"/>
+            <we-button title="Footer 7"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_7"
+                       data-customize-website-variable="'footer_7'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-7.svg"/>
+            <we-button title="Footer 8"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_8"
+                       data-customize-website-variable="'footer_8'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-8.svg"/>
+            <we-button title="Footer 9"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_9"
+                       data-customize-website-variable="'footer_9'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-9.svg"/>
+            <we-button title="Footer 10"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_10"
+                       data-customize-website-variable="'footer_10'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-10.svg"/>
+            <we-button title="Footer 11"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_11"
+                       data-customize-website-variable="'footer_11'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-11.svg"/>
+            <we-button title="Footer 12"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_12"
+                       data-customize-website-variable="'footer_12'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-12.svg"/>
+            <we-button title="Footer 13"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_13"
+                       data-customize-website-variable="'footer_13'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-13.svg"/>
+            <we-button title="Footer 14"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_14"
+                       data-customize-website-variable="'footer_14'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-14.svg"/>
+            <we-button title="Footer 15"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_15"
+                       data-customize-website-variable="'footer_15'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-15.svg"/>
+            <we-button title="Footer 16"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_16"
+                       data-customize-website-variable="'footer_16'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-16.svg"/>
+            <we-button title="Footer 17"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_17"
+                       data-customize-website-variable="'footer_17'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-17.svg"/>
+            <we-button title="Footer 18"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_18"
+                       data-customize-website-variable="'footer_18'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-18.svg"/>
+            <we-button title="Footer 19"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_19"
+                       data-customize-website-variable="'footer_19'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-19.svg"/>
+            <we-button title="Footer 20"
+                       data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.footer_20"
+                       data-customize-website-variable="'footer_20'"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/footer/footer-20.svg"/>
+        </xpath>
+
+
+        <!-- Ultimate Copyright -->
+        <xpath expr="//div[@data-selector='.o_footer_copyright']"
+               position="replace">
+            <div data-selector=".o_footer_copyright"
+                 data-no-check="true"
+                 groups="website.group_website_designer">
+                <we-select string="Ultimate Footer Copyright" data-variable="footer-copyright" data-reload="/">
+                    <we-button data-customize-website-views="">Default Copyright
+                    </we-button>
+                    <we-button title="Copyright 1"
+                               data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.copyright_1"
+                               data-img="">Copyright 1
+                    </we-button>
+                    <we-button title="Copyright 2"
+                               data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.copyright_2"
+                               data-img="">Copyright 2
+                    </we-button>
+                    <we-button title="Copyright 3"
+                               data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.copyright_3"
+                               data-img="">Copyright 3
+                    </we-button>
+                    <we-button title="Copyright 4"
+                               data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.copyright_4"
+                               data-img="">Copyright 4
+                    </we-button>
+                    <we-button title="Copyright 5"
+                               data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.copyright_5"
+                               data-img="">Copyright 5
+                    </we-button>
+                    <we-button title="Copyright 6"
+                               data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.copyright_6"
+                               data-img="">Copyright 6
+                    </we-button>
+                    <we-button title="Copyright 7"
+                               data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.copyright_7"
+                               data-img="">Copyright 7
+                    </we-button>
+                    <we-button title="Copyright 8"
+                               data-customize-website-views="website_business_snippet_blocks_core_ul_73lines.copyright_8"
+                               data-img="">Copyright 8
+                    </we-button>
+                </we-select>
+                <we-colorpicker string="Colors"
+                                data-customize-website-color="" data-color="copyright"
+                                data-with-combinations="true"/>
+                <we-select string="Language Selector" data-reload="/">
+                    <we-button data-name="language_selector_none_opt"
+                               data-customize-website-views="">None
+                    </we-button>
+                    <we-button
+                            data-customize-website-views="portal.footer_language_selector, website_business_snippet_blocks_core_ul_73lines.footer_language_selector_ultimate">
+                        Dropdown
+                    </we-button>
+                    <we-button
+                            data-customize-website-views="portal.footer_language_selector, website.footer_language_selector_inline, website_business_snippet_blocks_core_ul_73lines.footer_language_selector_ultimate, website_business_snippet_blocks_core_ul_73lines.footer_language_selector_inline_ultimate">
+                        Inline
+                    </we-button>
+                </we-select>
+                <we-select string="⌙ Label" data-dependencies="!language_selector_none_opt" data-reload="/">
+                    <we-button data-customize-website-views="">Text</we-button>
+                    <we-button
+                            data-customize-website-views="website.footer_language_selector_flag, website.footer_language_selector_no_text, website_business_snippet_blocks_core_ul_73lines.footer_language_selector_flag_ultimate, website_business_snippet_blocks_core_ul_73lines.footer_language_selector_no_text_ultimate">
+                        Flag
+                    </we-button>
+                    <we-button
+                            data-customize-website-views="website.footer_language_selector_flag, website_business_snippet_blocks_core_ul_73lines.footer_language_selector_flag_ultimate">
+                        Flag and Text
+                    </we-button>
+                </we-select>
+            </div>
+        </xpath>
+
+        <!-- Ultimate ScrollTop -->
+        <xpath expr="//we-select[@data-dependencies='footer_scrolltop_opt']"
+               position="inside">
+            <we-button string="Style 1" data-select-class="scrolltop_style_1 ultimate_scrolltop "/>
+            <we-button string="Style 2" data-select-class="scrolltop_style_2 ultimate_scrolltop"/>
+            <we-button string="Style 3" data-select-class="scrolltop_style_3 ultimate_scrolltop"/>
+            <we-button string="Style 4" data-select-class="scrolltop_style_4 ultimate_scrolltop"/>
+            <we-button string="Style 5" data-select-class="scrolltop_style_5 ultimate_scrolltop"/>
+            <we-button string="Style 6" data-select-class="scrolltop_style_6 ultimate_scrolltop"/>
+            <we-button string="Style 7" data-select-class="scrolltop_style_7 ultimate_scrolltop"/>
+            <we-button string="Style 8" data-select-class="scrolltop_style_8 ultimate_scrolltop"/>
+            <we-button string="Style 9" data-select-class="scrolltop_style_9 ultimate_scrolltop"/>
+        </xpath>
+
+        <xpath expr="//div[@data-js='HideFooter']"
+               position="before">
+            <div data-selector="#wrapwrap > footer">
+                <we-row string="Scroll Top Position">
+                    <we-select data-apply-to=".ultimate_scrolltop">
+                        <we-button string="Left" data-select-class="scrolltop_left"/>
+                        <we-button string="Right" data-select-class="scrolltop_right"/>
+                    </we-select>
+                </we-row>
+
+            </div>
+        </xpath>
+
+        <xpath expr="//we-select[@data-dependencies='footer_scrolltop_opt']"
+               position="after">
+            <div data-selector="#wrapwrap > footer">
+                <!-- &emsp; -->
+                <we-row string=" ⌙ Colors">
+                    <we-colorpicker
+                            data-select-style="true"
+                            data-css-property="background-color"
+                            data-color-prefix="bg-"
+                            data-apply-to="#o_footer_scrolltop"
+                            data-dependencies="footer_scrolltop_opt"/>
+                    <we-colorpicker data-select-style="true"
+                                    data-css-property="color"
+                                    data-color-prefix="text-"
+                                    data-apply-to="#o_footer_scrolltop"
+                                    data-dependencies="footer_scrolltop_opt"/>
+                </we-row>
+            </div>
+        </xpath>
+    </template>
+</odoo>

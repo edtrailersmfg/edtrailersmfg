@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- Category Banner Template -->
+    <template id="category_banner" inherit_id="website_sale.products"
+              name="Show Category Banner" active="False" customize_show="True">
+        <xpath expr="//div[hasclass('o_wsale_products_grid_table_wrapper')]" position="before">
+            <t t-if="category">
+                <aside class="mt16 mb16">
+                    <t t-if="category.cover_banner">
+                        <div t-field="category.cover_banner"
+                             t-options='{"widget": "image"}'
+                             class="catg-banner text-center"/>
+                    </t>
+                    <h1 t-field="category.name" class="categ-title text-center"
+                        t-attf-style="background-color:#{category.categ_title_background}; color:#{category.categ_title_color};"/>
+                </aside>
+            </t>
+            <t t-if="not category">
+                <div class="container">
+                    <div class="mt16 ">
+                        <div class="oe_structure"/>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Category Banner Template -->
+
+    <template id="option_collapse_categories_recursive_icon_inherit"
+              inherit_id="website_sale.categorie_link"
+              name="Category Icon Collapse">
+        <xpath expr="//label[@t-field='c.name']" position="before">
+            <t t-if="c.categ_icon">
+                <i t-attf-class="d-none #{c.categ_icon}" id="categ_icon_collapse"/>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

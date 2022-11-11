@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="CTA 8" id="cta_8">
+        <section class="pt64 pb64" data-visible="cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="media">
+                            <i class="fa fa-star fa-4x pr-3 pt16"></i>
+
+                            <div class="media-body py-3">
+                                <h3>Title Name</h3>
+                                <p>Lorem Ipsum is simply dummy text of the
+                                    printing and typesetting industry.Lorem
+                                    Ipsum has been the industry's standard
+                                    dummy
+                                </p>
+                                <a href="#" class="pt16">view full profile
+                                    <i class="fa fa-chevron-right ml-3"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="media">
+                            <i class="fa fa-star fa-4x pr-3 pt16"></i>
+
+                            <div class="media-body py-3">
+                                <h3>Title Name</h3>
+                                <p>Lorem Ipsum is simply dummy text of the
+                                    printing and typesetting industry.Lorem
+                                    Ipsum has been the industry's standard
+                                    dummy
+                                </p>
+                                <a href="#" class="pt16">read more
+                                    <i class="fa fa-chevron-right ml-3"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="ecommerce_block_9" name="Ecommerce BLock 9">
+        <section class="pt64 pb64" id="ecommerce_block_9" data-visible="ecommerce_blocks">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 pt8 pb8">
+                        <div class="oe_structure oe_empty">
+                            <div class="box_9">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-800x400.png"
+                                     class="img-fluid image"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pt8 pb8">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 pb8">
+                                <div class="oe_structure oe_empty">
+                                    <div class="box_9">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-400x120.png"
+                                             class="img-fluid image"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 pt8 pb8">
+                                <div class="oe_structure oe_empty">
+                                    <div class="box_9">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-400x120.png"
+                                             class="img-fluid image"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 pt8">
+                                <div class="oe_structure oe_empty">
+                                    <div class="box_9">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-400x120.png"
+                                             class="img-fluid image"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

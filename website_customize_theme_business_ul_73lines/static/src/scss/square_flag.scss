@@ -1,0 +1,15 @@
+header{
+    .js_language_selector .btn .o_lang_flag{
+        width: 25px;
+    //     height: 25px;
+        border-radius: 0px;
+    }
+    .js_language_selector .dropdown-menu .o_lang_flag, .js_language_selector .js_change_lang.list-inline-item .o_lang_flag {
+        width: 25px;
+        height: 20px;
+        border-radius: 0px;
+    }
+    .js_language_selector .align-middle, .js_language_selector .js_change_lang.list-inline-item span {
+        display: none;
+    }
+}

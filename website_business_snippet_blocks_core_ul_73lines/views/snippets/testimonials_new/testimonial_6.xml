@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Testimonial 6" id="testimonial_6">
+        <section class="pt64 pb64" data-visible="testimonials">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Testimonials</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 ">
+                        <div class="border rounded px-4 py-4 mb16">
+                            <div class="media mb8">
+                                <i class="fa fa-user fa-4x pr-3"></i>
+                                <div class="media-body">
+                                    <h3>Client One</h3>
+                                    <p>Position</p>
+                                </div>
+                            </div>
+                            <p>Lorem Ipsum has been the industry's standard
+                                dummy text ever since the 1500s.
+                            </p>
+                        </div>
+                        <div class="border rounded px-4 py-4 mb16">
+                            <div class="media mb8">
+                                <i class="fa fa-user fa-4x pr-3"></i>
+                                <div class="media-body">
+                                    <h3>Client Four</h3>
+                                    <p>Position</p>
+                                </div>
+                            </div>
+                            <p>Lorem Ipsum has been the industry's standard
+                                dummy text ever since the 1500s.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 ">
+                        <div class="border rounded px-4 py-4 mb16">
+                            <div class="media mb8">
+                                <i class="fa fa-user fa-4x pr-3"></i>
+                                <div class="media-body">
+                                    <h3>Client Two</h3>
+                                    <p>Position</p>
+                                </div>
+                            </div>
+                            <p>Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy.
+                            </p>
+                        </div>
+                        <div class="border rounded px-4 py-4 mb16">
+                            <div class="media mb8">
+                                <i class="fa fa-user fa-4x pr-3"></i>
+                                <div class="media-body">
+                                    <h3>Client Five</h3>
+                                    <p>Position</p>
+                                </div>
+                            </div>
+                            <p>Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 ">
+                        <div class="border rounded px-4 py-4 mb16">
+                            <div class="media mb8">
+                                <i class="fa fa-user fa-4x pr-3"></i>
+                                <div class="media-body">
+                                    <h3>Client Three</h3>
+                                    <p>Position</p>
+                                </div>
+                            </div>
+                            <p>Lorem Ipsum has been the industry's standard
+                                dummy text ever since the 1500s.
+                            </p>
+                        </div>
+                        <div class="border rounded px-4 py-4 mb16">
+                            <div class="media mb8">
+                                <i class="fa fa-user fa-4x pr-3"></i>
+
+                                <div class="media-body">
+                                    <h3>Client Six</h3>
+                                    <p>Position</p>
+                                </div>
+                            </div>
+                            <p>Lorem Ipsum has been the industry's standard
+                                dummy text ever since the 1500s.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

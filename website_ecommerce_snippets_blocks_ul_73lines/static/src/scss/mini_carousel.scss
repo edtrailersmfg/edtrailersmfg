@@ -1,0 +1,87 @@
+                           /* mini carousel 1 css start */
+
+#new_products_item_mini_d1{
+.carousel_grid_1 .mini-info {
+    padding-top: 10px;
+    }
+}
+
+                           /* mini carousel 2 css start */
+
+.s_carousel_mini_1 .item.product-single > form {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    border: 1px solid #eee;
+    margin: 16px 0;
+    padding: 12px;
+}
+
+                           /* mini carousel 3 css start */
+
+.s_carousel_mini_2 .mini-info h5 {
+    font-size: 16px;
+    line-height: 1.555;
+    margin: 0 0 8px 0;
+    padding: 0 0 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid #00A09D;
+    padding-bottom: 6px;
+    display: block;
+}
+
+                           /* mini carousel 4 css start */
+.s_carousel_mini_3 .btn {
+    color: #323232;
+    background: none;
+    border: 1px solid #eee;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0;
+    font-size: 12px;
+}
+
+
+                           /* mini carousel 5 css start */
+
+#new_products_item_mini_d5{
+.carousel_grid_5 .img{
+    padding-right: 20px;
+    border-right: 2px solid #eee;
+}
+
+.mini-info {
+    padding-top: 10px;
+    }
+}
+
+                           /* common css start */
+
+.s_product_carousel_mini{
+	.product-single{
+
+			h5{
+				white-space: nowrap;
+			    text-overflow: ellipsis;
+				overflow:hidden;
+			}
+
+
+	}
+
+}
+
+.s_product_carousel_mini{
+    .product-single{
+
+            .btn:focus{
+                outline:0;
+                box-shadow:none;
+            }
+    }
+
+    .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Center Content 4" id="center_content_4">
+        <section class="pt64 pb64" data-visible="center_content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <p>Tagline</p>
+                        <h2 class="pb24">Long headline to turn your<br/> visitors into users</h2>
+                        <p class="pb24">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum
+                            est in tortor congue suscipit. Suspendisse potenti. Aliquam finibus pharetra tellus at
+                            egestas.Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.
+                        </p>
+                        <div>
+                            <a href="#" class="ml16 mr16 text-decoration-none">First Action
+                                <i class="fa fa-chevron-right"></i>
+                            </a>
+                            <a href="#" class="text-decoration-none">Second Action
+                                <i class="fa fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

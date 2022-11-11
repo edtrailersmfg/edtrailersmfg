@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="mega_menu_img_transition_3" name="Mega Menu Img Transition 3" groups="base.group_user">
+        <section id="menu_img_transition_3" class="pt32 pb32" data-visible="mega_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-2 col-md-4 col-sm-12 menu_box">
+                        <div class="categ_img">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 alt="image" title="image"
+                                 class="img-fluid"/>
+                        </div>
+                        <div class="mt16">
+                            <h6 href="#" class="font-weight-bold text-uppercase">Short Headline</h6>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem ipsum
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem ipsum
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-md-4 col-sm-12 menu_box">
+                        <div class="categ_img">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 alt="image" title="image"
+                                 class="img-fluid"/>
+                        </div>
+                        <div class="mt16">
+                            <h6 href="#" class="font-weight-bold text-uppercase">Short Headline</h6>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem ipsum
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem ipsum
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-md-4 col-sm-12 menu_box">
+                        <div class="categ_img">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 alt="image" title="image"
+                                 class="img-fluid"/>
+                        </div>
+                        <div class="mt16">
+                            <h6 href="#" class="font-weight-bold text-uppercase">Short Headline</h6>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem ipsum
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem ipsum
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-md-4 col-sm-12 menu_box">
+                        <div class="categ_img">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 alt="image" title="image"
+                                 class="img-fluid"/>
+                        </div>
+                        <div class="mt16">
+                            <h6 href="#" class="font-weight-bold text-uppercase">Short Headline</h6>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem ipsum
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem ipsum
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-md-4 col-sm-12 menu_box">
+                        <div class="categ_img">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 alt="image" title="image"
+                                 class="img-fluid"/>
+                        </div>
+                        <div class="mt16">
+                            <h6 href="#" class="font-weight-bold text-uppercase">Short Headline</h6>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem ipsum
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem ipsum
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-md-4 col-sm-12 menu_box">
+                        <div class="categ_img">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 alt="image" title="image"
+                                 class="img-fluid"/>
+                        </div>
+                        <div class="mt16">
+                            <h6 href="#" class="font-weight-bold text-uppercase">Short Headline</h6>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem ipsum
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem ipsum
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right mr-2"></i>Lorem
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

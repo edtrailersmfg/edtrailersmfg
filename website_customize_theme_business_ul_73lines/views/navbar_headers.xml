@@ -1,0 +1,1816 @@
+<odoo>
+    <!--Hide Logo From Navbar Option-->
+    <template id="logo_hide_nav" inherit_id="portal.frontend_layout"
+              customize_show="True"
+              name="Hide Logo Navbar" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="#{'o_logo_hide'}"
+                       separator=" "/>
+        </xpath>
+    </template>
+
+    <template id="frontend_layout_inherit" inherit_id="portal.frontend_layout"
+              name="Mid Header On" active="True" customize_show="True">
+        <xpath expr="//header" position="before">
+            <section class="oe_structure mid_header">
+                <section id="mid_header_top" class="bg-black">
+                    <div class="container">
+                        <div class="align-items-center row">
+                            <div class="col-12 oe_structure mt-2 mb-2 col-lg-4 col-sm-3"
+                                 id="mid-header-top-left">
+                                <div id="company-contact" t-ignore="true">
+                                    <i class="fa fa-phone"/>
+                                    <span t-field="res_company.phone"/>
+                                </div>
+                                <div class="text-left" id="company-profiles"
+                                     t-ignore="true">
+                                    <a t-att-href="website.social_facebook"
+                                       t-if="website.social_facebook"
+                                       class="fa_company_contact_links"
+                                       target="_blank">
+                                        <i class="fa fa-facebook-square share_facebook fa_company_contact_info"/>
+                                    </a>
+                                    <a t-att-href="website.social_twitter"
+                                       t-if="website.social_twitter"
+                                       class="fa_company_contact_links"
+                                       target="_blank">
+                                        <i class="fa fa-twitter share_twitter fa_company_contact_info"/>
+                                    </a>
+                                    <a t-att-href="website.social_linkedin"
+                                       t-if="website.social_linkedin"
+                                       class="fa_company_contact_links"
+                                       target="_blank">
+                                        <i class="fa fa-linkedin share_linkedin fa_company_contact_info"/>
+                                    </a>
+                                    <a t-att-href="website.social_youtube"
+                                       t-if="website.social_youtube"
+                                       class="fa_company_contact_links"
+                                       target="_blank">
+                                        <i class="fa fa-youtube-play share_youtube fa_company_contact_info"/>
+                                    </a>
+                                    <!--                                    <a t-att-href="website.social_googleplus"-->
+                                    <!--                                       t-if="website.social_googleplus"-->
+                                    <!--                                       rel="publisher"-->
+                                    <!--                                       class="fa_company_contact_links"-->
+                                    <!--                                       target="_blank">-->
+                                    <!--                                        <i class="fa fa-google-plus-square share_googleplus fa_company_contact_info"/>-->
+                                    <!--                                    </a>-->
+                                    <a t-att-href="website.social_github"
+                                       t-if="website.social_github"
+                                       class="fa_company_contact_links"
+                                       target="_blank">
+                                        <i class="fa fa-github share_github fa_company_contact_info"/>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="col-12 oe_structure mt-2 mb-2 col-lg-4 col-sm-5"
+                                 id="mid-header-top-center">
+                                <div class="text-center" id="company-email"
+                                     t-ignore="true">
+                                    <i class="fa fa-envelope"/>
+                                    <span t-field="res_company.email"/>
+                                </div>
+
+                            </div>
+                            <div class="col-12 oe_structure mt-2 mb-2 col-lg-4 col-sm-4"
+                                 id="mid-header-top-right">
+                                <div class="text-right" id="company-profiles"
+                                     t-ignore="true">
+                                    <a t-att-href="website.social_facebook"
+                                       t-if="website.social_facebook"
+                                       class="fa_company_contact_links"
+                                       target="_blank">
+                                        <i class="fa fa-facebook-square share_facebook fa_company_contact_info"/>
+                                    </a>
+                                    <a t-att-href="website.social_twitter"
+                                       t-if="website.social_twitter"
+                                       class="fa_company_contact_links"
+                                       target="_blank">
+                                        <i class="fa fa-twitter share_twitter fa_company_contact_info"/>
+                                    </a>
+                                    <a t-att-href="website.social_linkedin"
+                                       t-if="website.social_linkedin"
+                                       class="fa_company_contact_links"
+                                       target="_blank">
+                                        <i class="fa fa-linkedin share_linkedin fa_company_contact_info"/>
+                                    </a>
+                                    <a t-att-href="website.social_youtube"
+                                       t-if="website.social_youtube"
+                                       class="fa_company_contact_links"
+                                       target="_blank">
+                                        <i class="fa fa-youtube-play share_youtube fa_company_contact_info"/>
+                                    </a>
+                                    <!--                                    <a t-att-href="website.social_googleplus"-->
+                                    <!--                                       t-if="website.social_googleplus"-->
+                                    <!--                                       rel="publisher"-->
+                                    <!--                                       class="fa_company_contact_links"-->
+                                    <!--                                       target="_blank">-->
+                                    <!--                                        <i class="fa fa-google-plus-square share_googleplus fa_company_contact_info"/>-->
+                                    <!--                                    </a>-->
+                                    <a t-att-href="website.social_github"
+                                       t-if="website.social_github"
+                                       class="fa_company_contact_links"
+                                       target="_blank">
+                                        <i class="fa fa-github share_github fa_company_contact_info"/>
+                                    </a>
+                                </div>
+                                <div class="user-details">
+                                    <ul class="list-inline text-right mb-0">
+                                        <li class="list-inline-item"
+                                            id="my_cart"/>
+                                        <li class="list-inline-item"
+                                            id="cust_wish"/>
+                                        <t t-if="website.user_id == user_id">
+                                            <li class="list-inline-item">
+                                                <a class="text-xs-center nav-item pb-0"
+                                                   href="/web/login">
+                                                    <i class="fa fa-sign-in fa-2x"></i>
+                                                </a>
+                                            </li>
+                                        </t>
+                                        <li class="list-inline-item dropdown"
+                                            t-ignore="true"
+                                            t-if="not user_id._is_public()">
+                                            <a href="#"
+                                               class="nav-link dropdown-toggle pb-0"
+                                               data-toggle="dropdown">
+                                                <b>
+                                                    <span t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name"/>
+                                                </b>
+                                            </a>
+                                            <div class="dropdown-menu js_usermenu"
+                                                 role="menu">
+                                                <a href="/my/home"
+                                                   role="menuitem"
+                                                   class="dropdown-item">My
+                                                    Account
+                                                </a>
+                                                <a id="o_logout"
+                                                   class="dropdown-item"
+                                                   t-attf-href="/web/session/logout?redirect=/"
+                                                   role="menuitem">Logout
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="user-details_1">
+                                    <ul class="list-inline text-right mb-0">
+                                        <li class="list-inline-item"
+                                            id="pricelist_custom"/>
+                                        <li class="list-inline-item lang_custom">
+                                            <t t-call="website_customize_theme_business_ul_73lines.mid_header_language_selector"/>
+                                        </li>
+                                        <li class="list-inline-item account_custom">
+                                            <div class="dropdown">
+                                                <a class="btn btn-link dropdown-toggle"
+                                                   type="button"
+                                                   id="dropdownMenu1"
+                                                   data-toggle="dropdown"
+                                                   aria-haspopup="true"
+                                                   aria-expanded="false">
+                                                    My Account
+                                                </a>
+                                                <div class="dropdown-menu"
+                                                     aria-labelledby="dropdownMenu1">
+                                                    <t t-if="website.user_id == user_id">
+                                                        <a class="text-xs-center dropdown-item"
+                                                           href="/web/login">
+                                                            Sign in
+                                                        </a>
+                                                    </t>
+                                                    <t t-if="not user_id._is_public()">
+                                                        <a href="/my/home"
+                                                           role="menuitem"
+                                                           class="dropdown-item">
+                                                            My
+                                                            Account
+                                                        </a>
+                                                        <a id="o_logout"
+                                                           class="dropdown-item"
+                                                           t-attf-href="/web/session/logout?redirect=/"
+                                                           role="menuitem">
+                                                            Logout
+                                                        </a>
+                                                    </t>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="col-12 oe_structure mt-2 mb-2 col-lg-4 col-sm-4 offset-lg-4 offset-sm-4"
+                                 id="mid-header-top-right-welcome-msg">
+                                <p class="mb-0 mt-2 text-right">Wants to
+                                    explore
+                                    Upcoming Deals on Weekends?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </xpath>
+    </template>
+
+
+    <!-- Navbar Nav -->
+    <template id="website.navbar_nav" name="Navbar Nav">
+        <ul id="top_menu" t-attf-class="nav navbar-nav  #{_nav_class}">
+            <t t-raw="0"/>
+        </ul>
+    </template>
+
+    <!-- "Navbar 1" template -->
+    <template id="template_navbar_1" inherit_id="website.layout" name="Template Navbar 1" active="False">
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar"
+                 class="ultimate_nav navbar navbar-expand-md navbar-light o_colored_level o_cc shadow-sm">
+                <div id="top_menu_container" class="container justify-content-start justify-content-lg-between">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand">
+                        <t t-set="_link_class" t-value="'mr-4'"/>
+                    </t>
+                    <!-- Navbar Toggler -->
+                    <t t-call="website.navbar_toggler">
+                        <t t-set="_toggler_class" t-value="'ml-auto'"/>
+                    </t>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse" class="collapse navbar-collapse">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'ml-auto align-items-lg-center align-items-md-center'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <t t-call="portal.user_dropdown">
+                                <t t-set="_user_name" t-value="true"/>
+                                <t t-set="_item_class" t-value="'nav-item dropdown ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+
+                            <!-- Language Selector -->
+                            <li>
+                                <t t-call="website.placeholder_header_language_selector">
+                                    <t t-set="_div_classes" t-value="'ml-2'"/>
+                                </t>
+                            </li>
+                        </t>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 2" template -->
+    <template id="template_navbar_2" inherit_id="website.layout" name="Template Navbar 2" active="False">
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar"
+                 class="ultimate_nav navbar navbar-expand-md navbar-light o_colored_level o_cc shadow-sm">
+                <div id="top_menu_container" class="container justify-content-start justify-content-lg-between">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand">
+                        <t t-set="_link_class" t-value="'mr-4'"/>
+                    </t>
+                    <!-- Navbar Toggler -->
+                    <t t-call="website.navbar_toggler">
+                        <t t-set="_toggler_class" t-value="'ml-auto'"/>
+                    </t>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse" class="collapse navbar-collapse">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'mx-auto align-items-lg-center align-items-md-center'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <t t-call="portal.user_dropdown">
+                                <t t-set="_user_name" t-value="true"/>
+                                <t t-set="_item_class" t-value="'nav-item dropdown ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+
+                            <!-- Language Selector -->
+                            <li>
+                                <t t-call="website.placeholder_header_language_selector">
+                                    <t t-set="_div_classes" t-value="'ml-2'"/>
+                                </t>
+                            </li>
+                        </t>
+
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 3" template -->
+    <template id="template_navbar_3" inherit_id="website.layout" name="Template Navbar 3" active="False">
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar"
+                 class="ultimate_nav navbar navbar-expand-md navbar-light o_colored_level o_cc shadow-sm">
+                <div id="top_menu_container" class="container justify-content-start justify-content-lg-between">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand">
+                        <t t-set="_link_class" t-value="'mr-4 d-block d-lg-none d-md-none'"/>
+                    </t>
+                    <!-- Navbar Toggler -->
+                    <t t-call="website.navbar_toggler">
+                        <t t-set="_toggler_class" t-value="'ml-auto'"/>
+                    </t>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse"
+                         class="collapse navbar-collapse o_header_centered_logo mx-auto row">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class"
+                               t-value="'align-items-lg-center align-items-md-center col-lg-4 col-md-4'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                        </t>
+
+                        <!-- Brand -->
+                        <div class="col-lg-4 col-md-3 d-lg-block d-md-block d-none mx-auto">
+                            <t t-call="website.placeholder_header_brand">
+                                <t t-set="_link_class" t-value="'m-0 d-lg-block d-md-block d-none mx-auto'"/>
+                            </t>
+                        </div>
+
+
+                        <ul id="top_menu"
+                            class="nav navbar-nav o_header_centered_logo justify-content-end align-items-lg-center align-items-md-center mx-auto">
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <t t-call="portal.user_dropdown">
+                                <t t-set="_user_name" t-value="true"/>
+                                <t t-set="_item_class" t-value="'nav-item dropdown'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+
+                            <!-- Language Selector -->
+                            <li>
+                                <t t-call="website.placeholder_header_language_selector">
+                                    <t t-set="_div_classes" t-value="'ml-2'"/>
+                                </t>
+                            </li>
+                        </ul>
+                        <!--                    </t>-->
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 4" template -->
+    <template id="template_navbar_4" inherit_id="website.layout" name="Template Navbar 4" active="False">
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar"
+                 class="ultimate_nav navbar_4 navbar navbar-expand-md navbar-light o_colored_level o_cc shadow-sm">
+                <div id="top_menu_container" class="container justify-content-lg-between">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand">
+                        <t t-set="_link_class" t-value="'mr-4'"/>
+                    </t>
+                    <!-- Navbar Toggler -->
+                    <t t-call="website.navbar_toggler"/>
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse" class="collapse navbar-collapse">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'ml-auto align-items-lg-center align-items-md-center'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <t t-call="portal.user_dropdown">
+                                <t t-set="_user_name" t-value="true"/>
+                                <t t-set="_item_class" t-value="'nav-item dropdown'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- Language Selector -->
+                            <li>
+                                <t t-call="website.placeholder_header_language_selector">
+                                    <t t-set="_div_classes" t-value="'ml-2'"/>
+                                </t>
+                            </li>
+                        </t>
+                    </div>
+
+                </div>
+            </nav>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 5" template -->
+    <template id="template_navbar_5" inherit_id="website.layout" name="Template Navbar 5" active="False">
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar"
+                 class="ultimate_nav navbar_5 navbar navbar-expand-md navbar-light o_colored_level o_cc shadow-sm">
+                <div id="top_menu_container" class="container justify-content-start justify-content-lg-between">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand">
+                        <t t-set="_link_class" t-value="'mr-4'"/>
+                    </t>
+                    <!-- Navbar Toggler -->
+                    <t t-call="website.navbar_toggler"/>
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse" class="collapse navbar-collapse">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'ml-auto align-items-lg-center align-items-md-center'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <t t-call="portal.user_dropdown">
+                                <t t-set="_user_name" t-value="true"/>
+                                <t t-set="_item_class" t-value="'nav-item dropdown ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- Language Selector -->
+                            <li>
+                                <t t-call="website.placeholder_header_language_selector">
+                                    <t t-set="_div_classes" t-value="'ml-2'"/>
+                                </t>
+                            </li>
+                        </t>
+                    </div>
+
+                </div>
+            </nav>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 6" template -->
+    <template id="template_navbar_6" inherit_id="website.layout" name="Template Navbar 6" active="False">
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar"
+                 class="ultimate_nav navbar_6 navbar navbar-expand-md navbar-light o_colored_level o_cc shadow-sm">
+                <div id="top_menu_container" class="container justify-content-start justify-content-lg-between">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand">
+                        <t t-set="_link_class" t-value="'mr-4'"/>
+                    </t>
+                    <!-- Navbar Toggler -->
+                    <t t-call="website.navbar_toggler"/>
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse" class="collapse navbar-collapse">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'ml-auto align-items-lg-center align-items-md-center'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <t t-call="portal.user_dropdown">
+                                <t t-set="_user_name" t-value="true"/>
+                                <t t-set="_item_class" t-value="'nav-item dropdown ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- Language Selector -->
+                            <li>
+                                <t t-call="website.placeholder_header_language_selector">
+                                    <t t-set="_div_classes" t-value="'ml-2'"/>
+                                </t>
+                            </li>
+                        </t>
+                    </div>
+
+                </div>
+            </nav>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 7" template -->
+    <template id="template_navbar_7" inherit_id="website.layout" name="Template Navbar 7" active="False">
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar"
+                 class="navbar_7 ultimate_nav navbar navbar-expand-md navbar-light o_colored_level o_cc shadow-sm">
+                <div id="top_menu_container" class="container justify-content-start justify-content-lg-between">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand">
+                        <t t-set="_link_class" t-value="'mr-4'"/>
+                    </t>
+                    <!-- Navbar Toggler -->
+                    <t t-call="website.navbar_toggler">
+                        <t t-set="_toggler_class" t-value="'ml-auto'"/>
+                    </t>
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse" class="collapse navbar-collapse">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'ml-auto align-items-lg-center align-items-md-center'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <t t-call="portal.user_dropdown">
+                                <t t-set="_user_name" t-value="true"/>
+                                <t t-set="_item_class" t-value="'nav-item dropdown ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- Language Selector -->
+                            <li>
+                                <t t-call="website.placeholder_header_language_selector">
+                                    <t t-set="_div_classes" t-value="'ml-2'"/>
+                                </t>
+                            </li>
+                        </t>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 8" template -->
+    <template id="template_navbar_8" inherit_id="website.layout" name="Template Navbar 8" active="False">
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar"
+                 class="navbar ultimate_nav navbar-expand-md navbar-light o_colored_level o_cc shadow-sm">
+                <div id="top_menu_container" class="container justify-content-start justify-content-lg-between">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand">
+                        <t t-set="_link_class" t-value="'mr-4'"/>
+                    </t>
+                    <!-- Navbar Toggler -->
+                    <t t-call="website.navbar_toggler">
+                        <t t-set="_toggler_class" t-value="'ml-auto'"/>
+                    </t>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse" class="collapse navbar-collapse">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'ml-auto align-items-lg-center align-items-md-center'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <t t-call="portal.user_dropdown">
+                                <t t-set="_user_name" t-value="true"/>
+                                <t t-set="_item_class" t-value="'nav-item dropdown ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- Language Selector -->
+                            <li>
+                                <t t-call="website.placeholder_header_language_selector">
+                                    <t t-set="_div_classes" t-value="'ml-2'"/>
+                                </t>
+                            </li>
+                        </t>
+                    </div>
+
+                </div>
+            </nav>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 9" template -->
+    <template id="template_navbar_9" inherit_id="website.layout" name="Template Navbar 9" active="False">
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar" class="ultimate_nav navbar_9 navbar navbar-light o_colored_level o_cc">
+                <div id="top_menu_container" class="container">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand">
+                        <t t-set="_link_class" t-value="'mr-4'"/>
+                    </t>
+                    <!-- Navbar Toggler -->
+                    <t t-call="website.navbar_toggler">
+                        <t t-set="_toggler_class" t-value="'ml-auto'"/>
+                    </t>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse" class="collapse navbar-collapse">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'text-right float-lg-right float-md-right'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <t t-call="portal.user_dropdown">
+                                <t t-set="_user_name" t-value="true"/>
+                                <t t-set="_item_class" t-value="'nav-item dropdown ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- Language Selector -->
+                            <li>
+                                <t t-call="website.placeholder_header_language_selector">
+                                    <t t-set="_div_classes" t-value="'ml-2'"/>
+                                </t>
+                            </li>
+                        </t>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 10" template -->
+    <template id="template_navbar_10" inherit_id="website.layout" name="Template Navbar 10" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="navbar_10" separator=" "/>
+        </xpath>
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar" class="navbar_10 ultimate_nav navbar navbar-expand-md navbar-light">
+                <div id="top_menu_container" class="container">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand"/>
+
+                    <!-- Navbar Toggler -->
+                    <t t-call="website.navbar_toggler">
+                        <t t-set="_toggler_class" t-value="'ml-auto'"/>
+                    </t>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse" class="collapse navbar-collapse">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'ml-auto align-items-lg-center align-items-md-center'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <t t-call="portal.user_dropdown">
+                                <t t-set="_user_name" t-value="true"/>
+                                <t t-set="_item_class" t-value="'nav-item dropdown ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- Language Selector -->
+                            <li>
+                                <t t-call="website.placeholder_header_language_selector">
+                                    <t t-set="_div_classes" t-value="'ml-2'"/>
+                                </t>
+                            </li>
+                        </t>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 13" template -->
+    <template id="template_navbar_13" inherit_id="website.layout" name="Template Navbar 11" active="False">
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar" class="navbar_11 ultimate_nav navbar navbar-expand-md navbar-light">
+                <div id="top_menu_container" class="container">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand"/>
+
+                    <!-- Navbar Toggler -->
+                    <t t-call="website.navbar_toggler">
+                        <t t-set="_toggler_class" t-value="'ml-auto'"/>
+                    </t>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse" class="collapse navbar-collapse">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'ml-auto'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <t t-call="portal.user_dropdown">
+                                <t t-set="_user_name" t-value="true"/>
+                                <t t-set="_item_class" t-value="'nav-item dropdown ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- Language Selector -->
+                            <li>
+                                <t t-call="website.placeholder_header_language_selector">
+                                    <t t-set="_div_classes" t-value="'ml-2'"/>
+                                </t>
+                            </li>
+                        </t>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 14" template -->
+    <template id="template_navbar_14" inherit_id="website.layout" name="Template Navbar 12" active="False">
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar"
+                 class="navbar_12 ultimate_nav navbar navbar-expand-md navbar-light o_colored_level o_cc shadow-sm">
+                <div id="top_menu_container" class="container">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand"/>
+
+                    <!-- Navbar Toggler -->
+                    <t t-call="website.navbar_toggler">
+                        <t t-set="_toggler_class" t-value="'ml-auto'"/>
+                    </t>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse" class="collapse navbar-collapse">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'ml-auto'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <t t-call="portal.user_dropdown">
+                                <t t-set="_user_name" t-value="true"/>
+                                <t t-set="_item_class" t-value="'nav-item dropdown ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- Language Selector -->
+                            <li>
+                                <t t-call="website.placeholder_header_language_selector">
+                                    <t t-set="_div_classes" t-value="'ml-2'"/>
+                                </t>
+                            </li>
+                        </t>
+                    </div>
+
+                </div>
+            </nav>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 17" template -->
+    <template id="template_navbar_17" inherit_id="website.layout" name="Template Navbar 17" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="o_header_sidebar" separator=" "/>
+        </xpath>
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar" id="sidebar"
+                 class="navbar navbar-light ultimate_sidebar">
+                <div id="top_menu_container" class="h-100">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand"/>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse"
+                         class="flex-column align-self-stretch align-items-stretch">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'mb-auto'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item'"/>
+                                <t t-set="_link_class" t-value="'nav-link'"/>
+                            </t>
+
+                            <!-- User Dropdown -->
+                            <li class="nav-item dropdown" t-ignore="true" t-if="not user_id._is_public()">
+                                <a href="#homeSubmenu" class="nav-link dropdown-toggle" data-toggle="collapse">
+                                    <b>
+                                        <span t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name"/>
+                                    </b>
+                                </a>
+                                <ul class="list-unstyled collapse js_usermenu" id="homeSubmenu">
+                                    <li class="">
+                                        <a class="nav-link" href="/my/home">My Account</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="nav-link" id="#" t-attf-href="/web/session/logout?redirect=/">Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- Language Selector -->
+                            <t t-call="website.placeholder_header_language_selector">
+                                <t t-set="_div_classes" t-value="'px-0'"/>
+                            </t>
+                        </t>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+        <xpath expr="//main" position="inside">
+            <nav class="navbar navbar-default side_nav_icon">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn sidebarCollapse-1">
+                            <i class="fa fa-bars"/>
+                        </button>
+                        <button type="button" id="sidebarCollapse5" class="btn-primary navbar-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 18" template -->
+    <template id="template_navbar_18" inherit_id="website.layout" name="Template Navbar 18" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="o_header_sidebar" separator=" "/>
+        </xpath>
+
+        <xpath expr="//main" position="attributes">
+            <attribute name="id">content</attribute>
+        </xpath>
+
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar" id="sidebar"
+                 class="navbar navbar-light">
+                <div id="top_menu_container" class="h-100">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand"/>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse"
+                         class="flex-column align-self-stretch align-items-stretch">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'mb-auto'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item'"/>
+                                <t t-set="_link_class" t-value="'nav-link'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <li class="nav-item dropdown" t-ignore="true" t-if="not user_id._is_public()">
+                                <a href="#homeSubmenu" class="nav-link dropdown-toggle" data-toggle="collapse">
+                                    <b>
+                                        <span t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name"/>
+                                    </b>
+                                </a>
+                                <ul class="list-unstyled collapse js_usermenu" id="homeSubmenu">
+                                    <li class="">
+                                        <a class="nav-link" href="/my/home">My Account</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="nav-link" id="#" t-attf-href="/web/session/logout?redirect=/">Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Language Selector -->
+                            <t t-call="website.placeholder_header_language_selector">
+                                <t t-set="_div_classes"/>
+                            </t>
+                        </t>
+
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+        <xpath expr="//main" position="inside">
+            <nav class="navbar navbar-default side_nav_icon">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn sidebarCollapse-2">
+                            <i class="fa fa-bars"/>
+                        </button>
+                        <button type="button" id="sidebarCollapse5" class="btn-primary navbar-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 19" template -->
+    <template id="template_navbar_19" inherit_id="website.layout" name="Template Navbar 19" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="o_header_sidebar" separator=" "/>
+        </xpath>
+
+        <xpath expr="//main" position="attributes">
+            <attribute name="id">content</attribute>
+        </xpath>
+
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar" id="sidebar"
+                 class="navbar navbar-light">
+                <div id="top_menu_container" class="h-100">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand"/>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse"
+                         class="flex-column align-self-stretch align-items-stretch">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'mb-auto'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item'"/>
+                                <t t-set="_link_class" t-value="'nav-link'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <li class="nav-item dropdown" t-ignore="true" t-if="not user_id._is_public()">
+                                <a href="#homeSubmenu" class="nav-link dropdown-toggle" data-toggle="collapse">
+                                    <b>
+                                        <span t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name"/>
+                                    </b>
+                                </a>
+                                <ul class="list-unstyled collapse js_usermenu" id="homeSubmenu">
+                                    <li class="">
+                                        <a class="nav-link" href="/my/home">My Account</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="nav-link" id="#" t-attf-href="/web/session/logout?redirect=/">Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Language Selector -->
+                            <t t-call="website.placeholder_header_language_selector">
+                                <t t-set="_div_classes"/>
+                            </t>
+                        </t>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+        <xpath expr="//main" position="inside">
+            <nav class="navbar navbar-default side_nav_icon">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn sidebarCollapse-3">
+                            <i class="fa fa-bars"/>
+                        </button>
+                        <button type="button" id="sidebarCollapse5" class="btn-primary navbar-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+
+        <xpath expr="//main" position="after">
+            <div class="overlay overlay-3"/>
+        </xpath>
+
+    </template>
+
+    <!-- "Navbar 20" template -->
+    <template id="template_navbar_20" inherit_id="website.layout" name="Template Navbar 20" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="o_header_sidebar" separator=" "/>
+        </xpath>
+
+        <xpath expr="//main" position="attributes">
+            <attribute name="id">content</attribute>
+        </xpath>
+
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar" id="sidebar"
+                 class="navbar navbar-light">
+                <div id="top_menu_container" class="h-100">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand"/>
+                    <div class="sidebar-header">
+                        <i id="close" class="fa fa-close"/>
+                        <strong>Co</strong>
+                    </div>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse"
+                         class="flex-column align-self-stretch align-items-stretch">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'mb-auto'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item side_item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item'"/>
+                                <t t-set="_link_class" t-value="'nav-link'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <li class="nav-item dropdown" t-ignore="true" t-if="not user_id._is_public()">
+                                <a href="#homeSubmenu" class="nav-link dropdown-toggle user-menu" data-toggle="collapse">
+                                    <b>
+                                        <span t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name"/>
+                                    </b>
+                                    <i class="fa fa-user d-none"></i>
+                                </a>
+                                <ul class="list-unstyled collapse js_usermenu" id="homeSubmenu">
+                                    <li class="">
+                                        <a class="nav-link" href="/my/home">My Account</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="nav-link" id="#" t-attf-href="/web/session/logout?redirect=/">Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Language Selector -->
+                            <t t-call="website.placeholder_header_language_selector">
+                                <t t-set="_div_classes"/>
+                            </t>
+                        </t>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+        <xpath expr="//main" position="inside">
+            <nav class="navbar navbar-default side_nav_icon">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn sidebar_4 sidebarCollapse-4">
+                            <i class="fa fa-bars"/>
+                        </button>
+                        <button type="button" id="sidebarCollapse5" class="btn-primary navbar-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+        <xpath expr="//main" position="after">
+            <div class="overlay"/>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 21" template -->
+    <template id="template_navbar_21" inherit_id="website.layout" name="Template Navbar 21" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="o_header_sidebar" separator=" "/>
+        </xpath>
+        <xpath expr="//main" position="attributes">
+            <attribute name="id">content</attribute>
+        </xpath>
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar" id="sidebar"
+                 class="navbar navbar-light">
+                <div id="top_menu_container" class="h-100">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand"/>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse"
+                         class="flex-column align-self-stretch align-items-stretch">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'mb-auto'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item'"/>
+                                <t t-set="_link_class" t-value="'nav-link'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <li class="nav-item dropdown" t-ignore="true" t-if="not user_id._is_public()">
+                                <a href="#homeSubmenu" class="nav-link dropdown-toggle" data-toggle="collapse">
+                                    <b>
+                                        <span t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name"/>
+                                    </b>
+                                </a>
+                                <ul class="list-unstyled collapse js_usermenu" id="homeSubmenu">
+                                    <li class="">
+                                        <a class="nav-link" href="/my/home">My Account</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="nav-link" id="#" t-attf-href="/web/session/logout?redirect=/">Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Language Selector -->
+                            <t t-call="website.placeholder_header_language_selector">
+                                <t t-set="_div_classes"/>
+                            </t>
+                        </t>
+
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+        <xpath expr="//main" position="inside">
+            <nav class="navbar navbar-default side_nav_icon">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn sidebarCollapse-5">
+                            <i class="fa fa-bars"/>
+                        </button>
+                        <button type="button" id="sidebarCollapse5" class="btn-primary navbar-btn sidebarCollapse-5">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+        <xpath expr="//main" position="after">
+            <div class="overlay"/>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 22" template -->
+    <template id="template_navbar_22" inherit_id="website.layout" name="Template Navbar 22" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="o_header_sidebar" separator=" "/>
+        </xpath>
+
+        <xpath expr="//main" position="attributes">
+            <attribute name="id">content</attribute>
+        </xpath>
+
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar" id="sidebar"
+                 class="navbar navbar-light">
+                <div id="top_menu_container" class="h-100">
+                    <!-- Brand -->
+                    <div class="sidebar-header">
+                        <i id="close" class="fa fa-close"/>
+                        <t t-call="website.placeholder_header_brand"/>
+                    </div>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse"
+                         class="flex-column align-self-stretch align-items-stretch">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'mb-auto'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item'"/>
+                                <t t-set="_link_class" t-value="'nav-link'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <li class="nav-item dropdown" t-ignore="true" t-if="not user_id._is_public()">
+                                <a href="#homeSubmenu" class="nav-link dropdown-toggle" data-toggle="collapse">
+                                    <b>
+                                        <span t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name"/>
+                                    </b>
+                                </a>
+                                <ul class="list-unstyled collapse js_usermenu" id="homeSubmenu">
+                                    <li class="">
+                                        <a class="nav-link" href="/my/home">My Account</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="nav-link" id="#" t-attf-href="/web/session/logout?redirect=/">Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Language Selector -->
+                            <t t-call="website.placeholder_header_language_selector">
+                                <t t-set="_div_classes" t-value="'ml-2'"/>
+                            </t>
+                        </t>
+
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+        <xpath expr="//main" position="inside">
+            <nav class="navbar navbar-default side_nav_icon">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn sidebarCollapse-6">
+                            <i class="fa fa-bars"/>
+                        </button>
+                        <button type="button" id="sidebarCollapse5" class="btn-primary navbar-btn sidebarCollapse-6">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+
+        <xpath expr="//main" position="after">
+            <div class="overlay"/>
+        </xpath>
+
+    </template>
+
+    <!-- "Navbar 23" template -->
+    <template id="template_navbar_23" inherit_id="website.layout" name="Template Navbar 23" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="o_header_sidebar" separator=" "/>
+        </xpath>
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar" id="sidebar"
+                 class="navbar navbar-light">
+                <div id="top_menu_container" class="h-100">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand"/>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse"
+                         class="flex-column align-self-stretch align-items-stretch">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'mb-auto'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item'"/>
+                                <t t-set="_link_class" t-value="'nav-link'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <li class="nav-item dropdown" t-ignore="true" t-if="not user_id._is_public()">
+                                <a href="#homeSubmenu" class="nav-link dropdown-toggle" data-toggle="collapse">
+                                    <b>
+                                        <span t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name"/>
+                                    </b>
+                                </a>
+                                <ul class="list-unstyled collapse js_usermenu" id="homeSubmenu">
+                                    <li class="">
+                                        <a class="nav-link" href="/my/home">My Account</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="nav-link" id="#" t-attf-href="/web/session/logout?redirect=/">Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Language Selector -->
+                            <t t-call="website.placeholder_header_language_selector">
+                                <t t-set="_div_classes"/>
+                            </t>
+                        </t>
+
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+        <xpath expr="//main" position="inside">
+            <nav class="navbar navbar-default side_nav_icon">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn sidebarCollapse-1">
+                            <i class="fa fa-bars"/>
+                        </button>
+                        <button type="button" id="sidebarCollapse5" class="btn-primary navbar-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 24" template -->
+    <template id="template_navbar_24" inherit_id="website.layout" name="Template Navbar 24" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="o_header_sidebar" separator=" "/>
+        </xpath>
+        <xpath expr="//main" position="attributes">
+            <attribute name="id">content</attribute>
+        </xpath>
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar" id="sidebar"
+                 class="navbar navbar-light">
+                <div id="top_menu_container" class="h-100">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand"/>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse"
+                         class="flex-column align-self-stretch align-items-stretch">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'mb-auto'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item'"/>
+                                <t t-set="_link_class" t-value="'nav-link'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <li class="nav-item dropdown" t-ignore="true" t-if="not user_id._is_public()">
+                                <a href="#homeSubmenu" class="nav-link dropdown-toggle" data-toggle="collapse">
+                                    <b>
+                                        <span t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name"/>
+                                    </b>
+                                </a>
+                                <ul class="list-unstyled collapse js_usermenu" id="homeSubmenu">
+                                    <li class="">
+                                        <a class="nav-link" href="/my/home">My Account</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="nav-link" id="#" t-attf-href="/web/session/logout?redirect=/">Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Language Selector -->
+                            <t t-call="website.placeholder_header_language_selector">
+                                <t t-set="_div_classes"/>
+                            </t>
+                        </t>
+
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+        <xpath expr="//main" position="inside">
+            <nav class="navbar navbar-default side_nav_icon">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn sidebarCollapse-2">
+                            <i class="fa fa-bars"/>
+                        </button>
+                        <button type="button" id="sidebarCollapse5" class="btn-primary navbar-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 25" template -->
+    <template id="template_navbar_25" inherit_id="website.layout" name="Template Navbar 25" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="o_header_sidebar" separator=" "/>
+        </xpath>
+
+        <xpath expr="//main" position="attributes">
+            <attribute name="id">content</attribute>
+        </xpath>
+
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar" id="sidebar"
+                 class="navbar navbar-light">
+                <div id="top_menu_container" class="h-100">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand"/>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse"
+                         class="flex-column align-self-stretch align-items-stretch">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'mb-auto'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item'"/>
+                                <t t-set="_link_class" t-value="'nav-link'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <li class="nav-item dropdown" t-ignore="true" t-if="not user_id._is_public()">
+                                <a href="#homeSubmenu" class="nav-link dropdown-toggle" data-toggle="collapse">
+                                    <b>
+                                        <span t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name"/>
+                                    </b>
+                                </a>
+                                <ul class="list-unstyled collapse js_usermenu" id="homeSubmenu">
+                                    <li class="">
+                                        <a class="nav-link" href="/my/home">My Account</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="nav-link" id="#" t-attf-href="/web/session/logout?redirect=/">Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Language Selector -->
+                            <t t-call="website.placeholder_header_language_selector">
+                                <t t-set="_div_classes"/>
+                            </t>
+                        </t>
+
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+        <xpath expr="//main" position="inside">
+            <nav class="navbar navbar-default side_nav_icon">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn sidebarCollapse-3">
+                            <i class="fa fa-bars"/>
+                        </button>
+                        <button type="button" id="sidebarCollapse5" class="btn-primary navbar-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+        <xpath expr="//main" position="after">
+            <div class="overlay overlay-3"/>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 26" template -->
+    <template id="template_navbar_26" inherit_id="website.layout" name="Template Navbar 26" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="o_header_sidebar" separator=" "/>
+        </xpath>
+
+        <xpath expr="//main" position="attributes">
+            <attribute name="id">content</attribute>
+        </xpath>
+
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar" id="sidebar"
+                 class="navbar navbar-light">
+                <div id="top_menu_container" class="h-100">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand"/>
+                    <div class="sidebar-header">
+                        <i id="close" class="fa fa-close"/>
+                        <strong>Co</strong>
+                    </div>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse"
+                         class="flex-column align-self-stretch align-items-stretch">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'mb-auto'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item side_item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item'"/>
+                                <t t-set="_link_class" t-value="'nav-link'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <li class="nav-item dropdown" t-ignore="true" t-if="not user_id._is_public()">
+                                <a href="#homeSubmenu" class="nav-link dropdown-toggle user-menu" data-toggle="collapse">
+                                    <b>
+                                        <span t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name"/>
+                                    </b>
+                                    <i class="fa fa-user d-none"></i>
+                                </a>
+                                <ul class="list-unstyled collapse js_usermenu" id="homeSubmenu">
+                                    <li class="">
+                                        <a class="nav-link" href="/my/home">My Account</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="nav-link" id="#" t-attf-href="/web/session/logout?redirect=/">Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Language Selector -->
+                            <t t-call="website.placeholder_header_language_selector">
+                                <t t-set="_div_classes"/>
+                            </t>
+                        </t>
+
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+
+        <xpath expr="//main" position="inside">
+            <nav class="navbar navbar-default side_nav_icon">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn sidebarCollapse-4">
+                            <i class="fa fa-bars"/>
+                        </button>
+                        <button type="button" id="sidebarCollapse5" class="btn-primary navbar-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+
+        <xpath expr="//main" position="after">
+            <div class="overlay"/>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 27" template -->
+    <template id="template_navbar_27" inherit_id="website.layout" name="Template Navbar 27" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="o_header_sidebar" separator=" "/>
+        </xpath>
+        <xpath expr="//main" position="attributes">
+            <attribute name="id">content</attribute>
+        </xpath>
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar" id="sidebar"
+                 class="navbar navbar-light">
+                <div id="top_menu_container" class="h-100">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand"/>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse"
+                         class="flex-column align-self-stretch align-items-stretch">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'mb-auto'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item'"/>
+                                <t t-set="_link_class" t-value="'nav-link'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <li class="nav-item dropdown" t-ignore="true" t-if="not user_id._is_public()">
+                                <a href="#homeSubmenu" class="nav-link dropdown-toggle" data-toggle="collapse">
+                                    <b>
+                                        <span t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name"/>
+                                    </b>
+                                </a>
+                                <ul class="list-unstyled collapse js_usermenu" id="homeSubmenu">
+                                    <li class="">
+                                        <a class="nav-link" href="/my/home">My Account</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="nav-link" id="#" t-attf-href="/web/session/logout?redirect=/">Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Language Selector -->
+                            <t t-call="website.placeholder_header_language_selector">
+                                <t t-set="_div_classes"/>
+                            </t>
+                        </t>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+        <xpath expr="//main" position="inside">
+            <nav class="navbar navbar-default side_nav_icon">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn">
+                            <i class="fa fa-bars"/>
+                        </button>
+                        <button type="button" id="sidebarCollapse5" class="btn-primary navbar-btn sidebarCollapse-5">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+    </template>
+
+    <!-- "Navbar 28" template -->
+    <template id="template_navbar_28" inherit_id="website.layout" name="Template Navbar 28" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="o_header_sidebar" separator=" "/>
+        </xpath>
+
+        <xpath expr="//main" position="attributes">
+            <attribute name="id">content</attribute>
+        </xpath>
+
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar" id="sidebar"
+                 class="navbar navbar-light">
+                <div id="top_menu_container" class="h-100">
+                    <!-- Brand -->
+                    <div class="sidebar-header">
+                        <i id="close" class="fa fa-close"/>
+                        <t t-call="website.placeholder_header_brand"/>
+                    </div>
+
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse"
+                         class="flex-column align-self-stretch align-items-stretch">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'mb-auto'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item'"/>
+                                <t t-set="_link_class" t-value="'nav-link'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <li class="nav-item dropdown" t-ignore="true" t-if="not user_id._is_public()">
+                                <a href="#homeSubmenu" class="nav-link dropdown-toggle" data-toggle="collapse">
+                                    <b>
+                                        <span t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name"/>
+                                    </b>
+                                </a>
+                                <ul class="list-unstyled collapse js_usermenu" id="homeSubmenu">
+                                    <li class="">
+                                        <a class="nav-link" href="/my/home">My Account</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="nav-link" id="#" t-attf-href="/web/session/logout?redirect=/">Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Language Selector -->
+                            <t t-call="website.placeholder_header_language_selector">
+                                <t t-set="_div_classes" t-value="'ml-2'"/>
+                            </t>
+                        </t>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+
+        <xpath expr="//main" position="inside">
+            <nav class="navbar navbar-default side_nav_icon">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn">
+                            <i class="fa fa-bars"/>
+                        </button>
+                        <button type="button" id="sidebarCollapse5" class="btn-primary navbar-btn sidebarCollapse-6">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+
+        <xpath expr="//main" position="after">
+            <div class="overlay"/>
+        </xpath>
+    </template>
+
+
+</odoo>

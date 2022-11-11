@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Image Grid 5" id="image_grid_5">
+        <section class="pt64 pb64" id="image_grid_5" data-visible="image_grid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 px-2 mb16">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid5">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-300x300.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid-content text-center text-white">
+                                    <h3 class="description">Block Title</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 px-2 mb16">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid5">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-300x300.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid-content text-center text-white">
+                                    <h3 class="description">Block Title</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 px-2 mb16">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid5">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-300x300.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid-content text-center text-white">
+                                    <h3 class="description">Block Title</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 px-2 mb16">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid5">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-300x300.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid-content text-center text-white">
+                                    <h3 class="description">Block Title</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 px-2 mb16">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid5">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-300x300.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid-content text-center text-white">
+                                    <h3 class="description">Block Title</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 px-2 mb16">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid5">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-300x300.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid-content text-center text-white">
+                                    <h3 class="description">Block Title</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

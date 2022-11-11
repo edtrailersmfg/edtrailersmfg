@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Ecommerce Block 2" id="ecommerce_block_2">
+        <section class="pt64 pb64" id="ecommerce_block_2" data-visible="ecommerce_blocks">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 co-md-4 col-lg-4 col-sm-4 mt8 mb8">
+                        <div class="hover_effect">
+                            <a href="#">
+                                <img class="img-fluid d-block mx-auto"
+                                     src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-720x948.png"/>
+                            </a>
+                            <div class="img-content-1 col-12">
+                                <h3 class="mb16">HUGE<br/>SALE<br/>AMAZING<br/>COLLECTION
+                                </h3>
+                                <p>Lorem ipsum<br/>dolor sit amet.
+                                </p>
+                                <div class="pt16 pb16"
+                                     data-name="Buttons">
+                                    <a href="#"
+                                       class="mt8 mb8 o_default_snippet_text"
+                                       contenteditable="true">View More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 co-md-4 col-lg-4 col-sm-4 mt8 mb8">
+                        <div class="hover_effect">
+                            <a href="#">
+                                <img class="img-fluid d-block mx-auto"
+                                     src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-720x948.png"/>
+                            </a>
+                            <div class="img-content-2 text-center col-12">
+                                <h3>It's all in the</h3>
+                                <h2>DETAILS</h2>
+                                <p>Sed do eiusmod tempor incididunt.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 co-md-4 col-lg-4 col-sm-4 mt8 mb8">
+                        <div class="hover_effect">
+                            <a href="#">
+                                <img class="img-fluid d-block mx-auto"
+                                     src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-720x948.png"/>
+                            </a>
+                            <div class="img-content-1 text-center col-12">
+                                <h6>MOBILE</h6>
+                                <h3>MEGA SALE
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet.
+                                </p>
+                                <div class="text-center pt16 pb16"
+                                     data-name="Buttons">
+                                    <a href="#"
+                                       class="mt8 mb8 o_default_snippet_text"
+                                       contenteditable="true">View More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 co-md-12 col-lg-12 col-sm-12 mt8 mb8 image_block_4">
+                        <div class="hover_effect">
+                            <a href="#">
+                                <img class="img-fluid d-block mx-auto"
+                                     src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-1140x174.png"/>
+                            </a>
+                            <div class="img-content-1 col-12 text-center">
+                                <h3>DEALS + PROMOS
+                                </h3>
+                                <p>Ut enim ad minim veniam.
+                                </p>
+                                <div class="text-center"
+                                     data-name="Buttons">
+                                    <a href="#"
+                                       class="mt8 mb8 o_default_snippet_text"
+                                       contenteditable="true">View More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

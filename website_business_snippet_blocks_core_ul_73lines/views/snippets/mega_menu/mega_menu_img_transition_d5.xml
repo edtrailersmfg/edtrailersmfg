@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="mega_menu_img_transition_5" name="Mega Menu Img Transition 5" groups="base.group_user">
+        <section id="menu_img_transition_5" class="pt32 pb32" data-visible="mega_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-9 col-md-12 col-sm-12">
+                        <div class="row">
+                            <div class="col-12 col-lg-3 col-md-3 col-sm-12 mb16">
+                                <div class="menu_box">
+                                    <div class="text-center mb16">
+                                        <a href="#" class="font-weight-bold">Short Headline</a>
+                                    </div>
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                         alt="image" title="image"
+                                         class="img-fluid mb8 mt8 d-block mx-auto"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 col-md-3 col-sm-12 mb16">
+                                <div class="menu_box">
+                                    <div class="text-center mb16">
+                                        <a href="#" class="font-weight-bold">Short Headline</a>
+                                    </div>
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                         alt="image" title="image"
+                                         class="img-fluid mb8 mt8 d-block mx-auto"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 col-md-3 col-sm-12 mb16">
+                                <div class="menu_box">
+                                    <div class="text-center mb16">
+                                        <a href="#" class="font-weight-bold">Short Headline</a>
+                                    </div>
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                         alt="image" title="image"
+                                         class="img-fluid mb8 mt8 d-block mx-auto"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 col-md-3 col-sm-12 mb16">
+                                <div class="menu_box">
+                                    <div class="text-center mb16">
+                                        <a href="#" class="font-weight-bold">Short Headline</a>
+                                    </div>
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                         alt="image" title="image"
+                                         class="img-fluid mb8 mt8 d-block mx-auto"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 col-md-3 col-sm-12 mb16">
+                                <div class="menu_box">
+                                    <div class="text-center mb16">
+                                        <a href="#" class="font-weight-bold">Short Headline</a>
+                                    </div>
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                         alt="image" title="image"
+                                         class="img-fluid mb8 mt8 d-block mx-auto"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 col-md-3 col-sm-12 mb16">
+                                <div class="menu_box">
+                                    <div class="text-center mb16">
+                                        <a href="#" class="font-weight-bold">Short Headline</a>
+                                    </div>
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                         alt="image" title="image"
+                                         class="img-fluid mb8 mt8 d-block mx-auto"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 col-md-3 col-sm-12 mb16">
+                                <div class="menu_box">
+                                    <div class="text-center mb16">
+                                        <a href="#" class="font-weight-bold">Short Headline</a>
+                                    </div>
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                         alt="image" title="image"
+                                         class="img-fluid mb8 mt8 d-block mx-auto"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 col-md-3 col-sm-12 mb16">
+                                <div class="menu_box">
+                                    <div class="text-center mb16">
+                                        <a href="#" class="font-weight-bold">Short Headline</a>
+                                    </div>
+                                    <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-13.png"
+                                         alt="image" title="image"
+                                         class="img-fluid mb8 mt8 d-block mx-auto"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3 col-md-3 col-sm-12 d-md-none d-lg-block">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/placeholders/placeholders-2.png"
+                             alt="image" title="image"
+                             class="img-fluid mb8 mt8 d-block mx-auto"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

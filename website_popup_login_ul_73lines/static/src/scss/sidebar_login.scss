@@ -1,0 +1,147 @@
+//------------------Filter Sidebar Start--------------//
+header.sidebar-login-model {
+    z-index: unset !important;
+}
+#website_sidebar_login_ul_73lines {
+//     @media (max-width: 767px){
+//         &.categories-filter-drawer-login {
+//             box-shadow: unset !important;
+//             left: unset !important;
+//             position: unset !important;
+//             z-index: 0 !important;
+//         }
+//     }
+    &.categories-filter-drawer-login {
+         right: -105%;;
+            height: 100%;
+            overflow-x: hidden;
+            z-index: 1200;
+            background-color: o-color('white');
+            box-shadow: $box-shadow;
+            padding: 12px;
+            position: fixed;
+            top: 0;
+            left: auto;
+            bottom: auto;
+            transition: 0.4s;
+            max-width: 100%;
+            width: 350px;
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+            }
+            &.open {
+                padding: 15px;
+                right: 0;
+            }
+             @include media-breakpoint-up(md) {
+                &::-webkit-scrollbar {
+                    width: 4px;
+                }
+                &::-webkit-scrollbar-track {
+                    background-color: o-color('primary');
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: o-color('primary');
+                }
+            }
+    }
+    &:not(.categories-filter-drawer-login) {
+        @include media-breakpoint-up(lg) {
+            padding-top: 1rem;
+            border-right: 1px solid #dd;
+        }
+        @include media-breakpoint-down(md) {
+             left: -105%;;
+                height: 100%;
+                overflow-x: hidden;
+                z-index: 1200;
+                background-color: o-color('white');
+                box-shadow: $box-shadow;
+                padding: 12px;
+                position: fixed;
+                top: 0;
+                right: auto;
+                bottom: auto;
+                transition: 0.4s;
+                max-width: 100%;
+                width: 350px;
+                @include media-breakpoint-down(sm) {
+                    width: 100%;
+                }
+                &.open {
+                    padding: 15px;
+                    left: 0;
+                }
+                 @include media-breakpoint-up(md) {
+                    &::-webkit-scrollbar {
+                        width: 4px;
+                    }
+                    &::-webkit-scrollbar-track {
+                        background-color: o-color('primary');
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background-color: o-color('primary');
+                    }
+                }
+        }
+    }
+    .categories-filter-remove-login {
+        font-size: 20px;
+        color: o-color('black');
+        transition: 0.2s;
+        &:hover {
+            color: o-color('danger');
+        }
+    }
+}
+.login_sidebar_remove{
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    text-align: center;
+    line-height: 32px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    color: #000;
+    font-size: 32px;
+}
+.modal-backdrop.filter-sideabr-back.show {
+    backdrop-filter: blur(2px);
+    background-color: #8e8e8e;
+    //opacity: 3;
+    @supports not ((-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px))) {
+       // opacity: 0.3;
+        background-color: #333333;
+    }
+}
+
+@media (max-width: 767px){
+        .categories-filter-drawer-toggle-login{
+            display:none;
+        }
+}
+
+.btn-toggle-filter-ultimate{
+    left: 15px;
+    position: absolute;
+}
+
+
+@media only screen and (max-width: 1023px) and (min-width: 767px)  {
+     .btn-toggle-filter-ultimate{
+        left: unset;
+        position: unset;
+        //width: 23%;
+        margin-right: 6px;
+    }
+
+     #website_sidebar_login_ul_73lines{
+        .btn-link{
+            display: block;
+        }
+     }
+}
+
+.oe_website_login_container{
+    color: #000;
+}

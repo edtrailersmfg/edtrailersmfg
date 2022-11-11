@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="social_share_icon_7" name="Social Share Icon 7">
+        <section class="pt64 pb64"
+                 id="social_share_icon_7" data-visible="social_share_icons">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="icon_bg">
+                            <a t-if="res_company.social_facebook" t-att-href="res_company.social_facebook"
+                               class="btn btn_facebok mb8">
+                                <span>
+                                    <i class="fa  fa-facebook-square"/>
+                                </span>
+                                <span>Facebook</span>
+                            </a>
+                            <a t-if="res_company.social_twitter" t-att-href="res_company.social_twitter"
+                               class="btn btn_twitter mb8">
+                                <span>
+                                    <i class="fa  fa-twitter"/>
+                                </span>
+                                <span>Twitter</span>
+                            </a>
+                            <a t-if="res_company.social_linkedin" t-att-href="res_company.social_linkedin"
+                               class="btn btn_linkedin mb8">
+                                <span>
+                                    <i class="fa  fa-linkedin"/>
+                                </span>
+                                <span>Linkedin</span>
+                            </a>
+                            <a t-if="res_company.social_youtube" t-att-href="res_company.social_youtube"
+                               class="btn btn_youtube mb8">
+                                <span>
+                                    <i class="fa  fa-youtube-play"/>
+                                </span>
+                                <span>Youtube</span>
+                            </a>
+                            <a t-if="res_company.social_github" t-att-href="res_company.social_github"
+                               class="btn btn_github mb8">
+                                <span>
+                                    <i class="fa  fa-github"/>
+                                </span>
+                                <span>Github</span>
+                            </a>
+                            <a t-if="res_company.social_instagram" t-att-href="res_company.social_instagram"
+                               class="btn btn_instagram mb8">
+                                <span>
+                                    <i class="fa  fa-instagram"/>
+                                </span>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

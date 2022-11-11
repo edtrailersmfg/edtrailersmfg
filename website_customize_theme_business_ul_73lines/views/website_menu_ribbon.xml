@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="website_menu_ribbon_view_form" model="ir.ui.view">
+        <field name="name">website.menu.ribbon.ultimate.view.form</field>
+        <field name="model">website.menu.ribbon.ultimate</field>
+        <field name="arch" type="xml">
+            <form string="Ribbon Name">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="menu_color_back"/>
+                            <field name="menu_color_text"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="website_menu_ribbon_view_tree" model="ir.ui.view">
+        <field name="name">website.menu.ribbon.ultimate.view.tree</field>
+        <field name="model">website.menu.ribbon.ultimate</field>
+        <field name="arch" type="xml">
+            <tree string="Ribbon Name">
+                <field name="name"/>
+                <field name="menu_color_back"/>
+                <field name="menu_color_text"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="website_menu_ribbon_view_search" model="ir.ui.view">
+        <field name="name">website.menu.ribbon.ultimate.view.search</field>
+        <field name="model">website.menu.ribbon.ultimate</field>
+        <field name="arch" type="xml">
+            <search string="Ribbon Name">
+                <field name="name"/>
+                <field name="menu_color_back"/>
+                <field name="menu_color_text"/>
+                <group>
+                    <filter string="Ribbon Color" name="menu_color_back" domain="" context="{'group_by': 'menu_color_back'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="website_menu_ribbon_action" model="ir.actions.act_window">
+        <field name="name">Menu Ribbons</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">website.menu.ribbon.ultimate</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Menu Ribbons"
+            id="menu_website_ribbon"
+            action="website_menu_ribbon_action"
+            parent="website.menu_website_global_configuration"
+            sequence="70"
+            groups="base.group_no_one"/>
+
+</odoo>

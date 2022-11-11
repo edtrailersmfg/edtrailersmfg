@@ -1,0 +1,15 @@
+.view-switcher {
+  padding: 6px 12px !important;
+  margin: 0px 5px;
+  border-radius: 4px !important;
+}
+@media (min-width: 400px) {
+  .oe_product.oe_list {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+#product_pager_bottom > .row {
+  justify-content: center;
+}
+

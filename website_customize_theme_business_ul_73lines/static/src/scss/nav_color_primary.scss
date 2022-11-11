@@ -1,0 +1,50 @@
+@if o-website-value('header-links-style') == 'option-nav-color-primary' {
+    #top_menu{
+        li{
+            a{
+                &:hover,&.active{
+                    color:theme-color('primary') !important;
+                    background-color:transparent!important;
+                }
+            }
+
+            a[aria-expanded="true"] {
+                color:theme-color('primary')!important;
+                background:transparent !important;
+            }
+
+            &.active{
+                 >a{
+
+                    background-color:transparent !important;
+                    color:theme-color('primary') !important;
+                 }
+            }
+            .dropdown-menu{
+                //background-color: #fff;
+                //border-top: 3px solid theme-color('beta');
+            }
+
+        }
+        .js_language_selector{
+            margin-left: 0px !important;
+        }
+        .js_language_selector .dropdown-toggle.btn-outline-secondary:hover, .js_language_selector.show > .btn-outline-secondary.dropdown-toggle {
+                color:theme-color('primary') !important;
+                background-color:transparent!important;
+        }
+        .js_language_selector.dropdown.show > .btn-outline-secondary.dropdown-toggle:focus, .btn-outline-secondary:focus {
+            box-shadow: unset;
+        }
+    }
+
+    #sidebar #top_menu{
+        li>a, .js_language_selector.dropdown{
+            padding: 0.5rem 0rem;
+
+        }
+    //     .js_language_selector .btn-outline-secondary{
+    //         padding: 0px;
+    //     }
+    }
+}

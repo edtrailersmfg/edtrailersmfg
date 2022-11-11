@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Tab 9" id="tab_9">
+        <section class="pt64 pb64" id="tab_9" data-visible="tabs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 pb48 text-center">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="responsive-tabs my-2">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-3 pr-lg-0">
+                                    <nav>
+                                        <div class="nav nav-tabs flex-lg-column justify-content-between">
+                                            <a class="nav-item nav-link active p-2 px-lg-2 py-lg-4 flex-fill justify-content-lg-start"
+                                               data-toggle="tab" href="#plumbing">
+                                                <div class="tab-icon">
+                                                    <i class="fa fa-wrench"></i>
+                                                </div>
+                                                <div class="tab-text d-none d-lg-inline-flex">
+                                                    Plumbing
+                                                </div>
+                                            </a>
+                                            <a class="nav-item nav-link p-2 px-lg-2 py-lg-4 flex-fill justify-content-lg-start"
+                                               data-toggle="tab" href="#electricity">
+                                                <div class="tab-icon">
+                                                    <i class="fa fa-plug"></i>
+                                                </div>
+                                                <div class="tab-text d-none d-lg-inline-flex">
+                                                    Electricity
+                                                </div>
+                                            </a>
+
+                                            <a class="nav-item nav-link p-2 px-lg-2 py-lg-4 flex-fill justify-content-lg-start"
+                                               data-toggle="tab" href="#carpentry">
+                                                <div class="tab-icon">
+                                                    <i class="fa fa-cogs"></i>
+                                                </div>
+                                                <div class="tab-text d-none d-lg-inline-flex">
+                                                    Carpentry
+                                                </div>
+                                            </a>
+
+                                            <a class="nav-item nav-link p-2 px-lg-2 py-lg-4 flex-fill justify-content-lg-start"
+                                               data-toggle="tab" href="#decoration">
+                                                <div class="tab-icon">
+                                                    <i class="fa fa-paint-brush"></i>
+                                                </div>
+                                                <div class="tab-text d-none d-lg-inline-flex">
+                                                    Decoration
+                                                </div>
+                                            </a>
+
+                                            <a class="nav-item nav-link p-2 px-lg-2 py-lg-4 flex-fill justify-content-lg-start"
+                                               data-toggle="tab" href="#refurbishments">
+                                                <div class="tab-icon">
+                                                    <i class="fa fa-pencil-square-o"></i>
+                                                </div>
+                                                <div class="tab-text d-none d-lg-inline-flex">
+                                                    Refurbishments
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </nav>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-9 pl-lg-0">
+                                    <div class="tab-content" id="nav-tabContent">
+                                        <div class="tab-pane  fade show active oe_structure oe_empty" id="plumbing">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p class="p-3">
+                                                       <span style="font-size:20px;">THIS IS FIRST CONTENT</span><br/>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                                                        ab reprehenderit officia neque doloremque obcaecati quam, cum a
+                                                        vitae numquam nam recusandae est necessitatibus, autem
+                                                        praesentium, eum quia veritatis quae?
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane  fade oe_structure oe_empty" id="electricity">
+                                            <p class="p-3">
+                                                <span style="font-size:20px;">THIS IS SECOND CONTENT</span><br/>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ab
+                                                reprehenderit officia neque doloremque obcaecati quam, cum a vitae
+                                                numquam nam recusandae est necessitatibus, autem praesentium, eum quia
+                                                veritatis quae?
+                                            </p>
+                                        </div>
+                                        <div class="tab-pane  fade oe_structure oe_empty" id="carpentry">
+                                            <p class="p-3">
+                                                <span style="font-size:20px;">THIS IS THIRD CONTENT</span><br/>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ab
+                                                reprehenderit officia neque doloremque obcaecati quam, cum a vitae
+                                                numquam nam recusandae est necessitatibus, autem praesentium, eum quia
+                                                veritatis quae?
+                                            </p>
+                                        </div>
+                                        <div class="tab-pane  fade oe_structure oe_empty" id="decoration">
+                                            <p class="p-3">
+                                                <span style="font-size:20px;">THIS IS FORTH CONTENT</span><br/>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ab
+                                                reprehenderit officia neque doloremque obcaecati quam, cum a vitae
+                                                numquam nam recusandae est necessitatibus, autem praesentium, eum quia
+                                                veritatis quae?
+                                            </p>
+                                        </div>
+                                        <div class="tab-pane  fade oe_structure oe_empty" id="refurbishments">
+                                            <p class="p-3">
+                                                <span style="font-size:20px;">THIS IS FIFTH CONTENT</span><br/>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ab
+                                                reprehenderit officia neque doloremque obcaecati quam, cum a vitae
+                                                numquam nam recusandae est necessitatibus, autem praesentium, eum quia
+                                                veritatis quae?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

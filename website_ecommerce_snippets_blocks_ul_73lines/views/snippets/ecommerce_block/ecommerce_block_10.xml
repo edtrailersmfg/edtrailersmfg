@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="ecommerce_block_10" name="Ecommerce BLock 10">
+        <section class="pt64 pb64" id="ecommerce_block_10" data-visible="ecommerce_blocks">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 pt8 pb8" style="padding: 0 10px;">
+                        <div class="oe_structure oe_empty">
+                            <div class="box_10 home-ads1 text-center">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-292x437.png"
+                                     class="img-fluid"/>
+                                <div class="box-content" style="top: auto;bottom: 1%;">
+                                    <h2>Block Title</h2>
+                                    <p>See all and find yours</p>
+                                    <p>
+                                        <a class="btn btn-dark rounded-0" href="#">SHOP NOW</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 pt8 pb8" style="padding: 0 10px;">
+                        <div class="oe_structure oe_empty">
+                            <div class="box_10 home-ads2  text-center">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-292x437.png"
+                                     class="img-fluid"/>
+                                <div class="box-content text-center" style="top: 0%;bottom: auto;">
+                                    <h2>Block Title</h2>
+                                    <p>See all and find yours</p>
+                                    <p>
+                                        <a class="btn btn-dark rounded-0" href="#">SHOP NOW</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 pt8 pb8" style="padding: 0 10px;">
+                        <div class="oe_structure oe_empty">
+                            <div class="box_10 home-ads3 text-center">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-292x437.png"
+                                     class="img-fluid"/>
+                                <div class="box-content-3">
+                                    <h2 class="text-white text-center">Block Title</h2>
+                                    <p class="text-white text-center">See all and find yours</p>
+                                    <p class="text-center">
+                                        <a class="btn btn-light rounded-0" href="#">SHOP NOW</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 pt8 pb8" style="padding: 0 10px;">
+                        <div class="oe_structure oe_empty">
+                            <div class="box_10 home-ads4  text-center">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-292x437.png"
+                                     class="img-fluid"/>
+                                <div class="box-content text-center" style="top: auto;bottom: 0;">
+                                    <h2>Block Title</h2>
+                                    <p>See all and find yours</p>
+                                    <p>
+                                        <a class="btn btn-dark rounded-0" href="#"
+                                           style="position: relative; z-index: 1;">
+                                            SHOP NOW
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

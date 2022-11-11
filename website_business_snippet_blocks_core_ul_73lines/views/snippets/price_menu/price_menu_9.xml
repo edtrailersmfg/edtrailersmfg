@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Price Menu 9" id="price_menu_9">
+        <section class="pt64 pb64" id="price_menu_9" data-visible="price_menu">
+            <div class="container">
+                <h2 class="text-center">Price Menu</h2>
+                <p class="text-center mb48">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="border p-4">
+                            <h5 class="pull-right">$10.00</h5>
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 class="img-fluid"/>
+                            <div class="pt24 pb24">
+                                <h3>Menu Item 1</h3>
+                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames…
+                                </p>
+                                <a href="#" class="btn btn-primary">VIEW MORE
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="border p-4">
+                            <h5 class="pull-right">$10.00</h5>
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 class="img-fluid"/>
+                            <div class="pt24 pb24">
+                                <h3>Menu Item 2</h3>
+                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames…
+                                </p>
+                                    <a href="#" class="btn btn-primary">VIEW MORE
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="border p-4">
+                            <h5 class="pull-right">$10.00</h5>
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                 class="img-fluid"/>
+                            <div class="pt24 pb24">
+
+                                <h3>Menu Item 3</h3>
+
+                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames…
+                                </p>
+
+                                    <a href="#" class="btn btn-primary">VIEW MORE
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Searchbox One" id="searchbox_1">
+        <section id="searchbox_1" data-visible="mid_headears">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+                        <t t-call="website_ecommerce_snippets_blocks_ul_73lines.s_searchbar_input_ultimate"></t>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

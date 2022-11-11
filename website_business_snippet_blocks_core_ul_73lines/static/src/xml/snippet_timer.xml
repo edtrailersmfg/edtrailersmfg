@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="snippet_timer.model_time_dialog">
+        <div t-attf-class="modal#{technical ? ' o_technical_modal' : ''}#{fullscreen ? ' o_modal_full': ''}" id="userlist" role="dialog" style="z-index:1050">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Time</h4>
+                        <button class="close" data-dismiss="modal" type="button">x</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+
+
+                            <label class="col-sm-3 control-label text-left">Date  </label>
+                            <div class="form-group col-sm-9">
+                                <input class="form-control" data-min="0" id="date" name="date" required="required" type="date" t-att-min="new Date().toJSON().split('T')[0]" value="0"/>
+                            </div>
+                            <label class="col-sm-3 control-label text-left">Hours  </label>
+                            <div class="form-group col-sm-9">
+                                <input class="form-control" data-min="0" id="hours" name="hours" required="required" type="text" value="0"/>
+                            </div>
+                            <label class="col-sm-3 control-label text-left">Minutes  </label>
+                            <div class="form-group col-sm-9">
+                                <input class="form-control" data-min="0" id="minutes" name="min" required="required" type="text" value="0"/>
+                            </div>
+                            <label class="col-sm-3 control-label text-left">Second  </label>
+                            <div class="form-group col-sm-9">
+                                <input class="form-control" data-min="0" id="second" name="sec" required="required" type="text" value="0"/>
+                            </div>
+                            <label class="col-sm-3 control-label text-left">Time Over Message  </label>
+                            <div class="form-group col-sm-9">
+                                <input class="form-control" data-min="0" id="time_over" name="time_over" required="required" type="text" value="Sale Is Over Now"/>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" id="timer_cancel" type="button">Cancel</button>
+                        <button class="btn btn-danger" id="timer_apply" type="submit">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

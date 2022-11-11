@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Footer 20" id="footer_20">
+        <section class="pt64 pb32" id="footer_20" data-visible="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                        <h5 class="pb16">About BooHost</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim adminim veniam, quis nostrud exercitation ullamco
+                            labo ris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            volup tate velit esse cillum dolore eu fugiat nulla pari atur. Excepteur sint occaecat
+                            cupidatat non proidentsunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-2">
+                        <h5 class="pb16">About BooHost</h5>
+                        <ul class="list-unstyled">
+                            <li>Home</li>
+                            <li>Domain</li>
+                            <li>Web Hosting</li>
+                            <li>Features</li>
+                            <li>Pricing</li>
+                            <li>Testimonals</li>
+                            <li>Blog</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-2">
+                        <h5 class="pb16">My Account</h5>
+                        <ul class="list-unstyled">
+                            <li>Create an Account</li>
+                            <li>My Renewals</li>
+                            <li>Sign in</li>
+                            <li>Forget Password</li>
+                            <li>Protect Account</li>
+                            <li>Delete Account</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-2">
+                        <h5 class="pb16">Resources</h5>
+                        <ul class="list-unstyled">
+                            <li>Website Builder</li>
+                            <li>Domain Transfer</li>
+                            <li>Hot Deal</li>
+                            <li>VPS Server</li>
+                            <li>Cloud Server</li>
+                            <li>Panel Setup</li>
+                            <li>Server Optimized</li>
+                            <li>Site Protection</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-2">
+                        <h5 class="pb16">Support</h5>
+                        <ul class="list-unstyled">
+                            <li>Submit Ticket</li>
+                            <li>FAQs</li>
+                            <li>Help</li>
+                            <li>Contact Us</li>
+                            <li>Knowledge</li>
+                            <li>Report Abuse</li>
+                        </ul>
+                    </div>
+                    <hr></hr>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-lg-flex align-items-center pb16">
+                        <h6>Sign up for special offer:</h6>
+                        <div class="input-group js_subscribe p-0" data-list-id="0">
+                            <input type="email" name="email" class="js_subscribe_email form-control rounded-0"
+                                   placeholder="your email..."/>
+                            <span class="input-group-append">
+                                <a role="button" href="#"
+                                   class="btn btn-primary js_subscribe_btn rounded-0">Subscribe
+                                </a>
+                                <a role="button" href="#"
+                                   class="btn btn-success js_subscribed_btn d-none rounded-0"
+                                   disabled="disabled">Thanks
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-lg-flex align-items-center pb16">
+                        <h6>We Accept:</h6>
+                        <i class="fa fa-3x fa-cc-visa px-2"></i>
+                        <i class="fa fa-3x fa-cc-mastercard px-2"></i>
+                        <i class="fa fa-3x fa-cc-paypal px-2"></i>
+                        <i class="fa fa-3x fa-cc-amex px-2"></i>
+                        <i class="fa fa-3x fa-cc-discover px-2"></i>
+
+                    </div>
+                    <hr></hr>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light">
+            <div class="container">
+                <div class="row p-4">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb16 text-center">
+                        <ul>
+                            <a t-att-href="res_company.social_facebook">
+                                <i class="fa fa-facebook px-2"></i>
+                            </a>
+                            <a t-att-href="res_company.social_twitter">
+                                <i class="fa fa-twitter px-2"></i>
+                            </a>
+                            <a t-att-href="res_company.social_linkedin">
+                                <i class="fa fa-linkedin px-2"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-pinterest px-2"></i>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb8">
+                        <div>
+                            Copyright &amp;copy;
+                            <span t-field="res_company.name">Company name
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-md-right text-lg-right">
+                        <div>
+                            Responsive Odoo theme,
+                            <span>
+                                Made with
+                                <i class="fa fa-heart"/>
+                                by
+                                <strong>&lt; 73Lines &gt;
+                                </strong>
+                            </span>
+                        </div>
+<!--                        <div>-->
+<!--                            <t t-call="website.language_selector"/>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

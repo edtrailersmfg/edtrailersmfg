@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="social_share_icon_4" name="Social Share Icon 4">
+        <section class="pt64 pb64"
+                 id="social_share_icon_4" data-visible="social_share_icons">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="icon_bg">
+                            <a t-if="res_company.social_facebook" t-att-href="res_company.social_facebook"
+                               class="btn mb8">
+                                <i class="fa fa-2x fa-facebook-square"/>
+                            </a>
+                            <a t-if="res_company.social_twitter" t-att-href="res_company.social_twitter"
+                               class="btn mb8 ">
+                                <i class="fa fa-2x fa-twitter"/>
+                            </a>
+                            <a t-if="res_company.social_linkedin" t-att-href="res_company.social_linkedin"
+                               class="btn mb8 ">
+                                <i class="fa fa-2x fa-linkedin"/>
+                            </a>
+                            <a t-if="res_company.social_youtube" t-att-href="res_company.social_youtube"
+                               class="btn mb8 ">
+                                <i class="fa fa-2x fa-youtube-play"/>
+                            </a>
+                            <a t-if="res_company.social_github" t-att-href="res_company.social_github"
+                               class="btn mb8 ">
+                                <i class="fa fa-2x fa-github"/>
+                            </a>
+                            <a t-if="res_company.social_instagram" t-att-href="res_company.social_instagram"
+                               class="btn mb8 ">
+                                <i class="fa fa-2x fa-instagram"/>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,54 @@
+<odoo>
+
+    <record id="res_config_settings_view_form_ultimate_sticky_cart" model="ir.ui.view">
+        <field name="name">
+            res.config.settings.view.form.inherit.website.sale.ultimate.sticky.cart
+        </field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website_business_snippet_blocks_core_ul_73lines.res_config_settings_view_form_ultimate"/>
+        <field name="arch" type="xml">
+            <div id="ultimate_themes_settings" position="inside">
+                <div class="col-12 col-lg-6 o_setting_box">
+                    <div class="o_setting_left_pane">
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="sticky_product_cart" string="Sticky Product Cart"/>
+                        <div class="content-group">
+                            <div class="mt16">
+                                <field name="sticky_product_cart" class="o_light_label" widget="radio"
+                                       options="{'horizontal': true}"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 o_setting_box">
+                    <div class="o_setting_left_pane">
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="product_name_row_limit" string="Row Limit for Product Name in Shop Page"/>
+                        <div class="content-group">
+                            <div class="mt16">
+                                <field name="product_name_row_limit" class="o_light_label" widget="radio"
+                                       options="{'horizontal': true}"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 o_setting_box">
+                    <div class="o_setting_left_pane">
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="shop_page_list_view_style" string="List View Style for Shop Page"/>
+                        <div class="content-group">
+                            <div class="mt16">
+                                <field name="shop_page_list_view_style" class="o_light_label" widget="radio"
+                                       options="{'horizontal': true}"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+
+</odoo>

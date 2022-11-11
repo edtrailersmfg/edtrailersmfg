@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Image Grid 4" id="image_grid_4">
+        <section class="pt64 pb64" id="image_grid_4" data-visible="image_grid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                <div class="oe_structure oe_empty">
+                                    <div class="grid4">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                             alt=""
+                                             class="img-fluid image"/>
+                                        <div class="grid_content">
+                                            <h6 class="title">Block Title</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 p-0">
+                                <div class="oe_structure oe_empty">
+                                    <div class="grid4">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                             alt=""
+                                             class="img-fluid image"/>
+                                        <div class="grid_content">
+                                            <h6 class="title">Block Title</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 p-0">
+                                <div class="oe_structure oe_empty">
+                                    <div class="grid4">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                             alt=""
+                                             class="img-fluid image"/>
+                                        <div class="grid_content">
+                                            <h6 class="title">Block Title</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 p-0">
+                                <div class="oe_structure oe_empty">
+                                    <div class="grid4">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                             alt=""
+                                             class="img-fluid image"/>
+                                        <div class="grid_content">
+                                            <h6 class="title">Block Title</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 p-0">
+                                <div class="oe_structure oe_empty">
+                                    <div class="grid4">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                             alt=""
+                                             class="img-fluid image"/>
+                                        <div class="grid_content">
+                                            <h6 class="title">Block Title</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                <div class="oe_structure oe_empty">
+                                    <div class="grid4">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-image-600x400.png"
+                                             alt=""
+                                             class="img-fluid image"/>
+                                        <div class="grid_content">
+                                            <h6 class="title">Block Title</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

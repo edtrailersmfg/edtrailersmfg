@@ -1,0 +1,109 @@
+//---------------------General Product Category Design------------//
+/*.s_product_category_carousel {
+  img {
+    padding: 20px 0;
+  }
+
+  h5 {
+    padding: 20px;
+  }
+}*/
+
+//----------------------Style 1-------------//
+.s_category_transparent {
+  img {
+    background: transparent;
+    padding: 20px 0;
+  }
+
+  h5 {
+    background: #333;
+    padding: 20px;
+    color: #fff;
+  }
+}
+
+//----------------------Style 2-------------//
+.s_category_bg_dark {
+  img {
+    background: #333;
+    padding: 20px 0;
+  }
+
+  h5 {
+    background: #333;
+    padding: 20px;
+    color: #fff;
+  }
+}
+
+//----------------------Style 3-------------//
+.s_category_bg_light {
+  img {
+    background: whitesmoke;
+    padding: 20px 0;
+    border-radius: 50px 0 0;
+  }
+
+  h5 {
+    background: whitesmoke;
+    padding: 20px;
+    color: whitesmoke;
+    border-radius: 0px 0px 50px 0px;
+  }
+}
+
+//----------------------Style 4-------------//
+.s_category_4 {
+  img {
+    background: #333;
+    padding: 20px 0;
+    border-radius: 50px 0 0;
+  }
+
+  h5 {
+    background: #333;
+    padding: 20px;
+    color: #fff;
+    border-radius: 0px 0px 50px 0px;
+  }
+}
+
+//----------------------Style 5-------------//
+.s_category_5 {
+  h5 {
+    background: #333;
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.5s linear;
+    color: #fff;
+    opacity: 0;
+    padding: 20px;
+  }
+
+  .oe_category_image:hover h5 {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+//----------------------Style 6-------------//
+.s_category_6 {
+  h5 {
+    background: #333;
+    color: #fff;
+    transition: visibility 0s, opacity 0.5s linear, bottom 1s;
+    visibility: hidden;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    bottom:0;
+  }
+
+  .oe_category_image:hover h5 {
+    visibility: visible;
+    position: absolute;
+    opacity: 1;
+    bottom: -8px;
+  }
+}

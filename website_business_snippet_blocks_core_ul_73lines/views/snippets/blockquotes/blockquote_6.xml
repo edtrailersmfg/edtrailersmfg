@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Blockquote 6" id="blockquote_6">
+        <section class="pt64 pb64" id="blockquote_d6" data-visible="blockquote">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2 class="font-weight-bold">Blockquote</h2>
+                    </div>
+                </div>
+            </div>
+            <div id="blockquote_d6"
+                 class="s_quotes_carousel s_carousel_default carousel slide"
+                 data-interval="10000">
+                <ol class="carousel-indicators">
+                    <li data-target="#blockquote_d6"
+                        data-slide-to="0" class="active"/>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item pt64 pb64 active"
+                         data-name="Slide">
+                        <div class="container">
+                            <div class="row">
+                                <blockquote
+                                        class="carousel-content col-12 col-sm-12 col-md-6 col-lg-6">
+                                    <div class="blockquote_content">
+                                        <i class="fa fa-quote-left"></i>
+                                        <p class="px-4 description font-weight-bold">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet eum excepturi
+                                            incidunt
+                                            laudantium nesciunt omnis, provident repudiandae rerum sed! Amet blanditiis
+                                            eaque
+                                            eu!
+                                        </p>
+                                        <span class="px-4 o_default_snippet_text">
+                                            —
+                                            Jane DOE
+                                        </span>
+                                        <i class="fa fa-quote-right"></i>
+                                    </div>
+                                </blockquote>
+                                <blockquote
+                                        class="carousel-content col-12 col-sm-12 col-md-6 col-lg-6">
+                                    <div class="blockquote_content">
+                                        <i class="fa fa-quote-left"></i>
+                                        <p class="px-4 description font-weight-bold">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet eum excepturi
+                                            incidunt
+                                            laudantium nesciunt omnis, provident repudiandae rerum sed! Amet blanditiis
+                                            eaque
+                                            eu!
+                                        </p>
+                                        <span class="px-4 o_default_snippet_text">
+                                            —
+                                            Jane DOE
+                                        </span>
+                                        <i class="fa fa-quote-right"></i>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-control-prev"
+                     data-target="#blockquote_d6" data-slide="prev"
+                     role="img" aria-label="Previous" title="Previous">
+                    <span class="carousel-control-prev-icon"/>
+                    <span class="sr-only o_default_snippet_text">Previous
+                    </span>
+                </div>
+                <div class="carousel-control-next"
+                     data-target="#blockquote_d6" data-slide="next"
+                     role="img" aria-label="Next" title="Next">
+                    <span class="carousel-control-next-icon"/>
+                    <span class="sr-only o_default_snippet_text">Next</span>
+                </div>
+            </div>
+        </section>
+
+    </template>
+</odoo>

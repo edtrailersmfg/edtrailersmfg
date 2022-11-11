@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="s_bar_chart" name="Bar Chart">
+        <section id="s_bar_chart"
+                 class="parallax s_parallax_slider oe_custom_bg oe_img_bg"
+                 style="background-image: url(&quot;/website_snippet_boxed_ul_73lines/static/src/img/s_bar_chart.jpg&quot;);"
+                 data-scroll-background-ratio="0.3">
+            <div class="container">
+                <div class="row mt64 mb32 text-center oe_structure">
+                    <div class="col-md-12">
+                        <div class="bar_chart_header">
+                            <div class="bar_chart_heading">
+                                <h1>We Guarantee</h1>
+                            </div>
+                            <div class="bar_chart_body">
+                                <h3>We Don’t Promise</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_structure">
+                    <div class="row mt16">
+                        <div class="col-md-3 mt96 mb32 col-sm-6 col-xs-12">
+                            <section class="bar_chart">
+                                <div class="progress_bar">
+                                    <div class="progress progress-bar-vertical">
+                                        <div class="progress-bar progress_content progress-bar-striped active"
+                                             role="progressbar"
+                                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+                                             data-active="#212121" data-nonactive="#fff">
+                                            <div contenteditable="false" id="myBar">0%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <span class="bar_chart_stat_title">Finance</span>
+                        </div>
+                        <div class="col-md-3 mt96 mb32 col-sm-6 col-xs-12">
+                            <section class="bar_chart">
+                                <div class="progress_bar ">
+                                    <div class="progress progress-bar-vertical">
+                                        <div class="progress-bar progress_content progress-bar-striped active"
+                                             role="progressbar"
+                                             aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"
+                                             data-active="#212121" data-nonactive="#fff">
+                                            <div contenteditable="false" id="myBar">0%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <span class="bar_chart_stat_title">Partnership</span>
+                        </div>
+                        <div class="col-md-3 mt96 mb32 col-sm-6 col-xs-12">
+                            <section class="bar_chart">
+                                <div class="progress_bar ">
+                                    <div class="progress progress-bar-vertical">
+                                        <div class="progress-bar progress_content progress-bar-striped active"
+                                             role="progressbar"
+                                             aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"
+                                             data-active="#212121" data-nonactive="#fff">
+                                            <div contenteditable="false" id="myBar">0%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <span class="bar_chart_stat_title">Investments</span>
+                        </div>
+                        <div class="col-md-3 mt96 mb32 col-sm-6 col-xs-12 ">
+                            <section class="bar_chart">
+                                <div class="progress_bar">
+                                    <div class="progress progress-bar-vertical">
+                                        <div class="progress-bar progress_content progress-bar-striped active"
+                                             role="progressbar"
+                                             aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"
+                                             data-active="#212121" data-nonactive="#fff">
+                                            <div contenteditable="false" id="myBar">0%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <span class="bar_chart_stat_title">Income</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- Snippet options -->
+    <template id="s_bar_chart_options" inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-js='Blockquote']" position="before">
+            <div data-js='js_bar_chart' data-selector=".bar_chart">
+<!--                <we-collapse-area>-->
+<!--                    <we-toggler>-->
+<!--                         <i class="fa fa-fw fa-cog"/>-->
+<!--                        Block Setting-->
+<!--                    </we-toggler>-->
+<!--                    <we-collapse data-no-preview="true" class="filter_div">-->
+<!--                        <we-button id="bar_chart">-->
+<!--                            Settings-->
+<!--                        </we-button>-->
+<!--                    </we-collapse>-->
+<!--                </we-collapse-area>-->
+
+                <we-button-group class="o_we_user_value_widget">
+                    <we-title data-original-title="" title="" style="">
+                        <i class="fa fa-fw fa-cog"/>
+                        Block Settings
+                    </we-title>
+                    <we-selection-items>
+                        <button class="progress_bar btn btn-secondary bar_chart filter_div">
+                            Settings
+                        </button>
+                    </we-selection-items>
+                </we-button-group>
+            </div>
+        </xpath>
+    </template>
+</odoo>

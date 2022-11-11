@@ -1,0 +1,7 @@
+<odoo>
+    <template id="assets_common1" name="Common Assets (used in backend interface and website)" inherit_id="web.assets_common">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/pwa_ultimate/static/src/js/pwa.js"/>
+        </xpath>
+    </template>
+</odoo>

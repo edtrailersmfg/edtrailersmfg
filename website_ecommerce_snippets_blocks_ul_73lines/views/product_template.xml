@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!--    <template id="product_assets_frontend"-->
+    <!--              inherit_id="website_sale.product" name="Multi Image Vertical"-->
+    <!--              active="False" customize_show="True">-->
+    <!--        <xpath expr="//section[@id='product_detail']" position="attributes">-->
+    <!--            <attribute name="t-attf-class" add="ul_vertical_product_slider"-->
+    <!--                       separator=" "/>-->
+    <!--        </xpath>-->
+    <!--    </template>-->
+
+
+    <template id="product_searchbox_hide"
+              inherit_id="website_sale.products" customize_show="True"
+              active="False" name="Remove Serachbox From Shop">
+        <xpath expr="//t[@t-call='website_sale.search']" position="replace">
+        </xpath>
+    </template>
+
+    <!--Single Product Page Start -->
+
+    <!-- Remove Searchbox From Pager Start -->
+    <template id="product_inherit_searchbox"
+              inherit_id="website_sale.product">
+        <xpath expr="//t[@t-call='website_sale.search']" position="replace">
+        </xpath>
+    </template>
+    <!-- Remove Searchbox From Pager End -->
+
+    <!-- Resize Breadcrumb Size Start -->
+    <!--    <template id="breadcrumb_inherit" inherit_id="website_sale.product">-->
+    <!--        <xpath expr="//section[@id='product_detail']/div/div[@class='col-md-4']"-->
+    <!--               position="attributes">-->
+    <!--            <attribute name="class">col-sm-8</attribute>-->
+    <!--        </xpath>-->
+    <!--    </template>-->
+    <!-- Resize Breadcrumb Size Start -->
+
+    <!-- Remove Default Price List Button -->
+    <template id="remove_pricelist_show_product"
+              inherit_id="website_sale.product">
+        <xpath expr="//t[@t-call='website_sale.pricelist_list']"
+               position="replace">
+        </xpath>
+    </template>
+
+    <!--Product Gallery Start-->
+    <template inherit_id='website_sale.product'
+              id="website_sale.product_picture_magnify" customize_show="True"
+              name="Product Gallery / Zoom" active="True">
+        <xpath expr='//div[hasclass("js_sale")]' position='attributes'>
+            <attribute name="class" separator=" "
+                       add="ultimate-product-gallery"/>
+        </xpath>
+        <xpath expr='//div[hasclass("js_sale")]' position='before'>
+            <div class="o_main_ps">
+                <div class="pswp" tabindex="-1" role="dialog"
+                     aria-hidden="true">
+                    <div class="ultimate-product-gallery-bg"/>
+                    <div class="ultimate-product-gallery-scroll-wrap">
+                        <div class="ultimate-product-gallery-container">
+                            <div class="ultimate-product-gallery-item"/>
+                            <div class="ultimate-product-gallery-item"/>
+                            <div class="ultimate-product-gallery-item"/>
+                        </div>
+                        <div class="ultimate-product-gallery-ui ultimate-product-gallery-ui--hidden">
+                            <div class="ultimate-product-gallery-top-bar">
+                                <div class="ultimate-product-gallery-counter d-none"/>
+                                <button class="ultimate-product-gallery-button ultimate-product-gallery-button--close"/>
+                                <button class="ultimate-product-gallery-button ultimate-product-gallery-button--zoom"/>
+                                <div class="ultimate-product-gallery-preloader">
+                                    <div class="ultimate-product-gallery-preloader-icon">
+                                        <div class="ultimate-product-gallery-preloader-pop">
+                                            <div class="ultimate-product-gallery-preloader-poppre"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ultimate-product-gallery-share-modal ultimate-product-gallery-share-modal--hidden ultimate-product-gallery-single-tap">
+                                <div class="ultimate-product-gallery-share-tooltip"/>
+                            </div>
+                            <button class="ultimate-product-gallery-button ultimate-product-gallery-button--gallery--left">
+                            </button>
+                            <button class="ultimate-product-gallery-button ultimate-product-gallery-button--gallery--right">
+                            </button>
+                            <div class="ultimate-product-gallery-caption">
+                                <div class="ultimate-product-gallery-wizard-main"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+    <template inherit_id='website_sale.product' id="website_sale.product_picture_magnify_auto" active="False"
+              customize_show="False" name="Automatic Image Zoom"/>
+    <!--Product Gallery End-->
+
+    <!--Single Product Page  End-->
+
+    <!-- Alternative Product Design Start-->
+    <template id='website_sale_comparison.recommended_product' inherit_id="website_sale.recommended_products"
+          name="Alternative Products" active="False"/>
+
+    <template id='website_sale.recommended_products' inherit_id="website_sale.product"
+          name="Alternative Products" active="False" customize_show="False"/>
+
+    <template id="alternative_product" inherit_id="website_sale.product" customize_show="False"
+              name="Alternative Products">
+        <xpath expr="//div[@id='product_full_description']" position="after">
+            <div class="container pt32 pb32">
+                <div class="row" id="ultimate_alt_product"></div>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="similar_product" inherit_id="website_ecommerce_snippets_blocks_ul_73lines.alternative_product" customize_show="True"
+              name="Similar Products">
+        <xpath expr="//div[@id='ultimate_alt_product']" position="inside">
+            <t t-set="alternative_products" t-value="product._get_website_alternative_product()"/>
+            <div t-if="alternative_products" class="col-12 col-sm-12 col-md-12 col-lg-6 mt8 mb8">
+                <t t-set="product_variant"
+                   t-value="product_variant or product._create_first_product_variant()"/>
+                <t t-set="id_list" t-value="[product_variant.id] if product_variant else []"/>
+                <t t-foreach="product._get_website_alternative_product()" t-as="alt_product">
+                    <t t-set="alt_product_variant_id" t-value="alt_product._create_first_product_variant().id"/>
+                    <t t-if="alt_product_variant_id" t-set="id_list"
+                       t-value="id_list + [alt_product_variant_id]"/>
+                </t>
+                <t t-set="ids" t-value="','.join([str(id) for id in id_list])"/>
+                <div class="row mx-0">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb24 border-bottom px-0 pb16">
+                        <span class='h3'>Similar Products
+                        </span>
+                        <a t-if="len(id_list) > 1 and is_view_active('website_sale_comparison.add_to_compare')"
+                           role="button" style="border-radius: 0px;"
+                           class="float-right mt-2" t-attf-href="/shop/compare?products=#{ids}">
+                            <i class="fa fa-exchange"></i>
+                            Compare
+                        </a>
+                    </div>
+                </div>
+                <div class="row mx-0">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 px-0">
+                        <div class="owl-carousel owl-theme" style="">
+                            <t t-foreach="alternative_products" t-as="alt_product">
+                                <div class="item"
+                                     t-att-data-publish="alt_product.website_published and 'on' or 'off'">
+                                    <div class="card">
+                                        <div class="oe_product">
+                                            <div class="mt16 text-center" style="height: 100%;">
+                                                <t t-set="combination_info"
+                                                   t-value="alt_product._get_combination_info()"/>
+                                                <t t-set="product_variant"
+                                                   t-value="alt_product.env['product.product'].browse(combination_info['product_id'])"/>
+                                                <div t-if="product_variant" t-field="product_variant.image_128"
+                                                     t-options="{'widget': 'image', 'qweb_img_responsive': False, 'class': 'o_alternative_product o_image_64_max' }"/>
+                                                <div t-else="" t-field="alt_product.image_128"
+                                                     t-options="{'widget': 'image', 'qweb_img_responsive': False, 'class': 'o_alternative_product o_image_64_max' }"/>
+                                                <h6 class="alt_product_name">
+                                                    <a t-att-href="alt_product.website_url"
+                                                       style="display: block"
+                                                       class="text-decoration-none text-dark">
+                                                        <span t-att-title="alt_product.name"
+                                                              t-field="alt_product.name"
+                                                              class="o_text_overflow" style="display: block;"/>
+                                                    </a>
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="accessory_products" inherit_id="website_ecommerce_snippets_blocks_ul_73lines.alternative_product" customize_show="True" name="Accessory Products">
+        <xpath expr="//div[@id='ultimate_alt_product']" position="inside">
+            <t t-set="accessories_products" t-value="product._get_website_accessory_product()"/>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt8 mb8" t-if="accessories_products">
+                <div class="row mx-0">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb24 border-bottom px-0 pb16">
+                        <span class='h3'>Suggested Accessories
+                        </span>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 px-0">
+                        <div class="owl-carousel owl-theme" style="">
+                            <t t-foreach="accessories_products" t-as="acc_product">
+                                <div class="item"
+                                     t-att-data-publish="acc_product.website_published and 'on' or 'off'">
+                                    <div class="card">
+                                        <div class="oe_product oe-height-4">
+                                            <div class="mt16 text-center" style="height: 100%;">
+                                                <div t-if="product_variant" t-field="acc_product.image_128"
+                                                     t-options="{'widget': 'image', 'qweb_img_responsive': False, 'class': 'rounded o_alternative_product o_image_64_max' }"/>
+                                                <div t-else="" t-field="acc_product.image_128"
+                                                     t-options="{'widget': 'image', 'qweb_img_responsive': False, 'class': 'rounded o_alternative_product o_image_64_max' }"/>
+                                                <h6 class="alt_product_name">
+                                                    <a t-att-href="acc_product.website_url" style="display: block" class="text-decoration-none text-dark">
+                                                        <span t-att-title="acc_product.name" t-field="acc_product.name"
+                                                              class="o_text_overflow" style="display: block;"/>
+                                                    </a>
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+
+</odoo>

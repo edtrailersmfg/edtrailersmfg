@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Price Menu 6" id="price_menu_6">
+        <section class="pt64 pb64" id="price_menu_6" data-visible="price_menu">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Price Menu</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <img alt="image" class="img-fluid d-block mx-auto mb16"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"/>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb16">
+                                <div class="tab-wrapper">
+                                    <h5>Menu Item 1</h5>
+                                    <span class="price">$14.95</span>
+                                    <div class="dotted-bg"></div>
+                                </div>
+                                <p>pellentesque enim. Aliquam tempor</p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb16">
+                                <div class="tab-wrapper">
+                                    <h5>Menu Item 2</h5>
+                                    <span class="price">$14.95</span>
+                                    <div class="dotted-bg"></div>
+                                </div>
+                                <p>pellentesque enim. Aliquam tempor</p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb16">
+                                <div class="tab-wrapper">
+                                    <h5>Menu Item 3</h5>
+                                    <span class="price">$14.95</span>
+                                    <div class="dotted-bg"></div>
+                                </div>
+                                <p>pellentesque enim. Aliquam tempor</p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb16">
+                                <div class="tab-wrapper">
+                                    <h5>Menu Item 4</h5>
+                                    <span class="price">$14.95</span>
+                                    <div class="dotted-bg"></div>
+                                </div>
+                                <p>pellentesque enim. Aliquam tempor</p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb16">
+                                <div class="tab-wrapper">
+                                    <h5>Menu Item 5</h5>
+                                    <span class="price">$14.95</span>
+                                    <div class="dotted-bg"></div>
+                                </div>
+                                <p>pellentesque enim. Aliquam tempor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mt32">
+                        <a href="#" class="btn btn-lg btn-primary">Full Menu</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

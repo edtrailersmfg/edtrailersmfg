@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="mega_menu_10" name="Mega Menu 10" groups="base.group_user">
+        <section id="menu_design_10" class="pt32 pb32" data-visible="mega_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-3 col-md-3 col-xs-6 mb16 mt16 mega-menu-cls">
+                        <h4 class="menu-heading">Heading</h4>
+                        <ul class="list-unstyled bullets mt8">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user mr-2"></i>
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user mr-2"></i>
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user mr-2"></i>
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user mr-2"></i>
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-sm-12 col-lg-3 col-md-3 col-xs-6 mb16 mt16 mega-menu-cls">
+                        <h4 class="menu-heading">Heading</h4>
+                        <ul class="list-unstyled bullets  mt8">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user mr-2"></i>
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user mr-2"></i>
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user mr-2"></i>
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+
+                                    <i class="fa fa-user mr-2"></i>
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-sm-12 col-lg-3 col-md-3 col-xs-6 mb16 mt16 mega-menu-cls mega-menu-clss">
+                        <h4 class="menu-heading">Heading</h4>
+                        <ul class="list-unstyled  bullets  mt8">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user mr-2"></i>
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user mr-2"></i>
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user mr-2"></i>
+                                    <span>Link</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user mr-2"></i>
+                                    <span>Link</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-lg-3 col-md-3 col-xs-6 mb16 mt16 mega-menu-cls">
+                        <h4 class="menu-heading">Heading</h4>
+                        <ul class="list-unstyled  bullets  mt8">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user mr-2"></i>
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user mr-2"></i>
+                                    <span>Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user mr-2"></i>
+                                    <span>Link</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user mr-2"></i>
+                                    <span>Link</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-6 col-md-6 col-12 mb16 ">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-65.png"
+                             class="img img-fluid mx-auto"
+                             alt="Megamenu Banner Image"/>
+                    </div>
+                    <div class="col-sm-6 col-lg-6 col-md-6 col-12  mb16">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-65.png"
+                             class="img img-fluid mx-auto"
+                             alt="Megamenu Banner Image"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

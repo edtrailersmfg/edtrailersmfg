@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Pricing 11" id="pricing_11">
+        <section class="s_comparisons pt48 pb24" data-visible="pricing">
+            <div class="container">
+                <div class="row s_nb_column_fixed">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Pricing Table</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+                <div class="row no-gutters text-center">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4  s_col_no_bgcolor  pb16" data-name="Box">
+                        <div class="card">
+                            <div class="card-header  border-0">
+                                <i class="fa fa-3x fa-cubes pt24 pb24"></i>
+                                <h4 class=" o_default_snippet_text">Personal</h4>
+                                <p>Lorem ipsum dolor sit amet ipsum dolor amet ipsum dolor</p>
+
+                            </div>
+
+                            <ul class="list-group list-group-flush border-top">
+                                <li class="list-group-item o_default_snippet_text">Item One</li>
+                                <li class="list-group-item o_default_snippet_text">Item Two</li>
+                                <li class="list-group-item o_default_snippet_text">Item Three</li>
+                                <li class="list-group-item o_default_snippet_text">Item Four</li>
+                                <li class="list-group-item o_default_snippet_text">Item Five</li>
+                            </ul>
+                            <div class="card-footer border-top-0">
+                                <h2 class="card-title">
+
+                                    <span class="s_comparisons_price">
+                                        <b class="o_default_snippet_text">$0.00</b>
+                                    </span>
+
+                                </h2>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 s_col_no_bgcolor  pb16" data-name="Box">
+                        <div class="card">
+                            <div class="card-header  border-0">
+                                <i class="fa fa-3x fa-cubes pt24 pb24"></i>
+                                <h4 class=" o_default_snippet_text">Small Team</h4>
+                                <p>Lorem ipsum dolor sit amet ipsum dolor amet ipsum dolor</p>
+                            </div>
+
+                            <ul class="list-group list-group-flush border-top">
+                                <li class="list-group-item o_default_snippet_text">Item One</li>
+                                <li class="list-group-item o_default_snippet_text">Item Two</li>
+                                <li class="list-group-item o_default_snippet_text">Item Three</li>
+                                <li class="list-group-item o_default_snippet_text">Item Four</li>
+                                <li class="list-group-item o_default_snippet_text">Item Five</li>
+                            </ul>
+                            <div class="card-footer border-top-0">
+                                <h2 class="card-title">
+
+                                    <span class="s_comparisons_price">
+                                        <b class="o_default_snippet_text">$99.9</b>
+                                    </span>
+
+                                </h2>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 s_col_no_bgcolor " data-name="Box">
+                        <div class="card">
+                            <div class="card-header  border-0">
+                                <i class="fa fa-3x fa-cubes pt24 pb24"></i>
+                                <h4 class=" o_default_snippet_text">Enterprice</h4>
+                                <p>Lorem ipsum dolor sit amet ipsum dolor amet ipsum dolor</p>
+
+                            </div>
+                            <ul class="list-group list-group-flush border-top">
+                                <li class="list-group-item o_default_snippet_text">Item One</li>
+                                <li class="list-group-item o_default_snippet_text">Item Two</li>
+                                <li class="list-group-item o_default_snippet_text">Item Three</li>
+                                <li class="list-group-item o_default_snippet_text">Item Four</li>
+                                <li class="list-group-item o_default_snippet_text">Item Five</li>
+                            </ul>
+                            <div class="card-footer border-top-0">
+                                <h2 class="card-title">
+
+                                    <span class="s_comparisons_price font-weight-normal">
+                                        <b class="o_default_snippet_text">$699.9</b>
+                                    </span>
+
+                                </h2>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

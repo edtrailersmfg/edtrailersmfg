@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Ecommerce Block 15" id="ecommerce_block_15">
+        <section class="pt64 pb64" id="ecommerce_block_15" data-visible="ecommerce_blocks">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 col-sm-12 col-lg-12 mb48">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb24">
+                        <div class="product_img mb8">
+                            <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                 class="img-fluid image"/>
+                            <div class="overlay">
+                                <a href="#" class="text_hover">
+                                    Shop Now
+                                </a>
+                            </div>
+                        </div>
+                        <h4>Product One</h4>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb24">
+                        <div class="product_img mb8">
+                            <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                 class="img-fluid image"/>
+                            <div class="overlay">
+                                <a href="#" class="text_hover">
+                                    Shop Now
+                                </a>
+                            </div>
+                        </div>
+                        <h4>Product Two</h4>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb24">
+                        <div class="product_img mb8">
+                            <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                 class="img-fluid image"/>
+                            <div class="overlay">
+                                <a href="#" class="text_hover">
+                                    Shop Now
+                                </a>
+                            </div>
+                        </div>
+                        <h4>Product Three</h4>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb24">
+                        <div class="product_img mb8">
+                            <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                 class="img-fluid image"/>
+                            <div class="overlay">
+                                <a href="#" class="text_hover">
+                                    Shop Now
+                                </a>
+                            </div>
+                        </div>
+                        <h4>Product Four</h4>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb24">
+                        <div class="product_img mb8">
+                            <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                 class="img-fluid image"/>
+                            <div class="overlay">
+                                <a href="#" class="text_hover">
+                                    Shop Now
+                                </a>
+                            </div>
+                        </div>
+                        <h4>Product Five</h4>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb24">
+                        <div class="product_img mb8">
+                            <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                 class="img-fluid image"/>
+                            <div class="overlay">
+                                <a href="#" class="text_hover">
+                                    Shop Now
+                                </a>
+                            </div>
+                        </div>
+                        <h4>Product Six</h4>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb24">
+                        <div class="product_img mb8">
+                            <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                 class="img-fluid image"/>
+                            <div class="overlay">
+                                <a href="#" class="text_hover">
+                                    Shop Now
+                                </a>
+                            </div>
+                        </div>
+                        <h4>Product Seven</h4>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb24">
+                        <div class="product_img mb8">
+                            <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                 class="img-fluid image"/>
+                            <div class="overlay">
+                                <a href="#" class="text_hover">
+                                    Shop Now
+                                </a>
+                            </div>
+                        </div>
+                        <h4>Product Eight</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

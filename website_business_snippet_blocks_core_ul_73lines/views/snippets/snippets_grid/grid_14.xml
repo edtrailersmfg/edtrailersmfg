@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Grid 14" id="grid_14">
+        <section class="pt64 pb64" data-visible="grids">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-12 text-center mb48">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb16">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             alt="Image" title="Image"
+                             class="img-fluid mb8 mt8"/>
+                        <h3>Short Headline</h3>
+                        <p>Medium length subtitle</p>
+                        <p>$99</p>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb16">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             alt="Image" title="Image"
+                             class="img-fluid mb8 mt8"/>
+                        <h3>Short Headline</h3>
+                        <p>Medium length subtitle</p>
+                        <p>$99</p>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb16">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             alt="Image" title="Image"
+                             class="img-fluid mb8 mt8"/>
+                        <h3>Short Headline</h3>
+                        <p>Medium length subtitle</p>
+                        <p>$99</p>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb16">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             alt="Image" title="Image"
+                             class="img-fluid mb8 mt8"/>
+                        <h3>Short Headline</h3>
+                        <p>Medium length subtitle</p>
+                        <p>$99</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

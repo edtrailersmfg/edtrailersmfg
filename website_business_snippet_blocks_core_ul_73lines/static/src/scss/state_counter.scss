@@ -1,0 +1,548 @@
+.editor_enable {
+#counter_16{
+.item-holder:hover .icon {
+     opacity: 1;
+}
+.item-holder:hover .icon_number {
+    opacity: 1;
+   -webkit-transition: opacity .1s ease-out,-webkit-transform 0s ease-out .1s;
+    transition: opacity .1s ease-out,transform 0s ease-out .1s;
+    -webkit-transform: translate(-50%,100%);
+    -moz-transform: translate(-50%,100%);
+    transform: translate(-50%,100%);
+}
+.icon-holder .icon_number {
+    opacity: 1;
+}
+}
+}
+
+.state-col-inner {
+    padding: 20px !important;
+    margin: 0 !important;
+}
+
+
+                                /*css for counter 3*/
+
+#counter_3{
+
+    i{
+        border: 7px solid theme-color('primary');
+        border-radius:50%;
+        padding: 35px;
+    }
+}
+
+
+                                /*css for counter 5*/
+
+#counter_5{
+
+    .counter_icon{
+        border: 1px solid theme-color('primary');
+        padding: 20px;
+        transform: rotate(45deg);
+        background-color: theme-color('primary');
+        display: inline-block;
+    }
+
+    i{
+        transform: rotate(-45deg) !important;
+        color: #ffffff;
+    }
+}
+
+
+                                /*css for counter 6*/
+
+
+#counter_6{
+
+    .counter-box{
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+    }
+}
+
+
+                                /*css for counter 7*/
+
+#counter_7{
+    .overlay{
+        background-color: rgba(0,0,0,0.7);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    .counter-box{
+        border: 2px solid #dbdbdb;
+        padding: 30px;
+
+        &:hover{
+            background-color: rgba(255,255,255,0.3);
+        }
+    }
+
+
+    i{
+        background-color: theme-color('primary');
+        width: 75px;
+        height: 75px;
+        line-height: 75px;
+        position: absolute;
+        top: -40px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
+
+                                /*css for counter 8*/
+
+#counter_8{
+    .counter-box{
+        border: 2px solid rgba(255,255,255,0.55);
+        background-color: rgba(255,255,255,0.35);
+        padding: 30px;
+
+        &:hover{
+            background-color: rgba(130, 128, 128, 0.5);
+        }
+    }
+
+    .overlay{
+        background-color: rgba(0,0,0,0.66);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        }
+
+     hr{
+        border: 1px solid theme-color('primary');
+        width:50px;
+        margin-top: 0;
+        padding: 0;
+     }
+}
+
+
+                                /*css for counter 9*/
+
+
+#counter_9{
+    .counter-box{
+        border: 1px solid #ececec;
+        padding: 43px 0 46px 0;
+     }
+
+    .counter-box:before{
+        width: 43px;
+        height: 43px;
+        border-left: 2px solid theme-color('primary');
+        border-top: 2px solid theme-color('primary');
+        content: "";
+        position: absolute;
+        left: 14px;
+        top: -1px;
+    }
+
+    .counter-box:after{
+        width: 43px;
+        height: 43px;
+        border-right: 2px solid theme-color('primary');
+        border-bottom: 2px solid theme-color('primary');
+        content: "";
+        position: absolute;
+        right: 14px;
+        bottom: -1px;
+    }
+}
+
+
+                                /*css for counter 10*/
+
+#counter_10{
+    .counter-box{
+        background-color: #ffffff;
+        padding: 43px;
+    }
+
+    .counter-corner{
+        position: absolute;
+        left: 14px;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 30px 30px 0 0;
+    }
+}
+
+
+
+/*---------------------------------counter-11 css start here ----------------------*/
+    #counter_11 .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(52, 52, 61, 0.4);
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+      -webkit-transition: .3s ease;
+      transition: .3s ease;
+    }
+    #counter_11 .counter_img_effect{
+        position:relative;
+            &:hover .overlay {
+                transform: scale(1);
+            }
+      }
+/*---------------------------------counter-11 css end here ----------------------*/
+
+
+
+/*---------------------------------counter-12 css start here ----------------------*/
+  #counter_12 .ec-counter-item {
+    text-align: left;
+    min-height: 370px;
+    padding: 60px 40px;
+    -moz-box-shadow: 0 0 5px #d4d4d4;
+    -webkit-box-shadow: 0 0 5px #d4d4d4;
+    box-shadow: 0 0 5px #d4d4d4;
+    overflow: visible;
+    position: relative;
+
+    &:hover {
+    -moz-box-shadow: 0 0 35px #d4d4d4;
+    -webkit-box-shadow: 0 0 35px #d4d4d4;
+    box-shadow: 0 0 35px #d4d4d4;
+    }
+    &:hover:after {
+    width: 100%;
+    }
+}
+ #counter_12 .ec-counter-item:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 3px;
+    background-color: #457294;
+    -moz-transition: all 350ms ease-in-out;
+    -webkit-transition: all 350ms ease-in-out;
+    transition: all 350ms ease-in-out;
+ }
+ /*-------hexagon css start -------*/
+  #counter_12  #hexagon {
+         width: 80px;
+         height: 48px;
+         background:theme-color('alpha');
+         color:#ffffff;
+         position: relative;
+
+          &:before {
+              content: "";
+              position: absolute;
+              top: -25px;
+              left: 0;
+              width: 0;
+              height: 0;
+              border-left: 40px solid transparent;
+              border-right: 40px solid transparent;
+              border-bottom: 25px solid theme-color('alpha');
+            }
+            &:after {
+              content: "";
+              position: absolute;
+              bottom: -25px;
+              left: 0;
+              width: 0;
+              height: 0;
+              border-left: 40px solid transparent;
+              border-right: 40px solid transparent;
+              border-top: 25px solid theme-color('alpha');
+            }
+    }
+     /*-------hexagon css end -------*/
+     @media (max-width: 768px) {
+        #counter_12 .ec-counter-item h3{
+            padding-top:10px !important;
+            text-align:center;
+         }
+          #counter_12 .ec-counter-item p{
+            padding-top:10px !important;
+            text-align:center;
+         }
+           .icon_box{
+            display:block !important;
+            margin:auto !important;
+           #hexagon{
+             display: block;
+             margin: auto;
+             text-align: -webkit-center;
+           }
+            h1{
+            margin-top:40px;
+            text-align:center;
+           }
+        }
+      }
+/*---------------------------------counter-12 css end here ----------------------*/
+
+/*---------------------------------counter-13 css start here ----------------------*/
+/*----icon and vertical line css start ------*/
+#counter_13 .item_icon i {
+    color: theme-color('primary');
+    font-size: 40px;
+    }
+#counter_13 .item_icon i:before {
+    width: auto;
+    height: auto;
+    line-height: inherit;
+}
+#counter_13 .item_icon :after {
+    position: absolute;
+    content: '';
+    height: 33px;
+    width: 3px;
+    background-color: theme-color('primary');
+    top:42px;
+    bottom:0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1;
+}
+/*----icon and vertical line css end ------*/
+#counter_13 .box_content{
+    border: 2px solid #d4d3dac9;
+    position: relative;
+    padding: 40px 30px;
+    text-align: left;
+    p{
+    padding:0;
+    text-align: left;
+    color: #7d7c7c;
+    }
+    &:hover{
+       border-color: theme-color('primary');
+    }
+}
+#counter_13 .item_number{
+    font-size: 32px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #aeaeae;
+    margin: 0 0 0 20px;
+    font-weight: bold;
+    background-color:#ffffff;
+    position: absolute;
+    top: 49px;
+    left: 10px;
+    z-index: 1;
+}
+/*---------------------------------counter-13 css end here ----------------------*/
+
+
+/*---------------------------------counter-14 css start here ----------------------*/
+#counter_14{
+.ec-counter-item:after {
+border-left: 1px solid #ffffff;
+border-right: 1px solid #ffffff;
+transform: scale(1,0);
+}
+.ec-counter-item:before {
+border-left: 1px solid #ffffff;
+border-right: 1px solid #ffffff;
+transform: scale(1,0);
+}
+.ec-counter-item:after {
+border-top: 1px solid #ffffff;
+border-bottom: 1px solid #ffffff;
+transform: scale(0,1);
+}
+.ec-counter-item:before {
+border-top: 1px solid #ffffff;
+border-bottom: 1px solid #ffffff;
+transform: scale(0,1);
+}
+.ec-counter-item:before, .ec-counter-item:after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: 0 auto;
+margin-right: 1px;
+opacity: 0;
+visibility: visible;
+z-index: 2;
+-moz-transition: all 350ms ease-in-out;
+-webkit-transition: all 350ms ease-in-out;
+transition: all 350ms ease-in-out;
+}
+.ec-counter-item:hover:before, .ec-counter-item:hover:after {
+opacity: 1;
+visibility: visible;
+transform: scale(1,1);
+}
+
+.ec-common-overlay {
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+z-index: 1;
+}
+.border_content{
+border-left:3px solid #ffffff;
+height:35px;
+}
+@media (max-width: 425px) {
+.ec-counter-item:after {
+border-left: none;
+border-right: none;
+
+}
+.ec-counter-item:before {
+border-left: none;
+border-right: none;
+}
+}
+}
+/*---------------------------------counter-14 css end here ----------------------*/
+
+
+
+/*---------------------------------counter-15 css start here ----------------------*/
+#counter_15{
+.ec-counter-item:hover:before {
+top: 0;
+opacity: 1;
+visibility: visible;
+}
+.ec-counter-item:before {
+top: 30px;
+}
+.ec-counter-item:hover:after {
+bottom: 0;
+opacity: 1;
+visibility: visible;
+}
+.ec-counter-item:after {
+bottom: 30px;
+}
+.ec-counter-item:before, .ec-counter-item:after {
+content: '';
+position: absolute;
+left: 0;
+right: 0;
+margin: 0 auto;
+background-color: theme-color('primary');
+width: 70%;
+height: 2px;
+opacity: 0;
+visibility: hidden;
+-moz-transition: all 350ms ease-in-out;
+-webkit-transition: all 350ms ease-in-out;
+transition: all 350ms ease-in-out;
+}
+.ec-common-overlay {
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+z-index: 1;
+}
+}
+
+/*---------------------------------counter-15 css end here ----------------------*/
+
+/*---------------------------------counter-16 css start here ----------------------*/
+#counter_16{
+.icon-holder {
+    width: 152px;
+    height: 152px;
+    position: relative;
+    border: 2px solid theme-color('primary');
+    border-radius: 50%;
+    background: #fff;
+    background-clip: padding-box;
+    padding: 2px;
+    margin: 0 auto;
+    color: #232222;
+}
+.icon-holder .icon{
+    opacity: 1;
+    display: inline-block;
+    top: 50%;
+    left: 12%;
+    position: relative;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    -moz-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    will-change: transform;
+}
+.icon-holder .icon_number{
+    opacity: 0;
+    font-size: 28px;
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -webkit-transition: opacity .1s ease-out,-webkit-transform 0s ease-out .1s;
+    transition: opacity .1s ease-out,transform 0s ease-out .1s;
+    -webkit-transform: translate(-50%,100%);
+    -moz-transform: translate(-50%,100%);
+    transform: translate(-50%,100%);
+}
+.item-holder:hover .icon_number{
+    opacity: 1;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    -webkit-transition: opacity .2s ease-out .15s,-webkit-transform .4s cubic-bezier(.38,.76,0,.87) .2s;
+    transition: opacity .2s ease-out .15s,transform .4s cubic-bezier(.38,.76,0,.87) .2s;
+}
+.item-holder:hover .icon {
+    opacity: 0;
+    -webkit-transform: translate(-50%,-50%) scale(.8);
+    -moz-transform: translate(-50%,-50%) scale(.8);
+    transform: translate(-50%,-50%) scale(.8);
+    -webkit-transition: opacity .25s ease-out,transform .3s ease-out;
+    transition: opacity .25s ease-out,transform .3s ease-out;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+.icon-holder .icon{
+    top: 35%;
+    left: 0%;
+}
+}
+}
+
+/*---------------------------------counter-16 css end here ----------------------*/
+
+

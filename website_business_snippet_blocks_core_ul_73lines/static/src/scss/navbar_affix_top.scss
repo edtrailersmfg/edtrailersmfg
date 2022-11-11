@@ -1,0 +1,25 @@
+#oe_main_menu_navbar + #wrapwrap .o_header_affix{
+        background-color: #F9F9F9 !important;
+
+}
+
+.o_header_overlay{
+    > header > nav{
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+
+    #top_menu li {
+          a {
+                background-color: transparent !important;
+                color: inherit;
+            }
+        }
+    }
+}
+
+.editor_enable{
+    #oe_main_menu_navbar + #wrapwrap .o_header_affix{
+        top: 0;
+    }
+}
+
+

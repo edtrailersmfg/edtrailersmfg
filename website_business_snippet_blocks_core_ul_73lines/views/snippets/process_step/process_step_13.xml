@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Process Step 13" id="process_step_13">
+        <section class="pt64 pb64 text-center" id="process_step_13" data-visible="process_steps">
+            <div class="container">
+                <div class="row p-md-4">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2 class="mb16">Our Working Process</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="main-timeline row mx-md-0">
+                            <div class="timeline col-12">
+                                <div class="timeline-icon">
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h2 class="title">Web Design</h2>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod
+                                        fringilla nibh, feugiat pretium velit. Integer elit urna, maximus vitae rutrum
+                                        hendrerit, pretium sed massa.
+                                    </p>
+                                    <a href="#" class="read-more">read more</a>
+                                </div>
+                            </div>
+                            <div class="timeline col-12">
+                                <div class="timeline-icon">
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h2 class="title">Web Development</h2>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod
+                                        fringilla nibh, feugiat pretium velit. Integer elit urna, maximus vitae rutrum
+                                        hendrerit, pretium sed massa.
+                                    </p>
+                                    <a href="#" class="read-more">read more</a>
+                                </div>
+                            </div>
+                            <div class="timeline col-12">
+                                <div class="timeline-icon">
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h2 class="title">Web Design</h2>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod
+                                        fringilla nibh, feugiat pretium velit. Integer elit urna, maximus vitae rutrum
+                                        hendrerit, pretium sed massa.
+                                    </p>
+                                    <a href="#" class="read-more">read more</a>
+                                </div>
+                            </div>
+                            <div class="timeline col-12">
+                                <div class="timeline-icon">
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h2 class="title">Web Development</h2>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod
+                                        fringilla nibh, feugiat pretium velit. Integer elit urna, maximus vitae rutrum
+                                        hendrerit, pretium sed massa.
+                                    </p>
+                                    <a href="#" class="read-more">read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,68 @@
+@if o-website-value('header-links-style') == 'option-nav-hover-bottom-border' {
+    #top_menu{
+        li{
+            a{
+                //color: theme-color('alpha');
+                border-bottom: 4px solid transparent;
+
+                &:hover,&.active{
+                    border-bottom: 4px solid theme-color('primary');
+    //                 display: inline-block;
+                }
+            }
+            &.active{
+                 a{
+                    border-bottom: 4px solid theme-color('primary');
+                 }
+
+            }
+            &.divider{
+               height: auto;
+            }
+        }
+
+
+        .js_language_selector{
+            margin-left: 0px !important;
+        }
+        .js_language_selector .btn{
+            border-bottom: 4px solid transparent !important;
+            border-radius: 0px;
+        }
+        .js_language_selector.dropdown .btn:hover, .js_language_selector.show > .btn-outline-secondary.dropdown-toggle {
+            background-color: transparent !important;
+            color: inherit;
+        }
+        .js_language_selector:hover .btn{
+                border-bottom: 4px solid theme-color('primary') !important;
+       }
+        .js_language_selector.dropdown.show > .btn-outline-secondary.dropdown-toggle:focus, .btn-outline-secondary:focus {
+            box-shadow: unset;
+        }
+    }
+    #top_menu li .dropdown-menu a{
+        border:0px;
+    }
+
+    #sidebar #top_menu{
+        li>a{
+            padding: 0.5rem 0rem;
+        }
+        .js_language_selector.dropdown{
+            padding: 0px;
+        }
+        .js_language_selector.dropdown .btn-outline-secondary{
+            padding: 8px 0px;
+        }
+        .js_language_selector.dropdown.show .dropdown-menu{
+            position: absolute;
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 440px) {
+     header .navbar #top_menu > li > a , #top_menu .js_language_selector {
+        display: inline-block;
+     }
+    }
+}

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="News 2" id="news_2">
+        <section class="pt64 pb64" id="news_two" data-visible="news">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb64">
+                        <h2>Recent News</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb-4">
+                        <div class="news_text">
+                            <div class="hover_effect">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid w-100"/>
+                            </div>
+                            <div class="p-4 news_post">
+                                <h5 class="font-weight-bold pb-2">
+                                    <a href="#">Latest News Post</a>
+                                </h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda culpa cumque
+                                    dicta sint soluta voluptas eius iusto modi reprehenderit sint soluta voluptas.
+                                </p>
+                                <ul class="list-unstyled">
+                                    <li class="pb-2">
+                                        <i class="fa fa-calendar"></i>
+                                        June 7, 2016
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-folder"></i>
+                                        <a href="#">Mockup</a>
+                                        <a href="#">Graphics</a>
+                                        <a href="#">Flayers</a>
+                                    </li>
+                                </ul>
+                                <button type="button" class="btn">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb-4">
+                        <div class="news_text">
+                            <div class="hover_effect">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid w-100"/>
+                            </div>
+                            <div class="p-4 news_post">
+                                <h5 class="font-weight-bold pb-2">
+                                    <a href="#">Latest News Post</a>
+                                </h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda culpa cumque
+                                    dicta sint soluta voluptas eius iusto modi reprehenderit sint soluta voluptas.
+                                </p>
+                                <ul class="list-unstyled">
+                                    <li class="pb-2">
+                                        <i class="fa fa-calendar"></i>
+                                        June 7, 2016
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-folder"></i>
+                                        <a href="#">Mockup</a>
+                                        <a href="#">Graphics</a>
+                                        <a href="#">Flayers</a>
+                                    </li>
+                                </ul>
+                                <button type="button" class="btn">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb-4">
+                        <div class="news_text">
+                            <div class="hover_effect">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                     class="img-fluid w-100"/>
+                            </div>
+                            <div class="p-4 news_post">
+                                <h5 class="font-weight-bold pb-2">
+                                    <a href="#">Latest News Post</a>
+                                </h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda culpa cumque
+                                    dicta sint soluta voluptas eius iusto modi reprehenderit sint soluta voluptas.
+                                </p>
+                                <ul class="list-unstyled">
+                                    <li class="pb-2">
+                                        <i class="fa fa-calendar"></i>
+                                        June 7, 2016
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-folder"></i>
+                                        <a href="#">Mockup</a>
+                                        <a href="#">Graphics</a>
+                                        <a href="#">Flayers</a>
+                                    </li>
+                                </ul>
+                                <button type="button" class="btn">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

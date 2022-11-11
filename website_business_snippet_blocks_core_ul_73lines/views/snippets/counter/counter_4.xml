@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Counter_4" id="counter_4">
+        <section class="pt64 pb16" id="counter_4"
+                 style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-8.jpg&quot;);
+    background-repeat: no-repeat;
+    background-size: cover;" data-visible="counters">
+            <div class="container">
+                <div class="row">
+                    <div class="col-0 col-sm-0 col-md-4 col-lg-4"></div>
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                        <div class="row text-center">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb48">
+                                <h2>Counter Design</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 mb48">
+                                <i class="fa fa-thumbs-o-up fa-3x mb16"></i>
+                                <h3 class="mb16">4243</h3>
+                                <h4>Projects Completed</h4>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 mb48">
+                                <i class="fa fa-child fa-3x mb16"></i>
+                                <h3 class="mb16">9879</h3>
+                                <h4>Happy Clients</h4>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 mb48">
+                                <i class="fa fa-trophy fa-3x mb16"></i>
+                                <h3 class="mb16">7645</h3>
+                                <h4>Design Awards</h4>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 mb48">
+                                <i class="fa fa-coffee fa-3x mb16"></i>
+                                <h3 class="mb16">1200</h3>
+                                <h4>Cups Of Coffee</h4>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 mb48">
+                                <i class="fa fa-coffee fa-3x mb16"></i>
+                                <h3 class="mb16">1000</h3>
+                                <h4>Cups Of Coffee</h4>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 mb48">
+                                <i class="fa fa-hourglass-half fa-3x mb16"></i>
+                                <h3 class="mb16">256</h3>
+                                <h4>Spent Hours</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

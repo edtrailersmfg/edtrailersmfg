@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Pricing 3" id="pricing_3">
+        <section class="pt64 pb64" data-visible="pricing">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb48">
+                        <h2>Pricing Table</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4 pb32">
+                        <i class="fa fa-3x fa-cubes pb16"></i>
+                        <h3 class="pt8 pb8">Biginner</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum est
+                            in tortor congue suscipit.
+                        </p>
+                        <h2 class="pt16 pb16">$59
+                            <small>/ mo</small>
+                        </h2>
+                        <a href="#" class="btn btn-outline-info rounded-0 px-3">Action</a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4 pb32">
+                        <i class="fa fa-3x fa-cubes  pb16"></i>
+                        <h3 class="pt8 pb8">Personal</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum est
+                            in tortor congue suscipit.
+                        </p>
+                        <h2 class="pt16 pb16">$59
+                            <small>/ mo</small>
+                        </h2>
+                        <a href="#" class="btn btn-primary rounded-0 px-3">Action</a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <i class="fa fa-3x fa-cubes pb16"></i>
+                        <h3 class="pt8 pb8">Unlimited</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum est
+                            in tortor congue suscipit.
+                        </p>
+                        <h2 class="pt16 pb16">$59
+                            <small>/ mo</small>
+                        </h2>
+                        <a href="#" class="btn btn-outline-info rounded-0 px-3">Action</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+
+    <!-- Snippet's Body -->
+    <template id="s_two_images" name="2 Images">
+        <section class="s_two_images">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-9 col-12 text-center">
+                        <img class="img img-fluid mt8 mb8"
+                             src="/website_snippet_boxed_ul_73lines/static/src/img/848x146.png"/>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-12 text-center">
+                        <img class="img img-fluid mt8 mb8"
+                             src="/website_snippet_boxed_ul_73lines/static/src/img/263x146.png"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+
+</odoo>

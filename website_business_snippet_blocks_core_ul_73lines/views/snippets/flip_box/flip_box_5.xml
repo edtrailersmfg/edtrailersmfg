@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Flip Box 5" id="flip_box_5">
+        <section class="pt64 pb48" id="flip_box_5" data-visible="flipbox">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 flip_box mb16">
+                        <div class="row mx-0 flip_box_inner">
+                            <div class="col-12 flip_box_front text-center">
+                                <div class="flip_box_front_area">
+                                    <i class="fa fa-rocket fa-2x text-white"></i>
+                                    <h3 class="mt16 mb16 font-weight-bold">Feature One</h3>
+                                    <p>Lorem ipsum dolor sit amet cons adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 flip_box_back text-center">
+                                <div class="flip_box_back_area text-white">
+                                    <h3 class="mt16 mb16 text-uppercase text-white">Feature One</h3>
+                                    <p>Lorem ipsum dolor sit amet cons adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna.
+                                    </p>
+                                    <a href="#"
+                                       class="btn btn-light btn-lg px-lg-5 mt16 mb16 text-dark">
+                                        Learn More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 flip_box mb16">
+                        <div class="row mx-0 flip_box_inner">
+                            <div class="col-12 flip_box_front text-center">
+                                <div class="flip_box_front_area">
+                                    <i class="fa fa-rocket fa-2x text-white"></i>
+                                    <h3 class="mt16 mb16 font-weight-bold">Feature Two</h3>
+                                    <p>Lorem ipsum dolor sit amet cons adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 flip_box_back text-center">
+                                <div class="flip_box_back_area text-white">
+                                    <h3 class="mt16 mb16 text-uppercase text-white">Feature Two</h3>
+                                    <p>Lorem ipsum dolor sit amet cons adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna.
+                                    </p>
+                                    <a href="#"
+                                       class="btn btn-light btn-lg px-lg-5 mt16 mb16 text-dark">
+                                        Learn More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 flip_box mb16">
+                        <div class="row mx-0 flip_box_inner">
+                            <div class="col-12 flip_box_front text-center">
+                                <div class="flip_box_front_area">
+                                    <i class="fa fa-rocket fa-2x text-white"></i>
+                                    <h3 class="mt16 mb16 font-weight-bold">Feature Three</h3>
+                                    <p>Lorem ipsum dolor sit amet cons adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 flip_box_back text-center">
+                                <div class="flip_box_back_area text-white">
+                                    <h3 class="mt16 mb16 text-uppercase text-white">Feature Three</h3>
+                                    <p>Lorem ipsum dolor sit amet cons adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna.
+                                    </p>
+                                    <a href="#"
+                                       class="btn btn-light btn-lg px-lg-5 mt16 mb16 text-dark">
+                                        Learn More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

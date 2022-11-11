@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Image Grid 3" id="image_grid_3">
+        <section class="pt64 pb64" id="image_grid_3" data-visible="image_grid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid3">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-858x322.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid_content">
+                                    <a class="eg-furniture-menu-element-2 esgbox esgbox-post"
+                                       href="#">Check it Out
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid3">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-429x322.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid_content">
+                                    <a class="eg-furniture-menu-element-2 esgbox esgbox-post"
+                                       href="#">Check it Out
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid3">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-429x322.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid_content">
+                                    <a class="eg-furniture-menu-element-2 esgbox esgbox-post"
+                                       href="#">Check it Out
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid3">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-429x322.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid_content">
+                                    <a class="eg-furniture-menu-element-2 esgbox esgbox-post"
+                                       href="#">Check it Out
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid3">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-429x322.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid_content">
+                                    <a class="eg-furniture-menu-element-2 esgbox esgbox-post"
+                                       href="#">Check it Out
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid3">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-429x322.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid_content">
+                                    <a class="eg-furniture-menu-element-2 esgbox esgbox-post"
+                                       href="#">Check it Out
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 p-0">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid3">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-858x322.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="grid_content">
+                                    <a class="eg-furniture-menu-element-2 esgbox esgbox-post"
+                                       href="#">Check it Out
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

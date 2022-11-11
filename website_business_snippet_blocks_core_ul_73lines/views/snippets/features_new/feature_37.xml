@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="feature_37" name="Feature 37">
+        <section class="sni-block pt64 pb64" data-visible="features">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb16">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-20.png"
+                             class="img-fluid d-block mx-auto"
+                             alt="Image"/>
+                    </div>
+
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <h2 class="mb16">Feature Title
+                        </h2>
+                        <p>Write one or two
+                            paragraphs describing your product or services.
+                            To be successful your content needs to be
+                            useful to your readers.
+                        </p>
+                        <p>Start with the
+                            customer – find out what they want and give it to
+                            them.
+                        </p>
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                <img alt="image" class="sni-block-icon mb8"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-38.svg"/>
+                                <h3>Feature One</h3>
+                                <p>Lorem Ipsum is simply dummy text of
+                                    the
+                                    printing
+                                    and
+                                    typesetting
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                <img alt="image" class="sni-block-icon mb8"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-9.svg"/>
+                                <h3>Feature Two</h3>
+                                <p>Lorem Ipsum is simply dummy text of
+                                    the
+                                    printing
+                                    and
+                                    typesetting
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                <img alt="image" class="sni-block-icon mb8"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-31.svg"/>
+                                <h3>Feature Three</h3>
+                                <p>Lorem Ipsum is simply dummy text of
+                                    the
+                                    printing
+                                    and
+                                    typesetting
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb16">
+                                <img alt="image" class="sni-block-icon mb8"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-61.svg"/>
+                                <h3>Feature Four</h3>
+                                <p>Lorem Ipsum is simply dummy text of
+                                    the
+                                    printing
+                                    and
+                                    typesetting
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pt16 pb16 text-left"
+                             data-name="Buttons">
+                            <a href="#"
+                               class="btn mt8 mb8 btn-primary o_default_snippet_text">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

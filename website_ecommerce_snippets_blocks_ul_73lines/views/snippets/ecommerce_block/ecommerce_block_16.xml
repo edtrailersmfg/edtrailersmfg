@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template name="Ecommerce Block 16" id="ecommerce_block_16">
+        <section class="pt64 pb64" id="ecommerce_blocks_16" data-visible="ecommerce_blocks">
+            <div class="container">
+                <h3 class="text-center font-weight-bold pt32 pb32">EXCLUSIVE PRODUCTS</h3>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mt24 mb24">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-sm-12 co-md-6 col-lg-6 mt8 mb8">
+                                <div class="ecom_block_16 bg-primary">
+                                    <div class="d-flex">
+                                        33
+                                        <span>%</span>
+                                    </div>
+                                    <div class="ks_percentage_info">off</div>
+                                </div>
+
+                                <div class="">
+                                    <a href="#" class="block">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                             class="img-fluid  mt8 mb8"/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt8 mb8">
+                                <div class="d-flex justify-content-between flex-wrap flex-sm-nowrap">
+                                    <h5 class="font-weight-normal">
+                                        CATEGORY 1
+                                    </h5>
+
+                                    <h5 class="font-weight-normal product_price bg-primary">
+                                        $
+                                        <span>40</span>
+                                    </h5>
+                                </div>
+                                <div class="mt16 mb32">
+
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    lorem Ipsum has been the industry's standard dummy text.
+                                </div>
+                                <a type="button" class="btn btn-primary" href="#">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mt24 mb24">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-sm-12 co-md-6 col-lg-6 mt8 mb8">
+                                <div class="ecom_block_16 bg-primary">
+                                    <div class="d-flex">
+                                        50
+                                        <span>%</span>
+                                    </div>
+                                    <div class="ks_percentage_info">off</div>
+                                </div>
+
+                                <div class="">
+                                    <a href="#" class="block">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                             class="img-fluid  mt8 mb8"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt8 mb8">
+                                <div class="d-flex justify-content-between flex-wrap flex-sm-nowrap">
+                                    <h5 class="font-weight-normal">
+                                        CATEGORY 2
+                                    </h5>
+
+                                    <h5 class="font-weight-normal product_price bg-primary">
+                                        $
+                                        <span>80</span>
+                                    </h5>
+                                </div>
+                                <div class="mt16 mb32">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    lorem Ipsum has been the industry's standard dummy text.
+                                </div>
+                                <a type="button" class="btn btn-primary" href="#">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mt24 mb24">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-sm-12 co-md-6 col-lg-6 mt8 mb8">
+                                <div class="ecom_block_16 bg-primary">
+                                    <div class="d-flex">
+                                        70
+                                        <span>%</span>
+                                    </div>
+                                    <div class="ks_percentage_info">off</div>
+                                </div>
+
+                                <div class="">
+                                    <a href="#" class="block">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                             class="img-fluid  mt8 mb8"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt8 mb8">
+                                <div class="d-flex justify-content-between flex-wrap flex-sm-nowrap">
+                                    <h5 class="font-weight-normal">
+                                        CATEGORY 3
+                                    </h5>
+
+                                    <h5 class="font-weight-normal product_price bg-primary">
+                                        $
+                                        <span>60</span>
+                                    </h5>
+                                </div>
+                                <div class="mt16 mb32">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    lorem Ipsum has been the industry's standard dummy text.
+                                </div>
+                                <a type="button" class="btn btn-primary" href="#">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mt24 mb24">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-sm-12 co-md-6 col-lg-6 mt8 mb8">
+                                <div class="ecom_block_16 bg-primary">
+                                    <div class="d-flex">
+                                        83
+                                        <span>%</span>
+                                    </div>
+                                    <div class="ks_percentage_info">off</div>
+                                </div>
+                                <div class="">
+                                    <a href="#" class="block">
+                                        <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                             class="img-fluid  mt8 mb8"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt8 mb8">
+                                <div class="d-flex justify-content-between flex-wrap flex-sm-nowrap">
+                                    <h5 class="font-weight-normal">
+                                        CATEGORY 4
+                                    </h5>
+
+                                    <h5 class="font-weight-normal product_price bg-primary">
+                                        $
+                                        <span>50</span>
+                                    </h5>
+                                </div>
+                                <div class="mt16 mb32">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    lorem Ipsum has been the industry's standard dummy text.
+                                </div>
+                                <a type="button" class="btn btn-primary" href="#">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

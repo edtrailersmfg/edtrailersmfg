@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Counter_16" id="counter_16">
+        <section class="pt64 pb64" id="counter_16" data-visible="counters">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb48">
+                        <h2>Counter Design</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 mb16 item-holder">
+                        <div class="icon-holder">
+                            <i class="fa fa-thumbs-up fa-3x mb16 icon"></i>
+                            <h3 class="icon_number">424 K</h3>
+                        </div>
+                        <div class="content-holder mt16">
+                            <h4 class="mb16">Team Workers</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 mb16 item-holder">
+                        <div class="icon-holder">
+                            <i class="fa fa-child fa-3x mb16 icon"></i>
+                            <h3 class="icon_number">758 K</h3>
+                        </div>
+                        <div class="content-holder mt16">
+                            <h4 class="mb16">Happy Clients</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 mb16 item-holder">
+                        <div class="icon-holder">
+                            <i class="fa fa-trophy fa-3x mb16 icon"></i>
+                            <h3 class="icon_number">525 K</h3>
+                        </div>
+                        <div class="content-holder mt16">
+                            <h4 class="mb16">Design Awards</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 mb16 item-holder">
+                        <div class="icon-holder">
+                            <i class="fa fa-briefcase fa-3x mb16 icon"></i>
+                            <h3 class="icon_number">345 K</h3>
+                        </div>
+                        <div class="content-holder mt16">
+                            <h4 class="mb16">Projects Completed</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

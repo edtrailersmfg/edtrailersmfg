@@ -1,0 +1,97 @@
+#product_detail .carousel-indicators{
+    display: inline-block;
+}
+
+#o-carousel-product .carousel-indicators li {
+    margin: 4px !important;
+    width: 72px !important;
+    height: 72px !important;
+}
+
+@media (min-width: 1200px) {
+    #product_detail #o-carousel-product > ol.carousel-indicators {
+        height: auto !important;
+        max-height: 407px;
+        overflow-x: hidden;
+        width: 20% !important;
+        display: block;
+        float: left;
+        overflow-y: scroll;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;
+
+        /* IE 10+ */
+    }
+
+    #product_detail #o-carousel-product > ol.carousel-indicators::-webkit-scrollbar { /* WebKit */
+        width: 0px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #product_detail #o-carousel-product > .carousel-outer {
+        width: 80%;
+        display: block;
+        position: relative;
+        float: right;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 1300px) {
+    #product_detail #o-carousel-product > ol.carousel-indicators > li {
+        width: 65px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    #product_detail #o-carousel-product > ol.carousel-indicators > li {
+        display: block;
+        border: 1px solid #ddd !important;
+        width: 75px !important;
+        height: auto !important;
+        margin: 6px auto !important;
+    }
+}
+
+
+
+/*----------------------Multi Image Slider------------------*/
+.o_carousel_product_outer{
+    border: 1px solid #ccc;
+}
+.ul_vertical_product_slider{
+    padding: 0px !important;
+}
+.ul_vertical_product_slider .carousel-indicators{
+        text-align: unset !important;
+        margin-left: unset !important;
+        margin-right: unset !important;
+        max-height: 400px;
+        overflow-y: scroll;
+        display: grid !important;
+        overflow-x: hidden;
+}
+.ul_vertical_product_slider .carousel-indicators li{
+        width: 64px;
+        height: 64px;
+        text-indent: unset;
+        border: 1px solid #6c757d;
+        opacity: 0.5;
+        position: relative;
+    }
+.ul_vertical_product_slider .carousel-indicators li.active {
+    opacity: 1;
+    border: 1px solid theme-color('primary');
+}
+
+
+.ul_vertical_product_slider .carousel-indicators::-webkit-scrollbar{
+	width: 1px;
+	background-color: #F5F5F5;
+}
+
+.ul_vertical_product_slider .carousel-indicators::-webkit-scrollbar-thumb{
+    background-color: #ccc;
+}

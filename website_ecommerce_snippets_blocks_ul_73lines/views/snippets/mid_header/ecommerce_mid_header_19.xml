@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Ecommerce Mid Header 19" id="ecommerce_mid_header_19">
+        <section class="border-bottom bg-primary border-delta" id="mid-header-top-19" data-visible="mid_headears">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-8 align-self-center text-center text-md-left text-lg-left oe_structure"
+                         id="mid-header-top-left">
+                        <li class="list-inline-item pt8 pb8">
+                            <div class="oe_structure oe_empty">
+                                <a href="#" class="btn button_header o_default_snippet_text" title="Seting">
+                                    Welcome
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-inline-item pt8 pb8">
+                            <div class="oe_structure oe_empty">
+                                <a class="btn button_header" href="#">
+                                    FAQ
+                                </a>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="col-12 oe_structure col-lg-4 col-md-6 col-sm-12 pt8 pb8 align-self-center text-center text-lg-right text-md-right"
+                         id="mid-header-top-left">
+                        <div class="oe_structure oe_empty">
+                            <div class="pt8 pb8" id="company-profile"
+                                 t-ignore="true">
+                                <a href="/website/social/facebook"
+                                   class="fa_company_contact_links mx-1 social_icon"
+                                   target="_blank">
+                                    <i class="fa fa-facebook share_facebook fa_company_contact_info "/>
+                                </a>
+                                <a href="/website/social/twitter"
+                                   class="fa_company_contact_links mx-1 social_icon"
+                                   target="_blank">
+                                    <i class="fa fa-twitter share_twitter fa_company_contact_info "/>
+                                </a>
+                                <a href="/website/social/linkedin"
+                                   class="fa_company_contact_links mx-1 social_icon"
+                                   target="_blank">
+                                    <i class="fa fa-linkedin share_linkedin fa_company_contact_info "/>
+                                </a>
+                                <a href="/website/social/youtube"
+                                   class="fa_company_contact_links mx-1 social_icon"
+                                   target="_blank">
+                                    <i class="fa fa-youtube-play share_youtube fa_company_contact_info "/>
+                                </a>
+                                <a href="/website/social/instagram"
+                                   rel="publisher"
+                                   class="fa_company_contact_links mx-1 social_icon"
+                                   target="_blank">
+                                    <i class="fa fa-instagram share_instagram fa_company_contact_info"/>
+                                </a>
+                                <a href="/website/social/github"
+                                   class="fa_company_contact_links mx-1 social_icon"
+                                   target="_blank">
+                                    <i class="fa fa-github share_github fa_company_contact_info "/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="mid-header-bottom-19">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-2 col-md-4 align-self-center  pt8 pb8 text-center text-md-left text-lg-left oe_structure"
+                         id="mid-header-bottom-left">
+                        <div class="oe_structure oe_empty">
+                            <a href="/" class="img-fluid">
+                                <img src="/logo.png"
+                                     t-att-alt="'Logo of %s' % res_company.name"
+                                     t-att-title="res_company.name"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-4 align-self-center  pt8 pb8 text-center text-md-cneter text-lg-right oe_structure"
+                         id="mid-header-bottom-center">
+                        <li class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <t t-call="website_ecommerce_snippets_blocks_ul_73lines.s_searchbar_input_ultimate"></t>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="col-12 col-sm-12 col-lg-4 col-md-4 align-self-center pt8 pb8 oe_structure text-lg-right text-md-center text-center"
+                         id="mid-header-bottom-right">
+                        <li class="px-2 list-inline-item">
+                            <div class="user-details_1">
+                                <ul class="list-inline text-right mb-0">
+                                    <li class="list-inline-item account_custom">
+                                        <div class="dropdown">
+                                            <a class="btn btn-link dropdown-toggle"
+                                               type="button"
+                                               id="dropdownMenu1"
+                                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-2x fa-user "></i>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+                                                <a class="text-xs-center dropdown-item" href="/web/login"
+                                                   id="ultimate_sign_in">
+                                                    Sign in
+                                                </a>
+                                                <a href="/web/signup" class="text-xs-center dropdown-item"
+                                                   id="ultimate_register">
+                                                    <span>Register</span>
+                                                </a>
+
+                                                <a href="/my/home" role="menuitem" class="dropdown-item"
+                                                   id="ultimate_my_account">My
+                                                    Account
+                                                </a>
+                                                <a class="dropdown-item"
+                                                   t-attf-href="/web/session/logout?redirect=/" role="menuitem"
+                                                   id="ultimate_logout">
+                                                    Logout
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li id="my_cart" class="list-inline-item p-2 rounded">
+                            <div class="oe_structure oe_empty">
+                                <div class="d-flex">
+                                    <!--                                    <t t-set="website_sale_order"-->
+                                    <!--                                       t-value="website.sale_get_order()"/>-->
+                                    <a href="/shop/cart" class="text-white">
+                                        <i class="fa fa-1x  fa-shopping-basket px-1" title="add to cart"
+                                        ></i>
+                                        <span class="hide_content">SHOPPING CART</span>
+
+                                        <!--                                <sup t-attf-class="my_cart_quantity badge badge-primary"-->
+                                        <!--                                     t-esc="website_sale_order and website_sale_order.cart_quantity or ''"/>-->
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

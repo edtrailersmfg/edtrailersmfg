@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Feature 19" id="feature_19">
+        <section class="pt64 pb64" data-visible="features">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2 class="text-center">Features</h2>
+                        <p class="text-center mb48">Lorem Ipsum is simply dummy text of the printing.</p>
+                        <div class="row text-center pt64">
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                <h3>123</h3>
+                                <p class="pt16">Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit. Ut at semper
+                                    metus. Vestibulum gravida velit urna, ut
+                                    mattis leo ullamcorper sed.
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                <h3>1254</h3>
+                                <p class="pt16">Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit. Ut at semper
+                                    metus. Vestibulum gravida velit urna, ut
+                                    mattis leo ullamcorper sed.
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                <h3>123</h3>
+                                <p class="pt16">Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit. Ut at semper
+                                    metus. Vestibulum gravida velit urna, ut
+                                    mattis leo ullamcorper sed.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

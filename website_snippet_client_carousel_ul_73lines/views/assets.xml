@@ -1,0 +1,20 @@
+<odoo>
+    <!--
+        Part of Odoo Module Developed by 73lines
+        See LICENSE file for full copyright and licensing details.
+    -->
+<!--    <template id="assets_snippet_s_dynamic_snippet_products_js_000" inherit_id="website.assets_snippet_s_dynamic_snippet_carousel_js_000">-->
+<!--        <xpath expr="//script[last()]" position="after">-->
+<!--            <script type="text/javascript" src="/website_snippet_client_carousel_ul_73lines/static/src/snippets/s_clients/000.js"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+
+
+<!--    <template id="assets_wysiwyg_blog" inherit_id="website.assets_wysiwyg" name="Shop Wysiwyg Editor">-->
+<!--        <xpath expr="//link[last()]" position="after">-->
+<!--            <script type="text/javascript" src="/website_snippet_client_carousel_ul_73lines/static/src/snippets/s_clients/options.js"/>-->
+
+<!--        </xpath>-->
+<!--    </template>-->
+
+</odoo>

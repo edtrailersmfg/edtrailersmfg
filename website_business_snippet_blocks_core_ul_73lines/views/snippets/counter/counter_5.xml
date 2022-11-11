@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Counter_5" id="counter_5">
+        <section class="pt64 pb16" id="counter_5"
+                 style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-10.jpg&quot;);
+    background-repeat: no-repeat;
+    background-size: cover;" data-visible="counters">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="row text-center">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb48">
+                                <h2>Counter Design</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb48">
+                                <div class="counter_icon">
+                                    <i class="fa fa-thumbs-o-up fa-2x"></i>
+                                </div>
+                                <h4 class="mb16 mt32">Projects Completed</h4>
+                                <h3>789</h3>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb48">
+                                <div class="counter_icon">
+                                    <i class="fa fa-child fa-2x"></i>
+                                </div>
+                                <h4 class="mb16 mt32">Happy Clients</h4>
+                                <h3>5673</h3>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb48">
+                                <div class="counter_icon">
+                                    <i class="fa fa-trophy fa-2x"></i>
+                                </div>
+                                <h4 class="mb16 mt32">Design Awards</h4>
+                                <h3>1200</h3>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb48">
+                                <div class="counter_icon">
+                                    <i class="fa fa-coffee fa-2x"></i>
+                                </div>
+                                <h4 class="mb16 mt32">Cups Of Coffee</h4>
+                                <h3>3459</h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

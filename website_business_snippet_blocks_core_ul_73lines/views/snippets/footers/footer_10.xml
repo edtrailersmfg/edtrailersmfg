@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Footer 10" id="footer_10">
+        <section class="pt64" id="footer_10" data-visible="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <h3>Contact Information</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus accumsan enim, quis
+                            feugiat risus auctor in. Nullam et congue augue. Nulla scelerisque imperdiet purus, eget
+                            porttitor purus fringilla vitae. Quisque nulla diam, tristique et rhoncus sed, sagittis in
+                            est. Integer scelerisque sem ac elit pharetra elementum.
+                        </p>
+                        <div class="row">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-12">
+                                <div class="media">
+                                    <i class="fa fa-map-marker mr-3 mt-4"></i>
+                                    <div class="media-body">
+                                        <h5>Address :</h5>
+                                        <address>
+                                            <span t-field="res_company.street"/>
+                                            <span t-field="res_company.city"/>
+                                            <span t-field="res_company.state_id.name"/>
+                                            <br/>
+                                            <span t-field="res_company.zip"/>
+                                            <span t-field="res_company.country_id.name"/>
+                                            <br/>view location on map
+                                        </address>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-6">
+                                <div class="media">
+                                    <i class="fa fa-envelope mr-3 mt-3"></i>
+                                    <div class="media-body">
+                                        <h5>Email :</h5>
+                                        <p><span t-field="res_company.email"/></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-6">
+                                <div class="media">
+                                    <i class="fa fa-phone mr-3 mt-3"></i>
+                                    <div class="media-body">
+                                        <h5>Phone :</h5>
+                                        <p><span t-field="res_company.phone"/></p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <h3>Drop Me A Line</h3>
+                        <form class="form-inline" action="/action_page.php">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 pt16">
+                                    <input type="textbox" class="form-control input"
+                                           placeholder="FIRST NAME"></input>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 pt16">
+                                    <input type="email" class="form-control input" placeholder="EMAIL"></input>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 pt16">
+                                    <input type="number" class="form-control input" placeholder="PHONE"></input>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 pt16">
+                                    <input type="textbox" class="form-control input" placeholder="SUBJECT"></input>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 pt16 pb64">
+                                    <textarea name="message" rows="4" cols="0" class="input form-control"
+                                              placeholder="MESSAGE"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-block py-3 btn-outline-info rounded-0">SEND MESSAGE
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <hr class="mt64 "></hr>
+            </div>
+        </section>
+        <section class="pb32">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-6">
+                        <ul class="d-flex d-inline list-unstyled p-0">
+                            <li class="px-2">
+                                <a href="#">Terms &amp; Conditions</a>
+                            </li>
+                            <li class="border-primary px-2" style="border-left:2px solid;">
+                                <a href="#">API Use Policy</a>
+                            </li>
+                            <li class="border-primary px-2" style="border-left:2px solid;">
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li class="border-primary px-2" style="border-left:2px solid;">
+                                <a href="#">Cookies</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-6 text-md-right text-lg-right text-center">
+                        <div>
+                            Copyright &amp;copy;
+                            <span t-field="res_company.name">Company name
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center pt16">
+                    <div>
+                        Responsive Odoo theme,
+                        <span>
+                            Made with
+                            <i class="fa fa-heart"/>
+                            by
+                            <strong>&lt;73Lines&gt;</strong>
+                        </span>
+                    </div>
+<!--                    <div>-->
+<!--                        <t t-call="website.language_selector"/>-->
+<!--                    </div>-->
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

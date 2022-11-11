@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template name="Right Content 8" id="right_content_8">
+        <section data-visible="right_content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6  ">
+                                <div id="wrap" class="oe_structure oe_empty"
+                                     style="background-color:#333333;min-height: 500px;">
+                                    <div id="myCarousel1560229966395"
+                                         class="s_carousel carousel slide s_carousel_default"
+                                         data-interval="10000">
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#myCarousel1560229966395"
+                                                data-slide-to="0"
+                                                class="active"/>
+                                            <li data-target="#myCarousel1560229966395"
+                                                data-slide-to="1"/>
+                                            <li data-target="#myCarousel1560229966395"
+                                                data-slide-to="2"/>
+                                            <li data-target="#myCarousel1560229966395"
+                                                data-slide-to="3"/>
+                                        </ol>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item oe_img_bg pt152 pb152 oe_custom_bg active"
+                                                 style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg&quot;); height: 500px;"
+                                                 data-name="Slide">
+                                            </div>
+                                            <div class="carousel-item oe_img_bg pt152 pb152 oe_custom_bg"
+                                                 style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg&quot;); height: 500px;"
+                                                 data-name="Slide">
+
+                                            </div>
+                                            <div class="carousel-item oe_img_bg pt152 pb152 oe_custom_bg"
+                                                 style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg&quot;); height: 500px;"
+                                                 data-name="Slide">
+
+                                            </div>
+                                            <div class="carousel-item oe_img_bg pt152 pb152 oe_custom_bg"
+                                                 style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg&quot;); height: 500px;"
+                                                 data-name="Slide">
+
+                                            </div>
+                                        </div>
+                                        <div class="carousel-control-prev"
+                                             data-target="#myCarousel1560229966395"
+                                             data-slide="prev" role="img"
+                                             aria-label="Previous"
+                                             title="Previous">
+                                            <span class="carousel-control-prev-icon"/>
+                                            <span class="sr-only o_default_snippet_text">
+                                                Previous
+                                            </span>
+                                        </div>
+                                        <div class="carousel-control-next"
+                                             data-target="#myCarousel1560229966395"
+                                             data-slide="next" role="img"
+                                             aria-label="Next" title="Next">
+                                            <span class="carousel-control-next-icon"/>
+                                            <span class="sr-only o_default_snippet_text">
+                                                Next
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-center pt64 pb64">
+                                <h2 class="pt8 pb8">Title Name</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Pellentesque fermentum est
+                                    in<br/>tortor congue suscipit. Suspendisse
+                                    potenti.Aliquam finibus pharetra tellus
+                                    at egestas.
+                                </p>
+                                <a href="#"
+                                   class="btn btn-primary btn-lg px-5 mt16 mb16">
+                                    Button
+                                </a>
+                                <h3 class="pt64">Follow us</h3>
+                                <div>
+                                    <i class="fa fa-google-plus px-2"></i>
+                                    <i class="fa fa-facebook px-2"></i>
+                                    <i class="fa fa-twitter px-2"></i>
+                                    <i class="fa fa-instagram px-2"></i>
+                                    <i class="fa fa-behance px-2"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

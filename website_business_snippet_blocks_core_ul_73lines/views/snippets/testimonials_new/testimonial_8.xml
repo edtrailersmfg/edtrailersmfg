@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Testimonial 8" id="testimonial_8">
+        <section class="pt64 pb64" data-visible="testimonials">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Testimonials</h2>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+                        <p class="text-center">Lorem Ipsum has been the
+                            industry's standard dummy
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-58.png"
+                             class="img-fluid mb8 mt8" alt="Brand Logo"
+                             title="Brand Logo"/>
+                    </div>
+                    <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-58.png"
+                             class="img-fluid mb8 mt8" alt="Brand Logo"
+                             title="Brand Logo"/>
+                    </div>
+                    <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-58.png"
+                             class="img-fluid mb8 mt8" alt="Brand Logo"
+                             title="Brand Logo"/>
+                    </div>
+                    <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-58.png"
+                             class="img-fluid mb8 mt8" alt="Brand Logo"
+                             title="Brand Logo"/>
+                    </div>
+                    <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-58.png"
+                             class="img-fluid mb8 mt8" alt="Brand Logo"
+                             title="Brand Logo"/>
+                    </div>
+                    <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-58.png"
+                             class="img-fluid mb8 mt8" alt="Brand Logo"
+                             title="Brand Logo"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

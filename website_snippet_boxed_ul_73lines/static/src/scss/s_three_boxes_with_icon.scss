@@ -1,0 +1,109 @@
+.s_three_boxes_with_icon .fa {
+    text-align:center;
+    display:inline-block;
+    vertical-align:middle;
+}
+.s_three_boxes_with_icon .fa.fa-1x {
+    width:40px;
+    height:40px;
+    line-height:40px;
+}
+.s_three_boxes_with_icon .fa.fa-2x {
+    width:60px;
+    height:60px;
+    line-height:60px;
+}
+.s_three_boxes_with_icon .fa.fa-3x {
+    width:80px;
+    height:80px;
+    line-height:80px;
+}
+.s_three_boxes_with_icon .fa.fa-4x {
+    width:100px;
+    height:100px;
+    line-height:100px;
+}
+.s_three_boxes_with_icon .fa.fa-5x {
+    width:120px;
+    height:120px;
+    line-height:120px;
+}
+
+
+#wrapwrap .img-rounded, #wrapwrap .img-rounded.img-thumbnail {
+
+	border-radius: 8px;
+
+}
+
+#wrapwrap .img-circle, #wrapwrap .img-circle.img-thumbnail {
+
+	    border-radius: 50%;
+
+}
+
+
+#wrapwrap .bg-primary.img-thumbnail, #wrapwrap .bg-primary.thumbnail {
+
+	-webkit-box-shadow: 0 0 0 3px #fff,0 0 0 6px $-alpha;
+    box-shadow: 0 0 0 3px #fff,0 0 0 6px $-alpha;
+
+}
+
+#wrapwrap .bg-success.img-thumbnail, #wrapwrap .bg-success.thumbnail {
+
+    -webkit-box-shadow: 0 0 0 3px #fff,0 0 0 6px $progress-bg;
+    box-shadow: 0 0 0 3px #fff,0 0 0 6px $progress-bg;
+
+}
+
+#wrapwrap .bg-info.img-thumbnail, #wrapwrap .bg-info.thumbnail {
+
+    -webkit-box-shadow: 0 0 0 3px #fff,0 0 0 6px $progress-bg;
+    box-shadow: 0 0 0 3px #fff,0 0 0 6px $progress-bg;
+
+}
+
+#wrapwrap .bg-warning.img-thumbnail, #wrapwrap .bg-warning.thumbnail {
+
+    -webkit-box-shadow: 0 0 0 3px #fff,0 0 0 6px $progress-bg;
+    box-shadow: 0 0 0 3px #fff,0 0 0 6px  $progress-bg;
+
+}
+
+#wrapwrap .bg-danger.img-thumbnail, #wrapwrap .bg-danger.thumbnail {
+
+    -webkit-box-shadow: 0 0 0 3px #fff,0 0 0 6px  $progress-bg;
+    box-shadow: 0 0 0 3px #fff,0 0 0 6px  $progress-bg;
+
+}
+
+#wrapwrap .img-thumbnail, #wrapwrap .thumbnail {
+
+	border-radius: inherit;
+    border: 0;
+    padding: 0;
+
+}
+
+
+
+.feature-box:hover span{
+
+	background-color: $-alpha !important;
+    color: #ffffff !important;
+
+}
+
+
+.feature-box:hover .img-thumbnail{
+
+	-webkit-box-shadow: 0 0 0 3px #fff,0 0 0 6px $-alpha !important;
+    box-shadow: 0 0 0 3px #fff,0 0 0 6px $-alpha !important;
+}
+
+
+.feature-box:hover a{
+	color: $-alpha !important;
+    text-decoration:none;
+}

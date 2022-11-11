@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Contact us 14" id="contact_us_14">
+        <section class="s_website_form pt64 pb64" id="contact_us_14" data-visible="contactus">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 pb16">
+                        <h1 class="o_default_snippet_text">SEND US A MESSAGE</h1>
+                        <form action="/website_form/" method="post"
+                              data-model_name="crm.lead"
+                              data-success-mode="redirect"
+                              data-success-page="/contactus-thank-you"
+                              class="s_website_form container-fluid mt32 o_mark_required"
+                              data-mark="*"
+                              enctype="multipart/form-data"
+                              data-editable-form="false">
+                            <div class="s_website_form_rows row s_col_no_bgcolor">
+                                <div class="col-md-12">
+                                    <div class="form-group s_website_form_field s_website_form_required row d-block mx-auto"
+                                         style="width: 50%;">
+                                        <div class="col-12 field">
+                                            <label class="col-form-label s_website_form_label d-none"
+                                                   for="contact_name">
+                                                <span class="s_website_form_label_content"></span>
+                                            </label>
+                                            <input type="text"
+                                                   class="form-control s_website_form_input"
+                                                   name="contact_name"
+                                                   placeholder="Your Name"
+                                                   t-att-value="request.params.get('contact_name', '')"
+                                                   required=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group s_website_form_field row d-block mx-auto"
+                                         style="width: 50%;">
+                                        <div class="col-12 field">
+                                            <label class="col-form-label s_website_form_label d-none"
+                                                   for="contact_name">
+                                                <span class="s_website_form_label_content"></span>
+                                            </label>
+                                            <input type="text"
+                                                   class="form-control s_website_form_input"
+                                                   name="phone"
+                                                   placeholder="Phone Number"
+                                                   t-att-value="request.params.get('phone', '')"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group s_website_form_field s_website_form_required row d-block mx-auto"
+                                         style="width: 50%;">
+                                        <div class="col-12 field">
+                                            <label class="col-form-label s_website_form_label d-none"
+                                                   for="contact_name">
+                                                <span class="s_website_form_label_content"></span>
+                                            </label>
+                                            <input type="text"
+                                                   class="form-control s_website_form_input"
+                                                   name="email_from" required=""
+                                                   placeholder="Email"
+                                                   t-att-value="request.params.get('email_from', '')"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group s_website_form_field row d-block mx-auto"
+                                         style="width: 50%;">
+                                        <div class="col-12 field">
+                                            <label class="col-form-label s_website_form_label d-none"
+                                                   for="contact_name">
+                                                <span class="s_website_form_label_content"></span>
+                                            </label>
+                                            <input type="text"
+                                                   class="form-control s_website_form_input"
+                                                   name="partner_name" required=""
+                                                   placeholder="Your Company"
+                                                   t-att-value="request.params.get('partner_name', '')"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group s_website_form_field s_website_form_model_required row d-block mx-auto"
+                                         style="width: 50%;">
+                                        <div class="col-12 field">
+                                            <label class="col-form-label s_website_form_label d-none"
+                                                   for="contact_name">
+                                                <span class="s_website_form_label_content"></span>
+                                            </label>
+                                            <input type="text"
+                                                   class="form-control s_website_form_input"
+                                                   name="name" required=""
+                                                   placeholder="Subject"
+                                                   t-att-value="request.params.get('name', '')"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group s_website_form_field s_website_form_required row d-block mx-auto"
+                                         style="width: 50%;">
+                                        <div class="col-12 field">
+                                            <label class="col-form-label s_website_form_label d-none"
+                                                   for="contact_name">
+                                                <span class="s_website_form_label_content"></span>
+                                            </label>
+                                            <textarea
+                                                    class="form-control s_website_form_input"
+                                                    name="description" required=""
+                                                    placeholder="Your Question">
+                                                <!--<t t-esc="request.params.get('description', '')"/>-->
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_submit">
+                                    <div class="col-12 d-block mx-auto field" style="width: 50%;">
+                                        <div class="s_btn text-center"
+                                             data-name="Buttons">
+                                            <a href="#" role="button"
+                                               class="btn btn-primary btn-lg o_website_form_send">
+                                                Send
+                                            </a>
+                                            <span id="o_website_form_result"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

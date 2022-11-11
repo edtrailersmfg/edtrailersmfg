@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template name="Right Content 3" id="right_content_3">
+        <section class="pt64" data-visible="right_content">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-sm-12 col-lg-12 text-center mb48">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6  mt24 mb24">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-20.png" alt="half-mobile"
+                             class="img-fluid pt8 pb8 mx-auto d-block"/>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="pb32">
+                            <i class="fa fa-2x fa-star-o rounded-circle border"></i>
+                        </div>
+                        <h2>Title Name</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum est in tortor
+                            congue suscipit. Suspendisse potenti.Aliquam finibus pharetra tellus at egestas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

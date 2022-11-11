@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="footer_5" name="Footer 5">
+        <section class="pt64 pb32" id="footer_5" data-visible="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32">
+                        <h5 class="text-uppercase font-weight-bold mb16">About Us</h5>
+                        <img alt="image" class="img-fluid mb16"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-18.png"/>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut.
+                        </p>
+                        <a href="#" class="btn btn-success text-uppercase">read more</a>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32">
+                        <h5 class="text-uppercase font-weight-bold mb16">Latest News</h5>
+                        <div class="media">
+                            <img alt="image" class="img-fluid mr-2"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-68.png"/>
+                            <div class="media-body mt8">
+                                <a href="#" target="_blank">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="media">
+                            <img alt="image" class="img-fluid mr-2"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-68.png"/>
+                            <div class="media-body mt8">
+                                <a href="#" target="_blank">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32">
+                        <h5 class="text-uppercase font-weight-bold mb16">Flicker Posts</h5>
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 p-1">
+                                <img alt="image" class="img-fluid"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-35.png"/>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 p-1">
+                                <img alt="image" class="img-fluid"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-35.png"/>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 p-1">
+                                <img alt="image" class="img-fluid"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-35.png"/>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 p-1">
+                                <img alt="image" class="img-fluid"
+                                     src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-35.png"/>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-success text-uppercase mt8">view all</a>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32">
+                        <h5 class="text-uppercase font-weight-bold mb16">Contact Info</h5>
+                        <p class="mb32">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt
+                            ut.
+                        </p>
+                        <div class="media">
+                            <i class="fa fa-home mr-3 mt-1"></i>
+                            <div class="media-body">
+                                <p class="mb0">
+                                    <span t-field="res_company.street"/>
+                                    <span t-field="res_company.city"/>
+                                    <span t-field="res_company.state_id.name"/>
+                                    <span t-field="res_company.zip"/>
+                                    <span t-field="res_company.country_id.name"/>
+                                </p>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="media">
+                            <i class="fa fa-envelope-o mr-3 mt-1"></i>
+                            <div class="media-body">
+                                <p class="mb0">
+                                    <span t-field="res_company.phone"/>
+                                </p>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="media">
+                            <i class="fa fa-phone mr-3 mt-1"></i>
+                            <div class="media-body">
+                                <p class="mb0">
+                                    <span t-field="res_company.email"/>
+                                </p>
+                            </div>
+                        </div>
+                        <hr/>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light">
+            <div class="container">
+                <div class="row p-4">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div>
+                            Copyright &amp;copy;
+                            <span t-field="res_company.name">Company name
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-md-right text-lg-right">
+                        <div>
+                            Responsive Odoo theme,
+                            <span>
+                                Made with
+                                <i class="fa fa-heart"/>
+                                by
+                                <strong>&lt;73Lines/&gt;</strong>
+                            </span>
+                        </div>
+<!--                        <div>-->
+<!--                            <t t-call="website.language_selector"/>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

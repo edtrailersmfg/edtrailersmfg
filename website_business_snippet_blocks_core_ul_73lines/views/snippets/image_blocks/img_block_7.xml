@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="img_block_7" name="Image Hover 1">
+        <section class="sni-block pt64 pb64" data-visible="image_blocks">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 pb48 text-center">
+                        <h2>Headline</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 img-box">
+                        <div class="img-box-container">
+                            <img class="img-fluid d-block mx-auto mt8 mb8"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/placeholders/placeholders-3.png"/>
+                            <div class="overlay">
+                                <div class="img-text">Your Text</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 img-box">
+                        <div class="img-box-container">
+                            <img class="img-fluid d-block mx-auto mt8 mb8"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/placeholders/placeholders-3.png"/>
+                            <div class="overlay">
+                                <div class="img-text">Your Text</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 img-box">
+                        <div class="img-box-container">
+                            <img class="img-fluid d-block mx-auto mt8 mb8"
+                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/placeholders/placeholders-3.png"/>
+                            <div class="overlay">
+                                <div class="img-text">Your Text</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

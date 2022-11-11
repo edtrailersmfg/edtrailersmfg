@@ -1,0 +1,1362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+
+
+    <template id="theme_ultimate_snippet_blocks_list" inherit_id="website.snippets"
+              name="Theme Ultimate Snippets List">
+        <xpath expr="//div[@id='snippet_structure']" position="inside">
+
+            <div class="o_panel_body">
+                <t t-snippet="website.s_mega_menu_multi_menus"
+                   t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/multi-menu.png"/>
+                <t t-snippet="website.s_mega_menu_menu_image_menu"
+                   t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/menu-image-menu.png"/>
+            </div>
+        </xpath>
+        <xpath expr="//div[@id='snippet_structure']" position="before">
+            <div class="o_panel" id="ultimate_snippet_blocks">
+                <div class="o_panel_header d-block text-center border-bottom">
+                    <span class="fa fa-stack d-none">
+                        <!--                        <img src="/theme_scita/static/src/img/scita_small_logo.png"-->
+                        <!--                             class="img img-fluid"/>-->
+                    </span>
+                    <span class="font-weight-bold">Ultimate</span>
+                    <select id="selSnippetCat" class="ultimate_snippet_selection w-100">
+                        <option value="mid_headears">Midheaders</option>
+                        <option value="grid_structure">Grid Structure</option>
+                        <option value="mega_menu">Mega Menu</option>
+                        <option value="banners">Banners</option>
+                        <option value="grids">Grids Structure</option>
+                        <option value="center_content">Center Content</option>
+                        <option value="left_content">Left Content</option>
+                        <option value="right_content">Right Content</option>
+                        <option value="aboutus">About Us</option>
+                        <option value="tabs">Tabs</option>
+                        <option value="accordions">Accordions</option>
+                        <option value="process_steps">Process Steps</option>
+                        <option value="features">Features</option>
+                        <option value="counters">Counters</option>
+                        <option value="image_blocks">Image Blocks</option>
+                        <option value="portfolios">Portfolios</option>
+                        <option value="team">Team</option>
+                        <option value="testimonials">Testimonials</option>
+                        <option value="progressbar">Progressbar</option>
+                        <option value="price_menu">Price Menu</option>
+                        <option value="pricing">Pricing</option>
+                        <option value="news">News</option>
+                        <option value="cta">CTA</option>
+                        <option value="timer">Timer</option>
+                        <option value="blockquote">Blockquote</option>
+                        <option value="flipbox">Flipbox</option>
+                        <option value="newsletter">Newsletter</option>
+                        <option value="thumbnail_gallery">Thumbnail Gallery</option>
+                        <option value="image_slider">Image Slider</option>
+                        <option value="social_share_icons">Social Share Icons</option>
+                    </select>
+                </div>
+                <div class="o_panel_body mt-2" id="o_panel_body">
+
+                    <!--Mid Headers-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mid_header_dark_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mid-headers/m-h-d-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mid_header_dark_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mid-headers/m-h-d-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mid_header_dark_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mid-headers/m-h-d-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mid_header_dark_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mid-headers/m-h-d-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mid_header_dark_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mid-headers/m-h-d-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mid_header_light_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mid-headers/m-h-l-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mid_header_light_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mid-headers/m-h-l-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mid_header_light_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mid-headers/m-h-l-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mid_header_light_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mid-headers/m-h-l-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mid_header_light_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mid-headers/m-h-l-5.png"/>
+
+                    <!--Grid Structures-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.blank_grid_snippet_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/blank-grid-structure/grid-12.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.blank_grid_snippet_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/blank-grid-structure/grid-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.blank_grid_snippet_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/blank-grid-structure/grid-4-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.blank_grid_snippet_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/blank-grid-structure/grid-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.blank_grid_snippet_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/blank-grid-structure/grid-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.blank_grid_snippet_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/blank-grid-structure/grid-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.blank_grid_snippet_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/blank-grid-structure/grid-1.png"/>
+
+                    <!--Mega Menus-->
+<!--                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mega_menu_1"-->
+<!--                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-1.png"/>-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mega_menu_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mega_menu_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mega_menu_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mega_menu_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mega_menu_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mega_menu_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mega_menu_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mega_menu_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mega_menu_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-10.png"/>
+
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.list_without_icon"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-11.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.list_with_icon"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-12.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mega_menu_img_transition_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-img-transition-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mega_menu_img_transition_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-img-transition-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mega_menu_img_transition_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-img-transition-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mega_menu_img_transition_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-img-transition-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mega_menu_img_transition_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-img-transition-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.mega_menu_img_transition_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-img-transition-6.png"/>
+
+                    <!--Banners-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.banner_d1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/banner/banner_block1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.banner_d2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/banner/banner_block2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.banner_d3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/banner/banner_block3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.banner_d4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/banner/banner_block4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.banner_d5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/banner/banner_block5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.banner_d6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/banner/banner_block6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.banner_d7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/banner/banner_block7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.banner_d8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/banner/banner_block8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.banner_d9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/banner/banner_block9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.banner_d10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/banner/banner_block10.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.banner_d11"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/banner/banner_block11.png"/>
+
+                    <!--Grids-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-10.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_11"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-11.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_12"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-12.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_13"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-13.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_14"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-14.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_15"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-15.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_16"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-16.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_17"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-17.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_18"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-18.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_19"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-19.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_20"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-20.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_21"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-21.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_22"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-22.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_23"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-23.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_24"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-24.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_25"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-25.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_26"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-26.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_27"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-27.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_28"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-28.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_29"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-29.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.grid_30"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/grid/grid-30.png"/>
+
+                    <!--Center Content-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-10.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_11"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-11.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_12"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-12.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_13"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-13.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_14"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-14.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_15"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-15.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_16"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-16.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_17"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-17.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_18"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-18.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_19"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-19.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_20"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-20.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_21"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-21.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_22"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-22.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_23"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-23.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_24"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-24.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_25"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-25.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.center_content_26"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/center-content/center-content-26.png"/>
+
+                    <!--Left Content-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-10.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_11"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-11.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_12"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-12.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_13"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-13.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_14"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-14.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_15"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-15.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_16"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-16.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_17"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-17.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_18"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-18.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_19"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-19.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_20"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-20.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_21"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-21.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_22"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-22.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_23"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-23.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_24"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-24.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_25"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-25.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_26"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-26.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_27"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-27.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.left_content_28"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/left-content/left-content-28.png"/>
+
+                    <!--Right Content-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-10.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_11"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-11.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_12"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-12.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_13"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-13.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_14"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-14.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_15"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-15.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_16"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-16.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_17"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-17.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_18"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-18.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_19"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-19.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_20"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-20.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_21"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-21.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_22"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-22.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_23"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-23.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_24"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-24.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_25"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-25.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_26"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-26.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_27"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-27.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.right_content_28"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/right-content/right-content-28.png"/>
+
+                    <!--About Us-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.about_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/about-us/about-us-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.about_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/about-us/about-us-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.about_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/about-us/about-us-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.about_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/about-us/about-us-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.about_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/about-us/about-us-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.about_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/about-us/about-us-6.png"/>
+
+                    <!--Tabs-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.custom_tab_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/tab/tab-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.tab_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/tab/tab-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.tab_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/tab/tab-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.tab_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/tab/tab-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.tab_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/tab/tab-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.tab_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/tab/tab-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.tab_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/tab/tab-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.tab_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/tab/tab-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.tab_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/tab/tab-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.tab_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/tab/tab-10.png"/>
+
+                    <!--Accordion-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.accordion_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/accordion/accordion-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.accordion_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/accordion/accordion-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.accordion_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/accordion/accordion-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.accordion_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/accordion/accordion-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.accordion_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/accordion/accordion-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.accordion_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/accordion/accordion-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.accordion_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/accordion/accordion-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.accordion_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/accordion/accordion-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.accordion_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/accordion/accordion-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.accordion_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/accordion/accordion-10.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.accordion_11"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/accordion/accordion-11.png"/>
+
+                    <!--Process Steps-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.process_step_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/process-step/process-step-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.process_step_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/process-step/process-step-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.process_step_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/process-step/process-step-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.process_step_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/process-step/process-step-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.process_step_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/process-step/process-step-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.process_step_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/process-step/process-step-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.process_step_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/process-step/process-step-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.process_step_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/process-step/process-step-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.process_step_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/process-step/process-step-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.process_step_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/process-step/process-step-10.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.process_step_11"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/process-step/process-step-11.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.process_step_12"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/process-step/process-step-12.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.process_step_13"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/process-step/process-step-13.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.process_step_14"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/process-step/process-step-14.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.process_step_15"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/process-step/process-step-15.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.process_step_16"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/process-step/process-step-16.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.process_step_17"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/process-step/process-step-17.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.process_step_18"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/process-step/process-step-18.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.process_step_19"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/process-step/process-step-19.png"/>
+
+                    <!--Features-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-10.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_11"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-11.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_12"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-12.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_13"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-13.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_14"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-14.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_15"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-15.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_16"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-16.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_17"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-17.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_18"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-18.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_19"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-19.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_20"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-20.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_21"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-21.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_22"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-22.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_23"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-23.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_24"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-24.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_25"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-25.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_26"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-26.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_27"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-27.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_28"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-28.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_29"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-29.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_30"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-30.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_31"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-31.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_32"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-32.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_33"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-33.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_34"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-34.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_35"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-35.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_36"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-36.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.feature_37"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/features/feature-37.png"/>
+
+                    <!--Counters-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.counter_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/counter/counter-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.counter_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/counter/counter-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.counter_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/counter/counter-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.counter_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/counter/counter-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.counter_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/counter/counter-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.counter_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/counter/counter-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.counter_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/counter/counter-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.counter_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/counter/counter-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.counter_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/counter/counter-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.counter_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/counter/counter-10.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.counter_11"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/counter/counter-11.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.counter_12"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/counter/counter-12.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.counter_13"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/counter/counter-13.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.counter_14"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/counter/counter-14.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.counter_15"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/counter/counter-15.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.counter_16"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/counter/counter-16.png"/>
+
+                    <!--Image Blocks-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.img_block_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-block/image_block1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.img_block_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-block/image_block2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.img_block_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-block/image_block3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.img_block_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-block/image_block4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.img_block_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-block/image_block5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.img_block_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-block/image_block6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.img_block_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-block/image_block7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.img_block_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-block/image_block8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.img_block_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-block/image_block9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.img_block_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-block/image_block10.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.img_block_11"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-block/image_block11.png"/>
+
+                    <!--Portfolio-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.portfolio_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/portfolio/portfolio-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.portfolio_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/portfolio/portfolio-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.portfolio_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/portfolio/portfolio-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.portfolio_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/portfolio/portfolio-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.portfolio_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/portfolio/portfolio-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.portfolio_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/portfolio/portfolio-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.portfolio_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/portfolio/portfolio-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.portfolio_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/portfolio/portfolio-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.portfolio_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/portfolio/portfolio-9.png"/>
+
+                    <!--Team-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.team_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/team/team-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.team_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/team/team-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.team_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/team/team-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.team_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/team/team-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.team_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/team/team-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.team_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/team/team-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.team_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/team/team-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.team_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/team/team-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.team_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/team/team-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.team_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/team/team-10.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.team_11"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/team/team-11.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.team_12"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/team/team-12.png"/>
+
+                    <!--Customer Testimonials-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-10.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_11"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-11.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_12"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-12.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_13"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-13.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_14"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-14.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_15"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-15.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_16"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-16.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_17"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-17.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_18"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-18.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_19"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-19.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.testimonial_20"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/customer-testimonial/testimonial-20.png"/>
+
+                    <!--Progressbar-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.progress_bar_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/progress-bar/progress-bar-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.progress_bar_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/progress-bar/progress-bar-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.progress_bar_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/progress-bar/progress-bar-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.progress_bar_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/progress-bar/progress-bar-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.progress_bar_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/progress-bar/progress-bar-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.progress_bar_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/progress-bar/progress-bar-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.progress_bar_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/progress-bar/progress-bar-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.progress_bar_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/progress-bar/progress-bar-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.progress_bar_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/progress-bar/progress-bar-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.progress_bar_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/progress-bar/progress-bar-10.png"/>
+
+                    <!--Price Menu-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.price_menu_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/price-menu/price-menu-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.price_menu_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/price-menu/price-menu-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.price_menu_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/price-menu/price-menu-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.price_menu_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/price-menu/price-menu-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.price_menu_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/price-menu/price-menu-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.price_menu_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/price-menu/price-menu-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.price_menu_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/price-menu/price-menu-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.price_menu_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/price-menu/price-menu-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.price_menu_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/price-menu/price-menu-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.price_menu_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/price-menu/price-menu-10.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.price_menu_11"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/price-menu/price-menu-11.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.price_menu_12"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/price-menu/price-menu-12.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.price_menu_13"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/price-menu/price-menu-13.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.price_menu_14"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/price-menu/price-menu-14.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.price_menu_15"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/price-menu/price-menu-15.png"/>
+
+                    <!--Pricing-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-10.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_11"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-11.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_12"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-12.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_13"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-13.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_14"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-14.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_15"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-15.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_16"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-16.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_17"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-17.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_18"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-18.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_19"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-19.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_20"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-20.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_21"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-21.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_22"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-22.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.pricing_23"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/pricing-table/pricing-23.png"/>
+
+                    <!--News-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.news_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/news/news-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.news_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/news/news-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.news_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/news/news-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.news_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/news/news-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.news_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/news/news-5.png"/>
+
+                    <!--CTA-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.cta_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/cta/cta-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.cta_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/cta/cta-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.cta_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/cta/cta-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.cta_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/cta/cta-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.cta_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/cta/cta-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.cta_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/cta/cta-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.cta_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/cta/cta-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.cta_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/cta/cta-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.cta_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/cta/cta-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.cta_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/cta/cta-10.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.cta_11"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/cta/cta-11.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.cta_12"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/cta/cta-12.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.cta_13"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/cta/cta-13.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.cta_14"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/cta/cta-14.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.cta_15"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/cta/cta-15.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.cta_16"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/cta/cta-16.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.cta_17"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/cta/cta-17.png"/>
+
+
+                    <!--Timer-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.counters_time_deal_div"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/timer/timer.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.timer_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/timer/timer-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.timer_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/timer/timer-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.timer_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/timer/timer-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.timer_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/timer/timer-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.timer_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/timer/timer-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.timer_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/timer/timer-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.timer_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/timer/timer-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.timer_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/timer/timer-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.timer_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/timer/timer-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.timer_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/timer/timer-10.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.timer_11"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/timer/timer-11.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.timer_12"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/timer/timer-12.png"/>
+
+                    <!--Blockquotes-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.blockquote_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/blockquotes/blockquote-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.blockquote_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/blockquotes/blockquote-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.blockquote_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/blockquotes/blockquote-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.blockquote_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/blockquotes/blockquote-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.blockquote_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/blockquotes/blockquote-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.blockquote_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/blockquotes/blockquote-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.blockquote_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/blockquotes/blockquote-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.blockquote_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/blockquotes/blockquote-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.blockquote_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/blockquotes/blockquote-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.blockquote_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/blockquotes/blockquote-10.png"/>
+
+                    <!--Flipbox-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.flip_box_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/flip-box/flip-box-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.flip_box_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/flip-box/flip-box-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.flip_box_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/flip-box/flip-box-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.flip_box_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/flip-box/flip-box-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.flip_box_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/flip-box/flip-box-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.flip_box_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/flip-box/flip-box-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.flip_box_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/flip-box/flip-box-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.flip_box_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/flip-box/flip-box-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.flip_box_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/flip-box/flip-box-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.flip_box_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/flip-box/flip-box-10.png"/>
+
+                    <!--Newsletter-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.newsletter_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/newsletter/newsletter-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.newsletter_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/newsletter/newsletter-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.newsletter_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/newsletter/newsletter-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.newsletter_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/newsletter/newsletter-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.newsletter_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/newsletter/newsletter-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.newsletter_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/newsletter/newsletter-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.newsletter_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/newsletter/newsletter-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.newsletter_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/newsletter/newsletter-8.png"/>
+
+                    <!--Thumbnail Gallery-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.thumbnail_gallery_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/thumbnail-gallery/thumbnail-gallery-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.thumbnail_gallery_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/thumbnail-gallery/thumbnail-gallery-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.thumbnail_gallery_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/thumbnail-gallery/thumbnail-gallery-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.thumbnail_gallery_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/thumbnail-gallery/thumbnail-gallery-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.thumbnail_gallery_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/thumbnail-gallery/thumbnail-gallery-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.thumbnail_gallery_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/thumbnail-gallery/thumbnail-gallery-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.thumbnail_gallery_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/thumbnail-gallery/thumbnail-gallery-7.png"/>
+
+                    <!--Image Slider-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.image_slider_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-slider/image-slider-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.image_slider_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-slider/image-slider-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.image_slider_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-slider/image-slider-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.image_slider_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-slider/image-slider-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.image_slider_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-slider/image-slider-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.image_slider_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-slider/image-slider-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.image_slider_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-slider/image-slider-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.image_slider_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-slider/image-slider-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.image_slider_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-slider/image-slider-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.image_slider_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/image-slider/image-slider-10.png"/>
+
+                    <!--Social Share Icons-->
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.social_share_icon_1"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/social-share-icons/social-share-icon-1.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.social_share_icon_2"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/social-share-icons/social-share-icon-2.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.social_share_icon_3"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/social-share-icons/social-share-icon-3.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.social_share_icon_4"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/social-share-icons/social-share-icon-4.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.social_share_icon_5"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/social-share-icons/social-share-icon-5.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.social_share_icon_6"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/social-share-icons/social-share-icon-6.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.social_share_icon_7"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/social-share-icons/social-share-icon-7.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.social_share_icon_8"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/social-share-icons/social-share-icon-8.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.social_share_icon_9"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/social-share-icons/social-share-icon-9.png"/>
+                    <t t-snippet="website_business_snippet_blocks_core_ul_73lines.social_share_icon_10"
+                       t-thumbnail="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/social-share-icons/social-share-icon-10.png"/>
+
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="s_overlay_section_option"
+              inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-js='Box']" position="after">
+            <!--Overlay Section Option-->
+            <div data-js="js_get_section_style" data-selector="section">
+                <we-select string="Overlay Styles" data-no-preview="true">
+                    <we-button data-select-class="">None</we-button>
+                    <we-button data-select-class="s_overlay_section">Section Overlay
+                    </we-button>
+                </we-select>
+                <we-select string="Z-Index" data-no-preview="true">
+                    <we-button data-select-class="">None</we-button>
+                    <we-button data-select-class="z_index_plus">Z-Index 1</we-button>
+                    <we-button data-select-class="z_index_minus">Z-Index -1</we-button>
+                    <we-button data-select-class="z_index_100">Z-Index 100</we-button>
+                </we-select>
+            </div>
+        </xpath>
+
+        <xpath expr="//div[@data-js='Box']" position="after">
+            <!--Add Full Container Options-->
+            <div data-selector="section .container">
+                <!--Add Container Border-->
+                <we-select string="Container Border Options" data-no-preview="true">
+                    <we-button data-select-class="">None</we-button>
+                    <we-button data-select-class="border-top pt16">Border-Top
+                    </we-button>
+                    <we-button data-select-class="border-bottom pb16">Border-Bottom
+                    </we-button>
+                    <we-button data-select-class="border-left">Border-Left
+                    </we-button>
+                    <we-button data-select-class="border-right">Border-Right
+                    </we-button>
+                </we-select>
+            </div>
+
+            <!--Div Left/Right Overlay-->
+            <div data-js='js_get_section_style'
+                 data-selector="section .row > div">
+                <!--Theme div Overlay Left/Right -->
+                <we-select string="Theme Div Overlay Style" data-no-preview="true">
+                    <we-button data-select-class="">None</we-button>
+                    <we-button data-select-class="s_overlay_section_right">Section Overlay Right
+                    </we-button>
+                    <we-button data-select-class="s_overlay_section_left">Section Overlay Left
+                    </we-button>
+                </we-select>
+
+                <!--Padding Options-->
+                <we-select string="Theme Div Padding Style" data-no-preview="true">
+                    <we-button data-select-class="">None</we-button>
+                    <we-button data-select-class="pl-0">
+                        Padding-Left-None
+                    </we-button>
+                    <we-button data-select-class="pr-0">
+                        Padding-Right-None
+                    </we-button>
+                    <we-button data-select-class="plr-0">
+                        Padding-Left-Right-None
+                    </we-button>
+                    <we-button data-select-class="pt-0">
+                        Padding-Top-None
+                    </we-button>
+                    <we-button data-select-class="pb-0">
+                        Padding-Bottom-None
+                    </we-button>
+                    <we-button data-select-class="ptb-0">
+                        Padding-Top-Bottom-None
+                    </we-button>
+                    <we-button data-select-class="pad0">
+                        All Padding None
+                    </we-button>
+                </we-select>
+
+
+                <!--                Add Div Border Options-->
+                <we-select string="Theme Div Border Style" data-no-preview="true">
+                    <we-button data-select-class="">None</we-button>
+                    <we-button data-select-class="border-left-ultimate">
+                        Border-Left
+                    </we-button>
+                    <we-button data-select-class="border-right-ultimate">
+                        Border-Right
+                    </we-button>
+                    <we-button data-select-class="border-top-ultimate">
+                        Border-Top
+                    </we-button>
+                    <we-button data-select-class="border-bottom-ultimate">
+                        Border-Bottom
+                    </we-button>
+                </we-select>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="s_object_carousel_headline_nav_style_option"
+              inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-js='Box']" position="after">
+            <div data-js=''
+                 data-selector=".custom_dynamic_product_snippet,.custom_snippet_blogs,.custom_snippet_brands,.custom_snippet_product_category,.custom_snippet_clients">
+                <we-select string="Headline Style" data-no-preview="true">
+                    <we-button data-select-class="">None</we-button>
+                    <we-button data-select-class="s_headline_hidden">
+                        Hide Headline
+                    </we-button>
+                    <we-button data-select-class="s_headline_left">
+                        Headline Left
+                    </we-button>
+                    <we-button data-select-class="s_headline_center">
+                        Headline Center
+                    </we-button>
+                    <we-button data-select-class="s_headline_right">
+                        Headline Right
+                    </we-button>
+                    <we-button data-select-class="s_headline_style_1">
+                        Headline Style 1
+                    </we-button>
+                    <we-button data-select-class="s_headline_style_2">
+                        Headline Style 2
+                    </we-button>
+                    <we-button data-select-class="s_headline_style_3">
+                        Headline Style 3
+                    </we-button>
+                    <we-button data-select-class="s_headline_style_4">
+                        Headline Style 4
+                    </we-button>
+                    <we-button data-select-class="s_headline_style_5">
+                        Headline Style 5
+                    </we-button>
+                    <we-button data-select-class="s_headline_style_6">
+                        Headline Style 6
+                    </we-button>
+                    <we-button data-select-class="s_headline_style_7">
+                        Headline Style 7
+                    </we-button>
+                    <we-button data-select-class="s_headline_style_8">
+                        Headline Style 8
+                    </we-button>
+                    <we-button data-select-class="s_headline_style_9">
+                        Headline Style 9
+                    </we-button>
+                </we-select>
+
+                <we-select string="Carousel Navigation Style" data-no-preview="true">
+                    <we-button data-select-class="">None</we-button>
+                    <we-button data-select-class="owl_nav_style_1">
+                        Navigation Style 1
+                    </we-button>
+                    <we-button data-select-class="owl_nav_style_2">
+                        Navigation Style 2
+                    </we-button>
+                    <we-button data-select-class="owl_nav_style_3">
+                        Navigation Style 3
+                    </we-button>
+                    <we-button data-select-class="owl_nav_style_4">
+                        Navigation Style 4
+                    </we-button>
+                    <we-button data-select-class="owl_nav_style_5">
+                        Navigation Style 5
+                    </we-button>
+                    <we-button data-select-class="owl_nav_style_6">
+                        Navigation Style 6
+                    </we-button>
+                    <we-button data-select-class="owl_nav_style_7">
+                        Navigation Style 7
+                    </we-button>
+                    <we-button data-select-class="owl_nav_style_8">
+                        Navigation Style 8
+                    </we-button>
+                    <we-button data-select-class="owl_nav_style_9">
+                        Navigation Style 9
+                    </we-button>
+                    <we-button data-select-class="owl_nav_style_10">
+                        Navigation Style 10
+                    </we-button>
+                </we-select>
+
+            </div>
+        </xpath>
+    </template>
+
+    <!--<p> line-height AND letter-spacing options-->
+    <template id="s_object_p_letter_line"
+              inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-js='Box']" position="after">
+            <div data-js=''
+                 data-selector="section row > div o_default_snippet_text,h1,h2,h3,h4,h5,h6,p,span,font">
+
+                <!--Line Height Style-->
+                <we-select string="Line Height Style" data-no-preview="true">
+                    <we-button data-select-class="s_line_height_1">
+                        Line-Height-1
+                    </we-button>
+                    <we-button data-select-class="s_line_height_2">
+                        Line-Height-2
+                    </we-button>
+                    <we-button data-select-class="s_line_height_3">
+                        Line-Height-3
+                    </we-button>
+                    <we-button data-select-class="s_line_height_auto">
+                        Line-Height-Auto
+                    </we-button>
+                </we-select>
+
+                <we-select string="Letter Spacing Style" data-no-preview="true">
+                    <we-button data-select-class="s_letter_spacing_1">
+                        Letter-Spacing-1
+                    </we-button>
+                    <we-button data-select-class="s_letter_spacing_2">
+                        Letter-Spacing-2
+                    </we-button>
+                    <we-button data-select-class="s_letter_spacing_3">
+                        Letter-Spacing-3
+                    </we-button>
+                    <we-button data-select-class="s_letter_spacing_auto">
+                        Letter-Spacing-Auto
+                    </we-button>
+                </we-select>
+            </div>
+        </xpath>
+    </template>
+
+    <!--Custom Mid Header Option-->
+    <template id="custom_mid_header" inherit_id="portal.frontend_layout"
+              name="Custom Mid Header" active="False" customize_show="True">
+        <xpath expr="//header" position="before">
+            <section class="oe_structure">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h1>Put Your Snippets Here</h1>
+                            <h3 class="text-center">Remove This Text After
+                                Place Your
+                                Snippet
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="oe_structure"/>
+                </div>
+            </section>
+        </xpath>
+    </template>
+
+
+    <!--    <template id="ultimate_background_options" inherit_id="web_editor.snippet_options_background_options">-->
+    <!--        <xpath expr="//we-button[@data-shape='web_editor/Blobs/13']"-->
+    <!--               position="after">-->
+    <!--            <we-button data-shape="web_editor/Blobs/14" data-select-label="Blobs 14"/>-->
+    <!--        </xpath>-->
+    <!--    </template>-->
+
+<!--    <template id="option_scrolltop" inherit_id="website.assets_frontend"-->
+<!--              active="False">-->
+<!--        <xpath expr="//script[last()]" position="after">-->
+<!--            <script type="text/javascript"-->
+<!--                    src="/website_business_snippet_blocks_core_ul_73lines/static/src/js/scrolltop.js"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+
+    <template id="snippet_option_inherit" inherit_id="website.snippet_options">
+        <t t-call="web_editor.snippet_options"/>
+
+        <xpath expr="//we-button[@data-select-template='website.s_mega_menu_cards']"
+               position="after">
+            <t t-set="_label">Menu Design List With Icon</t>
+            <we-button t-att-data-select-label="_label"
+                       data-select-template="website_business_snippet_blocks_core_ul_73lines.list_with_icon"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-12.png" t-out="_label"/>
+            <t t-set="_label">Menu Design List Without Icon</t>
+            <we-button t-att-data-select-label="_label"
+                       data-select-template="website_business_snippet_blocks_core_ul_73lines.list_without_icon"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-11.png" t-out="_label"/>
+            <t t-set="_label">Menu Design One</t>
+            <we-button t-att-data-select-label="_label"
+                       data-select-template="website_business_snippet_blocks_core_ul_73lines.s_mega_menu_1"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-1.png" t-out="_label"/>
+            <t t-set="_label">Menu Design Two</t>
+            <we-button t-att-data-select-label="_label"
+                       data-select-template="website_business_snippet_blocks_core_ul_73lines.mega_menu_2"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-2.png" t-out="_label"/>
+            <t t-set="_label">Menu Design Three</t>
+            <we-button t-att-data-select-label="_label"
+                       data-select-template="website_business_snippet_blocks_core_ul_73lines.mega_menu_3"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-3.png" t-out="_label"/>
+            <t t-set="_label">Menu Design Four</t>
+            <we-button t-att-data-select-label="_label"
+                       data-select-template="website_business_snippet_blocks_core_ul_73lines.mega_menu_4"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-4.png" t-out="_label"/>
+            <t t-set="_label">Menu Design Five</t>
+            <we-button t-att-data-select-label="_label"
+                       data-select-template="website_business_snippet_blocks_core_ul_73lines.mega_menu_5"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-5.png" t-out="_label"/>
+            <t t-set="_label">Menu Design Six</t>
+            <we-button t-att-data-select-label="_label"
+                       data-select-template="website_business_snippet_blocks_core_ul_73lines.mega_menu_6"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-6.png" t-out="_label"/>
+            <t t-set="_label">Menu Design Seven</t>
+            <we-button t-att-data-select-label="_label"
+                       data-select-template="website_business_snippet_blocks_core_ul_73lines.mega_menu_7"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-7.png" t-out="_label"/>
+            <t t-set="_label">Menu Design Eight</t>
+            <we-button t-att-data-select-label="_label"
+                       data-select-template="website_business_snippet_blocks_core_ul_73lines.mega_menu_8"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-8.png" t-out="_label"/>
+            <t t-set="_label">Menu Design Nine</t>
+            <we-button t-att-data-select-label="_label"
+                       data-select-template="website_business_snippet_blocks_core_ul_73lines.mega_menu_9"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-9.png" t-out="_label"/>
+            <t t-set="_label">Menu Design Ten</t>
+            <we-button t-att-data-select-label="_label"
+                       data-select-template="website_business_snippet_blocks_core_ul_73lines.mega_menu_10"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-10.png" t-out="_label"/>
+            <t t-set="_label">Menu Img Transition Design One</t>
+            <we-button t-att-data-select-label="_label"
+                       data-select-template="website_business_snippet_blocks_core_ul_73lines.mega_menu_img_transition_1"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-img-transition-1.png" t-out="_label"/>
+            <t t-set="_label">Menu Img Transition Design Two</t>
+            <we-button t-att-data-select-label="_label"
+                       data-select-template="website_business_snippet_blocks_core_ul_73lines.mega_menu_img_transition_2"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-img-transition-2.png" t-out="_label"/>
+            <t t-set="_label">Menu Img Transition Design Three</t>
+            <we-button t-att-data-select-label="_label"
+                       data-select-template="website_business_snippet_blocks_core_ul_73lines.mega_menu_img_transition_3"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-img-transition-3.png" t-out="_label"/>
+            <t t-set="_label">Menu Img Transition Design Four</t>
+            <we-button t-att-data-select-label="_label"
+                       data-select-template="website_business_snippet_blocks_core_ul_73lines.mega_menu_img_transition_4"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-img-transition-4.png" t-out="_label"/>
+            <t t-set="_label">Menu Img Transition Design Five</t>
+            <we-button t-att-data-select-label="_label"
+                       data-select-template="website_business_snippet_blocks_core_ul_73lines.mega_menu_img_transition_5"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-img-transition-5.png" t-out="_label"/>
+            <t t-set="_label">Menu Img Transition Design Six</t>
+            <we-button t-att-data-select-label="_label"
+                       data-select-template="website_business_snippet_blocks_core_ul_73lines.mega_menu_img_transition_6"
+                       data-img="/website_business_snippet_blocks_core_ul_73lines/static/src/img/snippet-icons/mega_menu/mega-menu-img-transition-6.png" t-out="_label"/>
+        </xpath>
+    </template>
+
+</odoo>

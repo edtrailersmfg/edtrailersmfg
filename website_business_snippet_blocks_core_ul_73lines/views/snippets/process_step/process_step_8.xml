@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Process Step 8" id="process_step_8">
+        <section class="pt64 pb64 text-center" id="process_step_8" data-visible="process_steps">
+            <div class="container">
+                <div class="row p-4">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2 class="mb16">Our Working Process</h2>
+                        <hr/>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="main-timeline row mx-0">
+                            <div class="timeline col-12">
+                                <div class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="fa fa-users text-primary"></i>
+                                    </div>
+                                    <div class="inner-content">
+                                        <h3 class="title o_default_snippet_text">Web Development</h3>
+                                        <p class="description o_default_snippet_text">Lorem Ipsum is simply dummy text
+                                            of the printing and typesetting industry. Lorem Ipsum has been the
+                                            industry's standard dummy text ever since the 1500s.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline col-12">
+                                <div class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="fa fa-rocket text-primary"></i>
+                                    </div>
+                                    <div class="inner-content">
+                                        <h3 class="title o_default_snippet_text">Graphics Desgning</h3>
+                                        <p class="description o_default_snippet_text">It is a long established fact that
+                                            a reader will be distracted by the readable content of a page when looking
+                                            at its layout. The point of using Lorem Ipsum is that it has a more.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline col-12">
+                                <div class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="fa fa-globe text-primary"></i>
+                                    </div>
+                                    <div class="inner-content">
+                                        <h3 class="title o_default_snippet_text">Web Designing</h3>
+                                        <p class="description o_default_snippet_text">Contrary to popular belief, Lorem
+                                            Ipsum is not simply random text. It has roots in a piece of classical Latin
+                                            literature from 45 BC, making it over 2000 years old.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline col-12">
+                                <div class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="fa fa-briefcase text-primary"></i>
+                                    </div>
+                                    <div class="inner-content">
+                                        <h3 class="title o_default_snippet_text">Java Script</h3>
+                                        <p class="description o_default_snippet_text">There are many variations of
+                                            passages of Lorem Ipsum available, but the majority have suffered alteration
+                                            in some form, by injected humour, or randomised words.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

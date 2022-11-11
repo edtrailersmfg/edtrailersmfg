@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="cta_17" name="CTA17">
+        <section class="s_call_to_action sni-block pt64 pb64" data-visible="cta">
+            <div class="container">
+                <div class="row s_title">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2 class="s_title_boxed"><strong>Title Texts</strong></h2>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row align-items-center pt-2 pt-lg-5 s_title">
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-7">
+                        <h2 class="s_title_boxed">Call to action</h2>
+                        <p class="lead">
+                            Lorem Ipsum is simply dummy text of the printing
+                            and typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the
+                            1500s, when an unknown printer took a galley of
+                            type and scrambled it to make a type specimen book.
+                            It has survived not only five centuries, but also
+                            the leap into electronic typesetting.
+                        </p>
+                        <p class="mt-4">
+                            <a class="btn btn-primary"
+                               href="/contactus">Contact Us
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-8 col-sm-12 col-md-4 col-lg-4 pt-5">
+                        <img alt="image" class="img-fluid d-block mx-auto"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

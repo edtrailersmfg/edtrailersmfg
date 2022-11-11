@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="banner_d10" name="Banner 10">
+        <section
+                class="s_cover parallax align-content-center align-items-center s_parallax_is_fixed"
+                data-scroll-background-ratio="1"
+                style="background-image: none;" data-visible="banners">
+            <span class="s_parallax_bg oe_img_bg oe_custom_bg" style="background-image: url('/web/image/website.s_parallax_default_image'); background-position: 50% 75%;"/>
+            <div class="container">
+                <div class="row s_nb_column_fixed full-height">
+                    <div class="col-lg-5 align-self-center" data-name="Image">
+                        <div class="media_iframe_video o_we_selected_image"
+                             data-oe-expression="//www.youtube.com/embed/gOIusx-9DHs?autoplay=1&amp;rel=0&amp;loop=1&amp;controls=0"/>
+                    </div>
+                    <div class="align-content-center align-self-center col-lg-7 content-align-center"
+                         data-name="Title">
+                        <h1 class="text-right text-white"
+                            style="font-size: 62px;">Catchy
+                            Headline
+                        </h1>
+
+                        <div class="s_text pt16 pb16 text-white"
+                             data-name="Text">
+                            <p class="lead text-right">Write one or two
+                                paragraphs describing your product, services or
+                                a specific feature.
+                                <br/>
+                                To be successful your content needs to be
+                                useful to your readers.
+                            </p>
+                        </div>
+                        <div class="text-right pt16 pb16"
+                             data-name="Buttons">
+                            <a href="/aboutus"
+                               class="btn mt8 mb8 btn-secondary o_default_snippet_text">
+                                About us
+                            </a>
+                            <a href="/contactus"
+                               class="btn mt8 mb8 btn-primary o_default_snippet_text">
+                                Contact us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </template>
+</odoo>

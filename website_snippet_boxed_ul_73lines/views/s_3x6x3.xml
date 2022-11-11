@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	
+
+		<template id="s_3x6x3" name="Three Six Three Boxes">
+			<section class="s_three_six_three_boxes">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 mt16 mb16 feature-box">
+							<div class="oe_structure">
+								<h3>Place Your Carousel Here.</h3>
+								<h4>After placing the carousel remove this text.</h4>
+							</div>
+						</div>
+						<div class="col-md-6 mt16 mb16 feature-box">
+							<div class="oe_structure">
+								<h3>Place Your Carousel Here.</h3>
+								<h4>After placing the carousel remove this text.</h4>
+							</div>
+						</div>
+						<div class="col-md-3 mt16 mb16 feature-box">
+							<div class="oe_structure">
+								<h3>Place Your Carousel Here.</h3>
+								<h4>After placing the carousel remove this text.</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</template>
+	
+</odoo>

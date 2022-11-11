@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="About 1" id="about_1">
+        <section data-visible="aboutus">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-53.png" alt="img12" class="img-fluid"/>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-3">
+                        FASSION DESIGNER
+                        <h2 class="font-weight-bold">Aaron Schwartz</h2>
+                        <div class="row pt16">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Pellentesque fermentum est
+                                    in tortor
+                                    congue suscipit. Suspendisse potenti. Aliquam finibus pharetra tellus at
+                                    egestas.Suspendisse
+                                    potenti. Aliquam finibus pharetra tellus at egestas.Lorem ipsum dolor sit amet,
+                                    consectetur
+                                    adipiscing elit.
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Pellentesque fermentum est
+                                    in tortor
+                                    congue suscipit. Suspendisse potenti. Aliquam finibus pharetra tellus at
+                                    egestas.Suspendisse
+                                    potenti. Aliquam finibus pharetra tellus at egestas.Lorem ipsum dolor sit amet,
+                                    consectetur
+                                    adipiscing elit.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                <h3>Contact Me</h3>
+                                <address>
+                                    <i class="fa fa-map-marker px-2 pt8 pb8"></i>
+                                    6684 Lorem ipsum dolor
+                                    <br/>
+                                    <i class="fa fa-phone px-2 pt8 pb8"></i>
+                                    744-419-7319
+                                    <br/>
+                                    <i class="fa fa-envelope px-2 pt8 pb8"></i>
+                                    aboutus@gmail.com
+                                </address>
+
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-34.png" alt="img10" class="img-fluid pt8 pb8"/>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

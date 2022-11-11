@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="mid_header_light_2" name="Mid Header Light 2">
+        <section class="mid_header_top bg-white border-bottom" data-visible="mid_headears">
+            <div class="container" id="mid_header_top_3">
+                <div class="row py-1">
+                    <div class="col-12 oe_structure col-lg-8 col-md-12 col-sm-12 text-center text-lg-left py-1"
+                         id="mid_header_top_right">
+                        <span class="py-1">
+                            <i class="fa fa-comment-o mr-2"></i>
+                            <p class="m-0 d-inline">24X7 Live Support</p>
+                        </span>
+                        <span class="ml8 mr8 d-block d-lg-inline d-md-inline py-1" id="company-email"
+                              t-ignore="true">
+                            <i class="fa fa-envelope mr-2"/>
+                            <span t-field="res_company.email"/>
+                        </span>
+                        <span class="my-2">
+                            <i class="fa fa-comment mr-2"></i>
+                            <p class="m-0 d-inline">Live Chat</p>
+                        </span>
+                    </div>
+                    <div class="col-12 oe_structure col-lg-4 col-md-12 col-sm-12 text-center text-lg-right py-1"
+                         id="mid_header_top_right">
+                        <span id="company-profile"
+                              t-ignore="true" class="d-block d-lg-inline d-md-inline">
+                            <a href="/website/social/facebook"
+                               t-attf-class="s_share_facebook #{_link_classes}"
+                               target="_blank">
+                                <i t-attf-class="fa fa-x mx-2 text-dark fa-facebook share_facebook fa_company_contact_info #{not _link_classes and 'shadow-sm'}"/>
+                            </a>
+                            <a href="/website/social/twitter"
+                               t-attf-class="s_share_twitter #{_link_classes}"
+                               target="_blank">
+                                <i t-attf-class="fa fa-x mx-2 text-dark fa-twitter share_twitter fa_company_contact_info #{not _link_classes and 'shadow-sm'}"/>
+                            </a>
+                            <a href="/website/social/linkedin"
+                               t-attf-class="s_share_linkedin #{_link_classes}"
+                               target="_blank">
+                                <i t-attf-class="fa fa-x mx-2 text-dark fa-linkedin share_linkedin fa_company_contact_info #{not _link_classes and 'shadow-sm'}"/>
+                            </a>
+                            <a href="/website/social/youtube"
+                               t-attf-class="s_share_youtube #{_link_classes}"
+                               target="_blank">
+                                <i t-attf-class="fa fa-x mx-2 text-dark fa-youtube-play share_youtube fa_company_contact_info #{not _link_classes and 'shadow-sm'}"/>
+                            </a>
+                            <a href="/website/social/instagram"
+                               t-attf-class="s_share_instagram #{_link_classes}"
+                               target="_blank">
+                                <i t-attf-class="fa fa-x mx-2 text-dark fa-instagram share_instagram fa_company_contact_info #{not _link_classes and 'shadow-sm'}"/>
+                            </a>
+                            <a href="/website/social/github"
+                               t-attf-class="s_share_github #{_link_classes}"
+                               target="_blank">
+                                <i t-attf-class="fa fa-x mx-2 text-dark fa-github share_github fa_company_contact_info #{not _link_classes and 'shadow-sm'}"/>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

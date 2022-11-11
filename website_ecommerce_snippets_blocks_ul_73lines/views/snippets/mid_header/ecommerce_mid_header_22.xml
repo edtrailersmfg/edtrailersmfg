@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template name="Ecommerce Mid Header 22" id="ecommerce_mid_header_22">
+        <section class="bg-black border-bottom border-dark" id="mid-header-top-22" data-visible="mid_headears">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 oe_structure col-lg-6 col-md-4 col-sm-12  pt8 pb8 align-self-center text-center text-lg-left text-md-center"
+                         id="mid-header-bottom-left">
+                        <li class="list-inline-item pt8 pb8">
+                            <div class="oe_structure oe_empty">
+                                <a class="btn btn-primary o_default_snippet_text" href="#">
+                                    <i class="fa fa-location-arrow"></i>
+                                    Store Location
+                                </a>
+                            </div>
+                        </li>
+                        <li class="list-inline-item pt8 pb8">
+                            <div class="oe_structure oe_empty">
+                                <a class="btn btn-primary o_default_snippet_text" href="#">
+                                    FAQ
+                                </a>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-8 align-self-center pt8 pb8 oe_structure text-lg-right text-md-right text-center"
+                         id="mid-header-bottom-right">
+                        <li class="list-inline-item">
+                            <strong>Email:</strong>
+                            <span t-field="res_company.email"/>
+                        </li>
+                        <li class="list-inline-item">
+                            <strong>Hotline:</strong>
+                            <span t-field="res_company.phone"/>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-black" id="mid-header-bottom-22">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 oe_structure col-xl-2 col-lg-3 col-md-3 col-sm-12 align-self-center text-center text-lg-left text-md-center"
+                         id="mid-header-top-left">
+                        <div class="oe_structure oe_empty">
+                            <a href="/">
+                                <img src="/logo.png" class="img-fluid"
+                                     t-att-alt="'Logo of %s' % res_company.name"
+                                     t-att-title="res_company.name"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 oe_structure col-xl-4 col-lg-2 col-md-4 col-sm-12 align-self-center text-center text-lg-right text-md-right"
+                         id="mid-header-top-center">
+                        <li class="list-inline-item pt8 pb8">
+                            <div class="oe_structure oe_empty">
+                                <t t-call="website_ecommerce_snippets_blocks_ul_73lines.s_searchbar_input_ultimate"></t>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="col-12 oe_structure col-xl-6 col-lg-7 col-md-5 col-sm-12 align-self-center  text-center text-lg-right text-md-center"
+                         id="mid-header-top-right">
+                        <li class="border-dark border-left border-right hide_border list-inline-item pb24 pl-3 pr-4 pt24 text-center">
+                            <div class="oe_structure oe_empty">
+                                <a class="text_hover" href="#" title="Setting">
+                                    <i class="fa fa-2x fa-cog pb8 pe-7s-config fa-500px"></i>
+                                    <br/>
+                                    <span class="hide_content">SETTING</span>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li id="my_wish"
+                            class="border-dark border-right hide_border list-inline-item pb24 pl-3 pr-4 pt24 text-center">
+                            <div class="oe_structure oe_empty">
+                                <div class="">
+                                    <t t-if="request.env.ref('website_sale_wishlist.add_to_wishlist').active">
+                                        <!--                                        <t t-set='wishcount'-->
+                                        <!--                                           t-value="len(request.env['product.wishlist'].current())"/>-->
+                                        <span class="nav-item">
+                                            <a class="text_hover" href="/shop/wishlist" title="wishlist">
+                                                <i class="fa fa-2x pb8 pe-7s-like fa-500px"></i>
+                                                <br/>
+                                                <span class="hide_content">WISHLIST</span>
+                                                <!--                                        <sup t-attf-class="my_wish_quantity o_animate_blink badge badge-primary">-->
+                                                <!--                                            <t t-esc='wishcount'/>-->
+                                                <!--                                        </sup>-->
+                                            </a>
+                                        </span>
+                                    </t>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="my_cart"
+                            class="border-dark border-right hide_border list-inline-item pb24 pl-3 pr-4 pt24 text-center">
+                            <div class="oe_structure oe_empty">
+                                <div class="">
+                                    <!--                                    <t t-set="website_sale_order"-->
+                                    <!--                                       t-value="website.sale_get_order()"/>-->
+                                    <a class="text_hover" href="/shop/cart" title="My Cart">
+                                        <i class="fa fa-2x pb8 pe-7s-cart fa-500px"></i>
+                                        <br/>
+                                        <span class="hide_content">MY CART</span>
+                                        <!--                                <sup t-attf-class="my_cart_quantity badge badge-primary"-->
+                                        <!--                                     t-esc="website_sale_order and website_sale_order.cart_quantity or ''"/>-->
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown list-inline-item  text-center account_custom pl-3">
+                            <a class="dropdown-toggle o_default_snippet_text list-inline-item text_hover pt8 pb8"
+                               type="button"
+                               id="dropdownMenu1"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-2x pe-7s-add-user fa-500px"></i>
+                                <br/>
+                                <span class="hide_content">MY ACCOUNT</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+                                <a class="text-xs-center dropdown-item" href="/web/login"
+                                   id="ultimate_sign_in">
+                                    Sign in
+                                </a>
+                                <a href="/web/signup" class="text-xs-center dropdown-item"
+                                   id="ultimate_register">
+                                    <span>Register</span>
+                                </a>
+
+                                <a href="/my/home" role="menuitem" class="dropdown-item"
+                                   id="ultimate_my_account">My
+                                    Account
+                                </a>
+                                <a class="dropdown-item"
+                                   t-attf-href="/web/session/logout?redirect=/" role="menuitem"
+                                   id="ultimate_logout">
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

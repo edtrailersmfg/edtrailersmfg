@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Feature 12" id="feature_12">
+        <section class="pt64 pb64" data-visible="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2 class="text-center col-lg-12">Features</h2>
+                        <p class="text-center">Lorem Ipsum is simply dummy text of the printing.</p>
+                        <div class="text-center pt32 pb32 nav-tabs border-0">
+                            <ul class="nav justify-content-center"
+                                role="tablist">
+                                <li class="nav-item">
+                                    <a type="button"
+                                       class="btn btn-outline-primary rounded-circle mt8 mb8 active"
+                                       data-toggle="tab" href="#home">Tab One
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class=" btn btn-outline-primary rounded-circle mt8 mb8 ml-1 mr-1"
+                                       data-toggle="tab" href="#menu1">Tab Two
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a type="button"
+                                       class=" btn btn-outline-primary  rounded-circle mt8 mb8"
+                                       data-toggle="tab" href="#menu2">Tab
+                                        Three
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row pt32 tab-content">
+                            <div id="home"
+                                 class="col-12 col-sm-12 col-md-12 col-lg-12 tab-pane active show">
+                                <div class="row">
+                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-3">
+                                        <div>
+                                            <h3 class="pt8 pb8">Feature One
+                                            </h3>
+                                            <p>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit. Ut
+                                                at semper metus.Lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <h3 class="pt8 pb8">Feature Two
+                                            </h3>
+                                            <p>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit. Ut
+                                                at semper metus.Lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <h3 class="pt8 pb8">Feature Three
+                                            </h3>
+                                            <p>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit. Ut
+                                                at semper metus.Lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-3">
+                                        <div>
+                                            <h3 class="pt8 pb8">Feature Four
+                                            </h3>
+                                            <p>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit. Ut
+                                                at semper metus.Lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <h3 class="pt8 pb8">Feature Five
+                                            </h3>
+                                            <p>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit. Ut
+                                                at semper metus.Lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <h3 class="pt8 pb8">Feature Six
+                                            </h3>
+                                            <p>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit. Ut
+                                                at semper metus.Lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="menu1"
+                                 class="col-12 col-sm-12 col-md-12 col-lg-12 tab-pane fade">
+                                <div class="row">
+                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-3">
+                                        <div>
+                                            <h3 class="pt8 pb8">Feature Seven
+                                            </h3>
+                                            <p>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit. Ut
+                                                at semper metus.Lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <h3 class="pt8 pb8">Feature Eight
+                                            </h3>
+                                            <p>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit. Ut
+                                                at semper metus.Lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <h3 class="pt8 pb8">Feature Nine
+                                            </h3>
+                                            <p>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit. Ut
+                                                at semper metus.Lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-3">
+                                        <div>
+                                            <h3 class="pt8 pb8">Feature Ten
+                                            </h3>
+                                            <p>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit. Ut
+                                                at semper metus.Lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <h3 class="pt8 pb8">Feature
+                                                Eleven
+                                            </h3>
+                                            <p>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit. Ut
+                                                at semper metus.Lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <h3 class="pt8 pb8">Feature
+                                                Twelve
+                                            </h3>
+                                            <p>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit. Ut
+                                                at semper metus.Lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="menu2"
+                                 class="col-12 col-sm-12 col-md-12 col-lg-12 tab-pane fade">
+                                <div class="row">
+                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-3">
+                                        <div>
+                                            <h3 class="pt8 pb8">Feature One
+                                            </h3>
+                                            <p>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit. Ut
+                                                at semper metus.Lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <h3 class="pt8 pb8">Feature Two
+                                            </h3>
+                                            <p>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit. Ut
+                                                at semper metus.Lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <h3 class="pt8 pb8">Feature Three
+                                            </h3>
+                                            <p>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit. Ut
+                                                at semper metus.Lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-3">
+                                        <div>
+                                            <h3 class="pt8 pb8">Feature Four
+                                            </h3>
+                                            <p>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit. Ut
+                                                at semper metus.Lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <h3 class="pt8 pb8">Feature Five
+                                            </h3>
+                                            <p>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit. Ut
+                                                at semper metus.Lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <h3 class="pt8 pb8">Feature Six
+                                            </h3>
+                                            <p>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit. Ut
+                                                at semper metus.Lorem ipsum
+                                                dolor sit amet, consectetur
+                                                adipiscing elit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="snippets" inherit_id="website.snippets" name="custom snippets">
+        <xpath expr="//div[@id='snippet_effect']/div[@class='o_panel_body']" position="inside">
+            <t t-snippet="website_snippet_product_carousel_ul_73lines.custom_dynamic_product_snippet" t-thumbnail="/website_snippet_product_carousel_ul_73lines/static/src/img/product_carousel.png"/>
+            <t t-snippet="website_snippet_product_carousel_ul_73lines.custom_dynamic_mini_product_snippet" t-thumbnail="/website_snippet_product_carousel_ul_73lines/static/src/img/product-mini-carousel.png"/>
+        </xpath>
+    </template>
+</odoo>

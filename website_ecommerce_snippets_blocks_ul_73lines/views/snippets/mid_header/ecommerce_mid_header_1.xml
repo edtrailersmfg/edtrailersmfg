@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Ecommerce Mid Header 1" id="ecommerce_mid_header_1">
+        <section class="mid_header_top bg-black oe_custom_bg" id="mid-header-top-1" data-visible="mid_headears">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="oe_structure col col-12 mt-1 mb-1 col-lg-4 col-md-4 col-sm-12 text-center text-lg-left text-md-left"
+                         id="mid-header-top-left">
+                        <div class="oe_structure oe_empty">
+                            <span id="phone-header" class="col mr-lg-2 ml-lg-2">
+                                <i class="fa fa-phone mr-2"/>
+                                <span t-field="res_company.phone"/>
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="oe_structure col col-12 mt-1 mb-1 col-lg-4 col-md-5 col-sm-12 text-center text-lg-left text-md-left"
+                         id="mid-header-top-center">
+                        <div class="oe_structure oe_empty">
+                            <span class="text-center col mr-lg-2 ml-lg-2"
+                                  id="email-header">
+                                <i class="fa fa-envelope mr-2"/>
+                                <span t-field="res_company.email"/>
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="oe_structure col col-12 col-lg-4 col-md-3 col-sm-12 my-1 text-center text-lg-right text-md-right"
+                         id="mid-header-top-right">
+                        <div class="oe_structure oe_empty">
+                            <div id="company-profile"
+                                 t-ignore="true">
+                                <a href="/website/social/facebook"
+                                   class="fa_company_contact_links"
+                                   target="_blank">
+                                    <i class="fa fa-x mx-1 text-white fa-facebook share_facebook fa_company_contact_info"/>
+                                </a>
+                                <a href="/website/social/twitter"
+                                   class="fa_company_contact_links"
+                                   target="_blank">
+                                    <i class="fa fa-x mx-1 text-white fa-twitter share_twitter fa_company_contact_info"/>
+                                </a>
+                                <a href="/website/social/linkedin"
+                                   class="fa_company_contact_links"
+                                   target="_blank">
+                                    <i class="fa fa-x mx-1 text-white fa-linkedin share_linkedin fa_company_contact_info"/>
+                                </a>
+                                <a href="/website/social/youtube"
+                                   class="fa_company_contact_links"
+                                   target="_blank">
+                                    <i class="fa fa-x mx-1 text-white fa-youtube-play share_youtube fa_company_contact_info"/>
+                                </a>
+                                <a href="/website/social/instagram"
+                                   rel="publisher"
+                                   class="fa_company_contact_links"
+                                   target="_blank">
+                                    <i class="fa fa-x mx-1 text-white fa-instagram share_instagram fa_company_contact_info"/>
+                                </a>
+                                <a href="/website/social/github"
+                                   class="fa_company_contact_links"
+                                   target="_blank">
+                                    <i class="fa fa-x mx-1 text-white fa-github share_github fa_company_contact_info"/>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-white oe_custom_bg" id="mid-header-bottom-1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="oe_structure col col-12 col-sm-12 col-md-4 col-lg-4 pt8 pb8 align-self-center text-lg-left"
+                         id="mid-header-bottom-left">
+                        <div class="oe_structure oe_empty">
+                            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.s_searchbar_input_ultimate"></t>
+                        </div>
+                    </div>
+                    <div class="oe_structure col-7 col-sm-7 col-lg-4 col-md-4 pt8 pb8 align-self-center text-center"
+                         id="mid-header-bottom-center">
+                        <div class="oe_structure oe_empty">
+                            <a href="/" class="img-fluid">
+                                <img src="/logo.png"
+                                     t-att-alt="'Logo of %s' % res_company.name"
+                                     t-att-title="res_company.name"/>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="oe_structure col-5 col-sm-5 col-lg-4 col-md-4 pt8 pb8 align-self-center text-center text-lg-right text-md-right"
+                         id="mid-header-bottom-right">
+                        <li id="my_wish" class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <t t-if="request.env.ref('website_sale_wishlist.add_to_wishlist').active">
+                                    <!--                                    <t t-set='wishcount'-->
+                                    <!--                                       t-value="len(request.env['product.wishlist'].current())"/>-->
+                                    <a href="/shop/wishlist" class="pr-2">
+                                        <i class="fa fa-x fa-heart fa-16 text-dark" title="wishlist"></i>
+                                        <!--                                        <sup t-attf-class="my_wish_quantity o_animate_blink badge badge-primary">-->
+                                        <!--                                            <t t-esc='wishcount'/>-->
+                                        <!--                                        </sup>-->
+                                    </a>
+                                </t>
+                            </div>
+                        </li>
+                        <li id="my_cart" class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <!--                                <t t-set="website_sale_order"-->
+                                <!--                                   t-value="website.sale_get_order()"/>-->
+                                <a href="/shop/cart" class="pr-2">
+                                    <i class="fa fa-x fa-shopping-cart fa-16 text-dark" title="add to cart"></i>
+                                    <!--                                <sup t-attf-class="my_cart_quantity badge badge-primary"-->
+                                    <!--                                     t-esc="website_sale_order and website_sale_order.cart_quantity or ''"/>-->
+                                </a>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

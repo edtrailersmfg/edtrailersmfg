@@ -1,0 +1,188 @@
+/*-------------------------Product Attributes Filter Start------------------*/
+#products_grid_before{
+    .js_attributes{
+        ul{
+            li{
+                div{
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid #ccc;
+                    margin-top: 20px;
+                    padding-top: 15px;
+                    cursor: pointer;
+
+                    strong{
+                        text-transform: uppercase;
+                        letter-spacing: 0;
+                        padding-bottom: 16px;
+                        font-size:21px;
+                        color: inherit;
+                        font-weight: 500;
+                        line-height: 1.2;
+                    }
+                }
+            }
+
+            .css_attribute_color {
+                margin-top: 16px;
+                //border-radius: 50%;
+                height: 15px;
+                 width: 15px;
+            }
+
+            .form-control{
+                margin: 16px 0;
+            }
+        }
+
+    }
+
+    #tags_div,brands_div{
+        #filter-attribute h4{
+            margin-bottom: 16px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ccc;
+            //margin-top: 20px;
+            padding-top: 15px;
+            cursor: pointer;
+        }
+    }
+
+    #brands_div > div {
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 16px;
+            padding-top: 15px;
+            cursor: pointer;
+
+            strong{
+                font-size:21px;
+                font-weight:500;
+
+            }
+    }
+
+    #brands_div{
+        > ul > li > label{
+                margin:0 !important;
+            }
+    }
+
+
+}
+
+
+
+.js_attributes{
+    [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
+      -moz--webkit-appearance: none; -moz-appearance: none; appearance: none;
+    }
+
+    .nav-item{
+
+        ul.nav-pills {
+          margin-left: 0;
+        }
+
+        ul.nav-pills label.nav-link {
+          margin: 0 !important;
+          padding: 0.3rem 0rem;
+          position: relative;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+
+        ul.nav-pills label.active {
+          background-color: transparent;
+        }
+
+        ul.nav-pills label.nav-link span {
+          font-size: 0.8125rem;
+          color: #545353;
+          font-family: inherit;
+          text-transform: capitalize;
+        }
+
+    }
+
+     [type="checkbox"]:not(:checked) + span,
+     [type="checkbox"]:checked + span {
+      position: relative;
+      padding-left: 2.30em;
+      cursor: pointer;
+    }
+
+     [type="checkbox"]:not(:checked) + span:before,
+     [type="checkbox"]:checked + span:before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      right: auto;
+      bottom: auto;
+      left: 7px;
+      width: 12px;
+      height: 12px;
+      border-width: 1px;
+      border-color: #cccccc;
+      border-style: solid;
+      background: #fff;
+      border-radius: 1px;
+    }
+
+    [type="checkbox"]:not(:checked) + span:after {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    [type="checkbox"]:checked + span:after {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    [type="checkbox"]:not(:checked) + span:after,
+    [type="checkbox"]:checked + span:after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      right: auto;
+      bottom: auto;
+      left: 10px;
+      transition: all .2s;
+      background-color: theme-color('primary');
+      width: 6px;
+      height: 6px;
+    }
+
+}
+
+//----------------Tag input-------------//
+#tags_div{
+    .product-tag{
+        span{
+            &:before{
+            display:none !important;
+            }
+        }
+    }
+    [type="checkbox"]:not(:checked) + span:before,[type="checkbox"]:checked + span:before{
+      display:none !important;
+    }
+    [type="checkbox"]:not(:checked) + span, [type="checkbox"]:checked + span{
+        padding-left: 0;
+    }
+
+    label.product-tag.btn.btn-primary.btn-xs.mb8.tag_checked > span:after{
+      display: none;
+    }
+
+    label{
+        padding: 2px;
+        border-radius: 0;
+     }
+
+}
+//----------------Tag input-------------//
+
+/*-------------------------Product Attributes Filter End------------------*/

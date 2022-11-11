@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="team_7" name="Team7">
+        <section class="sni-block bg-alpha pt64 pb64" id="team_7" data-visible="team">
+            <div class="container">
+                <div class="row text-center mb48">
+                    <div class="col-12">
+                        <h2>Our Team</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+                <ul class="row">
+                    <li class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="content-block">
+                                <img class="img-fluid"  src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-67.png"/>
+                            <h3>
+                                <a href="#">
+                                    Member 1
+                                </a>
+                            </h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing
+                            </p>
+                            <ul class="follow-us clearfix">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-facebook"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-linkedin"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="content-block">
+                                <img class="img-fluid" src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-67.png"/>
+                            <h3>
+                                <a href="#">Member 2</a>
+                            </h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing
+                            </p>
+                            <ul class="follow-us clearfix">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-facebook"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-linkedin"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="content-block">
+                                <img class="img-fluid"  src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-67.png"/>
+                            <h3>
+                                <a href="#">
+                                    Member 3
+                                </a>
+                            </h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing
+                            </p>
+                            <ul class="follow-us clearfix">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-facebook"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-linkedin"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="content-block">
+                                <img class="img-fluid" src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-67.png"/>
+                            <h3>
+                                <a href="#">
+                                    Member 4
+                                </a>
+                            </h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing
+                            </p>
+                            <ul class="follow-us clearfix">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-facebook"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-linkedin"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </template>
+</odoo>

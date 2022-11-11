@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_size_chart,access_product_size_chart,model_product_size_chart,,1,1,1,1
+access_product_template,access_product_template,model_product_template,,1,1,1,1
+access_product_size_attribute,access_product_size_attribute,model_product_size_attribute,,1,1,1,1
+access_product_size_attribute_value,access_product_size_attribute_value,model_product_size_attribute_value,,1,1,1,1

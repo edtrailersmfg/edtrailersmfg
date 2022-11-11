@@ -1,0 +1,35 @@
+
+.homepage-bar {
+	border: 0;
+	span {
+		display: inline-block;
+		margin-left: .2em;
+		margin-right: .2em;
+		text-align: center;
+		vertical-align: middle;
+	}
+	.text-area {
+		display: inline-block;
+		margin-left: 5px;
+		text-align: left;
+		vertical-align: middle;
+	}
+	h4 {
+		font-size: 15px;
+	}
+	p {
+		font-size: 12px;
+		line-height: 1;
+	}
+}
+
+ @media (max-width: 991px) {
+ .homepage-bar .col-md-3 {
+  	border-left: none;
+  	text-align: center;
+  	float:left;
+	}
+}
+
+
+

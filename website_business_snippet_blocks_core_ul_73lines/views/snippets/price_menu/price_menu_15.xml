@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Price menu 15" id="price_menu_15">
+        <section class="pt64 pb64" id="price_menu_15" data-visible="price_menu">
+            <div class="container">
+                <div class="row menu_style">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb48">
+                        <h1>OUR DAILY MENU</h1>
+                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+                        <ul class="nav flex-lg-column" id="myTab" role="tablist">
+                            <li class="pb-3 menu_tabs nav-item">
+                                <a href="#item1" class="nav-link" data-toggle="tab">
+                                    <div class="icon_wrapper">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-64.png"
+                                             class="img-fluid"/>
+                                    </div>
+                                    BRACKFAST
+                                </a>
+                            </li>
+                            <li class="pb-3 menu_tabs nav-item">
+                                <a href="#item2" class="nav-link" data-toggle="tab">
+                                    <div class="icon_wrapper">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-29.png"
+                                             class="img-fluid"/>
+                                    </div>
+                                    PIZZA
+                                </a>
+                            </li>
+                            <li class="pb-3 menu_tabs nav-item">
+                                <a href="#item3" class="nav-link" data-toggle="tab">
+                                    <div class="icon_wrapper">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-4.png"
+                                             class="img-fluid"/>
+                                    </div>
+                                    LUNCH
+                                </a>
+                            </li>
+                            <li class="pb-3 menu_tabs nav-item">
+                                <a href="#item4" class="nav-link" data-toggle="tab">
+                                    <div class="icon_wrapper">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-2.png"
+                                             class="img-fluid"/>
+                                    </div>
+                                    DRINKS
+                                </a>
+                            </li>
+                            <li class="pb-3 menu_tabs">
+                                <a href="#item5" class="nav-link" data-toggle="tab">
+                                    <div class="icon_wrapper">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-15.png"
+                                             class="img-fluid"/>
+                                    </div>
+                                    SOUP
+                                </a>
+                            </li>
+                            <li class="pb-3 menu_tabs nav-item">
+                                <a href="#item6" class="nav-link" data-toggle="tab">
+                                    <div class="icon_wrapper">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-37.png"
+                                             class="img-fluid"/>
+                                    </div>
+                                    DINNER
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-9 col-lg-9">
+                        <div class="tab-content pt-4">
+                            <div id="item1" class="container tab-pane active">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 1</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 2</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 3</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 4</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 5</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 6</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 7</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 8</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 9</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div id="item2" class="container tab-pane fade">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 1</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 2</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 3</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 4</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="item3" class="container tab-pane fade">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 1</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 2</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 3</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="item4" class="container tab-pane fade">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 1</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse
+                                                .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 2</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse
+                                                .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 3</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse
+                                                .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="item5" class="container tab-pane fade">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 1</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse
+                                                .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 2</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse
+                                                .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="item6" class="container tab-pane fade">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 1</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse
+                                                .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 2</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse
+                                                .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 3</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse
+                                                .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 4</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse
+                                                .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 pb-4">
+                                        <div class="menu_text">
+                                            <h5>Menu Item 5</h5>
+                                            <p>Duis autem vel eum iriure dolor inhe ndrerit in vulputate velit esse
+                                                .
+                                            </p>
+                                            <p>Price: $8.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

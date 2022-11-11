@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="blank_grid_snippet_1" name="Grid 12">
+        <section class="bg-200" data-visible="grid_structure">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mh100">
+                        <div class="oe_structure oe_empty">
+                            <h3 class="text-center">12
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

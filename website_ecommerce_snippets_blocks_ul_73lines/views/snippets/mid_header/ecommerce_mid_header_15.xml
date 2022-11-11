@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Ecommerce Mid Header 15" id="ecommerce_mid_header_15">
+        <section class="border" id="mid-header-top-15" data-visible="mid_headears">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 oe_structure col-lg-4 col-md-6 col-sm-4 align-self-center text-center text-lg-left text-md-left"
+                         id="mid-header-top-left">
+                        <li class="list-inline-item pt8 pb8">
+                            <div class="oe_structure oe_empty o_default_snippet_text">
+                                <span class="welcome-text o_default_snippet_text text-beta">Welcome</span>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="col-8 oe_structure col-lg-8 col-md-6 col-sm-8 align-self-center  text-center text-lg-right text-md-right"
+                         id="mid-header-top-right">
+                        <li class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <a href="#" class="btn btn-primary o_default_snippet_text text-white" title="Offer">
+                                    <i class="fa fa-gift"></i>
+                                    Get Offer
+                                </a>
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <div class="oe_structure oe_empty">
+                                <div class="oe_structure oe_empty">
+                                    <a href="#" class="btn btn-primary o_default_snippet_text text-white" title="FAQ">
+                                        FAQ
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-1 pb-1" id="mid-header-bottom-15">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-2 col-md-4 text-center text-md-left text-lg-left oe_structure"
+                         id="mid-header-bottom-left">
+                        <div class="oe_structure oe_empty">
+                            <a href="/" class="img-fluid">
+                                <img src="/logo.png"
+                                     t-att-alt="'Logo of %s' % res_company.name"
+                                     t-att-title="res_company.name"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-lg-10 col-md-8 align-self-center oe_structure text-lg-right text-md-right text-center"
+                         id="mid-header-bottom-right">
+                        <li class="list-inline-item account_custom">
+                            <div class="dropdown">
+                                <a class="btn btn-primary text-white dropdown-toggle" type="button"
+                                   id="dropdownMenu1"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-user-o d-inline text-white icon_style"></i>
+                                    <span class="hide_content">My Account</span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+                                    <a class="text-xs-center dropdown-item" href="/web/login"
+                                       id="ultimate_sign_in">
+                                        Sign in
+                                    </a>
+                                    <a href="/web/signup" class="text-xs-center dropdown-item"
+                                       id="ultimate_register">
+                                        <span>Register</span>
+                                    </a>
+
+                                    <a href="/my/home" role="menuitem" class="dropdown-item"
+                                       id="ultimate_my_account">My
+                                        Account
+                                    </a>
+                                    <a class="dropdown-item"
+                                       t-attf-href="/web/session/logout?redirect=/" role="menuitem"
+                                       id="ultimate_logout">
+                                        Logout
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="my_wish" class="list-inline-item bg-primary p-2 rounded pt8 pb8">
+                            <div class="oe_structure oe_empty">
+                                <div class="d-flex">
+                                    <t t-if="request.env.ref('website_sale_wishlist.add_to_wishlist').active">
+<!--                                        <t t-set='wishcount'-->
+<!--                                           t-value="len(request.env['product.wishlist'].current())"/>-->
+                                        <span class="nav-item">
+                                            <a href="/shop/wishlist"
+                                               class="text-white"
+                                               title="wishlist">
+                                                <i class="fa fa-heart-o text-white pr-1" title="wishlist"></i>
+                                                Wishlist
+                                                <!--                                        <sup t-attf-class="my_wish_quantity o_animate_blink badge badge-primary">-->
+                                                <!--                                            <t t-esc='wishcount'/>-->
+                                                <!--                                        </sup>-->
+                                            </a>
+                                        </span>
+                                    </t>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

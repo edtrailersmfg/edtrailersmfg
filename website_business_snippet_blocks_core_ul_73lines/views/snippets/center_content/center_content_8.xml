@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Center Content 8" id="center_content_8">
+        <section class="pt64 pb64" data-visible="center_content">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2 class="font-weight-bold pt24 pb24">Long headline to turn your<br/> visitors into users
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum est in tortor
+                            congue suscipit. Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.Suspendisse
+                            potenti. Aliquam finibus pharetra tellus at egestas. Aliquam finibus pharetra tellus at
+                            egestas.Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.
+                        </p>
+                        <a href="#" class="btn btn-primary rounded-0 mt16 mb16">Action</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

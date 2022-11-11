@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="CTA 2" id="cta_2">
+        <section class="pt64 pb64" data-visible="cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb32">
+                        <h2 class="pb8">Call to action</h2>
+                        <p class="pb32">Lorem Ipsum is simply dummy text of the
+                            printing and typesetting industry.
+                        </p>
+                        <a href="#" class="btn btn-primary mb64 px-4 py-2">
+                            button
+                        </a>
+                        <p>Lorem Ipsum has been the industry's standard
+                            dummy.
+                        </p>
+
+                    </div>
+                    <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-58.png"
+                             class="img-fluid mb16 mt16" alt="Brand Logo"
+                             title="Brand Logo"/>
+                    </div>
+                    <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-58.png"
+                             class="img-fluid   mb16 mt16" alt="Brand Logo"
+                             title="Brand Logo"/>
+                    </div>
+                    <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-58.png"
+                             class="img-fluid mb16 mt16" alt="Brand Logo"
+                             title="Brand Logo"/>
+                    </div>
+                    <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-58.png"
+                             class="img-fluid mb16 mt16" alt="Brand Logo"
+                             title="Brand Logo"/>
+                    </div>
+                    <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-58.png"
+                             class="img-fluid mb16 mt16" alt="Brand Logo"
+                             title="Brand Logo"/>
+                    </div>
+                    <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-58.png"
+                             class="img-fluid mb16 mt16" alt="Brand Logo"
+                             title="Brand Logo"/>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

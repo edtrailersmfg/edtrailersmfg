@@ -1,0 +1,129 @@
+//----------------------brand carousel design 2-------------//
+
+.brand_style_2{
+    border: 1px solid #ddd;
+}
+.brand_style_2:hover{
+    border: 1px solid theme-color('primary');
+}
+
+//----------------------brand carousel design 3-------------//
+
+.dynamic_filter_template_custom_brand_3{
+
+.carousel-inner {
+    border: 1px solid #e8e8e8;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+}
+}
+
+
+//----------------------brand carousel design 4-------------//
+
+.dynamic_filter_template_custom_brand_4{
+.carousel-inner {
+    border: 1px solid #e8e8e8;
+    margin-bottom: 16px;
+
+}
+.brand_style_4 img {
+        display:block;
+        position:relative;
+        -webkit-transition:all .4s linear;
+        transition:all .4s linear;
+        margin: 0 auto;
+}
+.brand_style_4:hover img {
+        -ms-transform:scale(1.1);
+        -webkit-transform:scale(1.1);
+        transform:scale(1.1);
+}
+.owl-nav{
+    margin: 0px;
+}
+.owl-nav .owl-next {
+    right: -40px;
+}
+.owl-nav .owl-prev {
+    left: -40px;
+}
+}
+#new_brand_item_d3[data-objects_in_row="2"]{
+    .owl-nav{
+    margin: 20px 0px !important;
+}
+}
+#new_brand_item_d3[data-objects_in_row="3"]{
+    .owl-nav{
+    margin: 55px 0px !important;
+}
+}
+
+//----------------------brand carousel design 5-------------//
+
+
+
+.brand_style_5 img {
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out 0s;
+}
+.brand_style_5:hover img {
+    opacity: 1;
+}
+
+//----------------------brand carousel design 6-------------//
+
+.brand_style_6 {
+    border: 1px solid #ddd;
+}
+.brand_style_6:hover {
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.2);
+}
+
+//----------------------brand carousel design 7-------------//
+
+.brand_style_7 {
+  background: whitesmoke;
+  padding: 4px;
+  img {
+    border-radius: 50px;
+  }
+}
+
+//----------------------brand carousel design 8-------------//
+
+.brand_style_8 {
+  background: #333;
+  padding: 4px;
+  img {
+    border-radius: 50px;
+  }
+}
+
+//----------------------brand carousel design 9-------------//
+
+.brand_style_9 {
+  background: whitesmoke;
+  padding: 20px;
+  border-radius: 20px;
+  img {
+    border-radius: 20px;
+  }
+}
+
+//----------------------brand carousel design 10-------------//
+
+
+.brand_style_10{
+    border: 1px solid #ddd;
+img {
+      -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+      -webkit-transition: all .8s ease-in-out;
+    }
+}
+    .brand_style_10:hover img{
+    filter: none;
+      -webkit-filter: grayscale(0);
+      -webkit-transform: scale(1.07);
+    }

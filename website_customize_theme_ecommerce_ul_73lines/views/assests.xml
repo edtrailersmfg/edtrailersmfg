@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+<!--    <template id="website_customize_theme_ecommerce_ul_73lines_frontend_assets" name="Theme Assets 1"-->
+<!--              inherit_id="website.assets_frontend">-->
+<!--        <xpath expr="." position="inside">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_customize_theme_ecommerce_ul_73lines/static/src/scss/common.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+
+
+<!--    <template id="demo_frontend_style_snippets"-->
+<!--              name="Theme Shop Style Snippets"-->
+<!--              inherit_id="website.assets_frontend" active="True">-->
+<!--        <xpath expr="." position="inside">-->
+<!--            <link href="/website_customize_theme_ecommerce_ul_73lines/static/src/scss/shop_page_common.scss"-->
+<!--                  type="text/scss" rel="stylesheet"/>-->
+
+<!--        </xpath>-->
+<!--    </template>-->
+
+<!--    <template id="option_mid_header_2" inherit_id="website.assets_frontend" active="False">-->
+<!--        <xpath expr="//link[last()]" position="after">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_customize_theme_ecommerce_ul_73lines/static/src/scss/mid_header_2.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+<!--    <template id="option_mid_header_3" inherit_id="website.assets_frontend" active="False">-->
+<!--        <xpath expr="//link[last()]" position="after">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_customize_theme_ecommerce_ul_73lines/static/src/scss/mid_header_3.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+<!--    <template id="option_mid_header_4" inherit_id="website.assets_frontend" active="False">-->
+<!--        <xpath expr="//link[last()]" position="after">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_customize_theme_ecommerce_ul_73lines/static/src/scss/mid_header_4.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+<!--    <template id="option_mid_header_5" inherit_id="website.assets_frontend" active="False">-->
+<!--        <xpath expr="//link[last()]" position="after">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_customize_theme_ecommerce_ul_73lines/static/src/scss/mid_header_5.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+<!--    <template id="option_mid_header_10" inherit_id="website.assets_frontend" active="False">-->
+<!--        <xpath expr="//link[last()]" position="after">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_customize_theme_ecommerce_ul_73lines/static/src/scss/mid_header_10.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+<!--    <template id="option_mid_header_11" inherit_id="website.assets_frontend" active="False">-->
+<!--        <xpath expr="//link[last()]" position="after">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_customize_theme_ecommerce_ul_73lines/static/src/scss/mid_header_11.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+<!--    <template id="option_mid_header_12" inherit_id="website.assets_frontend" active="False">-->
+<!--        <xpath expr="//link[last()]" position="after">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_customize_theme_ecommerce_ul_73lines/static/src/scss/mid_header_12.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+<!--    <template id="option_mid_header_13" inherit_id="website.assets_frontend" active="False">-->
+<!--        <xpath expr="//link[last()]" position="after">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_customize_theme_ecommerce_ul_73lines/static/src/scss/mid_header_13.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+<!--    <template id="option_mid_header_14" inherit_id="website.assets_frontend" active="False">-->
+<!--        <xpath expr="//link[last()]" position="after">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_customize_theme_ecommerce_ul_73lines/static/src/scss/mid_header_14.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+<!--    <template id="option_mid_header_15" inherit_id="website.assets_frontend" active="False">-->
+<!--        <xpath expr="//link[last()]" position="after">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_customize_theme_ecommerce_ul_73lines/static/src/scss/mid_header_15.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+<!--    <template id="option_mid_header_16" inherit_id="website.assets_frontend" active="False">-->
+<!--        <xpath expr="//link[last()]" position="after">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_customize_theme_ecommerce_ul_73lines/static/src/scss/mid_header_16.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+<!--    <template id="option_mid_header_17" inherit_id="website.assets_frontend" active="False">-->
+<!--        <xpath expr="//link[last()]" position="after">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_customize_theme_ecommerce_ul_73lines/static/src/scss/mid_header_17.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+
+    <!--Shop Page Font Color Options-->
+
+<!--    <template id="option_shop_style_1" inherit_id="website.assets_frontend"-->
+<!--              active="False">-->
+<!--        <xpath expr="." position="inside">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_customize_theme_ecommerce_ul_73lines/static/src/scss/shop_style_1.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+
+<!--    <template id="option_shop_style_2" inherit_id="website.assets_frontend"-->
+<!--              active="False">-->
+<!--        <xpath expr="." position="inside">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_customize_theme_ecommerce_ul_73lines/static/src/scss/shop_style_2.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+
+<!--    <template id="option_shop_style_3" inherit_id="website.assets_frontend"-->
+<!--              active="False">-->
+<!--        <xpath expr="." position="inside">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_customize_theme_ecommerce_ul_73lines/static/src/scss/shop_style_3.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+
+<!--    <template id="option_shop_style_4" inherit_id="website.assets_frontend"-->
+<!--              active="False">-->
+<!--        <xpath expr="." position="inside">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_customize_theme_ecommerce_ul_73lines/static/src/scss/shop_style_4.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+
+    <!--Hide Add To Cart From Navbar Option-->
+    <template id="cart_hide_nav" inherit_id="portal.frontend_layout"
+              customize_show="True"
+              name="Hide Add To Cart  Navbar" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="#{'o_add_to_cart_nav_hide'}"
+                       separator=" "/>
+        </xpath>
+    </template>
+    <template id="business_layout_inherit" inherit_id="portal.frontend_layout"
+              customize_show="True"
+              name="Hide Wishlist Navbar" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="#{'o_wishlist_nav_hide'}"
+                       separator=" "/>
+        </xpath>
+    </template>
+
+<!--    <template id="template_ecommerce_navbar"-->
+<!--              inherit_id="website.assets_frontend"-->
+<!--              active="True">-->
+<!--        <xpath expr="//link[last()]" position="after">-->
+<!--            <link rel="stylesheet" type="text/scss"-->
+<!--                  href="/website_customize_theme_ecommerce_ul_73lines/static/src/scss/navbar_ecommerce.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+
+    <template id="ul_full_search" inherit_id="portal.frontend_layout"
+              customize_show="True"
+              name="Full Screen Search in Navbar" active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="#{'o_show_full_search'}"
+                       separator=" "/>
+        </xpath>
+    </template>
+</odoo>

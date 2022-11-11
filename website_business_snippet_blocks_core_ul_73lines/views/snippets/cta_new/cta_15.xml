@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="cta_15" name="CTA 15">
+        <section class="s_call_to_action sni-block pt64 pb64" data-visible="cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-5 s_title">
+                        <p class="mb-3">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-58.png"/>
+                        </p>
+                        <h2>Call To Action</h2>
+                        <p class="lead s_title_boxed">Lorem Ipsum is simply dummy text of the printing
+                            and typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the
+                            1500s.Lorem Ipsum is simply dummy text of the printing
+                            and typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the
+                            1500s..
+                        </p>
+                        <p>
+                            <a href="/contactus"
+                               class="btn btn-primary">Contact Us
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-sm-4 col-md-6 col-lg-4 m-auto pt-5">
+                        <img alt="image" class="img-fluid rounded-0"
+                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

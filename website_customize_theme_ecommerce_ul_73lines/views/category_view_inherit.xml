@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+    <data>
+        <!-- Inherit Product Category From View & Added Some Fields -->
+        <record id="product_public_category_form_inherit_view_bread"
+                model="ir.ui.view">
+            <field name="name">product.public.category.form</field>
+            <field name="model">product.public.category</field>
+            <field name="inherit_id"
+                   ref="website_sale.product_public_category_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('oe_left')]" position="before">
+                    <div>
+                        <group name="Breadcrumbs Banner Settings">
+                            <field name="category_breadcrumbs_banner"
+                                   widget="image"/>
+                        </group>
+                    </div>
+                    <div class="oe_clear"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!--Shop Page Breadcrumbs View -->
+        <record id="res_config_settings_view_form_shop_breadcrumbs"
+                model="ir.ui.view">
+            <field name="name">
+                res.config.settings.view.form.inherit.website_shop_breadcrumbs
+            </field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="20"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='languages_setting']" position="before">
+                    <div class="col-xs-12 col-md-6 o_setting_box"
+                         id="languages_setting">
+                        <div class="o_setting_right_pane">
+                            <div class="text-muted">
+                                Change Background For Shop Breadcrumbs
+                            </div>
+                            <div class="content-group">
+                                <label class="col-md-3 o_light_label"
+                                       for="shop_breadcrumbs_banner_website"/>
+                                <field name="shop_breadcrumbs_banner_website"
+                                       widget="image"/>
+                            </div>
+
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+
+
+
+
+    </data>
+</odoo>

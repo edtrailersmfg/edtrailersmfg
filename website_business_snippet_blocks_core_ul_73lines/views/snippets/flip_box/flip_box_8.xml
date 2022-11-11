@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Flip Box 8" id="flip_box_8">
+        <section class="pt64 pb48" id="flip_box_8" data-visible="flipbox">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 flip_box_right mb16">
+                        <div class="row mx-0 flip_box_inner">
+                            <div class="col-12 px-0 flip_box_front text-center">
+                                <div class="flip_box_front_area">
+                                    <div class="cover">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                             alt="Image"
+                                             class="img-fluid"/>
+                                    </div>
+                                    <div class="user">
+                                        <img class="img"
+                                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                             alt=""/>
+                                    </div>
+                                    <div class="content">
+                                        <div class="main">
+                                            <h3 class="name">John Marvel</h3>
+                                            <p class="profession">CEO</p>
+                                            <p class="text-center">"Duis aute irure dolor in reprehenderit in voluptate
+                                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                                occaecat."
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-0 flip_box_back text-center">
+                                <div class="flip_box_back_area">
+                                    <div class="header">
+                                        <p class="motto mt8">"To be or not to be, this is my awesome motto!"</p>
+                                    </div>
+                                    <div class="content">
+                                        <div class="main">
+                                            <h4 class="text-center">Job Description</h4>
+                                            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit, sed do eiusmod...
+                                            </p>
+                                            <div class="mb32 mt32 row stats-container">
+                                                <div class="col-4 stats">
+                                                    <h4 class="">235</h4>
+                                                    <p class="mb-0">
+                                                        Followers
+                                                    </p>
+                                                </div>
+                                                <div class="col-4 stats">
+                                                    <h4 class="">114</h4>
+                                                    <p class="mb-0">
+                                                        Following
+                                                    </p>
+                                                </div>
+                                                <div class="col-4 stats">
+                                                    <h4 class="">35</h4>
+                                                    <p class="mb-0">
+                                                        Projects
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="icon_bg pt16">
+                                                <a t-att-href="res_company.social_facebook">
+                                                    <i class="fa fa-facebook mx-1 "></i>
+                                                </a>
+                                                <a t-att-href="res_company.social_twitter">
+                                                    <i class="fa fa-twitter mx-1"></i>
+                                                </a>
+                                                <a t-att-href="res_company.social_instagram">
+                                                    <i class="fa fa-instagram mx-1"></i>
+                                                </a>
+                                                <a t-att-href="res_company.social_linkedin">
+                                                    <i class="fa fa-linkedin mx-1"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 flip_box_right mb16">
+                        <div class="row mx-0 flip_box_inner">
+                            <div class="col-12 px-0 flip_box_front text-center">
+                                <div class="flip_box_front_area">
+                                    <div class="cover">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                             alt="Image"
+                                             class="img-fluid"/>
+                                    </div>
+                                    <div class="user">
+                                        <img class="img"
+                                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                             alt=""/>
+                                    </div>
+                                    <div class="content">
+                                        <div class="main">
+                                            <h3 class="name">John Marvel</h3>
+                                            <p class="profession">CEO</p>
+                                            <p class="text-center">"Duis aute irure dolor in reprehenderit in voluptate
+                                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                                occaecat."
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-0 flip_box_back text-center">
+                                <div class="flip_box_back_area">
+                                    <div class="header">
+                                        <p class="motto mt8">"To be or not to be, this is my awesome motto!"</p>
+                                    </div>
+                                    <div class="content">
+                                        <div class="main">
+                                            <h4 class="text-center">Job Description</h4>
+                                            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit, sed do eiusmod...
+                                            </p>
+                                            <div class="mb32 mt32 row stats-container">
+                                                <div class="col-4 stats">
+                                                    <h4 class="">235</h4>
+                                                    <p class="mb-0">
+                                                        Followers
+                                                    </p>
+                                                </div>
+                                                <div class="col-4 stats">
+                                                    <h4 class="">114</h4>
+                                                    <p class="mb-0">
+                                                        Following
+                                                    </p>
+                                                </div>
+                                                <div class="col-4 stats">
+                                                    <h4 class="">35</h4>
+                                                    <p class="mb-0">
+                                                        Projects
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="icon_bg pt16">
+                                                <a t-att-href="res_company.social_facebook">
+                                                    <i class="fa fa-facebook mx-1 "></i>
+                                                </a>
+                                                <a t-att-href="res_company.social_twitter">
+                                                    <i class="fa fa-twitter mx-1"></i>
+                                                </a>
+                                                <a t-att-href="res_company.social_instagram">
+                                                    <i class="fa fa-instagram mx-1"></i>
+                                                </a>
+                                                <a t-att-href="res_company.social_linkedin">
+                                                    <i class="fa fa-linkedin mx-1"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 flip_box_right mb16">
+                        <div class="row mx-0 flip_box_inner">
+                            <div class="col-12 px-0 flip_box_front text-center">
+                                <div class="flip_box_front_area">
+                                    <div class="cover">
+                                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                                             alt="Image"
+                                             class="img-fluid"/>
+                                    </div>
+                                    <div class="user">
+                                        <img class="img"
+                                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                             alt=""/>
+                                    </div>
+                                    <div class="content">
+                                        <div class="main">
+                                            <h3 class="name">John Marvel</h3>
+                                            <p class="profession">CEO</p>
+                                            <p class="text-center">"Duis aute irure dolor in reprehenderit in voluptate
+                                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                                occaecat."
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-0 flip_box_back text-center">
+                                <div class="flip_box_back_area">
+                                    <div class="header">
+                                        <p class="motto mt8">"To be or not to be, this is my awesome motto!"</p>
+                                    </div>
+                                    <div class="content">
+                                        <div class="main">
+                                            <h4 class="text-center">Job Description</h4>
+                                            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit, sed do eiusmod...
+                                            </p>
+                                            <div class="mb32 mt32 row stats-container">
+                                                <div class="col-4 stats">
+                                                    <h4 class="">235</h4>
+                                                    <p class="mb-0">
+                                                        Followers
+                                                    </p>
+                                                </div>
+                                                <div class="col-4 stats">
+                                                    <h4 class="">114</h4>
+                                                    <p class="mb-0">
+                                                        Following
+                                                    </p>
+                                                </div>
+                                                <div class="col-4 stats">
+                                                    <h4 class="">35</h4>
+                                                    <p class="mb-0">
+                                                        Projects
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="icon_bg pt16">
+                                                <a t-att-href="res_company.social_facebook">
+                                                    <i class="fa fa-facebook mx-1 "></i>
+                                                </a>
+                                                <a t-att-href="res_company.social_twitter">
+                                                    <i class="fa fa-twitter mx-1"></i>
+                                                </a>
+                                                <a t-att-href="res_company.social_instagram">
+                                                    <i class="fa fa-instagram mx-1"></i>
+                                                </a>
+                                                <a t-att-href="res_company.social_linkedin">
+                                                    <i class="fa fa-linkedin mx-1"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

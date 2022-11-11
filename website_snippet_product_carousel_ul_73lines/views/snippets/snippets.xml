@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="s_dynamic_snippet_add_products_object_name" inherit_id="website.s_dynamic_snippet_template">
+        <xpath expr="//section" position="attributes">
+            <attribute name="t-att-data-object_name">object_name</attribute>
+            <attribute name="t-att-data-snippet_identifier">snippet_identifier</attribute>
+            <attribute name="t-att-data-number-of-elements">number_of_elements_opt or 4</attribute>
+            <attribute name="t-att-data-disable-options">disable_options</attribute>
+        </xpath>
+    </template>
+
+    <template id="custom_dynamic_product_snippet" name="Product Carousel Slider">
+        <t t-call="website.s_dynamic_snippet_template">
+            <t t-set="snippet_name" t-value="'custom_dynamic_product_snippet'"/>
+            <t t-set="object_name" t-value="'product.template'"/>
+            <t t-set="snippet_identifier" t-value="'Product Design'"/>
+            <t t-set="snippet_classes" t-value="'js_sale'"/>
+        </t>
+    </template>
+
+    <template id="custom_dynamic_mini_product_snippet" name="Product Mini Carousel Slider">
+        <t t-call="website.s_dynamic_snippet_template">
+            <t t-set="snippet_name" t-value="'custom_dynamic_product_snippet mini_product_carousel'"/>
+            <t t-set="object_name" t-value="'product.template'"/>
+            <t t-set="snippet_identifier" t-value="'Mini Product Carousel'"/>
+            <t t-set="snippet_classes" t-value="'js_sale'"/>
+        </t>
+    </template>
+
+    <template id="dynamic_product_snippet_options" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <t t-call="website.dynamic_snippet_carousel_options_template">
+                <t t-set="snippet_name" t-value="'dynamic_product_snippet'"/>
+                <t t-set="snippet_selector" t-value="'.custom_dynamic_product_snippet'"/>
+                <!--                <we-select string="Filter" data-name="product_category_opt" data-attribute-name="filterId"-->
+                <!--                           data-no-preview="true">-->
+                <!--                </we-select>-->
+                <we-select string="⌙ No Of Rows" data-name="number_of_row" data-attribute-name="rowSize"
+                           data-no-preview="true"><!-- &emsp; -->
+                    <we-button data-select-data-attribute="1">1</we-button>
+                    <we-button data-select-data-attribute="2">2</we-button>
+                    <we-button data-select-data-attribute="3">3</we-button>
+                </we-select>
+                <we-button-group string="Options For Product Carousel"/>
+                <div class="d-flex">
+                    <we-button data-config="wishlist"
+                               data-toggle-class="wishlist_hidden"
+                               class="fa fa-fw fa-heart mx-1 config_button bg-primary"
+                               title="Hide Or Show WishList"
+                               data-no-preview="true"/>
+                    <we-button data-config="shop"
+                               data-toggle-class="add_to_cart_hidden"
+                               class="fa fa-fw fa-shopping-cart mx-1 config_button bg-primary"
+                               title="Hide Or Show Add To Cart"
+                               data-no-preview="true"/>
+                    <we-button data-config="price"
+                               data-toggle-class="price_hidden"
+                               class="fa fa-fw fa-money mx-1 config_button bg-primary"
+                               title="Hide Or Show Price"
+                               data-no-preview="true"/>
+                    <we-button data-config="ribbon"
+                               data-toggle-class="ribbon_hidden"
+                               class="fa fa-fw fa-paperclip mx-1 config_button bg-primary"
+                               title="Hide Or Show Ribbon"
+                               data-no-preview="true"/>
+                    <we-button data-config="rating"
+                               data-toggle-class="user_rating_hidden"
+                               class="fa fa-fw fa-star mx-1 config_button bg-primary"
+                               title="Hide Or Show Rating"
+                               data-no-preview="true"/>
+                    <we-button data-config="compare"
+                               data-toggle-class="o_compare_hidden"
+                               class="fa fa-fw fa-exchange mx-1 config_button bg-primary"
+                               title="Hide Or Show Rating"
+                               data-no-preview="true"/>
+                    <we-button data-config="quick_view"
+                               data-toggle-class="o_quick_view_hidden"
+                               class="fa fa-fw fa-eye mx-1 config_button bg-primary"
+                               title="Hide Or Show Quick View"
+                               data-no-preview="true"/>
+                    <we-button data-config="title"
+                               data-toggle-class="oe_title_hidden"
+                               class="fa fa-fw fa-align-left mx-1 config_button bg-primary"
+                               title="Hide Or Show Title"
+                               data-no-preview="true"/>
+
+                </div>
+
+                <we-button-group string="Grid View">
+                    <we-button data-config="hover"
+                               data-toggle-class="grid_active"
+                               class="fa fa-fw fa-th mx-1 grid_view_btn bg-primary"
+                               title="Enable Or Disable Grid"
+                               data-no-preview="true"/>
+                </we-button-group>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="dynamic_product_snippet_options_filter" inherit_id="website.s_dynamic_snippet_options_template">
+        <xpath expr="//we-select[@data-name='template_opt']"
+               position="after">
+            <we-select string="Filter" data-name="product_category_opt" data-attribute-name="filterId"
+                       data-no-preview="true">
+            </we-select>
+        </xpath>
+    </template>
+
+</odoo>

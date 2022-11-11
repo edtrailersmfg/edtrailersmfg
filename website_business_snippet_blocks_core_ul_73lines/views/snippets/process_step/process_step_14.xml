@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Process Step 14" id="process_step_14">
+        <section class="pt64 pb64 text-center" id="process_step_14" data-visible="process_steps">
+            <div class="container">
+                <div class="row p-4">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2 class="mb16">Our Working Process</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="main-timeline row mx-md-0">
+                            <div class="timeline col-12">
+                                <div class="timeline-content">
+                                    <h3 class="year mb16">2013-2014</h3>
+                                    <h5 class="post">Web Desginer</h5>
+                                    <h5 class="title">Williamson</h5>
+                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Donec nec sagittis mauris. Donec mollis nunc eu est maximus eleifend. In ac
+                                        malesuada nisl.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline col-12">
+                                <div class="timeline-content">
+                                    <h3 class="year mb16">2013-2014</h3>
+                                    <h5 class="post">Web Desginer</h5>
+                                    <h5 class="title">Williamson</h5>
+                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Donec nec sagittis mauris. Donec mollis nunc eu est maximus eleifend. In ac
+                                        malesuada nisl.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline col-12">
+                                <div class="timeline-content">
+                                    <h3 class="year mb16">2013-2014</h3>
+                                    <h5 class="post">Web Desginer</h5>
+                                    <h5 class="title">Williamson</h5>
+                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Donec nec sagittis mauris. Donec mollis nunc eu est maximus eleifend. In ac
+                                        malesuada nisl.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline col-12">
+                                <div class="timeline-content">
+                                    <h3 class="year mb16">2013-2014</h3>
+                                    <h5 class="post">Web Desginer</h5>
+                                    <h5 class="title">Williamson</h5>
+                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Donec nec sagittis mauris. Donec mollis nunc eu est maximus eleifend. In ac
+                                        malesuada nisl.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	
+
+		<template id="s_4x4x4" name="Four Four Four Boxes">
+			<section class="s_four_four_four_boxes">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 mt16 mb16 feature-box">
+							<div class="oe_structure">
+								<h3>Place Your Carousel Here.</h3>
+								<h4>After placing the carousel remove this text.</h4>
+							</div>
+						</div>
+						<div class="col-md-4 mt16 mb16 feature-box">
+							<div class="oe_structure">
+								<h3>Place Your Carousel Here.</h3>
+								<h4>After placing the carousel remove this text.</h4>
+							</div>
+						</div>
+						<div class="col-md-4 mt16 mb16 feature-box">
+							<div class="oe_structure">
+								<h3>Place Your Carousel Here.</h3>
+								<h4>After placing the carousel remove this text.</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</template>
+	
+</odoo>

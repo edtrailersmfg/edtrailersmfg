@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Center Content 5" id="center_content_5">
+        <section class="pt64 pb64" data-visible="center_content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <p>Tagline</p>
+                        <h2 class="font-weight-bold">Long headline to turn your<br/> visitors into users
+                        </h2>
+                        <div class="mt24 col-12 col-sm-12 col-md-12 col-lg-12">
+                            <input class="col-12 col-sm-4 col-md-4 col-lg-4 mt16 mb16 py-3 bg-light border-0 rounded-0"
+                                   type="text" name="user" placeholder="placeholder"/>
+                            <button class="btn btn-primary rounded-0 mt16 mb16 py-3 px-5">Subscribe</button>
+                        </div>
+                        <p>Sepreted they live in Bookmarksgrove right.Sepreted<br/>they live in Bookmarksgrove right.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

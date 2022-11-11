@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="mega_menu_9" name="Mega Menu 9" groups="base.group_user">
+        <section id="menu_design_9" class="pt32 pb32" data-visible="mega_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-lg-3 col-md-3 col-xs-6 mb16 mt16">
+
+                        <div class="contain-set">
+                            <h4 class="text-uppercase p-2">Heading</h4>
+                            <p class="px-2">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing,adipiscing
+                            </p>
+                        </div>
+
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             class="img img-fluid mx-auto"
+                             alt="Megamenu Banner Image"/>
+
+
+                    </div>
+
+                    <div class="col-sm-4 col-lg-3 col-md-3 col-xs-6 mb16 mt16">
+                        <div class="contain-set">
+                            <h4 class="text-uppercase p-2">Heading</h4>
+                            <p class="px-2">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing,adipiscing
+                            </p>
+                        </div>
+
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             class="img img-fluid mx-auto"
+                             alt="Megamenu Banner Image"/>
+
+
+                    </div>
+
+                    <div class="col-sm-4 col-lg-3 col-md-3 col-xs-6 mb16 mt16">
+                        <div class="contain-set">
+                            <h4 class="text-uppercase p-2">Heading</h4>
+                            <p class="px-2">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing,adipiscing
+                            </p>
+                        </div>
+
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             class="img img-fluid mx-auto"
+                             alt="Megamenu Banner Image"/>
+
+
+                    </div>
+
+                    <div class="col-sm-4 col-lg-3 col-md-3 col-xs-6 mb16 mt16">
+                        <div class="contain-set">
+                            <h4 class="text-uppercase p-2">Heading</h4>
+                            <p class="px-2">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing,adipiscing
+                            </p>
+                        </div>
+
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-12.jpg"
+                             class="img img-fluid mx-auto"
+                             alt="Megamenu Banner Image"/>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

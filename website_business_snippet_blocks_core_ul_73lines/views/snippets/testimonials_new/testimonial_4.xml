@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Testimonial 4" id="testimonial_4">
+        <section class="pt64 pb64" data-visible="testimonials">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Testimonials</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb16">
+                        <div class="border rounded px-4 py-4">
+                            <p>"Lorem Ipsum is simply dummy text of the
+                                printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text
+                                ever since the 1500s."
+                            </p>
+                            <i class="fa fa-user fa-3x mb8 mt32"></i>
+                            <h3>Name Surname</h3>
+                            <p>Discription
+                                <i class="float-right fa fa-twitter"></i>
+                                <i class="float-right fa fa-facebook mr8"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb16">
+                        <div class="border rounded px-4 py-4">
+                            <p>"Lorem Ipsum is simply dummy text of the
+                                printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text
+                                ever since the 1500s."
+                            </p>
+                            <i class="fa fa-user fa-3x mb8 mt32"></i>
+                            <h3>Name Surname</h3>
+                            <p>Discription
+                                <i class="float-right fa fa-twitter"></i>
+                                <i class="float-right fa fa-facebook mr8"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb16">
+                        <div class="border rounded px-4 py-4">
+                            <p>"Lorem Ipsum is simply dummy text of the
+                                printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text
+                                ever since the 1500s."
+                            </p>
+                            <i class="fa fa-user fa-3x mb8 mt32"></i>
+                            <h3>Name Surname</h3>
+                            <p>Discription
+                                <i class="float-right fa fa-twitter"></i>
+                                <i class="float-right fa fa-facebook mr8"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,36 @@
+.line{
+	background-color:$-alpha;
+	height:2px;
+	width:110px;
+}
+
+.heading-about{
+	font-size: 14px;
+	line-height: 28px;
+	font-weight: normal;
+	font-style: normal;
+	color: $-alpha;
+}
+
+.header-text{
+	font-size: 16px;
+	line-height: 28px;
+	font-weight: normal;
+	font-style: normal;
+	color: $o-we-color-info;
+}
+.body-text{
+	font-size: 13px;
+	color : #626262;
+}
+.about-us{
+    .services_large{
+        border :none;
+        &:hover{
+            border :none;
+        }
+        a{
+            text-decoration: none;
+        }
+    }
+}

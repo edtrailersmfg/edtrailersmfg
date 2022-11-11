@@ -1,0 +1,171 @@
+<odoo>
+    <template name="Image Grid 12" id="image_grid_12">
+        <section class="pt64 pb64" id="image_grid_12" data-visible="image_grid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-4 col-sm-12 px-2 pb16">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid12">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-307x307.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <div class="grid_content">
+                                        <h3>BLOCK TITLE</h3>
+                                        <span>Lorem ipsum dolor sit amet</span>
+                                        <ul class="icon mt-2">
+                                            <li>
+                                                <a href="#" class="fa fa-search"></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="fa fa-link"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 col-sm-12 px-2 pb16">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid12">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-307x307.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <div class="grid_content">
+                                        <h3>BLOCK TITLE</h3>
+                                        <span>Lorem ipsum dolor sit amet</span>
+                                        <ul class="icon mt-2">
+                                            <li>
+                                                <a href="#" class="fa fa-search"></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="fa fa-link"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 col-sm-12 px-2 pb16">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid12">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-307x307.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <div class="grid_content">
+                                        <h3>BLOCK TITLE</h3>
+                                        <span>Lorem ipsum dolor sit amet</span>
+                                        <ul class="icon mt-2">
+                                            <li>
+                                                <a href="#" class="fa fa-search"></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="fa fa-link"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 col-sm-12 px-2 pb16">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid12">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-307x307.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <div class="grid_content">
+                                        <h3>BLOCK TITLE</h3>
+                                        <span>Lorem ipsum dolor sit amet</span>
+                                        <ul class="icon mt-2">
+                                            <li>
+                                                <a href="#" class="fa fa-search"></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="fa fa-link"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 col-sm-12 px-2 pb16">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid12">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-307x307.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <div class="grid_content">
+                                        <h3>BLOCK TITLE</h3>
+                                        <span>Lorem ipsum dolor sit amet</span>
+                                        <ul class="icon mt-2">
+                                            <li>
+                                                <a href="#" class="fa fa-search"></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="fa fa-link"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 col-sm-12 px-2 pb16">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid12">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-307x307.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <div class="grid_content">
+                                        <h3>BLOCK TITLE</h3>
+                                        <span>Lorem ipsum dolor sit amet</span>
+                                        <ul class="icon mt-2">
+                                            <li>
+                                                <a href="#" class="fa fa-search"></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="fa fa-link"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 col-sm-12 px-2 pb16">
+                        <div class="oe_structure oe_empty">
+                            <div class="grid12">
+                                <img src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-307x307.png"
+                                     alt=""
+                                     class="img-fluid image"/>
+                                <div class="overlay">
+                                    <div class="grid_content">
+                                        <h3>BLOCK TITLE</h3>
+                                        <span>Lorem ipsum dolor sit amet</span>
+                                        <ul class="icon mt-2">
+                                            <li>
+                                                <a href="#" class="fa fa-search"></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="fa fa-link"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

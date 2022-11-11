@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="dynamic_snippet_products_filter" model="ir.filters">
+            <field name="name">Products</field>
+            <field name="model_id">product.template</field>
+            <field name="user_id" eval="False" />
+        </record>
+
+        <record id="dynamic_snippet_data_source_products"
+                model="website.snippet.filter">
+            <field name="field_names">display_name,description_sale,image_512,list_price</field>
+            <field name="filter_id"
+                   ref="website_snippet_product_carousel_ul_73lines.dynamic_snippet_products_filter"/>
+            <field name="limit" eval="16"/>
+            <field name="name">Products</field>
+            <field name="website_id" ref="website.default_website"/>
+        </record>
+    </data>
+</odoo>

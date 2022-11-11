@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Feature 5" id="feature_5">
+        <section class="pt64 pb64" data-visible="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2 class="text-center">Features</h2>
+                        <p class="text-center pb48">Lorem Ipsum is simply dummy text of the printing.</p>
+                        <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-44.jpg"
+                             alt="" class="img-fluid pb8"/>
+                        <div class="row pt64">
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4  media">
+                                <i class="fa fa-4x fa-calculator mr-4 mt-lg-0"></i>
+                                <div class="media-body">
+                                    <h3 class="pt8 pb8">Feature One</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut at semper metus.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4  media">
+                                <i class="fa fa-4x fa-life-ring mr-4 mt-lg-0"></i>
+                                <div class="media-body">
+                                    <h3 class="pt8 pb8">Feature Two</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut at semper metus.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4  media">
+                                <i class="fa fa-4x fa-user-o mr-4 mt-lg-0"></i>
+                                <div class="media-body">
+                                    <h3 class="pt8 pb8">Feature Three</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut at semper metus.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

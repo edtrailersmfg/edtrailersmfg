@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Flip Box 6" id="flip_box_6">
+        <section class="pt64 pb48" id="flip_box_6" data-visible="flipbox">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 flip_box mb40">
+                        <i class="fa fa-rocket fa-2x text-white"></i>
+                        <div class="row mx-0 flip_box_inner flip_box_right">
+                            <div class="col-12 flip_box_front text-center">
+                                <div class="flip_box_front_area">
+                                    <h3 class="mt16 mb16 font-weight-bold">Feature One</h3>
+                                    <p>Lorem ipsum dolor sit amet cons adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 flip_box_back text-center">
+                                <div class="flip_box_back_area">
+                                    <h3 class="mt16 mb16 font-weight-bold">Short Headline</h3>
+                                    <p class="">Lorem ipsum dolor sit amet cons adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna.
+                                    </p>
+                                    <a href="#" class="border-bottom font-weight-bold">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 flip_box mb40">
+                        <i class="fa fa-rocket fa-2x text-white"></i>
+                        <div class="row mx-0 flip_box_inner flip_box_bottom">
+                            <div class="col-12 flip_box_front text-center">
+                                <div class="flip_box_front_area">
+                                    <h3 class="mt16 mb16 font-weight-bold">Feature Two</h3>
+                                    <p>Lorem ipsum dolor sit amet cons adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 flip_box_back text-center">
+                                <div class="flip_box_back_area">
+                                    <h3 class="mt16 mb16 font-weight-bold">Short Headline</h3>
+                                    <p class="">Lorem ipsum dolor sit amet cons adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna.
+                                    </p>
+                                    <a href="#" class="border-bottom font-weight-bold">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 flip_box mb40">
+                        <i class="fa fa-rocket fa-2x text-white"></i>
+                        <div class="row mx-0 flip_box_inner flip_box_left">
+                            <div class="col-12 flip_box_front text-center">
+                                <div class="flip_box_front_area">
+                                    <h3 class="mt16 mb16 font-weight-bold">Feature Three</h3>
+                                    <p>Lorem ipsum dolor sit amet cons adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 flip_box_back text-center">
+                                <div class="flip_box_back_area">
+                                    <h3 class="mt16 mb16 font-weight-bold">Short Headline</h3>
+                                    <p class="">Lorem ipsum dolor sit amet cons adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna.
+                                    </p>
+                                    <a href="#" class="border-bottom font-weight-bold">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

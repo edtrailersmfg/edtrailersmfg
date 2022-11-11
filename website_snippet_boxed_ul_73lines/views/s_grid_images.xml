@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+
+    <!-- Snippet's Body -->
+    <template id="s_grid_images" name="Grid Image">
+        <section class="s_grid_images">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <div class="oe_structure">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 mb16 text-center">
+                                        <a href="#">
+                                            <img class="img img-fluid"
+                                                 src="/website_snippet_boxed_ul_73lines/static/src/img/263x146.png"/>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-12 mb16 text-center">
+                                        <a href="#">
+                                            <img class="img img-fluid"
+                                                 src="/website_snippet_boxed_ul_73lines/static/src/img/263x146.png"/>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-12 mb16 text-center">
+                                        <a href="#">
+                                            <img class="img img-fluid"
+                                                 src="/website_snippet_boxed_ul_73lines/static/src/img/263x111.png"/>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="oe_structure">
+                            <h3>Place Your Carousel Here.</h3>
+                            <h4>After placing the carousel remove this text.
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+
+</odoo>

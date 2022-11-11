@@ -1,0 +1,1007 @@
+<odoo>
+    <template id="frontend_layout_inherit_ecommerce"
+              inherit_id="website_customize_theme_business_ul_73lines.frontend_layout_inherit">
+
+        <xpath expr="//section[hasclass('mid_header')]" position="attributes">
+            <attribute name="id">ecom_mid_header</attribute>
+        </xpath>
+
+        <!--        Add To Cart And Wishlist Menu Midheader-->
+        <xpath expr="//div[hasclass('user-details')]/ul/li[@id='my_cart']"
+               position="inside">
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item list-inline-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+
+        <xpath expr="//div[hasclass('user-details')]/ul/li[@id='cust_wish']"
+               position="inside">
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item list-inline-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+
+        <!--Price List Option-->
+        <xpath expr="//li[@id='pricelist_custom']" position="inside">
+            <t t-set="website_sale_pricelists"
+               t-value="website.get_pricelist_available(show_visible=True)"/>
+            <div t-attf-class="dropdown#{'' if website_sale_pricelists and len(website_sale_pricelists)&gt;1 else ' d-none'} #{_classes}">
+                <t t-set="curr_pl" t-value="website.get_current_pricelist()"/>
+                <a role="button" href="#"
+                   class="dropdown-toggle btn btn-link text-white"
+                   data-toggle="dropdown">
+                    <t t-esc="curr_pl and curr_pl.name or ' - '"/>
+                </a>
+                <div class="dropdown-menu" role="menu">
+                    <t t-foreach="website_sale_pricelists" t-as="pl">
+                        <a role="menuitem"
+                           t-att-href="'/shop/change_pricelist/%s' % pl.id"
+                           class="dropdown-item">
+                            <span class="switcher_pricelist"
+                                  t-att-data-pl_id="pl.id"
+                                  t-esc="pl.name"/>
+                        </a>
+                    </t>
+                </div>
+            </div>
+        </xpath>
+        <!--Mid Header Bottom -->
+        <xpath expr="//section[@id='mid_header_top']" position="after">
+            <section id="mid_header_bottom">
+                <div class="container">
+                    <div class="row mt-4 mb-4">
+                        <div class="col-12 oe_structure col-lg-4 col-sm-4"
+                             id="mid-header-bottom-left">
+                            <div class="search_left mt-2">
+                                <t t-snippet-call="website_ecommerce_snippets_blocks_ul_73lines.s_searchbar_input_ultimate"/>
+                            </div>
+                            <div class="col-lg-12 mt-8 mb-8 text-center logo_mid_left">
+                                <a href="/" t-attf-class="navbar-brand logo #{_link_class}">
+                                    <span t-field="website.logo" t-options="{'widget': 'image'}" role="img"
+                                          t-att-aria-label="'Logo of %s' % website.name"
+                                          t-att-title="website.name"/>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-12 oe_structure col-lg-4 col-sm-4"
+                             id="mid-header-bottom-center">
+                            <div class="col-lg-12 mt-8 mb-8 text-center logo_mid_center">
+                                <a href="/" t-attf-class="navbar-brand logo #{_link_class}">
+                                    <span t-field="website.logo" t-options="{'widget': 'image'}" role="img"
+                                          t-att-aria-label="'Logo of %s' % website.name"
+                                          t-att-title="website.name"/>
+                                </a>
+                            </div>
+                            <div class="search_center mt-2">
+                                <t t-snippet-call="website_ecommerce_snippets_blocks_ul_73lines.s_searchbar_input_ultimate"/>
+                            </div>
+                        </div>
+                        <div class="col-12 oe_structure col-lg-4 col-sm-4"
+                             id="mid-header-bottom-right">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </xpath>
+    </template>
+    <template id="mid_header_bottom_right"
+              inherit_id="website_customize_theme_ecommerce_ul_73lines.frontend_layout_inherit_ecommerce"
+              name="Mid Header Bottom">
+        <xpath expr="//div[@id='mid-header-bottom-right']" position="inside">
+            <div class="text-right">
+                <span class="mid-bottom-wish"/>
+                <span class="mid-bottom-add-to-cart"/>
+            </div>
+        </xpath>
+    </template>
+    <template
+            id="mid_header_bottom_right_cart_inherit"
+            inherit_id="website_customize_theme_ecommerce_ul_73lines.mid_header_bottom_right"
+            active="True"
+            name="Mid Header Bottom Add to Cart" customize_show="True">
+        <xpath expr="//span[hasclass('mid-bottom-add-to-cart')]"
+               position="replace">
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item list-inline-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+    </template>
+    <template
+            id="mid_header_bottom_right_wish_inherit"
+            inherit_id="website_customize_theme_ecommerce_ul_73lines.mid_header_bottom_right"
+            active="True"
+            name="Mid Header Bottom Wish List" customize_show="True">
+        <xpath expr="//span[hasclass('mid-bottom-wish')]" position="replace">
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item list-inline-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="header_searchbox" name="Header SearchBox">
+        <div class="search-hide">
+            <t t-snippet-call="website_ecommerce_snippets_blocks_ul_73lines.s_searchbar_input_ultimate"/>
+        </div>
+    </template>
+
+    <template id="header_searchbox_with_dropdown" name="Header SearchBox With Dropdown">
+        <div class="search-dropdown-hide">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:10px;">
+                <span class="fa fa-search fa-2x" style="font-size: 18px;"/>
+            </a>
+            <ul class="dropdown-menu py-0 px-3 border-0 bg-transparent" role="menu">
+                <div>
+                    <li class="navbar-form form-group m-0">
+                        <t t-snippet-call="website_ecommerce_snippets_blocks_ul_73lines.s_searchbar_input_ultimate"/>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </template>
+
+    <template id="template_navbar_1" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_1">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_2" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_2">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_3" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_3">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_4" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_4">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_5" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_5">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_6" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_6">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_7" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_7">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_8" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_8">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_9" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_9">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_10" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_10">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_13" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_13">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_14" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_14">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_15" inherit_id="website.layout" name="Template Navbar 15" active="False">
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar"
+                 class="ultimate_nav navbar navbar-expand-md navbar-light o_colored_level o_cc shadow-sm">
+                <div id="top_menu_container" class="container justify-content-start justify-content-lg-between">
+                    <div class="row">
+                        <!-- Brand -->
+                        <t t-call="website.placeholder_header_brand">
+                            <t t-set="_link_class" t-value="'mr-4'"/>
+                        </t>
+                        <!-- Navbar Toggler -->
+                        <t t-call="website.navbar_toggler">
+                            <t t-set="_toggler_class" t-value="'ml-auto'"/>
+                        </t>
+
+                        <!-- Navbar Collapse -->
+                        <div id="top_menu_collapse" class="collapse navbar-collapse col-lg-7">
+                            <t t-call="website.navbar_nav">
+                                <t t-set="_nav_class" t-value="'ml-auto'"/>
+                                <!-- Menu -->
+                                <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                    <t t-call="website.submenu">
+                                        <t t-set="item_class" t-value="'nav-item'"/>
+                                        <t t-set="link_class" t-value="'nav-link'"/>
+                                    </t>
+                                </t>
+                                <li class="nav-item ul_brand_nav">
+                                    <a role="menuitem" href="/brand-list" class="nav-link">
+                                        <span>All Brands
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <!-- Add to Cart -->
+                                <t t-call="website_sale.header_cart_link">
+                                    <t t-set="_icon" t-value="True"/>
+                                    <t t-set="_item_class" t-value="'nav-item'"/>
+                                    <t t-set="_link_class" t-value="'nav-link'"/>
+                                </t>
+                                <!-- Wishlist -->
+                                <t t-call="website_sale_wishlist.header_wishlist_link">
+                                    <t t-set="_icon" t-value="True"/>
+                                    <t t-set="_item_class" t-value="'nav-item'"/>
+                                    <t t-set="_link_class" t-value="'nav-link'"/>
+                                </t>
+                                <!-- Sign In -->
+                                <t t-call="portal.placeholder_user_sign_in">
+                                    <t t-set="_item_class" t-value="'nav-item'"/>
+                                    <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                                </t>
+                                <!-- User Dropdown -->
+                                <t t-call="portal.user_dropdown">
+                                    <t t-set="_user_name" t-value="true"/>
+                                    <t t-set="_item_class" t-value="'nav-item dropdown'"/>
+                                    <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                                </t>
+                                <!-- Language Selector -->
+                                <li>
+                                    <t t-call="website.placeholder_header_language_selector">
+                                        <t t-set="_div_classes" t-value="'ml-2'"/>
+                                    </t>
+                                </li>
+                            </t>
+                        </div>
+                        <t t-call="website_customize_theme_ecommerce_ul_73lines.header_searchbox"></t>
+                        <t t-call="website_customize_theme_ecommerce_ul_73lines.header_searchbox_with_dropdown"></t>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+
+    </template>
+
+    <template id="template_navbar_16" inherit_id="website.layout" name="Template Navbar 16" active="False">
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar"
+                 class="ultimate_nav navbar navbar-expand-md navbar-light o_colored_level o_cc shadow-sm">
+                <div id="top_menu_container" class="container justify-content-start justify-content-lg-between">
+                    <div class="row">
+                        <!-- Brand -->
+                        <t t-call="website.placeholder_header_brand">
+                            <t t-set="_link_class" t-value="'mr-4'"/>
+                        </t>
+                        <!-- Navbar Toggler -->
+                        <t t-call="website.navbar_toggler">
+                            <t t-set="_toggler_class" t-value="'ml-auto'"/>
+                        </t>
+
+                        <!-- Navbar Collapse -->
+                        <div id="top_menu_collapse" class="collapse navbar-collapse col-lg-7 col-md-8">
+                            <t t-call="website.navbar_nav">
+                                <t t-set="_nav_class" t-value="''"/>
+                                <!-- Menu -->
+                                <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                    <t t-call="website.submenu">
+                                        <t t-set="item_class" t-value="'nav-item'"/>
+                                        <t t-set="link_class" t-value="'nav-link'"/>
+                                    </t>
+                                </t>
+                                <li class="nav-item ul_brand_nav">
+                                    <a role="menuitem" href="/brand-list" class="nav-link">
+                                        <span>All Brands
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Add to Cart -->
+                                <t t-call="website_sale.header_cart_link">
+                                    <t t-set="_icon" t-value="True"/>
+                                    <t t-set="_item_class" t-value="'nav-item'"/>
+                                    <t t-set="_link_class" t-value="'nav-link'"/>
+                                </t>
+                                <!-- Wishlist -->
+                                <t t-call="website_sale_wishlist.header_wishlist_link">
+                                    <t t-set="_icon" t-value="True"/>
+                                    <t t-set="_item_class" t-value="'nav-item'"/>
+                                    <t t-set="_link_class" t-value="'nav-link'"/>
+                                </t>
+                                <!-- Sign In -->
+                                <t t-call="portal.placeholder_user_sign_in">
+                                    <t t-set="_item_class" t-value="'nav-item'"/>
+                                    <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                                </t>
+                                <!-- User Dropdown -->
+                                <t t-call="portal.user_dropdown">
+                                    <t t-set="_user_name" t-value="true"/>
+                                    <t t-set="_item_class" t-value="'nav-item dropdown'"/>
+                                    <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                                </t>
+
+                                <!-- Language Selector -->
+                                <li>
+                                    <t t-call="website.placeholder_header_language_selector">
+                                        <t t-set="_div_classes" t-value="'ml-2'"/>
+                                    </t>
+                                </li>
+                            </t>
+                        </div>
+
+                        <t t-call="website_customize_theme_ecommerce_ul_73lines.header_searchbox"></t>
+                        <t t-call="website_customize_theme_ecommerce_ul_73lines.header_searchbox_with_dropdown"></t>
+                    </div>
+                </div>
+            </nav>
+        </xpath>
+
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_17" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_17">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+
+    </template>
+
+    <template id="template_navbar_18" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_18">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+
+    </template>
+
+    <template id="template_navbar_19" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_19">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+
+    </template>
+
+    <template id="template_navbar_20" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_20">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+
+    </template>
+
+    <template id="template_navbar_21" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_21">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_22" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_22">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_23" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_23">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_24" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_24">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_25" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_25">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_26" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_26">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_27" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_27">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+    <template id="template_navbar_28" inherit_id="website_customize_theme_business_ul_73lines.template_navbar_28">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+            <t t-call="website_sale.header_cart_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+            <t t-call="website_sale_wishlist.header_wishlist_link">
+                <t t-set="_icon" t-value="True"/>
+                <t t-set="_item_class" t-value="'nav-item'"/>
+                <t t-set="_link_class" t-value="'nav-link'"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='top_menu_collapse']" position="after">
+            <t t-call="website_ecommerce_snippets_blocks_ul_73lines.full_screen_search_d1"></t>
+        </xpath>
+    </template>
+
+
+    <template id="template_header_default" inherit_id="website_sale.template_header_default">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="before">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="template_header_hamburger" inherit_id="website_sale.template_header_hamburger">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="before">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="template_header_vertical" inherit_id="website_sale.template_header_vertical">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="before">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="template_header_sidebar" inherit_id="website_sale.template_header_sidebar">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="before">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="template_header_slogan" inherit_id="website_sale.template_header_slogan">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="before">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="template_header_contact" inherit_id="website_sale.template_header_contact">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="before">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="template_header_boxed" inherit_id="website_sale.template_header_boxed">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="before">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="template_header_centered_logo" inherit_id="website_sale.template_header_centered_logo">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="before">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="template_header_image" inherit_id="website_sale.template_header_image">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="before">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="template_header_hamburger_full" inherit_id="website_sale.template_header_hamburger_full">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="before">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="template_header_magazine" inherit_id="website_sale.template_header_magazine">
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="before">
+            <li class="nav-item ul_brand_nav">
+                <a role="menuitem" href="/brand-list" class="nav-link">
+                    <span>All Brands
+                    </span>
+                </a>
+            </li>
+        </xpath>
+    </template>
+
+</odoo>

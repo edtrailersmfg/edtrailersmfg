@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!--Breadcrumbs On Shop Page-->
+    <template id="category_breadcrumbs" name="Shop Breadcrumbs"
+              inherit_id="website_sale.products"
+              active="False"
+              customize_show="True">
+        <xpath expr="//div[@id='wrap']//div[2]" position="before">
+            <div class="ultimate-breadcrumbs">
+                <t t-if="category">
+                    <t t-if="category.category_breadcrumbs_banner">
+                        <div class="breadcrumb"
+                             t-attf-style="background-image:url(#{website.image_url(category,'category_breadcrumbs_banner')})">
+                            <div class="container">
+                                <div class="breadcrumb-item row align-items-center">
+                                    <t t-if="category">
+                                        <h1>
+                                            <t t-esc="category.name"/>
+                                        </h1>
+                                    </t>
+                                    <t t-else="">
+                                        <h1>Shop</h1>
+                                    </t>
+                                    <div class="ml-auto">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item active">
+                                                <a href="/">
+                                                    <i class="fa fa-home"></i>
+                                                </a>
+                                            </li>
+                                            <li class="breadcrumb-item">
+                                                <a href="/shop">Shop</a>
+                                            </li>
+                                            <t t-if="category">
+                                                <li class="breadcrumb-item">
+                                                    <a t-att-href="url">
+                                                        <t t-esc="category.name"/>
+                                                    </a>
+                                                </li>
+                                            </t>
+                                        </ol>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </t>
+
+                    <t t-else="">
+                        <t t-if="website.shop_breadcrumbs_banner_website">
+                            <div class="breadcrumb"
+                                 t-options="{'widget':'image','class':'col-md-12 pad0'}"
+                                 t-attf-style="background-image:url(#{website.image_url(website,'shop_breadcrumbs_banner_website')})">
+                                <div class="container">
+                                    <div class="breadcrumb-item row align-items-center">
+                                        <t t-if="category">
+                                            <h1>
+                                                <t t-esc="category.name"/>
+                                            </h1>
+                                        </t>
+                                        <t t-else="">
+                                            <h1>Shop</h1>
+                                        </t>
+                                        <div class="ml-auto">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item active">
+                                                    <a href="/">
+                                                        <i class="fa fa-home"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="breadcrumb-item">
+                                                    <a href="/shop">Shop</a>
+                                                </li>
+                                                <t t-if="category">
+                                                    <li class="breadcrumb-item">
+                                                        <a t-att-href="url">
+                                                            <t t-esc="category.name"/>
+                                                        </a>
+                                                    </li>
+                                                </t>
+                                            </ol>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+
+                        <t t-else="">
+                            <div class="breadcrumb bg-light">
+                                <div class="container">
+                                    <div class="breadcrumb-item row align-items-center">
+                                        <t t-if="category">
+                                            <h1>
+                                                <t t-esc="category.name"/>
+                                            </h1>
+                                        </t>
+                                        <t t-else="">
+                                            <h1>Shop</h1>
+                                        </t>
+                                        <div class="ml-auto">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item active">
+                                                    <a href="/">
+                                                        <i class="fa fa-home"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="breadcrumb-item">
+                                                    <a href="/shop">Shop</a>
+                                                </li>
+                                                <t t-if="category">
+                                                    <li class="breadcrumb-item">
+                                                        <a t-att-href="url">
+                                                            <t t-esc="category.name"/>
+                                                        </a>
+                                                    </li>
+                                                </t>
+                                            </ol>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </t>
+
+                    </t>
+                </t>
+
+
+                <t t-if="not category">
+                    <t t-if="not website.shop_breadcrumbs_banner_website">
+                        <div class="breadcrumb bg-light">
+                            <div class="container">
+                                <div class="breadcrumb-item row align-items-center">
+                                    <t t-if="category">
+                                        <h1>
+                                            <t t-esc="category.name"/>
+                                        </h1>
+                                    </t>
+                                    <t t-else="">
+                                        <h1>Shop</h1>
+                                    </t>
+                                    <div class="ml-auto">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item active">
+                                                <a href="/">
+                                                    <i class="fa fa-home"></i>
+                                                </a>
+                                            </li>
+                                            <li class="breadcrumb-item">
+                                                <a href="/shop">Shop</a>
+                                            </li>
+                                            <t t-if="category">
+                                                <li class="breadcrumb-item">
+                                                    <a t-att-href="url">
+                                                        <t t-esc="category.name"/>
+                                                    </a>
+                                                </li>
+                                            </t>
+                                        </ol>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+
+                    <t t-else="">
+                        <div class="breadcrumb"
+                             t-options="{'widget':'image','class':'col-md-12 pad0'}"
+                             t-attf-style="background-image:url(#{website.image_url(website,'shop_breadcrumbs_banner_website')})">
+                            <div class="container">
+                                <div class="breadcrumb-item row align-items-center">
+                                    <t t-if="category">
+                                        <h1>
+                                            <t t-esc="category.name"/>
+                                        </h1>
+                                    </t>
+                                    <t t-else="">
+                                        <h1>Shop</h1>
+                                    </t>
+                                    <div class="ml-auto">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item active">
+                                                <a href="/">
+                                                    <i class="fa fa-home"></i>
+                                                </a>
+                                            </li>
+                                            <li class="breadcrumb-item">
+                                                <a href="/shop">Shop</a>
+                                            </li>
+                                            <t t-if="category">
+                                                <li class="breadcrumb-item">
+                                                    <a t-att-href="url">
+                                                        <t t-esc="category.name"/>
+                                                    </a>
+                                                </li>
+                                            </t>
+                                        </ol>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </t>
+                </t>
+            </div>
+
+
+        </xpath>
+    </template>
+
+</odoo>

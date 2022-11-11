@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Pricing 12" id="pricing_12">
+        <section class="s_comparisons pt48 pb24" data-visible="pricing">
+            <div class="container">
+                <div class="row s_nb_column_fixed">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Pricing Table</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+                <div class="row text-center pt32">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 s_col_no_bgcolor  pb16"
+                         data-name="Box">
+                        <div class="card">
+                            <div class="card-header  border-0">
+                                <h3>Personal</h3>
+                                <h2 class="card-title">
+
+                                    <span class="s_comparisons_price">
+                                        <b class="o_default_snippet_text">$18</b>
+                                    </span>
+
+                                </h2>
+                                <p>per month</p>
+
+                            </div>
+
+                            <ul class="list-group list-group-flush
+					 border-top px-4
+					">
+                                <table class="table border-top-1">
+                                    <tr>
+                                        <td class="text-left border-top-0">Item One</td>
+                                        <td class="text-right border-top-0">234 MB</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left border-top-0">Item One</td>
+                                        <td class="text-right border-top-0">10 GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left border-top-0">Item One</td>
+                                        <td class="text-right border-top-0">Unmetered</td>
+                                    </tr>
+                                </table>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 s_col_no_bgcolor  pb16"
+                         data-name="Box">
+                        <div class="card">
+                            <div class="card-header  border-0">
+                                <h3>Professional</h3>
+                                <h2 class="card-title">
+
+                                    <span class="s_comparisons_price">
+                                        <b class="o_default_snippet_text">$24</b>
+                                    </span>
+
+                                </h2>
+                                <p>per month</p>
+
+                            </div>
+
+                            <ul class="list-group list-group-flush
+					 border-top px-4
+					">
+                                <table class="table border-top-1">
+                                    <tr>
+                                        <td class="text-left border-top-0">Item One</td>
+                                        <td class="text-right border-top-0">234 MB</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left border-top-0">Item One</td>
+                                        <td class="text-right border-top-0">30 GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left border-top-0">Item One</td>
+                                        <td class="text-right border-top-0">Unmetered</td>
+                                    </tr>
+                                </table>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 s_col_no_bgcolor  pb16"
+                         data-name="Box">
+                        <div class="card">
+                            <div class="card-header  border-0">
+                                <h3>Corporate</h3>
+                                <h2 class="card-title">
+
+                                    <span class="s_comparisons_price">
+                                        <b class="o_default_snippet_text">$38</b>
+                                    </span>
+
+                                </h2>
+                                <p>per month</p>
+
+                            </div>
+
+                            <ul class="list-group list-group-flush
+					 border-top px-4
+					">
+                                <table class="table border-top-1">
+                                    <tr>
+                                        <td class="text-left border-top-0">Item One</td>
+                                        <td class="text-right border-top-0">234 MB</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left border-top-0">Item One</td>
+                                        <td class="text-right border-top-0">60 GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left border-top-0">Item One</td>
+                                        <td class="text-right border-top-0">Unmetered</td>
+                                    </tr>
+                                </table>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 s_col_no_bgcolor"
+                         data-name="Box">
+                        <div class="card">
+                            <div class="card-header  border-0">
+                                <h3>Enterprice</h3>
+                                <h2 class="card-title">
+
+                                    <span class="s_comparisons_price">
+                                        <b class="o_default_snippet_text">$38</b>
+                                    </span>
+
+                                </h2>
+                                <p>per month</p>
+
+                            </div>
+
+                            <ul class="list-group list-group-flush
+					 border-top px-4
+					">
+                                <table class="table border-top-1">
+                                    <tr>
+                                        <td class="text-left border-top-0">Item One</td>
+                                        <td class="text-right border-top-0">234 MB</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left border-top-0">Item One</td>
+                                        <td class="text-right border-top-0">120 GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left border-top-0">Item One</td>
+                                        <td class="text-right border-top-0">Unmetered</td>
+                                    </tr>
+                                </table>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

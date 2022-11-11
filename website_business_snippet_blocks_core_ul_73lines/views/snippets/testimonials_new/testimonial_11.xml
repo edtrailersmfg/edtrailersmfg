@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="testimonial_11" name="Testimonial 11">
+        <section class="pt64 pb64 bg-primary" id="testimonials_d2" data-visible="testimonials">
+            <div class="container">
+                <div class="row content justify-content-md-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2>Testimonials</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="testimonials_d2"
+                 class="s_quotes_carousel s_carousel_default carousel slide"
+                 data-interval="10000">
+                <ol class="carousel-indicators">
+                    <li data-target="#testimonials_d2"
+                        data-slide-to="0" class="active"/>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active pt80 pb80"
+                         data-name="Slide" style="min-height: 318px;">
+                        <div class="container">
+                            <div class="row content justify-content-md-center mx-2">
+                                <blockquote
+                                        class="carousel-content col-12 col-sm-12 col-md-12 col-lg-8 bg-white border-0">
+                                    <p class="lead mt32 mb32 text-center">Write a quote here from one
+                                        of your customers. Quotes are a great
+                                        way to build confidence in your
+                                        products or services.
+                                    </p>
+                                    <div class="text-center">
+                                        <img class="img"
+                                             src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                             alt=""/>
+                                        <span>
+                                            Jane DOE, CEO of
+                                            <b>
+                                                MyCompany
+                                            </b>
+                                        </span>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-control-prev"
+                     data-target="#testimonials_d2" data-slide="prev"
+                     role="img" aria-label="Previous" title="Previous">
+                    <span class="carousel-control-prev-icon"/>
+                    <span class="sr-only o_default_snippet_text">Previous
+                    </span>
+                </div>
+                <div class="carousel-control-next"
+                     data-target="#testimonials_d2" data-slide="next"
+                     role="img" aria-label="Next" title="Next">
+                    <span class="carousel-control-next-icon"/>
+                    <span class="sr-only o_default_snippet_text">Next</span>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,64 @@
+<odoo>
+
+    <template id="banner_with_product_carousel" name="Banner With Product Carousel">
+        <section
+                class="s_cover parallax align-content-center align-items-center d-flex full-height s_parallax_is_fixed"
+                data-scroll-background-ratio="1"
+                style="background-image: none;" data-visible="banners" id="banner_with_product">
+            <span class="s_parallax_bg oe_img_bg oe_custom_bg"
+                  style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/banner-imgs/banner_imgs-7.jpg&quot;); background-position: 50% 0px;"/>
+            <div class="container">
+                <div class="row s_nb_column_fixed">
+                    <div class="col-12 col-sm-12 col-md-5 col-lg-4">
+                        <t t-call="website.s_dynamic_snippet_template">
+                            <t t-set="snippet_name" t-value="'custom_dynamic_product_snippet'"/>
+                            <t t-set="object_name" t-value="'product.template'"/>
+                            <t t-set="snippet_identifier" t-value="'Product Design'"/>
+                            <t t-set="snippet_classes" t-value="'js_sale'"/>
+                            <t t-set="number_of_elements_opt" t-value="1" />
+                            <t t-set="disable_options" t-value="'rowSize'"/>
+                        </t>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-7 col-lg-8">
+                        <div class="col-lg-12 s_title" data-name="Title">
+                            <h1 class="text-right text-white"
+                                style="font-size: 62px;">Catchy
+                                Headline
+                            </h1>
+                        </div>
+                        <div class="col-lg-12 s_text pt16 pb16 text-white"
+                             data-name="Text">
+                            <p class="lead text-right" style="text-align: center;">
+                                Write one or two
+                                paragraphs describing your product, services or a
+                                specific feature.
+                                <br/>
+                                To be successful your content needs to be useful to
+                                your readers.
+                            </p>
+                        </div>
+                        <div class="col-lg-12 text-right pt16 pb16"
+                             data-name="Buttons">
+                            <a href="/aboutus"
+                               class="btn mt8 mb8 btn-secondary o_default_snippet_text">
+                                About us
+                            </a>
+                            <a href="/contactus"
+                               class="btn mt8 mb8 btn-primary o_default_snippet_text">
+                                Contact us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="snippet_id_banner"
+              inherit_id="website_business_snippet_blocks_core_ul_73lines.theme_ultimate_snippet_blocks_list">
+        <xpath expr="//div[@id='o_panel_body']" position="inside">
+            <t t-snippet="website_snippet_product_carousel_ul_73lines.banner_with_product_carousel"
+               t-thumbnail=""/>
+        </xpath>
+    </template>
+</odoo>

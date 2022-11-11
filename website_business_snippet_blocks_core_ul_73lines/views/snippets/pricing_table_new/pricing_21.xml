@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="pricing_21" name="Pricing21">
+        <section class="pricing_4 pt64 pb64" id="bs_price_table_4" data-visible="pricing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-12 col-md-12 text-center pb48">
+                        <div class="price-heading clearfix">
+                            <h2>Pricing Table</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-left align-items-center">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb16">
+                        <div class="pricings">
+                            <div class="pricings__top pricings__top--free">
+                                <div class="pricing-tag pricing-tag--free">
+                                    Free
+                                </div>
+                                <span class="top-header">Basic Plan</span>
+                                <div class="hr"/>
+                                <span class="price">
+                                    <sup>
+                                        <small>$</small>
+                                    </sup>
+                                    0.99
+                                </span>
+                                <span class="per-month">Per Month</span>
+                            </div>
+                            <div class="pricings__bottom bg-white">
+                                <!--   Icons     -->
+                                <div class="logo-shaped logo-shaped--basic">
+                                    <i class="fa fa-arrow-down"/>
+                                </div>
+                                <ul class="props">
+                                    <li class="props__item props__item--basic">
+                                        Email
+                                        Previews
+                                    </li>
+                                    <li class="props__item props__item--basic">
+                                        10
+                                        GB
+                                        Storage
+                                    </li>
+                                    <li class="props__item props__item--basic">
+                                        Non-Responsive
+                                    </li>
+                                </ul>
+                                <a href="#0"
+                                   class="btn btn-alpha btn-flat-outline btn-lg">
+                                    Sign up
+                                    Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb16">
+                        <div class="pricings">
+                            <div class="pricings__top pricings__top--premium">
+                                <div class="pricing-tag pricing-tag--premium">
+                                    Premium
+                                </div>
+                                <span class="top-header">Premium</span>
+                                <div class="hr"></div>
+                                <span class="price">
+                                    <sup>
+                                        <small>$</small>
+                                    </sup>
+                                    145
+                                </span>
+                                <span class="per-month">Per Month</span>
+                            </div>
+                            <div class="pricings__bottom bg-white">
+                                <div class="hex">
+                                    <div class="hex_logo">
+                                        <i class="fa fa-arrow-down"/>
+                                    </div>
+                                </div>
+                                <ul class="props">
+                                    <li class="props__item props__item--premium">
+                                        Email
+                                        Previews
+                                    </li>
+                                    <li class="props__item props__item--premium">
+                                        10
+                                        GB
+                                        Storage
+                                    </li>
+                                    <li class="props__item  props__item--premium">
+                                        100
+                                        Portfolio Items
+                                    </li>
+                                    <li class="props__item props__item--premium">
+                                        Inter
+                                        Active Design
+                                    </li>
+                                    <li class="props__item props__item--premium">
+                                        Responsive
+                                    </li>
+                                </ul>
+                                <a href="#0"
+                                   class="btn btn-beta btn-flat-outline btn-lg">
+                                    Sign up
+                                    Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb16">
+                        <div class="pricings">
+                            <div class="pricings__top pricings__top--standard bg-o-color-3">
+                                <div class="pricing-tag pricing-tag--standard">
+                                    Standard
+                                </div>
+                                <span class="top-header">Standard</span>
+                                <div class="hr"/>
+                                <span class="price">
+                                    <sup>
+                                        <small>$</small>
+                                    </sup>
+                                    50
+                                </span>
+                                <span class="per-month">Per Month</span>
+                            </div>
+                            <div class="pricings__bottom bg-white">
+                                <div class="logo-shaped bg-o-color-3 logo-shaped--standard">
+                                    <i class="fa fa-arrow-down"/>
+                                </div>
+                                <ul class="props">
+                                    <li class="props__item props__item--standard">
+                                        Email
+                                        Previews
+                                    </li>
+                                    <li class="props__item props__item--standard">
+                                        10 GB
+                                        Storage
+                                    </li>
+                                    <li class="props__item props__item--standard">
+                                        Non-Responsive
+                                    </li>
+                                </ul>
+                                <a href="#0"
+                                   class="btn bg-o-color-3 btn-flat-outline btn-lg">
+                                    Sign up
+                                    Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

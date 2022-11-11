@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Counter 15" id="counter_15">
+        <section class="pt64 pb64" id="counter_15"
+                 style="background-image: url(&quot;/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-24.jpg &quot;);
+        background-repeat: no-repeat;
+        background-size: cover; background-attachment: fixed; position:relative;" data-visible="counters">
+            <div class="ec-common-overlay" style="background-color: rgba(0,0,0,0.44); z-index:0;"></div>
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb48">
+                        <h2 class="text-white">Counter Design</h2>
+                        <p class="text-white"   >Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="ec-counter-item text-white pt24 pb24">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-19.png"
+                                 alt="open_book"
+                                 class="img-fluid image"/>
+                            <h2 class="pt16 pt6 text-white">5245</h2>
+                            <h4 class="text-white">No. Of Books</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="ec-counter-item text-white pt24 pb24">
+
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-30.png"
+                                 alt="android"
+                                 class="img-fluid image"/>
+                            <h2 class="pt16 pt6 text-white">2045</h2>
+                            <h4 class="text-white">Science Fiction</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="ec-counter-item text-white pt24 pb24">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-49.png"
+                                 alt="icon-1"
+                                 class="img-fluid image"/>
+                            <h2 class="pt16 pt6 text-white">739</h2>
+                            <h4 class="text-white">History</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="ec-counter-item  text-white pt24 pb24">
+                            <img src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-43.png"
+                                 alt="unicorn"
+                                 class="img-fluid image"/>
+                            <h2 class="pt16 pt6 text-white">2981</h2>
+                            <h4 class="text-white">Fairy Tales</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>
+
+

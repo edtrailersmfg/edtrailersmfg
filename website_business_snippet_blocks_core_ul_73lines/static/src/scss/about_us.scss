@@ -1,0 +1,18 @@
+/* -----------about_6 scss start here -------------*/
+#about_six .media_object{
+
+    position: relative;
+    left: -28%;
+    @media (max-width: 1024px) {
+        left:-32%;
+    }
+    @media (max-width: 768px) {
+        left:-22%;
+    }
+    @media (max-width: 480px) {
+    position: relative;
+    left:0;
+    }
+
+}
+/* -----------about_6 scss end here -------------*/

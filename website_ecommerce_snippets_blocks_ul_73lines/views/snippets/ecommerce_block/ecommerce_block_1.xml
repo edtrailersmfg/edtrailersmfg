@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Ecommerce Block 1" id="ecommerce_block_1">
+        <section class="pt64 pb64" id="ecommerce_block_1" data-visible="ecommerce_blocks">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6 col-sm-6 mt8 mb8">
+                        <div class="hover_effect">
+                            <a href="#">
+                                <img class="img-fluid d-block mx-auto"
+                                     src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                     data-original-title="" title="" aria-describedby="tooltip867057"/>
+                            </a>
+                            <div class="col-12 img-content px-5">
+                                <h2>
+                                    50% Discounts
+                                </h2>
+                                <p class="o_default_snippet_text">Lorem ipsum dolor sit amet consectetur.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 col-sm-6 mt8 mb8">
+                        <div class="hover_effect">
+                            <a href="#">
+                                <img class="img-fluid d-block mx-auto"
+                                     src="/website_ecommerce_snippets_blocks_ul_73lines/static/src/img/placeholder-600.jpg"
+                                     data-original-title="" title="" aria-describedby="tooltip867057"/>
+                            </a>
+                            <div class="col-12 img-content px-5">
+                                <h2>
+                                    SALE 20% OFF
+                                </h2>
+                                <p class="o_default_snippet_text">Sed do eiusmod tempor incididunt ut labore.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

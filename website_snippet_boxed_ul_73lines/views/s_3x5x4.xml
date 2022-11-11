@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+
+    <template id="s_3x5x4" name="Three Five Four Boxes">
+        <section class="s_three_five_Four_boxes">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 mt16 mb16 feature-box">
+                        <div class="oe_structure">
+                            <h3>Place Your Carousel Here.</h3>
+                            <h4>After placing the carousel remove this text.
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-md-5 mt16 mb16 feature-box">
+                        <div class="oe_structure">
+                            <h3>Place Your Carousel Here.</h3>
+                            <h4>After placing the carousel remove this text.
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt16 mb16 feature-box">
+                        <div class="oe_structure">
+                            <h3>Place Your Carousel Here.</h3>
+                            <h4>After placing the carousel remove this text.
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+</odoo>

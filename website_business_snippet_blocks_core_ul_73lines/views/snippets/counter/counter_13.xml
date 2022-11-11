@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Counter 13" id="counter_13">
+        <section class="pt64 pb64" id="counter_13" data-visible="counters">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb48">
+                        <h2>Counter Design</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb24">
+                        <div class="item_icon text-center">
+                            <span>
+                                <i class="fa fa-3x fa-building pb32"></i>
+                            </span>
+                        </div>
+                        <div class="item_number">36</div>
+                        <div class="box_content">
+                            <h4>University Building</h4>
+                            <p>Give us a brief description of the service that you</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb24">
+                        <div class="item_icon text-center">
+                            <span>
+                                <i class="fa fa-3x fa-group pb32"></i>
+                            </span>
+                        </div>
+                        <div class="item_number">3022</div>
+                        <div class="box_content">
+                            <h4>Students Enrolled</h4>
+                            <p>Give us a brief description of the service that you</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb24">
+                        <div class="item_icon text-center">
+                            <span>
+                                <i class="fa fa-3x fa-list-alt pb32"></i>
+                            </span>
+                        </div>
+                        <div class="item_number">360</div>
+                        <div class="box_content">
+                            <h4>Courses Included</h4>
+                            <p>Give us a brief description of the service that you</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="item_icon text-center">
+                            <span>
+                                <i class="fa fa-3x fa-dashboard pb32"></i>
+                            </span>
+                        </div>
+                        <div class="item_number">2560</div>
+                        <div class="box_content">
+                            <h4>No Of Books</h4>
+                            <p>Give us a brief description of the service that you</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>
+
+

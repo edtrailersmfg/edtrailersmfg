@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Testimonial 2" id="testimonial_2">
+        <section class="pt64 pb64" data-visible="testimonials">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Testimonials</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb16">
+                        <div class="border px-4 py-4">
+                            <div class="media mb8">
+                                <div class="media-body">
+                                    <h3>Name Surname</h3>
+                                    <p>Discription</p>
+                                </div>
+                                <i class="fa fa-user fa-4x pr-3"></i>
+                            </div>
+                            <hr/>
+                            <p class="mb32">Lorem Ipsum is simply dummy text of
+                                the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's standard dummy
+                                text ever since the 1500s.
+                            </p>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb16">
+                        <div class="border px-4 py-4">
+                            <div class="media mb8">
+                                <div class="media-body">
+                                    <h3>Name Surname</h3>
+                                    <p>Discription</p>
+                                </div>
+                                <i class="fa fa-user fa-4x pr-3"></i>
+                            </div>
+                            <hr/>
+                            <p class="mb32">Lorem Ipsum is simply dummy text of
+                                the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's standard dummy
+                                text ever since the 1500s.
+                            </p>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb16">
+                        <div class="border px-4 py-4">
+                            <div class="media mb8">
+                                <div class="media-body">
+                                    <h3>Name Surname</h3>
+                                    <p>Discription</p>
+                                </div>
+                                <i class="fa fa-user fa-4x pr-3"></i>
+                            </div>
+                            <hr/>
+                            <p class="mb32">Lorem Ipsum is simply dummy text of
+                                the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's standard dummy
+                                text ever since the 1500s.
+                            </p>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb16 mt16 text-center">
+                        <a href="#" class="btn btn-primary"><i
+                                class="fa fa-star mr-3"></i>button with icon
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

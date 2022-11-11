@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template name="Process Step 17" id="process_step_17">
+        <section class="pt64 pb64" id="process_step_17" data-visible="process_steps">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                        <h2>Our Working Process</h2>
+                        <p class="col-lg-6 offset-lg-3">Lorem Ipsum is simply dummy text of the printing
+                            and typesetting industry
+                            been the industry's standard dummy text
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-6 col-lg-3 mb16">
+                        <div class="timeline">
+                            <div class="timeline-content">
+                                <div class="timeline-year">
+                                    <span>2015</span>
+                                </div>
+                                <div class="inner-content">
+                                    <div class="timeline-icon">
+                                        <i class="fa fa-globe text-primary"></i>
+                                    </div>
+                                    <h3 class="title">Web Designing</h3>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada
+                                        tellus lorem, et condimentum neque commodo
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-6 col-lg-3 mb16">
+                        <div class="timeline">
+                            <div class="timeline-content">
+                                <div class="timeline-year">
+                                    <span>2016</span>
+                                </div>
+                                <div class="inner-content">
+                                    <div class="timeline-icon">
+                                        <i class="fa fa-users text-primary"></i>
+                                    </div>
+                                    <h3 class="title">Javascript</h3>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada
+                                        tellus lorem, et condimentum neque commodo
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-6 col-lg-3 mb16">
+                        <div class="timeline">
+                            <div class="timeline-content">
+                                <div class="timeline-year">
+                                    <span>2017</span>
+                                </div>
+                                <div class="inner-content">
+                                    <div class="timeline-icon">
+                                        <i class="fa fa-rocket text-primary"></i>
+                                    </div>
+                                    <h3 class="title">Web Development</h3>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada
+                                        tellus lorem, et condimentum neque commodo
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-6 col-lg-3 mb16">
+                        <div class="timeline">
+                            <div class="timeline-content">
+                                <div class="timeline-year">
+                                    <span>2018</span>
+                                </div>
+                                <div class="inner-content">
+                                    <div class="timeline-icon">
+                                        <i class="fa fa-briefcase text-primary"></i>
+                                    </div>
+                                    <h3 class="title">Digital Marketing</h3>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada
+                                        tellus lorem, et condimentum neque commodo
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>
