@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="image_content_1" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_1</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_1</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/right_content_img.png</field>
+        </record>
+
+
+        <record id="image_content_2" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_2</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_2</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/company_01.png</field>
+        </record>
+
+
+        <record id="image_content_3" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_3</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_3</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/portfolio_07.png</field>
+        </record>
+
+
+        <record id="image_content_4" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_4</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_4</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/company_03.png</field>
+        </record>
+
+
+        <record id="image_content_5" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_5</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_5</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/banner.png</field>
+        </record>
+
+
+        <record id="image_content_6" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_6</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_6</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/feature_img.png</field>
+        </record>
+
+
+        <record id="image_content_7" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_7</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_7</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/portfolio_03.png</field>
+        </record>
+
+
+        <record id="image_content_8" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_8</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_8</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/feature_bg.png</field>
+        </record>
+
+
+        <record id="image_content_9" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_9</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_9</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/image_slider_01.png</field>
+        </record>
+
+
+        <record id="image_content_10" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_10</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_10</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/team_01.png</field>
+        </record>
+
+
+        <record id="image_content_11" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_11</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_11</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/portfolio_01.png</field>
+        </record>
+
+
+        <record id="image_content_12" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_12</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_12</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/testi_01.png</field>
+        </record>
+
+
+        <record id="image_content_13" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_13</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_13</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/portfolio_08.png</field>
+        </record>
+
+
+        <record id="image_content_14" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_14</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_14</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/left_content_bg.png</field>
+        </record>
+
+
+        <record id="image_content_15" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_15</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_15</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/team_02.png</field>
+        </record>
+
+
+        <record id="image_content_16" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_16</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_16</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/news_02.png</field>
+        </record>
+
+
+        <record id="image_content_17" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_17</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_17</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/service_01.png</field>
+        </record>
+
+
+        <record id="image_content_18" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_18</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_18</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/image_slider_03.png</field>
+        </record>
+
+
+        <record id="image_content_19" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_19</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_19</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/image_slider_04.png</field>
+        </record>
+
+
+        <record id="image_content_20" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_20</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_20</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/news_03.png</field>
+        </record>
+
+
+        <record id="image_content_21" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_21</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_21</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/company_04.png</field>
+        </record>
+
+
+        <record id="image_content_22" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_22</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_22</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/image_slider_07.png</field>
+        </record>
+
+
+        <record id="image_content_23" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_23</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_23</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/portfolio_05.png</field>
+        </record>
+
+
+        <record id="image_content_24" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_24</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_24</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/team_03.png</field>
+        </record>
+
+
+        <record id="image_content_25" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_25</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_25</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/portfolio_02.png</field>
+        </record>
+
+
+        <record id="image_content_26" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_26</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_26</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/company_06.png</field>
+        </record>
+
+
+        <record id="image_content_27" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_27</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_27</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/image_slider_02.png</field>
+        </record>
+
+
+        <record id="image_content_28" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_28</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_28</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/testi_03.png</field>
+        </record>
+
+
+        <record id="image_content_29" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_29</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_29</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/image_slider_08.png</field>
+        </record>
+
+
+        <record id="image_content_30" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_30</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_30</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/service_02.png</field>
+        </record>
+
+
+        <record id="image_content_31" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_31</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_31</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/image_slider_06.png</field>
+        </record>
+
+
+        <record id="image_content_32" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_32</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_32</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/service_03.png</field>
+        </record>
+
+
+        <record id="image_content_33" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_33</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_33</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/contact_bg.png</field>
+        </record>
+
+
+        <record id="image_content_34" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_34</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_34</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/portfolio_04.png</field>
+        </record>
+
+
+        <record id="image_content_35" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_35</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_35</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/image_slider_05.png</field>
+        </record>
+
+
+        <record id="image_content_36" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_36</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_36</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/service_04.png</field>
+        </record>
+
+
+        <record id="image_content_37" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_37</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_37</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/company_05.png</field>
+        </record>
+
+
+        <record id="image_content_38" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_38</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_38</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/company_02.png</field>
+        </record>
+
+
+        <record id="image_content_39" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_39</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_39</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/news_01.png</field>
+        </record>
+
+
+        <record id="image_content_40" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_40</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_40</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/left_content_img.png</field>
+        </record>
+
+
+        <record id="image_content_41" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_41</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_41</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/testi_02.png</field>
+        </record>
+
+
+        <record id="image_content_42" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_42</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_42</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/portfolio_06.png</field>
+        </record>
+
+
+        <record id="image_content_43" model="theme.ir.attachment">
+            <field name="key">theme_car_dealer_ultimate_01.image_content_43</field>
+            <field name="name">theme_car_dealer_ultimate_01.image_content_43</field>
+            <field name="url">/theme_car_dealer_ultimate_01/static/src/img/library/car_dealer_01_logo.png</field>
+        </record>
+
+
+    </data>
+</odoo>

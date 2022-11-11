@@ -1,0 +1,1931 @@
+<odoo>
+    <data>
+        <!--Car Dealer Banner Snippets start-->
+        <template id="car_dealer_banner" name="Car Dealer Banner - Fade In">
+            <section
+                    class="s_cover parallax align-content-center align-items-center d-flex full-height s_parallax_is_fixed o_colored_level"
+                    data-scroll-background-ratio="1" style="" data-visible="banners" data-snippet="banner_d3"
+                    data-name="Banner 3">
+                <span class="s_parallax_bg oe_img_bg oe_custom_bg"
+                      style="background-image: url(&quot;/theme_car_dealer_ultimate_01/static/src/img/placeholder-1170.jpg&quot;); background-position: 50% 0px;"/>
+                <div class="container">
+                    <div class="row s_nb_column_fixed">
+                        <div class="col-lg-12 mt64 s_title o_colored_level" data-name="Title">
+                            <h1 class="text-white" style="font-size: 48px; text-align: center;">
+                                <span style="font-weight: bolder;" class="o_default_snippet_text">We Have Everythings
+                                </span>
+                                <br/>
+                            </h1>
+                            <h1 class="text-white" style="font-size: 48px; text-align: center;">
+                                <span style="font-weight: bolder;" class="o_default_snippet_text">Your Car Needs!</span>
+                            </h1>
+                        </div>
+                        <div class="col-lg-12 text-center pt16 pb16 o_colored_level" data-name="Buttons">
+                            <a href="/" class="mb8 mt8 btn btn-primary btn-lg" data-original-title="" title=""
+                               aria-describedby="tooltip746676">
+                                <font style="font-size: 16px;">Explore More&amp;nbsp;</font>
+                            </a>
+                            <a href="/" class="btn-lg mb8 mt8 text-white" data-original-title="" title=""
+                               aria-describedby="tooltip502395">
+                                <i class="fa fa-play rounded-circle" data-original-title="" title=""
+                                   aria-describedby="tooltip436515" style="color: rgb(12, 89, 219);"/>
+                                <font style="font-size: 18px;" class="text-white">Video</font>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </template>
+        <!--Car Dealer Banner Snippets End-->
+
+        <!--Car Dealer Flipbox Snippets start-->
+        <template id="car_dealer_flipbox" name="Car Dealer Flipbox - Fade In Up">
+            <section class="pt64 pb64 o_coored_level" id="flip_box_2" data-visible="flipbox"
+                     data-snippet="car_dealer_flipbox" data-name="Car Dealer Flipbox">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-4 flip_box mb16 col-lg-4 o_colored_level" style="">
+                            <div class="row mx-0 flip_box_inner">
+                                <div class="col-12 flip_box_front text-center col-lg-12 o_colored_level shadow">
+                                    <div class="flip_box_front_area">
+                                        <i class="bg-o-color-1 fa-2x rounded-circle fa fa-phone" style=""
+                                           data-original-title="" title="" aria-describedby="tooltip758529"/>
+                                        <h3 class="mb16 mt16">
+                                            <font class="text-beta" style="font-size: 20px;">
+                                                <b>Contact</b>
+                                            </font>
+                                        </h3>
+                                        <p class="mb-0 s_line_height_2">
+                                            <font class="text-o-color-3" style="font-size: 15px;">Technical Support
+                                            </font>
+                                        </p>
+                                        <p>
+                                            <span class="text-o-color-3" style="font-size: 15px;">+1 (650) 691-3277
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-12 flip_box_back text-center o_colored_level d-none d-lg-block d-md-none">
+                                    <div class="flip_box_back_area text-white">
+                                        <i class="fa-2x rounded-circle text-o-color-1 fa fa-phone"
+                                           data-original-title="" title="" aria-describedby="tooltip16759" style=""/>
+                                        <h3 class="mb16 mt16">
+                                            <font style="color: rgb(255, 255, 255);font-size: 20px;">
+                                                <b>Contact</b>
+                                            </font>
+                                        </h3>
+                                        <p class="mb-0 s_line_height_2">
+                                            <font style="font-size: 15px;" class="text-white">Technical Support</font>
+                                        </p>
+                                        <p>
+                                            <span class="o_default_snippet_text text-white" style="font-size: 15px;">+1
+                                                (650) 691-3277
+                                            </span>
+                                            <span class="text-white o_default_snippet_text"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 flip_box mb16 col-lg-4 o_colored_level">
+                            <div class="row mx-0 flip_box_inner">
+                                <div class="col-12 flip_box_front text-center col-lg-12 o_colored_level shadow"
+                                     style="">
+                                    <div class="flip_box_front_area">
+                                        <i class="bg-o-color-1 fa-2x rounded-circle fa fa-map-marker"
+                                           data-original-title="" title="" aria-describedby="tooltip82782" style=""/>
+                                        <h3 class="mb16 mt16">
+                                            <b>
+                                                <font class="text-beta" style="font-size: 20px;">Get Location</font>
+                                            </b>
+                                        </h3>
+                                        <p class="mb-0 s_line_height_2">
+                                            <font class="text-o-color-3" style="font-size: 15px;">Find Where we are
+                                                Located
+                                            </font>
+                                        </p>
+                                        <p>
+                                            <span class="o_default_snippet_text text-o-color-3"
+                                                  style="font-size: 15px;">250 Executive Park Blvd, Suite 3400
+                                            </span>
+                                            <span class="o_default_snippet_text text-o-color-3"
+                                                  style="font-size: 15px;">San Francisco
+                                            </span>
+                                            <span class="o_default_snippet_text text-o-color-3"
+                                                  style="font-size: 15px;">California
+                                            </span>
+                                            <span class="o_default_snippet_text text-o-color-3"
+                                                  style="font-size: 15px;">94134
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-12 flip_box_back text-center o_colored_level d-none d-lg-block d-md-none">
+                                    <div class="flip_box_back_area text-white">
+                                        <i class="fa-2x rounded-circle text-o-color-1 fa fa-map-marker"
+                                           data-original-title="" title="" aria-describedby="tooltip174085" style=""/>
+                                        <h3 class="mb16 mt16">
+                                            <font style="color: rgb(255, 255, 255);font-size: 20px;">
+                                                <b>Get Location</b>
+                                            </font>
+                                        </h3>
+                                        <p class="mb-0 s_line_height_2">
+                                            <font style="color: rgb(255, 255, 255);font-size: 15px;"
+                                                  class="o_default_snippet_text">Find Where we are Located
+                                            </font>
+                                        </p>
+                                        <p>
+                                            <span class="o_default_snippet_text text-white" style="font-size: 15px;">250
+                                                Executive Park Blvd, Suite 3400
+                                            </span>
+                                            <span class="o_default_snippet_text text-white" style="font-size: 15px;">San
+                                                Francisco
+                                            </span>
+                                            <span class="o_default_snippet_text text-white" style="font-size: 15px;">
+                                                California
+                                            </span>
+                                            <span class="o_default_snippet_text text-white" style="font-size: 15px;">
+                                                94134
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 flip_box mb16 col-lg-4 o_colored_level">
+                            <div class="row mx-0 flip_box_inner">
+                                <div class="col-12 flip_box_front text-center col-lg-12 o_colored_level shadow"
+                                     style="">
+                                    <div class="flip_box_front_area">
+                                        <i class="bg-o-color-1 fa-2x rounded-circle fa fa-clock-o"
+                                           data-original-title="" title="" aria-describedby="tooltip724929" style=""/>
+                                        <h3 class="mb16 mt16">
+                                            <b>
+                                                <font style="font-size: 20px;">Meet With Us</font>
+                                            </b>
+                                        </h3>
+                                        <p class="mb-0 s_line_height_2">
+                                            <font class="o_default_snippet_text text-o-color-3"
+                                                  style="font-size: 15px;">This Hours To&amp;nbsp; Meet
+                                            </font>
+                                        </p>
+                                        <p>
+                                            <font class="o_default_snippet_text text-o-color-3"
+                                                  style="font-size: 15px;">9:00 AM – 8:00 PM
+                                            </font>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-12 flip_box_back text-center o_colored_level d-none d-lg-block d-md-none">
+                                    <div class="flip_box_back_area text-white">
+                                        <i class="fa-2x rounded-circle text-o-color-1 fa fa-clock-o"
+                                           data-original-title="" title="" aria-describedby="tooltip59074" style=""/>
+                                        <h3 class="mb16 mt16">
+                                            <font style="color: rgb(255, 255, 255);font-size: 20px;">
+                                                <b class="o_default_snippet_text">Meet With Us</b>
+                                            </font>
+                                        </h3>
+                                        <p class="mb-0 s_line_height_2">
+                                            <font style="color: rgb(255, 255, 255);font-size: 15px;"
+                                                  class="o_default_snippet_text">This Hours To&amp;nbsp; Meet
+                                            </font>
+                                        </p>
+                                        <p>
+                                            <font style="color: rgb(255, 255, 255);font-size: 15px;"
+                                                  class="o_default_snippet_text">9:00 AM – 8:00 PM&amp;nbsp;
+                                            </font>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Car Dealer Flipbox Snippets End-->
+
+        <!--Car Dealer Features Snippets start-->
+        <template id="car_dealer_features" name="Car Dealer Features">
+            <section class="oe_custom_bg pt64 o_colored_level" data-visible="right_content" style="position: relative;"
+                     data-snippet="car_dealer_features" data-name="Car Dealer Features"
+                     data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Rainy/09&quot;,&quot;colors&quot;:{&quot;c1&quot;:&quot;rgba(26, 26, 26, 0.47)&quot;},&quot;flip&quot;:[]}">
+                <div class="o_we_shape o_web_editor_Rainy_09"
+                     style="background-image: url(&quot;/web_editor/shape/web_editor/Rainy/09.svg?c1=rgba(26%2C%2026%2C%2026%2C%200.47)&quot;);"/>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 o_colored_level">
+                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-570x566.png" alt="Image"
+                                 class="img-fluid pt8 mx-auto d-block" data-original-title="" title=""
+                                 aria-describedby="tooltip968739" loading="lazy"/>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 o_colored_level" style="">
+                            <h2>
+                                <b>
+                                    <font style="font-size: 30px;">Why Choose Us?</font>
+                                </b>
+                            </h2>
+                            <p class="s_line_height_2">
+                                <font style="font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Culpa earum sint odit veniam!
+                                    Eveniet, provident dolore! Unde dicta numquam sunt ipsum eveniet sit dignissimos
+                                    fuga
+                                    dolore, officiis dolores voluptates sed.
+                                    &amp;nbsp;
+                                </font>
+                            </p>
+                            <div class="row pt16 pb16">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 o_colored_level" style="">
+                                    <div class="media">
+                                        <i class="fa-krw mr-3 mt8 fa pe-7s-check fa-2x fa-check" data-original-title=""
+                                           title="" aria-describedby="tooltip639710"/>
+                                        <div class="media-body">
+                                            <h3>
+                                                <font style="font-size: 15px;">
+                                                    <b>All Brands</b>
+                                                </font>
+                                            </h3>
+                                            <p class="mb8 mt8 s_line_height_2">
+                                                <font style="font-size: 15px;">Pellentesque fermentum. consectetur
+                                                    adipiscing elit.
+                                                </font>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 o_colored_level">
+                                    <div class="media">
+                                        <i class="fa-2x fa-krw mr-3 mt8 fa pe-7s-check fa-500px" data-original-title=""
+                                           title="" aria-describedby="tooltip430081" style=""/>
+                                        <div class="media-body">
+                                            <h3>
+                                                <font style="font-size: 15px;" class="o_default_snippet_text">
+                                                    <b>Free Support</b>
+                                                </font>
+                                            </h3>
+                                            <p class="mb8 mt8 s_line_height_2">
+                                                <font style="font-size: 15px;">Pellentesque fermentum. consectetur
+                                                    adipiscing elit.
+                                                </font>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 o_colored_level">
+                                    <div class="media">
+                                        <i class="fa fa-2x fa-krw mr-3 mt8 pe-7s-check fa-500px" style=""/>
+                                        <div class="media-body">
+                                            <h3>
+                                                <font style="font-size: 15px;">
+                                                    <b>Dealership</b>
+                                                </font>
+                                            </h3>
+                                            <p class="mb8 mt8 s_line_height_2">
+                                                <font style="font-size: 15px;">Pellentesque fermentum. consectetur
+                                                    adipiscing elit.
+                                                </font>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 o_colored_level">
+                                    <div class="media">
+                                        <i class="fa fa-2x fa-krw mr-3 mt8 pe-7s-check fa-500px" style=""/>
+                                        <div class="media-body">
+                                            <h3>
+                                                <font style="font-size: 15px;" class="o_default_snippet_text">
+                                                    <b>Auto Electric</b>
+                                                </font>
+                                            </h3>
+                                            <p class="mb8 mt8 s_line_height_2">
+                                                <font style="font-size: 15px;">Pellentesque fermentum. consectetur
+                                                    adipiscing elit.
+                                                </font>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="align-self-start col-lg-12 pb8 pt8 o_colored_level" data-name="Buttons">
+                                    <a href="/" class="mt8 mb8 btn btn-primary btn-lg" data-original-title="" title="">
+                                        Read More
+                                    </a>
+                                    <a href="/" class="bg-o-color-3 btn btn-gamma btn-lg mb8 ml-4 mt8"
+                                       data-original-title="" title="" aria-describedby="tooltip981746">Display All
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Car Dealer Features Snippets End-->
+
+        <!--Car Dealer Services Snippets start-->
+        <template id="car_dealer_services" name="Car Dealer Services - Fade In Up">
+            <section class="o_colored_level oe_custom_bg pb64 pt64" id="price_menu_11" data-visible="price_menu"
+                     style="" data-snippet="car_dealer_services" data-name="Car Dealer Services">
+                <div class="container">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h6 class="text-center">
+                            <span>
+                                <font style="" class="text-o-color-1">Our Fast Services</font>
+                            </span>
+                        </h6>
+                        <h2 class="text-center">
+                            <font style="font-size: 40px;" class="text-o-color-2">
+                                <b>We Are Offer Creative Services</b>
+                            </font>
+                        </h2>
+                        <p class="text-center pb48 s_line_height_2">
+                            <font style="font-size: 15px;">Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. At unde ex odio, minus qui
+                            </font>
+                            <br/>
+                            <font style="font-size: 15px;">inventore voluptatem nostrum enim eaque hic
+                                accusamus sunt.
+                                &amp;nbsp;
+                            </font>
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 p-0 o_colored_level">
+                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-285x246.png"
+                                 class="img-fluid h-100 w-100" loading="lazy"/>
+                        </div>
+                        <div class="col-12 col-lg-3 col-md-6 col-sm-12 o_colored_level p-0"
+                             style="&#10;    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);&#10;">
+                            <div class="text-left p-4">
+                                <h3>
+                                    <i class="text-o-color-1 fa fa-automobile" data-original-title="" title=""
+                                       aria-describedby="tooltip706535" style=""/>
+                                </h3>
+                                <h4 style="text-align: left; ">
+                                    <b>
+                                        <font style="font-size: 18px;" class="o_default_snippet_text text-o-color-2">
+                                            Dealership
+                                        </font>
+                                    </b>
+                                </h4>
+                                <p style="text-align: left; " class="s_line_height_2">
+                                    <font style="font-size: 15px;">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                        elit
+                                    </font>
+                                </p>
+                                <h6 style="text-align: left; ">
+                                    <a href="/">
+                                        <font style="color: rgb(12, 89, 219);" data-original-title="" title=""
+                                              aria-describedby="tooltip74996">Learn More
+                                            <i class="fa fa-arrow-right" style="color: rgb(12, 89, 219);"/>
+                                        </font>
+                                        <font class="text-delta o_default_snippet_text" style=""></font>
+                                    </a>
+                                    <br/>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 p-0 o_colored_level">
+                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-285x246.png"
+                                 class="img-fluid h-100 w-100" loading="lazy"/>
+                        </div>
+                        <div class="col-12 col-lg-3 col-md-6 col-sm-12 o_colored_level p-0"
+                             style="&#10;    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);&#10;">
+                            <div class="text-left p-4">
+                                <h3>
+                                    <i class="text-o-color-1 fa fa-gears" data-original-title="" title=""
+                                       aria-describedby="tooltip995809" style=""/>
+                                </h3>
+                                <h4 style="text-align: left; ">
+                                    <b>
+                                        <font style="font-size: 18px;" class="o_default_snippet_text text-o-color-2">Car
+                                            Services
+                                        </font>
+                                    </b>
+                                </h4>
+                                <p style="text-align: left; " class="s_line_height_2">
+                                    <font style="font-size: 15px;">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                        elit
+                                    </font>
+                                </p>
+                                <h6 style="text-align: left; ">
+                                    <a href="/">
+                                        <font style="color: rgb(12, 89, 219);" data-original-title="" title=""
+                                              aria-describedby="tooltip791766">Learn More
+                                            <i class="fa fa-arrow-right" style="color: rgb(12, 89, 219);"/>
+                                        </font>
+                                    </a>
+                                    <br/>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 col-md-6 col-sm-12 o_colored_level p-0"
+                             style="box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);">
+                            <div class="text-left p-4">
+                                <h3>
+                                    <i class="text-o-color-1 fa fa-refresh" data-original-title="" title=""
+                                       aria-describedby="tooltip658689" style=""/>
+                                </h3>
+                                <h4 style="text-align: left; ">
+                                    <b>
+                                        <font style="font-size: 18px;" class="o_default_snippet_text text-o-color-2">Car
+                                            Insurance
+                                        </font>
+                                    </b>
+                                </h4>
+                                <p style="text-align: left; " class="s_line_height_2">
+                                    <font style="font-size: 15px;">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                        elit
+                                    </font>
+                                </p>
+                                <h6 style="text-align: left; ">
+                                    <a href="/">
+                                        <font class="o_default_snippet_text" style="color: rgb(12, 89, 219);">Learn More
+                                            <i class="fa fa-arrow-right" style="color: rgb(12, 89, 219);"/>
+                                        </font>
+                                        <font class="text-delta o_default_snippet_text" style=""></font>
+                                    </a>
+                                    <br/>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 p-0 o_colored_level">
+                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-285x246.png"
+                                 class="img-fluid h-100 w-100" loading="lazy"/>
+                        </div>
+                        <div class="col-12 col-lg-3 col-md-6 col-sm-12 o_colored_level p-0"
+                             style="box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);">
+                            <div class="text-left p-4">
+                                <h3>
+                                    <i class="text-o-color-1 fa fa-money" data-original-title="" title=""
+                                       aria-describedby="tooltip660928" style=""/>
+                                </h3>
+                                <h4 style="text-align: left; ">
+                                    <font style="font-size: 18px;" class="text-o-color-2">
+                                        <b class="o_default_snippet_text">Car Loan</b>
+                                    </font>
+                                </h4>
+                                <p style="text-align: left; " class="s_line_height_2">
+                                    <font style="font-size: 15px;">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                        elit
+                                    </font>
+                                </p>
+                                <h6 style="text-align: left; ">
+                                    <a href="/">
+                                        <font class="o_default_snippet_text" style="color: #0c59db;">Learn More
+                                            <i class="fa fa-arrow-right" style="color: rgb(12, 89, 219);"/>
+                                        </font>
+                                        <font class="text-delta o_default_snippet_text" style=""></font>
+                                    </a>
+                                    <br/>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 p-0 o_colored_level">
+                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-285x246.png"
+                                 class="img-fluid h-100 w-100" loading="lazy"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Car Dealer Services Snippets End-->
+
+        <!--Car Dealer Contact Us Snippets start-->
+        <template id="car_dealer_contact_us" name="Car Dealer Contact Us">
+            <section class="o_colored_level pb0 pt64 py-5 s_website_form" data-vcss="001" data-visible="contactus"
+                     data-snippet="contact_us_5" data-name="Car Dealer Contact Us" style="position: relative;"
+                     data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Wavy/04&quot;,&quot;colors&quot;:{&quot;c1&quot;:&quot;#1A1A1A&quot;,&quot;c5&quot;:&quot;rgba(26, 26, 26, 0.91)&quot;},&quot;flip&quot;:[]}">
+                <div class="o_we_shape o_web_editor_Wavy_04"
+                     style="background-color: rgba(26, 26, 26, 0.91) !important; background-image: url(&quot;/web_editor/shape/web_editor/Wavy/04.svg?c1=%231A1A1A&amp;c5=rgba(26%2C%2026%2C%2026%2C%200.91)&quot;);"/>
+                <div class="container">
+                    <div class="justify-content-center row s_nb_column_fixed">
+                        <div class="bg-primary col-lg-10 o_colored_level s_title text-center" data-name="Title">
+                            <h1 class="s_title_thin">
+                                <font style="font-size: 24px;">
+                                    <b>Contact Car Dealer</b>
+                                </font>
+                            </h1>
+                        </div>
+                        <div class="bg-white col-lg-10 o_colored_level pb16 pt16 s_text" data-name="Text"
+                             style="&#10;    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);&#10;">
+                            <form action="/website_form/" method="post" data-model_name="crm.lead"
+                                  data-success-mode="redirect" data-success-page="/contactus-thank-you"
+                                  class="s_website_form container-fluid mt32 o_mark_required" data-mark="*"
+                                  enctype="multipart/form-data" data-editable-form="false" data-name="Contact us 5">
+                                <div class="justify-content-center s_website_form_rows row s_col_no_bgcolor">
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div class="form-group s_website_form_field s_website_form_required">
+                                            <label class="col-form-label s_website_form_label d-none"
+                                                   for="contact_name">
+                                                <span class="s_website_form_label_content"/>
+                                            </label>
+                                            <input type="text" class="form-control s_website_form_input"
+                                                   name="contact_name" placeholder="Your Name" required="" value=""/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div class="form-group s_website_form_field">
+                                            <label class="col-form-label s_website_form_label d-none"
+                                                   for="contact_name">
+                                                <span class="s_website_form_label_content"/>
+                                            </label>
+                                            <input type="text" class="form-control s_website_form_input" name="phone"
+                                                   placeholder="Phone Number" value=""/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div class="form-group s_website_form_field s_website_form_required">
+                                            <label class="col-form-label s_website_form_label d-none"
+                                                   for="contact_name">
+                                                <span class="s_website_form_label_content"/>
+                                            </label>
+                                            <input type="text" class="form-control s_website_form_input"
+                                                   name="email_from" required="" placeholder="Email" value=""/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                        <div class="form-group s_website_form_field">
+                                            <label class="col-form-label s_website_form_label d-none"
+                                                   for="contact_name">
+                                                <span class="s_website_form_label_content"/>
+                                            </label>
+                                            <input type="text" class="form-control s_website_form_input"
+                                                   name="partner_name" required="" placeholder="Your Company" value=""/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                        <div class="form-group s_website_form_field s_website_form_model_required">
+                                            <label class="col-form-label s_website_form_label d-none"
+                                                   for="contact_name">
+                                                <span class="s_website_form_label_content"/>
+                                            </label>
+                                            <input type="text" class="form-control s_website_form_input" name="name"
+                                                   required="" placeholder="Subject" value=""/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group s_website_form_field s_website_form_required">
+                                            <label class="col-form-label s_website_form_label d-none"
+                                                   for="contact_name">
+                                                <span class="s_website_form_label_content"/>
+                                            </label>
+                                            <textarea class="form-control s_website_form_input" name="description"
+                                                      required="" placeholder="Your Question" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12 s_website_form_submit">
+                                        <div class="s_btn text-center" data-name="Buttons">
+                                            <a href="#" role="button" class="btn btn-lg btn-primary o_website_form_send"
+                                               data-original-title="" title="" aria-describedby="tooltip715223">
+                                                <font style="font-size: 16px;">Search</font>
+                                            </a>
+                                            <span id="o_website_form_result"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Car Dealer Contact Us Snippets End-->
+
+        <!--Car Dealer Counters Snippets start-->
+        <template id="car_dealer_counters" name="Car Dealer Counters">
+            <section class="o_colored_level oe_custom_bg pb48 pt64" id="counter_8"
+                     style="background-repeat: no-repeat; background-size: cover; background-attachment: fixed; position: relative;"
+                     data-visible="counters" data-snippet="car_dealer_counters" data-name="Car Dealer Counters">
+                <div/>
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16 o_colored_level" style="">
+                            <div class="border-secondary border-dashed p-5">
+                                <i class="fa fa-cab text-o-color-2 fa-3x" data-original-title="" title=""
+                                   aria-describedby="tooltip522176" style=""/>
+                                <h3 class="mt32">
+                                    <b class="o_default_snippet_text">950 +</b>
+                                </h3>
+                                <p>
+                                    <span class="o_default_snippet_text">
+                                        <font style="font-size: 15px;" class="text-o-color-2">Vehicales In Stock</font>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16 o_colored_level">
+                            <div class="border-secondary border-dashed p-5">
+                                <i class="text-o-color-2 fa fa-hourglass-2 fa-3x" data-original-title="" title=""
+                                   aria-describedby="tooltip837549" style=""/>
+                                <h3 class="mt32">
+                                    <b class="o_default_snippet_text">850 +</b>
+                                </h3>
+                                <p>
+                                    <span class="o_default_snippet_text">
+                                        <font style="font-size: 15px;" class="text-o-color-2">Dealer Reviews</font>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16 o_colored_level" style="">
+                            <div class="border-secondary border-dashed p-5">
+                                <i class="text-o-color-2 fa fa-user-circle-o fa-3x" data-original-title="" title=""
+                                   aria-describedby="tooltip976432" style=""/>
+                                <h3 class="mt32">
+                                    <b class="o_default_snippet_text">999 +</b>
+                                </h3>
+                                <p>
+                                    <span class="o_default_snippet_text">
+                                        <font style="font-size: 15px;" class="text-o-color-2">Happy Customers</font>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb16 o_colored_level" style="">
+                            <div class="border-secondary border-dashed p-5">
+                                <i class="fa-graduation-cap text-o-color-2 fa fa-trophy fa-3x" data-original-title=""
+                                   title="" aria-describedby="tooltip516148" style=""/>
+                                <h3 class="mt32">
+                                    <b class="o_default_snippet_text">201 +</b>
+                                </h3>
+                                <h4>
+                                    <font style="font-size: 15px;" class="text-o-color-2">
+                                        <span class="o_default_snippet_text">Awards</span>
+                                    </font>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Car Dealer Counters Snippets End-->
+
+        <!--Car Dealer Right Content Snippets start-->
+        <template id="car_dealer_right_content" name="Car Dealer Right Content">
+            <section class="pt64 pb64 o_colored_level oe_img_bg" data-visible="right_content"
+                     data-snippet="car_dealer_right_content" data-name="Car Dealer Right Content"
+                     style="background-image: url(&quot;/?fw=1&quot;);">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 o_colored_level">
+                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-540x512.png" alt="mobile"
+                                 class="img-fluid pt8 pb8 mx-auto d-block" loading="lazy"/>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 o_colored_level" style="">
+                            <p>
+                                <font class="o_default_snippet_text" style="color: rgb(12, 89, 219);font-size: 15px;">
+                                    Who We Are
+                                </font>
+                            </p>
+                            <h2>
+                                <span style="font-size: 40px;">
+                                    <b class="o_default_snippet_text">One of the Greatest</b>
+                                </span>
+                            </h2>
+                            <h2>
+                                <span style="font-size: 40px;">
+                                    <b class="o_default_snippet_text">Pleasures You Can Have</b>
+                                </span>
+                            </h2>
+                            <p class="pt16 pb16 s_line_height_2">
+                                <font style="font-size: 15px;">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Pellentesque fermentum est in tortor congue suscipit. Suspendisse
+                                    potenti.Aliquam finibus pharetra tellus at egestas.Suspendisse potenti.Aliquam
+                                    finibus
+                                    pharetra tellus at egestas.
+                                </font>
+                            </p>
+                            <div class="row">
+                                <ul class="list-unstyled px-1">
+                                    <li class="mt8 mb8">
+                                        <i class="fa fa-check-square-o px-2 text-o-color-2" data-original-title=""
+                                           title="" aria-describedby="tooltip305435" style=""/>
+                                        <font style="" class="text-o-color-2">
+                                            <b>We’re Here When You Need Us</b>
+                                        </font>
+                                    </li>
+                                    <li class="mb8 mt8">
+                                        <b>
+                                            <i class="fa fa-check-square-o px-2 text-o-color-2" data-original-title=""
+                                               title="" aria-describedby="tooltip36723" style=""/>
+                                            <font style="" class="text-o-color-2">&amp;nbsp;Average
+                                                Cars, Average Prices
+                                                &amp;nbsp;
+                                            </font>
+                                        </b>
+                                    </li>
+                                    <li class="mb8 mt8"><i class="fa fa-check-square-o px-2 text-o-color-2"
+                                                           data-original-title="" title=""
+                                                           aria-describedby="tooltip19215" style=""/>&amp;nbsp;
+                                        <font style="" class="text-o-color-2">
+                                            <b>Financing
+                                                No Matter Your Credit History
+                                                &amp;nbsp;
+                                            </b>
+                                        </font>
+                                    </li>
+                                    <li class="mt8 mb8">
+                                        <b>
+                                            <i class="fa fa-check-square-o px-2 text-o-color-2" data-original-title=""
+                                               title="" aria-describedby="tooltip959769" style=""/>
+                                            <font style="" class="text-o-color-2">
+                                                Sell Us Your Car Without The Hassle
+                                            </font>
+                                        </b>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="#" class="btn btn-lg btn-secondary rounded" data-original-title="" title=""
+                               aria-describedby="tooltip539500" style="&#10;    background: #0c59db;&#10;">
+                                <font style="">Read More &amp;nbsp;</font>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Car Dealer Right Content Snippets End-->
+
+        <!--Car Dealer Image Slider Snippets start-->
+        <template id="car_dealer_image_slider" name="Car Dealer Image Slider - Fade In Up">
+            <section class="pb64 pt48 o_colored_level" id="image_slider_d1" data-visible="image_slider"
+                     data-snippet="car_dealer_image_slider" data-name="Car Dealer Image Slider">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center o_colored_level" style="">
+                            <h6 class="text-center">
+                                <span class="o_default_snippet_text">
+                                    <b>
+                                        <font style="color: rgb(12, 89, 219);">Our Vehicles</font>
+                                    </b>
+                                </span>
+                            </h6>
+                            <h2 class="text-center">
+                                <font style="font-size: 40px;">
+                                    <b class="o_default_snippet_text">Available Stock In Our Organisation</b>
+                                </font>
+                            </h2>
+                            <p class="text-center pb48 s_line_height_2">
+                                <font style="font-size: 15px;">Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. At unde ex odio, minus qui
+                                </font>
+                                <br/>
+                                <font style="font-size: 15px;">inventore voluptatem nostrum enim eaque
+                                    hic accusamus sunt.
+                                </font>
+                            </p>
+                        </div>
+                        <div class="MultiCarousel o_colored_level" data-items="1,3,4,3" data-slide="1"
+                             id="MultiCarousel13" data-interval="1000">
+                            <div class="MultiCarousel-inner row mx-0" style="transform: translateX(0px); width: 0px;">
+                                <div class="MultiCarousel-item o_colored_level" style="width: 0px;">
+                                    <div class="m-1 oe_structure oe_empty"
+                                         data-editor-message="DRAG BUILDING BLOCKS HERE">
+                                        <div class="slider1">
+                                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-372x372.png"
+                                                 alt="" class="img-fluid image" loading="lazy"/>
+                                            <div class="inner_content pl-4">
+                                                <h6 style="text-align: left; ">
+                                                    <font style="color: rgb(255, 255, 255);"
+                                                          class="o_default_snippet_text">8 Offers
+                                                    </font>
+                                                </h6>
+                                                <h2 class="text-white" style="text-align: left; ">
+                                                    <font style="font-size: 20px;">
+                                                        <b class="o_default_snippet_text">BMW</b>
+                                                    </font>
+                                                </h2>
+                                                <p class="mb-0 o_default_snippet_text" style="text-align: left; ">View
+                                                    More
+                                                    <i class="fa fa-arrow-circle-right"/>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="MultiCarousel-item o_colored_level" style="width: 0px;">
+                                    <div class="m-1 oe_structure oe_empty"
+                                         data-editor-message="DRAG BUILDING BLOCKS HERE">
+                                        <div class="slider1">
+                                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-372x372.png"
+                                                 alt="" class="img-fluid image" loading="lazy"/>
+                                            <div class="inner_content pl-4">
+                                                <h6 style="text-align: left; ">
+                                                    <font style="color: rgb(255, 255, 255);"
+                                                          class="o_default_snippet_text">5 Offers
+                                                    </font>
+                                                </h6>
+                                                <h2 class="text-white" style="text-align: left; ">
+                                                    <b>
+                                                        <font style="font-size: 20px;" class="o_default_snippet_text">
+                                                            Mercedes Benz
+                                                        </font>
+                                                    </b>
+                                                </h2>
+                                                <p class="mb-0 o_default_snippet_text" style="text-align: left; ">View
+                                                    More
+                                                    <i class="fa fa-arrow-circle-right"/>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="MultiCarousel-item o_colored_level" style="width: 0px;">
+                                    <div class="m-1 oe_structure oe_empty"
+                                         data-editor-message="DRAG BUILDING BLOCKS HERE">
+                                        <div class="slider1">
+                                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-372x372.png"
+                                                 alt="" class="img-fluid image" loading="lazy"/>
+                                            <div class="inner_content pl-4">
+                                                <h6 style="text-align: left; ">
+                                                    <font style="color: rgb(255, 255, 255);"
+                                                          class="o_default_snippet_text">10 Offers
+                                                    </font>
+                                                </h6>
+                                                <h2 class="text-white" style="text-align: left; ">
+                                                    <b>
+                                                        <font style="font-size: 20px;" class="o_default_snippet_text">
+                                                            Lamborghini
+                                                        </font>
+                                                    </b>
+                                                </h2>
+                                                <p class="mb-0 o_default_snippet_text" style="text-align: left; ">View
+                                                    More
+                                                    <i class="fa fa-arrow-circle-right"/>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="MultiCarousel-item o_colored_level" style="width: 0px;">
+                                    <div class="m-1 oe_structure oe_empty"
+                                         data-editor-message="DRAG BUILDING BLOCKS HERE">
+                                        <div class="slider1">
+                                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-372x372.png"
+                                                 alt="" class="img-fluid image" data-original-title="" title=""
+                                                 aria-describedby="tooltip941940" loading="lazy"/>
+                                            <div class="inner_content pl-4">
+                                                <h6 style="text-align: left; ">
+                                                    <font style="color: rgb(255, 255, 255);"
+                                                          class="o_default_snippet_text">6 Offers
+                                                    </font>
+                                                </h6>
+                                                <h2 class="text-white" style="text-align: left; ">
+                                                    <b>
+                                                        <font style="font-size: 20px;">Bugatti</font>
+                                                    </b>
+                                                </h2>
+                                                <p class="mb-0 o_default_snippet_text" style="text-align: left; ">View
+                                                    More
+                                                    <i class="fa fa-arrow-circle-right"/>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="MultiCarousel-item o_colored_level" style="width: 0px;">
+                                    <div class="m-1 oe_structure oe_empty"
+                                         data-editor-message="DRAG BUILDING BLOCKS HERE">
+                                        <div class="slider1">
+                                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-372x372.png"
+                                                 alt="" class="img-fluid image" loading="lazy"/>
+                                            <div class="inner_content pl-4">
+                                                <h6 style="text-align: left; ">
+                                                    <font style="color: rgb(255, 255, 255);"
+                                                          class="o_default_snippet_text">3 Offers
+                                                    </font>
+                                                </h6>
+                                                <h2 class="text-white" style="text-align: left; ">
+                                                    <b>
+                                                        <font style="font-size: 20px;" class="o_default_snippet_text">
+                                                            Rolls Royce
+                                                        </font>
+                                                    </b>
+                                                </h2>
+                                                <p class="mb-0 o_default_snippet_text" style="text-align: left; ">View
+                                                    More
+                                                    <i class="fa fa-arrow-circle-right"/>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="MultiCarousel-item o_colored_level" style="width: 0px;">
+                                    <div class="m-1 oe_structure oe_empty"
+                                         data-editor-message="DRAG BUILDING BLOCKS HERE">
+                                        <div class="slider1">
+                                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-372x372.png"
+                                                 alt="" class="img-fluid image" loading="lazy"/>
+                                            <div class="inner_content pl-4">
+                                                <h6 style="text-align: left; ">
+                                                    <font style="color: rgb(255, 255, 255);"
+                                                          class="o_default_snippet_text">5 Offers
+                                                    </font>
+                                                </h6>
+                                                <h2 class="text-white" style="text-align: left; ">
+                                                    <b>
+                                                        <font style="font-size: 20px;" class="o_default_snippet_text">
+                                                            Costliest
+                                                        </font>
+                                                    </b>
+                                                </h2>
+                                                <p class="mb-0 o_default_snippet_text" style="text-align: left; ">View
+                                                    More
+                                                    <i class="fa fa-arrow-circle-right"/>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="MultiCarousel-item o_colored_level" style="width: 0px;">
+                                    <div class="m-1 oe_structure oe_empty"
+                                         data-editor-message="DRAG BUILDING BLOCKS HERE">
+                                        <div class="slider1">
+                                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-372x372.png"
+                                                 alt="" class="img-fluid image" loading="lazy"/>
+                                            <div class="inner_content pl-4">
+                                                <h6 style="text-align: left; ">
+                                                    <font style="color: rgb(255, 255, 255);"
+                                                          class="o_default_snippet_text">7 Offers
+                                                    </font>
+                                                </h6>
+                                                <h2 class="text-white" style="text-align: left; ">
+                                                    <b>
+                                                        <font style="font-size: 20px;" class="o_default_snippet_text">
+                                                            Kia Motors
+                                                        </font>
+                                                    </b>
+                                                </h2>
+                                                <p class="mb-0 o_default_snippet_text" style="text-align: left; ">View
+                                                    More
+                                                    <i class="fa fa-arrow-circle-right"/>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="MultiCarousel-item o_colored_level" style="width: 0px;">
+                                    <div class="m-1 oe_structure oe_empty"
+                                         data-editor-message="DRAG BUILDING BLOCKS HERE">
+                                        <div class="slider1">
+                                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-372x372.png"
+                                                 alt="" class="img-fluid image" loading="lazy"/>
+                                            <div class="inner_content pl-4">
+                                                <h6 style="text-align: left; ">
+                                                    <font style="color: rgb(255, 255, 255);"
+                                                          class="o_default_snippet_text">2 Offers
+                                                    </font>
+                                                </h6>
+                                                <h2 class="text-white" style="text-align: left; ">
+                                                    <b>
+                                                        <font style="font-size: 20px;" class="o_default_snippet_text">
+                                                            Ford
+                                                        </font>
+                                                    </b>
+                                                </h2>
+                                                <p class="mb-0 o_default_snippet_text" style="text-align: left; ">View
+                                                    More
+                                                    <i class="fa fa-arrow-circle-right"/>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary leftLst over">
+                                <i class="fa fa-chevron-left"/>
+                            </button>
+                            <button class="btn btn-primary rightLst">
+                                <i class="fa fa-chevron-right"/>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Car Dealer Image Slider Snippets End-->
+
+        <!--Car Dealer Brand Logo Snippets start-->
+        <template id="car_dealer_brand_logo" name="Car Dealer Brand Logo">
+            <section class="s_call_to_action sni-block pt64 pb0 o_colored_level" data-visible="cta"
+                     data-snippet="car_dealer_brand_logo" data-name="Car Dealer Brand Logo">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-md-8 col-sm-12 col-lg-8 s_title o_colored_level" data-name="Title">
+                            <h6>
+                                <b class="o_default_snippet_text">
+                                    <font style="color: rgb(12, 89, 219);">Which Brand To Choose</font>
+                                </b>
+                            </h6>
+                            <h2>
+                                <font style="font-size: 40px;">
+                                    <b class="o_default_snippet_text">Browse By Type</b>
+                                </font>
+                            </h2>
+                            <p class="s_title_boxed s_line_height_2">
+                                <font style="font-size: 15px;">Lorem Ipsum is simply dummy text of the
+                                    printing and typesetting industry.galley of type and scrambled it to make a type
+                                    specimen book. It has survived electronic typesetting, remaining essentially Lorem
+                                    Ipsum.
+                                </font>
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 text-md-right col-lg-4 o_colored_level" style="">
+                            <p>
+                                <a href="/contactus" class="btn btn-delta btn-lg" data-original-title="" title=""
+                                   style="&#10;    background-color: #0C59DB;&#10;">
+                                    <font style="font-size: 16px;" class="text-white" data-original-title="" title=""
+                                          aria-describedby="tooltip530440">View
+                                        All Brand
+                                        &amp;nbsp;
+                                    </font>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center o_colored_level">
+                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-brand-logo.png"
+                                 class="img-fluid mb16 mt16" alt="Brand Logo" title="Brand Logo" loading="lazy"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center o_colored_level">
+                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-brand-logo.png"
+                                 class="img-fluid   mb16 mt16" alt="Brand Logo" title="Brand Logo" loading="lazy"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center o_colored_level">
+                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-brand-logo.png"
+                                 class="img-fluid mb16 mt16" alt="Brand Logo" title="Brand Logo" loading="lazy"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center o_colored_level">
+                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-brand-logo.png"
+                                 class="img-fluid mb16 mt16" alt="Brand Logo" title="Brand Logo" loading="lazy"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center o_colored_level">
+                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-brand-logo.png"
+                                 class="img-fluid mb16 mt16" alt="Brand Logo" title="Brand Logo" loading="lazy"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center o_colored_level">
+                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-brand-logo.png"
+                                 class="img-fluid mb16 mt16" alt="Brand Logo" title="Brand Logo" loading="lazy"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Car Dealer Brand Logo Snippets End-->
+
+        <!--Car Dealer Testimonial Snippets start-->
+        <template id="car_dealer_testimonial" name="Car Dealer Testimonial - Fade In Up">
+            <section class="pt64 pb64 o_colored_level" id="testimonials_d3" data-visible="testimonials" style=""
+                     data-snippet="car_dealer_testimonial" data-name="Car Dealer Testimonial">
+                <div class="container">
+                    <div class="row content justify-content-md-center pb48">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center o_colored_level">
+                            <h6 class="text-center">
+                                <b class="o_default_snippet_text">
+                                    <font style="color: rgb(12, 89, 219);">Clients Love</font>
+                                </b>
+                            </h6>
+                            <h2 class="text-center">
+                                <font style="font-size: 40px;">
+                                    <b class="o_default_snippet_text">Love From Clients</b>
+                                </font>
+                            </h2>
+                            <p class="text-center pb48 s_line_height_2">
+                                <font style="font-size: 15px;">Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. At unde ex odio, minus qui
+                                </font>
+                                <br/>
+                                <font style="font-size: 15px;">inventore voluptatem nostrum enim eaque
+                                    hic accusamus sunt.
+                                </font>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="myCarousel1607496849842" class="s_quotes_carousel carousel slide s_carousel_default"
+                     data-interval="10000">
+                    <ol class="carousel-indicators o_we_no_overlay">
+                        <li data-target="#myCarousel1607496849842" data-slide-to="0" class="active"/>
+                        <li data-target="#myCarousel1607496849842" data-slide-to="1"/>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item oe_custom_bg o_colored_level active" data-name="Slide" style="">
+                            <div class="container">
+                                <div class="row content justify-content-md-center mx-2">
+                                    <div class="carousel-content col-12 col-lg-4 col-md-4 col-sm-12 ml-auto mr-auto mt-4 mt-md-0 o_colored_level"
+                                         style="">
+                                        <div class="col-lg-12">
+                                            <div class="text-center">
+                                                <img class="img"
+                                                     src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-user1.png"
+                                                     alt="" data-original-title="" title=""
+                                                     aria-describedby="tooltip328699" style="width: 25%;"
+                                                     loading="lazy"/>
+                                            </div>
+                                            <h3 class="mt16 text-center">
+                                                <b>
+                                                    <font style="font-size: 18px;"
+                                                          class="o_default_snippet_text text-o-color-2">They arre Truly
+                                                        Experts
+                                                    </font>
+                                                </b>
+                                            </h3>
+                                            <p class="s_line_height_2 text-center">
+                                                <font style="font-size: 15px;">Lorem ipsum
+                                                    dolor sit, amet consectetur adipisicing elit. At unde ex odio, minus
+                                                    qui
+                                                    inventore voluptatem nostrum enim eaque hic accusamus sunt.
+                                                    &amp;nbsp;
+                                                </font>
+                                            </p>
+                                            <div class="text-center">
+                                                <div class="mb8 mt8">
+                                                    <h6>
+                                                        <b class="o_default_snippet_text">
+                                                            <font style="color: rgb(12, 89, 219);">Rechar Brason</font>
+                                                        </b>
+                                                    </h6>
+                                                    <h6>
+                                                        <font class="o_default_snippet_text text-o-color-1" style="">
+                                                            Manager
+                                                        </font>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-content col-12 col-lg-4 col-md-4 col-sm-12 ml-auto mr-auto mt-4 mt-md-0 o_colored_level">
+                                        <div class="col-lg-12">
+                                            <div class="text-center">
+                                                <img class="img"
+                                                     src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-user1.png"
+                                                     alt="" data-original-title="" title=""
+                                                     aria-describedby="tooltip328699" style="width: 25%;"
+                                                     loading="lazy"/>
+                                            </div>
+                                            <h3 class="mt16 text-center">
+                                                <b>
+                                                    <font style="font-size: 18px;" class="o_default_snippet_text">
+                                                        Awesome Quality Service
+                                                    </font>
+                                                </b>
+                                            </h3>
+                                            <p class="s_line_height_2 text-center">
+                                                <font style="font-size: 15px;">Lorem ipsum
+                                                    dolor sit, amet consectetur adipisicing elit. At unde ex odio, minus
+                                                    qui
+                                                    inventore voluptatem nostrum enim eaque hic accusamus sunt.
+                                                    &amp;nbsp;
+                                                </font>
+                                            </p>
+                                            <div class="text-center">
+                                                <div class="mb8 mt8">
+                                                    <h6>
+                                                        <b class="o_default_snippet_text">
+                                                            <font style="color: rgb(12, 89, 219);">Michael Bean</font>
+                                                        </b>
+                                                    </h6>
+                                                    <h6>
+                                                        <font class="o_default_snippet_text text-o-color-1" style="">
+                                                            Auto Dealer
+                                                        </font>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-content col-12 col-lg-4 col-md-4 col-sm-12 ml-auto mr-auto mt-4 mt-md-0 o_colored_level">
+                                        <div class="col-lg-12">
+                                            <div class="text-center">
+                                                <img class="img"
+                                                     src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-user1.png"
+                                                     alt="" data-original-title="" title=""
+                                                     aria-describedby="tooltip328699" style="width: 25%;"
+                                                     loading="lazy"/>
+                                            </div>
+                                            <h3 class="mt16 text-center">
+                                                <b>
+                                                    <font style="font-size: 18px;" class="o_default_snippet_text">So
+                                                        Simple And So Fast!
+                                                    </font>
+                                                </b>
+                                            </h3>
+                                            <p class="s_line_height_2 text-center">
+                                                <font style="font-size: 15px;">Lorem ipsum
+                                                    dolor sit, amet consectetur adipisicing elit. At unde ex odio, minus
+                                                    qui
+                                                    inventore voluptatem nostrum enim eaque hic accusamus sunt.
+                                                    &amp;nbsp;
+                                                </font>
+                                            </p>
+                                            <div class="text-center">
+                                                <div class="mb8 mt8">
+                                                    <h6>
+                                                        <b class="o_default_snippet_text">
+                                                            <font style="color: rgb(12, 89, 219);">John Smith</font>
+                                                        </b>
+                                                    </h6>
+                                                    <h6>
+                                                        <font class="o_default_snippet_text text-o-color-1" style="">
+                                                            Manager
+                                                        </font>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item oe_custom_bg o_colored_level" data-name="Slide" style="">
+                            <div class="container">
+                                <div class="row content justify-content-md-center mx-2">
+                                    <div class="carousel-content col-12 col-lg-4 col-md-4 col-sm-12 ml-auto mr-auto mt-4 mt-md-0 o_colored_level">
+                                        <div class="col-lg-12">
+                                            <div class="text-center">
+                                                <img class="img"
+                                                     src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-user1.png"
+                                                     alt="" data-original-title="" title=""
+                                                     aria-describedby="tooltip328699" style="width: 25%;"
+                                                     loading="lazy"/>
+                                            </div>
+                                            <h3 class="mt16 text-center">
+                                                <font style="font-size: 18px;">
+                                                    <b class="o_default_snippet_text">So Simple And So Fast!</b>
+                                                </font>
+                                            </h3>
+                                            <p class="s_line_height_2 text-center">
+                                                <font style="font-size: 15px;">Lorem ipsum
+                                                    dolor sit, amet consectetur adipisicing elit. At unde ex odio, minus
+                                                    qui
+                                                    inventore voluptatem nostrum enim eaque hic accusamus sunt.
+                                                    &amp;nbsp;
+                                                </font>
+                                            </p>
+                                            <div class="text-center">
+                                                <div class="mb8 mt8">
+                                                    <h6>
+                                                        <b class="o_default_snippet_text">
+                                                            <font style="color: rgb(12, 89, 219);">Johna Williams</font>
+                                                        </b>
+                                                    </h6>
+                                                    <h6>
+                                                        <font class="o_default_snippet_text text-o-color-1" style="">Car
+                                                            Dealer
+                                                        </font>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-content col-12 col-lg-4 col-md-4 col-sm-12 ml-auto mr-auto mt-4 mt-md-0 o_colored_level">
+                                        <div class="col-lg-12">
+                                            <div class="text-center">
+                                                <img class="img"
+                                                     src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-user1.png"
+                                                     alt="" data-original-title="" title=""
+                                                     aria-describedby="tooltip328699" style="width: 25%;"
+                                                     loading="lazy"/>
+                                            </div>
+                                            <h3 class="mt16 text-center">
+                                                <b>
+                                                    <font style="font-size: 18px;" class="o_default_snippet_text">
+                                                        Amazing And Extremely Helpful!
+                                                    </font>
+                                                </b>
+                                            </h3>
+                                            <p class="s_line_height_2 text-center">
+                                                <font style="font-size: 15px;">Lorem ipsum
+                                                    dolor sit, amet consectetur adipisicing elit. At unde ex odio, minus
+                                                    qui
+                                                    inventore voluptatem nostrum enim eaque hic accusamus sunt.
+                                                    &amp;nbsp;
+                                                </font>
+                                            </p>
+                                            <div class="text-center">
+                                                <div class="mb8 mt8">
+                                                    <h6>
+                                                        <b class="o_default_snippet_text">
+                                                            <font style="color: rgb(12, 89, 219);">Felicia Queen</font>
+                                                        </b>
+                                                    </h6>
+                                                    <h6>
+                                                        <font class="o_default_snippet_text text-o-color-1" style="">
+                                                            Auto Dealer
+                                                        </font>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-content col-12 col-lg-4 col-md-4 col-sm-12 ml-auto mr-auto mt-4 mt-md-0 o_colored_level">
+                                        <div class="col-lg-12">
+                                            <div class="text-center">
+                                                <img class="img"
+                                                     src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-user1.png"
+                                                     alt="" data-original-title="" title=""
+                                                     aria-describedby="tooltip328699" style="width: 25%;"
+                                                     loading="lazy"/>
+                                            </div>
+                                            <h3 class="mt16 text-center">
+                                                <font style="font-size: 18px;">
+                                                    <b class="o_default_snippet_text">Awesome Quality Service</b>
+                                                </font>
+                                            </h3>
+                                            <p class="s_line_height_2 text-center">
+                                                <font style="font-size: 15px;">Lorem ipsum
+                                                    dolor sit, amet consectetur adipisicing elit. At unde ex odio, minus
+                                                    qui
+                                                    inventore voluptatem nostrum enim eaque hic accusamus sunt.
+                                                    &amp;nbsp;
+                                                </font>
+                                            </p>
+                                            <div class="text-center">
+                                                <div class="mb8 mt8">
+                                                    <h6>
+                                                        <b class="o_default_snippet_text">
+                                                            <font style="color: rgb(12, 89, 219);">Melissa Duo</font>
+                                                        </b>
+                                                    </h6>
+                                                    <h6>
+                                                        <font class="o_default_snippet_text text-o-color-1" style="">
+                                                            Customer
+                                                        </font>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-control-prev o_we_no_overlay" data-target="#myCarousel1607496849842"
+                         data-slide="prev" role="img" aria-label="Previous" title="Previous">
+                        <span class="carousel-control-prev-icon"/>
+                        <span class="sr-only o_default_snippet_text">Previous</span>
+                    </div>
+                    <div class="carousel-control-next o_we_no_overlay" data-target="#myCarousel1607496849842"
+                         data-slide="next" role="img" aria-label="Next" title="Next">
+                        <span class="carousel-control-next-icon"/>
+                        <span class="sr-only o_default_snippet_text">Next</span>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Car Dealer Testimonial Snippets End-->
+
+        <!--Car Dealer Portfolio Snippets start-->
+        <template id="car_dealer_portfolio" name="Car Dealer Portfolio">
+            <section class="pt64 pb64 o_colored_level" id="portfolio_7" data-visible="portfolios"
+                     data-snippet="car_dealer_portfolio" data-name="Car Dealer Portfolio">
+                <div class="container">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h6 class="text-center">
+                            <b>
+                                <font style="color: #0c59db;">Latest Gallery</font>
+                            </b>
+                        </h6>
+                        <h2 class="text-center">
+                            <font style="font-size: 40px;">
+                                <b class="o_default_snippet_text">Our Creative Portfolio</b>
+                            </font>
+                        </h2>
+                        <p class="text-center s_line_height_2">
+                            <font style="font-size: 15px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. At
+                                unde ex
+                                odio, minus qui
+                            </font>
+                            <br/>
+                            <font style="font-size: 15px;">inventore voluptatem nostrum enim eaque hic accusamus sunt.
+                                &amp;nbsp;
+                            </font>
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <div class="justify-content-center pb32">
+                            <a class="btn text-primary filter-button mt8 mb8 o_default_snippet_text" data-filter="all"
+                               data-original-title="" title="" aria-describedby="tooltip187209"><i class="fa fa-plus"
+                                                                                                   data-original-title=""
+                                                                                                   title=""
+                                                                                                   aria-describedby="tooltip406441"/>&amp;nbsp;All
+                                (8)
+                            </a>
+                            <a class="btn filter-button mb8 mt8 text-primary o_default_snippet_text" data-filter="one"
+                               data-original-title="" title="" aria-describedby="tooltip635088"><i class="fa fa-gitlab"
+                                                                                                   data-original-title=""
+                                                                                                   title=""
+                                                                                                   aria-describedby="tooltip406441"
+                                                                                                   style=""/>&amp;nbsp;Certified
+                                (3)
+                            </a>
+                            <a class="btn text-primary filter-button mt8 mb8 o_default_snippet_text" data-filter="two"
+                               data-original-title="" title="" aria-describedby="tooltip638615">
+                                <i class="fa fa-star-half-empty" data-original-title="" title=""
+                                   aria-describedby="tooltip406441" style=""/>
+                                Used (2)
+                            </a>
+                            <a class="btn text-primary filter-button mt8 mb8 o_default_snippet_text" data-filter="three"
+                               data-original-title="" title="" aria-describedby="tooltip434771">
+                                <i class="fa fa-vcard-o" data-original-title="" title=""
+                                   aria-describedby="tooltip406441" style=""/>
+                                New (3)
+                            </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter one pb24 o_colored_level"
+                                 style="display: none;">
+                                <div class="single_portfolio">
+                                    <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-350x380.png"
+                                         class="img-fluid image" data-original-title="" title=""
+                                         aria-describedby="tooltip374238" loading="lazy"/>
+                                    <div class="overlay o_default_snippet_text" style="text-align: left; ">
+                                        <b class="o_default_snippet_text">Audi RS Q8</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter two pb24 o_colored_level"
+                                 style="display: none;">
+                                <div class="single_portfolio">
+                                    <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-350x380.png"
+                                         class="img-fluid" data-original-title="" title=""
+                                         aria-describedby="tooltip140068" loading="lazy"/>
+                                    <div class="overlay o_default_snippet_text" style="text-align: left; ">
+                                        <b class="o_default_snippet_text">Ferrari F8 Tributo</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter one pb24 o_colored_level"
+                                 style="display: none;">
+                                <div class="single_portfolio">
+                                    <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-350x380.png"
+                                         class="img-fluid" data-original-title="" title=""
+                                         aria-describedby="tooltip453921" loading="lazy"/>
+                                    <div class="overlay o_default_snippet_text" style="text-align: left; ">
+                                        <b class="o_default_snippet_text">Audi RS7</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter three pb24 o_colored_level"
+                                 style="display: block;">
+                                <div class="single_portfolio">
+                                    <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-350x380.png"
+                                         class="img-fluid" loading="lazy"/>
+                                    <div class="overlay o_default_snippet_text" style="text-align: left; ">
+                                        <b class="o_default_snippet_text">BMW X6</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter three pb24 o_colored_level"
+                                 style="display: block;">
+                                <div class="single_portfolio">
+                                    <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-350x380.png"
+                                         class="img-fluid" loading="lazy"/>
+                                    <div class="overlay o_default_snippet_text" style="text-align: left; ">
+                                        <b class="o_default_snippet_text">Mercedes-Benz GLS</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter one pb24 o_colored_level"
+                                 style="display: none;">
+                                <div class="single_portfolio">
+                                    <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-350x380.png"
+                                         class="img-fluid" loading="lazy"/>
+                                    <div class="overlay o_default_snippet_text" style="text-align: left; ">
+                                        <b class="o_default_snippet_text">Ferrari Roma</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter three pb24 o_colored_level"
+                                 style="display: block;">
+                                <div class="single_portfolio">
+                                    <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-350x380.png"
+                                         class="img-fluid" loading="lazy"/>
+                                    <div class="overlay o_default_snippet_text" style="text-align: left; ">
+                                        <b class="o_default_snippet_text">BMW 8 Series</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter two pb24 o_colored_level"
+                                 style="display: none;">
+                                <div class="single_portfolio">
+                                    <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-350x380.png"
+                                         class="img-fluid" data-original-title="" title=""
+                                         aria-describedby="tooltip632658" loading="lazy"/>
+                                    <div class="overlay o_default_snippet_text" style="text-align: left; ">
+                                        <b class="o_default_snippet_text">Jaguar F-TYPE</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 text-center pt16 pb16 align-self-start o_colored_level"
+                                 data-name="Buttons">
+                                <a href="/" class="btn btn-delta btn-lg mb8 mt8" data-original-title="" title=""
+                                   aria-describedby="tooltip981746" style="&#10;    background: #0c59db;&#10;">
+                                    <font style="font-size: 16px;" class="text-white" data-original-title="" title=""
+                                          aria-describedby="tooltip929414">View More Car
+                                    </font>
+                                    <font style="" class="text-white" data-original-title="" title=""
+                                          aria-describedby="tooltip929414">
+                                        &amp;nbsp;
+                                    </font>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script class="o_default_snippet_text">
+                    $(document).ready(function(){
+
+                    $(".filter-button").click(function(){
+                    var value = $(this).attr('data-filter');
+
+                    if(value == "all")
+                    {
+                    //$('.filter').removeClass('hidden');
+                    $('.filter').show('1000');
+                    }
+                    else
+                    {
+                    // $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+                    // $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+                    $(".filter").not('.'+value).hide('3000');
+                    $('.filter').filter('.'+value).show('3000');
+
+                    }
+                    });
+
+                    if ($(".filter-button").removeClass("active")) {
+                    $(this).removeClass("active");
+                    }
+                    $(this).addClass("active");
+
+                    });
+                </script>
+            </section>
+        </template>
+        <!--Car Dealer Portfolio Snippets End-->
+
+        <!--Car Dealer CTA Snippets start-->
+        <template id="car_dealer_cta" name="Car Dealer CTA">
+            <section class="pt64 pb64 o_colored_level parallax s_parallax_is_fixed s_parallax_no_overflow_hidden"
+                     data-visible="left_content" data-snippet="left_content_4" data-name="Left Content 4" style=""
+                     data-scroll-background-ratio="1">
+                <span class="s_parallax_bg oe_img_bg"
+                      style="background-image: url(&quot;/theme_car_dealer_ultimate_01/static/src/img/placeholder-1170.jpg&quot;);"
+                      data-visible="left_content" data-snippet="left_content_4" data-name="Left Content 4"
+                      data-original-id="401"
+                      data-original-src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-1170.jpg"
+                      data-mimetype="image/jpeg" data-resize-width="1170"/>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 o_colored_level" style="">
+                            <h2 class="text-white">
+                                <b>
+                                    <font style="font-size: 36px;" class="o_default_snippet_text">Are You Looking TO BUY
+                                        A CAR?
+                                    </font>
+                                </b>
+                            </h2>
+                            <h5 class="text-white o_default_snippet_text">Visited by Million of Car Buyers Every
+                                Month!
+                            </h5>
+                            <div class="s_text pt16 pb16 text-white" data-name="Text">
+                                <p class="lead text-left s_line_height_2" style="text-align: left;">
+                                    <font style="font-size: 15px;">Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                        dolore
+                                        magna aliqua ut enim ad minim venia.
+                                    </font>
+                                    <br/>
+                                </p>
+                                <p class="lead text-left s_line_height_2">
+                                    <font style="font-size: 15px;">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit sed
+                                        themLorem ipsum dolor sit amet, consectetur adipisicing elit sed them
+                                    </font>
+                                </p>
+                                <i class="text-alpha fa fa-volume-control-phone" data-original-title="" title=""
+                                   aria-describedby="tooltip161874" style="font-size: 18px;"/>
+                                <font style="font-size: 22px;" class="ml-3">
+                                    <b>
+                                        <span>+1 (650) 691-3277</span>
+                                    </b>
+                                </font>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt24 mb24 o_colored_level">
+                            <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-431x521.png" alt=""
+                                 class="img-fluid pt8 pb8 mx-auto d-block" loading="lazy" data-original-id="403"
+                                 data-original-src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-431x521.png"
+                                 data-mimetype="image/png" data-resize-width="431"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Car Dealer CTA Snippets End-->
+
+        <!--Car Dealer Team Snippets start-->
+        <template id="car_dealer_team" name="Car Dealer Team - Fade In Up">
+            <section class="sni-block content pt64 pb64 o_colored_level" id="team_8" data-visible="team"
+                     data-snippet="car_dealer_team" data-name="Car Dealer Team">
+                <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center pb48 o_colored_level" style="">
+                                <h6 class="text-center">
+                                    <b class="o_default_snippet_text">
+                                        <font style="color: rgb(12, 89, 219);">Our Team</font>
+                                    </b>
+                                </h6>
+                                <h2 class="text-center">
+                                    <font style="font-size: 40px;">
+                                        <b>Meet Our Experts</b>
+                                    </font>
+                                </h2>
+                                <p class="text-center s_line_height_2">
+                                    <font style="font-size: 15px;">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. At unde ex odio, minus qui
+                                    </font>
+                                    <br/>
+                                    <font style="font-size: 15px;">inventore voluptatem nostrum enim
+                                        eaque hic accusamus sunt.
+                                    </font>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-12 o_colored_level">
+                                <div class="team-block">
+                                    <div class="team-img">
+                                        <img class="img-fluid"
+                                             src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-350x275.png"
+                                             alt="" loading="lazy" data-original-title="" title=""
+                                             aria-describedby="tooltip385286"/>
+                                        <div class="team-content">
+                                            <h4 class="text-white mb0 o_default_snippet_text"
+                                                style="text-align: center;font-size: 20px;">Robert Brandon
+                                            </h4>
+                                            <p class="team-meta mb0 o_default_snippet_text"
+                                               style="text-align: center; ">
+                                                <font class="text-primary o_default_snippet_text" style="">CEO &amp;amp;
+                                                    Founder
+                                                </font>
+                                            </p>
+                                        </div>
+                                        <div class="overlay"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-12 o_colored_level">
+                                <div class="team-block">
+                                    <div class="team-img">
+                                        <img class="img-fluid"
+                                             src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-350x275.png"
+                                             alt="" loading="lazy"/>
+                                        <div class="team-content">
+                                            <h4 class="text-white mb0 o_default_snippet_text"
+                                                style="text-align: center;font-size: 20px;">Fablo Escober
+                                            </h4>
+                                            <p class="mb0 team-meta o_default_snippet_text"
+                                               style="text-align: center; ">
+                                                <font class="text-primary o_default_snippet_text" style="">Head of
+                                                    Design
+                                                </font>
+                                            </p>
+                                        </div>
+                                        <div class="overlay"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-12 o_colored_level">
+                                <div class="team-block">
+                                    <div class="team-img">
+                                        <img class="img-fluid"
+                                             src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-350x275.png"
+                                             alt="" loading="lazy"/>
+                                        <div class="team-content">
+                                            <h4 class="text-white mb0 o_default_snippet_text"
+                                                style="text-align: center;font-size: 20px;">Albert Dominos
+                                            </h4>
+                                            <p class="mb0 team-meta o_default_snippet_text"
+                                               style="text-align: center; ">
+                                                <font class="text-primary o_default_snippet_text" style="">Manager
+                                                </font>
+                                            </p>
+                                        </div>
+                                        <div class="overlay"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Car Dealer Team Snippets End-->
+
+        <!--Car Dealer News Snippets start-->
+        <template id="car_dealer_news" name="Car Dealer News">
+            <section class="pt64 pb64 bg-100 o_colored_level" id="news_three" data-visible="news"
+                     data-snippet="car_dealer_news" data-name="Car Dealer News">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center pb32 o_colored_level">
+                            <h6 class="text-center">
+                                <b class="o_default_snippet_text">
+                                    <font style="color: rgb(12, 89, 219);">Media Update</font>
+                                </b>
+                            </h6>
+                            <h2 class="text-center">
+                                <font style="font-size: 40px;" class="text-o-color-2">
+                                    <b>Latest News</b>
+                                </font>
+                            </h2>
+                            <p class="text-center s_line_height_2">
+                                <font style="font-size: 15px;" class="text-o-color-3">Lorem ipsum dolor sit, amet
+                                    consectetur
+                                    adipisicing elit. At unde ex odio, minus qui
+                                </font>
+                                <br/>
+                                <font style="font-size: 15px;" class="text-o-color-3">inventore voluptatem nostrum enim
+                                    eaque hic accusamus sunt.
+                                </font>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb-4 o_colored_level">
+                            <div class="news_text">
+                                <div class="content">
+                                    <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-600.jpg"
+                                         class="img-fluid" data-original-title="" title=""
+                                         aria-describedby="tooltip928878" loading="lazy"/>
+                                    <div class="content_overlay"/>
+                                </div>
+                                <div class="p-4 news_post">
+                                    <div>
+                                        <h5 class="font-weight-bold pb-2">
+                                            <font class="text-secondary" style="">
+                                                <a href="#" data-original-title="" title=""
+                                                   aria-describedby="tooltip806062" style="">
+                                                    <font class="o_default_snippet_text text-secondary"
+                                                          style="font-size: 20px;">Main reasons to buy luxury car in
+                                                        2023
+                                                    </font>
+                                                </a>
+                                            </font>
+                                        </h5>
+                                    </div>
+                                    <span>
+                                        <a href="#" class="o_default_snippet_text" data-original-title="" title=""
+                                           aria-describedby="tooltip811691">
+                                            <font class="o_default_snippet_text text-o-color-2" style="">Learn More
+                                            </font>
+                                        </a>
+                                    </span>
+                                    <span class="d-flex float-right">
+                                        <a href="#" data-original-title="" title="" aria-describedby="tooltip51419">
+                                            <i class="fa fa-comments-o text-o-color-2" style="" data-original-title=""
+                                               title="" aria-describedby="tooltip974130"/>
+                                            <font style="" data-original-title="" title=""
+                                                  aria-describedby="tooltip698447" class="text-o-color-2">&amp;nbsp;0&amp;nbsp;
+                                            </font>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb-4 o_colored_level">
+                            <div class="news_text">
+                                <div class="content">
+                                    <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-600.jpg"
+                                         class="img-fluid" loading="lazy"/>
+                                    <div class="content_overlay"/>
+                                </div>
+                                <div class="p-4 news_post">
+                                    <div>
+                                        <h5 class="font-weight-bold pb-2">
+                                            <font class="text-beta o_default_snippet_text" style="">
+                                                <a href="#" data-original-title="" title=""
+                                                   aria-describedby="tooltip694888">
+                                                    <font class="o_default_snippet_text text-o-color-2"
+                                                          style="font-size: 20px;">Main reasons to buy luxury car in
+                                                        2022
+                                                    </font>
+                                                </a>
+                                            </font>
+                                        </h5>
+                                    </div>
+                                    <a href="#" class="o_default_snippet_text" data-original-title="" title=""
+                                       aria-describedby="tooltip475893">
+                                        <font class="o_default_snippet_text text-o-color-2" style="">Learn More</font>
+                                    </a>
+                                    <span class="d-flex float-right">
+                                        <a href="#" data-original-title="" title="" aria-describedby="tooltip498993">
+                                            <i class="fa fa-comments-o text-o-color-2" data-original-title="" title=""
+                                               aria-describedby="tooltip153552" style=""/>
+                                            <font style="" data-original-title="" title=""
+                                                  aria-describedby="tooltip316869" class="text-o-color-2">&amp;nbsp;0
+                                            </font>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb-4 o_colored_level">
+                            <div class="news_text">
+                                <div class="content">
+                                    <img src="/theme_car_dealer_ultimate_01/static/src/img/placeholder-600.jpg"
+                                         class="img-fluid" loading="lazy"/>
+                                    <div class="content_overlay"/>
+                                </div>
+                                <div class="p-4 news_post">
+                                    <div>
+                                        <h5 class="font-weight-bold pb-2">
+                                            <font class="text-beta o_default_snippet_text" style="">
+                                                <a href="#" data-original-title="" title=""
+                                                   aria-describedby="tooltip613846">
+                                                    <font class="o_default_snippet_text text-o-color-2"
+                                                          style="font-size: 20px;">The harder you work them more
+                                                        luck - 2021
+                                                    </font>
+                                                </a>
+                                            </font>
+                                        </h5>
+                                    </div>
+                                    <span>
+                                        <a href="#" class="o_default_snippet_text" data-original-title="" title=""
+                                           aria-describedby="tooltip447631">
+                                            <font class="o_default_snippet_text text-o-color-2" style="">Learn More
+                                            </font>
+                                        </a>
+                                    </span>
+                                    <span class="d-flex float-right">
+                                        <a href="#" data-original-title="" title="" aria-describedby="tooltip718668">
+                                            <i class="fa fa-comments-o text-o-color-2" style="" data-original-title=""
+                                               title="" aria-describedby="tooltip426052"/>
+                                            <font style="" data-original-title="" title=""
+                                                  aria-describedby="tooltip903387" class="text-o-color-2">&amp;nbsp;0&amp;nbsp;
+                                            </font>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Car Dealer News Snippets End-->
+
+        <!--Snippets Assets-->
+        <template id="demo_snippets" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_structure']" position="before">
+                <div id="snippet_demo_snippets" class="o_panel">
+                    <div class="o_panel_header">
+                        <i class="fa fa-th-large"/>
+                        Car Dealer Ultimate 01
+                    </div>
+                    <div class="o_panel_body">
+                        <t t-snippet="theme_car_dealer_ultimate_01.car_dealer_banner"
+                           t-thumbnail="/theme_car_dealer_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_car_dealer_ultimate_01.car_dealer_flipbox"
+                           t-thumbnail="/theme_car_dealer_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_car_dealer_ultimate_01.car_dealer_features"
+                           t-thumbnail="/theme_car_dealer_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_car_dealer_ultimate_01.car_dealer_services"
+                           t-thumbnail="/theme_car_dealer_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_car_dealer_ultimate_01.car_dealer_contact_us"
+                           t-thumbnail="/theme_car_dealer_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_car_dealer_ultimate_01.car_dealer_counters"
+                           t-thumbnail="/theme_car_dealer_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_car_dealer_ultimate_01.car_dealer_right_content"
+                           t-thumbnail="/theme_car_dealer_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_car_dealer_ultimate_01.car_dealer_image_slider"
+                           t-thumbnail="/theme_car_dealer_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_car_dealer_ultimate_01.car_dealer_brand_logo"
+                           t-thumbnail="/theme_car_dealer_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_car_dealer_ultimate_01.car_dealer_testimonial"
+                           t-thumbnail="/theme_car_dealer_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_car_dealer_ultimate_01.car_dealer_portfolio"
+                           t-thumbnail="/theme_car_dealer_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_car_dealer_ultimate_01.car_dealer_cta"
+                           t-thumbnail="/theme_car_dealer_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_car_dealer_ultimate_01.car_dealer_team"
+                           t-thumbnail="/theme_car_dealer_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_car_dealer_ultimate_01.car_dealer_news"
+                           t-thumbnail="/theme_car_dealer_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="car_dealer_theme_footer" inherit_id="website.layout"
+              name="Car Dealer Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+            <section class="oe_structure pt64 pb64" id="footer" data-visible="footer" data-snippet="s_text_block"
+                         data-name="Text">
+                <div class="pt0" id="footer_9">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6 pb16 col-lg-3">
+                                <h5 class="mb16">
+                                    <b>WORKING HOURS</b>
+                                    <hr/>
+                                </h5>
+                                <ul class="list-unstyled text-decoration-none">
+                                    <li class="mb8">
+                                        <a href="#" target="_blank" data-original-title="" title=""
+                                           aria-describedby="tooltip422611">
+                                            <font class="text-secondary" style="">Mon: 9:00 AM – 6:00 PM</font>
+                                        </a>
+                                    </li>
+                                    <li class="mb8">
+                                        <a href="#" target="_blank" data-original-title="" title=""
+                                           aria-describedby="tooltip559915">
+                                            <font class="text-secondary" style="">Tue: 10:00 AM – 6:00 PM</font>
+                                        </a>
+                                    </li>
+                                    <li class="mb8">
+                                        <a href="#" target="_blank">
+                                            <font class="text-secondary" style="">Wed: 11:00 AM – 6:00 PM</font>
+                                        </a>
+                                    </li>
+                                    <li class="mb8">
+                                        <a href="#" target="_blank" data-original-title="" title=""
+                                           aria-describedby="tooltip705615">
+                                            <font class="text-secondary" style="">Thu – Fri: 9:00 AM – 6:00 PM</font>
+                                        </a>
+                                    </li>
+                                    <li/>
+                                    <li class="mb8">
+                                        <font color="#c64103" class="text-secondary" style="">Sunday is closed</font>
+                                    </li>
+                                    <li/>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6  mb16 col-lg-3">
+                                <h5 class="mb16">
+                                    <b>
+                                        <font class="text-secondary" style="">CONTACT DETAILS</font>
+                                    </b>
+                                    <hr/>
+                                </h5>
+                                <div class="media">
+                                    <div class="media-body mb8">
+                                        <span t-field="res_company.street" class="text-secondary"/>
+                                        <span t-field="res_company.city" class="text-secondary"/>
+                                        <span t-field="res_company.state_id.name" class="text-secondary"/>
+                                        <span t-field="res_company.zip" class="text-secondary"/>
+                                        <span t-field="res_company.country_id.name" class="text-secondary"/>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-body mb8">
+                                        <span class="font-weight-bold mb8 o_default_snippet_text">
+                                            <font class="text-secondary" style="font-weight: normal;">Phone :</font>
+                                        </span>
+                                        <span t-field="res_company.phone" class="text-secondary"/>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-body mb8">
+                                        <span class="font-weight-bold mb8 o_default_snippet_text">
+                                            <font class="text-secondary" style="font-weight: normal;">Fax :</font>
+                                        </span>
+                                        <span t-field="res_company.phone" class="text-secondary"/>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-body mb8">
+                                        <span t-field="res_company.email" class="text-secondary"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 pb16 col-lg-3">
+                                <h5 class="mb16">
+                                    <b>
+                                        <font class="text-secondary" style="">IMPORTANT LINKS</font>
+                                    </b>
+                                    <hr/>
+                                </h5>
+                                <ul class="list-unstyled text-decoration-none">
+                                    <li class="mb8">
+                                        <a href="#" target="_blank">
+                                            <font class="text-secondary" style="">About Us</font>
+                                        </a>
+                                    </li>
+                                    <li class="mb8">
+                                        <a href="#" target="_blank" class="o_default_snippet_text">
+                                            <font class="text-secondary" style="">Our Services</font>
+                                        </a>
+                                    </li>
+                                    <li class="mb8">
+                                        <a href="#" target="_blank" class="o_default_snippet_text">
+                                            <font class="text-secondary" style="">Service details</font>
+                                        </a>
+                                    </li>
+                                    <li class="mb8">
+                                        <a href="#" target="_blank" class="o_default_snippet_text">
+                                            <font class="text-secondary" style="">Team</font>
+                                        </a>
+                                    </li>
+                                    <li class="mb8">
+                                        <a href="#" target="_blank" class="o_default_snippet_text">
+                                            <font class="text-secondary" style="">Blog</font>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 pb16 col-lg-3">
+                                <h5 class="mb16">
+                                    <b>
+                                        <font class="text-secondary" style="">FEATURES</font>
+                                    </b>
+                                    <hr/>
+                                </h5>
+                                <ul class="list-unstyled text-decoration-none">
+                                    <li class="mb8">
+                                        <a href="#" target="_blank" class="o_default_snippet_text">
+                                            <font class="text-secondary" style="">Finance</font>
+                                        </a>
+                                    </li>
+                                    <li class="mb8">
+                                        <a href="#" target="_blank" class="o_default_snippet_text">
+                                            <font class="text-secondary" style="">Compare Vehicles</font>
+                                        </a>
+                                    </li>
+                                    <li class="mb8">
+                                        <a href="#" target="_blank" class="o_default_snippet_text">
+                                            <font class="text-secondary" style="">General FAQ</font>
+                                        </a>
+                                    </li>
+                                    <li class="mb8">
+                                        <a href="#" target="_blank" class="o_default_snippet_text">
+                                            <font class="text-secondary" style="">Testimonial</font>
+                                        </a>
+                                    </li>
+                                    <li class="mb8">
+                                        <a href="#" target="_blank" class="o_default_snippet_text">
+                                            <font class="text-secondary" style="">Admin Login</font>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>
