@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="camera_ecommerce_footer" inherit_id="website.layout"
+              name="Camera Ecommerce Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer"
+                         style="border-top:none;">
+                    <div class="pt64 pb32" id="footer_3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-6 mb32 col-lg-3">
+                                    <h3>
+                                        <font style="color: rgb(255, 255, 255); font-size: 18px;">
+                                            <b>About Us</b>
+                                        </font>
+                                        <font style="color: rgb(255, 255, 255);"/>
+                                    </h3>
+                                    <p class="o_default_snippet_text">
+                                        <font class="text-o-color-5" style="">Lorem Ipsum is simply dummy text of the
+                                            printing and typesetting industry. Lorem Ipsum has been the industry's
+                                            standard dummy.&amp;nbsp;
+                                        </font>
+                                    </p>
+                                    <div class="icon_bg pt-2">
+                                        <h3>
+                                            <font style="color: rgb(255, 255, 255); font-size: 18px;">
+                                                <b>Social Media</b>
+                                            </font>
+                                        </h3>
+                                        <a href="/website/social/facebook">
+                                            <i class="bg-secondary border fa fa-facebook mx-1" data-original-title=""
+                                               title=""
+                                               aria-describedby="tooltip159096" style=""/>
+                                        </a>
+                                        <a href="/website/social/twitter">
+                                            <i class="bg-secondary border fa fa-twitter mx-1" data-original-title="" title=""
+                                               aria-describedby="tooltip581960" style=""/>
+                                        </a>
+                                        <a href="/website/social/instagram">
+                                            <i class="bg-secondary border fa fa-instagram mx-1" data-original-title=""
+                                               title=""
+                                               aria-describedby="tooltip537863" style=""/>
+                                        </a>
+                                        <a href="#">
+                                            <i class="bg-secondary border fa fa-google-plus mx-1" data-original-title=""
+                                               title=""
+                                               aria-describedby="tooltip399324" style=""/>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32">
+                                    <h5 class="o_default_snippet_text">
+                                        <font style="color: rgb(255, 255, 255); font-size: 18px;">
+                                            <b>Usefull Links</b>
+                                        </font>
+                                    </h5>
+                                    <ul class="list-unstyled mt24">
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font class="text-o-color-5" style="" data-original-title="" title=""
+                                                      aria-describedby="tooltip758136">Home
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font class="text-o-color-5" style="">About Us</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font class="text-o-color-5" style="">Delivery Information</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font class="text-o-color-5" style="">Privacy Policy</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font class="text-o-color-5" style="">Return Policy</font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 mb32 col-lg-3">
+                                    <h5>
+                                        <font style="color: rgb(255, 255, 255); font-size: 18px;">
+                                            <b>Information</b>
+                                        </font>
+                                    </h5>
+                                    <ul class="list-unstyled mt24">
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font class="text-o-color-5" style="">Account</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font class="text-o-color-5" style="">My Orders</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font class="text-o-color-5" style="">My Cart</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font class="text-o-color-5" style="">Wishlist</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font class="text-o-color-5" style="">Contact</font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32">
+                                    <h5>
+                                        <font style="color: rgb(255, 255, 255); font-size: 18px;">
+                                            <span style="font-weight: bolder;">Contact</span>
+                                        </font>
+                                        <br/>
+                                    </h5>
+                                    <div class="mt24 o_default_snippet_text media">
+                                        <i class="fa fa-home mr-3 text-o-color-5" style=""/>
+                                        <div class="media-body text-o-color-5">
+                                            <p>
+                                                <span t-field="res_company.street"/>
+                                                <span t-field="res_company.city"/>
+                                                <span t-field="res_company.state_id.name"/>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="o_default_snippet_text media">
+                                        <i class="fa fa-envelope-o mr-3 text-o-color-5" style=""/>
+                                        <div class="media-body text-o-color-5">
+                                            <p>
+                                                <span t-field="res_company.email"/>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="o_default_snippet_text media">
+                                        <i class="fa fa-phone mr-3 text-o-color-5" style=""/>
+                                        <div class="media-body text-o-color-5">
+                                            <p>
+                                                <span t-field="res_company.phone"/>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <i class="fa fa-cc-visa fa-2x" data-original-title="" title=""
+                                           aria-describedby="tooltip194983"/>
+                                        <i class="fa fa-cc-mastercard fa-2x" data-original-title="" title=""
+                                           aria-describedby="tooltip901892"/>
+                                        <i class="fa fa-cc-paypal fa-2x" data-original-title="" title=""
+                                           aria-describedby="tooltip866828"/>
+                                        <i class="fa fa-cc-amex fa-2x" data-original-title="" title=""
+                                           aria-describedby="tooltip777276"/>
+                                        <i class="fa fa-cc-discover fa-2x" data-original-title="" title=""
+                                           aria-describedby="tooltip392245"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

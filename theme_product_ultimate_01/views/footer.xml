@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="product_theme_footer" inherit_id="website.layout"
+              name="Product Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section class="oe_structure pt40" data-snippet="s_text_block" data-name="Text">
+                    <div class="pb32">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-8 col-lg-12 o_colored_level">
+                                    <ul class="d-flex d-inline list-unstyled p-0 justify-content-center">
+                                        <li class="px-2">
+                                            <a href="#" data-original-title="" title=""
+                                               aria-describedby="tooltip676015">
+                                                <font style="" class="text-o-color-1">Terms &amp;amp;
+                                                    Conditions
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li class="border-primary px-2" style="border-left:2px solid;">
+                                            <a href="#" class="o_default_snippet_text">
+                                                <font style="" class="text-o-color-1">API Use Policy</font>
+                                            </a>
+                                        </li>
+                                        <li class="border-primary px-2" style="border-left:2px solid;">
+                                            <a href="#" class="o_default_snippet_text">
+                                                <font style="" class="text-o-color-1">Privacy Policy</font>
+                                            </a>
+                                        </li>
+                                        <li class="border-primary px-2" style="border-left:2px solid;">
+                                            <a href="#" class="o_default_snippet_text">
+                                                <font style="" class="text-o-color-1">Cookies</font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

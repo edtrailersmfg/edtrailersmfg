@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="customize_modal_theme_camera_ecommerce_ultimate_01"
+              inherit_id="customize_theme_business.theme_customize_ctb">
+        <!-- Set number of fonts -->
+        <xpath expr="//t[@t-set='_nb_fonts']" position="attributes">
+            <attribute name="t-value">7</attribute>
+        </xpath>
+    </template>
+
+</odoo>

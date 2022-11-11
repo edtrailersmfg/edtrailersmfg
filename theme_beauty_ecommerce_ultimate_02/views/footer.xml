@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="beauty_two_ecommerce_theme_footer" inherit_id="website.layout"
+              name="Beauty Two Ecommerce Theme Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section class="pt64" id="footer_16" data-visible="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-2 col-lg-3 pb16 o_colored_level" style="">
+                                <h5 class="pb16">
+                                    <font style="font-size: 22px;" class="text-o-color-4">
+                                        <b>About</b>
+                                    </font>
+                                </h5>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <font style="font-size: 16px;" class="text-o-color-4 s_line_height_2">About us
+                                        </font>
+                                    </li>
+                                    <li>
+                                        <font style="font-size: 16px;" class="text-o-color-4 s_line_height_2">
+                                            Categories
+                                        </font>
+                                    </li>
+                                    <li>
+                                        <font style="font-size: 16px;" class="text-o-color-4 s_line_height_2">Shop
+                                        </font>
+                                    </li>
+                                    <li>
+                                        <font style="font-size: 16px;" class="text-o-color-4 s_line_height_2">FAQs
+                                        </font>
+                                    </li>
+                                    <li>
+                                        <font style="font-size: 16px;" class="text-o-color-4 s_line_height_2">Blog
+                                        </font>
+                                    </li>
+                                    <li>
+                                        <font style="font-size: 16px;" class="text-o-color-4 s_line_height_2">Contact
+                                            us
+                                        </font>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3 pb16 o_colored_level" style="">
+                                <h5 class="pb16">
+                                    <font style="font-size: 22px;" class="text-o-color-4">
+                                        <b>Categories</b>
+                                    </font>
+                                </h5>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <font style="font-size: 16px;" class="text-o-color-4 s_line_height_2">Make-up
+                                        </font>
+                                    </li>
+                                    <li>
+                                        <font style="font-size: 16px;" class="text-o-color-4 s_line_height_2">Skin
+                                            Care
+                                        </font>
+                                    </li>
+                                    <li>
+                                        <font style="font-size: 16px;" class="text-o-color-4 s_line_height_2">Hair
+                                            Care
+                                        </font>
+                                    </li>
+                                    <li>
+                                        <font style="font-size: 16px;" class="text-o-color-4 s_line_height_2">Nails
+                                        </font>
+                                    </li>
+                                    <li>
+                                        <font style="font-size: 16px;" class="text-o-color-4 s_line_height_2">SPA</font>
+                                    </li>
+                                    <li>
+                                        <font style="font-size: 16px;" class="text-o-color-4 s_line_height_2">Perfume
+                                        </font>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3 pb16 o_colored_level" style="">
+                                <h5 class="pb16">
+                                    <font style="font-size: 22px;" class="text-o-color-4">
+                                        <b>Useful Links</b>
+                                    </font>
+                                </h5>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <font style="font-size: 16px;" class="s_line_height_2 text-o-color-4">Careers
+                                        </font>
+                                    </li>
+                                    <li>
+                                        <font style="font-size: 16px;" class="text-o-color-4 s_line_height_2">Privacy
+                                            Policy
+                                        </font>
+                                    </li>
+                                    <li>
+                                        <font style="font-size: 16px;" class="text-o-color-4 s_line_height_2">Terms
+                                            &amp;amp; Conditions
+                                        </font>
+                                    </li>
+                                    <li>
+                                        <font style="font-size: 16px;" class="text-o-color-4 s_line_height_2">Support
+                                        </font>
+                                    </li>
+                                    <li>
+                                        <font style="font-size: 16px;" class="text-o-color-4 s_line_height_2">Shipping
+                                            Details
+                                        </font>
+                                    </li>
+                                    <li>
+                                        <font style="font-size: 16px;" class="text-o-color-4 s_line_height_2">
+                                            Information
+                                        </font>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-3 pb16 o_colored_level" style="">
+                                <h5 class="pb16">
+                                    <font style="font-size: 22px;" class="text-o-color-4">
+                                        <b>Contact Us</b>
+                                    </font>
+                                </h5>
+                                <div class="media" style="font-size: 16px;">
+                                    <i class="fa fa-map-marker mr-2 mt-1 text-o-color-4" data-original-title="" title=""
+                                       aria-describedby="tooltip577346" style="&#10;    font-size: 16px;&#10;"/>
+                                    <div class="mb16 media-body text-o-color-4">
+                                        <span class="text-o-color-4" style="font-size: 16px;"
+                                              t-field="res_company.street"/>
+                                        <span t-field="res_company.city"/>
+                                        <span t-field="res_company.state_id.name"/>
+                                        <span t-field="res_company.zip"/>
+                                        <span t-field="res_company.country_id.name"/>
+                                    </div>
+                                </div>
+                                <div class="media" style="font-size: 16px;">
+                                    <i class="fa fa-phone mr-2 mt-1 text-o-color-4" data-original-title="" title=""
+                                       aria-describedby="tooltip67779" style="font-size: 16px;"/>
+                                    <div class="mb16 media-body text-o-color-4">
+                                        <span t-field="res_company.phone"/>
+                                    </div>
+                                </div>
+                                <div class="media text-o-color-4" style="font-size: 16px;">
+                                    <i class="fa fa-envelope mr-2 mt-1 text-o-color-4" data-original-title="" title=""
+                                       aria-describedby="tooltip660243" style="&#10;    font-size: 16px;&#10;"/>
+                                    <div class="media-body mb16">
+                                        <span t-field="res_company.email"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-top row pt32">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 pb32 o_colored_level">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 o_colored_level">
+                                        <h6>
+                                            <font style="font-size: 16px;" class="text-o-color-4">Follow US On Social
+                                                Networks
+                                            </font>
+                                        </h6>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-8 o_colored_level">
+                                        <a class="text-decoration-none" target="_blank"
+                                           href="#">
+                                            <i class="bg-o-color-4 box_hover fa fa-facebook p-2 text-o-color-1"
+                                               data-original-title="" title="" aria-describedby="tooltip466161"
+                                               style=""/>
+                                        </a>
+                                        <a href="#" class="text-decoration-none" target="_blank">
+                                            <i class="bg-o-color-4 box_hover fa fa-google-plus p-2 text-o-color-1"
+                                               data-original-title="" title="" aria-describedby="tooltip442660"
+                                               style=""/>
+                                        </a>
+                                        <a class="text-decoration-none" target="_blank" href="#">
+                                            <i class="bg-o-color-4 box_hover fa fa-twitter p-2 text-o-color-1"
+                                               data-original-title="" title="" aria-describedby="tooltip472447"
+                                               style=""/>
+                                        </a>
+                                        <a class="text-decoration-none" target="_blank"
+                                           href="#">
+                                            <i class="bg-o-color-4 box_hover fa fa-linkedin p-2 text-o-color-1"
+                                               data-original-title="" title="" aria-describedby="tooltip713083"
+                                               style=""/>
+                                        </a>
+                                        <a href="#" class="text-decoration-none" target="_blank">
+                                            <i class="bg-o-color-4 box_hover fa fa-vimeo p-2 text-o-color-1"
+                                               data-original-title="" title="" aria-describedby="tooltip36685"
+                                               style=""/>
+                                        </a>
+                                        <a href="#" class="text-decoration-none" target="_blank">
+                                            <i class="bg-o-color-4 box_hover fa fa-pinterest p-2 text-o-color-1"
+                                               data-original-title="" title="" aria-describedby="tooltip617457"
+                                               style=""/>
+                                        </a>
+                                        <a href="#" class="text-decoration-none" target="_blank">
+                                            <i class="bg-o-color-4 box_hover fa fa-flickr p-2 text-o-color-1"
+                                               data-original-title="" title="" aria-describedby="tooltip227006"
+                                               style=""/>
+                                        </a>
+                                        <a href="#" class="text-decoration-none" target="_blank">
+                                            <i class="bg-o-color-4 box_hover fa fa-wifi p-2 text-o-color-1"
+                                               data-original-title="" title="" aria-describedby="tooltip673759"
+                                               style=""/>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 pb32 o_colored_level">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 o_colored_level">
+                                        <h6>
+                                            <font style="font-size: 16px;" class="text-o-color-4">Subscribe On our
+                                                Newsletter
+                                            </font>
+                                        </h6>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-8 o_colored_level">
+                                        <div class="input-group js_subscribe" data-list-id="0">
+                                            <input type="email" name="email"
+                                                   class="js_subscribe_email form-control rounded-0"
+                                                   placeholder="your email..."/>
+                                            <span class="input-group-append">
+                                                <a role="button" href="#"
+                                                   class="js_subscribe_btn rounded-0 btn btn-secondary"
+                                                   data-original-title="" title="" aria-describedby="tooltip620760">
+                                                    Subscribe
+                                                </a>
+                                                <a role="button" href="#"
+                                                   class="btn btn-success js_subscribed_btn d-none rounded-0"
+                                                   disabled="disabled">Thanks
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

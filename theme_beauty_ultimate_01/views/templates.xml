@@ -1,0 +1,1177 @@
+<odoo>
+    <data>
+        <!--Snippet Banner Start-->
+        <template id="beauty_banner" name="Beauty Banner">
+            <section class="s_cover parallax align-content-center align-items-center d-flex full-height o_colored_level"
+                     data-scroll-background-ratio="1" style="" data-snippet="beauty_banner" data-name="Beauty Banner">
+                <span class="s_parallax_bg oe_img_bg oe_custom_bg"
+                      style="background-image: url(&quot;/theme_beauty_ultimate_01/static/src/img/placeholder-image-1170.jpg&quot;); background-position: 50% 0px;"/>
+                <div class="container">
+                    <div class="row s_nb_column_fixed">
+                        <div class="col-lg-12 s_title o_colored_level" data-name="Title">
+                            <h1 class="s_title_thin text-left" style="font-size: 62px;">
+                                <font style="color: rgb(66, 66, 66);" class="o_default_snippet_text">Fashions Fade,
+                                </font>
+                            </h1>
+                            <h1 class="s_title_thin text-left" style="font-size: 62px;">
+                                <font style="color: rgb(66, 66, 66);" class="o_default_snippet_text">Style Is Eternal.
+                                </font>
+                            </h1>
+                        </div>
+                        <div class="col-lg-12 s_text pt16 pb16 o_colored_level" data-name="Text">
+                            <p class="lead text-left" style="text-align: center;">
+                                <font style="color: rgb(66, 66, 66);">
+                                    <b>Write one or two paragraphs describing your product, services or a specific
+                                        feature.&amp;nbsp;
+                                    </b>
+                                </font>
+                                <br/>
+                                <font style="color: rgb(66, 66, 66);">
+                                    <b>To be successful your content needs to be useful to your readers.</b>
+                                </font>
+                            </p>
+                        </div>
+                        <div class="col-lg-12 s_btn text-left pt16 pb16 o_colored_level" data-name="Buttons">
+                            <a href="/contactus" class="btn btn-primary flat" data-original-title="" title=""
+                               aria-describedby="tooltip882473">
+                                <font style="font-size: 14px;" class="text-o-color-4">
+                                    <b>READ MORE</b>
+                                </font>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Banner End-->
+
+        <!--Snippet About Us Start-->
+        <template id="beauty_about_us" name="Beauty About Us - Fade In">
+            <section
+                    class="pt64 pb64 bg-gamma oe_custom_bg o_colored_level oe_img_bg"
+                    style="background-image: url(&quot;/theme_beauty_ultimate_01/static/src/img/placeholder-image-1170.jpg&quot;);"
+                    data-snippet="beauty_about_us" data-name="Beauty About Us" data-original-id="461"
+                    data-original-src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-1170.jpg"
+                    data-mimetype="image/jpeg"
+                    data-resize-width="1920">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center o_colored_level mb32">
+                            <h2 class="font-weight-bold pt24 pb24">
+                                <font style="font-size: 36px;" class="o_default_snippet_text">About Us</font>
+                            </h2>
+                            <p>
+                                <font style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Pellentesque fermentum est in tortor congue suscipit.
+                                    Suspendisse potenti. Aliquam finibus pharetra tellus at
+                                    egestas.Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.
+                                    &amp;nbsp;
+                                </font>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row shadow">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 bg-white pt88 px-4 o_colored_level">
+                            <h2>
+                                <b>
+                                    <font style="color: rgb(60, 66, 79);">Welcome to our salon</font>
+                                </b>
+                            </h2>
+                            <p class="pt16 pb16">
+                                <font style="color: rgb(104, 107, 119); font-size: 16px;">Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit. Pellentesque fermentum est in tortor congue
+                                    suscipit. Suspendisse potenti.Aliquam finibus pharetra tellus at
+                                    egestas.Suspendisse potenti.Aliquam finibus pharetra tellus at egestas.
+                                    &amp;nbsp;
+                                </font>
+                            </p>
+                            <a href="#" class="rounded-0 mb16 btn btn-primary flat" data-original-title="" title=""
+                               aria-describedby="tooltip559868">
+                                <b>
+                                    <font style="font-size: 14px;" class="text-o-color-4" data-original-title=""
+                                          title="" aria-describedby="tooltip786987">READ MORE
+                                    </font>
+                                </b>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 px-0 o_colored_level">
+                            <img src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-600.jpg" alt=""
+                                 class="img-fluid mx-auto d-block" data-original-title="" title=""
+                                 aria-describedby="tooltip782812" loading="lazy" data-original-id="462"
+                                 data-original-src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                 data-mimetype="image/jpeg" data-resize-width="600"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet About Us End-->
+
+        <!--Snippet Service Start-->
+        <template id="beauty_service" name="Beauty Service - Fade In">
+            <section class="pb32 pt64 o_colored_level" data-snippet="beauty_service"
+                     data-name="Beauty Service - Fade In" style="position: relative;"
+                     data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Rainy/07&quot;,&quot;colors&quot;:{&quot;c1&quot;:&quot;rgba(255, 108, 141, 0.05)&quot;,&quot;c2&quot;:&quot;rgba(253, 244, 243, 0.24)&quot;,&quot;c3&quot;:&quot;rgba(248, 185, 115, 0.05)&quot;},&quot;flip&quot;:[&quot;y&quot;,&quot;x&quot;]}">
+                <div class="o_we_shape o_web_editor_Rainy_07"
+                     style="background-image: url(&quot;/web_editor/shape/web_editor/Rainy/07.svg?c1=rgba(255%2C%20108%2C%20141%2C%200.05)&amp;c2=rgba(253%2C%20244%2C%20243%2C%200.24)&amp;c3=rgba(248%2C%20185%2C%20115%2C%200.05)&amp;flip=xy&quot;); background-position: 50% 100%;"/>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center o_colored_level">
+                            <h2 class="font-weight-bold pt24 pb24">
+                                <font style="font-size: 36px;" class="o_default_snippet_text">Our Services</font>
+                            </h2>
+                            <p>
+                                <font style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Pellentesque fermentum est in tortor congue suscipit.
+                                    Suspendisse potenti. Aliquam finibus pharetra tellus at
+                                    egestas.Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.
+                                    &amp;nbsp;
+                                </font>
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 o_colored_level">
+                            <div class="row pt64">
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb16 text-center o_colored_level">
+                                    <img class="img-fluid o_we_custom_image"
+                                         src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-100x100.png"
+                                         data-original-title="" title="" aria-describedby="tooltip296299" loading="lazy"
+                                         alt="" data-original-id="466"
+                                         data-original-src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-100x100.png"
+                                         data-mimetype="image/png" data-resize-width="128"/>
+                                    <h3 class="pt8 pb8">
+                                        <font style="font-size: 20px;">
+                                            <b>Makeup &amp;amp; Lighting</b>
+                                        </font>
+                                    </h3>
+                                    <p>
+                                        <font style="font-size: 16px;">Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit. Ut at semper metus. Vestibulum
+                                            gravida velit urna, ut mattis leo ullamcorper sed.
+                                            &amp;nbsp;
+                                        </font>
+                                    </p>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb16 text-center o_colored_level">
+                                    <img class="img-fluid o_we_custom_image"
+                                         src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-100x100.png"
+                                         loading="lazy"
+                                         data-original-title="" title="" aria-describedby="tooltip715661" alt=""
+                                         data-original-id="467"
+                                         data-original-src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-100x100.png"
+                                         data-mimetype="image/png" data-resize-width="128"/>
+                                    <h3 class="pt8 pb8">
+                                        <font style="font-size: 20px;">
+                                            <b>Coloring</b>
+                                        </font>
+                                    </h3>
+                                    <p>
+                                        <font style="font-size: 16px;">Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit. Ut at semper metus. Vestibulum
+                                            gravida velit urna, ut mattis leo ullamcorper sed.
+                                            &amp;nbsp;
+                                        </font>
+                                    </p>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb16 text-center o_colored_level">
+                                    <img class="img-fluid o_we_custom_image"
+                                         src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-100x100.png"
+                                         loading="lazy" alt="" data-original-id="468"
+                                         data-original-src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-100x100.png"
+                                         data-mimetype="image/png" data-resize-width="128"/>
+                                    <h3 class="pt8 pb8">
+                                        <font style="font-size: 20px;">
+                                            <b class="o_default_snippet_text">Studio Shooting</b>
+                                        </font>
+                                    </h3>
+                                    <p>
+                                        <font style="font-size: 16px;">Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit. Ut at semper metus. Vestibulum
+                                            gravida velit urna, ut mattis leo ullamcorper sed.
+                                            &amp;nbsp;
+                                        </font>
+                                    </p>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb16 text-center o_colored_level">
+                                    <img class="img-fluid o_we_custom_image"
+                                         src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-100x100.png"
+                                         loading="lazy" alt=""
+                                         data-original-id="469"
+                                         data-original-src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-100x100.png"
+                                         data-mimetype="image/png" data-resize-width="128"/>
+                                    <h3 class="pt8 pb8">
+                                        <span style="font-size: 20px;">
+                                            <b class="o_default_snippet_text">Theatre Hairstyles</b>
+                                        </span>
+                                    </h3>
+                                    <p>
+                                        <font style="font-size: 16px;">Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit. Ut at semper metus. Vestibulum
+                                            gravida velit urna, ut mattis leo ullamcorper sed.
+                                            &amp;nbsp;
+                                        </font>
+                                    </p>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb16 text-center o_colored_level">
+                                    <img class="img-fluid o_we_custom_image"
+                                         src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-100x100.png"
+                                         loading="lazy" alt=""
+                                         data-original-id="470"
+                                         data-original-src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-100x100.png"
+                                         data-mimetype="image/png" data-resize-width="128"/>
+                                    <h3 class="pt8 pb8">
+                                        <font style="font-size: 20px;">
+                                            <b class="o_default_snippet_text">Wedding Day</b>
+                                        </font>
+                                    </h3>
+                                    <p>
+                                        <font style="font-size: 16px;">Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit. Ut at semper metus. Vestibulum
+                                            gravida velit urna, ut mattis leo ullamcorper sed.
+                                            &amp;nbsp;
+                                        </font>
+                                    </p>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb16 text-center o_colored_level">
+                                    <img class="img-fluid o_we_custom_image"
+                                         src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-100x100.png"
+                                         loading="lazy" alt="" data-original-id="471"
+                                         data-original-src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-100x100.png"
+                                         data-mimetype="image/png" data-resize-width="128"/>
+                                    <h3 class="pt8 pb8">
+                                        <font style="font-size: 20px;">
+                                            <b class="o_default_snippet_text">Party Mood</b>
+                                        </font>
+                                    </h3>
+                                    <p>
+                                        <font style="font-size: 16px;">Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit. Ut at semper metus. Vestibulum
+                                            gravida velit urna, ut mattis leo ullamcorper sed.
+                                            &amp;nbsp;
+                                        </font>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Service End-->
+
+        <!--Snippet Product Start-->
+        <template id="beauty_product" name="Beauty Product - Fade In">
+            <section class="pb0 o_colored_level" data-snippet="beauty_product"
+                     data-name="Beauty Product - Fade In" style="position: relative;"
+                     data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Rainy/07&quot;,&quot;colors&quot;:{&quot;c1&quot;:&quot;rgba(255, 108, 141, 0.05)&quot;,&quot;c2&quot;:&quot;rgba(253, 244, 243, 0.24)&quot;,&quot;c3&quot;:&quot;rgba(248, 185, 115, 0.05)&quot;},&quot;flip&quot;:[]}">
+                <div class="o_we_shape o_web_editor_Rainy_07"
+                     style="background-image: url(&quot;/web_editor/shape/web_editor/Rainy/07.svg?c1=rgba(255%2C%20108%2C%20141%2C%200.05)&amp;c2=rgba(253%2C%20244%2C%20243%2C%200.24)&amp;c3=rgba(248%2C%20185%2C%20115%2C%200.05)&quot;);"/>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center o_colored_level pb64">
+                            <h2 class="font-weight-bold pt24 pb24">
+                                <span style="font-size: 36px;" class="o_default_snippet_text">Our Products</span>
+                            </h2>
+                            <p>
+                                <font style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Pellentesque fermentum est in tortor congue suscipit.
+                                    Suspendisse potenti. Aliquam finibus pharetra tellus at
+                                    egestas.Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.
+                                    &amp;nbsp;
+                                </font>
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb16 o_colored_level">
+                            <img src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-510x550.png"
+                                 alt="image" title="image" class="img-fluid mb8 mt8" loading="lazy"/>
+                            <h3>
+                                <font style="font-size: 18px;">
+                                    <b>Natural Cosmetics Pack</b>
+                                </font>
+                            </h3>
+                            <p>
+                                <font style="font-size: 16px;">$40.00</font>
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb16 o_colored_level">
+                            <img src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-510x550.png"
+                                 alt="image" title="image" class="img-fluid mb8 mt8" loading="lazy"/>
+                            <h3>
+                                <font style="font-size: 18px;">
+                                    <b class="o_default_snippet_text">Makeup Brushes</b>
+                                </font>
+                            </h3>
+                            <p>
+                                <font style="font-size: 16px;">$45.00</font>
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb16 o_colored_level">
+                            <img src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-510x550.png"
+                                 alt="image" title="image" class="img-fluid mb8 mt8" loading="lazy"/>
+                            <h3>
+                                <font style="font-size: 18px;">
+                                    <b>Natural Lipstick Colors</b>
+                                </font>
+                            </h3>
+                            <p>
+                                <font style="font-size: 16px;">$20.00</font>
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 mh100 o_colored_level">
+                            <div class="oe_structure oe_empty" data-editor-message="DRAG BUILDING BLOCKS HERE">
+                                <div class="s_btn text-center pt16 pb16" data-name="Buttons">
+                                    <a href="#" class="btn btn-primary flat" data-original-title="" title=""
+                                       aria-describedby="tooltip527852">
+                                        <font style="font-size: 14px;" class="text-o-color-4">
+                                            <b data-original-title="" title="" aria-describedby="tooltip484258">VIEW
+                                                MORE
+                                            </b>
+                                        </font>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Product End-->
+
+        <!--Snippet Left Content Start-->
+        <template id="beauty_left_content" name="Beauty Left Content - Fade In">
+            <section class="pt64 pb64 o_colored_level" data-snippet="beauty_left_content"
+                     data-name="Beauty Left Content">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 o_colored_level">
+                            <h2>
+                                <b>Special offer of the month</b>
+                            </h2>
+                            <h2>
+                                <b>
+                                    <font style="font-size: 36px;">40 % Off</font>
+                                </b>
+                            </h2>
+                            <p>
+                                <font style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Pellentesque fermentum est in tortor congue suscipit.
+                                    Suspendisse potenti.Aliquam finibus pharetra tellus at egestas.
+                                    &amp;nbsp;
+                                </font>
+                            </p>
+                            <div class="row align-items-center">
+                                <div class="ml-3 o_colored_level">
+                                    <a href="#" class="rounded-0 px-4 mt8 mb8 btn btn-primary flat"
+                                       data-original-title="" title="" aria-describedby="tooltip385011">
+                                        <font style="font-size: 14px;" class="text-o-color-4">
+                                            <b>SHOP NOW</b>
+                                        </font>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 o_colored_level">
+                            <img src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-600.jpg" alt="Image"
+                                 class="img-fluid pt8 pb8 mx-auto d-block" loading="lazy"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Left Content End-->
+
+        <!--Snippet Testimonial Start-->
+        <template id="beauty_testimonial" name="Beauty Testimonial - Fade In">
+            <section class="pt0 pb0 bg-gamma oe_custom_bg o_colored_level oe_img_bg"
+                     id="testimonials_d2"
+                     style="background-image: url(&quot;/theme_beauty_ultimate_01/static/src/img/placeholder-image-1170.jpg&quot;);"
+                     data-snippet="beauty_testimonial" data-name="Beauty Testimonial">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center o_colored_level">
+                            <h2 class="font-weight-bold pb24 pt24">
+                                <font style="font-size: 36px;" class="o_default_snippet_text">Our Happy Customers</font>
+                            </h2>
+                            <p>
+                                <font style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Pellentesque fermentum est in tortor congue suscipit.
+                                    Suspendisse potenti. Aliquam finibus pharetra tellus at
+                                    egestas.Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.
+                                    &amp;nbsp;
+                                </font>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="myCarousel1607597599111" class="s_quotes_carousel carousel slide s_carousel_default"
+                     data-interval="10000" style="">
+                    <ol class="carousel-indicators o_we_no_overlay">
+                        <li data-target="#myCarousel1607597599111" data-slide-to="0" class="active"/>
+                        <li data-target="#myCarousel1607597599111" data-slide-to="1"/>
+                        <li data-target="#myCarousel1607597599111" data-slide-to="2"/>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item pt80 pb80 oe_custom_bg o_colored_level active" data-name="Slide"
+                             style="">
+                            <div class="container">
+                                <div class="row content justify-content-md-center mx-2">
+                                    <blockquote
+                                            class="carousel-content col-12 col-sm-12 col-md-12 col-lg-8 bg-white border-0">
+                                        <p class="lead mb32 text-center">
+                                            <span style="font-style: normal;">
+                                                <b>
+                                                    <font style="color: rgb(104, 107, 119);">Write a quote here from one
+                                                        of your customers. Quotes are a
+                                                        great way to build confidence in your products or services.
+                                                    </font>
+                                                </b>
+                                            </span>
+                                        </p>
+                                        <div class="text-center"><img class="img"
+                                                                      src="/theme_beauty_ultimate_01/static/src/img/placeholder-user1.png"
+                                                                      alt="" loading="lazy" data-original-title=""
+                                                                      title="" aria-describedby="tooltip863730"
+                                                                      data-original-id="478"
+                                                                      data-original-src="/theme_beauty_ultimate_01/static/src/img/placeholder-user1.png"
+                                                                      data-mimetype="image/jpeg" data-resize-width="80"
+                                                                      style="&#10;    border-radius: 50%;&#10;    max-width: 40px;&#10;    margin-right: 5px;&#10;"/>&amp;nbsp;
+                                            <span style="font-style: normal;">
+                                                <font style="color: rgb(104, 107, 119);">
+                                                    <b>Avie Beaton</b>
+                                                </font>
+                                            </span>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item pt80 pb80 oe_custom_bg o_colored_level" data-name="Slide" style="">
+                            <div class="container">
+                                <div class="row content justify-content-md-center mx-2">
+                                    <blockquote
+                                            class="carousel-content col-12 col-sm-12 col-md-12 col-lg-8 bg-white border-0">
+                                        <p class="lead mb32 text-center">
+                                            <span style="font-style: normal;">
+                                                <b>
+                                                    <font style="color: rgb(104, 107, 119);">Write a quote here from one
+                                                        of your customers. Quotes are a
+                                                        great way to build confidence in your products or services.
+                                                    </font>
+                                                </b>
+                                            </span>
+                                        </p>
+                                        <div class="text-center"><img class="img"
+                                                                      src="/theme_beauty_ultimate_01/static/src/img/placeholder-user1.png"
+                                                                      alt="" loading="lazy" data-original-title=""
+                                                                      title="" aria-describedby="tooltip863730"
+                                                                      style="&#10;    border-radius: 50%;&#10;    max-width: 40px;&#10;    margin-right: 5px;&#10;"
+                                                                      data-original-id="481"
+                                                                      data-original-src="/theme_beauty_ultimate_01/static/src/img/placeholder-user1.png"
+                                                                      data-mimetype="image/jpeg"
+                                                                      data-resize-width="80"/>&amp;nbsp;
+                                            <span style="font-style: normal;">
+                                                <font style="color: rgb(104, 107, 119);">
+                                                    <b>&amp;nbsp;Cristin Jackson</b>
+                                                </font>
+                                            </span>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item pt80 pb80 oe_custom_bg o_colored_level" data-name="Slide" style="">
+                            <div class="container">
+                                <div class="row content justify-content-md-center mx-2">
+                                    <blockquote
+                                            class="carousel-content col-12 col-sm-12 col-md-12 col-lg-8 bg-white border-0">
+                                        <p class="lead mb32 text-center">
+                                            <span style="font-style: normal;">
+                                                <b>
+                                                    <font style="color: rgb(104, 107, 119);">Write a quote here from one
+                                                        of your customers. Quotes are a
+                                                        great way to build confidence in your products or services.
+                                                    </font>
+                                                </b>
+                                            </span>
+                                        </p>
+                                        <div class="text-center"><img class="img"
+                                                                      src="/theme_beauty_ultimate_01/static/src/img/placeholder-user1.png"
+                                                                      alt="" loading="lazy" data-original-title=""
+                                                                      title="" aria-describedby="tooltip863730"
+                                                                      style="&#10;    border-radius: 50%;&#10;    max-width: 40px;&#10;    margin-right: 5px;&#10;"
+                                                                      data-original-id="480"
+                                                                      data-original-src="/theme_beauty_ultimate_01/static/src/img/placeholder-user1.png"
+                                                                      data-mimetype="image/jpeg"
+                                                                      data-resize-width="80"/>&amp;nbsp;
+                                            <font color="#686b77">
+                                                <span style="font-style: normal;">
+                                                    <b>Janny Stratton</b>
+                                                </span>
+                                            </font>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-control-prev o_we_no_overlay" data-target="#myCarousel1607597599111"
+                         data-slide="prev" role="img" aria-label="Previous" title="Previous">
+                        <span class="carousel-control-prev-icon"/>
+                        <span class="sr-only o_default_snippet_text">Previous</span>
+                    </div>
+                    <div class="carousel-control-next o_we_no_overlay" data-target="#myCarousel1607597599111"
+                         data-slide="next" role="img" aria-label="Next" title="Next">
+                        <span class="carousel-control-next-icon"/>
+                        <span class="sr-only o_default_snippet_text">Next</span>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Testimonial End-->
+
+        <!--Snippet Newsletter Start-->
+        <template id="beauty_newsletter" name="Beauty Newsletter - Fade In">
+            <section class="pt64 pb64 o_colored_level oe_img_bg" id="newsletter_6"
+                     data-visible="newsletter" data-snippet="newsletter_6" data-name="Beauty Newsletter - Fade In"
+                     style="position: relative; background-image: url(&quot;/?&quot;);"
+                     data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Rainy/07&quot;,&quot;colors&quot;:{&quot;c1&quot;:&quot;rgba(255, 108, 141, 0.05)&quot;,&quot;c2&quot;:&quot;rgba(253, 244, 243, 0.24)&quot;,&quot;c3&quot;:&quot;rgba(248, 185, 115, 0.05)&quot;},&quot;flip&quot;:[&quot;y&quot;,&quot;x&quot;]}">
+                <div class="o_we_shape o_web_editor_Rainy_07"
+                     style="background-image: url(&quot;/web_editor/shape/web_editor/Rainy/07.svg?c1=rgba(255%2C%20108%2C%20141%2C%200.05)&amp;c2=rgba(253%2C%20244%2C%20243%2C%200.24)&amp;c3=rgba(248%2C%20185%2C%20115%2C%200.05)&amp;flip=xy&quot;); background-position: 50% 100%;"/>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center o_colored_level">
+                            <h1 class="font-weight-bold mb16 o_default_snippet_text">Join Our Newsletter
+                            </h1>
+                            <h5 class="elementor-heading-title elementor-size-default">
+                                <font style="color: rgb(104, 107, 119); font-size: 16px;"
+                                      class="o_default_snippet_text">Signup for our weekly
+                                    newsletter to
+                                    get the latest news, updates
+                                </font>
+                                <font style="color: rgb(104, 107, 119); font-size: 16px;"
+                                      class="o_default_snippet_text">and amazing offers delivered
+                                    directly in your inbox.
+                                </font>
+                            </h5>
+                            <div class="mt40 mb40 col-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="col-lg-6 col-md-8 mx-auto p-0 input-group js_subscribe" data-list-id="1">
+                                    <input type="email" name="email" class="js_subscribe_email form-control"
+                                           placeholder="your email..."
+                                           style="&#10;    border-radius: 0 !important;&#10;" disabled=""/>
+                                    <span class="input-group-append">
+                                        <a role="button" href="#" class="btn btn-primary js_subscribe_btn flat"
+                                           style="&#10;    border-radius: 0 !important;&#10;">
+                                            <i class="fa fa-paper-plane-o"/>
+                                        </a>
+                                        <a role="button" href="#" class="btn btn-success js_subscribed_btn d-none"
+                                           disabled="disabled" style="&#10;    border-radius: 0 !important;&#10;"
+                                           data-original-title="" title="" aria-describedby="tooltip93007">
+                                            <font style="font-size: 14px;">
+                                                <b data-original-title="" title="" aria-describedby="tooltip897152"
+                                                   class="o_default_snippet_text">
+                                                    Thanks
+                                                </b>
+                                            </font>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb32 o_colored_level">
+                                <i class="fa fa-2x fa-twitter mr-2 px-1" data-original-title="" title=""
+                                   aria-describedby="tooltip32061" style="color: rgb(60, 66, 79);"/>
+                                <i class="fa fa-2x fa-facebook-official mr-2 px-1" data-original-title="" title=""
+                                   aria-describedby="tooltip63961" style="color: rgb(60, 66, 79);"/>
+                                <i class="fa fa-2x fa-pinterest-square mr-2 px-1" data-original-title="" title=""
+                                   aria-describedby="tooltip167599" style="color: rgb(60, 66, 79);"/>
+                                <i class="fa fa-2x fa-youtube-play mr-2 px-1" data-original-title="" title=""
+                                   aria-describedby="tooltip294032" style="color: rgb(60, 66, 79);"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Newsletter End-->
+
+        <!--Snippet Team Start-->
+        <template id="beauty_team" name="Beauty Team - Fade In">
+            <section class="s_three_columns pb32 o_colored_level" id="team_6"
+                     data-snippet="beauty_team" data-name="Beauty Team - Fade In"
+                     style="position: relative;"
+                     data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Rainy/07&quot;,&quot;colors&quot;:{&quot;c1&quot;:&quot;rgba(255, 108, 141, 0.05)&quot;,&quot;c2&quot;:&quot;rgba(253, 244, 243, 0.24)&quot;,&quot;c3&quot;:&quot;rgba(248, 185, 115, 0.05)&quot;},&quot;flip&quot;:[]}">
+                <div class="o_we_shape o_web_editor_Rainy_07"
+                     style="background-image: url(&quot;/web_editor/shape/web_editor/Rainy/07.svg?c1=rgba(255%2C%20108%2C%20141%2C%200.05)&amp;c2=rgba(253%2C%20244%2C%20243%2C%200.24)&amp;c3=rgba(248%2C%20185%2C%20115%2C%200.05)&quot;);"/>
+                <div class="container">
+                    <div class="row d-flex align-items-stretch">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center o_colored_level pb64">
+                            <h2 class="font-weight-bold pt24 pb24">
+                                <font style="font-size: 36px;" class="o_default_snippet_text">Our Creative Team</font>
+                            </h2>
+                            <p>
+                                <font style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Pellentesque fermentum est in tortor congue suscipit.
+                                    Suspendisse potenti. Aliquam finibus pharetra tellus at
+                                    egestas.Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.
+                                    &amp;nbsp;
+                                </font>
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 s_col_no_bgcolor pt16 pb16">
+                            <div class="bg-white">
+                                <img class="card-img-top"
+                                     src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-510x550.png"
+                                     alt="Odoo - Sample 1 for three columns" data-original-title="" title=""
+                                     aria-describedby="tooltip980270" loading="lazy"/>
+                                <div class="card-body">
+                                    <h3 class="card-title" style="text-align: center; ">
+                                        <font style="color: rgb(60, 66, 79); font-size: 18px;">
+                                            <b>Ashley Fletcher</b>
+                                        </font>
+                                    </h3>
+                                    <p class="card-text" style="text-align: center; ">
+                                        <font style="color: rgb(104, 107, 119); font-size: 16px;">&amp;nbsp;Beautician
+                                        </font>
+                                    </p>
+                                    <p class="text-center mt8 mb8 ">
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-2x fa-facebook text-o-color-1" data-original-title=""
+                                               title="" aria-describedby="tooltip506834" style=""/>
+                                        </a>
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-2x fa-twitter text-o-color-1" data-original-title=""
+                                               title="" aria-describedby="tooltip346907" style=""/>
+                                        </a>
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-2x fa-pinterest text-o-color-1" data-original-title=""
+                                               title="" aria-describedby="tooltip453145" style=""/>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 s_col_no_bgcolor pt16 pb16">
+                            <div class="bg-white">
+                                <img class="card-img-top"
+                                     src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-510x550.png"
+                                     alt="Odoo - Sample 2 for three columns" data-original-title="" title=""
+                                     aria-describedby="tooltip888441" loading="lazy"/>
+                                <div class="card-body">
+                                    <h3 class="card-title" style=" text-align: center;">
+                                        <font style="color: rgb(60, 66, 79); font-size: 18px;">
+                                            <b>Ammey Beaton</b>
+                                        </font>
+                                    </h3>
+                                    <p class="card-text" style="text-align: center; ">
+                                        <font style="color: rgb(104, 107, 119); font-size: 16px;">Hair Stylist</font>
+                                    </p>
+                                    <p class="text-center mt8 mb8 ">
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-2x fa-facebook text-o-color-1" data-original-title=""
+                                               title="" aria-describedby="tooltip438440" style=""/>
+                                        </a>
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-2x fa-twitter text-o-color-1" data-original-title=""
+                                               title="" aria-describedby="tooltip548759" style=""/>
+                                        </a>
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-2x fa-pinterest text-o-color-1" data-original-title=""
+                                               title="" aria-describedby="tooltip486690" style=""/>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 s_col_no_bgcolor pt16 pb16">
+                            <div class="bg-white">
+                                <img class="card-img-top"
+                                     src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-510x550.png"
+                                     alt="Odoo - Sample 3 for three columns" loading="lazy"/>
+                                <div class="card-body">
+                                    <h3 class="card-title" style="text-align: center;">
+                                        <font style="color: rgb(60, 66, 79); font-size: 18px;">
+                                            <b>Ben Janson</b>
+                                        </font>
+                                    </h3>
+                                    <p class="card-text" style="text-align: center; ">
+                                        <font style="color: rgb(104, 107, 119); font-size: 16px;">Beautician</font>
+                                    </p>
+                                    <p class="text-center mt8 mb8 ">
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-2x fa-facebook text-o-color-1" data-original-title=""
+                                               title="" aria-describedby="tooltip422619" style=""/>
+                                        </a>
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-2x fa-twitter text-o-color-1" data-original-title=""
+                                               title="" aria-describedby="tooltip802449" style=""/>
+                                        </a>
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-2x fa-pinterest text-o-color-1" data-original-title=""
+                                               title="" aria-describedby="tooltip995956" style=""/>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Team End-->
+
+        <!--Snippet Gallery Start-->
+        <template id="beauty_gallery" name="Beauty Gallery - Fade In">
+            <section class="sni-block pb64 o_colored_level"
+                     data-snippet="beauty_gallery" data-name="Beauty Gallery">
+                <div class="container container-full">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center o_colored_level pb64">
+                            <h2 class="font-weight-bold pt24 pb24">
+                                <font style="font-size: 36px;">Our Gallery</font>
+                            </h2>
+                            <p>
+                                <font style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Pellentesque fermentum est in tortor congue suscipit.
+                                    Suspendisse potenti. Aliquam finibus pharetra tellus at
+                                    egestas.Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.
+                                    &amp;nbsp;
+                                </font>
+                            </p>
+                        </div>
+                        <div class="col-12 co-md-3 col-lg-3 col-sm-6 o_colored_level">
+                            <img class="img-fluid d-block mx-auto mt8 mb8"
+                                 src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                 data-original-title="" title="" aria-describedby="tooltip914518" loading="lazy"/>
+                        </div>
+                        <div class="col-12 co-md-3 col-lg-3 col-sm-6 o_colored_level">
+                            <img class="img-fluid d-block mx-auto mt8 mb8"
+                                 src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                 data-original-title="" title="" aria-describedby="tooltip914518" loading="lazy"/>
+                        </div>
+                        <div class="col-12 co-md-3 col-lg-3 col-sm-6 o_colored_level">
+                            <img class="img-fluid d-block mx-auto mt8 mb8"
+                                 src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                 data-original-title="" title="" aria-describedby="tooltip914518" loading="lazy"/>
+                        </div>
+                        <div class="col-12 co-md-3 col-lg-3 col-sm-6 o_colored_level">
+                            <img class="img-fluid d-block mx-auto mt8 mb8"
+                                 src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                 data-original-title="" title="" aria-describedby="tooltip914518" loading="lazy"/>
+                        </div>
+                        <div class="col-12 co-md-3 col-lg-3 col-sm-6 o_colored_level">
+                            <img class="img-fluid d-block mx-auto mt8 mb8"
+                                 src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                 data-original-title="" title="" aria-describedby="tooltip914518" loading="lazy"/>
+                        </div>
+                        <div class="col-12 co-md-3 col-lg-3 col-sm-6 o_colored_level">
+                            <img class="img-fluid d-block mx-auto mt8 mb8"
+                                 src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                 loading="lazy"/>
+                        </div>
+                        <div class="col-12 co-md-3 col-lg-3 col-sm-6 o_colored_level">
+                            <img class="img-fluid d-block mx-auto mt8 mb8"
+                                 src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                 loading="lazy"/>
+                        </div>
+                        <div class="col-12 co-md-3 col-lg-3 col-sm-6 o_colored_level">
+                            <img class="img-fluid d-block mx-auto mt8 mb8"
+                                 src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                 loading="lazy"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Gallery End-->
+
+        <!--Snippet Accordion Start-->
+        <template id="beauty_accordion" name="Beauty Accordion - Fade In">
+            <section class="pb64 o_colored_level" id="accordion_10"
+                     data-snippet="beauty_accordion" data-name="Beauty Accordion - Fade In"
+                     data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Rainy/07&quot;,&quot;colors&quot;:{&quot;c1&quot;:&quot;rgba(255, 108, 141, 0.05)&quot;,&quot;c2&quot;:&quot;rgba(253, 244, 243, 0.24)&quot;,&quot;c3&quot;:&quot;rgba(248, 185, 115, 0.05)&quot;},&quot;flip&quot;:[&quot;y&quot;,&quot;x&quot;]}"
+                     style="position: relative;">
+                <div class="o_we_shape o_web_editor_Rainy_07"
+                     style="background-image: url(&quot;/web_editor/shape/web_editor/Rainy/07.svg?c1=rgba(255%2C%20108%2C%20141%2C%200.05)&amp;c2=rgba(253%2C%20244%2C%20243%2C%200.24)&amp;c3=rgba(248%2C%20185%2C%20115%2C%200.05)&amp;flip=xy&quot;); background-position: 50% 100%;"/>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center o_colored_level pb64">
+                            <h2 class="font-weight-bold pt24 pb24">
+                                <font style="font-size: 36px;" class="o_default_snippet_text">Frequently Asked
+                                    Questions
+                                </font>
+                            </h2>
+                            <p>
+                                <font style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Pellentesque fermentum est in tortor congue suscipit.
+                                    Suspendisse potenti. Aliquam finibus pharetra tellus at
+                                    egestas.Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.
+                                    &amp;nbsp;
+                                </font>
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 o_colored_level">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a role="button" data-toggle="collapse" href="#collapseOne"
+                                               aria-expanded="true" data-original-title="" title=""
+                                               aria-describedby="tooltip533018">
+                                                <font style="font-size: 18px;" class="text-o-color-1"
+                                                      data-original-title="" title="" aria-describedby="tooltip803379">
+                                                    How do I choose right
+                                                    treatment and product ?
+                                                </font>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse in collapse show"
+                                         data-parent="#accordion" style="">
+                                        <div class="panel-body">
+                                            <font style="font-size: 16px;">Lorem ipsum dolor
+                                                sit amet, consectetur adipiscing elit. Quisque posuere augue
+                                                porta turpis ornare, nec commodo dui pellentesque. Sed at
+                                                metus hendrerit, varius nisl et, iaculis ex. Nulla vitae
+                                                ipsum diam. Pellentesque vitae metus vitae massa egestas
+                                                posuere. Mauris ultricies vehicula tempor. Pellentesque
+                                                justo turpis, blandit nec ex eu, tempus placerat diam. Morbi
+                                                a felis commodo eros consectetur rhoncus sed eget lectus.
+                                                Praesent non erat vehicula, posuere massa id, ultricies est.
+                                                Pellentesque sit amet venenatis est, quis posuere ipsum.
+                                                &amp;nbsp;
+                                            </font>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a role="button" data-toggle="collapse" href="#collapseTwo"
+                                               class="collapsed" data-original-title="" title=""
+                                               aria-describedby="tooltip747353" aria-expanded="false">
+                                                <font style="font-size: 18px;" class="text-o-color-1"
+                                                      data-original-title="" title="" aria-describedby="tooltip292601">
+                                                    Are reservations
+                                                    necessary ?
+                                                </font>
+                                                <font style="" class="text-o-color-1" data-original-title="" title=""
+                                                      aria-describedby="tooltip292601">
+                                                    &amp;nbsp;
+                                                </font>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse" data-parent="#accordion"
+                                         style="">
+                                        <div class="panel-body">
+                                            <font style="font-size: 16px;">Lorem ipsum dolor
+                                                sit amet, consectetur adipiscing elit. Quisque posuere augue
+                                                porta turpis ornare, nec commodo dui pellentesque. Sed at
+                                                metus hendrerit, varius nisl et, iaculis ex. Nulla vitae
+                                                ipsum diam. Pellentesque vitae metus vitae massa egestas
+                                                posuere. Mauris ultricies vehicula tempor. Pellentesque
+                                                justo turpis, blandit nec ex eu, tempus placerat diam. Morbi
+                                                a felis commodo eros consectetur rhoncus sed eget lectus.
+                                                Praesent non erat vehicula, posuere massa id, ultricies est.
+                                                Pellentesque sit amet venenatis est, quis posuere ipsum.
+                                                &amp;nbsp;
+                                            </font>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a role="button" data-toggle="collapse" href="#collapseThree"
+                                               class="collapsed" data-original-title="" title=""
+                                               aria-describedby="tooltip732119" aria-expanded="false">
+                                                <font style="font-size: 18px;" class="text-o-color-1"
+                                                      data-original-title="" title="" aria-describedby="tooltip515546">
+                                                    Can I book extra service
+                                                    while I am at the spa ?
+                                                </font>
+                                                <font style="" class="text-o-color-1">&amp;nbsp;</font>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse" data-parent="#accordion"
+                                         style="">
+                                        <div class="panel-body">
+                                            <font style="font-size: 16px;">Lorem ipsum dolor
+                                                sit amet, consectetur adipiscing elit. Quisque posuere augue
+                                                porta turpis ornare, nec commodo dui pellentesque. Sed at
+                                                metus hendrerit, varius nisl et, iaculis ex. Nulla vitae
+                                                ipsum diam. Pellentesque vitae metus vitae massa egestas
+                                                posuere. Mauris ultricies vehicula tempor. Pellentesque
+                                                justo turpis, blandit nec ex eu, tempus placerat diam. Morbi
+                                                a felis commodo eros consectetur rhoncus sed eget lectus.
+                                                Praesent non erat vehicula, posuere massa id, ultricies est.
+                                                Pellentesque sit amet venenatis est, quis posuere ipsum.
+                                                &amp;nbsp;
+                                            </font>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Accordion End-->
+
+        <!--Snippet Blog Heading Start-->
+        <template id="beauty_blog_heading" name="Beauty Blog Heading - Fade In">
+            <section class="pb64 o_colored_level"
+                     data-snippet="beauty_blog_heading"
+                     data-name="Beauty Blog Heading">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center o_colored_level">
+                            <h2 class="font-weight-bold pt24 pb24">
+                                <font style="font-size: 36px;" class="o_default_snippet_text">Blog &amp;amp; Tips</font>
+                            </h2>
+                            <p>
+                                <font style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Pellentesque fermentum est in tortor congue suscipit.
+                                    Suspendisse potenti. Aliquam finibus pharetra tellus at
+                                    egestas.Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.
+                                    &amp;nbsp;
+                                </font>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Blog Heading End-->
+
+        <!--Snippet Contact Us Start-->
+        <template id="beauty_contact_us" name="Beauty Contact Us - Fade In">
+            <section
+                    class="s_website_form py-5 contact_us_3 o_colored_level undefined oe_img_bg"
+                    data-visible="contactus" data-snippet="contact_us_6" data-name="Contact us 6"
+                    style="background-color: rgb(104, 107, 119) !important; background-image: url(&quot;/theme_beauty_ultimate_01/static/src/img/placeholder-image-1170.jpg&quot;);"
+                    data-original-id="488"
+                    data-original-src="/theme_beauty_ultimate_01/static/src/img/placeholder-image-1170.jpg"
+                    data-mimetype="image/jpeg" data-resize-width="1920">
+                <div class="container">
+                    <div class="row s_nb_column_fixed">
+                        <div class="col-lg-12 s_title text-center mb32 o_colored_level" data-name="Title">
+                            <h1 class="s_title_thin">
+                                <font style="color: rgb(60, 66, 79);">
+                                    <b>Contact Us
+                                        &amp;nbsp;
+                                    </b>
+                                </font>
+                            </h1>
+                        </div>
+                        <div class="col-lg-7 s_text pb16 o_colored_level" data-name="Text">
+                            <form action="/website_form/" method="post" data-model_name="crm.lead"
+                                  data-success-mode="redirect" data-success-page="/contactus-thank-you"
+                                  class="s_website_form container-fluid o_mark_required" data-mark="*"
+                                  enctype="multipart/form-data" data-editable-form="false" data-name="Contact us 5">
+                                <div class="justify-content-center s_website_form_rows row s_col_no_bgcolor">
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div class="form-group s_website_form_field s_website_form_required">
+                                            <label class="col-form-label s_website_form_label d-none"
+                                                   for="contact_name">
+                                                <span class="s_website_form_label_content"/>
+                                            </label>
+                                            <input type="text" class="form-control  s_website_form_input"
+                                                   name="contact_name" placeholder="Your Name" required="" value=""/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div class="form-group s_website_form_field">
+                                            <label class="col-form-label s_website_form_label d-none"
+                                                   for="contact_name">
+                                                <span class="s_website_form_label_content"/>
+                                            </label>
+                                            <input type="text" class="form-control s_website_form_input" name="phone"
+                                                   placeholder="Phone Number" value=""/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div class="form-group s_website_form_field s_website_form_required">
+                                            <label class="col-form-label s_website_form_label d-none"
+                                                   for="contact_name">
+                                                <span class="s_website_form_label_content"/>
+                                            </label>
+                                            <input type="text" class="form-control  s_website_form_input"
+                                                   name="email_from" required="" placeholder="Email" value=""/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                        <div class="form-group s_website_form_field">
+                                            <label class="col-form-label s_website_form_label d-none"
+                                                   for="contact_name">
+                                                <span class="s_website_form_label_content"/>
+                                            </label>
+                                            <input type="text" class="form-control  s_website_form_input"
+                                                   name="partner_name" required="" placeholder="Your Company" value=""/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                        <div class="form-group s_website_form_field s_website_form_model_required">
+                                            <label class="col-form-label s_website_form_label d-none"
+                                                   for="contact_name">
+                                                <span class="s_website_form_label_content"/>
+                                            </label>
+                                            <input type="text" class="form-control  s_website_form_input" name="name"
+                                                   required="" placeholder="Subject" value=""/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group s_website_form_field s_website_form_required">
+                                            <label class="col-form-label s_website_form_label d-none"
+                                                   for="contact_name">
+                                                <span class="s_website_form_label_content"/>
+                                            </label>
+                                            <textarea class="form-control  s_website_form_input" name="description"
+                                                      required="" placeholder="Your Question" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12 s_website_form_submit">
+                                        <div class="s_btn text-center" data-name="Buttons">
+                                            <a href="#" role="button"
+                                               class="btn btn-primary flat font-weight-bold o_website_form_send"
+                                               data-original-title="" title="" aria-describedby="tooltip346624">
+                                                <font style="font-size: 14px;" class="text-o-color-4">Send Message
+                                                </font>
+                                            </a>
+                                            <span id="o_website_form_result"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-5 o_colored_level">
+                            <div class="contact-page-side-content">
+                                <div class="single-contact-block">
+                                    <h4>
+                                        <i class="fa pe-7s-map-marker" data-original-title="" title=""
+                                           aria-describedby="tooltip254711" style="color: rgb(60, 66, 79);"/>
+                                        <font style="color: rgb(60, 66, 79);">
+                                            <b>Address</b>
+                                        </font>
+                                    </h4>
+                                    <span t-field="res_company.street"/>
+                                    <span t-field="res_company.city"/>
+                                    <span t-field="res_company.state_id.name"/>
+                                    <span t-field="res_company.zip"/>
+                                    <span t-field="res_company.country_id.name"/>
+                                </div>
+                                <div class="single-contact-block">
+                                    <h4>
+                                        <b>
+                                            <i class="fa pe-7s-call" data-original-title="" title=""
+                                               aria-describedby="tooltip480444"/>
+                                            <font style="color: rgb(60, 66, 79);">
+                                                Phone
+                                                &amp;nbsp;
+                                            </font>
+                                        </b>
+                                    </h4>
+                                    <p>
+                                        <font style="font-size: 16px;" t-field="res_company.phone"></font>
+                                    </p>
+                                </div>
+                                <div class="single-contact-block">
+                                    <h4>
+                                        <b>
+                                            <i class="fa pe-7s-mail"/>
+                                            <font style="color: rgb(60, 66, 79);">
+                                                Email Address
+                                                &amp;nbsp;
+                                            </font>
+                                        </b>
+                                    </h4>
+                                    <p class="o_default_snippet_text">
+                                        <font style="font-size: 16px;" t-field="res_company.email"></font>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Contact Us End-->
+
+        <!--Snippet Brand Logo Start-->
+        <template id="beauty_brand_logo" name="Beauty Brand Logo - Fade In">
+            <section class="pt64 pb64 bg-beta oe_custom_bg o_colored_level"
+                     data-snippet="beauty_brand_logo" data-name="Beauty Brand Logo">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                            <img src="/theme_beauty_ultimate_01/static/src/img/brand-logo.png"
+                                 class="img-fluid mb8 mt8" alt="Brand Logo" title="Brand Logo"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                            <img src="/theme_beauty_ultimate_01/static/src/img/brand-logo.png"
+                                 class="img-fluid mb8 mt8" alt="Brand Logo" title="Brand Logo"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                            <img src="/theme_beauty_ultimate_01/static/src/img/brand-logo.png"
+                                 class="img-fluid mb8 mt8" alt="Brand Logo" title="Brand Logo"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                            <img src="/theme_beauty_ultimate_01/static/src/img/brand-logo.png"
+                                 class="img-fluid mb8 mt8" alt="Brand Logo" title="Brand Logo"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                            <img src="/theme_beauty_ultimate_01/static/src/img/brand-logo.png"
+                                 class="img-fluid mb8 mt8" alt="Brand Logo" title="Brand Logo"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                            <img src="/theme_beauty_ultimate_01/static/src/img/brand-logo.png"
+                                 class="img-fluid mb8 mt8" alt="Brand Logo" title="Brand Logo"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Brand Logo End-->
+
+        <!--Snippets Assets Start-->
+        <template id="demo_snippets" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_structure']" position="before">
+                <div id="snippet_demo_snippets" class="o_panel">
+                    <div class="o_panel_header">
+                        <i class="fa fa-th-large"/>
+                        Beauty Ultimate 01
+                    </div>
+                    <div class="o_panel_body">
+                        <t t-snippet="theme_beauty_ultimate_01.beauty_banner"
+                           t-thumbnail="/theme_beauty_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_beauty_ultimate_01.beauty_about_us"
+                           t-thumbnail="/theme_beauty_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_beauty_ultimate_01.beauty_service"
+                           t-thumbnail="/theme_beauty_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_beauty_ultimate_01.beauty_product"
+                           t-thumbnail="/theme_beauty_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_beauty_ultimate_01.beauty_left_content"
+                           t-thumbnail="/theme_beauty_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_beauty_ultimate_01.beauty_testimonial"
+                           t-thumbnail="/theme_beauty_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_beauty_ultimate_01.beauty_newsletter"
+                           t-thumbnail="/theme_beauty_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_beauty_ultimate_01.beauty_team"
+                           t-thumbnail="/theme_beauty_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_beauty_ultimate_01.beauty_gallery"
+                           t-thumbnail="/theme_beauty_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_beauty_ultimate_01.beauty_accordion"
+                           t-thumbnail="/theme_beauty_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_beauty_ultimate_01.beauty_blog_heading"
+                           t-thumbnail="/theme_beauty_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_beauty_ultimate_01.beauty_contact_us"
+                           t-thumbnail="/theme_beauty_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_beauty_ultimate_01.beauty_brand_logo"
+                           t-thumbnail="/theme_beauty_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+        <!--Snippets Assets End-->
+    </data>
+</odoo>

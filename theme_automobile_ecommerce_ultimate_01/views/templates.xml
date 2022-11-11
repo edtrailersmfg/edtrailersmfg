@@ -1,0 +1,208 @@
+<odoo>
+    <data>
+        <!--Snippet Banner Start-->
+        <template id="automobile_banner" name="Automobile Banner">
+            <section
+                    class="s_cover parallax align-content-center align-items-center d-flex full-height s_parallax_is_fixed s_parallax_no_overflow_hidden"
+                    data-scroll-background-ratio="1" style="background-image: none;">
+                <span class="s_parallax_bg oe_img_bg oe_custom_bg"
+                      style="background-image: url(&quot;/theme_automobile_ecommerce_ultimate_01/static/src/img/placeholder-1170.jpg&quot;); background-position: 50% 0px;"/>
+                <div class="container">
+                    <div class="row s_nb_column_fixed">
+                        <div class="col-lg-12 s_title" data-name="Title">
+                            <h1 style="font-size: 62px; text-align: center;">
+                                <font style="background-color: rgba(2, 2, 2, 0.34); color: rgb(255, 255, 255); font-size: 24px;"
+                                      class="s_letter_spacing_3">HIGH-END
+                                </font>
+                            </h1>
+                            <h1 style="font-size: 62px; text-align: center;">
+                                <font style="background-color: rgba(2, 2, 2, 0.34); color: rgb(255, 255, 255);">New Car
+                                    Interior
+                                </font>
+                            </h1>
+                        </div>
+                        <div class="col-lg-12 text-center pt16 pb16" data-name="Buttons">
+                            <a href="/contactus" class="mb8 mt8 flat flat flat btn btn-dark flat btn-lg"
+                               data-original-title="" title="" aria-describedby="tooltip964010">SHOP NOW
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Banner End-->
+
+        <!--Snippet Sale Image Start-->
+        <template id="automobile_sale_image" name="Automobile Sale Image">
+            <section class="pt64 pb64" id="ecommerce_block_3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-4 col-lg-4 col-sm-6 mt8 mb8">
+                            <div class="hover_effect">
+                                <a href="#">
+                                    <img class="img-fluid d-block mx-auto"
+                                         src="/theme_automobile_ecommerce_ultimate_01/static/src/img/placeholder-360x525.png"
+                                         data-original-title="" title="" aria-describedby="tooltip867057"/>
+                                </a>
+                                <div class="col-12 img-content-2 mt-lg-5">
+                                    <p style="text-align: center; ">
+                                        <a href="#" class="btn btn-dark flat btn-lg" data-original-title="" title=""
+                                           aria-describedby="tooltip373208">HELMETS
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-8 col-lg-8 col-sm-6">
+                            <div class="row">
+                                <div class="col-12 co-md-6 col-lg-6 col-sm-6 mt8 mb8">
+                                    <div class="hover_effect">
+                                        <a href="#">
+                                            <img class="img-fluid d-block mx-auto"
+                                                 src="/theme_automobile_ecommerce_ultimate_01/static/src/img/placeholder-360x250.png"
+                                                 data-original-title="" title="" aria-describedby="tooltip867057"/>
+                                        </a>
+                                        <div class="col-12 img-content-2 mt-lg-4">
+                                            <p style="text-align: center; ">
+                                                <a href="#" class="btn btn-dark flat btn-lg" data-original-title=""
+                                                   title="" aria-describedby="tooltip256968">BODY&amp;nbsp; PARTS
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 co-md-6 col-lg-6 col-sm-6 mt8 mb8">
+                                    <div class="hover_effect">
+                                        <a href="#">
+                                            <img class="img-fluid d-block mx-auto"
+                                                 src="/theme_automobile_ecommerce_ultimate_01/static/src/img/placeholder-360x250.png"
+                                                 data-original-title="" title="" aria-describedby="tooltip867057"/>
+                                        </a>
+                                        <div class="col-12 img-content-2 mt-lg-4">
+                                            <p style="text-align: center; ">
+                                                <a href="#" class="btn btn-dark flat btn-lg" data-original-title=""
+                                                   title="" aria-describedby="tooltip330119">LIGHTS &amp;amp; LAMP
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12 col-lg-12 col-sm-12 mt-lg-3 mb16">
+                                    <div class="hover_effect">
+                                        <a href="#">
+                                            <img class="img-fluid d-block mx-auto"
+                                                 src="/theme_automobile_ecommerce_ultimate_01/static/src/img/placeholder-750x250.png"
+                                                 data-original-title="" title="" aria-describedby="tooltip867057"/>
+                                        </a>
+                                        <div class="col-12 img-content-4 text-center">
+                                            <h5>
+                                                <a href="#" class="btn btn-dark flat btn-lg">WHEELS &amp;amp; TIRES
+                                                </a>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Sale Image End-->
+
+        <!--Snippet Promo Image Start-->
+        <template id="automobile_promo_image" name="Automobile Promo Image">
+            <section class="pt64 pb64 oe_img_bg oe_custom_bg"
+                     style="background-image: url(&quot;/theme_automobile_ecommerce_ultimate_01/static/src/img/placeholder-1170.jpg&quot;);">
+                <div class="container">
+                    <div class="row justify-content-end">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-8 right  text-center pt64 pb64">
+                            <h2 class="s_letter_spacing_3">
+                                <font style="color: rgb(255, 255, 255); font-size: 18px;"
+                                      class="o_default_snippet_text">CUSTOM WHEELS
+                                </font>
+                            </h2>
+                            <h2 class="s_letter_spacing_3">
+                                <font style="color: rgb(255, 255, 255); font-size: 36px;"
+                                      class="o_default_snippet_text">SYSTEMS NEW TECHNOLOGY
+                                </font>
+                            </h2>
+                            <a href="#" class="text-decoration-none btn btn-dark flat btn-lg" data-original-title=""
+                               title="" aria-describedby="tooltip250793">Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Promo Image End-->
+
+        <!--Snippet Features Start-->
+        <template id="automobile_features" name="Automobile Features">
+            <section class="bg-primary oe_custom_bg pt16 pb16">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="row ">
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4  media">
+                                    <i class="fa fa-3x mr-3 mt-2 text-o-color-3 pe-7s-headphones fa-500px"
+                                       data-original-title="" title="" aria-describedby="tooltip334152" style=""/>
+                                    <div class="media-body">
+                                        <h3 class=" mt8">
+                                            <font style="color: rgb(255, 255, 255); font-size: 18px;">24x7 Support
+                                            </font>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4  media">
+                                    <i class="fa fa-3x fa-500px mr-3 mt-2 pe-7s-cash text-o-color-3" data-original-title=""
+                                       title="" aria-describedby="tooltip423760" style=""/>
+                                    <div class="media-body">
+                                        <h3 class=" mt8">
+                                            <font style="color: rgb(255, 255, 255); font-size: 18px;">Money Back
+                                                Guarantee
+                                            </font>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4  media">
+                                    <i class="fa fa-3x fa-500px mr-3 mt-2 pe-7s-car text-o-color-3" data-original-title=""
+                                       title="" aria-describedby="tooltip468230" style=""/>
+                                    <div class="media-body">
+                                        <h3 class="mt8 ">
+                                            <font style="color: rgb(255, 255, 255); font-size: 18px;">Free Shipping
+                                            </font>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Features End-->
+
+        <!--Snippets Assets-->
+        <template id="demo_snippets" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_structure']" position="before">
+                <div id="snippet_demo_snippets" class="o_panel">
+                    <div class="o_panel_header">
+                        <i class="fa fa-th-large"/>
+                        Automobile Ecommerce Ultimate 01
+                    </div>
+                    <div class="o_panel_body">
+                        <t t-snippet="theme_automobile_ecommerce_ultimate_01.automobile_banner"
+                           t-thumbnail="/theme_automobile_ecommerce_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_automobile_ecommerce_ultimate_01.automobile_sale_image"
+                           t-thumbnail="/theme_automobile_ecommerce_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_automobile_ecommerce_ultimate_01.automobile_promo_image"
+                           t-thumbnail="/theme_automobile_ecommerce_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_automobile_ecommerce_ultimate_01.automobile_features"
+                           t-thumbnail="/theme_automobile_ecommerce_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

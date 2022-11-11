@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="automobile_ecommerce_footer" inherit_id="website.layout"
+              name="Automobile Ecommerce Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer"
+                         style="border-top:none;">
+                    <div class="pt64 pb32" id="footer_3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb32">
+                                    <h5>
+                                        <font style="color: rgb(255, 255, 255);">CONTACT</font>
+                                    </h5>
+                                    <p class="mb32 mt24 o_default_snippet_text">
+                                        <font class="text-delta" style="">Lorem ipsum dolor sit amet, consectetur
+                                            adipisicing elit, sed do eiusmod tempor incididunt ut.&amp;nbsp;
+                                        </font>
+                                    </p>
+                                    <div class="o_default_snippet_text media mb16">
+                                        <i class="fa fa-home mr-3 mt-1 text-delta" data-original-title="" title=""
+                                           aria-describedby="tooltip224421" style=""/>
+                                        <div class="media-body">
+                                            <font class="text-delta" style="">
+                                                <span t-field="res_company.street"/>
+                                                <span t-field="res_company.city"/>
+                                                <span t-field="res_company.state_id.name"/>
+                                            </font>
+                                        </div>
+                                    </div>
+                                    <div class="o_default_snippet_text media mb16">
+                                        <i class="fa fa-envelope-o mr-3 mt-1 text-delta" style=""/>
+                                        <div class="media-body">
+                                            <font class="text-delta" style="">
+                                                <span t-field="res_company.email"/>
+                                            </font>
+                                        </div>
+                                    </div>
+                                    <div class="o_default_snippet_text media mb16">
+                                        <i class="fa fa-phone mr-3 mt-1 text-delta" style=""/>
+                                        <div class="media-body">
+                                            <font class="text-delta" style="">
+                                                <span t-field="res_company.phone"/>
+                                            </font>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-2 mb32">
+                                    <h5>
+                                        <font style="color: rgb(255, 255, 255);">MY ACCOUNT</font>
+                                    </h5>
+                                    <ul class="list-unstyled mt24">
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font style="" class="text-delta">My Account</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font style="" class="text-delta">Order History</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font style="" class="text-delta">Wishlist</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font style="" class="text-delta">Personal Info</font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-2 mb32">
+                                    <h5>
+                                        <font style="color: rgb(255, 255, 255);">INFORMATION</font>
+                                    </h5>
+                                    <ul class="list-unstyled mt24">
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font style="" class="text-delta">AbouUs</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font style="" class="text-delta">Delivery Information</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font style="" class="text-delta">Privacy Policy</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font style="" class="text-delta">Terms &amp;amp; Condition</font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb32">
+                                    <h5 class="mb24">
+                                        <font style="color: rgb(255, 255, 255);">OUR NEWSLETTER</font>
+                                    </h5>
+                                    <p class="o_default_snippet_text">
+                                        <font class="text-delta" style="">Lorem Ipsum is simply dummy text of the
+                                            printing and typesetting industry. Lorem Ipsum has been the industry's
+                                            standard dummy.&amp;nbsp;
+                                        </font>
+                                    </p>
+                                    <div class="input-group js_subscribe hidden d-block" data-list-id="1"
+                                         data-subscribe="off">
+                                        <input type="email" name="email"
+                                               class="js_subscribe_email form-control w-100 mb8"
+                                               placeholder="your email..."/>
+                                        <div class="input-group-btn">
+                                            <a href="#"
+                                               class="btn btn-primary js_subscribe_btn o_default_snippet_text w-100">
+                                                Subscribe
+                                            </a>
+                                            <a href="#"
+                                               class="btn btn-success js_subscribed_btn hidden o_default_snippet_text w-100 d-none"
+                                               disabled="disabled">Thanks
+                                            </a>
+                                        </div>
+                                        <div class="alert alert-success hidden o_default_snippet_text">Thanks for your
+                                            subscription!
+                                        </div>
+                                    </div>
+                                    <div class="icon_bg mt-2">
+                                        <a href="/website/social/facebook">
+                                            <i class="fa fa-facebook  text-delta" data-original-title="" title=""
+                                               aria-describedby="tooltip816516" style="background-color: unset;"/>
+                                        </a>
+                                        <a href="/website/social/twitter">
+                                            <i class="fa fa-twitter text-delta" style="background-color: unset;"
+                                               data-original-title="" title="" aria-describedby="tooltip709641"/>
+                                        </a>
+                                        <a href="/website/social/instagram">
+                                            <i class="fa fa-instagram  text-delta" style="background-color: unset;"
+                                               data-original-title="" title="" aria-describedby="tooltip118072"/>
+                                        </a>
+                                        <a href="/website/social/youtube">
+                                            <i class="fa fa-youtube-play  text-delta" data-original-title="" title=""
+                                               aria-describedby="tooltip245883" style="background-color: unset;"/>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

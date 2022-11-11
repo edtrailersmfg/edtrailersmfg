@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="mechanic_theme_footer" inherit_id="website.layout"
+              name="Mechanic Theme Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+            <section class="oe_structure" id="footer">
+                <div class="pt64  oe_custom_bg pb8" id="footer_17">
+                    <div class="container">
+                        <div class="row   p-4">
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                <div class="media sepretor">
+                                    <i class="fa fa-3x text_style pe-7s-map-marker fa-500px" style=""/>
+                                    <div class="icon_border"/>
+                                    <div class="media-body px-3">
+                                        <span t-field="res_company.street" style="font-size: 18px;"/>
+                                        <span t-field="res_company.city" style="font-size: 18px;"/>
+                                        <span t-field="res_company.state_id.name" style="font-size: 18px;"/>
+                                        <span t-field="res_company.zip" style="font-size: 18px;"/>
+                                        <span t-field="res_company.country_id.name" style="font-size: 18px;"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                <div class="media sepretor">
+                                    <i class="fa fa-phone fa-3x text_style"/>
+                                    <div class="icon_border"/>
+                                    <div class="media-body px-3">
+                                        <p class="mb0">
+                                            <font style="font-size: 18px;">Call US</font>
+                                        </p>
+                                        <p t-field="res_company.phone" style="font-size: 18px;"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                <div class="media">
+                                    <i class="fa fa-map-o  fa-3x text_style"/>
+                                    <div class="icon_border"/>
+                                    <div class="media-body px-3">
+                                        <p class="mb0">
+                                            <font style="font-size: 18px;">24/7 Road Side Assistant</font>
+                                        </p>
+                                        <p>
+                                            <font style="font-size: 18px;">(052) 577 2725</font>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="pb32 pt4  oe_custom_bg" id="footer_18" style="">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb32">
+                                <h5 class="mb16" style="color: rgb(255, 255, 255);">
+                                    <font style="font-size: 18px;">
+                                        <b>ABOUT US</b>
+                                    </font>
+                                </h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.lorem ipsum dolor sit
+                                    amet, consectetur adipiscing elit.
+                                </p>
+                                <div>
+                                    <a href="/website/social/facebook">
+                                        <i class="fa fa-facebook px-2" data-original-title="" title=""
+                                           aria-describedby="tooltip622514" style="color: rgb(255, 255, 255);"/>
+                                    </a>
+                                    <a href="/website/social/twitter">
+                                        <i class="fa fa-twitter px-2" data-original-title="" title=""
+                                           aria-describedby="tooltip2053" style="color: rgb(255, 255, 255);"/>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-google plus px-2" data-original-title="" title=""
+                                           aria-describedby="tooltip711352" style="color: rgb(255, 255, 255);"/>
+                                    </a>
+                                    <a href="/website/social/linkedin">
+                                        <i class="fa fa-linkedin px-2" data-original-title="" title=""
+                                           aria-describedby="tooltip589495" style="color: rgb(255, 255, 255);"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb16">
+                                <h5 class="mb16">
+                                    <b>
+                                        <font style="color: rgb(255, 255, 255);">OUR SERVICES</font>
+                                    </b>
+                                </h5>
+                                <ul class="list-unstyled text-decoration-none">
+                                    <li>
+                                        <a href="#">
+                                            <font style="color: rgb(255, 255, 255);">OIL AND FILTERS</font>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <font style="color: rgb(255, 255, 255);">VEHICLE ISPECTION</font>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <font style="color: rgb(255, 255, 255);">RENOVATE ENGINE</font>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <font style="color: rgb(255, 255, 255);" data-original-title="" title=""
+                                                  aria-describedby="tooltip90223">CARPAINTING
+                                            </font>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3  pb32">
+                                <h5 class="font-weight-bold o_default_snippet_text">
+                                    <font style="color: rgb(255, 255, 255);">TAG CLOUD</font>
+                                </h5>
+                                <div class="pt16">
+                                    <h5>
+                                        <span class="badge badge-secondary p-2 button_style">BELTS</span>
+                                        <span class="badge badge-secondary button_style p-2">BREAKS</span>
+                                        <span class="badge badge-secondary button_style p-2">DIAGONIST</span>
+                                        <span class="badge badge-secondary p-2 button_style">ENGINE</span>
+                                        <span class="badge badge-secondary button_style p-2">FILTERS</span>
+                                        <span class="badge badge-secondary button_style p-2">HEATING</span>
+                                        <span class="badge badge-secondary p-2">OIL</span>
+                                        <span class="badge badge-secondary p-2">TIRES</span>
+                                        <span class="badge badge-secondary p-2">TRANSMISSION</span>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb16">
+                                <h5 class="mb16">
+                                    <b>
+                                        <font style="color: rgb(255, 255, 255);">HOURS</font>
+                                    </b>
+                                </h5>
+                                <ul class="list-unstyled text-decoration-none">
+                                    <li>MON TO SAT</li>
+                                    <li style="list-style: none; padding-top: 1px; padding-bottom: 1px; font-family: &quot;Open Sans&quot;; line-height: 24px; padding-left: 0px; border: none;">
+                                        7:30am - 5:30pm
+                                    </li>
+                                    <li style="list-style: none; padding-top: 1px; padding-bottom: 1px; font-family: &quot;Open Sans&quot;; line-height: 24px; padding-left: 0px; border: none;"/>
+                                    <li>
+                                        <br/>
+                                    </li>
+                                    <li>SUN</li>
+                                    <li>Closed</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

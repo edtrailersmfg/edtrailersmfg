@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="loan_theme_footer" inherit_id="website.layout"
+              name="Laon Theme Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section class="oe_structure mb32" id="footer">
+                    <div class="pt64 pb32" id="footer_7">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb16">
+                                    <img style="margin:0 auto;" class="img img-responsive img-fluid"
+                                         src="/logo.png" alt="Logo of YourCompany"
+                                         title="YourCompany"/>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 offset-lg-3 offset-md-3 mb48">
+                                    <div class="input-group js_subscribe hidden" data-list-id="2" data-subscribe="off">
+                                        <input type="email" name="email" class="js_subscribe_email form-control br-left"
+                                               placeholder="your email..." style="height: 42px;"/>
+                                        <span class="input-group-btn">
+                                            <a href="#"
+                                               class="btn br-right px-3 py-2 btn-primary js_subscribe_btn o_default_snippet_text">
+                                                Subscribe
+                                            </a>
+                                            <a href="#"
+                                               class="btn br-right px-3 py-2 btn-success js_subscribed_btn hidden o_default_snippet_text d-none"
+                                               disabled="disabled">Thanks
+                                            </a>
+                                        </span>
+                                        <div class="alert alert-success hidden o_default_snippet_text d-none">Thanks for
+                                            your subscription!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt64" id="footer_16">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-3 pb16">
+                                    <h5 class="pb16 o_default_snippet_text">
+                                        <font style="color: rgb(255, 255, 255); font-size: 24px;">About Us</font>
+                                    </h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla.
+                                    </p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-2 col-lg-2 pb16">
+                                    <h5 class="pb16 o_default_snippet_text">
+                                        <font style="color: rgb(255, 255, 255); font-size: 24px;">
+                                            Menu
+                                        </font>
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#">
+                                                <font style="color: rgb(255, 255, 255);" data-original-title="" title=""
+                                                      aria-describedby="tooltip558347">Home
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <font style="color: rgb(255, 255, 255);" data-original-title="" title=""
+                                                      aria-describedby="tooltip871119">About us
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <font style="color: rgb(255, 255, 255);" data-original-title="" title=""
+                                                      aria-describedby="tooltip9899">Services
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <font style="color: rgb(255, 255, 255);">Features</font>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <font style="color: rgb(255, 255, 255);" data-original-title="" title=""
+                                                      aria-describedby="tooltip786625">Testimonials
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li>&amp;nbsp;
+                                            <a href="#">
+                                                <font style="color: rgb(255, 255, 255);" data-original-title="" title=""
+                                                      aria-describedby="tooltip588667">Contact
+                                                </font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-2 col-lg-2 pb16">
+                                    <h5 class="pb16">
+                                        <font style="color: rgb(255, 255, 255); font-size: 24px;">Get A Loan</font>
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li>Car Loan</li>
+                                        <li>Home Loan</li>
+                                        <li>Personal Loan</li>
+                                        <li>Property Loan</li>
+                                        <li>Business Loan</li>
+                                        <li>Student Loan</li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-4 col-lg-2 pb16">
+                                    <h5 class="pb16 o_default_snippet_text">
+                                        <font style="color: rgb(255, 255, 255); font-size: 24px;">
+                                            Contact Us
+                                        </font>
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <address class="o_default_snippet_text">
+                                                <b class="o_default_snippet_text">Address</b>
+                                                <br/>
+                                                <span t-field="res_company.street"/>
+                                                <span t-field="res_company.city"/>
+                                                <span t-field="res_company.state_id.name"/>
+                                                <span t-field="res_company.zip"/>
+                                                <span t-field="res_company.country_id.name"/>
+                                            </address>
+                                        </li>
+                                        <li class="pb16">
+                                            <b>Email</b>
+                                            <br/>
+                                            <p t-field="res_company.email"/>
+                                        </li>
+                                        <li class="o_default_snippet_text">
+                                            <b class="o_default_snippet_text">Phone</b>
+                                            <br/>
+                                            <p t-field="res_company.phone"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                                    <h5 class="pb16 o_default_snippet_text">
+                                        <font style="color: rgb(255, 255, 255); font-size: 24px;">
+                                            Business Hours
+                                        </font>
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li class="o_default_snippet_text">Monday - Saturday
+                                            <br/>
+                                            8 AM - 5 PM EST
+                                        </li>
+                                    </ul>
+                                    <h5 class="pt16 pb16 o_default_snippet_text">
+                                        <font style="color: rgb(255, 255, 255); font-size: 24px;">
+                                            Social Media
+                                        </font>
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <a href="/website/social/facebook">
+                                            <i class="fa fa-facebook px-2 text-white"/>
+                                        </a>
+                                        <a href="/website/social/twitter">
+                                            <i class="fa fa-twitter px-2 text-white"/>
+                                        </a>
+                                        <a href="/website/social/linkedin">
+                                            <i class="fa fa-linkedin px-2 text-white"/>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-pinterest px-2 text-white"/>
+                                        </a>
+                                    </ul>
+                                    <ul class="list-unstyled">
+                                        <a href="#">
+                                            <i class="fa fa-behance px-2 text-white"/>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-dribbble px-2 text-white"/>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-google-plus px-2 text-white"/>
+                                        </a>
+                                        <a href="/website/social/facebook">
+                                            <i class="fa fa-facebook px-2 text-white"/>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>
+
+

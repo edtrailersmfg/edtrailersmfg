@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <record id="image_content_1" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_1</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_1</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/financial_planning.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_2" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_2</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_2</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/team_03.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_3" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_3</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_3</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/company-3.png</field>
+        </record>
+        
+        
+        <record id="image_content_4" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_4</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_4</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/company-6.png</field>
+        </record>
+        
+        
+        <record id="image_content_5" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_5</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_5</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/business_stretegy.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_6" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_6</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_6</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/company-5.png</field>
+        </record>
+        
+        
+        <record id="image_content_7" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_7</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_7</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/banner.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_8" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_8</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_8</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/team_02.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_9" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_9</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_9</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/blog_03.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_10" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_10</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_10</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/business_facility.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_11" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_11</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_11</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/core_feature_bg.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_12" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_12</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_12</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/blog_01.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_13" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_13</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_13</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/company-2.png</field>
+        </record>
+        
+        
+        <record id="image_content_14" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_14</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_14</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/company-1.png</field>
+        </record>
+        
+        
+        <record id="image_content_15" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_15</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_15</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/consultancy_ultimate_02_logo.png</field>
+        </record>
+        
+        
+        <record id="image_content_16" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_16</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_16</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/tax_planning.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_17" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_17</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_17</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/insurence_consulting.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_18" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_18</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_18</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/mutual_funds.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_19" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_19</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_19</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/company-4.png</field>
+        </record>
+        
+        
+        <record id="image_content_20" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_20</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_20</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/consultancy_ultimate_02_footer_logo.png</field>
+        </record>
+        
+        
+        <record id="image_content_21" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_21</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_21</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/team_01.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_22" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_22</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_22</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/blog_02.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_23" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_23</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_23</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/saving_stretagy.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_24" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_24</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_24</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/about.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_25" model="theme.ir.attachment">
+            <field name="key">theme_consultancy_ultimate_02.image_content_25</field>
+            <field name="name">theme_consultancy_ultimate_02.image_content_25</field>
+            <field name="url">/theme_consultancy_ultimate_02/static/src/img/library/consultant_help_bg.jpg</field>
+        </record>
+        
+        
+    </data>
+</odoo>

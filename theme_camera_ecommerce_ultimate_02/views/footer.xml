@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="camera_ecommerce_footer" inherit_id="website.layout"
+              name="Camera Ecommerce Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer"
+                         style="border-top:none;">
+                    <div class="pt32 pb32" id="footer_3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-2 mb32">
+                                    <h5>
+                                        <b>
+                                            <font style="font-size: 14px;">PRODUCTS</font>
+                                        </b>
+                                    </h5>
+                                    <ul class="list-unstyled mt24">
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font class="text-600" style="" data-original-title="" title=""
+                                                      aria-describedby="tooltip661399">Onsale Products
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font class="text-600" style="">Trending Products</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font class="text-600" style="">Gift Offers</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font class="text-600" style="" data-original-title="" title=""
+                                                      aria-describedby="tooltip420216">Site Map
+                                                </font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-2 mb32">
+                                    <h5>
+                                        <b>
+                                            <font style="font-size: 14px;">QUICK LINKS</font>
+                                        </b>
+                                    </h5>
+                                    <ul class="list-unstyled mt24">
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font class="text-600" style="" data-original-title="" title=""
+                                                      aria-describedby="tooltip524535">About us
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font class="text-600" style="">Payment Method</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font class="text-600" style="">Delivery Information</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font class="text-600" style="">Services</font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-2 mb32">
+                                    <h5>
+                                        <b>
+                                            <font style="font-size: 14px;">INFORMATION</font>
+                                        </b>
+                                    </h5>
+                                    <ul class="list-unstyled mt24">
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title="">
+                                                <font class="text-600" style="" data-original-title="" title=""
+                                                      aria-describedby="tooltip482439">Order Tracking
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font class="text-600" style="">Checkout</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font class="text-600" style="">Privacy Policy</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font class="text-600" style="">Return Policy</font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-2 mb32">
+                                    <h5>
+                                        <font style="font-size: 14px;">
+                                            <b>ACCOUNT</b>
+                                        </font>
+                                    </h5>
+                                    <ul class="list-unstyled mt24">
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font class="text-600" style="" data-original-title="" title=""
+                                                      aria-describedby="tooltip707067">My Account
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font class="text-600" style="" data-original-title="" title=""
+                                                      aria-describedby="tooltip812391">My Orders
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font class="text-600" style="">My Cart</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font class="text-600" style="">Wishlist</font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb32">
+                                    <h5>
+                                        <font style="font-size: 14px;">
+                                            <b>CONTACT US</b>
+                                        </font>
+                                    </h5>
+                                    <div class="media mt24 pb16">
+                                        <p class="font-weight-bold mb8 mr-2 o_default_snippet_text text-600">Address:</p>
+                                        <div class="media-body">
+                                            <span t-field="res_company.street" class="text-600"/>
+                                            <span t-field="res_company.city" class="text-600"/>
+                                            <span t-field="res_company.state_id.name" class="text-600"/>
+                                            <span t-field="res_company.zip" class="text-600"/>
+                                            <span t-field="res_company.country_id.name" class="text-600"/>
+                                        </div>
+                                    </div>
+                                    <div class="media pb16">
+                                        <p class="font-weight-bold mb8 mr-2 text-600">Call Us :</p>
+                                        <div class="media-body">
+                                            <span t-field="res_company.phone" class="text-600"/>
+                                        </div>
+                                    </div>
+                                    <div class="media pb16">
+                                        <p class="font-weight-bold mb8 mr-2 text-600">E-mail :</p>
+                                        <div class="media-body">
+                                            <span t-field="res_company.email" class="text-600"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

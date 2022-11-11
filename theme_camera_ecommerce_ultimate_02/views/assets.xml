@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="snippet_ultimate_footer_option" inherit_id="website.snippet_options">
+        <t t-call="web_editor.snippet_options"/>
+        <xpath expr="//we-button[@data-customize-website-views='website.footer_custom']"
+               position="before">
+            <we-button title="Camera Ecommerce Footer"
+                       data-customize-website-views="theme_camera_ecommerce_ultimate_02.camera_ecommerce_footer"
+                       data-customize-website-variable="'camera-ecommerce-footer'"
+                       data-img="">Camera Ecommerce Footer
+            </we-button>
+        </xpath>
+    </template>
+</odoo>

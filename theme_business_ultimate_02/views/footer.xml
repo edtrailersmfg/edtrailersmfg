@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="business_two_theme_footer" inherit_id="website.layout"
+              name="Business Two Theme Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer"
+                         style="border-top:none;">
+                    <div class="pt0 z_index_100 oe_custom_bg" id="footer_9" style="">
+                        <div class="container">
+                            <div class="row pt64">
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-3 pb16">
+                                    <img style="margin:0 auto;" class="img img-responsive img-fluid" src="/logo.png"
+                                         alt="Logo of YourCompany" title="YourCompany"/>
+                                    <p class="o_default_snippet_text">
+                                        <font style="color: rgb(58, 67, 102);">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing
+                                            elit.lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </font>
+                                    </p>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-2 pb16">
+                                    <h5 class="mb16 o_default_snippet_text">
+                                        <b>QUICK LINKS</b>
+                                    </h5>
+                                    <ul class="list-unstyled text-decoration-none">
+                                        <li>
+                                            <font style="color: rgb(58, 67, 102);" class="s_line_height_2">Home</font>
+                                        </li>
+                                        <li>
+                                            <font style="color: rgb(58, 67, 102);" class="s_line_height_2">About us
+                                            </font>
+                                        </li>
+                                        <li>
+                                            <font style="color: rgb(58, 67, 102);" class="s_line_height_2">Services
+                                            </font>
+                                            <font style="color: rgb(58, 67, 102);"/>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip598035">
+                                                <font style="color: rgb(58, 67, 102);" data-original-title="" title=""
+                                                      aria-describedby="tooltip316658" class="s_line_height_2">Contact
+                                                    us&amp;nbsp;
+                                                </font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-2 pb16">
+                                    <h5 class="mb16">
+                                        <b>OUR SERVICES</b>
+                                    </h5>
+                                    <ul class="list-unstyled text-decoration-none">
+                                        <li>
+                                            <font style="color: rgb(58, 67, 102);" class="s_line_height_2">
+                                                <a href="#"
+                                                   target="_blank"
+                                                   data-original-title=""
+                                                   title=""/>
+                                                Pricing
+                                            </font>
+                                        </li>
+                                        <li>
+                                            <font style="color: rgb(58, 67, 102);" data-original-title="" title=""
+                                                  aria-describedby="tooltip924186" class="s_line_height_2">Tracking
+                                            </font>
+                                        </li>
+                                        <li>
+                                            <font style="color: rgb(58, 67, 102);" data-original-title="" title=""
+                                                  aria-describedby="tooltip767361" class="s_line_height_2">Report a bug
+                                            </font>
+                                        </li>
+                                        <li>
+                                            <font style="color: rgb(58, 67, 102);" data-original-title="" title=""
+                                                  aria-describedby="tooltip226101" class="s_line_height_2">Terms of
+                                                services
+                                            </font>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-2 pb16">
+                                    <h5 class="mb16">
+                                        <b>OUR COMPANY</b>
+                                    </h5>
+                                    <ul class="list-unstyled text-decoration-none">
+                                        <li>
+                                            <font style="color: rgb(58, 67, 102);" class="s_line_height_2">Reporting
+                                            </font>
+                                        </li>
+                                        <li>
+                                            <font style="color: rgb(58, 67, 102);">Get in touch</font>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip27811">
+                                                <font style="color: rgb(58, 67, 102);" data-original-title="" title=""
+                                                      aria-describedby="tooltip38767" class="s_line_height_2">Management
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank" data-original-title="" title="">&amp;nbsp;</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32">
+                                    <h5 class="mb16">
+                                        <b>CONTACT INFO</b>
+                                    </h5>
+                                    <div class="media mb16">
+                                        <i class="fa fa-home mr-3 mt-1 text-alpha"></i>
+                                        <div class="media-body">
+                                            <font style="color: rgb(58, 67, 102);">
+                                                <span t-field="res_company.street"/>
+                                                <span t-field="res_company.city"/>
+                                                <span t-field="res_company.state_id.name"/>
+                                                <span t-field="res_company.zip"/>
+                                                <span t-field="res_company.country_id.name"/>
+                                            </font>
+                                        </div>
+                                    </div>
+                                    <div class="o_default_snippet_text media mb16">
+                                        <i class="fa fa-envelope mr-3 mt-1 text-alpha"/>
+                                        <div class="media-body">
+                                            <font style="color: rgb(58, 67, 102);">
+                                                <span t-field="res_company.email"/>
+                                            </font>
+                                        </div>
+                                    </div>
+                                    <div class="o_default_snippet_text media mb16">
+                                        <i class="fa fa-phone mr-3 mt-1 text-alpha"/>
+                                        <div class="media-body">
+                                            <font style="color: rgb(58, 67, 102);">
+                                                <span t-field="res_company.phone"/>
+                                            </font>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr/>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="auto_accessories_ecommerce_footer" inherit_id="website.layout"
+              name="Auto Accessories Ecommerce Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section id="footer" class="oe_structure oe_structure_solo" style="border-top:none;">
+                    <div class="pt64 pb32" id="footer_19">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb32 o_colored_level">
+                                    <h5 class="pb16">
+                                        <font style="color: rgb(255, 255, 255);">CONTACT US</font>
+                                    </h5>
+                                    <p class=" o_default_snippet_text">
+                                        <font style="" class="text-o-color-5">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit. Nam eu sem tempor, varius quam at,luctus dui. Mauris magna
+                                            metus.&amp;nbsp;
+                                        </font>
+                                    </p>
+                                    <div class="media">
+                                        <h6>
+                                            <i class="fa fa-map-marker mr-2 text-o-color-5" data-original-title=""
+                                               title="" aria-describedby="tooltip713436" style=""/>
+                                        </h6>
+                                        <div class="media-body">
+                                            <h6 class="">
+                                                <span class="text-o-color-5" t-field="res_company.street"/>
+                                                <span class="text-o-color-5" t-field="res_company.city"/>
+                                                <span class="text-o-color-5" t-field="res_company.state_id.name"/>
+                                                <span class="text-o-color-5" t-field="res_company.zip"/>
+                                                <br/>
+                                                <span class="text-o-color-5" field="res_company.country_id.name"/>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <h6>
+                                            <i class="fa fa-phone-square mr-2 text-o-color-5" data-original-title=""
+                                               title="" aria-describedby="tooltip362173" style=""/>
+                                        </h6>
+                                        <div class="media-body">
+                                            <h6 class="o_default_snippet_text text-epsilon">
+                                                <span class="text-o-color-5" t-field="res_company.phone"/>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <h6>
+                                            <i class="fa fa-envelope-open mr-2 text-o-color-5" data-original-title=""
+                                               title="" aria-describedby="tooltip528933" style=""/>
+                                        </h6>
+                                        <div class="media-body">
+                                            <h6 class="o_default_snippet_text text-epsilon">
+                                                <span class="text-o-color-5" t-field="res_company.email"/>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-3 col-lg-2 o_colored_level">
+                                    <h5 class="pb16">
+                                        <font style="color: rgb(255, 255, 255);">INFORMATION</font>
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <font class="s_line_height_2 text-o-color-5" style="">About Us</font>
+                                        </li>
+                                        <li>
+                                            <font class="s_line_height_2 text-o-color-5" style="">Delivery Information
+                                            </font>
+                                        </li>
+                                        <li>
+                                            <font class="s_line_height_2 text-o-color-5" style="">Privacy Policy</font>
+                                        </li>
+                                        <li>
+                                            <font class="s_line_height_2 text-o-color-5" style="">terms &amp;amp;
+                                                Condition
+                                            </font>
+                                        </li>
+                                        <li>
+                                            <font class="s_line_height_2 text-o-color-5" style="">Manufactures</font>
+                                        </li>
+                                        <li>
+                                            <font class="s_line_height_2 text-o-color-5" style="">Suppliers</font>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-3 col-lg-2 o_colored_level">
+                                    <h5 class="pb16">
+                                        <font style="color: rgb(255, 255, 255);">MY ACCOUNT</font>
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <font class="s_line_height_2 text-o-color-5" style="">Personal Info</font>
+                                        </li>
+                                        <li>
+                                            <font class="s_line_height_2 text-o-color-5" style="">Order History</font>
+                                        </li>
+                                        <li>
+                                            <font class="s_line_height_2 text-o-color-5" style="">Gift Cards</font>
+                                        </li>
+                                        <li>
+                                            <font class="s_line_height_2 text-o-color-5" style="">Credit Slips</font>
+                                        </li>
+                                        <li>
+                                            <font class="s_line_height_2 text-o-color-5" style="">Wish List</font>
+                                        </li>
+                                        <li>
+                                            <font class="s_line_height_2 text-o-color-5" style="">Returns &amp;amp;
+                                                Exchange
+                                            </font>
+                                            <font class="text-epsilon s_line_height_2" style="">
+                                            </font>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-2 o_colored_level">
+                                    <h5 class="pb16">
+                                        <font style="color: rgb(255, 255, 255);">SERVICES</font>
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <font class="s_line_height_2 text-o-color-5" style="">Shipping &amp;amp;
+                                                Return
+                                            </font>
+                                        </li>
+                                        <li>
+                                            <font class="s_line_height_2 text-o-color-5" style="">International Shipping
+                                            </font>
+                                        </li>
+                                        <li>
+                                            <font class="s_line_height_2 text-o-color-5" style="">Secure Shopping</font>
+                                        </li>
+                                        <li>
+                                            <font class="s_line_height_2 text-o-color-5" style="">Affiliates</font>
+                                        </li>
+                                        <li>
+                                            <font class="s_line_height_2 text-o-color-5" style="">Careers</font>
+                                        </li>
+                                        <li>
+                                            <font class="s_line_height_2 text-o-color-5" style="">FAQ</font>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                                    <h4 class="pb16 font-weight-bold">
+                                        <font color="#ffffff" style="font-size: 17px; font-weight: normal;">INSTAGRAM
+                                        </font>
+                                    </h4>
+                                    <div class="row pb16 px-3">
+                                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                            <img src="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/placeholder-95x79.png"
+                                                 class="img-fluid d-block mx-auto" loading="lazy"/>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                            <img src="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/placeholder-95x79.png"
+                                                 class="img-fluid d-block mx-auto" loading="lazy"/>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                            <img src="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/placeholder-95x79.png"
+                                                 class="img-fluid d-block mx-auto" loading="lazy"/>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                            <img src="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/placeholder-95x79.png"
+                                                 class="img-fluid d-block mx-auto" loading="lazy"/>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                            <img src="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/placeholder-95x79.png"
+                                                 class="img-fluid d-block mx-auto" loading="lazy"/>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 p-1">
+                                            <img src="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/placeholder-95x79.png"
+                                                 class="img-fluid d-block mx-auto" loading="lazy"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

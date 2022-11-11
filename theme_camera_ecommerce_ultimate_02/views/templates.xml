@@ -1,0 +1,692 @@
+<odoo>
+    <data>
+        <!--Snippet Banner Start-->
+        <template id="camera2_banner" name="Camera 2 Banner">
+            <section
+                    class="s_cover parallax align-content-center align-items-center d-flex full-height s_parallax_is_fixed s_parallax_no_overflow_hidden"
+                    data-scroll-background-ratio="1" style="background-image: none;">
+                <span class="s_parallax_bg oe_img_bg oe_custom_bg"
+                      style="background-image: url(&quot;/theme_camera_ecommerce_ultimate_02/static/src/img/placeholder-1170.jpg&quot;); background-position: 50% 0px;"/>
+                <div class="container">
+                    <div class="row s_nb_column_fixed">
+                        <div class="col-lg-12 s_title" data-name="Title">
+                            <h1 class="text-left" style="font-size: 62px;">
+                                <font style="color: rgb(255, 255, 255); font-size: 14px;">
+                                    <b>LATEST CAMERA</b>
+                                </font>
+                            </h1>
+                            <h1 class="text-left" style="font-size: 62px;">
+                                <font style="font-size: 48px;">Capture Your</font>
+                            </h1>
+                            <h1 class="text-left" style="font-size: 62px;">
+                                <font style="font-size: 48px;">
+                                    <b>Best Moments</b>
+                                </font>
+                            </h1>
+                            <h1 class="text-left" style="font-size: 62px;">
+                                <font style="font-size: 48px;" class="text-primary">
+                                    <b>$473.00</b>
+                                </font>
+                            </h1>
+                        </div>
+                        <div class="col-lg-12 text-left pt16 pb16" data-name="Buttons">
+                            <a href="/aboutus" class="mt8 mb8 btn btn-outline-primary btn-lg" data-original-title=""
+                               title="" aria-describedby="tooltip262259">ORDER NOW
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Banner End-->
+
+        <!--Snippet Image Overlay Start-->
+        <template id="camera2_img_overlay" name="Camera 2 Image Overlay">
+            <section class="pb32 pt64 s_overlay_section" id="ecommerce_block_1" style="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4 col-sm-12">
+                            <a href="#">
+                                <img class="img-fluid d-block mx-auto mb8 mt8"
+                                     src="/theme_camera_ecommerce_ultimate_02/static/src/img/placeholder-383x420.png"
+                                     data-original-title="" title=""
+                                     aria-describedby="tooltip867057"/>
+                            </a>
+                            <div class="col-12 img-content" style="top: 70%;">
+                                <h2 style="text-align: center; ">
+                                    <font style="color: rgb(255, 255, 255); font-size: 24px;">Digital Camera With
+                                        <b>Zoom</b>
+                                    </font>
+                                </h2>
+                                <p class="mb-0" style="text-align: center; ">
+                                    <font style="color: rgb(255, 255, 255);">Mega Sale Offer</font>
+                                </p>
+                                <p style="text-align: center; ">
+                                    <font style="color: rgb(255, 255, 0); font-size: 24px;">
+                                        <b>$349.67</b>
+                                    </font>
+                                </p>
+                                <div style="text-align: center;">
+                                    <a href="#" class="mt8 mb8" data-original-title="" title=""
+                                       aria-describedby="tooltip552550">
+                                        <font style="color: rgb(255, 255, 255);" data-original-title="" title=""
+                                              aria-describedby="tooltip175948" class="s_letter_spacing_2">
+                                            <b data-original-title="" title="" aria-describedby="tooltip71629">SHOP
+                                                NOW
+                                            </b>
+                                        </font>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 col-sm-12">
+                            <a href="#">
+                                <img class="img-fluid d-block mx-auto mb8 mt8"
+                                     src="/theme_camera_ecommerce_ultimate_02/static/src/img/placeholder-383x420.png"
+                                     data-original-title="" title=""
+                                     aria-describedby="tooltip867057"/>
+                            </a>
+                            <div class="col-12 img-content" style="top: 70%;">
+                                <h2 style="text-align: center; ">
+                                    <font color="#ffffff">
+                                        <span style="font-size: 24px;">New Camera With
+                                            <b>Lence</b>
+                                        </span>
+                                    </font>
+                                </h2>
+                                <p class="mb-0" style="text-align: center; ">
+                                    <font style="color: rgb(255, 255, 255);">Get 50% Offer</font>
+                                </p>
+                                <p style="text-align: center; ">
+                                    <font style="font-size: 24px;" class="text-epsilon">
+                                        <b>$245.67</b>
+                                    </font>
+                                </p>
+                                <div style="text-align: center;">
+                                    <b>
+                                        <a href="#" class="mt8 mb8" data-original-title="" title=""
+                                           aria-describedby="tooltip552550">
+                                            <font style="color: rgb(255, 255, 255);" data-original-title="" title=""
+                                                  aria-describedby="tooltip175948" class="s_letter_spacing_2">ORDER NOW
+                                            </font>
+                                        </a>
+                                    </b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-4 col-sm-12">
+                            <a href="#">
+                                <img class="img-fluid d-block mx-auto mb8 mt8"
+                                     src="/theme_camera_ecommerce_ultimate_02/static/src/img/placeholder-383x420.png"
+                                     data-original-title="" title=""
+                                     aria-describedby="tooltip867057"/>
+                            </a>
+                            <div class="col-12 img-content" style="top: 60%;">
+                                <h2 style="text-align: center; " class="mb-3">
+                                    <font color="#ffffff" class="s_letter_spacing_2">
+                                        <span style="font-size: 14px;background-color: #ffc600;" class="p-1">TRAVEL
+                                            CAMERA
+                                        </span>
+                                    </font>
+                                </h2>
+                                <h2 style="text-align: center;" class="mb-2">
+                                    <b>
+                                        <font style="color: rgb(255, 255, 255);">Special Offer</font>
+                                        <font style="color: rgb(255, 255, 0);">65%</font>
+                                    </b>
+                                </h2>
+                                <p style="text-align: center; " class="mb-5">
+                                    <font style="color: rgb(255, 255, 255);">Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit, sed do eiusmod tempor
+                                    </font>
+                                </p>
+                                <div style="text-align: center;">
+                                    <b>
+                                        <a href="#" class="mt8 mb8" data-original-title="" title=""
+                                           aria-describedby="tooltip552550">
+                                            <font style="color: rgb(255, 255, 255);" data-original-title="" title=""
+                                                  aria-describedby="tooltip175948" class="s_letter_spacing_2">SHOP NOW
+                                            </font>
+                                        </a>
+                                    </b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Image Overlay End-->
+
+        <!--Snippet Tab Carousel Start-->
+        <template id="camera2_tab_carousel" name="Camera 2 Tab Carousel">
+            <section class="s_tabs pt64 pb64 o_colored_level" id="product_tab_carousel_4"
+                     data-visible="product_tab_carousel" data-snippet="product_tab_carousel_4"
+                     data-name="Product Tab Carousel 4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 pb32 text-center offset-lg-2 col-lg-8">
+                            <h2 class="s_line_height_2">
+                                <b>
+                                    <font class="o_default_snippet_text" style="color: rgb(98, 98, 98);">Top Selling
+                                    </font>
+                                    <font style="" class="text-o-color-1">Products</font>
+                                </b>
+                            </h2>
+                            <p class="s_line_height_2">
+                                <font class="text-delta o_default_snippet_text" style="">Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </font>
+                            </p>
+                        </div>
+                        <div class="col-12 col-lg-12 col-sm-12 col-md-12 o_colored_level">
+                            <div class="s_tabs_main">
+                                <div class="s_tabs_nav">
+                                    <ul class="nav nav-tabs justify-content-center" role="tablist" id="proTab">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="tab"
+                                               href="#nav_tabs_content_1617599353193_83" role="tab"
+                                               id="nav_tabs_link_1617599353193_83"
+                                               aria-controls="nav_tabs_content_1617599353193_83" data-original-title=""
+                                               title="" aria-describedby="tooltip578851" aria-selected="true">
+                                                <b>
+                                                    <font style="" class="text-o-color-1" data-original-title=""
+                                                          title="" aria-describedby="tooltip429400">ALL PRODUCTS
+                                                    </font>
+                                                </b>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab"
+                                               href="#nav_tabs_content_1617599353193_84" role="tab"
+                                               id="nav_tabs_link_1617599353193_84"
+                                               aria-controls="nav_tabs_content_1617599353193_84" aria-selected="false"
+                                               data-original-title="" title="" aria-describedby="tooltip541987">
+                                                <b>
+                                                    <font style="" class="text-o-color-1">LATEST CAMERA</font>
+                                                </b>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab"
+                                               href="#nav_tabs_content_1617599353193_85" role="tab"
+                                               id="nav_tabs_link_1617599353193_85"
+                                               aria-controls="nav_tabs_content_1617599353193_85" aria-selected="false"
+                                               data-original-title="" title="" aria-describedby="tooltip507004">
+                                                <b>
+                                                    <font style="" class="text-o-color-1">ACCESSORIES</font>
+                                                </b>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="s_tabs_content tab-content" id="myTabContent">
+                                    <div class="tab-pane fade active show" id="nav_tabs_content_1617599353193_83"
+                                         role="tabpanel" aria-labelledby="nav_tabs_link_1617599353193_83">
+                                        <div class="oe_structure oe_empty pt8 pb8"
+                                             data-editor-message="DRAG BUILDING BLOCKS HERE"/>
+                                    </div>
+                                    <div class="tab-pane fade in" id="nav_tabs_content_1617599353193_84" role="tabpanel"
+                                         aria-labelledby="nav_tabs_link_1617599353193_84">
+                                        <div class="oe_structure oe_empty pt8 pb8"
+                                             data-editor-message="DRAG BUILDING BLOCKS HERE"/>
+                                    </div>
+                                    <div class="tab-pane fade in" id="nav_tabs_content_1617599353193_85" role="tabpanel"
+                                         aria-labelledby="nav_tabs_link_1617599353193_85">
+                                        <div class="oe_structure oe_empty pt8 pb8"
+                                             data-editor-message="DRAG BUILDING BLOCKS HERE"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Tab Carousel End-->
+
+        <!--Snippet Promo Image Start-->
+        <template id="camera2_promo_image" name="Camera 2 Promo Image">
+            <section class="pt64 pb64 oe_img_bg oe_custom_bg"
+                     style="background-image: url(&quot;/theme_camera_ecommerce_ultimate_02/static/src/img/placeholder-1170.jpg&quot;);">
+                <div class="container container-full">
+                    <div class="row justify-content-end">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 pb64" style="padding-left: 10%;">
+                            <h2>
+                                <font style="color: rgb(255, 255, 255); font-size: 14px;">FLASH DEAL SALE</font>
+                            </h2>
+                            <h1 class="mb32">
+                                <font style="color: rgb(255, 255, 255); font-size: 48px;">Pixel Perfect
+                                    <b>Camera</b>
+                                </font>
+                            </h1>
+                            <a href="#" class="text-decoration-none o_default_snippet_text" data-original-title=""
+                               title="" aria-describedby="tooltip250793">
+                                <font style="color: rgb(255, 255, 255);">VIEW MORE</font>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Promo Image End-->
+
+        <!--Snippet Product Carousel Start-->
+        <template id="camera2_product_carousel" name="Camera 2 Product Carousel">
+            <section class="s_tabs pt64 pb64 o_colored_level" id="product_tab_carousel_6"
+                     data-visible="product_tab_carousel" data-snippet="product_tab_carousel_6"
+                     data-name="Product Tab Carousel 6">
+                <div class="container">
+                    <div class="row s_tabs_main">
+                        <div class="col-md-3 pb16 s_tabs_nav o_colored_level">
+                            <ul class="flex-column nav nav-tabs justify-content-center" role="tablist" id="proTab">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab"
+                                       href="#nav_tabs_content_1617599600017_248" role="tab"
+                                       id="nav_tabs_link_1617599600017_248"
+                                       aria-controls="nav_tabs_content_1617599600017_248" data-original-title=""
+                                       title="" aria-describedby="tooltip718091" aria-selected="true">Camera
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#nav_tabs_content_1617599600018_249"
+                                       role="tab" id="nav_tabs_link_1617599600018_249"
+                                       aria-controls="nav_tabs_content_1617599600018_249" aria-selected="false"
+                                       data-original-title="" title="">Video Camera
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#nav_tabs_content_1617599600018_250"
+                                       role="tab" id="nav_tabs_link_1617599600018_250"
+                                       aria-controls="nav_tabs_content_1617599600018_250" aria-selected="false"
+                                       data-original-title="" title="" aria-describedby="tooltip785988">DSLR Camera
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#nav_tabs_content_1617599600018_251"
+                                       role="tab" id="nav_tabs_link_1617599600018_251"
+                                       aria-controls="nav_tabs_content_1617599600018_251" aria-selected="false"
+                                       data-original-title="" title="" aria-describedby="tooltip785988">CCTV Camera
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#nav_tabs_content_1617599600018_252"
+                                       role="tab" id="nav_tabs_link_1617599600018_252"
+                                       aria-controls="nav_tabs_content_1617599600018_252" aria-selected="false"
+                                       data-original-title="" title="" aria-describedby="tooltip785988">Film Camera
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#nav_tabs_content_1617599600018_253"
+                                       role="tab" id="nav_tabs_link_1617599600018_253"
+                                       aria-controls="nav_tabs_content_1617599600018_253" aria-selected="false"
+                                       data-original-title="" title="" aria-describedby="tooltip785988">Lenses
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-9 o_colored_level">
+                            <div class="col-12 col-sm-12 col-lg-12 col-md-12">
+                                <h2>
+                                    <b>
+                                        <font style="color: rgb(98, 98, 98);">Latest</font>
+                                        <font class="o_default_snippet_text text-o-color-1" style="">Products</font>
+                                    </b>
+                                </h2>
+                            </div>
+                            <div class="s_tabs_content tab-content" id="myTabContent">
+                                <div class="tab-pane fade active show" id="nav_tabs_content_1617599600017_248"
+                                     role="tabpanel" aria-labelledby="nav_tabs_link_1617599600017_248">
+                                    <div class="oe_structure oe_empty pt8 pb8"
+                                         data-editor-message="DRAG BUILDING BLOCKS HERE"/>
+                                </div>
+                                <div class="tab-pane fade in" id="nav_tabs_content_1617599600018_249" role="tabpanel"
+                                     aria-labelledby="nav_tabs_link_1617599600018_249">
+                                    <div class="oe_structure oe_empty pt8 pb8"
+                                         data-editor-message="DRAG BUILDING BLOCKS HERE"/>
+                                </div>
+                                <div class="tab-pane fade in" id="nav_tabs_content_1617599600018_250" role="tabpanel"
+                                     aria-labelledby="nav_tabs_link_1617599600018_250">
+                                    <div class="oe_structure oe_empty pt8 pb8"
+                                         data-editor-message="DRAG BUILDING BLOCKS HERE"/>
+                                </div>
+                                <div class="tab-pane fade in" id="nav_tabs_content_1617599600018_251" role="tabpanel"
+                                     aria-labelledby="nav_tabs_link_1617599600018_251">
+                                    <div class="oe_structure oe_empty pt8 pb8"
+                                         data-editor-message="DRAG BUILDING BLOCKS HERE"/>
+                                </div>
+                                <div class="tab-pane fade in" id="nav_tabs_content_1617599600018_252" role="tabpanel"
+                                     aria-labelledby="nav_tabs_link_1617599600018_252">
+                                    <div class="oe_structure oe_empty pt8 pb8"
+                                         data-editor-message="DRAG BUILDING BLOCKS HERE"/>
+                                </div>
+                                <div class="tab-pane fade in" id="nav_tabs_content_1617599600018_253" role="tabpanel"
+                                     aria-labelledby="nav_tabs_link_1617599600018_253">
+                                    <div class="oe_structure oe_empty pt8 pb8"
+                                         data-editor-message="DRAG BUILDING BLOCKS HERE"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Product Carousel End-->
+
+        <!--Snippet Sale Image Start-->
+        <template id="camera2_sale_image" name="Camera 2 Sale Image">
+            <section class="pb64" id="ecommerce_block_1" style="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 col-md-6 col-sm-6 mb8 mt8">
+                            <div class="hover_effect">
+                                <a href="#">
+                                    <img class="img-fluid d-block mx-auto"
+                                         src="/theme_camera_ecommerce_ultimate_02/static/src/img/placeholder-615x231.png"
+                                         data-original-title="" title="" aria-describedby="tooltip867057"/>
+                                </a>
+                                <div class="col-12 img-content">
+                                    <p>DSLR Camera</p>
+                                    <h2>
+                                        <font style="color: rgb(255, 255, 255); font-size: 22px;">
+                                            <b>DSLR</b>
+                                        </font>
+                                        <font class="text-delta" style="font-size: 24px;">
+                                            Motion Camera
+                                        </font>
+                                    </h2>
+                                    <p>
+                                        <font style="color: rgb(255, 255, 255);">
+                                            <b/>
+                                            <a href="#">
+                                                <b>
+                                                    <font style="color: rgb(255, 255, 255);">SHOP NOW</font>
+                                                </b>
+                                            </a>
+                                        </font>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6 col-sm-6 mt8 mb8">
+                            <div class="hover_effect">
+                                <a href="#">
+                                    <img class="img-fluid d-block mx-auto"
+                                         src="/theme_camera_ecommerce_ultimate_02/static/src/img/placeholder-615x231.png"
+                                         data-original-title="" title="" aria-describedby="tooltip867057"/>
+                                </a>
+                                <div class="col-12 img-content">
+                                    <h2>
+                                        <font style="color: rgb(255, 255, 255); font-size: 22px;">Compact
+                                            <b>DSLR</b>
+                                            Tripod
+                                        </font>
+                                    </h2>
+                                    <p>
+                                        <font style="color: rgb(255, 255, 255);">Special Offer 50%</font>
+                                    </p>
+                                    <p>
+                                        <b>
+                                            <font style="color: rgb(255, 255, 255);">
+                                                <a href="#">
+                                                    <font style="color: rgb(255, 255, 255);">SHOP NOW</font>
+                                                </a>
+                                            </font>
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Sale Image End-->
+
+        <!--Snippet Blog and Testimonial Start-->
+        <template id="camera2_blog_testimonial" name="Camera 2 Blog Testimonial ">
+            <section style="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 mh100">
+                            <div class="oe_structure oe_empty">
+                                <h2>Product Carousel</h2>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 mh100">
+                            <div class="oe_structure oe_empty">
+                                <h2>Blog Carousel</h2>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 mh100 pb48">
+                            <div class="oe_structure oe_empty">
+                                <section class="pt0" id="testimonials_d2"
+                                         style="&#10;    border: 5px solid #22c083;&#10;">
+                                    <div class="container" style="&#10;">
+                                        <div class="row content justify-content-md-center">
+                                            <div class="col-12 col-lg-12 col-md-12 col-sm-12 pt-3 text-center">
+                                                <h2 class="s_letter_spacing_2">
+                                                    <font style="font-size: 14px;" class="text-secondary">TESTIMONIALS
+                                                    </font>
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="myCarousel1585564697341"
+                                         class="s_quotes_carousel carousel slide s_carousel_default"
+                                         data-interval="10000">
+                                        <ol class="carousel-indicators" style="&#10;">
+                                            <li data-target="#myCarousel1585564697341" data-slide-to="0"
+                                                class="active"/>
+                                            <li data-target="#myCarousel1585564697341" data-slide-to="1"/>
+                                        </ol>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item  pt0 active" data-name="Slide" style="">
+                                                <div class="container">
+                                                    <div class="content justify-content-md-center mx-2 row">
+                                                        <blockquote
+                                                                class="border-0 carousel-content col-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <p class="lead  mb32 text-center o_default_snippet_text">
+                                                                Write a quote here from one of your customers. Quotes
+                                                                are a great way to build confidence in your products or
+                                                                services.
+                                                            </p>
+                                                            <div class="text-center">
+                                                                <span class="o_default_snippet_text">Jane DOE, CEO of
+                                                                    <b class="o_default_snippet_text">MyCompany</b>
+                                                                </span>
+                                                            </div>
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item  pt0" data-name="Slide" style="">
+                                                <div class="container">
+                                                    <div class="row content justify-content-md-center mx-2">
+                                                        <blockquote
+                                                                class="border-0 carousel-content col-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <p class="lead  mb32 text-center o_default_snippet_text">
+                                                                Write a quote here from one of your customers. Quotes
+                                                                are a great way to build confidence in your products or
+                                                                services.
+                                                            </p>
+                                                            <div class="text-center">
+                                                                <span class="o_default_snippet_text">Jane DOE, CEO of
+                                                                    <b class="o_default_snippet_text">MyCompany</b>
+                                                                </span>
+                                                            </div>
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Blog and Testimonial End-->
+
+        <!--Snippet Newsletter Start-->
+        <template id="camera2_newsletter" name="Camera 2 Newsletter">
+            <section class="pb64 oe_img_bg oe_custom_bg pt64" id="footer_17"
+                     style="background-image: url(&quot;/theme_camera_ecommerce_ultimate_02/static/src/img/placeholder-1170.jpg&quot;);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 text-lg-left text-md-center">
+                            <h2>
+                                <font style="color: rgb(255, 255, 255);">Get our
+                                    <b>Newsletter</b>
+                                </font>
+                            </h2>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                            <h6 class="o_default_snippet_text s_line_height_2 mt-2">
+                                <font style="color: rgb(255, 255, 255);">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit.
+                                </font>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 pt16">
+                            <div class="input-group js_subscribe hidden" data-list-id="1" data-subscribe="off">
+                                <input type="email" name="email" class="js_subscribe_email form-control rounded-0"
+                                       placeholder="your email..." style="padding: 1.375rem 0.75rem;"/>
+                                <span class="input-group-btn">
+                                    <a href="#"
+                                       class="btn btn-primary js_subscribe_btn o_default_snippet_text rounded-0"
+                                       style="padding: 11px 0.75rem;">
+                                        Subscribe
+                                    </a>
+                                    <a href="#"
+                                       class="btn btn-success js_subscribed_btn hidden o_default_snippet_text rounded-0 d-none"
+                                       disabled="disabled" style="padding: 11px 0.75rem;">Thanks
+                                    </a>
+                                </span>
+                                <div class="alert alert-success hidden o_default_snippet_text rounded-0 d-none"
+                                     style="padding: 11px 0.75rem;">Thanks
+                                    for your
+                                    subscription!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Newsletter End-->
+
+        <!--Snippet Features Start-->
+        <template id="camera2_features" name="Camera 2 Features">
+            <section class="pb32 pt32">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                    <i class="fa fa-3x fa-500px mr-3 mt-2 pe-7s-car text-secondary"
+                                       data-original-title=""
+                                       title="" aria-describedby="tooltip258147" style=""/>
+                                    <div class="media-body">
+                                        <h3>
+                                            <font style="font-size: 18px;" class="text-primary">
+                                                <b>Free</b>
+                                            </font>
+                                            <font style="font-size: 18px;">
+                                                <b>Delivery</b>
+                                            </font>
+                                        </h3>
+                                        <p class="o_default_snippet_text">On all orders over $75.00</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                    <i class="fa fa-3x mr-3 mt-2 text-secondary pe-7s-cash fa-500px"
+                                       data-original-title=""
+                                       title="" aria-describedby="tooltip258147" style=""/>
+                                    <div class="media-body">
+                                        <h3>
+                                            <font style="font-size: 18px;" class="text-primary">
+                                                <b>Easy</b>
+                                            </font>
+                                            <font style="font-size: 18px;">
+                                                <b>&amp;nbsp;Returns</b>
+                                            </font>
+                                        </h3>
+                                        <p>As Per Return Policy</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                    <i class="fa fa-3x mr-3 mt-2 text-secondary pe-7s-headphones fa-500px"
+                                       data-original-title="" title="" aria-describedby="tooltip258147" style=""/>
+                                    <div class="media-body">
+                                        <h3>
+                                            <font style="font-size: 18px;" class="text-primary">
+                                                <b>Online</b>
+                                            </font>
+                                            <font style="font-size: 18px;">
+                                                <b>Support</b>
+                                            </font>
+                                        </h3>
+                                        <p>24/7 Online Support</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                    <i class="fa fa-3x mr-3 mt-2 text-secondary pe-7s-lock fa-500px"
+                                       data-original-title=""
+                                       title="" aria-describedby="tooltip258147" style=""/>
+                                    <div class="media-body">
+                                        <h3>
+                                            <font style="font-size: 18px;" class="text-primary">
+                                                <b>Secure</b>
+                                            </font>
+                                            <font style="font-size: 18px;">
+                                                <b>Payment</b>
+                                            </font>
+                                        </h3>
+                                        <p>Use Various Payment Method</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Features End-->
+
+        <!--Snippets Assets-->
+        <template id="demo_snippets" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_structure']" position="before">
+                <div id="snippet_demo_snippets" class="o_panel">
+                    <div class="o_panel_header">
+                        <i class="fa fa-th-large"/>
+                        Camera Ecommerce Ultimate 02
+                    </div>
+                    <div class="o_panel_body">
+                        <t t-snippet="theme_camera_ecommerce_ultimate_02.camera2_banner"
+                           t-thumbnail="/theme_camera_ecommerce_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_camera_ecommerce_ultimate_02.camera2_img_overlay"
+                           t-thumbnail="/theme_camera_ecommerce_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_camera_ecommerce_ultimate_02.camera2_tab_carousel"
+                           t-thumbnail="/theme_camera_ecommerce_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_camera_ecommerce_ultimate_02.camera2_promo_image"
+                           t-thumbnail="/theme_camera_ecommerce_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_camera_ecommerce_ultimate_02.camera2_product_carousel"
+                           t-thumbnail="/theme_camera_ecommerce_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_camera_ecommerce_ultimate_02.camera2_sale_image"
+                           t-thumbnail="/theme_camera_ecommerce_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_camera_ecommerce_ultimate_02.camera2_blog_testimonial"
+                           t-thumbnail="/theme_camera_ecommerce_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_camera_ecommerce_ultimate_02.camera2_newsletter"
+                           t-thumbnail="/theme_camera_ecommerce_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_camera_ecommerce_ultimate_02.camera2_features"
+                           t-thumbnail="/theme_camera_ecommerce_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

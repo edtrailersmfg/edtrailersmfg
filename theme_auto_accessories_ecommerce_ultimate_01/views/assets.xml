@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="snippet_ultimate_footer_option" inherit_id="website.snippet_options">
+        <t t-call="web_editor.snippet_options"/>
+        <xpath expr="//we-button[@data-customize-website-views='website.footer_custom']"
+               position="before">
+            <we-button title="Auto Accessories Ecommerce Footer"
+                       data-customize-website-views="theme_auto_accessories_ecommerce_ultimate_01.auto_accessories_ecommerce_footer"
+                       data-customize-website-variable="'auto-accessories-ecommerce-footer'"
+                       data-img="">Auto Accessories Ecommerce Footer
+            </we-button>
+        </xpath>
+    </template>
+</odoo>

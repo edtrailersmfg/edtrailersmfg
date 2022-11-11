@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="transport_theme_footer" inherit_id="website.layout"
+              name="Transport Theme Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section class="oe_structure" id="footer">
+                    <div class="pt64 pb32" id="footer_3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32 o_colored_level">
+                                    <img style="margin:0 auto;" class="img img-responsive img-fluid" src="/logo.png"
+                                         alt="Logo of YourCompany" title="YourCompany" loading="lazy"/>
+                                    <p class="o_default_snippet_text">
+                                        <font class="text-delta" style="">Lorem Ipsum is simply dummy text of the
+                                            printing and typesetting industry. Lorem Ipsum has been the industry's
+                                            standard dummy.&amp;nbsp;
+                                        </font>
+                                    </p>
+                                    <div class="icon_bg">
+                                        <a href="/website/social/facebook">
+                                            <i class="bg-delta fa fa-facebook mx-1 text-o-color-3"
+                                               data-original-title="" title="" aria-describedby="tooltip846546"
+                                               style=""/>
+                                        </a>
+                                        <a href="/website/social/twitter">
+                                            <i class="bg-delta fa fa-twitter mx-1 text-o-color-3" data-original-title=""
+                                               title="" aria-describedby="tooltip648589" style=""/>
+                                        </a>
+                                        <a href="/website/social/instagram">
+                                            <i class="bg-delta fa fa-instagram mx-1 text-o-color-3"
+                                               data-original-title="" title="" aria-describedby="tooltip191978"
+                                               style=""/>
+                                        </a>
+                                        <a href="#">
+                                            <i class="bg-delta fa fa-google-plus mx-1 text-o-color-3"
+                                               data-original-title="" title="" aria-describedby="tooltip145290"
+                                               style=""/>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32 o_colored_level">
+                                    <h5 class="o_default_snippet_text">
+                                        <font style="color: rgb(255, 255, 255);">Usefull Links</font>
+                                    </h5>
+                                    <ul class="list-unstyled text-uppercase mt24">
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip368476">
+                                                <font style="" data-original-title="" title=""
+                                                      aria-describedby="tooltip615545" class="text-o-color-4">HOME
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip129420">
+                                                <font style="" class="text-o-color-4">ABOUT US</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip779142">
+                                                <font style="" class="text-o-color-4">SERVICES</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip922814">
+                                                <font style="" class="text-o-color-4">GALLERY</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip345779">
+                                                <font style="" class="text-o-color-4">TeSTIMONIALS</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip82815">
+                                                <font style="" data-original-title="" title=""
+                                                      aria-describedby="tooltip215192" class="text-o-color-4">Contact us
+                                                </font>
+                                                <font class="text-delta" style="" data-original-title="" title=""
+                                                      aria-describedby="tooltip215192">
+                                                </font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32 o_colored_level">
+                                    <h5>
+                                        <font style="color: rgb(255, 255, 255);">Services</font>
+                                    </h5>
+                                    <ul class="list-unstyled text-uppercase mt24">
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip467964">
+                                                <font style="" class="text-o-color-4">ground transport</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip467964">
+                                                <font style="" class="text-o-color-4">cargo service</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip665219">
+                                                <font style="" class="text-o-color-4">warehousing</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title="">
+                                                <font style="" class="text-o-color-4">Road fright forwarding</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip608339">
+                                                <font style="" class="text-o-color-4">ocean
+                                                    fright forwarding&amp;nbsp;
+                                                </font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32">
+                                    <h5>
+                                        <font style="color: rgb(255, 255, 255);">Contact</font>
+                                    </h5>
+                                    <p class="mb32 mt24 o_default_snippet_text">
+                                        <font class="text-o-color-4" style="">Lorem ipsum dolor sit amet, consectetur
+                                            adipisicing elit, sed do eiusmod tempor incididunt ut.&amp;nbsp;
+                                        </font>
+                                    </p>
+                                    <div class="media">
+                                        <i class="fa fa-home mr-3 mt-1 text-o-color-4"/>
+                                        <div class="media-body">
+                                            <span class="text-o-color-4" t-field="res_company.street"/>
+                                            <span class="text-o-color-4" t-field="res_company.city"/>
+                                            <span class="text-o-color-4" t-field="res_company.state_id.name"/>
+                                            <span class="text-o-color-4" t-field="res_company.zip"/>
+                                            <span class="text-o-color-4" t-field="res_company.country_id.name"/>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                    <div class="o_default_snippet_text media">
+                                        <i class="fa fa-envelope mr-3 mt-1 text-delta"/>
+                                        <div class="media-body">
+                                            <span class="text-delta" t-field="res_company.email"/>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                    <div class="o_default_snippet_text media">
+                                        <i class="fa fa-phone mr-3 mt-1 text-delta"/>
+                                        <div class="media-body">
+                                            <span class="text-delta" t-field="res_company.phone"/>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

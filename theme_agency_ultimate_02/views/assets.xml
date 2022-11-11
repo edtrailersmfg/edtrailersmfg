@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="snippet_ultimate_footer_option" inherit_id="website.snippet_options">
+        <t t-call="web_editor.snippet_options"/>
+        <xpath expr="//we-button[@data-customize-website-views='website.footer_custom']"
+               position="before">
+            <we-button title="Agency Two Theme Footer"
+                       data-customize-website-views="agency_ultimate_02.agency_two_theme_footer"
+                       data-customize-website-variable="'agency-two-theme-footer'"
+                       data-img="">Agency Two Theme Footer
+            </we-button>
+        </xpath>
+    </template>
+</odoo>

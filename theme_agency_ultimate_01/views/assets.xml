@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--    <template id="_assets_primary_variables_theme_agency_ultimate_01" inherit_id="website._assets_primary_variables" priority="1">-->
+<!--        <xpath expr="//link[last()]" position="after">-->
+<!--            <link rel="stylesheet" type="text/scss" href="/theme_agency_ultimate_01/static/src/scss/primary_variables.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+
+    <template id="snippet_ultimate_footer_option" inherit_id="website.snippet_options">
+        <t t-call="web_editor.snippet_options"/>
+        <xpath expr="//we-button[@data-customize-website-views='website.footer_custom']"
+               position="before">
+            <we-button title="Agency Theme Footer"
+                       data-customize-website-views="agency_ultimate_01.agency_theme_footer"
+                       data-customize-website-variable="'agency-theme-footer'"
+                       data-img="">Agency Theme Footer
+            </we-button>
+        </xpath>
+    </template>
+</odoo>

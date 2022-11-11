@@ -1,0 +1,908 @@
+<odoo>
+    <data>
+
+        <!--Snippet Banner Start-->
+        <template id="consultancy_banner" name="Consultancy Banner">
+            <section
+                    class="s_cover parallax align-content-center align-items-center d-flex full-height s_parallax_is_fixed"
+                    data-scroll-background-ratio="1" style="background-image: none;">
+                <span class="s_parallax_bg oe_img_bg oe_custom_bg"
+                      style="background-image: url(&quot;/theme_consultancy_ultimate_01/static/src/img/placeholder-image-1170.jpg&quot;); background-position: 50% 0px;"/>
+                <div class="container">
+                    <div class="row s_nb_column_fixed">
+                        <div class="col-lg-12 s_title" data-name="Title">
+                            <h1 class="s_title_thin text-white o_default_snippet_text"
+                                style="font-size: 48px; text-align: center;">Developing people
+                            </h1>
+                            <h1 class="s_title_thin text-white o_default_snippet_text"
+                                style="font-size: 48px; text-align: center;">Delivering results
+                            </h1>
+                        </div>
+                        <div class="col-lg-12 s_text pt16 pb16" data-name="Text">
+                            <p class="lead text-white o_default_snippet_text" style="text-align: center;">Write one or
+                                two paragraphs describing your product, services or a specific feature.
+
+                                <br/>
+                                To be successful your content needs to be useful to your readers.
+
+                            </p>
+                        </div>
+                        <div class="col-lg-12 s_btn pt16 pb16 text-center" data-name="Buttons">
+                            <a href="#" class="btn btn-primary flat" data-original-title="" title=""
+                               aria-describedby="tooltip325291" style="">
+                                <b>
+                                    <font style="font-size: 14px;" class="o_default_snippet_text">Contact us</font>
+                                </b>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Banner End-->
+
+        <!--Snippet Features Start-->
+        <template id="consultancy_features" name="Consultancy Features">
+            <section class="pt64 pb64 oe_custom_bg z_index_plus" style="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb32 bg-white border-right">
+                            <i class="fa fa-3x fa-500px mb16 pe-7s-graph3 text-alpha" data-original-title="" title=""
+                               aria-describedby="tooltip548205" style="background-color: rgb(255, 255, 255);"/>
+                            <h2 class="tm-custom-heading "
+                                style="font-family: Poppins, Arial, Helvetica, sans-serif; font-weight: 600; line-height: 30px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px; clear: both; text-rendering: optimizelegibility;">
+                                <span style="font-size: 18px;" class="o_default_snippet_text">Financial Services</span>
+                            </h2>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            </p>
+                            <a href="#" class="pb8 pt8" data-original-title="" title=""
+                               aria-describedby="tooltip513686">
+                                <u data-original-title="" title="" aria-describedby="tooltip671797">
+                                    <font style="color: rgb(0, 0, 0);" class="o_default_snippet_text">read more&amp;nbsp;</font>
+                                    <i class="fa fa-chevron-right ml-2" data-original-title="" title=""
+                                       aria-describedby="tooltip774782" style="color: rgb(0, 0, 0);"/>
+                                </u>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb32 border-right">
+                            <i class="fa fa-3x fa-500px mb16 pe-7s-diamond text-alpha" data-original-title="" title=""
+                               aria-describedby="tooltip553784" style=""/>
+                            <h2 class="tm-custom-heading "
+                                style="font-family: Poppins, Arial, Helvetica, sans-serif; font-weight: 600; line-height: 30px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px; clear: both; text-rendering: optimizelegibility;">
+                                <span style="font-size: 18px;" class="o_default_snippet_text">Strategic Planning</span>
+                            </h2>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            </p>
+                            <a href="#" class="pt8 pb8" data-original-title="" title=""
+                               aria-describedby="tooltip257385">
+                                <u>
+                                    <font style="color: rgb(0, 0, 0);" class="o_default_snippet_text">read more&amp;nbsp;</font>
+                                    <i class="fa fa-chevron-right ml-2" data-original-title="" title=""
+                                       aria-describedby="tooltip545537" style="color: rgb(0, 0, 0);"/>
+                                </u>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb32 border-right">
+                            <i class="fa fa-3x fa-500px mb16 pe-7s-note2 text-alpha" data-original-title="" title=""
+                               aria-describedby="tooltip558878" style=""/>
+                            <h2 class="tm-custom-heading "
+                                style="font-family: Poppins, Arial, Helvetica, sans-serif; font-weight: 600; line-height: 30px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px; font-size: 20px; clear: both; text-rendering: optimizelegibility;">
+                                <font style="font-size: 18px;" class="o_default_snippet_text">Audit &amp;amp;
+                                    Assurance
+                                </font>
+                            </h2>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            </p>
+                            <a href="#" class="pt8 pb8 o_default_snippet_text" data-original-title="" title=""
+                               aria-describedby="tooltip934134">
+                                <u data-original-title="" title="" aria-describedby="tooltip960915">
+                                    <font style="color: rgb(0, 0, 0);" class="o_default_snippet_text">read more&amp;nbsp;</font>
+                                    <i class="fa fa-chevron-right ml-2" style="color: rgb(0, 0, 0);"
+                                       data-original-title="" title="" aria-describedby="tooltip265779"/>
+                                </u>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-6 col-lg-3 mb32">
+                            <i class="fa fa-3x fa-500px mb16 pe-7s-sun text-alpha" data-original-title="" title=""
+                               aria-describedby="tooltip691927" style=""/>
+                            <h2 class="tm-custom-heading "
+                                style="font-family: Poppins, Arial, Helvetica, sans-serif; font-weight: 600; line-height: 30px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px; clear: both; text-rendering: optimizelegibility;">
+                                <span style="font-size: 18px;" class="o_default_snippet_text">Markering &amp;amp;
+                                    Sales
+                                </span>
+                            </h2>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            </p>
+                            <a href="#" class="pt8 pb8 o_default_snippet_text" data-original-title="" title=""
+                               aria-describedby="tooltip448961">
+                                <u>
+                                    <font style="color: rgb(0, 0, 0);" class="o_default_snippet_text">read more&amp;nbsp;</font>
+                                    <i class="fa fa-chevron-right ml-2" data-original-title="" title=""
+                                       aria-describedby="tooltip579425" style="color: rgb(0, 0, 0);"/>
+                                </u>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Features End-->
+
+        <!--Snippet About Us Start-->
+        <template id="consultancy_about_us" name="Consultancy About Us">
+            <section class="pt32 pb64 o_colored_level" style="position: relative;" data-snippet="consultancy_about_us"
+                     data-name="Consultancy About Us"
+                     data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Rainy/02&quot;,&quot;colors&quot;:{&quot;c1&quot;:&quot;rgba(247, 23, 53, 0.34)&quot;,&quot;c4&quot;:&quot;rgba(255, 255, 255, 0.35)&quot;,&quot;c5&quot;:&quot;rgba(35, 235, 208, 0.37)&quot;},&quot;flip&quot;:[]}">
+                <div class="o_we_shape o_web_editor_Rainy_02"
+                     style="background-image: url(&quot;/web_editor/shape/web_editor/Rainy/02.svg?c1=rgba(247%2C%2023%2C%2053%2C%200.34)&amp;c4=rgba(255%2C%20255%2C%20255%2C%200.35)&amp;c5=rgba(35%2C%20235%2C%20208%2C%200.37)&quot;);"/>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                            <img src="/theme_consultancy_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                 alt="mobile"
+                                 class="img-fluid pt8 pb8 mx-auto d-block" data-original-title="" title=""
+                                 aria-describedby="tooltip396320"/>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                            <p/>
+                            <h4 class="tm-custom-heading s_letter_spacing_1"
+                                style="font-family: Poppins, Arial, Helvetica, sans-serif; font-weight: 600; line-height: 24px; color: rgb(247, 23, 53); margin: 5px 0px 12px; font-size: 12px; clear: both; text-rendering: optimizelegibility; text-transform: uppercase; letter-spacing: 1px;">
+                                <font style="font-size: 14px;" class="o_default_snippet_text">ABOUT CONSULTANCY</font>
+                            </h4>
+                            <h2>
+                                <font color="#0e1032" face="Poppins, Arial, Helvetica, sans-serif">
+                                    <span style="font-size: 36px;">
+                                        <b class="o_default_snippet_text">To help entrepreneurs get their act together
+                                            before they talk to investors&amp;nbsp;
+                                        </b>
+                                    </span>
+                                </font>
+                            </h2>
+                            <p class="pt16 o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit. Pellentesque fermentum est in tortor congue suscipit. Suspendisse potenti.Aliquam
+                                finibus pharetra tellus at egestas.Suspendisse potenti.Aliquam finibus pharetra tellus
+                                at egestas.
+                            </p>
+                            <p class="pt16 o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit. Pellentesque fermentum est in tortor congue suscipit. Suspendisse potenti.Aliquam
+                                finibus pharetra tellus at egestas.Suspendisse potenti.Aliquam finibus pharetra tellus
+                                at egestas.
+
+                                <br/>
+                            </p>
+                            <a href="#" class="rounded-0 btn btn-primary btn-lg" data-original-title="" title=""
+                               aria-describedby="tooltip37870" style="">
+                                <b data-original-title="" title="" aria-describedby="tooltip985014">
+                                    <font style="font-size: 14px;" class="o_default_snippet_text">View More Details
+                                    </font>
+                                </b>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </template>
+        <!--Snippet About Us End-->
+
+        <!--Snippet Grid Content Start-->
+        <template id="consultancy_grid_content" name="Consultancy Grid Content">
+            <section class="pt64 pb64 oe_custom_bg" style="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb16">
+                            <img src="/theme_consultancy_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                 alt="image" title="image"
+                                 class="img-fluid mb8 mt8"/>
+                            <h3>
+                                <span style="font-size: 18px;">
+                                    <b>Talented Consultants</b>
+                                </span>
+                            </h3>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            </p>
+                            <a href="#" class="pt8 pb8 o_default_snippet_text">read more
+
+                                <i class="fa fa-chevron-right ml-2" data-original-title="" title=""
+                                   aria-describedby="tooltip394238"/>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb16">
+                            <img src="/theme_consultancy_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                 alt="image" title="image"
+                                 class="img-fluid mb8 mt8"/>
+                            <h3>
+                                <font style="font-size: 18px;">
+                                    <b>Business Growth</b>
+                                </font>
+                            </h3>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            </p>
+                            <a href="#" class="pt8 pb8 o_default_snippet_text">read more
+
+                                <i class="fa fa-chevron-right ml-2"/>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb16">
+                            <img src="/theme_consultancy_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                 alt="image" title="image"
+                                 class="img-fluid mb8 mt8"/>
+                            <h3>
+                                <font style="font-size: 18px;">
+                                    <b>Advance Reports</b>
+                                </font>
+                            </h3>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            </p>
+                            <a href="#" class="pt8 pb8 o_default_snippet_text" data-original-title="" title=""
+                               aria-describedby="tooltip59697">read more
+
+                                <i class="fa fa-chevron-right ml-2"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Grid Content End-->
+
+        <!--Snippet Center Content Start-->
+        <template id="consultancy_center_content" name="Consultancy Center Content">
+            <section class="oe_img_bg pt184 pb184 oe_custom_bg"
+                     style="background-image: url(&quot;/theme_consultancy_ultimate_01/static/src/img/placeholder-image-1170.jpg&quot;);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                            <h2 class="s_letter_spacing_1">
+                                <font style="font-size: 14px;" class="text-alpha">
+                                    <b class="o_default_snippet_text">WE MAKE A DIFFERENCE</b>
+                                </font>
+                            </h2>
+                            <h2 class="s_line_height_auto"><span style="font-size: 48px;">&amp;nbsp;</span>&amp;nbsp;
+
+                                <span style="color: rgb(255, 255, 255); font-size: 48px;">
+                                    <b class="o_default_snippet_text">We Deliver Enduring Result</b>
+                                </span>
+                                <br/>
+                            </h2>
+                            <a href="#" class="btn btn-primary flat mt16 px-4 py-2" data-original-title="" title=""
+                               aria-describedby="tooltip602227">
+                                <font style="font-size: 14px;" data-original-title="" title=""
+                                      aria-describedby="tooltip910786">
+                                    <b data-original-title="" title="" aria-describedby="tooltip99722"
+                                       class="o_default_snippet_text">VIEW MORE SERVICES
+                                    </b>
+                                </font>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </template>
+        <!--Snippet Center Content End-->
+
+        <!--Snippet Services Start-->
+        <template id="consultancy_services" name="Consultancy Services">
+            <section class="pt64 pb64">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-12 pt0 pb0 col-lg-6">
+                            <img src="/theme_consultancy_ultimate_01/static/src/img/placeholder-image-510x550.png"
+                                 alt="half-molile"
+                                 class="img-fluid d-flex mx-auto pt8 pb8" data-original-title="" title=""
+                                 aria-describedby="tooltip564380"/>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6 pt16 pb16">
+                            <h2 class="text-left s_letter_spacing_1">
+                                <font class="text-alpha" style="font-size: 14px;">
+                                    <b class="o_default_snippet_text">WHO WE ARE</b>
+                                </font>
+                            </h2>
+                            <h2 class="pb16">
+                                <span style="font-size: 36px;">
+                                    <b class="o_default_snippet_text">Consulting agency with 15 years of experience&amp;nbsp;</b>
+                                </span>
+                            </h2>
+                            <div class="col-12 col-sm-12 col-md-9 col-lg-9  media  border-bottom pb8 pt8">
+                                <i class="fa-3x mr-3 mt-2 text-alpha fa pe-7s-unlock fa-500px" data-original-title=""
+                                   title="" aria-describedby="tooltip671081" style=""/>
+                                <div class="media-body">
+                                    <h2 class="tm-custom-heading"
+                                        style="box-sizing: border-box; font-family: Poppins, Arial, Helvetica, sans-serif; font-weight: 600; line-height: 30px; color: rgb(11, 12, 38); margin: 0px 0px 5px; font-size: 20px; clear: both; text-rendering: optimizelegibility;">
+                                        <font style="font-size: 24px;">Protect your business &amp;nbsp;</font>
+                                    </h2>
+                                    <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit. Ut at semper metus.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-9 col-lg-9  media border-bottom pb8 pt8">
+                                <i class="fa-3x fa-life-ring mr-3 mt-2 text-alpha fa pe-7s-id fa-500px"
+                                   data-original-title="" title="" aria-describedby="tooltip841635" style=""/>
+                                <div class="media-body">
+                                    <h2 class="tm-custom-heading  o_default_snippet_text"
+                                        style="box-sizing: border-box; font-family: Poppins, Arial, Helvetica, sans-serif; font-weight: 600; line-height: 30px; color: rgb(11, 12, 38); margin: 0px 0px 5px; font-size: 20px; clear: both; text-rendering: optimizelegibility;">
+                                        Optimize Your Systems
+                                    </h2>
+                                    <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit. Ut at semper metus.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-9 col-lg-9  media pb8 pt8">
+                                <i class="fa-3x mr-3 mt-2 text-alpha fa pe-7s-users fa-500px" data-original-title=""
+                                   title="" aria-describedby="tooltip689920" style=""/>
+                                <div class="media-body">
+                                    <h2 class="tm-custom-heading  o_default_snippet_text"
+                                        style="box-sizing: border-box; font-family: Poppins, Arial, Helvetica, sans-serif; font-weight: 600; line-height: 30px; color: rgb(11, 12, 38); margin: 0px 0px 5px; font-size: 20px; clear: both; text-rendering: optimizelegibility;">
+                                        Empower your employees
+                                    </h2>
+                                    <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit. Ut at semper metus.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Services End-->
+
+        <!--Snippet Tab Start-->
+        <template id="consultancy_tab" name="Consultancy Tab">
+            <section class="s_tabs pt64 pb64 oe_img_bg oe_custom_bg" id="tab_8"
+                     style="position: relative;" data-snippet="consultancy_tab" data-name="Consultancy Tab"
+                     data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Rainy/02&quot;,&quot;colors&quot;:{&quot;c1&quot;:&quot;rgba(247, 23, 53, 0.34)&quot;,&quot;c4&quot;:&quot;rgba(255, 255, 255, 0.35)&quot;,&quot;c5&quot;:&quot;rgba(35, 235, 208, 0.37)&quot;},&quot;flip&quot;:[&quot;x&quot;]}">
+                <div class="o_we_shape o_web_editor_Rainy_02"
+                     style="background-image: url(&quot;/web_editor/shape/web_editor/Rainy/02.svg?c1=rgba(247%2C%2023%2C%2053%2C%200.34)&amp;c4=rgba(255%2C%20255%2C%20255%2C%200.35)&amp;c5=rgba(35%2C%20235%2C%20208%2C%200.37)&amp;flip=x&quot;); background-position: 50% 0%;"/>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 pb48 text-center">
+                            <h2>
+                                <font style="font-size: 14px;" class="text-o-color-2">
+                                    <b>WHAT WE OFFER FOR YOU</b>
+                                </font>
+                            </h2>
+                            <p>
+                                <font style="font-size: 36px;" class="text-o-color-2">
+                                    <b>See Our Best Services</b>
+                                </font>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 s_tabs_main">
+                        <nav class="s_tabs_nav">
+                            <ul class="nav nav-tabs justify-content-center mb32" id="nav-tab"
+                                role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active"
+                                       id="nav-home-tab" data-toggle="tab"
+                                       href="#service-tab-1" role="tab"
+                                       aria-controls="nav-home"
+                                       aria-selected="true">
+                                        <font class="text-o-color-2" data-original-title="" title=""
+                                              aria-describedby="tooltip638271">
+                                            <b>RESPONSIVE</b>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link"
+                                       id="nav-profile-tab" data-toggle="tab"
+                                       href="#service-tab-2" role="tab"
+                                       aria-controls="nav-profile"
+                                       aria-selected="false">
+                                        <font class="text-o-color-2" data-original-title="" title=""
+                                              aria-describedby="tooltip704814">
+                                            <b>OPTIMIZATION</b>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link"
+                                       id="nav-contact-tab" data-toggle="tab"
+                                       href="#service-tab-3" role="tab"
+                                       aria-controls="nav-contact"
+                                       aria-selected="false">
+                                        <font class="text-o-color-2" data-original-title="" title=""
+                                              aria-describedby="tooltip57876">
+                                            <b>WEB-DESIGN</b>
+                                        </font>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="s_tabs_content tab-content service-tab py-3 px-3 px-sm-0"
+                             id="nav-tabContent">
+                            <div class="tab-pane fade show oe_structure oe_empty active"
+                                 id="service-tab-1" role="tabpanel"
+                                 aria-labelledby="nav-home-tab">
+                                <div class="container">
+                                    <div class="row wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-0 pt0 pb0">
+                                            <img src="/theme_consultancy_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                                 alt="img1"
+                                                 class="img-fluid d-block mx-auto" data-original-title="" title=""
+                                                 aria-describedby="tooltip485980"/>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-0 pt-0 pb16 bg-100" style="">
+                                            <div class="tab-bg">
+                                                <h2>01</h2>
+                                                <h3>
+                                                    <b>Leading consumer products companies</b>
+                                                </h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+                                                    perferendis
+                                                    quod debitis ab sed sapiente. Ducimus tempore, doloremque asperiores
+                                                    natus
+                                                    reprehenderit dignissimos beatae molestias tenetur cupiditate
+                                                    architecto
+                                                    culpa quibusdam velit magnam sapiente accusantium, repellat earum!
+                                                </p>
+                                                <a class="btn btn-danger bg-danger rounded-circle" href="#">Get In Touch
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Service Tab 02 -->
+                            <div class="tab-pane fade oe_structure oe_empty"
+                                 id="service-tab-2" role="tabpanel"
+                                 aria-labelledby="nav-home-tab">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-0">
+                                            <img src="/theme_consultancy_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                                 alt="img1"
+                                                 class="img-fluid d-block mx-auto" data-original-title="" title=""
+                                                 aria-describedby="tooltip526157"/>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-0 bg-100">
+                                            <div class="tab-bg">
+                                                <h2>02</h2>
+                                                <h3>
+                                                    <b>Constructing a best-in-class global procurement</b>
+                                                </h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+                                                    perferendis
+                                                    quod debitis ab sed sapiente. Ducimus tempore, doloremque asperiores
+                                                    natus
+                                                    reprehenderit dignissimos beatae molestias tenetur cupiditate
+                                                    architecto
+                                                    culpa quibusdam velit magnam sapiente accusantium, repellat earum!
+                                                </p>
+                                                <a class="btn btn-danger bg-danger rounded-circle" href="#">Get In Touch
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Service Tab 03 -->
+                            <div class="tab-pane fade oe_structure oe_empty"
+                                 id="service-tab-3" role="tabpanel"
+                                 aria-labelledby="nav-home-tab">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-0">
+                                            <img src="/theme_consultancy_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                                 alt="img1"
+                                                 class="img-fluid d-block mx-auto" data-original-title="" title=""
+                                                 aria-describedby="tooltip450892"/>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-0 bg-100">
+                                            <div class="tab-bg">
+                                                <h2>03</h2>
+                                                <h3>
+                                                    <b>All in one web solution for your Business</b>
+                                                </h3>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+                                                    perferendis
+                                                    quod debitis ab sed sapiente. Ducimus tempore, doloremque asperiores
+                                                    natus
+                                                    reprehenderit dignissimos beatae molestias tenetur cupiditate
+                                                    architecto
+                                                    culpa quibusdam velit magnam sapiente accusantium, repellat earum!
+                                                </p>
+                                                <a class="btn btn-danger bg-danger rounded-circle" href="#">Get In Touch
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Tab End-->
+
+        <!--Snippet Team Start-->
+        <template id="consultancy_team" name="Consultancy Team">
+            <section class="s_three_columns pt64 pb64 z_index_100" id="team_6" style="">
+                <div class="container">
+                    <h4 style="text-align: center; ">
+                        <font style="font-size: 14px;" class="text-alpha s_letter_spacing_1">
+                            <b class="o_default_snippet_text">OUR TEAM MEMBER</b>
+                        </font>
+                    </h4>
+                    <h2 class="m-auto text-alpha" style="text-align: center; ">
+                        <font color="#0e1032">
+                            <span style="font-size: 36px;">
+                                <b class="o_default_snippet_text">Our Expert Advisor</b>
+                            </span>
+                        </font>
+                    </h2>
+                    <div class="row d-flex pt48 align-items-stretch">
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 s_col_no_bgcolor pt16 pb16">
+                            <div class="bg-white">
+                                <img class="card-img-top"
+                                     src="/theme_consultancy_ultimate_01/static/src/img/placeholder-image-350x350.png"
+                                     alt="Odoo - Sample 1 for three columns" data-original-title="" title=""
+                                     aria-describedby="tooltip781496"/>
+                                <div class="card-body">
+                                    <h3 class="card-title" style="text-align: center; ">
+                                        <font color="#0e1032" class="o_default_snippet_text" style="font-size: 18px;">
+                                            <b>Amanda Seyfried</b>
+                                        </font>
+                                    </h3>
+                                    <p class="card-text o_default_snippet_text" style="text-align: center; ">Adapt these
+                                        three columns to fit you design need.
+                                    </p>
+                                    <p class="text-center mt8 mb8 ">
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-facebook fa-2x"/>
+                                        </a>
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-twitter fa-2x"/>
+                                        </a>
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-linkedin fa-2x"/>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 s_col_no_bgcolor pt16 pb16">
+                            <div class="bg-white">
+                                <img class="card-img-top"
+                                     src="/theme_consultancy_ultimate_01/static/src/img/placeholder-image-350x350.png"
+                                     alt="Odoo - Sample 2 for three columns" data-original-title="" title=""
+                                     aria-describedby="tooltip888441"/>
+                                <div class="card-body">
+                                    <h3 class="card-title" style="text-align: center;">
+                                        <font color="#0e1032" class="o_default_snippet_text" style="font-size: 18px;">
+                                            <b>Debbie Kubel</b>
+                                        </font>
+                                    </h3>
+                                    <p class="card-text o_default_snippet_text" style="text-align: center; ">Adapt these
+                                        three columns to fit you design need.
+
+                                        <br/>
+                                    </p>
+                                    <p class="text-center mt8 mb8 ">
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-facebook fa-2x"/>
+                                        </a>
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-twitter fa-2x"/>
+                                        </a>
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-linkedin fa-2x"/>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 s_col_no_bgcolor pt16 pb16">
+                            <div class="bg-white">
+                                <img class="card-img-top"
+                                     src="/theme_consultancy_ultimate_01/static/src/img/placeholder-image-350x350.png"
+                                     alt="Odoo - Sample 3 for three columns" data-original-title="" title=""
+                                     aria-describedby="tooltip301927"/>
+                                <div class="card-body">
+                                    <h3 class="card-title" style="color: rgb(33, 37, 41); text-align: center;">
+                                        <font style="color: rgb(14, 16, 50); font-size: 18px;"
+                                              class="o_default_snippet_text">
+                                            <b>Donald Simpson</b>
+                                        </font>
+                                    </h3>
+                                    <p class="card-text o_default_snippet_text" style="text-align: center; ">Adapt these
+                                        three columns to fit you design need.
+
+                                        <br/>
+                                    </p>
+                                    <p class="text-center mt8 mb8 ">
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-facebook fa-2x"/>
+                                        </a>
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-twitter fa-2x"/>
+                                        </a>
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-linkedin fa-2x"/>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </template>
+        <!--Snippet Team End-->
+
+        <!--Snippet Pricing Table Start-->
+        <template id="consultancy_pricing_table" name="Consultancy Pricing Table">
+            <section class="pricing_1 pt64 pb64" id="bs_price_table">
+                <div class="container">
+                    <div>
+                        <div class="row">
+                            <div class=" col-12 col-sm-12 col-lg-12 col-md-12 pb48 text-center">
+                                <h2 class="s_letter_spacing_1">
+                                    <font class="text-alpha" style="font-size: 14px;">
+                                        <b class="o_default_snippet_text">OUR PRICING PLAN</b>
+                                    </font>
+                                </h2>
+                                <h2>
+                                    <font style="font-size: 36px;">
+                                        <b class="o_default_snippet_text">Choose Your Affordable</b>
+                                    </font>
+                                </h2>
+                                <h2>
+                                    <font style="font-size: 36px;">
+                                        <b class="o_default_snippet_text">Pricing Plans&amp;nbsp;</b>
+                                    </font>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-lg 4 col-md-4 mb16">
+                                <div class="bs_content clearfix">
+                                    <div class="bs_head_price clearfix">
+                                        <div class="bs_head_content clearfix">
+                                            <div class="head_bg"/>
+                                            <div class="head">
+                                                <span class="o_default_snippet_text">
+                                                    <font style="font-size: 24px;">
+                                                        <b>Basic</b>
+                                                    </font>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="bs_price_tag clearfix">
+                                            <span class="price">
+                                                <span class="sign o_default_snippet_text">$</span>
+                                                <span class="currency o_default_snippet_text">99</span>
+                                                <span class="cent o_default_snippet_text">.99</span>
+                                                <span class="month o_default_snippet_text">/MON</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="bs_feature_list">
+                                        <ul>
+                                            <li class="o_default_snippet_text">
+                                                <span class="o_default_snippet_text">
+                                                    <font style="font-size: 14px;">2GB</font>
+                                                </span>
+                                                <font style="font-size: 14px;">Bandwidth &amp;nbsp;</font>
+                                            </li>
+                                            <li class="o_default_snippet_text">
+                                                <span class="o_default_snippet_text">
+                                                    <font style="font-size: 14px;">150GB</font>
+                                                </span>
+                                                <font style="font-size: 14px;">Storage &amp;nbsp;</font>
+                                            </li>
+                                            <li class="o_default_snippet_text">
+                                                <span class="o_default_snippet_text">
+                                                    <font style="font-size: 14px;">12</font>
+                                                </span>
+                                                <font style="font-size: 14px;">Accounts &amp;nbsp;</font>
+                                            </li>
+                                            <li class="o_default_snippet_text">
+                                                <span class="o_default_snippet_text">
+                                                    <font style="font-size: 14px;">7</font>
+                                                </span>
+                                                <font style="font-size: 14px;">Host Domain &amp;nbsp;</font>
+                                            </li>
+                                            <li class="o_default_snippet_text">
+                                                <span class="o_default_snippet_text">
+                                                    <font style="font-size: 14px;">24/7</font>
+                                                </span>
+                                                <font style="font-size: 14px;">Support &amp;nbsp;</font>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bs_price_btn clearfix">
+                                        <a class="o_default_snippet_text" href="" data-original-title="" title=""
+                                           aria-describedby="tooltip578311">
+                                            <font style="font-size: 14px;">
+                                                <b>Sign up</b>
+                                            </font>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-lg 4 col-md-4 mb16">
+                                <div class="bs_content active clearfix">
+                                    <div class="bs_head_price clearfix">
+                                        <div class="bs_head_content clearfix">
+                                            <div class="head_bg"/>
+                                            <div class="head">
+                                                <span class="o_default_snippet_text">
+                                                    <font style="font-size: 24px;">
+                                                        <b>Standard</b>
+                                                    </font>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="bs_price_tag clearfix">
+                                            <span class="price">
+                                                <span class="sign o_default_snippet_text">$</span>
+                                                <span class="currency o_default_snippet_text">199</span>
+                                                <span class="cent o_default_snippet_text">.99</span>
+                                                <span class="month o_default_snippet_text">/MON</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="bs_feature_list">
+                                        <ul>
+                                            <li class="o_default_snippet_text">
+                                                <span class="o_default_snippet_text">
+                                                    <font style="font-size: 14px;">2GB</font>
+                                                </span>
+                                                <font style="font-size: 14px;">Bandwidth &amp;nbsp;</font>
+                                            </li>
+                                            <li class="o_default_snippet_text">
+                                                <span class="o_default_snippet_text">
+                                                    <font style="font-size: 14px;">150GB</font>
+                                                </span>
+                                                <font style="font-size: 14px;">Storage &amp;nbsp;</font>
+                                            </li>
+                                            <li class="o_default_snippet_text">
+                                                <span class="o_default_snippet_text">
+                                                    <font style="font-size: 14px;">12</font>
+                                                </span>
+                                                <font style="font-size: 14px;">Accounts &amp;nbsp;</font>
+                                            </li>
+                                            <li class="o_default_snippet_text">
+                                                <span class="o_default_snippet_text">
+                                                    <font style="font-size: 14px;">7</font>
+                                                </span>
+                                                <font style="font-size: 14px;">Host Domain &amp;nbsp;</font>
+                                            </li>
+                                            <li class="o_default_snippet_text">
+                                                <span class="o_default_snippet_text">
+                                                    <font style="font-size: 14px;">24/7</font>
+                                                </span>
+                                                <font style="font-size: 14px;">Support &amp;nbsp;</font>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bs_price_btn clearfix">
+                                        <a class="o_default_snippet_text" href="" data-original-title="" title=""
+                                           aria-describedby="tooltip219363">
+                                            <b>
+                                                <font style="font-size: 14px;">Sign up</font>
+                                            </b>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-lg 4 col-md-4 mb16">
+                                <div class="bs_content clearfix">
+                                    <div class="bs_head_price clearfix">
+                                        <div class="bs_head_content clearfix">
+                                            <div class="head_bg"/>
+                                            <div class="head">
+                                                <span class="o_default_snippet_text">
+                                                    <b>Unlimited</b>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="bs_price_tag clearfix">
+                                            <span class="price">
+                                                <span class="sign o_default_snippet_text">$</span>
+                                                <span class="currency o_default_snippet_text">299</span>
+                                                <span class="cent o_default_snippet_text">.99</span>
+                                                <span class="month o_default_snippet_text">/MON</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="bs_feature_list">
+                                        <ul>
+                                            <li class="o_default_snippet_text">
+                                                <span class="o_default_snippet_text">
+                                                    <font style="font-size: 14px;">2GB</font>
+                                                </span>
+                                                <font style="font-size: 14px;">Bandwidth &amp;nbsp;</font>
+                                            </li>
+                                            <li class="o_default_snippet_text">
+                                                <span class="o_default_snippet_text">
+                                                    <font style="font-size: 14px;">150GB</font>
+                                                </span>
+                                                <font style="font-size: 14px;">Storage &amp;nbsp;</font>
+                                            </li>
+                                            <li class="o_default_snippet_text">
+                                                <span class="o_default_snippet_text">
+                                                    <font style="font-size: 14px;">12</font>
+                                                </span>
+                                                <font style="font-size: 14px;">Accounts &amp;nbsp;</font>
+                                            </li>
+                                            <li class="o_default_snippet_text">
+                                                <span class="o_default_snippet_text">
+                                                    <font style="font-size: 14px;">7</font>
+                                                </span>
+                                                <font style="font-size: 14px;">Host Domain &amp;nbsp;</font>
+                                            </li>
+                                            <li class="o_default_snippet_text">
+                                                <span class="o_default_snippet_text">
+                                                    <font style="font-size: 14px;">24/7</font>
+                                                </span>
+                                                <font style="font-size: 14px;">Support &amp;nbsp;</font>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bs_price_btn clearfix">
+                                        <a class="o_default_snippet_text" href="">
+                                            <b>
+                                                <font style="font-size: 14px;">Sign up</font>
+                                            </b>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Pricing Table End-->
+
+        <!--Snippets Assets Start-->
+        <template id="demo_snippets" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_structure']" position="before">
+                <div id="snippet_demo_snippets" class="o_panel">
+                    <div class="o_panel_header">
+                        <i class="fa fa-th-large"/>
+                        Consultancy Ultimate 01
+                    </div>
+                    <div class="o_panel_body">
+                        <t t-snippet="theme_consultancy_ultimate_01.consultancy_banner"
+                           t-thumbnail="/theme_consultancy_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_consultancy_ultimate_01.consultancy_features"
+                           t-thumbnail="/theme_consultancy_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_consultancy_ultimate_01.consultancy_about_us"
+                           t-thumbnail="/theme_consultancy_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_consultancy_ultimate_01.consultancy_grid_content"
+                           t-thumbnail="/theme_consultancy_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_consultancy_ultimate_01.consultancy_center_content"
+                           t-thumbnail="/theme_consultancy_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_consultancy_ultimate_01.consultancy_services"
+                           t-thumbnail="/theme_consultancy_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_consultancy_ultimate_01.consultancy_tab"
+                           t-thumbnail="/theme_consultancy_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_consultancy_ultimate_01.consultancy_team"
+                           t-thumbnail="/theme_consultancy_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_consultancy_ultimate_01.consultancy_pricing_table"
+                           t-thumbnail="/theme_consultancy_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+        <!--Snippets Assets End-->
+    </data>
+</odoo>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="app_theme_footer" inherit_id="website.layout"
+              name="App Theme Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section class="oe_structure" id="footer">
+                    <div class="pt64 pb64" id="footer_12">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mt64">
+                                    <a href="/website/social/twitter">
+                                        <i class="fa fa-2x fa-twitter social_icon_size social_twitter mx-2 mb8"
+                                           data-original-title="" title="" aria-describedby="tooltip348166"/>
+                                    </a>
+                                    <a href="/website/social/facebook">
+                                        <i class="fa fa-2x fa-facebook social_icon_size social_facebook mx-2 mb8"/>
+                                    </a>
+                                    <a href="/website/social/youtube">
+                                        <i class="fa fa-2x fa-youtube-play social_icon_size social_g_plus mx-2 mb8"/>
+                                    </a>
+                                    <a href="/website/social/instagram">
+                                        <i class="fa fa-2x fa-instagram social_icon_size social_dribbble mx-2 mb8"/>
+                                    </a>
+                                    <a href="/website/social/linkedin">
+                                        <i class="fa fa-2x fa-linkedin social_icon_size social_behance mx-2 mb8"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

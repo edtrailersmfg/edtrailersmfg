@@ -1,0 +1,457 @@
+<odoo>
+    <data>
+
+        <!--Snippet Mid Header Start-->
+        <template id="auto_accessories_mid_header" name="Auto Accessories Mid Header">
+            <section class="o_cc o_cc3 o_colored_level oe_custom_bg pb-1 undefined" id="mid-header-top-3"
+                     data-visible="mid_headears" data-snippet="ecommerce_mid_header_3"
+                     data-name="Ecommerce Mid Header 3">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 oe_structure mt-1 mb-1 col-lg-8 col-md-12 col-sm-12 text-center text-lg-left text-md-center o_colored_level"
+                             id="mid-header-top-left">
+                            <li class="list-inline-item">
+                                <div class="oe_structure oe_empty">
+                                    <span id="phone-header" class="col ml8 mr8">
+                                        <i class="fa fa-phone mr-2"/>
+                                        <span t-field="res_company.phone"/>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="list-inline-item">
+                                <div class="oe_structure oe_empty">
+                                    <span class="text-center col ml8 mr8" id="email-header">
+                                        <i class="fa fa-envelope mr-2"/>
+                                        <span t-field="res_company.email"/>
+                                    </span>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="col-12 oe_structure col-lg-4 col-md-12 col-sm-12 my-1 text-center text-lg-right text-md-center o_colored_level"
+                             id="mid-header-top-right">
+                            <li class="list-inline-item">
+                                <div class="oe_structure oe_empty">
+                                    <span class="mr-2">
+                                        <i class="fa fa-location-arrow"/>
+                                        <a href="#" style="color: rgb(0, 0, 0);"
+                                           class="o_default_snippet_text text-white">Store Location
+                                        </a>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="list-inline-item">
+                                <div class="oe_structure oe_empty">
+                                    <span>
+                                        <i class="fa fa-first-order"/>
+                                        <a href="#" style="color: rgb(0, 0, 0);"
+                                           class="o_default_snippet_text text-white">Track Order
+                                        </a>
+                                    </span>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-white oe_custom_bg pb-1 pb-1 o_colored_level" id="mid-header-bottom-3"
+                     data-snippet="ecommerce_mid_header_3" data-name="Ecommerce Mid Header 3">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-sm-12 col-lg-4 col-md-4 pt8 pb8 text-center text-md-left text-lg-left oe_structure o_colored_level"
+                             id="mid-header-bottom-left">
+                            <div class="oe_structure oe_empty">
+                                <a href="/" class="img-fluid">
+                                    <img src="/logo.png" alt="Logo of YourCompany" title="YourCompany"
+                                         loading="lazy"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="oe_structure col col-12 col-sm-12 col-md-4 col-lg-4 pt8 pb8 align-self-center text-lg-left o_colored_level"
+                             id="mid-header-bottom-center">
+                            <div class="oe_structure oe_empty">
+                                <t t-call="website.s_searchbar_input"></t>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-lg-4 col-md-4 text-center text-md-right text-lg-right align-self-center pt8 pb8 oe_structure o_colored_level"
+                             id="mid-header-bottom-right">
+                            <li class="list-inline-item">
+                                <div class="oe_structure oe_empty">
+                                    <a href="#" class="text-black o_default_snippet_text" title="Help">FAQ</a>
+                                </div>
+                            </li>
+                            <li id="my_wish" class="list-inline-item">
+                                <div class="oe_structure oe_empty">
+                                    <a href="/shop/wishlist" class="pr-2">
+                                        <i class="fa fa-heart-o text-black" title="wishlist"
+                                           style="font-size:18px;"/>
+                                    </a>
+                                </div>
+                            </li>
+                            <li id="my_cart" class="list-inline-item">
+                                <div class="oe_structure oe_empty">
+                                    <a href="/shop/cart" class="pr-2">
+                                        <i class="fa fa-opencart text-black" title="add to cart"
+                                           style="font-size:18px;"/>
+                                    </a>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Mid Header End-->
+
+        <!--Snippet Banner Start-->
+        <template id="auto_accessories_banner" name="Auto Accessories Banner">
+            <section class="col-lg-12 z_index_100 dynamic_category_snippet o_colored_level"
+                     data-snippet="auto_accessories_banner" data-name="Auto Accessories Banner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 d-lg-block d-md-none d-none dynamic_category_snippet_one js_get_block pt16 pb16 s_product_category_snippet_dynamic o_colored_level"
+                             data-loading="true" data-object="product.public.category"
+                             data-template="website_snippet_product_category_dynamic_ul_73lines.dynamic_category_snippet_one_template"/>
+                        <div class="col-lg-9 oe_structure oe_empty o_colored_level"
+                             data-editor-message="DRAG BUILDING BLOCKS HERE">
+                            <section class="o_colored_level">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center o_colored_level">
+                                            <div>
+                                                <img src="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/placeholder-1060x496.png"
+                                                     alt="image" class="img-fluid pt16 pb8" loading="lazy"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Banner End-->
+
+        <!--Snippet Image Block One Start-->
+        <template id="auto_accessories_image_block_one" name="Auto Accessories Image Block One">
+            <section class="pt32 pb48" id="image_grid_17">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 px-2 pb16">
+                            <div class="oe_structure oe_empty">
+                                <div class="">
+                                    <img src="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/placeholder-790x150.png"
+                                         alt="" class="img-fluid image"
+                                         data-original-title="" title="" aria-describedby="tooltip629292"/>
+                                    <div class=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 px-2 pb16">
+                            <div class="oe_structure oe_empty">
+                                <div class="">
+                                    <img src="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/placeholder-790x150.png"
+                                         alt="" class="img-fluid image"/>
+                                    <div class=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Image Block One End-->
+
+        <!--Snippet Image Block Two Start-->
+        <template id="auto_accessories_image_block_two" name="Auto Accessories Image Block Two">
+            <section class="pb64" id="image_grid_17">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 px-2 pb16">
+                            <div class="oe_structure oe_empty">
+                                <div class="">
+                                    <img src="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/placeholder-520x230.png"
+                                         alt="" class="img-fluid image"
+                                         data-original-title="" title="" aria-describedby="tooltip629292"/>
+                                    <div class=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 px-2 pb16">
+                            <div class="oe_structure oe_empty">
+                                <div class="">
+                                    <img src="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/placeholder-520x230.png"
+                                         alt="" class="img-fluid image"
+                                         data-original-title="" title="" aria-describedby="tooltip629292"/>
+                                    <div class=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 px-2 pb16">
+                            <div class="oe_structure oe_empty">
+                                <div class="">
+                                    <img src="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/placeholder-520x230.png"
+                                         alt="" class="img-fluid image"/>
+                                    <div class=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Image Block Two End-->
+
+        <!--Snippet News Start-->
+        <template id="auto_accessories_news" name="Auto Accessories News">
+            <section class="pb32 o_colored_level" id="news_two" data-snippet="auto_accessories_news"
+                     data-name="Auto Accessories News">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb16 o_colored_level">
+                            <h2 class="o_default_snippet_text" style="text-align: left; ">Recent News</h2>
+                            <hr/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb-4 o_colored_level">
+                            <div>
+                                <div class="hover_effect">
+                                    <img src="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/placeholder-600.jpg"
+                                         class="img-fluid w-100" data-original-title="" title=""
+                                         aria-describedby="tooltip650692" loading="lazy"/>
+                                </div>
+                                <div class="news_post pt-3">
+                                    <h5 class="font-weight-bold pb-2">
+                                        <a href="#" data-original-title="" title="" aria-describedby="tooltip478414">
+                                            <font style="font-size: 16px;" data-original-title="" title=""
+                                                  aria-describedby="tooltip462348" class="text-o-color-2">Bike Face Mask
+                                                for Every
+                                                Bike Rider
+                                            </font>
+                                        </a>
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li class="o_default_snippet_text">
+                                            <i class="fa fa-calendar"/>
+                                            June 7, 2016
+                                        </li>
+                                    </ul>
+                                    <p class="o_default_snippet_text">
+                                        <font style="font-size: 13px;" class="o_default_snippet_text">&amp;nbsp;Lorem
+                                            ipsum dolor sit amet, consectetur
+                                            adipisicing elit. Ad assumenda culpa cumque dicta&amp;nbsp;
+                                        </font>
+                                    </p>
+                                    <button type="button" class="bg-200 btn" data-original-title="" title=""
+                                            aria-describedby="tooltip111660">
+                                        <font style="font-size: 14px;">Read More</font>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb-4 o_colored_level">
+                            <div>
+                                <div class="hover_effect">
+                                    <img src="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/placeholder-600.jpg"
+                                         class="img-fluid w-100" data-original-title="" title=""
+                                         aria-describedby="tooltip650692" loading="lazy"/>
+                                </div>
+                                <div class="news_post pt-3">
+                                    <h5 class="font-weight-bold pb-2">
+                                        <a href="#" class="o_default_snippet_text" data-original-title="" title=""
+                                           aria-describedby="tooltip381611">
+                                            <font class="o_default_snippet_text text-o-color-2"
+                                                  style="font-size: 16px;">Make your Car Shines with
+                                                Autofurnish Car Polish
+                                            </font>
+                                            <font class="text-beta o_default_snippet_text" style="font-size: 16px;">
+                                            </font>
+                                        </a>
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li class="o_default_snippet_text">
+                                            <i class="fa fa-calendar"/>
+                                            June 7, 2016
+                                        </li>
+                                    </ul>
+                                    <p class="o_default_snippet_text">
+                                        <font style="font-size: 13px;" class="o_default_snippet_text">&amp;nbsp;Lorem
+                                            ipsum dolor sit amet, consectetur
+                                            adipisicing elit. Ad assumenda culpa cumque dicta&amp;nbsp;
+                                        </font>
+                                    </p>
+                                    <button type="button" class="bg-200 btn" data-original-title="" title=""
+                                            aria-describedby="tooltip83725">
+                                        <font style="font-size: 14px;">Read More</font>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb-4 o_colored_level">
+                            <div>
+                                <div class="hover_effect">
+                                    <img src="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/placeholder-600.jpg"
+                                         class="img-fluid w-100" data-original-title="" title=""
+                                         aria-describedby="tooltip650692" loading="lazy"/>
+                                </div>
+                                <div class="news_post pt-3">
+                                    <h5 class="font-weight-bold pb-2">
+                                        <a href="#" class="o_default_snippet_text" data-original-title="" title=""
+                                           aria-describedby="tooltip411010">
+                                            <font class="o_default_snippet_text text-o-color-2"
+                                                  style="font-size: 16px;">Trick Or Treat! Treats For
+                                                Your Truck
+                                            </font>
+                                            <font class="text-beta o_default_snippet_text" style="font-size: 16px;">
+                                            </font>
+                                        </a>
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li class="o_default_snippet_text">
+                                            <i class="fa fa-calendar"/>
+                                            June 7, 2016
+                                        </li>
+                                    </ul>
+                                    <p class="o_default_snippet_text">
+                                        <font style="font-size: 13px;" class="o_default_snippet_text">&amp;nbsp;Lorem
+                                            ipsum dolor sit amet, consectetur
+                                            adipisicing elit. Ad assumenda culpa cumque dicta&amp;nbsp;
+                                        </font>
+                                    </p>
+                                    <button type="button" class="bg-200 btn" data-original-title="" title=""
+                                            aria-describedby="tooltip547530">
+                                        <font style="font-size: 14px;">Read More</font>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb-4 o_colored_level" style="">
+                            <div>
+                                <div class="hover_effect">
+                                    <img src="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/placeholder-600.jpg"
+                                         class="img-fluid w-100" data-original-title="" title=""
+                                         aria-describedby="tooltip650692" loading="lazy"/>
+                                </div>
+                                <div class="news_post pt-3">
+                                    <h5 class="font-weight-bold pb-2">
+                                        <a href="#" class="o_default_snippet_text" data-original-title="" title=""
+                                           aria-describedby="tooltip318231">
+                                            <font class="o_default_snippet_text text-o-color-2"
+                                                  style="font-size: 16px;">Car Audio Accessories-
+                                                Advantages
+                                            </font>
+                                            <font class="text-beta o_default_snippet_text" style="font-size: 16px;">
+                                            </font>
+                                        </a>
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li class="o_default_snippet_text">
+                                            <i class="fa fa-calendar"/>
+                                            June 7, 2016
+                                        </li>
+                                    </ul>
+                                    <p class="o_default_snippet_text">
+                                        <font style="font-size: 13px;" class="o_default_snippet_text">&amp;nbsp;Lorem
+                                            ipsum dolor sit amet, consectetur
+                                            adipisicing elit. Ad assumenda culpa cumque dicta&amp;nbsp;
+                                        </font>
+                                    </p>
+                                    <button type="button" class="bg-200 btn o_default_snippet_text">
+                                        <font style="font-size: 14px;">Read More</font>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet News End-->
+
+        <!--Snippet Features Start-->
+        <template id="auto_accessories_features" name="Auto Accessories Features">
+            <section class="pb64 pt32">
+                <div class="border container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="row py-5 px-4">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                    <i class="fa fa-3x fa-calculator mr-3 mt-2 text-alpha"/>
+                                    <div class="media-body">
+                                        <h3>
+                                            <font style="font-size: 14px;" class="text-beta">
+                                                <b>FREE SHIPPING</b>
+                                            </font>
+                                        </h3>
+                                        <p class="mb0">From $99.00</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                    <i class="fa fa-3x fa-calculator mr-3 mt-2 text-alpha"/>
+                                    <div class="media-body">
+                                        <h3>
+                                            <font style="font-size: 14px;">
+                                                <b>ONLINE SUPPORT</b>
+                                            </font>
+                                        </h3>
+                                        <p class="mb0">24 hours</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                    <i class="fa fa-3x fa-calculator mr-3 mt-2 text-alpha"/>
+                                    <div class="media-body">
+                                        <h3>
+                                            <font style="font-size: 14px;">
+                                                <b>SECURE PAYMENT</b>
+                                            </font>
+                                        </h3>
+                                        <p class="mb0">Safe Shopping</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                    <i class="fa fa-3x fa-calculator mr-3 mt-2 text-alpha"/>
+                                    <div class="media-body">
+                                        <h3>
+                                            <font style="font-size: 14px;">
+                                                <b>MONEY GUARANTEE</b>
+                                            </font>
+                                        </h3>
+                                        <p class="mb0">30 Days Back</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Features End-->
+
+        <!--Snippets Assets-->
+        <template id="demo_snippets" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_structure']" position="before">
+                <div id="snippet_demo_snippets" class="o_panel">
+                    <div class="o_panel_header">
+                        <i class="fa fa-th-large"/>
+                        Auto Accessories Ecommerce Ultimate 01
+                    </div>
+                    <div class="o_panel_body">
+                        <t t-snippet="theme_auto_accessories_ecommerce_ultimate_01.auto_accessories_mid_header"
+                           t-thumbnail="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_auto_accessories_ecommerce_ultimate_01.auto_accessories_banner"
+                           t-thumbnail="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_auto_accessories_ecommerce_ultimate_01.auto_accessories_image_block_one"
+                           t-thumbnail="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_auto_accessories_ecommerce_ultimate_01.auto_accessories_image_block_two"
+                           t-thumbnail="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_auto_accessories_ecommerce_ultimate_01.auto_accessories_news"
+                           t-thumbnail="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_auto_accessories_ecommerce_ultimate_01.auto_accessories_features"
+                           t-thumbnail="/theme_auto_accessories_ecommerce_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

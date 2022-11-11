@@ -1,0 +1,64 @@
+<odoo>
+    <data>
+        <!--Snippet Promo Image Start-->
+        <template id="beauty_promo_image" name="Beauty Promo Image - Fade In">
+            <section class="pt64 pb64" id="ecommerce_block_1" style="position: relative;"
+                     data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Rainy/07&quot;,&quot;colors&quot;:{&quot;c1&quot;:&quot;rgba(255, 108, 141, 0.05)&quot;,&quot;c2&quot;:&quot;rgba(253, 244, 243, 0.24)&quot;,&quot;c3&quot;:&quot;rgba(248, 185, 115, 0.05)&quot;},&quot;flip&quot;:[&quot;y&quot;,&quot;x&quot;]}">
+                <div class="o_we_shape o_web_editor_Rainy_07"
+                     style="background-image: url(&quot;/web_editor/shape/web_editor/Rainy/07.svg?c1=rgba(255%2C%20108%2C%20141%2C%200.05)&amp;c2=rgba(253%2C%20244%2C%20243%2C%200.24)&amp;c3=rgba(248%2C%20185%2C%20115%2C%200.05)&amp;flip=xy&quot;); background-position: 50% 100%;"/>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-6 col-sm-6 mt8 mb8">
+                            <div class="hover_effect">
+                                <img class="img-fluid d-block mx-auto"
+                                     src="/theme_beauty_ecommerce_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                     data-original-title="" title="" aria-describedby="tooltip867057"/>
+                                <div class="col-12 img-content px-5">
+                                    <h2>
+                                        <b>Sale Upto 50% Off</b>
+                                    </h2>
+                                    <p>
+                                        <font style="font-size: 18px;">New Arrivals</font>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6 col-sm-6 mt8 mb8">
+                            <div class="hover_effect">
+                                <img class="img-fluid d-block mx-auto"
+                                     src="/theme_beauty_ecommerce_ultimate_01/static/src/img/placeholder-image-600.jpg"
+                                     data-original-title="" title="" aria-describedby="tooltip867057"/>
+                                <div class="col-12 img-content px-5">
+                                    <h2>
+                                        <b>Flat 30% Off</b>
+                                    </h2>
+                                    <p>
+                                        <span style="font-size: 18px;">Skin &amp;amp; Body Care</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Promo Image End-->
+
+        <!--Snippets Assets Start-->
+        <template id="demo_snippets" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_structure']" position="before">
+                <div id="snippet_demo_snippets" class="o_panel">
+                    <div class="o_panel_header">
+                        <i class="fa fa-th-large"/>
+                        Beauty Ecommerce Ultimate 01
+                    </div>
+                    <div class="o_panel_body">
+                        <t t-snippet="theme_beauty_ecommerce_ultimate_01.beauty_promo_image"
+                           t-thumbnail="/theme_beauty_ecommerce_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+        <!--Snippets Assets End-->
+    </data>
+</odoo>

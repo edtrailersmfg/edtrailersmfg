@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="logistics_theme_footer" inherit_id="website.layout"
+              name="Logistics Theme Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section id="footer" class="oe_structure oe_structure_solo" style="border-top:none;">
+                    <div class="pt64 pb32" id="footer_3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb32 o_colored_level">
+                                    <img style="margin:0 auto;" class="img img-responsive img-fluid mb16"
+                                         src="/logo.png" alt="Logo of YourCompany" title="YourCompany" loading="lazy"/>
+                                    <div class="media">
+                                        <i class="fa fa-2x fa-map-marker mr-2 text-o-color-1" data-original-title=""
+                                           title="" aria-describedby="tooltip840640" style=""/>
+                                        <div class="media-body">
+                                            <p class="font-weight-bold mb8 o_default_snippet_text">
+                                                <font style="font-size: 16px;">Address :</font>
+                                            </p>
+                                            <p class="o_default_snippet_text">
+                                                <font style="font-size: 16px;" class="text-o-color-3">
+                                                    <span t-field="res_company.street"/>
+                                                    <span t-field="res_company.city"/>
+                                                    <span t-field="res_company.state_id.name"/>
+                                                    <span t-field="res_company.zip"/>
+                                                    <span t-field="res_company.country_id.name"/>
+                                                </font>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <i class="fa fa-2x fa-phone mr-2 text-o-color-1" data-original-title="" title=""
+                                           aria-describedby="tooltip893045" style=""/>
+                                        <div class="media-body">
+                                            <p class="font-weight-bold mb8 o_default_snippet_text">
+                                                <font style="font-size: 16px;">Call us &amp;amp; Hire us :</font>
+                                            </p>
+                                            <p>
+                                                <font style="font-size: 16px;" class="text-o-color-3">+61 (0)791803458
+                                                </font>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="icon_bg">
+                                        <a href="/website/social/facebook">
+                                            <i class="fa fa-facebook mx-1 text-alpha" data-original-title="" title=""
+                                               aria-describedby="tooltip879688" style=""/>
+                                        </a>
+                                        <a href="/website/social/twitter">
+                                            <i class="fa fa-twitter mx-1 text-alpha" data-original-title="" title=""
+                                               aria-describedby="tooltip170572" style=""/>
+                                        </a>
+                                        <a href="/website/social/instagram">
+                                            <i class="fa fa-instagram mx-1 text-alpha" data-original-title="" title=""
+                                               aria-describedby="tooltip408648" style=""/>
+                                        </a>
+                                        <a href="/website/social/youtube">
+                                            <i class="fa fa-youtube-play mx-1 text-alpha" data-original-title="" title=""
+                                               aria-describedby="tooltip18117" style=""/>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb32 o_colored_level">
+                                    <h5>
+                                        <font style="font-size: 24px;">
+                                            <b>Useful Links</b>
+                                        </font>
+                                    </h5>
+                                    <ul class="list-unstyled mt24">
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip732298">
+                                                <font style="font-size: 16px;" data-original-title="" title=""
+                                                      aria-describedby="tooltip463980" class="text-o-color-3">Shipping
+                                                    Rates &amp;amp; Delivery Times
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip732298">
+                                                <font style="font-size: 16px;" data-original-title="" title=""
+                                                      aria-describedby="tooltip463980" class="text-o-color-3">
+                                                    Schedule &amp;amp; Manage Pickups
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip200640">
+                                                <font style="font-size: 16px;" class="text-o-color-3">Packing &amp;amp;
+                                                    Shipping Supplies
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip873901">
+                                                <font style="font-size: 16px;" class="text-o-color-3">
+                                                    International Shipping
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip236446">
+                                                <font style="font-size: 16px;" class="text-o-color-3">Advanced Shipment
+                                                    Tracking
+
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip902882">
+                                                <font style="font-size: 16px;" class="text-o-color-3">Join Our Company's
+                                                    Drivers Team
+                                                </font>
+                                                <font style="font-size: 16px;" class="text-gamma">
+                                                </font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb32 o_colored_level">
+                                    <h5 class="mb24">
+                                        <font style="font-size: 24px;">
+                                            <b>Our Services</b>
+                                        </font>
+                                    </h5>
+                                    <p class="mb8">
+                                        <font style="font-size: 16px;" class="text-o-color-3">Warehousing</font>
+                                    </p>
+                                    <p class="mb8">
+                                        <font style="font-size: 16px;" class="text-o-color-3">Air Freight</font>
+                                    </p>
+                                    <p class="mb8">
+                                        <font style="font-size: 16px;" class="text-o-color-3">Ocean Freight</font>
+                                    </p>
+                                    <p class="mb8">
+                                        <font style="font-size: 16px;" class="text-o-color-3">Road Freight</font>
+                                    </p>
+                                    <p class="mb8">
+                                        <font style="font-size: 16px;" class="text-o-color-3">Supply Chain</font>
+                                    </p>
+                                    <p class="mb8">
+                                        <font style="font-size: 16px;" class="text-o-color-3">Packaging</font>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

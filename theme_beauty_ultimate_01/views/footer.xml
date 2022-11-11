@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="beauty_theme_footer" inherit_id="website.layout"
+              name="Beauty Theme Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section class="oe_structure" id="footer">
+                    <div class="pt64 pb32" id="footer_3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb32">
+                                    <img style="margin:0 auto;" class="img img-responsive img-fluid" src="/logo.png"
+                                         alt="Logo of YourCompany" title="YourCompany"/>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <div class="media mt16 mb16">
+                                        <i class="fa fa-map-marker mr-2 fa-2x"/>
+                                        <div class="media-body">
+                                            <p class="font-weight-bold mb8 o_default_snippet_text">Address :</p>
+                                            <span t-field="res_company.street"/>
+                                            <span t-field="res_company.city"/>
+                                            <span t-field="res_company.state_id.name"/>
+                                            <span t-field="res_company.zip"/>
+                                            <span t-field="res_company.country_id.name"/>
+                                        </div>
+                                    </div>
+                                    <div class="media mt16 mb16">
+                                        <i class="fa fa-phone mr-2 fa-2x"/>
+                                        <div class="media-body">
+                                            <p class="font-weight-bold mb8 o_default_snippet_text">Call us &amp;amp;
+                                                Hire us :
+                                            </p>
+                                            <span t-field="res_company.phone"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-2 mb32">
+                                    <h5 class="o_default_snippet_text">
+                                        <b>
+                                            <font style="font-size: 18px;">Usefull Links</font>
+                                        </b>
+                                    </h5>
+                                    <ul class="list-unstyled mt24">
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip428181">About us
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip428181">Services
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip927705">Shop
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip428181">Blog
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip919017">Team
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" data-original-title="" title=""
+                                               aria-describedby="tooltip428181">FAQs
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32">
+                                    <h5 class="mb24">
+                                        <b>
+                                            <font style="font-size: 18px;">Latest Post</font>
+                                        </b>
+                                    </h5>
+                                    <p class="mb8">Advertising hairdressing jobs</p>
+                                    <p class="o_default_snippet_text">26 January,2018</p>
+                                    <hr class="m-0"/>
+                                    <p class="mb8">In the big city</p>
+                                    <p class="o_default_snippet_text">26 January,2018</p>
+                                    <hr class="m-0"/>
+                                    <p class="mb8">When nobody is watching</p>
+                                    <p class="o_default_snippet_text">26 January,2018</p>
+                                    <hr class="m-0"/>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32">
+                                    <h5 class="mb24">
+                                        <font style="font-size: 18px;">
+                                            <b>Opening Hours</b>
+                                        </font>
+                                    </h5>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <p>Mon - Tue : 9.00 AM - 17.00 PM</p>
+                                    <p>Wed - Fri : 8.00 AM - 17.00 PM</p>
+                                    <p>Sat - Sun : 8.00 AM - 15.00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

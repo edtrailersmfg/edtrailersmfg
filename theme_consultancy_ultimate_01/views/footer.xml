@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="consultancy_theme_footer" inherit_id="website.layout"
+              name="Consultancy Theme Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section class="oe_structure bg-gamma oe_custom_bg" id="footer"
+                         style="background-image: url(&quot;/theme_consultancy_ultimate_01/static/src/img/placeholder-image-1170.jpg&quot;);">
+                    <div class="pt64 pb32 oe_img_bg" id="footer_6">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 separator mb32">
+                                    <img style="margin:0 auto;" class="img img-responsive img-fluid" src="/logo.png"
+                                         alt="Logo of YourCompany" title="YourCompany"/>
+                                    <p class="o_default_snippet_text">
+                                        <font style="" class="text-beta">Lorem Ipsum is simply dummy text of the
+                                            printing and typesetting industry. Lorem Ipsum has been the
+                                            industry's standard dummy.Lorem ipsum dolor sit amet, consectetur
+                                            adipisicing elit&amp;nbsp;
+                                        </font>
+                                    </p>
+                                    <div class="o_default_snippet_text media mb16">
+                                        <i class="fa fa-map-marker mr-2 mt-1"/>
+                                        <div class="media-body">
+                                            <span>Address:</span>
+                                            <span t-field="res_company.street"/>
+                                        </div>
+                                    </div>
+                                    <div class="o_default_snippet_text media mb16">
+                                        <i class="fa fa-phone mr-2 mt-1"/>
+                                        <div class="media-body">
+                                            <span>Phone:</span>
+                                            <span t-field="res_company.phone"/>
+                                        </div>
+                                    </div>
+                                    <div class="o_default_snippet_text media mb16">
+                                        <i class="fa fa-envelope mr-2 mt-1"/>
+                                        <div class="media-body">
+                                            <span>Email:</span>
+                                            <span t-field="res_company.email"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-2 separator mb32">
+                                    <h5 class="text-uppercase font-weight-bold o_default_snippet_text">
+                                        <font class="text-beta" style="">links</font>
+                                    </h5>
+                                    <hr style="width: 35px; margin: 0; padding: 0;" class="mb16"/>
+                                    <ul class="list-unstyled text-uppercase">
+                                        <li class="mb8">ABOUT</li>
+                                        <li class="mb8">CONTACTS</li>
+                                        <li class="mb8">TYPOGRAPHY</li>
+                                        <li class="mb8">CAREERS</li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font style="" class="text-beta" data-original-title="" title=""
+                                                      aria-describedby="tooltip283399">services
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">OUR APPROACH</li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font style="" class="text-beta">shop ruler</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font style="" class="text-beta">services</font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 separator mb32">
+                                    <h5 class="text-uppercase font-weight-bold o_default_snippet_text">
+                                        <font class="text-beta" style="">latest posts</font>
+                                    </h5>
+                                    <hr style="width: 35px; margin: 0; padding: 0;" class="mb16"/>
+                                    <div class="media">
+                                        <img alt="image" class="img-fluid mb8 mr-2"
+                                             src="/theme_consultancy_ultimate_01/static/src/img/placeholder-image-70x70.png"/>
+                                        <div class="media-body">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font style="" class="text-beta">Lorem ipsum dolor sit amet,
+                                                    consectetur adipisicing elit
+                                                </font>
+                                            </a>
+                                            <p class="o_default_snippet_text">June 5,2014</p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <img alt="image" class="img-fluid mb8 mr-2"
+                                             src="/theme_consultancy_ultimate_01/static/src/img/placeholder-image-70x70.png"/>
+                                        <div class="media-body">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font style="" class="text-beta">Lorem ipsum dolor sit amet,
+                                                    consectetur adipisicing elit
+                                                </font>
+                                            </a>
+                                            <p class="o_default_snippet_text">June 5,2014</p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <img alt="image" class="img-fluid mb8 mr-2"
+                                             src="/theme_consultancy_ultimate_01/static/src/img/placeholder-image-70x70.png"/>
+                                        <div class="media-body">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font style="" class="text-beta">Lorem ipsum dolor sit amet,
+                                                    consectetur adipisicing elit
+                                                </font>
+                                            </a>
+                                            <p class="o_default_snippet_text">June 5,2014</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32">
+                                    <h5 class="text-uppercase font-weight-bold o_default_snippet_text">
+                                        <font class="text-beta" style="">short links</font>
+                                    </h5>
+                                    <hr style="width: 35px; margin: 0; padding: 0;" class="mb16"/>
+                                    <a href="#" target="_blank" class="o_default_snippet_text">
+                                        <font style="" class="text-beta" data-original-title="" title=""
+                                              aria-describedby="tooltip616545">Lorem ipsum dolor sit amet
+                                        </font>
+                                    </a>
+                                    <hr class="mt8 mb8"/>
+                                    <a href="#" target="_blank" class="o_default_snippet_text">
+                                        <font style="" class="text-beta">Lorem ipsum dolor sit amet</font>
+                                    </a>
+                                    <hr class="mt8 mb8"/>
+                                    <a href="#" target="_blank" class="o_default_snippet_text">
+                                        <font style="" class="text-beta">Lorem ipsum dolor sit amet</font>
+                                    </a>
+                                    <hr class="mt8 mb8"/>
+                                    <a href="#" target="_blank" class="o_default_snippet_text">
+                                        <font style="" class="text-beta">Lorem ipsum dolor sit amet</font>
+                                    </a>
+                                    <hr class="mt8 mb8"/>
+                                    <a href="#" target="_blank" class="o_default_snippet_text">
+                                        <font style="" class="text-beta">Lorem ipsum dolor sit amet</font>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

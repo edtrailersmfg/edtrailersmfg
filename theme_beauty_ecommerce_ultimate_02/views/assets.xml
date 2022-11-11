@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="snippet_ultimate_footer_option" inherit_id="website.snippet_options">
+        <t t-call="web_editor.snippet_options"/>
+        <xpath expr="//we-button[@data-customize-website-views='website.footer_custom']"
+               position="before">
+            <we-button title="Beauty Two Ecommerce Theme Footer"
+                       data-customize-website-views="theme_beauty_ecommerce_ultimate_02.beauty_two_ecommerce_theme_footer"
+                       data-customize-website-variable="'beauty-two-ecommerce-theme-footer'"
+                       data-img="">Beauty Two Ecommerce Theme Footer
+            </we-button>
+        </xpath>
+    </template>
+</odoo>

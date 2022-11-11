@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="agency_two_theme_footer" inherit_id="website.layout"
+              name="Agency Two Theme Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section id="footer" class="oe_structure oe_structure_solo" style="border-top: none;">
+                    <div class="oe_structure oe_empty" data-editor-message="DRAG BUILDING BLOCKS HERE">
+                        <div class="pt64 pb32" id="footer_15">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-lg-3 col-md-12 col-sm-12 o_colored_level">
+                                        <h5 class="pb16">
+                                            <b>
+                                                <font style="font-size: 18px;" class="text-o-color-3">About Us</font>
+                                            </b>
+                                        </h5>
+                                        <p style="text-align: left;" class="s_line_height_2">
+                                            <font style="font-size: 16px;" class="text-o-color-5">Lorem ipsum dolor sit
+                                                amet, consectetur adipi
+                                                scing elit , sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                aliqua.
+                                            </font>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 o_colored_level" style="">
+                                        <h5 class="pb16">
+                                            <b>
+                                                <font style="font-size: 18px;" class="text-o-color-3">Pages</font>
+                                            </b>
+                                        </h5>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <font style="font-size: 16px;" class="s_line_height_2 text-o-color-5">
+                                                    Home
+                                                </font>
+                                            </li>
+                                            <li>
+                                                <font style="font-size: 16px;" class="s_line_height_2 text-o-color-5">
+                                                    Features
+                                                </font>
+                                            </li>
+                                            <li>
+                                                <font style="font-size: 16px;" class="s_line_height_2 text-o-color-5">
+                                                    Pricing
+                                                </font>
+                                            </li>
+                                            <li>
+                                                <font style="font-size: 16px;" class="s_line_height_2 text-o-color-5">
+                                                    Testimonials
+                                                </font>
+                                            </li>
+                                            <li>
+                                                <font style="font-size: 16px;" class="s_line_height_2 text-o-color-5">
+                                                    Blog
+                                                </font>
+                                            </li>
+                                            <li>
+                                                <font style="font-size: 16px;" class="s_line_height_2 text-o-color-5">
+                                                    Contact
+                                                </font>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 o_colored_level">
+                                        <h5 class="pb16">
+                                            <b>
+                                                <font style="font-size: 18px;" class="text-o-color-3">Services</font>
+                                            </b>
+                                        </h5>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <font style="font-size: 16px;" class="text-o-color-5 s_line_height_2">
+                                                    Development
+                                                </font>
+                                            </li>
+                                            <li>
+                                                <font style="font-size: 16px;" class="text-o-color-5 s_line_height_2">
+                                                    Website Security
+                                                </font>
+                                            </li>
+                                            <li>
+                                                <font style="font-size: 16px;" class="text-o-color-5 s_line_height_2">
+                                                    Content Strategy
+                                                </font>
+                                            </li>
+                                            <li>
+                                                <font style="font-size: 16px;" class="text-o-color-5 s_line_height_2">
+                                                    SEO Optimization
+                                                </font>
+                                            </li>
+                                            <li>
+                                                <font style="font-size: 16px;" class="text-o-color-5 s_line_height_2">
+                                                    Media Planing
+                                                </font>
+                                            </li>
+                                            <li>
+                                                <font style="font-size: 16px;" class="text-o-color-5 s_line_height_2">
+                                                    Modern Coding
+                                                </font>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 pb32 o_colored_level"
+                                         id="social_share_icon_1">
+                                        <h5 class="font-weight-bold">
+                                            <font style="font-size: 18px;" class="text-o-color-3">Follow Us On</font>
+                                        </h5>
+                                        <div class="icon_bg pt16">
+                                            <a href="/website/social/facebook" class="btn btn-primary">
+                                                <i class="fa fa-facebook-f text-o-color-3" data-original-title=""
+                                                   title="" aria-describedby="tooltip145901" style=""/>
+                                            </a>
+                                            <a href="/website/social/twitter" class="btn btn-primary">
+                                                <i class="fa fa-twitter text-o-color-3" data-original-title="" title=""
+                                                   aria-describedby="tooltip178528" style=""/>
+                                            </a>
+                                            <a href="/website/social/linkedin" class="btn btn-primary">
+                                                <i class="fa fa-linkedin text-o-color-3" data-original-title="" title=""
+                                                   aria-describedby="tooltip596973" style=""/>
+                                            </a>
+                                            <a href="/website/social/youtube" class="btn btn-primary">
+                                                <i class="fa fa-youtube-play text-o-color-3" data-original-title=""
+                                                   title="" aria-describedby="tooltip648611" style=""/>
+                                            </a>
+                                            <a href="/website/social/instagram" class="btn btn-primary">
+                                                <i class="fa fa-instagram text-o-color-3" data-original-title=""
+                                                   title="" aria-describedby="tooltip736572" style=""/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

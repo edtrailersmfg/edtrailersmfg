@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="adventure_theme_footer" inherit_id="website.layout"
+              name="Adventure Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer"
+                         style="border-top:none;" data-snippet="s_text_block"
+                         data-name="Text">
+                    <div class="oe_structure oe_empty">
+                        <div class="pt64 pb32" id="footer_17">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 pb32">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                <h6 class="o_default_snippet_text">
+                                                    <font style="font-size: 36px;">Subscribe On our Newsletter</font>
+                                                </h6>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                <div class="input-group js_subscribe hidden" data-list-id="1"
+                                                     data-subscribe="off">
+                                                    <input type="email" name="email"
+                                                           class="js_subscribe_email form-control rounded-0"
+                                                           placeholder="your email..."/>
+                                                    <span class="input-group-btn">
+                                                        <a href="#"
+                                                           class="btn btn-primary js_subscribe_btn o_default_snippet_text rounded-0">
+                                                            Subscribe
+                                                        </a>
+                                                        <a href="#"
+                                                           class="btn btn-success js_subscribed_btn hidden o_default_snippet_text rounded-0 d-none"
+                                                           disabled="disabled">Thanks
+                                                        </a>
+                                                    </span>
+                                                    <div class="alert alert-success hidden o_default_snippet_text rounded-0 d-none">
+                                                        Thanks for your subscription!
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 pb32">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-8">
+                                                <h6>
+                                                    <font style="font-size: 62px;">Ultimate</font>
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

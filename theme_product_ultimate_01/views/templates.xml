@@ -1,0 +1,872 @@
+<odoo>
+    <data>
+        <!--Banner Snippets start-->
+        <template id="product_banner" name="Product Banner">
+            <section class="s_cover parallax align-content-center align-items-center d-flex full-height o_colored_level"
+                     data-scroll-background-ratio="1" style="" data-snippet="product_banner" data-name="Product Banner">
+                <span class="s_parallax_bg oe_img_bg oe_custom_bg"
+                      style="background-image: url(&quot;/theme_product_ultimate_01/static/src/img/placeholder-1170.jpg&quot;); background-position: 50% 0px;"/>
+                <div class="container">
+                    <div class="row s_nb_column_fixed">
+                        <div class="col-lg-12 s_title o_colored_level" data-name="Title">
+                            <h1 class="s_title_thin text-left">
+                                <font style="color: rgb(255, 255, 255);">
+                                    <b class="o_default_snippet_text">BuzzBee Nano Drone</b>
+                                </font>
+                            </h1>
+                        </div>
+                        <div class="col-lg-12 s_text pt16 pb16 o_colored_level" data-name="Text">
+                            <p class="lead text-left" style="text-align: center;">
+                                <font style="color: rgb(255, 255, 255);" class="o_default_snippet_text">Write one or two
+                                    paragraphs
+                                    describing your product, services or a specific feature. &amp;nbsp;
+                                </font>
+                                <br/>
+                            </p>
+                            <p class="lead text-left" style="text-align: center;">
+                                <font style="color: rgb(255, 255, 255);" class="o_default_snippet_text">To be successful
+                                    your content
+                                    needs to be useful to your readers.
+                                </font>
+                            </p>
+                        </div>
+                        <div class="col-lg-12 s_btn text-left pt16 pb16 o_colored_level" data-name="Buttons">
+                            <span data-original-title="" title="" aria-describedby="tooltip739228">
+                                <a href="/aboutus" class="bg-o-color-5 btn btn-delta btn-lg flat" data-original-title=""
+                                   title="" aria-describedby="tooltip433926">
+                                    <b class="o_default_snippet_text">VIEW MORE</b>
+                                </a>
+                            </span>
+                            <a href="/contactus" class="btn btn-primary flat btn-lg" data-original-title="" title=""
+                               aria-describedby="tooltip583032">
+                                <b class="o_default_snippet_text">CONTACT US</b>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Banner Snippets End-->
+
+        <!--Drone Category Snippets start-->
+        <template id="product_category" name="Product Drone Category - Fade In Up">
+            <section class="pt64 pb64 o_colored_level" style="" data-snippet="product_category"
+                     data-name="Product Drone Category">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 o_colored_level">
+                            <h2 class="text-center">
+                                <b>
+                                    <font class="text-beta o_default_snippet_text" style="">DRONE CATEGORY</font>
+                                </b>
+                            </h2>
+                            <div class="row pt64">
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center o_colored_level">
+                                    <img class="img-fluid o_we_custom_image"
+                                         src="/theme_product_ultimate_01/static/src/img/placeholder-600.jpg"
+                                         data-original-title="" title="" aria-describedby="tooltip724011"
+                                         loading="lazy"/>
+                                    <h3 class="pt8 pb8">
+                                        <b>
+                                            <font style="font-size: 18px;" class="text-beta o_default_snippet_text">
+                                                MEDIA
+                                                COVERAGE DRONE
+                                            </font>
+                                        </b>
+                                    </h3>
+                                    <p class="o_default_snippet_text">Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit. Ut at semper metus. Vestibulum
+                                        gravida velit urna, ut mattis leo ullamcorper sed.
+                                    </p>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center o_colored_level">
+                                    <img class="img-fluid o_we_custom_image"
+                                         src="/theme_product_ultimate_01/static/src/img/placeholder-600.jpg"
+                                         data-original-title="" title="" aria-describedby="tooltip724011"
+                                         loading="lazy"/>
+                                    <h3 class="pt8 pb8">
+                                        <b>
+                                            <font style="font-size: 18px;" class="text-beta o_default_snippet_text">
+                                                MULTI
+                                                CAMERA DRONE
+                                            </font>
+                                        </b>
+                                    </h3>
+                                    <p class="o_default_snippet_text">Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit. Ut at semper metus. Vestibulum
+                                        gravida velit urna, ut mattis leo ullamcorper sed.
+                                    </p>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center o_colored_level">
+                                    <img class="img-fluid o_we_custom_image"
+                                         src="/theme_product_ultimate_01/static/src/img/placeholder-600.jpg"
+                                         loading="lazy"/>
+                                    <h3 class="pb8 pt8">
+                                        <b>
+                                            <font style="font-size: 18px;" class="text-beta o_default_snippet_text">
+                                                SPYCAM
+                                                DRONE
+                                            </font>
+                                        </b>
+                                    </h3>
+                                    <p class="o_default_snippet_text">Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit. Ut at semper metus. Vestibulum
+                                        gravida velit urna, ut mattis leo ullamcorper sed.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Drone Category Snippets End-->
+
+        <!--Center Content Snippets start-->
+        <template id="product_center_content_1" name="Product Center Content 1 - Zoom In">
+            <section class="pb0 pt64 oe_custom_bg o_colored_level" style="" data-snippet="product_center_content_1"
+                     data-name="Product Center Content 1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 text-center pt0 pb88 col-lg-12 o_colored_level">
+                            <img src="/theme_product_ultimate_01/static/src/img/placeholder-1170.jpg" alt="img2"
+                                 class="img-fluid mb64" data-original-title="" title="" aria-describedby="tooltip756565"
+                                 loading="lazy"/>
+                            <h3 class="font-weight-bold pt24">
+                                <font style="font-size: 28px;" class="o_default_snippet_text">LIVE STREAMMING VIEW
+                                </font>
+                            </h3>
+                            <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Pellentesque fermentum est in tortor congue suscipit.
+                                Suspendisse potenti. Aliquam finibus pharetra tellus at
+                                egestas.Suspendisse potenti. Aliquam finibus pharetra tellus at
+                                egestas.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Center Content Snippets End-->
+
+        <!--Drone Gallery Snippets start-->
+        <template id="product_drone_gallery" name="Product Drone Gallery">
+            <section class="oe_custom_bg o_colored_level bg-o-color-2" data-snippet="product_drone_gallery"
+                     data-name="Product Drone Gallery"
+                     data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Origins/10&quot;,&quot;flip&quot;:[]}"
+                     style="position: relative;">
+                <div class="o_we_shape o_web_editor_Origins_10"/>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center col-lg-12 pb56 pt64 o_colored_level">
+                            <h2>
+                                <b>
+                                    <font style="color: rgb(255, 255, 255);" class="o_default_snippet_text">FLIGHT WITH
+                                        DRON GALLERY
+                                    </font>
+                                </b>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sni-block pb0 pt0 o_colored_level" style="" data-snippet="product_drone_gallery"
+                     data-name="Product Drone Gallery">
+                <div class="container container-full">
+                    <div class="row">
+                        <div class="col-12 col-sm-4 col-md-3 img-box col-lg-3 plr-0 o_colored_level">
+                            <div class="img-box-container">
+                                <img class="img-fluid d-block mx-auto"
+                                     src="/theme_product_ultimate_01/static/src/img/placeholder-600.jpg"
+                                     data-original-title="" title="" aria-describedby="tooltip219718" loading="lazy"/>
+                                <div class="overlay">
+                                    <div class="img-text o_default_snippet_text">View More</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-3 img-box col-lg-3 plr-0 o_colored_level">
+                            <div class="img-box-container">
+                                <img class="img-fluid d-block mx-auto"
+                                     src="/theme_product_ultimate_01/static/src/img/placeholder-600.jpg"
+                                     data-original-title="" title="" aria-describedby="tooltip219718" loading="lazy"/>
+                                <div class="overlay">
+                                    <div class="img-text o_default_snippet_text">View More</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-3 img-box col-lg-3 plr-0 o_colored_level">
+                            <div class="img-box-container">
+                                <img class="img-fluid d-block mx-auto"
+                                     src="/theme_product_ultimate_01/static/src/img/placeholder-600.jpg"
+                                     data-original-title="" title="" aria-describedby="tooltip219718" loading="lazy"/>
+                                <div class="overlay">
+                                    <div class="img-text o_default_snippet_text">View More</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-3 img-box col-lg-3 plr-0 o_colored_level">
+                            <div class="img-box-container">
+                                <img class="img-fluid d-block mx-auto"
+                                     src="/theme_product_ultimate_01/static/src/img/placeholder-600.jpg"
+                                     data-original-title="" title="" aria-describedby="tooltip219718" loading="lazy"/>
+                                <div class="overlay">
+                                    <div class="img-text o_default_snippet_text">View More</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-3 img-box col-lg-3 plr-0 o_colored_level">
+                            <div class="img-box-container">
+                                <img class="img-fluid d-block mx-auto"
+                                     src="/theme_product_ultimate_01/static/src/img/placeholder-600.jpg"
+                                     data-original-title="" title="" aria-describedby="tooltip219718" loading="lazy"/>
+                                <div class="overlay">
+                                    <div class="img-text o_default_snippet_text">View More</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-3 img-box col-lg-3 plr-0 o_colored_level">
+                            <div class="img-box-container">
+                                <img class="img-fluid d-block mx-auto"
+                                     src="/theme_product_ultimate_01/static/src/img/placeholder-600.jpg"
+                                     data-original-title="" title="" aria-describedby="tooltip219718" loading="lazy"/>
+                                <div class="overlay">
+                                    <div class="img-text o_default_snippet_text">View More</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-3 img-box col-lg-3 plr-0 o_colored_level">
+                            <div class="img-box-container">
+                                <img class="img-fluid d-block mx-auto"
+                                     src="/theme_product_ultimate_01/static/src/img/placeholder-600.jpg"
+                                     data-original-title="" title="" aria-describedby="tooltip219718" loading="lazy"/>
+                                <div class="overlay">
+                                    <div class="img-text o_default_snippet_text">View More</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-3 img-box col-lg-3 plr-0 o_colored_level">
+                            <div class="img-box-container">
+                                <img class="img-fluid d-block mx-auto"
+                                     src="/theme_product_ultimate_01/static/src/img/placeholder-600.jpg"
+                                     data-original-title="" title="" aria-describedby="tooltip219718" loading="lazy"/>
+                                <div class="overlay">
+                                    <div class="img-text o_default_snippet_text">View More</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="s_call_to_action sni-block pt64 pb56 bg-o-color-2 oe_custom_bg o_colored_level"
+                     style="position: relative;" data-snippet="product_drone_gallery" data-name="Product Drone Gallery"
+                     data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Origins/10&quot;,&quot;flip&quot;:[]}">
+                <div class="o_we_shape o_web_editor_Origins_10"/>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-md-8 col-sm-12 s_title col-lg-6 offset-lg-1 o_colored_level"
+                             data-name="Title">
+                            <h2>
+                                <font color="#ffffff">
+                                    <b class="o_default_snippet_text">VIEW DRONE PRODUCT&amp;nbsp; DEMO&amp;nbsp;</b>
+                                </font>
+                            </h2>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 text-md-right col-lg-3 o_colored_level">
+                            <p>
+                                <a href="/contactus" class="btn btn-primary flat btn-lg" data-original-title=""
+                                   title="">
+                                    <span class="o_default_snippet_text">
+                                        <font style="font-size: 14px;">
+                                            <b>VIEW MORE PHOTOS</b>
+                                        </font>
+                                    </span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Drone Gallery Snippets End-->
+
+        <!--Feature Snippets start-->
+        <template id="product_feature" name="Product Feature - Fade In Left">
+            <section class="pt64 pb64 o_colored_level" data-snippet="product_feature" data-name="Product Feature">
+                <div class="container container-full">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 pt16 pb16 col-lg-5 plr-0 o_colored_level">
+                            <img src="/theme_product_ultimate_01/static/src/img/placeholder-800.jpg" alt="half-molile"
+                                 class="img-fluid pt8 pb8" data-original-title="" title=""
+                                 aria-describedby="tooltip485432" loading="lazy"/>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 pt16 pb16 o_colored_level">
+                            <h2 class="text-left col-lg-12">
+                                <b>
+                                    <font class="text-beta" style="">FLY IN THE SKY</font>
+                                </b>
+                            </h2>
+                            <p class="col-lg-12 o_default_snippet_text">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Ut at semper metus. Lorem ipsum dolor sit
+                                amet, consectetur adipiscing elit. Ut at semper metus.
+                            </p>
+                            <div class="col-12 col-sm-12 col-md-9 col-lg-9  media">
+                                <img class="img-fluid o_we_custom_image padding-large rounded-circle"
+                                     src="/theme_product_ultimate_01/static/src/img/placeholder-70x70.png"
+                                     data-original-title="" title="" aria-describedby="tooltip473604" style=""
+                                     loading="lazy"/>
+                                <div class="media-body">
+                                    <h3 class="pt8 pb8">
+                                        <b>
+                                            <font style="font-size: 18px;" class="text-beta o_default_snippet_text">
+                                                ROBUST
+                                                STRUCTURE
+                                            </font>
+                                        </b>
+                                    </h3>
+                                    <p class="o_default_snippet_text">Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit. Ut at semper metus.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-9 col-lg-9  media">
+                                <img class="img-fluid o_we_custom_image padding-large rounded-circle"
+                                     src="/theme_product_ultimate_01/static/src/img/placeholder-70x70.png"
+                                     data-original-title="" title="" aria-describedby="tooltip914119" loading="lazy"/>
+                                <div class="media-body">
+                                    <h3 class="pb8 pt8">
+                                        <b>
+                                            <font style="font-size: 18px;" class="text-beta o_default_snippet_text">
+                                                SIMPLE
+                                                DISASSEMBLY
+                                            </font>
+                                        </b>
+                                    </h3>
+                                    <p class="o_default_snippet_text">Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit. Ut at semper metus.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-9 col-lg-9  media">
+                                <img class="img-fluid o_we_custom_image padding-large rounded-circle"
+                                     src="/theme_product_ultimate_01/static/src/img/placeholder-70x70.png"
+                                     data-original-title="" title="" aria-describedby="tooltip776769" loading="lazy"/>
+                                <div class="media-body">
+                                    <h3 class="pb8 pt8">
+                                        <b>
+                                            <font style="font-size: 18px;" class="text-beta o_default_snippet_text">
+                                                ADVANCED
+                                                TECHNOLOGY
+                                            </font>
+                                        </b>
+                                    </h3>
+                                    <p class="o_default_snippet_text">Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit. Ut at semper metus.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Feature Snippets End-->
+
+        <!--Left Content Snippets start-->
+        <template id="product_left_content" name="Product Left Content">
+            <section class="pb0 pt0 o_colored_level bg-100" data-snippet="product_left_content"
+                     data-name="Product Left Content" style="position: relative;">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 o_colored_level" style="">
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-12 col-lg-6 bg-light pb0 pt0 o_colored_level">
+                                    <div class="col-lg-8 offset-lg-2 text-center pt64 pb64">
+                                        <img class="img-fluid o_we_custom_image"
+                                             src="/theme_product_ultimate_01/static/src/img/placeholder-600.jpg"
+                                             data-original-title=""
+                                             title="" aria-describedby="tooltip979283" loading="lazy" alt=""
+                                             data-original-id="711"
+                                             data-original-src="/theme_product_ultimate_01/static/src/img/placeholder-600.jpg"
+                                             data-mimetype="image/png" data-resize-width="600"/>
+                                        <h3 class="pt8 pb8 o_default_snippet_text">
+                                            <br/>
+                                        </h3>
+                                        <h3 class="pt8 pb8">
+                                            <b>
+                                                <font class="text-beta o_default_snippet_text" style="">HD VIDEO
+                                                    RECORDING
+                                                </font>
+                                            </b>
+                                        </h3>
+                                        <p class="o_default_snippet_text">Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit. Ut at semper metus.L
+                                        </p>
+                                        <div class="s_btn text-center pt16 pb16" data-name="Buttons">
+                                            <a href="#" class="o_default_snippet_text">Read more
+                                                <i class="fa fa-chevron-right" data-original-title="" title=""
+                                                   aria-describedby="tooltip555507" style=""/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 pb0 p-0 o_colored_level" style="">
+                                    <img alt="" class="img-fluid w-100"
+                                         src="/theme_product_ultimate_01/static/src/img/placeholder-video.jpg"
+                                         data-original-title=""
+                                         title="" aria-describedby="tooltip772166" loading="lazy" data-original-id="729"
+                                         data-original-src="/theme_product_ultimate_01/static/src/img/placeholder-video.jpg"
+                                         data-mimetype="image/jpeg" data-resize-width="955"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Left Content Snippets End-->
+
+        <!--Right Content Snippets start-->
+        <template id="product_right_content" name="Product Right Content">
+            <section class=" pt0 o_colored_level bg-100" data-snippet="product_right_content"
+                     data-name="Product Right Content" style="">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 pt0 o_colored_level" style="">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 pb0 p-0 o_colored_level">
+                                    <img alt="" class="img-fluid w-100"
+                                         src="/theme_product_ultimate_01/static/src/img/placeholder-video.jpg"
+                                         data-original-title=""
+                                         title="" aria-describedby="tooltip772166" loading="lazy" data-original-id="730"
+                                         data-original-src="/theme_product_ultimate_01/static/src/img/placeholder-video.jpg"
+                                         data-mimetype="image/jpeg" data-resize-width="955"/>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-12 col-lg-6 bg-light pb0 pt0 o_colored_level">
+                                    <div class="col-lg-8 offset-lg-2 text-center pt64 pb64">
+                                        <img class="img-fluid o_we_custom_image"
+                                             src="/theme_product_ultimate_01/static/src/img/placeholder-600.jpg"
+                                             data-original-title=""
+                                             title="" aria-describedby="tooltip979283" loading="lazy" alt=""
+                                             data-original-id="712"
+                                             data-original-src="/theme_product_ultimate_01/static/src/img/placeholder-600.jpg"
+                                             data-mimetype="image/png" data-resize-width="600"/>
+                                        <h3 class="pt8 pb8 o_default_snippet_text">
+                                            <br/>
+                                        </h3>
+                                        <h3 class="pt8 pb8">
+                                            <b class="o_default_snippet_text">SUBJECT TRACKING TECHNOLOGY</b>
+                                        </h3>
+                                        <p class="o_default_snippet_text">Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit. Ut at semper metus.L
+                                        </p>
+                                        <div class="s_btn text-center pt16 pb16" data-name="Buttons">
+                                            <a href="#" data-original-title="" title="" aria-describedby="tooltip430191"
+                                               class="o_default_snippet_text">Read more
+                                                <i class="fa fa-chevron-right" data-original-title="" title=""
+                                                   aria-describedby="tooltip268522" style=""/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </template>
+        <!--Right Content Snippets End-->
+
+        <!--Center Content2 Snippets start-->
+        <template id="product_center_content_2" name="Product Center Content 2 - Fade In Up">
+            <section class="pb120 o_colored_level pt64" data-snippet="product_center_content_2"
+                     data-name="Product Center Content 2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center o_colored_level">
+                            <h2 class="font-weight-bold pt8 pb24">TAKE FLIGHT WITH DRONE</h2>
+                            <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Pellentesque fermentum est in tortor congue suscipit.
+                                Suspendisse potenti. Aliquam finibus pharetra tellus at
+                                egestas.Suspendisse potenti. Aliquam finibus pharetra tellus at egestas.
+                            </p>
+                            <div class="text-center pt16 pb16" data-name="Buttons">
+                                <a href="#" class="btn btn-primary flat mb8 o_default_snippet_text"
+                                   data-original-title="" title="" aria-describedby="tooltip281969">ABOUT APP
+                                </a>
+                                <a href="#" class="btn btn-primary flat mb8 o_default_snippet_text"
+                                   data-original-title="" title="" aria-describedby="tooltip246238">DOWNLOAD APP
+                                </a>
+                            </div>
+                            <img src="/theme_product_ultimate_01/static/src/img/placeholder-1170.jpg" alt="img2"
+                                 class="img-fluid pt16 pb8" data-original-title="" title=""
+                                 aria-describedby="tooltip885071" loading="lazy"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Center Content2 Snippets End-->
+
+        <!--Testimonial Snippets start-->
+        <template id="product_testimonial" name="Product Testimonial">
+            <section class="bg-epsilon pt64 oe_custom_bg pb136 o_colored_level oe_img_bg" id="testimonials_d3"
+                     style="background-image: url(&quot;/theme_product_ultimate_01/static/src/img/placeholder-1170.jpg&quot;);"
+                     data-snippet="product_testimonial" data-name="Product Testimonial" data-original-id="733"
+                     data-original-src="/theme_product_ultimate_01/static/src/img/placeholder-1170.jpg"
+                     data-mimetype="image/jpeg"
+                     data-resize-width="1920" data-gl-filter="blur">
+                <div class="container">
+                    <div class="row content justify-content-md-center pb48">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center o_colored_level">
+                            <h2>
+                                <font style="color: rgb(255, 255, 255);">
+                                    <b>OUR CLIENTS</b>
+                                </font>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div id="myCarousel1610182119689" class="s_quotes_carousel s_carousel_default carousel slide"
+                     data-interval="10000" style="">
+                    <div class="carousel-inner">
+                        <div class="carousel-item oe_custom_bg o_colored_level active" data-name="Slide" style="">
+                            <div class="container">
+                                <div class="row content justify-content-md-center mx-2">
+                                    <div class="carousel-content col-12 col-sm-12 col-md-4 col-lg-4 bg-white ml-auto mr-auto mt-4 mt-md-0 sni-s-slide o_colored_level">
+                                        <div class="col-lg-12">
+                                            <p class="lead mt32 mb32 text-center o_default_snippet_text">
+                                                Write a quote here from one of your customers. Quotes
+                                                are a great way to build confidence in your products or
+                                                services.
+                                            </p>
+                                            <div class="text-center">
+                                                <img class="img"
+                                                     src="/theme_product_ultimate_01/static/src/img/placeholder-user1.png"
+                                                     alt="" loading="lazy"/>
+                                                <div class="mb8 mt8 o_default_snippet_text">
+                                                    <font style="font-size: 18px;" class="o_default_snippet_text">DEVID
+                                                        DHAWAN
+                                                    </font>
+                                                    <br/>Happy Customer
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-content col-12 col-sm-12 col-md-4 col-lg-4 bg-white ml-auto mr-auto mt-4 mt-md-0 sni-s-slide o_colored_level">
+                                        <div class="col-lg-12">
+                                            <p class="lead mt32 mb32 text-center o_default_snippet_text">
+                                                Write a quote here from one of your customers. Quotes
+                                                are a great way to build confidence in your products or
+                                                services.
+                                            </p>
+                                            <div class="text-center">
+                                                <img class="img"
+                                                     src="/theme_product_ultimate_01/static/src/img/placeholder-user1.png"
+                                                     alt="" loading="lazy"/>
+                                                <div class="mt8 mb8">
+                                                    <font style="font-size: 18px;" class="o_default_snippet_text">MORGON
+                                                        BALE&amp;nbsp;
+                                                    </font>
+                                                    <font style="font-size: 18px;">
+                                                        <br/>
+                                                    </font>
+                                                    <font style="font-size: 18px;">
+                                                        <span style="font-size: 14px;" class="o_default_snippet_text">
+                                                            Product Manager
+                                                        </span>
+                                                        <br/>
+                                                    </font>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-content col-12 col-sm-12 col-md-4 col-lg-4 bg-white ml-auto mr-auto mt-4 mt-md-0 sni-s-slide o_colored_level">
+                                        <div class="col-lg-12">
+                                            <p class="lead mt32 mb32 text-center o_default_snippet_text">Write a quote
+                                                here
+                                                from one of your customers. Quotes are a great way to
+                                                build confidence in your products or services.
+                                            </p>
+                                            <div class="text-center">
+                                                <img class="img"
+                                                     src="/theme_product_ultimate_01/static/src/img/placeholder-user1.png"
+                                                     alt="" data-original-title="" title=""
+                                                     aria-describedby="tooltip265487" loading="lazy"/>
+                                                <div class="mt8 mb8">
+                                                    <font style="font-size: 18px;" class="o_default_snippet_text">
+                                                        MICKELE JECKSON
+                                                    </font>
+                                                    <font style="font-size: 18px;">
+                                                        <br/>
+                                                    </font>
+                                                    <font style="" class="o_default_snippet_text">Marketing Manager
+                                                    </font>
+                                                    <font style="font-size: 18px;">&amp;nbsp;
+                                                        <br/>
+                                                    </font>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-control-prev o_we_no_overlay" data-target="#myCarousel1610182119689"
+                         data-slide="prev" role="img" aria-label="Previous" title="Previous">
+                        <span class="sr-only o_default_snippet_text">Previous</span>
+                    </div>
+                    <div class="carousel-control-next o_we_no_overlay" data-target="#myCarousel1610182119689"
+                         data-slide="next" role="img" aria-label="Next" title="Next">
+                        <span class="sr-only o_default_snippet_text">Next</span>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Testimonial Snippets End-->
+
+        <!--Grid Snippets start-->
+        <template id="product_grid" name="Product Grid - Fade In Up">
+            <section class="pt64 pb64 o_colored_level" data-snippet="product_grid" data-name="Product Grid" style="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 o_colored_level">
+                            <h2 style="text-align: center; ">
+                                <b>
+                                    <font class="text-beta" style="">CATEGORY PRODUCT VIEW</font>
+                                </b>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-12 col-sm-8 col-md-4 col-lg-4 mb16 o_colored_level">
+                            <img alt="image" class="img-fluid mb16"
+                                 src="/theme_product_ultimate_01/static/src/img/placeholder-600.jpg"
+                                 data-original-title="" title="" aria-describedby="tooltip196853" style=""
+                                 loading="lazy"/>
+                            <h3 class="o_default_snippet_text">$80.00</h3>
+                            <p>
+                                <font style="font-size: 18px;">
+                                    <b class="o_default_snippet_text">Acer Aspire Dron</b>
+                                </font>
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-8 col-md-4 col-lg-4 mb16 o_colored_level">
+                            <img alt="image" class="img-fluid mb16"
+                                 src="/theme_product_ultimate_01/static/src/img/placeholder-600.jpg"
+                                 data-original-title="" title="" aria-describedby="tooltip283658" loading="lazy"/>
+                            <h3 class="o_default_snippet_text">$50.00</h3>
+                            <p>
+                                <font style="font-size: 18px;">
+                                    <b class="o_default_snippet_text">Acer Dron EI5</b>
+                                </font>
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-8 col-md-4 col-lg-4 mb16 o_colored_level">
+                            <img alt="image" class="img-fluid mb16"
+                                 src="/theme_product_ultimate_01/static/src/img/placeholder-600.jpg" loading="lazy"/>
+                            <h3 class="o_default_snippet_text">$90.00</h3>
+                            <p>
+                                <b>
+                                    <font style="font-size: 18px;" class="o_default_snippet_text">Drona de
+                                        Multipurpouse
+                                    </font>
+                                </b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Grid Snippets End-->
+
+        <!--Contact_us Snippets start-->
+        <template id="product_contact_us" name="Product Contact_us">
+            <section class="s_website_form contact_us_3 pb64 o_colored_level pt0" data-vcss="001"
+                     data-visible="contactus" data-snippet="contact_us_3" data-name="Contact us 3">
+                <div class="container">
+                    <div class="row s_nb_column_fixed">
+                        <div class="col-lg-12 s_title text-center o_colored_level" data-name="Title">
+                            <h1 class="s_title_thin">
+                                <font style="font-size: 28px;">
+                                    <b>CONTACT WITH US
+                                        &amp;nbsp;
+                                    </b>
+                                </font>
+                            </h1>
+                        </div>
+                        <div class="col-lg-12 s_text pt16 pb16 o_colored_level" data-name="Text">
+                            <form action="/website_form/" method="post" data-model_name="crm.lead"
+                                  data-success-mode="redirect" data-success-page="/contactus-thank-you"
+                                  class="s_website_form container-fluid mt32 o_mark_required" data-mark="*"
+                                  enctype="multipart/form-data" data-editable-form="false" data-name="Contact us 5">
+                                <div class="row s_website_form_rows">
+                                    <div class="col-lg-7 col-md-6 col-12 o_colored_level">
+                                        <div class="form-group row s_website_form_field s_website_form_required">
+                                            <label class="col-lg-3 col-md-12 col-sm-12 col-12 col-form-label s_website_form_label"
+                                                   for="contact_name">
+                                                <span class="s_website_form_label_content o_default_snippet_text">Your
+                                                    Name
+                                                </span>
+                                            </label>
+                                            <div class="col-lg-9 col-md-12 col-sm-12 col-12 o_colored_level">
+                                                <input type="text" class="form-control s_website_form_input"
+                                                       name="contact_name" required="" value=""/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row s_website_form_field">
+                                            <label class="col-lg-3 col-md-12 col-sm-12 col-12 col-form-label s_website_form_label"
+                                                   for="phone">
+                                                <span class="s_website_form_label_content o_default_snippet_text">Phone
+                                                    Number
+                                                </span>
+                                            </label>
+                                            <div class="col-lg-9 col-md-12 col-sm-12 col-12 o_colored_level">
+                                                <input type="text" class="form-control s_website_form_input"
+                                                       name="phone" value=""/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row s_website_form_field s_website_form_required">
+                                            <label class="col-lg-3 col-md-12 col-sm-12 col-12 col-form-label s_website_form_label"
+                                                   for="email_from">
+                                                <span class="s_website_form_label_content o_default_snippet_text">
+                                                    Email
+                                                </span>
+                                            </label>
+                                            <div class="col-lg-9 col-md-12 col-sm-12 col-12 o_colored_level">
+                                                <input type="text" class="form-control s_website_form_input"
+                                                       name="email_from" required="" value=""/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row s_website_form_field">
+                                            <label class="col-lg-3 col-md-12 col-sm-12 col-12 col-form-label s_website_form_label"
+                                                   for="partner_name">
+                                                <span class="s_website_form_label_content o_default_snippet_text">Your
+                                                    Company
+                                                </span>
+                                            </label>
+                                            <div class="col-lg-9 col-md-12 col-sm-12 col-12 o_colored_level">
+                                                <input type="text" class="form-control s_website_form_input"
+                                                       name="partner_name" required="" value=""/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row s_website_form_field s_website_form_model_required">
+                                            <label class="col-lg-3 col-md-12 col-sm-12 col-12 col-form-label s_website_form_label"
+                                                   for="name">
+                                                <span class="s_website_form_label_content o_default_snippet_text">
+                                                    Subject
+                                                </span>
+                                            </label>
+                                            <div class="col-lg-9 col-md-12 col-sm-12 col-12 o_colored_level">
+                                                <input type="text" class="form-control s_website_form_input" name="name"
+                                                       required="" value=""/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row s_website_form_field s_website_form_required">
+                                            <label class="col-lg-3 col-md-12 col-sm-12 col-12 col-form-label s_website_form_label"
+                                                   for="description">
+                                                <span class="s_website_form_label_content o_default_snippet_text">Your
+                                                    Question
+                                                </span>
+                                            </label>
+                                            <div class="col-lg-9 col-md-12 col-sm-12 col-12 o_colored_level">
+                                                <textarea class="form-control s_website_form_input" name="description"
+                                                          required="">
+                                                </textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12 text-center s_website_form_submit">
+                                            <div class="s_btn" data-name="Buttons">
+                                                <a href="#" role="button"
+                                                   class="btn btn-primary btn-lg o_website_form_send o_default_snippet_text">
+                                                    Send
+                                                </a>
+                                                <span id="o_website_form_result"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-md-6 o_colored_level">
+                                        <div class="contact-page-side-content">
+                                            <h3 class="contact-page-title o_default_snippet_text">Contact Us</h3>
+                                            <p class="contact-page-message mb-30 o_default_snippet_text">Lorem Ipsum is
+                                                simply dummy text of the
+                                                printing and typesetting industry. Lorem Ipsum has been the industry's
+                                                standard dummy text ever since the 1500s.
+                                            </p>
+                                            <div class="single-contact-block">
+                                                <h4 class="o_default_snippet_text">
+                                                    <i class="fa pe-7s-map-marker"/>
+                                                    Address
+                                                </h4>
+                                                <span t-field="res_company.street"/>
+                                                <span t-field="res_company.city"/>
+                                                <span t-field="res_company.state_id.name"/>
+                                                <span t-field="res_company.zip"/>
+                                                <span t-field="res_company.country_id.name"/>
+                                            </div>
+                                            <div class="single-contact-block">
+                                                <h4 class="o_default_snippet_text">
+                                                    <i class="fa pe-7s-call"/>
+                                                    Phone
+                                                </h4>
+                                                <p t-field="res_company.phone"></p>
+                                            </div>
+                                            <div class="single-contact-block">
+                                                <h4 class="o_default_snippet_text">
+                                                    <i class="fa pe-7s-mail"/>
+                                                    Email Address
+                                                </h4>
+                                                <p t-field="res_company.email"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Contact_us Snippets End-->
+
+        <!--Snippets Assets start-->
+        <template id="demo_snippets" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_structure']" position="before">
+                <div id="snippet_demo_snippets" class="o_panel">
+                    <div class="o_panel_header">
+                        <i class="fa fa-th-large"/>
+                        Product Ultimate 01
+                    </div>
+                    <div class="o_panel_body">
+                        <t t-snippet="theme_product_ultimate_01.product_banner"
+                           t-thumbnail="/theme_product_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_product_ultimate_01.product_category"
+                           t-thumbnail="/theme_product_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_product_ultimate_01.product_center_content_1"
+                           t-thumbnail="/theme_product_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_product_ultimate_01.product_drone_gallery"
+                           t-thumbnail="/theme_product_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_product_ultimate_01.product_feature"
+                           t-thumbnail="/theme_product_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_product_ultimate_01.product_left_content"
+                           t-thumbnail="/theme_product_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_product_ultimate_01.product_right_content"
+                           t-thumbnail="/theme_product_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_product_ultimate_01.product_center_content_2"
+                           t-thumbnail="/theme_product_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_product_ultimate_01.product_testimonial"
+                           t-thumbnail="/theme_product_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_product_ultimate_01.product_grid"
+                           t-thumbnail="/theme_product_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_product_ultimate_01.product_contact_us"
+                           t-thumbnail="/theme_product_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+        <!--Snippets Assets end-->
+    </data>
+</odoo>
+
+

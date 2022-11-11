@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="snippet_ultimate_footer_option" inherit_id="website.snippet_options">
+        <t t-call="web_editor.snippet_options"/>
+        <xpath expr="//we-button[@data-customize-website-views='website.footer_custom']"
+               position="before">
+            <we-button title="App Theme Footer"
+                       data-customize-website-views="theme_app_ultimate_01.app_theme_footer"
+                       data-customize-website-variable="'app-theme-footer'"
+                       data-img="">App Theme Footer
+            </we-button>
+        </xpath>
+    </template>
+</odoo>

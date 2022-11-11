@@ -1,0 +1,725 @@
+<odoo>
+    <data>
+
+        <!--banner Snippets start-->
+        <template id="business_banner" name="business Banner">
+            <section
+                    class="s_cover parallax align-content-center align-items-center d-flex full-height s_parallax_is_fixed"
+                    data-scroll-background-ratio="1" style="background-image: none;">
+                <span class="s_parallax_bg oe_img_bg oe_custom_bg"
+                      style="background-image: url(&quot;/theme_business_ultimate_02/static/src/img/placeholder-1170.jpg&quot;); background-position: 50% 0px;"/>
+                <div class="container">
+                    <div class="row s_nb_column_fixed">
+                        <div class="col-lg-12 s_title" data-name="Title">
+                            <h1 class="text-left text-white">
+                                <span style="font-size: 62px;">
+                                    <span style="font-weight: bolder;">Why Wait? Start IT</span>
+                                </span>
+                                <br/>
+                            </h1>
+                            <h1 class="text-left text-white">
+                                <span style="font-size: 62px;">
+                                    <span style="font-weight: bolder;">Right Now!</span>
+                                </span>
+                            </h1>
+                        </div>
+                        <div class="col-lg-12 s_text pt16 pb16" data-name="Text">
+                            <p class="lead text-left o_default_snippet_text" style="text-align: center;">
+                                <font style="color: rgb(255, 255, 255);">Write one or two paragraphs describing your
+                                    product, services or a specific feature. &amp;nbsp;
+                                </font>
+                                <br/>
+                                <font style="color: rgb(255, 255, 255);">To be successful your content needs to be
+                                    useful to your readers. &amp;nbsp;
+                                </font>
+                            </p>
+                        </div>
+                        <div class="col-lg-12 text-left pt16 pb16" data-name="Buttons">
+                            <a href="/contactus" class="mt8 mb8 rounded-circle btn btn-alpha rounded-circle btn-lg"
+                               data-original-title="" title="" aria-describedby="tooltip502857">
+                                <font style="color: rgb(255, 255, 255);">GET STARTED NOW</font>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--banner Snippets End-->
+
+        <!--Feature Snippets start-->
+        <template id="business_feature" name="business Feature - Fade In">
+            <section class="pt64 pb64">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                            <div class="row pt48">
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                                    <i class="fa pe-7s-ribbon fa-500px fa-5x text-alpha" style="" data-original-title=""
+                                       title="" aria-describedby="tooltip46806"/>
+                                    <h3 class="pt8 pb8">
+                                        <b>Pixel-Perfect Design</b>
+                                    </h3>
+                                    <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit. Ut at semper metus. Vestibulum gravida velit urna, ut mattis leo
+                                        ullamcorper sed.
+                                    </p>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                                    <i class="fa-life-ring fa pe-7s-comment fa-500px text-alpha fa-5x"
+                                       data-original-title="" title="" aria-describedby="tooltip768471" style=""/>
+                                    <h3 class="pt8 pb8">
+                                        <b>Free Plugins Include</b>
+                                    </h3>
+                                    <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit. Ut at semper metus. Vestibulum gravida velit urna, ut mattis leo
+                                        ullamcorper sed.
+                                    </p>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                                    <i class="fa pe-7s-albums fa-500px fa-5x text-alpha" data-original-title="" title=""
+                                       aria-describedby="tooltip551623" style=""/>
+                                    <h3 class="pt8 pb8">
+                                        <b>WooCommerce</b>
+                                    </h3>
+                                    <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit. Ut at semper metus. Vestibulum gravida velit urna, ut mattis leo
+                                        ullamcorper sed.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Feature Snippets End-->
+
+        <!--Left Content Snippets start-->
+        <template id="business_left_content" name="business Left Content">
+            <section class="pt64 pb64 o_colored_level o_visible" data-snippet="business_left_content"
+                     data-name="business Left Content" style="position: relative;"
+                     data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Origins/01&quot;,&quot;colors&quot;:{&quot;c2&quot;:&quot;rgba(252, 130, 76, 0.47)&quot;,&quot;c5&quot;:&quot;rgba(251, 98, 31, 0.65)&quot;},&quot;flip&quot;:[&quot;y&quot;]}">
+                <div class="o_we_shape o_web_editor_Origins_01"
+                     style="background-image: url(&quot;/web_editor/shape/web_editor/Origins/01.svg?c2=rgba(252%2C%20130%2C%2076%2C%200.47)&amp;c5=rgba(251%2C%2098%2C%2031%2C%200.65)&amp;flip=y&quot;); background-position: 50% 0%;"/>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                            <h2>
+                                <font style="font-size: 18px;" class=" text-alpha">
+                                    <b>WHAT WE DO</b>
+                                </font>
+                                <br/>
+                            </h2>
+                            <h2>
+                                <font style="font-size: 36px;">
+                                    <b>Create A Beautiful Presentation For The World TO See</b>
+                                </font>
+                            </h2>
+                            <p class="mt16 mb16 o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Pellentesque fermentum est in tortor congue suscipit. Suspendisse
+                                potenti. liquam finibus pharetra tellus at egestas.
+                            </p>
+                            <a href="#" class="btn btn-lg btn-primary mb24 mt24 rounded-0 rounded-circle"
+                               data-original-title="" title="" aria-describedby="tooltip226123">
+                                <font style="color: rgb(255, 255, 255);" data-original-title="" title=""
+                                      aria-describedby="tooltip672597">Get a Quote
+                                </font>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                            <img src="/theme_business_ultimate_02/static/src/img/placeholder-600.jpg"
+                                 alt="Image" class="img-fluid pt8 pb8 mx-auto d-block"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Left Content Snippets End-->
+
+        <!--Right Content Snippets start-->
+        <template id="business_right_content" name="business Right Content">
+            <section class="pt64 pb64 o_colored_level o_visible" data-snippet="business_right_content"
+                     data-name="business Right Content" style="position: relative;"
+                     data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Origins/01&quot;,&quot;colors&quot;:{&quot;c2&quot;:&quot;rgba(252, 130, 76, 0.47)&quot;,&quot;c5&quot;:&quot;rgba(251, 98, 31, 0.65)&quot;},&quot;flip&quot;:[&quot;x&quot;]}">
+                <div class="o_we_shape o_web_editor_Origins_01"
+                     style="background-image: url(&quot;/web_editor/shape/web_editor/Origins/01.svg?c2=rgba(252%2C%20130%2C%2076%2C%200.47)&amp;c5=rgba(251%2C%2098%2C%2031%2C%200.65)&amp;flip=x&quot;); background-position: 50% 100%;"/>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                            <img src="/theme_business_ultimate_02/static/src/img/placeholder-600.jpg"
+                                 alt="Image" class="img-fluid pt8 pb8 mx-auto d-block" data-original-title="" title=""
+                                 aria-describedby="tooltip918773"/>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                            <h2 style="text-align: right; ">
+                                <font style="font-size: 18px;" class=" text-alpha">
+                                    <b>OUR SERVICES</b>
+                                </font>
+                                <br/>
+                            </h2>
+                            <h2 style="text-align: right; ">
+                                <span style="font-size: 36px;">
+                                    <b>Create Your Own Genuine Web Masterpiece</b>
+                                </span>
+                            </h2>
+                            <p class="mt16 mb16 o_default_snippet_text" style="text-align: right; ">Lorem ipsum dolor
+                                sit amet, consectetur adipiscing elit. Pellentesque fermentum est in tortor congue
+                                suscipit. Suspendisse potenti. liquam finibus pharetra tellus at egestas.
+                            </p>
+                            <a href="#" class="btn btn-lg btn-primary mb24 mt24 rounded-circle pull-right"
+                               data-original-title="" title="" aria-describedby="tooltip226123">
+                                <font style="color: rgb(255, 255, 255);" data-original-title="" title=""
+                                      aria-describedby="tooltip906494">FIND OUT MORE
+                                </font>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Right Content Snippets End-->
+
+        <!--Our Portfolio Snippets start-->
+        <template id="business_portfolio" name="business Portfolio - Fade In">
+            <section class="pt64 pb56 bg-beta oe_custom_bg" id="portfolio_7" style="">
+                <div class="container">
+                    <div class="text-center">
+                        <h2>
+                            <b>
+                                <font style="font-size: 18px;" class=" text-alpha">CASE STUDIES&amp;nbsp;</font>
+                            </b>
+                            <br/>
+                        </h2>
+                        <h2>
+                            <font style="font-size: 36px;">
+                                <b>Our Portfolio</b>
+                            </font>
+                        </h2>
+                        <div class="justify-content-center pb32">
+                            <a class="btn text-primary  filter-button mt8 mb8 o_default_snippet_text" data-filter="all"
+                               data-original-title="" title="" aria-describedby="tooltip903862">All
+                            </a>
+                            <a class="btn text-primary  filter-button mt8 mb8 o_default_snippet_text" data-filter="one">
+                                Branding
+                            </a>
+                            <a class="btn text-primary  filter-button mt8 mb8 o_default_snippet_text" data-filter="two">
+                                Design
+                            </a>
+                            <a class="btn text-primary  filter-button mt8 mb8 o_default_snippet_text"
+                               data-filter="three">
+                                Photography
+                            </a>
+                            <a class="btn text-primary  filter-button mt8 mb8 o_default_snippet_text"
+                               data-filter="four">Web
+                            </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter one pb24 " style="">
+                                <div class="single_portfolio">
+                                    <img src="/theme_business_ultimate_02/static/src/img/placeholder-600.jpg"
+                                         class="img-fluid image"/>
+                                    <div class="overlay o_default_snippet_text">Artistic 3d</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter two pb24" style="">
+                                <div class="single_portfolio">
+                                    <img src="/theme_business_ultimate_02/static/src/img/placeholder-600.jpg"
+                                         class="img-fluid"/>
+                                    <div class="overlay o_default_snippet_text">Creative Art</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter one pb24" style="">
+                                <div class="single_portfolio">
+                                    <img src="/theme_business_ultimate_02/static/src/img/placeholder-600.jpg"
+                                         class="img-fluid"/>
+                                    <div class="overlay o_default_snippet_text">Artwork</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter four pb24" style="display: block;">
+                                <div class="single_portfolio">
+                                    <img src="/theme_business_ultimate_02/static/src/img/placeholder-600.jpg"
+                                         class="img-fluid"/>
+                                    <div class="overlay o_default_snippet_text">Ice Cream Mockup</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter three pb24" style="">
+                                <div class="single_portfolio">
+                                    <img src="/theme_business_ultimate_02/static/src/img/placeholder-600.jpg"
+                                         class="img-fluid"/>
+                                    <div class="overlay o_default_snippet_text">Man Potraits</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 col-12 filter four pb24" style="display: block;">
+                                <div class="single_portfolio">
+                                    <img src="/theme_business_ultimate_02/static/src/img/placeholder-600.jpg"
+                                         class="img-fluid"/>
+                                    <div class="overlay o_default_snippet_text">Changes</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="oe_structure oe_empty">
+                                    <div class="s_btn text-center pb16 pt24" data-name="Buttons">
+                                        <a href="#" class="btn btn-alpha rounded-circle btn-lg" data-original-title=""
+                                           title=""
+                                           aria-describedby="tooltip706517">
+                                            <font style="color: rgb(255, 255, 255);" data-original-title="" title=""
+                                                  aria-describedby="tooltip625834">VIEW MORE
+                                            </font>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script class="o_default_snippet_text">
+                    $(document).ready(function(){
+
+                    $(".filter-button").click(function(){
+                    var value = $(this).attr('data-filter');
+
+                    if(value == "all")
+                    {
+                    //$('.filter').removeClass('hidden');
+                    $('.filter').show('1000');
+                    }
+                    else
+                    {
+                    // $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+                    // $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+                    $(".filter").not('.'+value).hide('3000');
+                    $('.filter').filter('.'+value).show('3000');
+
+                    }
+                    });
+
+                    if ($(".filter-button").removeClass("active")) {
+                    $(this).removeClass("active");
+                    }
+                    $(this).addClass("active");
+
+                    });
+                </script>
+            </section>
+        </template>
+        <!--Our Portfolio Snippets End-->
+
+        <!--Our Works Snippets start-->
+        <template id="business_works" name="business Works">
+            <section class="pt64 pb64 text-light oe_custom_bg" id="process_step_4" style="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 pb48 text-center">
+                            <p>
+                                <b>
+                                    <font style="font-size: 18px;" class=" text-alpha">HOW IT WORKS</font>
+                                </b>
+                                <br/>
+                            </p>
+                            <h2>
+                                <b>
+                                    <font style="font-size: 36px; color: rgb(255, 255, 255);">Check The Process</font>
+                                </b>
+                            </h2>
+                            <p>
+                                <br/>
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-6 col-lg-3 text-center mb16">
+                            <div class="box">
+                                <i class="fa fa-lightbulb-o mb16 text-alpha fa-3x" data-original-title="" title=""
+                                   aria-describedby="tooltip423523" style=""/>
+                                <h2 class="process_no o_default_snippet_text">
+                                    <font class=" text-beta" style="">01</font>
+                                </h2>
+                                <h3>
+                                    <font style="color: rgb(255, 255, 255);">Production</font>
+                                </h3>
+                                <p class="o_default_snippet_text">
+                                    <font style="color: rgb(255, 255, 255);">Lorem Ipsum is simply dummy text of the
+                                        printing&amp;nbsp;
+                                    </font>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-6 col-lg-3 text-center mb16">
+                            <div class="box">
+                                <i class="fa fa-address-card-o mb16 text-alpha fa-3x" data-original-title="" title=""
+                                   aria-describedby="tooltip745599" style=""/>
+                                <h2 class="process_no o_default_snippet_text">
+                                    <font style="color: rgb(255, 255, 255);">02</font>
+                                </h2>
+                                <h3><font style="color: rgb(255, 255, 255);">Row Material</font>&amp;nbsp;
+                                </h3>
+                                <p class="o_default_snippet_text">
+                                    <font style="color: rgb(255, 255, 255);">Lorem Ipsum is simply dummy text of the
+                                        printing&amp;nbsp;
+                                    </font>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-6 col-lg-3 text-center mb16">
+                            <div class="box">
+                                <i class="fa fa-server mb16 text-alpha fa-3x" data-original-title="" title=""
+                                   aria-describedby="tooltip334814" style=""/>
+                                <h2 class="process_no">
+                                    <font style="color: rgb(255, 255, 255);">03</font>
+                                </h2>
+                                <h3>
+                                    <font style="color: rgb(255, 255, 255);">Planning</font>
+                                </h3>
+                                <p class="o_default_snippet_text">
+                                    <font style="color: rgb(255, 255, 255);">Lorem Ipsum is simply dummy text of the
+                                        printing&amp;nbsp;
+                                    </font>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-6 col-lg-3 text-center mb16">
+                            <div class="box">
+                                <i class="fa fa-empire mb16 text-alpha fa-3x" data-original-title="" title=""
+                                   aria-describedby="tooltip230876" style=""/>
+                                <h2 class="process_no o_default_snippet_text">
+                                    <font style="color: rgb(255, 255, 255);">04</font>
+                                </h2>
+                                <h3>
+                                    <font style="color: rgb(255, 255, 255);">Designing</font>
+                                </h3>
+                                <p class="o_default_snippet_text">
+                                    <font style="color: rgb(255, 255, 255);">Lorem Ipsum is simply dummy text of the
+                                        printing&amp;nbsp;
+                                    </font>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Our Works Snippets End-->
+
+
+        <!--Testimonial Snippets start-->
+        <template id="business_testimonial" name="business Testimonial">
+            <section class="pt64 pb64 o_colored_level undefined bg-100" id="testimonials_d4" data-visible="testimonials"
+                     data-snippet="testimonial_13" data-name="Testimonial 13" style="">
+                <div class="container">
+                    <div class="row content justify-content-md-center">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center o_colored_level">
+                            <h2 class="o_default_snippet_text"/>
+                            <p style="">
+                                <span style="font-weight: bolder;"><font class="text-alpha o_default_snippet_text"
+                                                                         style="font-size: 18px;">CLIENT
+                                    TESTIMONIAL</font>&amp;nbsp;
+                                </span>
+                                <br/>
+                            </p>
+                            <h2 style="">
+                                <span style="font-weight: bolder;">
+                                    <font class="o_default_snippet_text" style="font-size: 36px;">What Our clients say
+                                        About Us
+                                    </font>
+                                </span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div id="myCarousel1610292855009" class="s_quotes_carousel s_carousel_default carousel slide"
+                     data-interval="10000" style="background-color: rgb(248, 249, 250) !important;">
+                    <ol class="carousel-indicators o_we_no_overlay">
+                        <li data-target="#myCarousel1610292855009" data-slide-to="0" class="active"/>
+                        <li data-target="#myCarousel1610292855009" data-slide-to="1"/>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item o_colored_level pb80 pt80 active" data-name="Slide" style="">
+                            <div class="container">
+                                <div class="row d-flex align-items-stretch">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 s_col_no_bgcolor pt16 pb16">
+                                        <blockquote class="carousel-content bg-white">
+                                            <div class="col-lg-12">
+                                                <div class="testi-icon">
+                                                    <i class="fa fa-1x fa-quote-left rounded-0 bg-primary s_quotes_carousel_icon"/>
+                                                </div>
+                                                <p class="o_default_snippet_text">
+                                                    Write
+                                                    a
+                                                    quote here from one of your
+                                                    customers.
+                                                    Quotes are a great way to build
+                                                    confidence in your products or
+                                                    services.
+                                                </p>
+                                            </div>
+                                        </blockquote>
+                                        <div class="testi-footer">
+                                            <img class="img"
+                                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                                 alt="" loading="lazy"/>
+                                            <span class="o_default_snippet_text">
+                                                —
+                                                Jane DOE, CEO of
+                                                <b class="o_default_snippet_text">
+                                                    MyCompany
+                                                </b>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 s_col_no_bgcolor pt16 pb16">
+                                        <blockquote class="carousel-content bg-white">
+                                            <div class="col-lg-12">
+                                                <div class="testi-icon">
+                                                    <i class="fa fa-1x fa-quote-left rounded-0 bg-primary s_quotes_carousel_icon"/>
+                                                </div>
+                                                <p class="o_default_snippet_text">
+                                                    Write
+                                                    a
+                                                    quote here from one of your
+                                                    customers.
+                                                    Quotes are a great way to build
+                                                    confidence in your products or
+                                                    services.
+                                                </p>
+                                            </div>
+                                        </blockquote>
+                                        <div class="testi-footer">
+                                            <img class="img"
+                                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                                 alt="" loading="lazy"/>
+                                            <span class="o_default_snippet_text">
+                                                —
+                                                Jane DOE, CEO of
+                                                <b class="o_default_snippet_text">
+                                                    MyCompany
+                                                </b>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 s_col_no_bgcolor pt16 pb16">
+                                        <blockquote class="carousel-content bg-white">
+                                            <div class="col-lg-12">
+                                                <div class="testi-icon">
+                                                    <i class="fa fa-1x fa-quote-left rounded-0 bg-primary s_quotes_carousel_icon"/>
+                                                </div>
+                                                <p class="o_default_snippet_text">
+                                                    Write
+                                                    a
+                                                    quote here from one of your
+                                                    customers.
+                                                    Quotes are a great way to build
+                                                    confidence in your products or
+                                                    services.
+                                                </p>
+                                            </div>
+                                        </blockquote>
+                                        <div class="testi-footer">
+                                            <img class="img"
+                                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                                 alt="" loading="lazy"/>
+                                            <span class="o_default_snippet_text">
+                                                —
+                                                Jane DOE, CEO of
+                                                <b class="o_default_snippet_text">
+                                                    MyCompany
+                                                </b>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item o_colored_level pb80 pt80" data-name="Slide" style="">
+                            <div class="container">
+                                <div class="row d-flex align-items-stretch">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 s_col_no_bgcolor pt16 pb16">
+                                        <blockquote class="carousel-content bg-white">
+                                            <div class="col-lg-12">
+                                                <div class="testi-icon">
+                                                    <i class="fa fa-1x fa-quote-left rounded-0 bg-primary s_quotes_carousel_icon"/>
+                                                </div>
+                                                <p class="o_default_snippet_text">
+                                                    Write
+                                                    a
+                                                    quote here from one of your
+                                                    customers.
+                                                    Quotes are a great way to build
+                                                    confidence in your products or
+                                                    services.
+                                                </p>
+                                            </div>
+                                        </blockquote>
+                                        <div class="testi-footer">
+                                            <img class="img"
+                                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                                 alt="" loading="lazy"/>
+                                            <span class="o_default_snippet_text">
+                                                —
+                                                Jane DOE, CEO of
+                                                <b class="o_default_snippet_text">
+                                                    MyCompany
+                                                </b>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 s_col_no_bgcolor pt16 pb16">
+                                        <blockquote class="carousel-content bg-white">
+                                            <div class="col-lg-12">
+                                                <div class="testi-icon">
+                                                    <i class="fa fa-1x fa-quote-left rounded-0 bg-primary s_quotes_carousel_icon"/>
+                                                </div>
+                                                <p class="o_default_snippet_text">
+                                                    Write
+                                                    a
+                                                    quote here from one of your
+                                                    customers.
+                                                    Quotes are a great way to build
+                                                    confidence in your products or
+                                                    services.
+                                                </p>
+                                            </div>
+                                        </blockquote>
+                                        <div class="testi-footer">
+                                            <img class="img"
+                                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                                 alt="" loading="lazy"/>
+                                            <span class="o_default_snippet_text">
+                                                —
+                                                Jane DOE, CEO of
+                                                <b class="o_default_snippet_text">
+                                                    MyCompany
+                                                </b>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 s_col_no_bgcolor pt16 pb16">
+                                        <blockquote class="carousel-content bg-white">
+                                            <div class="col-lg-12">
+                                                <div class="testi-icon">
+                                                    <i class="fa fa-1x fa-quote-left rounded-0 bg-primary s_quotes_carousel_icon"/>
+                                                </div>
+                                                <p class="o_default_snippet_text">
+                                                    Write
+                                                    a
+                                                    quote here from one of your
+                                                    customers.
+                                                    Quotes are a great way to build
+                                                    confidence in your products or
+                                                    services.
+                                                </p>
+                                            </div>
+                                        </blockquote>
+                                        <div class="testi-footer">
+                                            <img class="img"
+                                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                                 alt="" loading="lazy"/>
+                                            <span class="o_default_snippet_text">
+                                                —
+                                                Jane DOE, CEO of
+                                                <b class="o_default_snippet_text">
+                                                    MyCompany
+                                                </b>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-control-prev o_we_no_overlay" data-target="#myCarousel1610292855009"
+                         data-slide="prev" role="img" aria-label="Previous" title="Previous">
+                        <span class="carousel-control-prev-icon"/>
+                        <span class="sr-only o_default_snippet_text">Previous
+                        </span>
+                    </div>
+                    <div class="carousel-control-next o_we_no_overlay" data-target="#myCarousel1610292855009"
+                         data-slide="next" role="img" aria-label="Next" title="Next">
+                        <span class="carousel-control-next-icon"/>
+                        <span class="sr-only o_default_snippet_text">Next</span>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Testimonial Snippets End-->
+
+        <!--Process Snippets start-->
+        <template id="business_process" name="business Process">
+            <section class="pb64 pt0 oe_custom_bg o_colored_level undefined o_cc o_cc5" data-snippet="business_process"
+                     data-name="business Process">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center pt56 o_colored_level">
+                            <p class="font-weight-bold">
+                                <font style="font-size: 18px; color: rgb(255, 255, 255);"
+                                      class="o_default_snippet_text">WHAT WE DO
+                                </font>
+                            </p>
+                            <h2 class="font-weight-bold pb24">
+                                <font style="font-size: 36px; color: rgb(255, 255, 255);"
+                                      class="o_default_snippet_text">Easy &amp;amp; Sample - No
+                                    Codding
+                                    Required!
+                                </font>
+                            </h2>
+                            <p>
+                                <font style="color: rgb(255, 255, 255);" class="o_default_snippet_text">Lorem ipsum
+                                    dolor sit amet, consectetur
+                                    adipiscing
+                                    elit. Pellentesque fermentum est in tortor congue suscipit. Suspendisse potenti.
+                                    Aliquam
+                                    finibus pharetra tellus at egestas.Suspendisse potenti. Aliquam finibus pharetra
+                                    tellus at
+                                    egestas. Pellentesque fermentum est in tortor congue suscipit. Suspendisse potenti
+                                    Aliquam
+                                    finibus pharetra tellus at egestas.Suspendisse potenti.
+                                </font>
+                            </p>
+                            <a href="#" class="btn btn-lg btn-light mb24 mt24 mx-3 px-4 rounded-0 rounded-circle"
+                               data-original-title="" title="" aria-describedby="tooltip201489">GET STARTED
+                            </a>
+                            <a href="/" class="btn btn-lg btn-light mb24 mt24 px-4 rounded-0 rounded-circle"
+                               data-original-title="" title="">LOGIN NOW
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Process Snippets End-->
+
+        <!--Snippets Assets start-->
+        <template id="demo_snippets" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_structure']" position="before">
+                <div id="snippet_demo_snippets" class="o_panel">
+                    <div class="o_panel_header">
+                        <i class="fa fa-th-large"/>
+                        Business Ultimate 02
+                    </div>
+                    <div class="o_panel_body">
+                        <t t-snippet="theme_business_ultimate_02.business_banner"
+                           t-thumbnail="/theme_business_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_business_ultimate_02.business_feature"
+                           t-thumbnail="/theme_business_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_business_ultimate_02.business_left_content"
+                           t-thumbnail="/theme_business_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_business_ultimate_02.business_right_content"
+                           t-thumbnail="/theme_business_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_business_ultimate_02.business_portfolio"
+                           t-thumbnail="/theme_business_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_business_ultimate_02.business_works"
+                           t-thumbnail="/theme_business_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_business_ultimate_02.business_testimonial"
+                           t-thumbnail="/theme_business_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_business_ultimate_02.business_process"
+                           t-thumbnail="/theme_business_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+        <!--Snippets Assets end-->
+    </data>
+</odoo>

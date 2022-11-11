@@ -1,0 +1,538 @@
+<odoo>
+    <data>
+
+        <!--Snippet Banner Start-->
+        <template id="consultancy_banner" name="Consultancy Banner">
+            <section
+                    class="s_cover parallax align-content-center align-items-center d-flex full-height s_parallax_is_fixed"
+                    data-scroll-background-ratio="1" style="background-image: none;">
+                <span class="s_parallax_bg oe_img_bg oe_custom_bg"
+                      style="background-image: url(&quot;/theme_consultancy_ultimate_02/static/src/img/placeholder-1170.jpg&quot;); background-position: 50% 0px;"/>
+                <div class="container">
+                    <div class="row s_nb_column_fixed">
+                        <div class="col-lg-12 s_title" data-name="Title">
+                            <h1 class="text-left" style="font-size: 48px;">
+                                <font style="color: rgb(255, 255, 255);">
+                                    <b>We Provide Best</b>
+                                </font>
+                            </h1>
+                            <h1 class="text-left" style="font-size: 48px;">
+                                <font style="color: rgb(255, 255, 255);">
+                                    <b>Consulting Service</b>
+                                </font>
+                            </h1>
+                        </div>
+                        <div class="col-lg-12 text-left pt16 pb16" data-name="Buttons">
+                            <a href="/contactus" class="mt8 mb8 btn btn-primary flat btn-lg" data-original-title=""
+                               title="" aria-describedby="tooltip110446">Contact us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Banner End-->
+
+        <!--Snippet About Us Start-->
+        <template id="consultancy_about_us" name="Consultancy About Us - Bounce In Down">
+            <section class="pt64 pb64 bg-delta oe_custom_bg" style="">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                            <h2>
+                                <b>
+                                    <font style="font-size: 36px;">We Care About Your</font>
+                                    <font class="text-primary" style="font-size: 36px;">Business</font>
+                                </b>
+                            </h2>
+                            <p>
+                                <font style="font-size: 18px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat.
+                                </font>
+                            </p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt24 mb24">
+                            <img src="/theme_consultancy_ultimate_02/static/src/img/placeholder-600.jpg"
+                                 alt="Image" class="img-fluid pt8 pb8 mx-auto d-block"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet About Us End-->
+
+        <!--Snippet Service Start-->
+        <template id="consultancy_service" name="Consultancy Service - Fade In-Up">
+            <section class="pt64 pb64">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-lg-12 text-center mb48">
+                            <h2>
+                                <font style="font-size: 36px;">
+                                    <b>Our Services</b>
+                                </font>
+                            </h2>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing.</p>
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-4 col-lg-4 mb16">
+                            <img src="/theme_consultancy_ultimate_02/static/src/img/placeholder-600.jpg"
+                                 alt="image" title="image" class="img-fluid mb8 mt8"/>
+                            <h3>Financial Planning</h3>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            </p>
+                            <a href="#" class="pt8 pb8 o_default_snippet_text">read more
+                                <i class="fa fa-chevron-right ml-2"/>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-4 col-lg-4 mb16">
+                            <img src="/theme_consultancy_ultimate_02/static/src/img/placeholder-600.jpg"
+                                 alt="image" title="image" class="img-fluid mb8 mt8"/>
+                            <h3>Tax Planning</h3>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            </p>
+                            <a href="#" class="pt8 pb8 o_default_snippet_text">read more
+                                <i class="fa fa-chevron-right ml-2"/>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-4 col-lg-4 mb16">
+                            <img src="/theme_consultancy_ultimate_02/static/src/img/placeholder-600.jpg"
+                                 alt="image" title="image" class="img-fluid mb8 mt8"/>
+                            <h3>Saving Strategy</h3>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            </p>
+                            <a href="#" class="pt8 pb8 o_default_snippet_text">read more
+                                <i class="fa fa-chevron-right ml-2"/>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-4 col-lg-4 mb16">
+                            <img src="/theme_consultancy_ultimate_02/static/src/img/placeholder-600.jpg"
+                                 alt="image" title="image" class="img-fluid mb8 mt8"/>
+                            <h3>Mutual Funds</h3>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            </p>
+                            <a href="#" class="pt8 pb8 o_default_snippet_text">read more
+                                <i class="fa fa-chevron-right ml-2"/>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-4 col-lg-4 mb16">
+                            <img src="/theme_consultancy_ultimate_02/static/src/img/placeholder-600.jpg"
+                                 alt="image" title="image" class="img-fluid mb8 mt8"/>
+                            <h3>Business Loan</h3>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            </p>
+                            <a href="#" class="pt8 pb8 o_default_snippet_text">read more
+                                <i class="fa fa-chevron-right ml-2"/>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-4 col-lg-4 mb16">
+                            <img src="/theme_consultancy_ultimate_02/static/src/img/placeholder-600.jpg"
+                                 alt="image" title="image" class="img-fluid mb8 mt8"/>
+                            <h3>Insurance Consulting</h3>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            </p>
+                            <a href="#" class="pt8 pb8 o_default_snippet_text">read more
+                                <i class="fa fa-chevron-right ml-2"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Service End-->
+
+        <!--Snippet Feature Start-->
+        <template id="consultancy_feature" name="Consultancy Feature">
+            <section class="bg-beta oe_img_bg oe_custom_bg"
+                     style="background-image: url(&quot;/theme_consultancy_ultimate_02/static/src/img/placeholder-1170.jpg&quot;);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 mh100">
+                            <div class="oe_structure oe_empty">
+                                <section class="pt64 pb32">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                <h2 class="font-weight-bold pb24">
+                                                    <div style="text-align: left;">
+                                                        <span style="color: rgb(255, 255, 255); font-size: 36px;"
+                                                              class="o_default_snippet_text">Explore Our Core Features
+                                                        </span>
+                                                    </div>
+                                                </h2>
+                                                <p class="o_default_snippet_text" style="text-align:left; color: rgb(255, 255, 255);">Lorem ipsum
+                                                    dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum
+                                                    est in tortor congue suscipit. Suspendisse potenti. Aliquam finibus
+                                                    pharetra tellus at egestas.Suspendisse potenti. Aliquam finibus
+                                                    pharetra tellus at egestas.
+                                                </p>
+                                                <a href="#"
+                                                   class="mt24 mb24 px-4 rounded-0 btn btn-primary btn-lg o_default_snippet_text"
+                                                   data-original-title="" title="" aria-describedby="tooltip935819">
+                                                    Action
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-8 col-lg-8 mh100">
+                            <div class="oe_structure oe_empty">
+                                <section class="pt32 pb64">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                                                <div class="row pt48">
+                                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                                                        <i class="fa fa-3x pe-7s-graph1 fa-500px text-o-color-4" data-original-title=""
+                                                           title="" aria-describedby="tooltip97571" style=""/>
+                                                        <h3 class="pb8 pt8">
+                                                            <font style="color: rgb(255, 255, 255);"
+                                                                  class="o_default_snippet_text">Market Analysis
+                                                            </font>
+                                                        </h3>
+                                                        <p class="o_default_snippet_text text-o-color-4">Lorem ipsum dolor sit amet,
+                                                            consectetur adipiscing elit. Ut at semper metus. Vestibulum
+                                                            gravida velit urna, ut mattis leo ullamcorper sed.
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                                                        <i class="fa fa-3x fa-life-ring pe-7s-culture fa-500px text-o-color-4"
+                                                           data-original-title="" title=""
+                                                           aria-describedby="tooltip974230" style=""/>
+                                                        <h3 class="pt8 pb8">
+                                                            <font style="color: rgb(255, 255, 255);"
+                                                                  class="o_default_snippet_text">Business Solution
+                                                            </font>
+                                                        </h3>
+                                                        <p class="o_default_snippet_text text-o-color-4">Lorem ipsum dolor sit amet,
+                                                            consectetur adipiscing elit. Ut at semper metus. Vestibulum
+                                                            gravida velit urna, ut mattis leo ullamcorper sed.
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                                                        <i class="fa fa-3x pe-7s-gleam fa-500px text-o-color-4" data-original-title=""
+                                                           title="" aria-describedby="tooltip290407" style=""/>
+                                                        <h3 class="pt8 pb8">
+                                                            <font style="color: rgb(255, 255, 255);"
+                                                                  class="o_default_snippet_text">Revenue Growth
+                                                            </font>
+                                                        </h3>
+                                                        <p class="o_default_snippet_text text-o-color-4">Lorem ipsum dolor sit amet,
+                                                            consectetur adipiscing elit. Ut at semper metus. Vestibulum
+                                                            gravida velit urna, ut mattis leo ullamcorper sed.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Feature End-->
+
+        <!--Snippet Brand Logo Start-->
+        <template id="consultancy_brand_logo" name="Consultancy Brand Logo">
+            <section class="pt64 pb64">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                            <img src="/theme_consultancy_ultimate_02/static/src/img/brand-logo.png"
+                                 class="img-fluid mb16 mt16" alt="Brand Logo" title="Brand Logo"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                            <img src="/theme_consultancy_ultimate_02/static/src/img/brand-logo.png"
+                                 class="img-fluid   mb16 mt16" alt="Brand Logo" title="Brand Logo"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                            <img src="/theme_consultancy_ultimate_02/static/src/img/brand-logo.png"
+                                 class="img-fluid mb16 mt16" alt="Brand Logo" title="Brand Logo"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                            <img src="/theme_consultancy_ultimate_02/static/src/img/brand-logo.png"
+                                 class="img-fluid mb16 mt16" alt="Brand Logo" title="Brand Logo"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                            <img src="/theme_consultancy_ultimate_02/static/src/img/brand-logo.png"
+                                 class="img-fluid mb16 mt16" alt="Brand Logo" title="Brand Logo"/>
+                        </div>
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                            <img src="/theme_consultancy_ultimate_02/static/src/img/brand-logo.png"
+                                 class="img-fluid mb16 mt16" alt="Brand Logo" title="Brand Logo"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Brand Logo End-->
+
+        <!--Snippet Right Content Start-->
+        <template id="consultancy_right_content" name="Consultancy Right Content - Fade In-Up">
+            <section class="pt64 pb64 bg-delta oe_custom_bg">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt24 mb24">
+                            <img src="/theme_consultancy_ultimate_02/static/src/img/placeholder-600.jpg"
+                                 alt="Image" class="img-fluid pt8 pb8 mx-auto d-block"/>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                            <h2>
+                                <b>
+                                    <font style="font-size: 36px;">We can give best facilities to your business</font>
+                                </b>
+                            </h2>
+                            <p class="o_default_snippet_text">
+                                <font style="font-size: 18px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Pellentesque fermentum est in tortor congue suscipit. Suspendisse potenti.Aliquam
+                                    finibus pharetra tellus at egestas.&amp;nbsp;
+                                </font>
+                            </p>
+                            <i class="fa fa-2x fa-chrome px-2"/>
+                            <i class="fa fa-2x fa-internet-explorer px-2"/>
+                            <i class="fa fa-2x fa-firefox px-2"/>
+                            <i class="fa fa-2x fa-safari px-2"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Right Content End-->
+
+        <!--Snippet CTA 1 Start-->
+        <template id="consultancy_cta_1" name="Consultancy CTA 1">
+            <section class="s_call_to_action sni-block bg-black-50 oe_img_bg oe_custom_bg"
+                     style="background-image: url(&quot;/theme_consultancy_ultimate_02/static/src/img/placeholder-1170.jpg&quot;);">
+                <div class="container justify-content-center align-items-center d-flex pt64 pb64">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-12 col-md-8 s_title bg-black-75 pt32">
+                            <h1 class="text-white">
+                                <b>
+                                    <span style="font-size: 36px;">Our</span>
+                                    <span style="font-size: 36px;" class="text-primary">Consultant</span>
+                                    <span style="font-size: 36px;">will help you</span>
+                                </b>
+                            </h1>
+                            <h5 class="text-white o_default_snippet_text">Lorem Ipsum is simply dummy text of the
+                                printing and typesetting industry.galley of type and scrambled it to make a type
+                                specimen book. It has survived electronic typesetting, remaining essentially Lorem
+                                Ipsum.
+                            </h5>
+                            <p class="mt-5">
+                                <a href="/contactus" class="btn btn-primary btn-lg flat" data-original-title="" title=""
+                                   aria-describedby="tooltip900272">
+                                    <b class="o_default_snippet_text">Our Service</b>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet CTA 1 End-->
+
+        <!--Snippet Team Start-->
+        <template id="consultancy_team" name="Consultancy Team - Fade In-Up">
+            <section class="s_three_columns pt64 pb64 bg-delta oe_custom_bg" id="team_6">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mb48">
+                            <h2>
+                                <b>
+                                    <font style="font-size: 36px;">Meet Our Team</font>
+                                </b>
+                            </h2>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing.</p>
+                        </div>
+                    </div>
+                    <div class="row d-flex align-items-stretch">
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 s_col_no_bgcolor pt16 pb16">
+                            <div class="bg-white">
+                                <img class="card-img-top"
+                                     src="/theme_consultancy_ultimate_02/static/src/img/placeholder-600.jpg"
+                                     alt="Odoo - Sample 1 for three columns"/>
+                                <div class="card-body">
+                                    <h3 class="card-title" style="text-align: center; ">
+                                        <font style="">Jhon Doe</font>
+                                    </h3>
+                                    <p class="card-text o_default_snippet_text" style="text-align: center; ">Adapt these
+                                        three columns to fit you design need.
+                                    </p>
+                                    <p class="text-center mt8 mb8 ">
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-facebook fa-2x"/>
+                                        </a>
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-twitter fa-2x"/>
+                                        </a>
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-linkedin fa-2x"/>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 s_col_no_bgcolor pt16 pb16">
+                            <div class="bg-white">
+                                <img class="card-img-top"
+                                     src="/theme_consultancy_ultimate_02/static/src/img/placeholder-600.jpg"
+                                     alt="Odoo - Sample 2 for three columns" data-original-title="" title=""
+                                     aria-describedby="tooltip888441"/>
+                                <div class="card-body">
+                                    <h3 class="card-title" style="color: rgb(33, 37, 41); text-align: center;">
+                                        <font>Alexa Smith</font>
+                                    </h3>
+                                    <p class="card-text o_default_snippet_text" style="text-align: center; ">Adapt these
+                                        three columns to fit you design need.
+                                        <br/>
+                                    </p>
+                                    <p class="text-center mt8 mb8 ">
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-facebook fa-2x"/>
+                                        </a>
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-twitter fa-2x"/>
+                                        </a>
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-linkedin fa-2x"/>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 s_col_no_bgcolor pt16 pb16">
+                            <div class="bg-white">
+                                <img class="card-img-top"
+                                     src="/theme_consultancy_ultimate_02/static/src/img/placeholder-600.jpg"
+                                     alt="Odoo - Sample 3 for three columns"/>
+                                <div class="card-body">
+                                    <h3 class="card-title" style="color: rgb(33, 37, 41); text-align: center;">
+                                        <font>Robert William</font>
+                                    </h3>
+                                    <p class="card-text o_default_snippet_text" style="text-align: center; ">Adapt these
+                                        three columns to fit you design need.
+                                        <br/>
+                                    </p>
+                                    <p class="text-center mt8 mb8 ">
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-facebook fa-2x"/>
+                                        </a>
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-twitter fa-2x"/>
+                                        </a>
+                                        <a href="" class="m-2">
+                                            <i class="fa fa-linkedin fa-2x"/>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Team End-->
+
+        <!--Snippet CTA 2 Start-->
+        <template id="consultancy_cta_2" name="Consultancy CTA 2">
+            <section class="s_call_to_action bg-primary oe_custom_bg pb0 pt40" style="">
+                <div class="container">
+                    <div class="row">
+                        <div class="pb24 col-lg-9 col-md-9">
+                            <h3>
+                                <b>
+                                    <font style="color: rgb(255, 255, 255);">Looking for professional approach and
+                                        quality service?
+                                    </font>
+                                </b>
+                                <br/>
+                            </h3>
+                        </div>
+                        <div class="s_btn text-lg-right text-md-right pb24 col-lg-2 col-md-3 pt0">
+                            <a href="/contactus" class="btn btn-gamma btn-lg o_default_snippet_text"
+                               data-original-title="" title="" aria-describedby="tooltip156657">Contact us
+                                <i class="fa fa-1x fa-fw fa-arrow-circle-right ml-1"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="s_call_to_action oe_custom_bg pb0 pt40 o_colored_level undefined o_cc o_cc4" style=""
+                     data-snippet="consultancy_cta_2" data-name="Consultancy CTA 2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9 o_colored_level col-lg-8 pb4 pt8">
+                            <h3>
+                                <b>
+                                    <font style="color: rgb(255, 255, 255);" class="o_default_snippet_text">Looking for
+                                        professional approach and
+                                        quality service?
+                                    </font>
+                                </b>
+                                <br/>
+                            </h3>
+                        </div>
+                        <div class="s_btn text-lg-right text-md-right pb24 col-md-3 pt0 o_colored_level col-lg-3">
+                            <a href="/contactus" class="btn btn-secondary btn-lg" data-original-title="" title=""
+                               aria-describedby="tooltip156657">Contact us
+                                <i class="fa fa-1x fa-fw fa-arrow-circle-right ml-1"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet CTA 2 End-->
+
+        <!--Snippets Assets Start-->
+        <template id="demo_snippets" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_structure']" position="before">
+                <div id="snippet_demo_snippets" class="o_panel">
+                    <div class="o_panel_header">
+                        <i class="fa fa-th-large"/>
+                        Consultancy Ultimate 02
+                    </div>
+                    <div class="o_panel_body">
+                        <t t-snippet="theme_consultancy_ultimate_02.consultancy_banner"
+                           t-thumbnail="/theme_consultancy_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_consultancy_ultimate_02.consultancy_about_us"
+                           t-thumbnail="/theme_consultancy_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_consultancy_ultimate_02.consultancy_service"
+                           t-thumbnail="/theme_consultancy_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_consultancy_ultimate_02.consultancy_feature"
+                           t-thumbnail="/theme_consultancy_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_consultancy_ultimate_02.consultancy_brand_logo"
+                           t-thumbnail="/theme_consultancy_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_consultancy_ultimate_02.consultancy_right_content"
+                           t-thumbnail="/theme_consultancy_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_consultancy_ultimate_02.consultancy_cta_1"
+                           t-thumbnail="/theme_consultancy_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_consultancy_ultimate_02.consultancy_team"
+                           t-thumbnail="/theme_consultancy_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_consultancy_ultimate_02.consultancy_cta_2"
+                           t-thumbnail="/theme_consultancy_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+
+
+                    </div>
+                </div>
+            </xpath>
+        </template>
+        <!--Snippets Assets End-->
+    </data>
+</odoo>

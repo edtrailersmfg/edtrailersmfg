@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="app_two_theme_footer" inherit_id="website.layout"
+              name="App Two Theme Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section id="footer" class="oe_structure oe_structure_solo oe_custom_bg oe_img_bg"
+                         style="border-top: none; background-image: url(&quot;/theme_app_ultimate_02/static/src/img/placeholder-1170.jpg&quot;);">
+                    <div id="footer" class="oe_structure oe_structure_solo">
+                        <div class="s_call_to_action sni-block oe_custom_bg" data-name="CTA 11">
+                            <div class="container pt64 pb64  bg-unset">
+                                <div class="row justify-content-center py-5">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center o_colored_level">
+                                        <h1 class="font-weight-bold mb32">
+                                            <font style="font-size: 48px;" class="text-o-color-4">Get In Touch</font>
+                                        </h1>
+                                        <p class="mb32">
+                                            <font style="font-size: 16px;" class="text-o-color-4">Lorem ipsum dolor sit
+                                                amet,
+                                                consectetur adipisicing elit, sed do eiusmod tempor incid idunt ut
+                                                labore
+                                            </font>
+                                            <br/>
+                                            <font style="font-size: 16px;" class="text-o-color-4">et dolore
+                                                magna
+                                                aliqua. Ut enim ad minimol.
+                                                &amp;nbsp;
+                                            </font>
+                                            <font style="font-size: 16px;">
+                                            </font>
+                                        </p>
+                                        <div class="mt24 col-12 col-sm-12 col-md-12 col-lg-12" id="newsletter_1">
+                                            <div class="col-lg-8 col-md-8 mx-auto p-0 input-group js_subscribe"
+                                                 data-list-id="1">
+                                                <input type="email" name="email" class="form-control js_subscribe_email"
+                                                       placeholder="your email..." disabled=""
+                                                       style="&#10;    border-radius: 0 !important;&#10;"/>
+                                                <span class="input-group-append">
+                                                    <a role="button" href="#"
+                                                       class="btn btn-primary js_subscribe_btn o_default_snippet_text d-none"
+                                                       style="&#10;    border-radius: 0 !important;&#10;">Subscribe
+                                                    </a>
+                                                    <a role="button" href="#" class="btn btn-success js_subscribed_btn"
+                                                       disabled="disabled"
+                                                       style="&#10;    border-radius: 0 !important;&#10;">Thanks
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <record id="image_content_1" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_1</field>
+            <field name="name">theme_loan_ultimate_01.image_content_1</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/service-img-3-min.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_2" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_2</field>
+            <field name="name">theme_loan_ultimate_01.image_content_2</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/question.png</field>
+        </record>
+        
+        
+        <record id="image_content_3" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_3</field>
+            <field name="name">theme_loan_ultimate_01.image_content_3</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/company-2-min.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_4" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_4</field>
+            <field name="name">theme_loan_ultimate_01.image_content_4</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/company-3-min.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_5" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_5</field>
+            <field name="name">theme_loan_ultimate_01.image_content_5</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/background-image-3-min.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_6" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_6</field>
+            <field name="name">theme_loan_ultimate_01.image_content_6</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/main-banner-img-min.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_7" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_7</field>
+            <field name="name">theme_loan_ultimate_01.image_content_7</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/company-4-min.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_8" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_8</field>
+            <field name="name">theme_loan_ultimate_01.image_content_8</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/credit-card.png</field>
+        </record>
+        
+        
+        <record id="image_content_9" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_9</field>
+            <field name="name">theme_loan_ultimate_01.image_content_9</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/service-img-1-min.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_10" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_10</field>
+            <field name="name">theme_loan_ultimate_01.image_content_10</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/company-6-min.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_11" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_11</field>
+            <field name="name">theme_loan_ultimate_01.image_content_11</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/guide-img-1-min.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_12" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_12</field>
+            <field name="name">theme_loan_ultimate_01.image_content_12</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/guide-img-3-min.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_13" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_13</field>
+            <field name="name">theme_loan_ultimate_01.image_content_13</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/loan.png</field>
+        </record>
+        
+        
+        <record id="image_content_14" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_14</field>
+            <field name="name">theme_loan_ultimate_01.image_content_14</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/home.png</field>
+        </record>
+        
+        
+        <record id="image_content_15" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_15</field>
+            <field name="name">theme_loan_ultimate_01.image_content_15</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/customer-service.png</field>
+        </record>
+        
+        
+        <record id="image_content_16" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_16</field>
+            <field name="name">theme_loan_ultimate_01.image_content_16</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/company-5-min.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_17" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_17</field>
+            <field name="name">theme_loan_ultimate_01.image_content_17</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/service-img-2-min.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_18" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_18</field>
+            <field name="name">theme_loan_ultimate_01.image_content_18</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/guide-img-2-min.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_19" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_19</field>
+            <field name="name">theme_loan_ultimate_01.image_content_19</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/company-1-min.jpg</field>
+        </record>
+        
+        
+        <record id="image_content_20" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_20</field>
+            <field name="name">theme_loan_ultimate_01.image_content_20</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/car.png</field>
+        </record>
+
+        <record id="image_content_21" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_21</field>
+            <field name="name">theme_loan_ultimate_01.image_content_21</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/call.png</field>
+        </record>
+
+        <record id="image_content_22" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_22</field>
+            <field name="name">theme_loan_ultimate_01.image_content_22</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/avatar1.jpg</field>
+        </record>
+
+        <record id="image_content_23" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_23</field>
+            <field name="name">theme_loan_ultimate_01.image_content_23</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/avatar2.jpg</field>
+        </record>
+
+        <record id="image_content_24" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_24</field>
+            <field name="name">theme_loan_ultimate_01.image_content_24</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/avatar3.jpg</field>
+        </record>
+
+        <record id="image_content_25" model="theme.ir.attachment">
+            <field name="key">theme_loan_ultimate_01.image_content_25</field>
+            <field name="name">theme_loan_ultimate_01.image_content_25</field>
+            <field name="url">/theme_loan_ultimate_01/static/src/img/library/avatar4.jpg</field>
+        </record>
+    </data>
+</odoo>

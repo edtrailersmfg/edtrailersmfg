@@ -1,0 +1,76 @@
+//------------------------------------------------------------------------------
+// Presets
+//------------------------------------------------------------------------------
+
+$o-website-values-palettes: (
+    (
+        // Font
+        'font':                             'Poppins',
+        'headings-font':                    'Poppins',
+        'navbar-font':                      'Poppins',
+        'buttons-font':                     'Poppins',
+        'header-template':                  'navbar-1',
+        'footer-template':                  'app-two-theme-footer',
+        'input-field':                      'input-1',
+        'header-links-style':               'option-nav-hover-bottom-border',
+        'ultimate-button':                  'button-4',
+    ),
+);
+
+//------------------------------------------------------------------------------
+// Colors
+//------------------------------------------------------------------------------
+
+$o-color-palettes: map-merge($o-color-palettes,
+    (
+         'base-1': (
+               'o-color-1':                     #eb465d,
+               'o-color-2':                     #17274d,
+               'o-color-3':                     #e6f1ef,
+               'o-color-4':                     #ffffff,
+               'o-color-5':                     #f9f9f9,
+
+               'o-cc1-text':                    #747b7a,
+               'o-cc1-headings':                #17274d,
+               'o-cc1-btn-primary':             'o-color-1',
+               'o-cc1-btn-secondary':           'o-color-2',
+               'o-cc1-link':                    'o-color-1',
+
+               'menu': 5,
+               'footer' : 5,
+               'copyright': 5,
+        ),
+    )
+);
+// FIXME solve per font options
+$o-theme-font-configs: (
+    'Roboto': (
+        'family': ('Roboto', sans-serif),
+        'url': 'Roboto:300,300i,400,400i,700,700i',
+    ),
+    'Open Sans': (
+        'family': ('Open Sans', sans-serif),
+        'url': 'Open+Sans:300,300i,400,400i,700,700i',
+    ),
+    'Source Sans Pro': (
+        'family': ('Source Sans Pro', sans-serif),
+        'url': 'Source+Sans+Pro:300,300i,400,400i,700,700i',
+    ),
+    'Raleway': (
+        'family': ('Raleway', sans-serif),
+        'url': 'Raleway:300,300i,400,400i,700,700i',
+    ),
+    'Noto Serif': (
+        'family': ('Noto Serif', serif),
+        'url': 'Noto+Serif:300,300i,400,400i,700,700i',
+    ),
+    'Arvo': (
+        'family': ('Arvo', Times, serif),
+        'url': 'Arvo:300,300i,400,400i,700,700i',
+    ),
+
+    'Poppins': (
+        'family': ('Poppins', Times, serif),
+        'url': 'Poppins:300,300i,400,400i,700,700i',
+    ),
+);

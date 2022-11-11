@@ -1,0 +1,82 @@
+//------------------------------------------------------------------------------
+// Presets
+//------------------------------------------------------------------------------
+
+$o-website-values-palettes: (
+    (
+        // Font
+        'font':                             'Work Sans',
+        'headings-font':                    'Open Sans',
+        'navbar-font':                      'Montserrat',
+        'buttons-font':                     'Montserrat',
+        'header-template':                  'navbar-1',
+        'footer-template':                  'business-two-theme-footer',
+        'input-field':                      'input-1',
+        'header-links-style':               'option-nav-hover-bottom-border',
+        'ultimate-button':                  'button-2',
+    ),
+);
+
+//------------------------------------------------------------------------------
+// Colors
+//------------------------------------------------------------------------------
+
+$o-color-palettes: map-merge($o-color-palettes,
+    (
+         'base-1': (
+           'o-color-1':                     #38d5e2,
+           'o-color-2':                     #ffffff,
+           'o-color-3':                     #010927,
+           'o-color-4':                     #ffffff,
+           'o-color-5':                     #fc824c,
+
+           'o-cc1-text':                    #2f2f2f,
+           'o-cc1-headings':                #010927,
+           'o-cc1-btn-primary':             'o-color-1',
+           'o-cc1-btn-secondary':           'o-color-2',
+           'o-cc1-link':                    'o-color-1',
+
+           'menu': 1,
+           'footer' : 1,
+           'copyright': 1,
+        ),
+    )
+);
+
+// FIXME solve per font options
+$o-theme-font-configs: (
+    'Roboto': (
+        'family': ('Roboto', sans-serif),
+        'url': 'Roboto:300,300i,400,400i,700,700i',
+    ),
+    'Open Sans': (
+        'family': ('Open Sans', sans-serif),
+        'url': 'Open+Sans:300,300i,400,400i,700,700i',
+    ),
+    'Source Sans Pro': (
+        'family': ('Source Sans Pro', sans-serif),
+        'url': 'Source+Sans+Pro:300,300i,400,400i,700,700i',
+    ),
+    'Raleway': (
+        'family': ('Raleway', sans-serif),
+        'url': 'Raleway:300,300i,400,400i,700,700i',
+    ),
+    'Noto Serif': (
+        'family': ('Noto Serif', serif),
+        'url': 'Noto+Serif:300,300i,400,400i,700,700i',
+    ),
+    'Arvo': (
+        'family': ('Arvo', Times, serif),
+        'url': 'Arvo:300,300i,400,400i,700,700i',
+    ),
+
+    'Montserrat': (
+        'family': ('Montserrat', Times, serif),
+        'url': 'Montserrat:300,300i,400,400i,700,700i',
+    ),
+
+    'Work Sans': (
+        'family': ('Work Sans', Times, serif),
+        'url': 'Work Sans:300,300i,400,400i,700,700i',
+    ),
+);

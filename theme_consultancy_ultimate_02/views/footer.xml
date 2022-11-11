@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="consultancy_theme_footer" inherit_id="website.layout"
+              name="Consultancy Theme Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer"
+                         style="border-top:none;">
+                    <div class="pt64 pb32" id="footer_3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb32">
+                                    <img style="margin:0 auto;" class="img img-responsive img-fluid" src="/logo.png"
+                                         alt="Logo of YourCompany" title="YourCompany"/>
+                                    <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of the printing
+                                        and typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                                    </p>
+                                    <div class="icon_bg">
+                                        <a href="/website/social/facebook">
+                                            <i class="fa fa-facebook bg-primary img-circle mx-1"
+                                               style="border-radius: 50%; height: 35px; line-height: 0.8; padding: 12px; text-align: center; width: 35px;"/>
+                                        </a>
+                                        <a href="/website/social/twitter">
+                                            <i class="fa fa-twitter bg-primary img-circle mx-1"
+                                               style="border-radius: 50%; height: 35px; line-height: 0.8; padding: 12px; text-align: center; width: 35px;"/>
+                                        </a>
+                                        <a href="/website/social/github">
+                                            <i class="fa fa-github bg-primary img-circle mx-1"
+                                               style="border-radius: 50%; height: 35px; line-height: 0.8; padding: 12px; text-align: center; width: 35px;"/>
+                                        </a>
+                                        <a href="/website/social/instagram">
+                                            <i class="fa fa-instagram bg-primary img-circle mx-1"
+                                               style="border-radius: 50%; height: 35px; line-height: 0.8; padding: 12px; text-align: center; width: 35px;"/>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-2 mb32">
+                                    <h5 class="o_default_snippet_text">
+                                        <font style="color: rgb(255, 255, 255); font-size: 18px;">
+                                            <b>Usefull Links</b>
+                                        </font>
+                                    </h5>
+                                    <ul class="list-unstyled mt24">
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font style="color: rgb(255, 255, 255);" data-original-title="" title=""
+                                                      aria-describedby="tooltip197968">Home
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font style="color: rgb(255, 255, 255);" data-original-title="" title=""
+                                                      aria-describedby="tooltip208045">About Us
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font style="color: rgb(255, 255, 255);">Services</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font style="color: rgb(255, 255, 255);">Testimonials</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font style="color: rgb(255, 255, 255);">Gallery</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font style="color: rgb(255, 255, 255);" data-original-title="" title=""
+                                                      aria-describedby="tooltip429387">Conatct
+                                                </font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32">
+                                    <h5>
+                                        <font style="color: rgb(255, 255, 255); font-size: 18px;">
+                                            <b>Services</b>
+                                        </font>
+                                    </h5>
+                                    <ul class="list-unstyled mt24">
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font style="color: rgb(255, 255, 255);">Business Consulting</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font style="color: rgb(255, 255, 255);">Market Research</font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font style="color: rgb(255, 255, 255);" data-original-title="" title=""
+                                                      aria-describedby="tooltip63365">Sales &amp;amp; Trades
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font style="color: rgb(255, 255, 255);">Audit &amp;amp; Assurance
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank" class="o_default_snippet_text">
+                                                <font style="color: rgb(255, 255, 255);" data-original-title="" title=""
+                                                      aria-describedby="tooltip845897">Investment Planning
+                                                </font>
+                                            </a>
+                                        </li>
+                                        <li class="mb8">
+                                            <a href="#" target="_blank">
+                                                <font style="color: rgb(255, 255, 255);">Financial Analysis</font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb32">
+                                    <h5 class="mb24">
+                                        <font style="color: rgb(255, 255, 255); font-size: 18px;"
+                                              class="o_default_snippet_text">
+                                            <b>Conatct</b>
+                                        </font>
+                                    </h5>
+                                    <p class="mb32 o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit, sed do eiusmod tempor incididunt ut.
+                                    </p>
+                                    <div class="media mb16 o_default_snippet_text">
+                                        <i class="fa fa-home mr-3 mt-1"/>
+                                        <div class="media-body">
+                                            <span t-field="res_company.street"/>
+                                            <span t-field="res_company.city"/>
+                                            <span t-field="res_company.state_id.name"/>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                    <div class="media mb16 o_default_snippet_text">
+                                        <i class="fa fa-envelope-o mr-3 mt-1"/>
+                                        <div class="media-body">
+                                            <span t-field="res_company.email"/>
+                                        </div>
+
+                                    </div>
+                                    <hr/>
+                                    <div class="media mb16 o_default_snippet_text">
+                                        <i class="fa fa-phone mr-3 mt-1"/>
+                                        <div class="media-body">
+                                            <span t-field="res_company.phone"/>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,389 @@
+<odoo>
+    <data>
+        <!--Snippet Banner Start-->
+        <template id="camera_banner" name="Camera Banner">
+            <section
+                    class="s_cover parallax align-content-center align-items-center d-flex full-height s_parallax_is_fixed s_parallax_no_overflow_hidden"
+                    data-scroll-background-ratio="1" style="background-image: none;">
+                <span class="s_parallax_bg oe_img_bg oe_custom_bg"
+                      style="background-image: url(&quot;/theme_camera_ecommerce_ultimate_01/static/src/img/placeholder-1170.jpg&quot;); background-position: 50% 0px;"/>
+                <div class="container">
+                    <div class="row s_nb_column_fixed">
+                        <div class="col-lg-12 s_title" data-name="Title">
+                            <h1 class="text-left" style="font-size: 62px;">
+                                <b>New Range Of Camera</b>
+                            </h1>
+                        </div>
+                        <div class="col-lg-12 text-left pt16 pb16" data-name="Buttons">
+                            <a href="/contactus"
+                               class="mt8 mb8 rounded-circle btn btn-outline-primary rounded-circle btn-lg"
+                               data-original-title="" title="" aria-describedby="tooltip632524">BUY NOW
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Banner End-->
+
+        <!--Snippet Sale Image Start-->
+        <template id="camera_sale_image" name="Camera Sale Image">
+            <section class="pt64 pb64" id="ecommerce_block_13">
+                <div class="container page-builder-ltr">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+                            <div class="ttbannerblock layout2 style1">
+                                <div class="ttbanner1 ttbanner">
+                                    <div class="ttbanner-img">
+                                        <a href="#">
+                                            <img src="/theme_camera_ecommerce_ultimate_01/static/src/img/placeholder-284x293.png"
+                                                 class="img-fluid"
+                                                 data-original-title="" title="" aria-describedby="tooltip452904"/>
+                                        </a>
+                                        <span class="hover1 hover"/>
+                                        <span class="hover2 hover"/>
+                                        <span class="hover3 hover"/>
+                                        <span class="hover4 hover"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                            <div class="ttbannerblock layout2 style1">
+                                <div class="ttbanner1 ttbanner">
+                                    <div class="ttbanner-img editor_enable">
+                                        <a href="#">
+                                            <img src="/theme_camera_ecommerce_ultimate_01/static/src/img/placeholder-598x293.png"
+                                                 class="img-fluid"
+                                                 data-original-title="" title="" aria-describedby="tooltip538994"/>
+                                        </a>
+                                        <span class="hover1 hover"/>
+                                        <span class="hover2 hover"/>
+                                        <span class="hover3 hover"/>
+                                        <span class="hover4 hover"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+                            <div class="ttbannerblock layout2 style1">
+                                <div class="ttbanner1 ttbanner">
+                                    <div class="ttbanner-img editor_enable">
+                                        <a href="#">
+                                            <img src="/theme_camera_ecommerce_ultimate_01/static/src/img/placeholder-284x293.png"
+                                                 class="img-fluid"
+                                                 data-original-title="" title="" aria-describedby="tooltip538994"/>
+                                        </a>
+                                        <span class="hover1 hover"/>
+                                        <span class="hover2 hover"/>
+                                        <span class="hover3 hover"/>
+                                        <span class="hover4 hover"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Sale Image End-->
+
+        <!--Snippet Product Carousel 1 Start-->
+        <template id="camera_product_carousel_1" name="Camera Product Carousel 1">
+            <section class="s_grid_images" style="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-12 col-sm-12">
+                            <div class="oe_structure">
+                                <section class="pt64 pb64" id="ecommerce_block_13">
+                                    <div class="container page-builder-ltr">
+                                        <div class="row text-center">
+                                            <div class="col-12 col-lg-12 col-md-6 col-sm-12 pb16">
+                                                <div class="ttbannerblock layout2 style1">
+                                                    <div class="ttbanner1 ttbanner">
+                                                        <div class="ttbanner-img">
+                                                            <a href="#">
+                                                                <img src="/theme_camera_ecommerce_ultimate_01/static/src/img/placeholder-284x320.png"
+                                                                     class="img-fluid" data-original-title="" title=""
+                                                                     aria-describedby="tooltip878229"/>
+                                                            </a>
+                                                            <span class="hover1 hover"/>
+                                                            <span class="hover2 hover"/>
+                                                            <span class="hover3 hover"/>
+                                                            <span class="hover4 hover"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-12 col-md-6 col-sm-12 pb16">
+                                                <div class="ttbannerblock layout2 style1">
+                                                    <div class="ttbanner1 ttbanner">
+                                                        <div class="ttbanner-img editor_enable">
+                                                            <a href="#">
+                                                                <img src="/theme_camera_ecommerce_ultimate_01/static/src/img/placeholder-284x320.png"
+                                                                     class="img-fluid" data-original-title="" title=""
+                                                                     aria-describedby="tooltip674429"/>
+                                                            </a>
+                                                            <span class="hover1 hover"/>
+                                                            <span class="hover2 hover"/>
+                                                            <span class="hover3 hover"/>
+                                                            <span class="hover4 hover"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-9" style="">
+                            <div class="oe_structure oe_empty">
+                                <h2>Product Carousel</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Product Carousel 1 End-->
+
+        <!--Snippet Promo Image Start-->
+        <template id="camera_promo_image" name="Camera Promo Image">
+            <section class="pt64 pb64" id="ecommerce_block_13">
+                <div class="container page-builder-ltr">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                            <div class="ttbannerblock layout2 style1">
+                                <div class="ttbanner1 ttbanner">
+                                    <div class="ttbanner-img">
+                                        <a href="#">
+                                            <img src="/theme_camera_ecommerce_ultimate_01/static/src/img/placeholder-598x268.png"
+                                                 class="img-fluid"
+                                                 data-original-title="" title="" aria-describedby="tooltip964959"/>
+                                        </a>
+                                        <span class="hover1 hover"/>
+                                        <span class="hover2 hover"/>
+                                        <span class="hover3 hover"/>
+                                        <span class="hover4 hover"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                            <div class="ttbannerblock layout2 style1">
+                                <div class="ttbanner1 ttbanner">
+                                    <div class="ttbanner-img editor_enable">
+                                        <a href="#">
+                                            <img src="/theme_camera_ecommerce_ultimate_01/static/src/img/placeholder-598x268.png"
+                                                 class="img-fluid"
+                                                 data-original-title="" title="" aria-describedby="tooltip143998"/>
+                                        </a>
+                                        <span class="hover1 hover"/>
+                                        <span class="hover2 hover"/>
+                                        <span class="hover3 hover"/>
+                                        <span class="hover4 hover"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Promo Image End-->
+
+        <!--Snippet Product Carousel 2 Start-->
+        <template id="camera_product_carousel_2" name="Camera Product Carousel 2">
+            <section class="s_one_carousel_three_images" style="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-9 col-md-12 col-sm-12">
+                            <div class="oe_structure oe_empty">
+                                <h2>Product Carousel</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-12 col-sm-12">
+                            <div class="oe_structure">
+                                <section class="pt64 pb64" id="ecommerce_block_13">
+                                    <div class="container page-builder-ltr">
+                                        <div class="row text-center">
+                                            <div class="col-12 col-sm-12 col-md-6 col-lg-12 pb16">
+                                                <div class="ttbannerblock layout2 style1">
+                                                    <div class="ttbanner1 ttbanner">
+                                                        <div class="ttbanner-img">
+                                                            <a href="#">
+                                                                <img src="/theme_camera_ecommerce_ultimate_01/static/src/img/placeholder-284x320.png"
+                                                                     class="img-fluid" data-original-title="" title=""
+                                                                     aria-describedby="tooltip306242"/>
+                                                            </a>
+                                                            <span class="hover1 hover"/>
+                                                            <span class="hover2 hover"/>
+                                                            <span class="hover3 hover"/>
+                                                            <span class="hover4 hover"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-6 col-lg-12 pb16">
+                                                <div class="ttbannerblock layout2 style1">
+                                                    <div class="ttbanner1 ttbanner">
+                                                        <div class="ttbanner-img editor_enable">
+                                                            <a href="#">
+                                                                <img src="/theme_camera_ecommerce_ultimate_01/static/src/img/placeholder-284x320.png"
+                                                                     class="img-fluid" data-original-title="" title=""
+                                                                     aria-describedby="tooltip41372"/>
+                                                            </a>
+                                                            <span class="hover1 hover"/>
+                                                            <span class="hover2 hover"/>
+                                                            <span class="hover3 hover"/>
+                                                            <span class="hover4 hover"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Product Carousel 2 End-->
+
+        <!--Snippet Newsletter Start-->
+        <template id="camera_newsletter" name="Camera Newsletter">
+            <section class="pt64 pb32 oe_img_bg oe_custom_bg" id="footer_7"
+                     style="background-image: url(&quot;/theme_camera_ecommerce_ultimate_01/static/src/img/placeholder-1170.jpg&quot;);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb16">
+                            <h3>
+                                <b>
+                                    <font style="font-size: 36px;">SIGNUP FOR NEWSLETTER</font>
+                                </b>
+                            </h3>
+                            <h3>
+                                <b>GET BEST OFFER</b>
+                            </h3>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6  mb48">
+                            <div class="input-group js_subscribe hidden d-none" data-list-id="1" data-subscribe="off">
+                                <input type="email" name="email"
+                                       class="bg-transparent br-left form-control js_subscribe_email"
+                                       placeholder="your email..."/>
+                                <span class="input-group-btn">
+                                    <a href="#"
+                                       class="btn br-right px-3 py-2 btn-primary js_subscribe_btn o_default_snippet_text">
+                                        Subscribe
+                                    </a>
+                                    <a href="#"
+                                       class="btn br-right px-3 py-2 btn-success js_subscribed_btn hidden o_default_snippet_text d-none"
+                                       disabled="disabled">Thanks
+                                    </a>
+                                </span>
+                                <div class="alert alert-success hidden o_default_snippet_text">Thanks for your
+                                    subscription!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Newsletter End-->
+
+        <!--Snippet Features Start-->
+        <template id="camera_features" name="Camera Features">
+            <section class="pb40 pt0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="row pt48">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                    <i class="fa fa-3x mr-3 mt-2 pe-7s-plane fa-500px" data-original-title="" title=""
+                                       aria-describedby="tooltip619073" style=""/>
+                                    <div class="media-body">
+                                        <h3>
+                                            <font style="font-size: 18px;">
+                                                <b>Free Delivery</b>
+                                            </font>
+                                        </h3>
+                                        <p>orders over 100$</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                    <i class="fa fa-3x fa-life-ring mr-3 mt-2 pe-7s-headphones fa-500px"
+                                       data-original-title="" title="" aria-describedby="tooltip98600" style=""/>
+                                    <div class="media-body">
+                                        <h3>
+                                            <b>
+                                                <font style="font-size: 18px;">Online Support</font>
+                                            </b>
+                                        </h3>
+                                        <p>Hours: 8AM-11Pm</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                    <i class="fa fa-3x mr-3 mt-2 pe-7s-cash fa-500px" data-original-title="" title=""
+                                       aria-describedby="tooltip73096" style=""/>
+                                    <div class="media-body">
+                                        <h3>
+                                            <font style="font-size: 18px;">
+                                                <b>Easy Return</b>
+                                            </font>
+                                        </h3>
+                                        <p>As per return policy</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3  media">
+                                    <i class="fa fa-3x mr-3 mt-2 pe-7s-users fa-500px" data-original-title="" title=""
+                                       aria-describedby="tooltip839979" style=""/>
+                                    <div class="media-body">
+                                        <h3>
+                                            <font style="font-size: 18px;">
+                                                <b>Member Discount</b>
+                                            </font>
+                                        </h3>
+                                        <p>Special Discounts</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Features End-->
+
+        <!--Snippets Assets-->
+        <template id="demo_snippets" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_structure']" position="before">
+                <div id="snippet_demo_snippets" class="o_panel">
+                    <div class="o_panel_header">
+                        <i class="fa fa-th-large"/>
+                        Camera Ecommerce Ultimate 01
+                    </div>
+                    <div class="o_panel_body">
+                        <t t-snippet="theme_camera_ecommerce_ultimate_01.camera_banner"
+                           t-thumbnail="/theme_camera_ecommerce_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_camera_ecommerce_ultimate_01.camera_sale_image"
+                           t-thumbnail="/theme_camera_ecommerce_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_camera_ecommerce_ultimate_01.camera_product_carousel_1"
+                           t-thumbnail="/theme_camera_ecommerce_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_camera_ecommerce_ultimate_01.camera_promo_image"
+                           t-thumbnail="/theme_camera_ecommerce_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_camera_ecommerce_ultimate_01.camera_product_carousel_2"
+                           t-thumbnail="/theme_camera_ecommerce_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_camera_ecommerce_ultimate_01.camera_newsletter"
+                           t-thumbnail="/theme_camera_ecommerce_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_camera_ecommerce_ultimate_01.camera_features"
+                           t-thumbnail="/theme_camera_ecommerce_ultimate_01/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

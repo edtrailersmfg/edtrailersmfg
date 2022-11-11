@@ -1,0 +1,76 @@
+
+//------------------------------------------------------------------------------
+// Presets
+//------------------------------------------------------------------------------
+
+$o-website-values-palettes: (
+    (
+        // Font
+        'font':                             'Open Sans',
+        'headings-font':                    'Cabin Sketch',
+        'navbar-font':                      'Open Sans',
+        'buttons-font':                     'Open Sans',
+        'header-template':                  'navbar-1',
+        'footer-template':                  'adventure-theme-footer',
+        'transparent-navbar':                  'nav-transparent-font-white',
+    ),
+);
+
+//------------------------------------------------------------------------------
+// Colors
+//------------------------------------------------------------------------------
+$o-color-palettes: map-merge($o-color-palettes,
+  (
+         'base-1': (
+
+            'o-color-1': #f03e31,
+            'o-color-2': #9ab0aa,
+            'o-color-3': #efefef,
+            'o-color-4':#ffffff,
+            'o-color-5': #120e07,
+
+           'o-cc1-text':                       #9ab0aa,
+           'o-cc1-headings':                   #9ab0aa,
+           'o-cc1-btn-primary':                'o-color-1',
+           'o-cc1-btn-secondary':              'o-color-2',
+    //     'o-cc1-link':                       #f8b73d,
+
+//            'menu': #1d1814,
+//            'footer' : #e8e6e4,
+//            'copyright': #e8e6e4,
+
+            ),
+    )
+);
+
+// FIXME solve per font options
+$o-theme-font-configs: (
+    'Roboto': (
+        'family': ('Roboto', sans-serif),
+        'url': 'Roboto:300,300i,400,400i,700,700i',
+    ),
+    'Open Sans': (
+        'family': ('Open Sans', sans-serif),
+        'url': 'Open+Sans:300,300i,400,400i,700,700i',
+    ),
+    'Source Sans Pro': (
+        'family': ('Source Sans Pro', sans-serif),
+        'url': 'Source+Sans+Pro:300,300i,400,400i,700,700i',
+    ),
+    'Raleway': (
+        'family': ('Raleway', sans-serif),
+        'url': 'Raleway:300,300i,400,400i,700,700i',
+    ),
+    'Noto Serif': (
+        'family': ('Noto Serif', serif),
+        'url': 'Noto+Serif:300,300i,400,400i,700,700i',
+    ),
+    'Arvo': (
+        'family': ('Arvo', Times, serif),
+        'url': 'Arvo:300,300i,400,400i,700,700i',
+    ),
+    'Cabin Sketch': (
+        'family': ('Cabin Sketch', serif),
+        'url': 'Cabin+Sketch:300,300i,400,400i,700,700i',
+    ),
+);

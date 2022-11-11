@@ -1,0 +1,568 @@
+<odoo>
+    <data>
+
+        <!--Snippet Banner start-->
+        <template id="app_banner" name="App Banner">
+            <section
+                    class="s_cover parallax align-content-center align-items-center s_parallax_is_fixed o_colored_level"
+                    data-scroll-background-ratio="1" style="" data-snippet="app_banner" data-name="App Banner">
+                <span class="s_parallax_bg oe_img_bg oe_custom_bg"
+                      style="background-image: url(&quot;/theme_app_ultimate_02/static/src/img/placeholder-1170.jpg&quot;); background-position: 50% 75%;"/>
+                <div class="container">
+                    <div class="row s_nb_column_fixed full-height">
+                        <div class="align-content-center align-self-center col-lg-7 content-align-center o_colored_level"
+                             data-name="Title">
+                            <h1 class="s_title_thin text-left text-white o_default_snippet_text"
+                                style="font-size: 62px;">Best Way To Present
+                                Your App
+                            </h1>
+                            <div class="s_text pt16 pb16 text-white" data-name="Text">
+                                <p class="lead text-left" style="text-align: left;">Write one or
+                                    two paragraphs describing your product, services or a specific feature.
+                                    <br/>
+                                    To be successful your content needs to be useful to your readers.
+                                </p>
+                            </div>
+                            <div class="s_btn text-left pt16 pb16" data-name="Buttons">
+                                <a href="/contactus" class="btn btn-primary flat btn-lg o_default_snippet_text"
+                                   data-original-title="" title="" aria-describedby="tooltip6949">VIEW MORE
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 align-self-center o_colored_level" data-name="Image">
+                            <img class="img img-fluid" src="/theme_app_ultimate_02/static/src/img/placeholder-600.jpg"
+                                 loading="lazy"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Banner End-->
+
+        <!--Snippet Feature start-->
+        <template id="app_feature" name="App Feature">
+            <section class="pt64 pb32 o_colored_level" data-snippet="app_feature" data-name="App Feature">
+                <div class="container">
+                    <div class="row s_nb_column_fixed">
+                        <div class="col-lg-12 s_title pt16 pb16 o_colored_level" style="text-align: center;">
+                            <h1 class="s_title_default">
+                                <font>
+                                    <span style="font-size: 48px;">
+                                        <b class="o_default_snippet_text">Awesome Feature</b>
+                                    </span>
+                                </font>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pb48 pt32 oe_custom_bg o_colored_level" style="" data-snippet="app_feature"
+                     data-name="App Feature">
+                <div class="container">
+                    <div class="row text-center mt-5">
+                        <div class="col-12 col-sm-4 mb16 o_colored_level">
+                            <img alt="image" src="/theme_app_ultimate_02/static/src/img/placeholder-70x70.png"
+                                 data-original-title="" title="" aria-describedby="tooltip953326" loading="lazy"/>
+                            <h3>
+                                <br/>
+                                <b class="o_default_snippet_text">Easy To Customize</b>
+                                <br/>
+                            </h3>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of
+                                the printing and typesetting
+                                industryLorem Ipsum&amp;nbsp;
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-4 mb16 o_colored_level">
+                            <img alt="image" src="/theme_app_ultimate_02/static/src/img/placeholder-70x70.png"
+                                 data-original-title="" title="" aria-describedby="tooltip773624" loading="lazy"/>
+                            <h3>
+                                <br/>
+                                <b class="o_default_snippet_text">Responsive Design</b>
+                                <br/>
+                            </h3>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of
+                                the printing and typesetting
+                                industryLorem Ipsum&amp;nbsp;
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-4 mb16 o_colored_level">
+                            <img alt="image" src="/theme_app_ultimate_02/static/src/img/placeholder-70x70.png"
+                                 data-original-title="" title="" aria-describedby="tooltip681253" loading="lazy"/>
+                            <h3>
+                                <br/>
+                                <b class="o_default_snippet_text">24/7 Support</b>
+                                <br/>
+                            </h3>
+                            <p class="o_default_snippet_text">Lorem Ipsum is simply dummy text of
+                                the printing and typesetting
+                                industryLorem Ipsum&amp;nbsp;
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pb32 pt0 oe_custom_bg o_colored_level" data-snippet="app_feature" data-name="App Feature">
+                <div class="container">
+                    <div class="row s_nb_column_fixed">
+                        <div class="col-lg-12 s_title pt16 pb0 o_colored_level" style="text-align: center;">
+                            <div class="s_btn text-center pt16 pb16" data-name="Buttons">
+                                <a href="#" class="btn btn-primary flat" data-original-title="" title=""
+                                   aria-describedby="tooltip700166">
+                                    <font style="font-size: 14px;">Read more</font>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Feature End-->
+
+        <!--Snippet Grid start-->
+        <template id="app_grid" name="App Grid">
+            <section class="sni-block pt64 pb64 o_colored_level" data-snippet="app_grid" data-name="App Grid">
+                <div class="container">
+                    <div class="row text-left align-items-center pt-5 pb-md-5">
+                        <div class="col-12 col-lg-6 col-md-6 col-sm-12 mb16 o_colored_level">
+                            <img alt="image" class="img-fluid"
+                                 src="/theme_app_ultimate_02/static/src/img/placeholder-600.jpg" data-original-title=""
+                                 title="" aria-describedby="tooltip96229" loading="lazy"/>
+                        </div>
+                        <div class="col-12 col-lg-6 col-sm-12 col-md-6 m-md-auto o_colored_level">
+                            <h2>
+                                <b>
+                                    <font style="font-size: 36px;" class="o_default_snippet_text">High Resolution
+                                    </font>
+                                </b>
+                                <br/>
+                            </h2>
+                            <p class="lead o_default_snippet_text">
+                                <font style="font-size: 14px;" class="o_default_snippet_text">Lorem Ipsum is simply
+                                    dummy text of the printing and
+                                    typesetting industry. Lorem Ipsum
+                                    has been the industry's standard
+                                    dummy text ever Lorem Ipsum is
+                                    simply dummy text of the printing
+                                    and typesetting industry. Lorem
+                                    Ipsum has been the industry's
+                                    standard dummy text ever
+                                    &amp;nbsp;
+                                </font>
+                            </p>
+                            <p>
+                                <a href="#" class="btn btn-primary flat" data-original-title="" title=""
+                                   aria-describedby="tooltip181477">
+                                    <font style="font-size: 14px;">Learn More&amp;nbsp;</font>
+                                    <i class="fa fa-angle-right" style="font-size: 14px;"/>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row text-left align-items-center pt-5 pb-md-5">
+                        <div class="col-12 col-lg-6 col-sm-12 col-md-6 m-md-auto order-md-5 mb16 o_colored_level">
+                            <img alt="image" class="img-fluid"
+                                 src="/theme_app_ultimate_02/static/src/img/placeholder-600.jpg" data-original-title=""
+                                 title="" aria-describedby="tooltip695415" loading="lazy"/>
+                        </div>
+                        <div class="col-12 col-lg-6 col-sm-12 col-md-6 o_colored_level">
+                            <h2>
+                                <font style="font-size: 36px;">
+                                    <b class="o_default_snippet_text">Super Fast Speed</b>
+                                </font>
+                            </h2>
+                            <p class="lead o_default_snippet_text">
+                                <font style="font-size: 14px;" class="o_default_snippet_text">Lorem Ipsum is simply
+                                    dummy text of the printing and
+                                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever&amp;nbsp;
+                                </font>
+                            </p>
+                            <p>
+                                <a href="#" class="btn btn-primary flat" data-original-title="" title=""
+                                   aria-describedby="tooltip696099">
+                                    <font style="font-size: 14px;">Learn More&amp;nbsp;</font>
+                                    <i class="fa fa-angle-right"/>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row text-left align-items-center pt-5">
+                        <div class="col-12 col-lg-6 col-sm-12 col-md-6 mb16 o_colored_level">
+                            <img alt="image" class="img-fluid"
+                                 src="/theme_app_ultimate_02/static/src/img/placeholder-600.jpg" data-original-title=""
+                                 title="" aria-describedby="tooltip985450" loading="lazy"/>
+                        </div>
+                        <div class="col-12 col-lg-6 col-sm-12 col-md-6 m-md-auto o_colored_level">
+                            <h2>
+                                <strong>
+                                    <font style="font-size: 36px;" class="o_default_snippet_text">
+                                        Great Performance
+                                    </font>
+                                </strong>
+                            </h2>
+                            <p class="lead">
+                                <font style="font-size: 14px;" class="o_default_snippet_text">Lorem Ipsum is simply
+                                    dummy text of the printing and
+                                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever&amp;nbsp;
+                                </font>
+                            </p>
+                            <p>
+                                <a href="#" class="btn btn-primary flat" data-original-title="" title=""
+                                   aria-describedby="tooltip820249">
+                                    <font style="font-size: 14px;">Learn More&amp;nbsp;</font>
+                                    <i class="fa fa-angle-right" style="font-size: 14px;"/>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Grid End-->
+
+        <!--Snippet Price Table start-->
+        <template id="app_price_table" name="App Price Table">
+            <section id="bs_price_table_6" class="pt64 pb64 oe_custom_bg o_colored_level undefined o_cc o_cc2" style=""
+                     data-snippet="app_price_table" data-name="App Price Table">
+                <div class="table-padding container">
+                    <div class="row">
+                        <div class="col-md-12 mb32 o_colored_level text-center">
+                            <div>
+                                <h2>
+                                    <font style="font-size: 48px;" class="text-o-color-2">
+                                        <b>Choose Your Best Plan</b>
+                                    </font>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4 o_colored_level">
+                            <div class="single-table-pricing">
+                                <div class="pricing-icon">
+                                    <div style="text-align: center;">
+                                        <span style="color: rgb(23, 39, 77); font-size: 24px;">
+                                            <b class="o_default_snippet_text">Free</b>
+                                        </span>
+                                    </div>
+                                    <font class="text-beta" style="font-size: 24px;">
+                                        <div style="text-align: center;">
+                                            <b class="o_default_snippet_text">$10</b>
+                                        </div>
+                                    </font>
+                                    <font style="font-size: 18px;" class="text-o-color-1">
+                                        <div style="text-align: center;">
+                                            Monthly
+                                        </div>
+                                    </font>
+                                </div>
+                                <div class="pricing-list">
+                                    <ul>
+                                        <li class="o_default_snippet_text">
+                                            <font style="color: rgb(116, 123, 122);">1GB web Space</font>
+                                        </li>
+                                        <li class="o_default_snippet_text">
+                                            <font style="color: rgb(116, 123, 122);">
+                                                5+ Mysql Database
+                                                &amp;nbsp;
+                                            </font>
+                                        </li>
+                                        <li class="off o_default_snippet_text">
+                                            <font style="color: rgb(116, 123, 122);">
+                                                Managed CMS
+                                                &amp;nbsp;
+                                            </font>
+                                        </li>
+                                        <li class="off">
+                                            <font style="color: rgb(116, 123, 122);">
+                                                Unlimited Bandwidth
+                                                &amp;nbsp;
+                                            </font>
+                                        </li>
+                                        <li class="off o_default_snippet_text">
+                                            <font style="color: rgb(116, 123, 122);">
+                                                Other features
+                                            </font>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary flat" data-original-title="" title=""
+                                   aria-describedby="tooltip792582">Order Now
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 o_colored_level">
+                            <div class="single-table-pricing">
+                                <div class="pricing-icon">
+                                    <div style="text-align: center;">
+                                        <font color="#17274d">
+                                            <span style="font-size: 24px;">
+                                                <b class="o_default_snippet_text">Standard</b>
+                                            </span>
+                                        </font>
+                                    </div>
+                                    <font class="text-beta" style="font-size: 24px;">
+                                        <div style="text-align: center;">
+                                            <b class="o_default_snippet_text">$16</b>
+                                        </div>
+                                    </font>
+                                    <font style="font-size: 18px;" class="text-o-color-1">
+                                        <div style="text-align: center;">
+                                            Monthly
+                                        </div>
+                                    </font>
+                                </div>
+                                <div class="pricing-list">
+                                    <ul>
+                                        <li>
+                                            <font style="color: rgb(116, 123, 122);">1GB web Space</font>
+                                        </li>
+                                        <li class="o_default_snippet_text">
+                                            <font style="color: rgb(116, 123, 122);">
+                                                5+ Mysql Database
+                                                &amp;nbsp;
+                                            </font>
+                                        </li>
+                                        <li class="o_default_snippet_text">
+                                            <font style="color: rgb(116, 123, 122);">
+                                                Managed CMS
+                                                &amp;nbsp;
+                                            </font>
+                                        </li>
+                                        <li class="off o_default_snippet_text">
+                                            <font style="color: rgb(116, 123, 122);">
+                                                Unlimited Bandwidth
+                                                &amp;nbsp;
+                                            </font>
+                                        </li>
+                                        <li class="off o_default_snippet_text">
+                                            <font style="color: rgb(116, 123, 122);">
+                                                Other features
+                                            </font>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary flat" data-original-title="" title=""
+                                   aria-describedby="tooltip600357">Order Now
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 o_colored_level">
+                            <div class="single-table-pricing">
+                                <div class="pricing-icon">
+                                    <div style="text-align: center;">
+                                        <font color="#17274d">
+                                            <span style="font-size: 24px;">
+                                                <b class="o_default_snippet_text">Premium</b>
+                                            </span>
+                                        </font>
+                                    </div>
+                                    <font class="text-beta" style="font-size: 24px;">
+                                        <div style="text-align: center;">
+                                            <b class="o_default_snippet_text">$29</b>
+                                        </div>
+                                    </font>
+                                    <font style="font-size: 18px;" class="text-o-color-1">
+                                        <div style="text-align: center;">
+                                            Monthly
+                                        </div>
+                                    </font>
+                                </div>
+                                <div class="pricing-list">
+                                    <ul>
+                                        <li class="o_default_snippet_text">
+                                            <font style="color: rgb(116, 123, 122);">1GB web Space</font>
+                                        </li>
+                                        <li class="o_default_snippet_text">
+                                            <font style="color: rgb(116, 123, 122);">
+                                                5+ Mysql Database
+                                                &amp;nbsp;
+                                            </font>
+                                        </li>
+                                        <li class="o_default_snippet_text">
+                                            <font style="color: rgb(116, 123, 122);">
+                                                Managed CMS
+                                                &amp;nbsp;
+                                            </font>
+                                        </li>
+                                        <li class="o_default_snippet_text">
+                                            <font style="color: rgb(116, 123, 122);">
+                                                Unlimited Bandwidth
+                                                &amp;nbsp;
+                                            </font>
+                                        </li>
+                                        <li class="o_default_snippet_text">
+                                            <font style="color: rgb(116, 123, 122);">
+                                                Other features
+                                                &amp;nbsp;
+                                            </font>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary flat" data-original-title="" title=""
+                                   aria-describedby="tooltip699603">Order Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Price Table End-->
+
+        <!--Snippet Testimonial start-->
+        <template id="app_testimonial" name="App Testimonial">
+            <section class="pt64 pb64 o_colored_level undefined o_cc o_cc1" id="testimonials_d2"
+                     data-visible="testimonials" data-snippet="testimonial_11" data-name="Testimonial 11">
+                <div class="container">
+                    <div class="row content justify-content-md-center">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center o_colored_level">
+                            <h2>
+                                <font style="font-size: 48px;">
+                                    <b>What Our Client Say !</b>
+                                </font>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div id="myCarousel1609237324790" class="s_quotes_carousel carousel slide s_carousel_rounded"
+                     data-interval="10000">
+                    <ol class="carousel-indicators o_we_no_overlay">
+                        <li data-target="#myCarousel1609237324790" data-slide-to="0" class="active"/>
+                        <li data-target="#myCarousel1609237324790" data-slide-to="1"/>
+                        <li data-target="#myCarousel1609237324790" data-slide-to="2"/>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item o_colored_level pt0 pb0 active" data-name="Slide" style="">
+                            <div class="container">
+                                <div class="row content justify-content-md-center mx-2">
+                                    <blockquote
+                                            class="carousel-content col-12 col-sm-12 col-md-12 col-lg-8 bg-white border-0">
+                                        <p class="lead mt32 mb32 text-center">
+                                            <b style="font-style: normal;">Write a quote here from one
+                                                of your customers. Quotes are a great
+                                                way to build confidence in your
+                                                products or services.
+                                            </b>
+                                        </p>
+                                        <div class="text-center">
+                                            <img class="img"
+                                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                                 alt="" loading="lazy"/>
+                                            <span class="o_default_snippet_text">
+                                                <span style="font-style: normal;">
+                                                    Jane DOE, CEO of
+                                                    <b class="o_default_snippet_text">
+                                                        MyCompany
+                                                    </b>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item o_colored_level pt0 pb0" data-name="Slide" style="">
+                            <div class="container">
+                                <div class="row content justify-content-md-center mx-2">
+                                    <blockquote
+                                            class="carousel-content col-12 col-sm-12 col-md-12 col-lg-8 bg-white border-0">
+                                        <p class="lead mt32 mb32 text-center">
+                                            <b style="font-style: normal;">Write a quote here from one
+                                                of your customers. Quotes are a great
+                                                way to build confidence in your
+                                                products or services.
+                                            </b>
+                                        </p>
+                                        <div class="text-center">
+                                            <img class="img"
+                                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                                 alt="" loading="lazy"/>
+                                            <span class="o_default_snippet_text">
+                                                <span style="font-style: normal;">
+                                                    Jane DOE, CEO of
+                                                    <b class="o_default_snippet_text">
+                                                        MyCompany
+                                                    </b>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item o_colored_level pt0 pb0" data-name="Slide" style="">
+                            <div class="container">
+                                <div class="row content justify-content-md-center mx-2">
+                                    <blockquote
+                                            class="carousel-content col-12 col-sm-12 col-md-12 col-lg-8 bg-white border-0">
+                                        <p class="lead mt32 mb32 text-center">
+                                            <b style="font-style: normal;">Write a quote here from one
+                                                of your customers. Quotes are a great
+                                                way to build confidence in your
+                                                products or services.
+                                            </b>
+                                        </p>
+                                        <div class="text-center">
+                                            <img class="img"
+                                                 src="/website_business_snippet_blocks_core_ul_73lines/static/src/img/common-images/common_images-40.png"
+                                                 alt="" loading="lazy"/>
+                                            <span class="o_default_snippet_text">
+                                                <span style="font-style: normal;">
+                                                    Jane DOE, CEO of
+                                                    <b class="o_default_snippet_text">
+                                                        MyCompany
+                                                    </b>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-control-prev o_we_no_overlay" data-target="#myCarousel1609237324790"
+                         data-slide="prev" role="img" aria-label="Previous" title="Previous">
+                        <span class="carousel-control-prev-icon"/>
+                        <span class="sr-only o_default_snippet_text">Previous
+                        </span>
+                    </div>
+                    <div class="carousel-control-next o_we_no_overlay" data-target="#myCarousel1609237324790"
+                         data-slide="next" role="img" aria-label="Next" title="Next">
+                        <span class="carousel-control-next-icon"/>
+                        <span class="sr-only o_default_snippet_text">Next</span>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <!--Snippet Testimonial End-->
+
+        <!--Snippets Assets-->
+        <template id="demo_snippets" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_structure']" position="before">
+                <div id="snippet_demo_snippets" class="o_panel">
+                    <div class="o_panel_header">
+                        <i class="fa fa-th-large"/>
+                        App Ultimate 02
+                    </div>
+                    <div class="o_panel_body">
+                        <t t-snippet="theme_app_ultimate_02.app_banner"
+                           t-thumbnail="/theme_app_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_app_ultimate_02.app_feature"
+                           t-thumbnail="/theme_app_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_app_ultimate_02.app_grid"
+                           t-thumbnail="/theme_app_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_app_ultimate_02.app_price_table"
+                           t-thumbnail="/theme_app_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                        <t t-snippet="theme_app_ultimate_02.app_testimonial"
+                           t-thumbnail="/theme_app_ultimate_02/static/src/img/snippet-icons/demo-snippet-icon.png"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

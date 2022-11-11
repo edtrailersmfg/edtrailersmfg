@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="business_01_theme_footer" inherit_id="website.layout"
+              name="Business 01 Footer" active="False">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                <section class="oe_structure" id="footer">
+                    <div class="pt64" id="footer_16">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 pb16">
+                                    <h5 class="pb16 o_default_snippet_text">
+                                        <font style="color: rgb(255, 255, 255);">About Us</font>
+                                    </h5>
+                                    <p class="o_default_snippet_text">Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+                                    </p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-2 col-lg-2 pb16">
+                                    <h5 class="pb16">
+                                        <font style="color: rgb(255, 255, 255);">Menu</font>
+                                    </h5>
+                                    <ol class="list-unstyled">
+                                        <li class="o_default_snippet_text">Home</li>
+                                        <li class="o_default_snippet_text">About us</li>
+                                        <li class="o_default_snippet_text">Services</li>
+                                        <li class="o_default_snippet_text">Features</li>
+                                        <li>Team</li>
+                                        <li class="o_default_snippet_text">Blog</li>
+                                        <li class="o_default_snippet_text">Contact</li>
+                                    </ol>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3 col-lg-2 pb16">
+                                    <h5 class="pb16 o_default_snippet_text">
+                                        <font style="color: rgb(255, 255, 255);">Support</font>
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li class="o_default_snippet_text">Trial version</li>
+                                        <li class="o_default_snippet_text">Premium</li>
+                                        <li class="o_default_snippet_text">FAQs</li>
+                                        <li class="o_default_snippet_text">Privacy Policy</li>
+                                        <li class="o_default_snippet_text">Term of Use</li>
+                                        <li class="o_default_snippet_text">Copyright</li>
+                                        <li class="o_default_snippet_text">Help</li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3 col-lg-3 pb16">
+                                    <h5 class="pb16 o_default_snippet_text">
+                                        <font style="color: rgb(255, 255, 255);">Contact Us</font>
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <address class="o_default_snippet_text">
+                                                <b class="o_default_snippet_text">Address</b>
+                                                <br/>
+                                                <span t-field="res_company.street"/>
+                                                <span t-field="res_company.city"/>
+                                                <span t-field="res_company.state_id.name"/>
+                                                <span t-field="res_company.zip"/>
+                                                <span t-field="res_company.country_id.name"/>
+                                            </address>
+                                        </li>
+                                        <li class="pb16 o_default_snippet_text">
+                                            <b class="o_default_snippet_text">Email</b>
+                                            <br/>
+                                            <span t-field="res_company.email"/>
+                                        </li>
+                                        <li class="o_default_snippet_text">
+                                            <b class="o_default_snippet_text">Phone</b>
+                                            <br/>
+                                            <span t-field="res_company.phone"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>
