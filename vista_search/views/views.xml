@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+
+        <record id="view_search_vin" model="ir.ui.view">
+            <field name="name">view.search.mrp.vin</field>
+            <field name="model">mrp.workorder</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="lot_id"/>
+                    <field name="workcenter_id"/>
+                    <field name="production_id"/>
+                </search>            
+            </field>
+        </record>
+
+    </data>
+</odoo>
