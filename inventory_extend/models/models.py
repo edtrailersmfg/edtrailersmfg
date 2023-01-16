@@ -11,7 +11,7 @@ class Product(models.Model):
     fecha_actual = fields.Date(string="Fecha para TC", default=datetime.today())
     costo_usd = fields.Float(string="Costo USD", compute='_compute_costo_usd')
     utilidad_usd = fields.Float(string="Utilidad en USD", compute='_compute_utilidad_usd')
-    utilidad = fields.Float(string="% de Utilidad", compute='_compute_utilidad')
+    utilidad = fields.Float(string="% de Utilidad", compute='_compute_utilidad', default=0)
     precio_usd = fields.Float(string="Precio de Venta USD", default=0)
     #precio_usd = fields.Float(string="Precio de Venta USD", compute='_compute_precio_usd')    
 
@@ -40,6 +40,7 @@ class Product(models.Model):
 
     def _compute_utilidad(self):        
         for product in self:
+            product.utilidad = 0
             if product.costo_usd > 0:
                 product['utilidad'] = ( self.utilidad_usd / self.costo_usd ) * 100
 
@@ -47,11 +48,11 @@ class Product(models.Model):
     @api.onchange('list_price')
     def _onchange_list_price(self):
         for product in self:
-            product['utilidad'] = ( ( self.list_price - self.standard_price ) / self.standard_price ) * 100
             if product.tipo_cambio > 0:
                 product['precio_usd'] = self.list_price / self.tipo_cambio
-            product['utilidad_usd'] = self.precio_usd - self.costo_usd
-            product['utilidad'] = ( self.utilidad_usd / self.costo_usd ) * 100
+                product['utilidad_usd'] = self.precio_usd - self.costo_usd
+                if product.costo_usd > 0:
+                    product['utilidad'] = ( self.utilidad_usd / self.costo_usd ) * 100
 
 
     @api.onchange('precio_usd')
@@ -59,5 +60,6 @@ class Product(models.Model):
         for product in self:
             product['list_price'] = self.precio_usd * self.tipo_cambio
             product['utilidad_usd'] = self.precio_usd - self.costo_usd
-            product['utilidad'] = ( self.utilidad_usd / self.costo_usd ) * 100
+            if product.costo_usd > 0:
+                product['utilidad'] = ( self.utilidad_usd / self.costo_usd ) * 100
             
