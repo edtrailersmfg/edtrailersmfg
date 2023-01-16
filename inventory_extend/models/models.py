@@ -10,9 +10,10 @@ class Product(models.Model):
     tipo_cambio = fields.Float(string="Tipo de Cambio", compute='_compute_tipo_cambio')
     fecha_actual = fields.Date(string="Fecha para TC", default=datetime.today())
     costo_usd = fields.Float(string="Costo USD", compute='_compute_costo_usd')
-    utilidad = fields.Float(string="% de Utilidad")
-    utilidad_usd = fields.Float(string="Utilidad en USD")
-    precio_usd = fields.Float(string="Precio de Venta USD", compute='_compute_precio_usd')    
+    utilidad_usd = fields.Float(string="Utilidad en USD", compute='_compute_utilidad_usd')
+    utilidad = fields.Float(string="% de Utilidad", compute='_compute_utilidad')
+    precio_usd = fields.Float(string="Precio de Venta USD", default=0)
+    #precio_usd = fields.Float(string="Precio de Venta USD", compute='_compute_precio_usd')    
 
     # -------------------------------------------------------------------------
     # COMPUTE METHODS
@@ -26,7 +27,6 @@ class Product(models.Model):
         for product in self:
             if product.tipo_cambio > 0:
                 product['costo_usd'] = self.standard_price / self.tipo_cambio
-                product['utilidad_usd'] = self.precio_usd - self.costo_usd
 
     def _compute_precio_usd(self):
         for product in self:
@@ -36,15 +36,15 @@ class Product(models.Model):
                 product['precio_usd'] =  self.list_price / self.tipo_cambio
                 product['utilidad_usd'] = self.precio_usd - self.costo_usd
                 
-    @api.onchange('utilidad')
-    def _onchange_utilidad(self):
-        if self.utilidad > 0:
-            for product in self:
-                product.list_price = 0
-                product['list_price'] = self.standard_price + ( self.standard_price * ( self.utilidad / 100 ) )
-                if product.tipo_cambio > 0:
-                    product['precio_usd'] = self.list_price / self.tipo_cambio
-                    product['utilidad_usd'] = self.precio_usd - self.costo_usd            
+    def _compute_utilidad_usd(self):        
+        for product in self:
+            product['utilidad_usd'] = self.precio_usd - self.costo_usd
+
+    def _compute_utilidad(self):        
+        for product in self:
+            if product.costo_usd > 0:
+                product['utilidad'] = ( self.utilidad_usd / self.costo_usd ) * 100
+
 
     @api.onchange('list_price')
     def _onchange_list_price(self):
@@ -52,5 +52,14 @@ class Product(models.Model):
             product['utilidad'] = ( ( self.list_price - self.standard_price ) / self.standard_price ) * 100
             if product.tipo_cambio > 0:
                 product['precio_usd'] = self.list_price / self.tipo_cambio
-                product['utilidad_usd'] = self.precio_usd - self.costo_usd
+            product['utilidad_usd'] = self.precio_usd - self.costo_usd
+            product['utilidad'] = ( self.utilidad_usd / self.costo_usd ) * 100
 
+
+    @api.onchange('precio_usd')
+    def _onchange_precio_usd(self):
+        for product in self:
+            product['list_price'] = self.precio_usd * self.tipo_cambio
+            product['utilidad_usd'] = self.precio_usd - self.costo_usd
+            product['utilidad'] = ( self.utilidad_usd / self.costo_usd ) * 100
+            
