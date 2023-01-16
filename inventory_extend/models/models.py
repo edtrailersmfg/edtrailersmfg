@@ -30,11 +30,9 @@ class Product(models.Model):
 
     def _compute_precio_usd(self):
         for product in self:
-            product.list_price = 0
-            product['list_price'] = self.standard_price + ( self.standard_price * ( self.utilidad / 100 ) )
-            if product.tipo_cambio > 0:
+            product.precio_usd = 0
+            if product.tipo_cambio > 0 & product.list_price > 0:
                 product['precio_usd'] =  self.list_price / self.tipo_cambio
-                product['utilidad_usd'] = self.precio_usd - self.costo_usd
                 
     def _compute_utilidad_usd(self):        
         for product in self:
