@@ -6,8 +6,9 @@ Inventory Extend
 =======================================
 Tipo de Cambio para Calcular Costo y Precio del Producto
     """,
-    'version' : '15.0.1',
+    'version' : '15.0.2',
     'category': 'Inventory/Inventory',
+    'author': 'Enrique Jaquez',
     'depends' : [
         'account',
         'base',
