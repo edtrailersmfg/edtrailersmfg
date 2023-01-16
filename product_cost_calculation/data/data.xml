@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_cost" model="ir.config_parameter">
+        <field name="key">product_cost_calculation.product_cost</field>
+        <field name="value">1.16</field>
+    </record>
+
+</odoo>
