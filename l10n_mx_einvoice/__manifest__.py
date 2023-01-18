@@ -13,7 +13,7 @@ Facturación Electrónica México
 
 Este módulo extiende Odoo para poder manejar Facturación Electrónica de acuerdo a los requerimientos del SAT
 
-* Factura Electrónica (Facturas y Notas de Crédito)
+* Factura Electrónica (Facturas y Notas de Credito)
 
 * Manejo de Anticipos en Factura Electrónica (Identificando cuáles ya fueron aplicados)
 
