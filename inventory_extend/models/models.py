@@ -11,7 +11,7 @@ class Product(models.Model):
     fecha_actual = fields.Date(string="Fecha para TC", default=datetime.today())
     costo_usd = fields.Float(string="Costo USD", compute='_compute_costo_usd')
     utilidad_usd = fields.Float(string="Utilidad en USD", compute='_compute_utilidad_usd')
-    utilidad = fields.Float(string="% de Utilidad", compute='_compute_utilidad', default=0)
+    utilidad = fields.Float(string="% de Utilidad", compute='_compute_utilidad')
     precio_usd = fields.Float(string="Precio de Venta USD", default=0)
     #precio_usd = fields.Float(string="Precio de Venta USD", compute='_compute_precio_usd')    
 
