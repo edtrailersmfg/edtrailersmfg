@@ -1119,7 +1119,7 @@ class AccountMove(models.Model):
 
         invoice_data['cfdi:Receptor'] = {}
 
-        #Enrique Jaquez
+        #Enrique J
         if rfc.upper() != 'XAXX010101000':
             invoice_data['cfdi:Receptor'].update({
                 'Rfc': rfc.upper(),
