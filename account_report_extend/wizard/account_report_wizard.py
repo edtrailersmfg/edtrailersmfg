@@ -1,7 +1,6 @@
 import pytz
-from openerp import models, fields, api, _
+from odoo import models, fields, api, _
 from datetime import timedelta, datetime
-from openerp.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
 
 
 class AccounutReportWizard(models.TransientModel):
