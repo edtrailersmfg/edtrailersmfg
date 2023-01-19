@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
-from openerp import api, fields, models, _
-from openerp.exceptions import UserError, RedirectWarning, ValidationError
+from odoo import api, fields, models, _
+from odoo.exceptions import UserError, RedirectWarning, ValidationError
 
 
 class AccountMove(models.Model):

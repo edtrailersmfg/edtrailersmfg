@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from openerp.tests.common import TransactionCase
-import openerp
+from odoo.tests.common import TransactionCase
+import odoo
 from datetime import datetime
 from calendar import isleap
-from openerp.addons.controller_report_xls.controllers.main import get_xls
+from odoo.addons.controller_report_xls.controllers.main import get_xls
 
 RESULT = {
     10: 0,
