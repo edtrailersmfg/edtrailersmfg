@@ -93,7 +93,8 @@
 
                             </td>
                             <td width="50%">
-                                <strong>Uso CFDI: </strong><span t-field="o.uso_cfdi_id"/><BR/>
+                                <strong>Uso CFDI: </strong>[CP01] Pagos<BR/>
+                                <!-- <strong>Uso CFDI: </strong><span t-field="o.uso_cfdi_id"/><BR/> -->
                                 <strong>Tipo de Comprobante:</strong>
                                 <span t-field="o.type_document_id"/>
                                 <BR/>

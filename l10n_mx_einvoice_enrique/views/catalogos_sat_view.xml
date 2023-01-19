@@ -1,0 +1,1539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <menuitem id="catalogos_sat_menu" name="Catálogos SAT" 
+                  parent="account.menu_finance_configuration" sequence="99" 
+                  groups="account.group_account_manager" />
+    
+        
+        <!-- FORMAS DE PAGO -->
+
+        <record id="sat_forma_pago_tree" model="ir.ui.view">
+            <field name="name">pay.method.tree</field>
+            <field name="model">pay.method</field>
+            <field name="arch" type="xml">
+                <tree string="Formas de Pago SAT" >
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sat_forma_pago_form" model="ir.ui.view">
+            <field name="name">pay.method.form</field>
+            <field name="model">pay.method</field>
+            <field name="arch" type="xml">
+                <form string="Formas de Pago SAT">
+                    <sheet>
+                         <div class="oe_title">
+                        <label class="oe_edit_only" for="code" string="Codigo SAT"/>
+                        <h1><field name="code" placeholder="10101501"/></h1>
+                        
+                    </div>
+
+                        
+                        <group >
+                            <field name="name" />
+                            <field name="description" />
+                        </group>
+                        <group>
+                            <group>
+                                <field name="bancarizado" />
+                                <field name="num_operacion" />
+                                <field name="rfc_del_emisor_cuenta_ordenante" />
+                                <field name="cuenta_ordenante" />
+                                <field name="patron_cuenta_ordenante" />
+                            </group>
+                            <group>
+                                <field name="rfc_del_emisor_cuenta_beneficiario" />
+                                <field name="cuenta_beneficiario" />
+                                <field name="patron_cuenta_beneficiario" />
+                                <field name="tipo_cadena_pago" />
+                                <field name="banco_emisor_obligatorio_extranjero" />
+                            </group>
+                        </group>
+                        
+                    </sheet>
+                    
+                </form>
+            </field>
+        </record>
+
+
+        <record id="sat_forma_pago_search" model="ir.ui.view">
+            <field name="name">pay.method.serch</field>
+            <field name="model">pay.method</field>
+            <field name="arch" type="xml">
+                <search string="Formas de Pago SAT">
+
+                    <field name="code"/>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_sat_formas_pago" model="ir.actions.act_window">
+            <field name="name">Formas de Pago</field>
+            <field name="res_model">pay.method</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="sat_forma_pago_tree"/>
+        </record>
+
+        <!--<menuitem action="action_sat_formas_pago"
+                  id="action_sat_formas_pago_menu" sequence="10"
+                  parent="catalogos_sat_menu" />-->
+
+        
+        
+<!-- Tipos Relacion CFDI FISCAL -->
+        <record id="sat_tipo_relacion_cfdi_tree" model="ir.ui.view">
+            <field name="name">sat.tipo.relacion.cfdi.tree</field>
+            <field name="model">sat.tipo.relacion.cfdi</field>
+            <field name="arch" type="xml">
+                <tree string="Tipos de Relacion entre CFDI" >
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sat_tipo_relacion_cfdi_form" model="ir.ui.view">
+            <field name="name">sat.tipo.relacion.cfdi.form</field>
+            <field name="model">sat.tipo.relacion.cfdi</field>
+            <field name="arch" type="xml">
+                <form string="Tipos de Relacion entre CFDI">
+                    <sheet>
+                         <div class="oe_title">
+                        <label class="oe_edit_only" for="code" string="Codigo SAT"/>
+                        <h1><field name="code" placeholder="I,E,P,N,etc.."/></h1>
+                        
+                    </div>
+
+                        
+                        <group >
+                            <field name="name" />
+                        </group>
+                        
+                    </sheet>
+                    
+                </form>
+            </field>
+        </record>
+
+
+        <record id="sat_tipo_relacion_cfdi_search" model="ir.ui.view">
+            <field name="name">sat.tipo.relacion.cfdi.serch</field>
+            <field name="model">sat.tipo.relacion.cfdi</field>
+            <field name="arch" type="xml">
+                <search string="Tipos de Relacion entre CFDI">
+                     <field name="name" filter_domain="['|', ('code','ilike',self),('name','ilike',self)]" string="Relacion CFDI ..."/>
+                    <field name="code"/>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+    <record id="action_sat_tipo_relacion_cfdi" model="ir.actions.act_window">
+            <field name="name">Tipos Relacion CFDI</field>
+            <field name="res_model">sat.tipo.relacion.cfdi</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="sat_tipo_relacion_cfdi_tree"/>
+        </record>
+
+        <!--<menuitem action="action_sat_tipo_relacion_cfdi"
+                  id="action_sat_tipo_relacion_cfdi_menu" sequence="15"
+                  parent="catalogos_sat_menu" />-->
+
+<!-- REGIMEN FISCAL -->
+        <record id="sat_tipo_comprobante_tree" model="ir.ui.view">
+            <field name="name">sat.tipo.comprobante.tree</field>
+            <field name="model">sat.tipo.comprobante</field>
+            <field name="arch" type="xml">
+                <tree string="Tipos de Comprobante" >
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sat_tipo_comprobante_form" model="ir.ui.view">
+            <field name="name">sat.tipo.comprobante.form</field>
+            <field name="model">sat.tipo.comprobante</field>
+            <field name="arch" type="xml">
+                <form string="Tipos de Comprobante">
+                    <sheet>
+                         <div class="oe_title">
+                        <label class="oe_edit_only" for="code" string="Codigo SAT"/>
+                        <h1><field name="code" placeholder="I,E,P,N,etc.."/></h1>
+                        
+                    </div>
+
+                        
+                        <group >
+                            <field name="name" />
+                        </group>
+                        
+                    </sheet>
+                    
+                </form>
+            </field>
+        </record>
+
+
+        <record id="sat_tipo_comprobante_search" model="ir.ui.view">
+            <field name="name">sat.tipo.comprobante.serch</field>
+            <field name="model">sat.tipo.comprobante</field>
+            <field name="arch" type="xml">
+                <search string="Tipos de Comprobante">
+                    <field name="name" filter_domain="['|', ('code','ilike',self),('name','ilike',self)]" string="Tipos Comprobante ..."/>
+                    <field name="code"/>
+                    <field name="name" />
+                </search>
+            </field>
+        </record>
+
+    <record id="action_sat_tipo_comprobante" model="ir.actions.act_window">
+            <field name="name">Tipos Comprobante</field>
+            <field name="res_model">sat.tipo.comprobante</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="sat_tipo_comprobante_tree"/>
+        </record>
+
+        <!--<menuitem action="action_sat_tipo_comprobante"
+                  id="action_sat_tipo_comprobante_menu" sequence="1"
+                  parent="catalogos_sat_menu" />-->
+
+        <record id="sat_uso_cfdi_tree" model="ir.ui.view">
+            <field name="name">sat.uso.cfdi.tree</field>
+            <field name="model">sat.uso.cfdi</field>
+            <field name="arch" type="xml">
+                <tree string="Usos del CFDI SAT" >
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sat_uso_cfdi_form" model="ir.ui.view">
+            <field name="name">sat.uso.cfdi.form</field>
+            <field name="model">sat.uso.cfdi</field>
+            <field name="arch" type="xml">
+                <form string="Usos del CFDI SAT">
+                    <sheet>
+                         <div class="oe_title">
+                        <label class="oe_edit_only" for="code" string="Codigo SAT"/>
+                        <h1><field name="code" placeholder="10101501"/></h1>                        
+                    </div>
+                        <group >
+                            <field name="name" />
+                        </group>
+                        <group>
+                            <group>
+                                <field name="aplica_persona_fisica" />
+                                <field name="aplica_persona_moral" />
+                            </group>
+                            <group>
+                                
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="sat_uso_cfdi_search" model="ir.ui.view">
+            <field name="name">sat.uso.cfdi.serch</field>
+            <field name="model">sat.uso.cfdi</field>
+            <field name="arch" type="xml">
+                <search string="Usos del CFDI SAT">
+                    <field name="name" filter_domain="['|', ('code','ilike',self),('name','ilike',self)]" string="Usos CFDI ..."/>
+                    <field name="code"/>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_sat_uso_cfdi" model="ir.actions.act_window">
+            <field name="name">Usos CFDI</field>
+            <field name="res_model">sat.uso.cfdi</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="sat_uso_cfdi_tree"/>
+        </record>
+
+        <!--<menuitem action="action_sat_uso_cfdi"
+                  id="action_sat_uso_cfdi_menu" 
+                  sequence="10"
+                  parent="catalogos_sat_menu" />-->
+
+
+    <!-- PAISES  
+
+        <record id="res_country_sat_code_tree" model="ir.ui.view">
+            <field name="name">res.country.sat.code.tree</field>
+            <field name="model">res.country.sat.code</field>
+            <field name="arch" type="xml">
+                <tree string="Paises SAT">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="res_country_sat_code_form" model="ir.ui.view">
+            <field name="name">res.country.sat.code.form</field>
+            <field name="model">res.country.sat.code</field>
+            <field name="arch" type="xml">
+                <form string="Paises SAT">
+                    <sheet>
+                         <div class="oe_title">
+                            <label class="oe_edit_only" for="code" string="Codigo SAT"/>
+                            <h1><field name="code" placeholder="10101501" required="1"/></h1>                        
+                        </div>
+                        <group >
+                            <field name="name" required="1"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="formato_cp" />
+                                <field name="formato_registro_tributario" />
+                            </group>
+                            <group>
+                                <field name="validacion_registro_tributario" />
+                                <field name="agrupaciones" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="res_country_sat_code_search" model="ir.ui.view">
+            <field name="name">res.country.sat.code.search</field>
+            <field name="model">res.country.sat.code</field>
+            <field name="arch" type="xml">
+                <search string="Busqueda Codigos Paises SAT">
+                    <field name="code" filter_domain="['|',('code','ilike',self),('name','ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_sat_country_codes" model="ir.actions.act_window">
+            <field name="name">Codigos Paises</field>
+            <field name="res_model">res.country.sat.code</field>
+            
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="res_country_sat_code_tree"/>
+        </record>
+
+        -->
+
+
+
+        <record model="ir.ui.view" id="res_country_sat_code_form_inh">
+            <field name="name">res.country.sat.form</field>
+            <field name="model">res.country</field>
+            <field name="inherit_id" ref="base.view_country_form"/>
+            <field name="arch" type="xml">
+                <field name="code" position="after">
+                    <field name="sat_code" />
+                </field>
+                </field>
+            </record>
+
+        <record id="res_country_inherit_sat_code_search" model="ir.ui.view">
+            <field name="name">res.country.sat.code.serch</field>
+            <field name="model">res.country</field>
+            <field name="arch" type="xml">
+                <search string="Busqueda Paises">
+                    <field name="name" filter_domain="['|', '|',('code','ilike',self),('name','ilike',self),('sat_code','ilike',self)]" string="País"/>
+                    <!--<field name="code" />
+                    <field name="name" />
+                    <field name="sat_code" />-->
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="res_country_sat_code_tree_inh">
+            <field name="name">res.country.sat.tree.inh</field>
+            <field name="model">res.country</field>
+            <field name="inherit_id" ref="base.view_country_tree"/>
+            <field name="arch" type="xml">
+                <field name="code" position="after">
+                    <field name="sat_code"/>
+                </field>
+                </field>
+            </record>
+
+     <!-- ESTADOS
+    
+        <record id="res_country_state_sat_code_tree" model="ir.ui.view">
+            <field name="name">res.country.state.sat.code.tree</field>
+            <field name="model">res.country.state.sat.code</field>
+            <field name="arch" type="xml">
+                <tree string="Listado Codigos Estados SAT" editable="bottom">
+                    <field name="code"  required="1"/>
+                    <field name="name"  required="1"/>
+                    <field name="country_sat_code" required="1" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="res_country_state_sat_2_code_form" model="ir.ui.view">
+            <field name="name">res.country.state.sat.code.form</field>
+            <field name="model">res.country.state.sat.code</field>
+            <field name="arch" type="xml">
+                <form string="Formulario Codigos Estados SAT" >
+                    <sheet>
+                        <group>
+                        <field name="code"  required="1"/>
+                        <field name="name"  required="1"/>
+                        <field name="country_sat_code" required="1" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="res_country_state_sat_code_search" model="ir.ui.view">
+            <field name="name">res.country.state.sat.code.serch</field>
+            <field name="model">res.country.state.sat.code</field>
+            <field name="arch" type="xml">
+                <search string="Busqueda Codigos Estados SAT">
+                    <field name="name" filter_domain="['|', '|',('code','ilike',self),('name','ilike',self),('country_sat_code','ilike',self)]" string="Codigos Estados ..."/>
+                    <field name="code" />
+                    <field name="name" />
+                    <field name="country_sat_code" />
+                </search>
+            </field>
+        </record>
+
+        <record id="action_sat_country_states_codes" model="ir.actions.act_window">
+            <field name="name">Codigos Estados</field>
+            <field name="res_model">res.country.state.sat.code</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="res_country_state_sat_code_tree"/>
+        </record>
+
+        
+
+        <record model="ir.ui.view" id="res_country_state_sat_code_form">
+            <field name="name">res.country.state.sat.form</field>
+            <field name="model">res.country.state</field>
+            <field name="inherit_id" ref="base.view_country_state_form"/>
+            <field name="arch" type="xml">
+                <field name="code" position="after">
+                    <field name="sat_code" required="1" options="{'no_create_edit': True,'no_create': True}" />
+                </field>
+                </field>
+            </record>
+
+        <record model="ir.ui.view" id="res_country_state_sat_code_tree_inh">
+            <field name="name">res.country.state.sat.tree</field>
+            <field name="model">res.country.state</field>
+            <field name="inherit_id" ref="base.view_country_state_tree"/>
+            <field name="arch" type="xml">
+                <field name="code" position="after">
+                    <field name="sat_code"/>
+                </field>
+                </field>
+            </record>
+        -->
+
+     <!-- MUNICIPIOS --> 
+    
+        <record id="res_country_township_sat_code_tree" model="ir.ui.view">
+            <field name="name">res.country.township.sat.code.tree</field>
+            <field name="model">res.country.township.sat.code</field>
+            <field name="arch" type="xml">
+                <tree string="Listado Codigos Municipios SAT" editable="bottom">
+                    <field name="code"  required="1"/>
+                    <field name="name"  required="1"/>
+                    <field name="state_sat_code" options="{'no_open': True, 'no_create': True}"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--
+        <record id="res_country_township_sat_code_form" model="ir.ui.view">
+            <field name="name">res.country.township.sat.code.form</field>
+            <field name="model">res.country.township.sat.code</field>
+            <field name="arch" type="xml">
+                <form string="Codigos Municipios SAT">
+                    <sheet>
+                        <group>
+                            <field name="code"  required="1"/>
+                            <field name="name"  required="1"/>
+                            <field name="state_sat_code" required="1" />
+                        </group>
+                    </sheet>
+                   
+                </form>
+            </field>
+        </record>
+        -->
+
+        <record id="res_country_township_sat_code_search" model="ir.ui.view">
+            <field name="name">res.country.township.sat.code.serch</field>
+            <field name="model">res.country.township.sat.code</field>
+            <field name="arch" type="xml">
+                <search string="Busqueda Codigos Municipios SAT">
+                    <field name="name" filter_domain="['|', '|', ('code','ilike',self),('name','ilike',self),('state_sat_code','ilike',self)]" string="Municipios ..."/>
+                    <field name="code" />
+                    <field name="name" />
+                    <field name="state_sat_code" />
+                </search>
+            </field>
+        </record>
+
+        <record id="action_sat_country_township_codes" model="ir.actions.act_window">
+            <field name="name">Codigos Municipios</field>
+            <field name="res_model">res.country.township.sat.code</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="res_country_township_sat_code_tree"/>
+        </record>
+
+
+     <!-- LOCALIDADES --> 
+    
+        <record id="res_country_locality_sat_code_tree" model="ir.ui.view">
+            <field name="name">res.country.locality.sat.code.tree</field>
+            <field name="model">res.country.locality.sat.code</field>
+            <field name="arch" type="xml">
+                <tree string="Listado Codigos Localidades SAT" editable="bottom">
+                    <field name="code"  required="1"/>
+                    <field name="name"  required="1"/>
+                    <field name="state_sat_code" options="{'no_open': True, 'no_create': True}"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--
+        <record id="res_country_locality_sat_code_form" model="ir.ui.view">
+            <field name="name">res.country.locality.sat.code.form</field>
+            <field name="model">res.country.locality.sat.code</field>
+            <field name="arch" type="xml">
+                <form string="Codigos Localidades SAT">
+                    <sheet>
+                        <group>
+                            <field name="code"  required="1"/>
+                            <field name="name"  required="1"/>
+                            <field name="state_sat_code" required="1" />
+                        </group>
+                    </sheet>
+                   
+                </form>
+            </field>
+        </record>
+        -->
+        <record id="res_country_locality_sat_code_search" model="ir.ui.view">
+            <field name="name">res.country.locality.sat.code.serch</field>
+            <field name="model">res.country.locality.sat.code</field>
+            <field name="arch" type="xml">
+                <search string="Busqueda Codigos Localidades SAT">
+                    <field name="name" filter_domain="['|', '|', ('code','ilike',self),('name','ilike',self),('state_sat_code','ilike',self)]" string="Localidades ..."/>
+                    <field name="code" />
+                    <field name="name" />
+                    <field name="state_sat_code" />
+                </search>
+            </field>
+        </record>
+
+        <record id="action_sat_country_locality_codes" model="ir.actions.act_window">
+            <field name="name">Codigos Localidades</field>
+            <field name="res_model">res.country.locality.sat.code</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="res_country_locality_sat_code_tree"/>
+        </record>
+
+        <!--<menuitem action="action_sat_country_locality_codes"
+                  id="action_sat_country_locality_codes_menu" sequence="3"
+                  parent="catalogos_sat_menu" />-->
+
+    <!-- Codigos Postales --> 
+    
+        <record id="res_country_zip_sat_code_tree" model="ir.ui.view">
+            <field name="name">res.country.zip.sat.code.tree</field>
+            <field name="model">res.country.zip.sat.code</field>
+            <field name="arch" type="xml">
+                <tree string="Listado Codigos Postales SAT" editable="bottom">
+                    <field name="code"  required="1"/>
+                    <field name="state_sat_code"  required="1"/>
+                    <field name="township_sat_code"/>
+                    <field name="locality_sat_code"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="res_country_zip_sat_code_form" model="ir.ui.view">
+            <field name="name">res.country.zip.sat.code.form</field>
+            <field name="model">res.country.zip.sat.code</field>
+            <field name="arch" type="xml">
+                <form string="Codigos Postales SAT">
+                    <sheet>
+                        <group>
+                            <field name="code"  required="1"/>
+                            <field name="state_sat_code"  required="1"/>
+                            <field name="township_sat_code"/>
+                            <field name="locality_sat_code" />
+                        </group>
+                    </sheet>
+                    
+                </form>
+            </field>
+        </record>
+
+        <record id="res_country_zip_sat_code_search" model="ir.ui.view">
+            <field name="name">res.country.zip.sat.code.serch</field>
+            <field name="model">res.country.zip.sat.code</field>
+            <field name="arch" type="xml">
+                <search string="Busqueda Codigos Postales SAT">
+                    <field name="code" filter_domain="['|', '|', '|', ('code','ilike',self),('state_sat_code','ilike',self),('township_sat_code','ilike',self),('locality_sat_code','ilike',self)]" string="Codigos Postales ..."/>
+                    <field name="code" />
+                    <field name="state_sat_code" />
+                    <field name="township_sat_code" />
+                    <field name="locality_sat_code" />
+                </search>
+            </field>
+        </record>
+
+        <record id="action_sat_country_zip_codes" model="ir.actions.act_window">
+            <field name="name">Códigos Postales</field>
+            <field name="res_model">res.country.zip.sat.code</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="res_country_zip_sat_code_tree"/>
+        </record>
+
+
+        <!--<menuitem action="action_sat_country_zip_codes"
+                  id="action_sat_country_zip_codes_menu" sequence="4"
+                  parent="catalogos_sat_menu" />-->
+
+        <record id="res_colonia_zip_sat_code_tree" model="ir.ui.view">
+            <field name="name">res.colonia.zip.sat.code.tree</field>
+            <field name="model">res.colonia.zip.sat.code</field>
+            <field name="arch" type="xml">
+                <tree string="Listado Colonias SAT" editable="bottom">
+                    <field name="code"  required="1"/>
+                    <field name="name"  required="1"/>
+                    <field name="zip_sat_code"  required="1"/>
+                </tree>
+            </field>
+        </record>
+
+            
+        <!--
+        <record id="res_colonia_zip_sat_code_form" model="ir.ui.view">
+            <field name="name">res.colonia.zip.sat.code.form</field>
+            <field name="model">res.colonia.zip.sat.code</field>
+            <field name="arch" type="xml">
+                <form string="Listado Colonias SAT">
+                    <sheet>
+                        <group>
+                            <field name="code"  required="1"/>
+                            <field name="zip_sat_code"  required="1"/>
+                            <field name="name"  required="1"/>
+                        </group>
+                    </sheet>
+                    
+                </form>
+            </field>
+        </record>
+        -->
+
+        <record id="res_colonia_zip_sat_code_search" model="ir.ui.view">
+            <field name="name">res.colonia.zip.sat.code.serch</field>
+            <field name="model">res.colonia.zip.sat.code</field>
+            <field name="arch" type="xml">
+                <search string="Busqueda Colonias SAT">
+                    <field name="name" filter_domain="['|', '|', ('code','ilike',self),('name','ilike',self),('zip_sat_code','ilike',self)]" string="Colonias ..."/>
+                    <!--<field name="code" />
+                    <field name="zip_sat_code" />
+                    <field name="name" />-->
+                </search>
+            </field>
+        </record>
+
+        <record id="action_sat_colonia_zip_codes" model="ir.actions.act_window">
+            <field name="name">Colonias</field>
+            <field name="res_model">res.colonia.zip.sat.code</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="res_colonia_zip_sat_code_tree"/>
+        </record>
+
+        <!--<menuitem action="action_sat_colonia_zip_codes"
+                  id="action_sat_colonia_zip_codes_menu" sequence="5"
+                  parent="catalogos_sat_menu" />-->
+
+<!-- ADUANAS -->
+        <record id="sat_aduana_tree" model="ir.ui.view">
+            <field name="name">sat.aduana.code.tree</field>
+            <field name="model">sat.aduana</field>
+            <field name="arch" type="xml">
+                <tree string="Listado Aduanas SAT" editable="bottom">
+                    <field name="code"  required="1"/>
+                    <field name="name"  required="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sat_aduana_code_form" model="ir.ui.view">
+            <field name="name">sat.aduana.form</field>
+            <field name="model">sat.aduana</field>
+            <field name="arch" type="xml">
+                <form string="Listado Aduanas SAT">
+                    <sheet>
+                        <group>
+                            <field name="code"  required="1"/>
+                            <field name="name"  required="1"/>
+                        </group>
+                    </sheet>
+                    
+                </form>
+            </field>
+        </record>
+
+
+        <record id="sat_aduana_search" model="ir.ui.view">
+            <field name="name">sat.aduana.serch</field>
+            <field name="model">sat.aduana</field>
+            <field name="arch" type="xml">
+                <search string="Busqueda Aduanas SAT">
+                     <field name="name" filter_domain="['|', ('code','ilike',self),('name','ilike',self)]" string="Aduanas ..."/>
+                    <field name="code" />
+                    <field name="name" />
+                </search>
+            </field>
+        </record>
+
+        <record id="action_sat_aduana_codes" model="ir.actions.act_window">
+            <field name="name">Aduanas</field>
+            <field name="res_model">sat.aduana</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="sat_aduana_tree"/>
+        </record>
+
+        <!--<menuitem action="action_sat_aduana_codes"
+                  id="action_sat_aduana_codes_menu" sequence="6"
+                  parent="catalogos_sat_menu" />-->
+
+
+
+<!-- PRODUCTOS Y SERVICIOS -->
+
+        <record id="sat_producto_tree" model="ir.ui.view">
+            <field name="name">sat.producto.tree</field>
+            <field name="model">sat.producto</field>
+            <field name="arch" type="xml">
+                <tree string="Listado Productos /Servicios SAT">
+                    <field name="code" />
+                    <field name="name" />
+                    <field name="incluye_complemento" />
+                    <field name="complemento_que_debe_incluir" />
+                    <field name="vigencia_inicio" />
+                    <field name="vigencia_fin" />
+                    <field name="estimulo_franja_fronteriza" />
+                    <field name="palabras_similares" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="sat_producto_form" model="ir.ui.view">
+            <field name="name">sat.producto.form</field>
+            <field name="model">sat.producto</field>
+            <field name="arch" type="xml">
+                <form string="Productos / Servicios SAT">
+                    <sheet>
+                         <div class="oe_title">
+                        <label class="oe_edit_only" for="code" string="Codigo SAT"/>
+                        <h1><field name="code" placeholder="10101501"/></h1>
+                        <div name="options" >
+                            <div>
+                                <label class="oe_edit_only" for="incluir_iva_trasladado" string="Incluir IVA Trasladado"/>
+                                <field name="incluir_iva_trasladado"/>
+                            </div>
+                            <div>
+                                <label class="oe_edit_only" for="incluir_ieps_trasladado" string="Incluir IEPS Trasladado"/>
+                                <field name="incluir_ieps_trasladado"/>
+                            </div>
+                        </div>
+                    </div>
+
+                        
+                        <group >
+                            <field name="name" />
+                        </group>
+                        <group>
+                            <group>
+                                <field  name="vigencia_inicio" />
+                            </group>
+                            <group>
+                                <field  name="vigencia_fin" />
+                            </group>
+                        </group>
+                        <group string="Complementos Fiscales">
+                            <field name="incluye_complemento" />
+                            <field name="complemento_que_debe_incluir" attrs="{'required':[('incluye_complemento','=',True)]}"/>
+                        </group>
+                        <group>
+                            <field name="estimulo_franja_fronteriza" />
+                            <field name="palabras_similares" />
+                        </group>
+                    </sheet>
+                    
+                </form>
+            </field>
+        </record>
+
+
+        <record id="sat_producto_search" model="ir.ui.view">
+            <field name="name">sat.producto.serch</field>
+            <field name="model">sat.producto</field>
+            <field name="arch" type="xml">
+                <search string="Busqueda Productos y Servicios SAT">
+                     <field name="name" filter_domain="['|', ('code','ilike',self),('name','ilike',self)]" string="Productos ..."/>
+                    <field name="code" />
+                    <field name="name" />
+                    <field name="incluye_complemento" />
+                    <field name="complemento_que_debe_incluir" />
+                </search>
+            </field>
+        </record>
+
+        <record id="action_sat_producto" model="ir.actions.act_window">
+            <field name="name">Productos y Servicios</field>
+            <field name="res_model">sat.producto</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="sat_producto_tree"/>
+        </record>
+
+        <!--<menuitem action="action_sat_producto"
+                  id="action_sat_producto_menu" sequence="7"
+                  parent="catalogos_sat_menu" />-->
+
+
+<!-- UNIDADES DE MEDIDA -->
+
+        <record id="sat_udm_tree" model="ir.ui.view">
+            <field name="name">sat.udm.tree</field>
+            <field name="model">sat.udm</field>
+            <field name="arch" type="xml">
+                <tree string="Listado Unidades de Medida SAT" >
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="symbol"/>
+                    <field name="description" />
+                    <field name="notes" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="sat_udm_form" model="ir.ui.view">
+            <field name="name">sat.udm.form</field>
+            <field name="model">sat.udm</field>
+            <field name="arch" type="xml">
+                <form string="Unidades de Medida SAT">
+                    <sheet>
+                         <div class="oe_title">
+                        <label class="oe_edit_only" for="code" string="Codigo SAT"/>
+                        <h1><field name="code" placeholder="10101501"/></h1>
+                        
+                    </div>
+
+                        
+                        <group >
+                            <field name="name" />
+                            <field name="description" />
+                        </group>
+                        <group>
+                            <group>
+                                <field  name="vigencia_inicio" />
+                            </group>
+                            <group>
+                                <field  name="vigencia_fin" />
+                            </group>
+                        </group>
+                        <group >
+                            <field name="symbol" />
+                        </group>
+                        <group string="Notas">
+                            <field name="notes" />
+                        </group>
+                    </sheet>
+                    
+                </form>
+            </field>
+        </record>
+
+
+        <record id="sat_udm_search" model="ir.ui.view">
+            <field name="name">sat.udm.serch</field>
+            <field name="model">sat.udm</field>
+            <field name="arch" type="xml">
+                <search string="Busqueda Unidades de Medida SAT">
+                     <field name="name" filter_domain="['|', '|', ('code','ilike',self),('name','ilike',self),('description','ilike',self)]" string="Unidades ..."/>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="symbol"/>
+                    <field name="description" />
+                    <field name="notes" />
+                </search>
+            </field>
+        </record>
+
+        <record id="action_sat_udm" model="ir.actions.act_window">
+            <field name="name">Unidades de Medida</field>
+            <field name="res_model">sat.udm</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="sat_udm_tree"/>
+        </record>
+
+        <!--<menuitem action="action_sat_udm"
+                  id="action_sat_udm_menu" sequence="8"
+                  parent="catalogos_sat_menu" />-->
+
+
+
+
+<!-- IMPUESTOS -->
+
+        <record id="sat_impuesto_tree" model="ir.ui.view">
+            <field name="name">sat.impuesto.tree</field>
+            <field name="model">sat.impuesto</field>
+            <field name="arch" type="xml">
+                <tree string="Impuestos SAT" >
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sat_impuesto_form" model="ir.ui.view">
+            <field name="name">sat.impuesto.form</field>
+            <field name="model">sat.impuesto</field>
+            <field name="arch" type="xml">
+                <form string="Impuestos SAT">
+                    <sheet>
+                         <div class="oe_title">
+                        <label class="oe_edit_only" for="code" string="Codigo SAT"/>
+                        <h1><field name="code" placeholder="10101501"/></h1>
+                        
+                    </div>
+
+                        
+                        <group >
+                            <field name="name" />
+                        </group>
+                        <group>
+                            <group>
+                                <field name="retencion" />
+                                <field name="traslado" />
+                            </group>
+                            <group>
+                                <field name="tipo" />
+                            </group>
+                        </group>
+                        
+                    </sheet>
+                    
+                </form>
+            </field>
+        </record>
+
+
+        <record id="sat_impuesto_search" model="ir.ui.view">
+            <field name="name">sat.impuesto.serch</field>
+            <field name="model">sat.impuesto</field>
+            <field name="arch" type="xml">
+                <search string="Impuestos SAT">
+                     <field name="name" filter_domain="['|', ('code','ilike',self),('name','ilike',self)]" string="Impuestos ..."/>
+                    <field name="code"/>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_sat_impuesto" model="ir.actions.act_window">
+            <field name="name">Impuestos</field>
+            <field name="res_model">sat.impuesto</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="sat_impuesto_tree"/>
+        </record>
+
+        <!--<menuitem action="action_sat_impuesto"
+                  id="action_sat_impuesto_menu" sequence="10"
+                  parent="catalogos_sat_menu" />-->
+
+
+<!-- METODOS DE PAGO -->
+
+        <record id="sat_metodo_pago_tree" model="ir.ui.view">
+            <field name="name">sat.metodo.pago.tree</field>
+            <field name="model">sat.metodo.pago</field>
+            <field name="arch" type="xml">
+                <tree string="Metodos Pago SAT" >
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sat_metodo_pago_form" model="ir.ui.view">
+            <field name="name">sat.metodo.pago.form</field>
+            <field name="model">sat.metodo.pago</field>
+            <field name="arch" type="xml">
+                <form string="Metodos Pago SAT">
+                    <sheet>
+                         <div class="oe_title">
+                        <label class="oe_edit_only" for="code" string="Codigo SAT"/>
+                        <h1><field name="code" placeholder="10101501"/></h1>
+                        
+                    </div>
+
+                        
+                        <group >
+                            <field name="name" />
+                        </group>
+                        
+                        
+                    </sheet>
+                    
+                </form>
+            </field>
+        </record>
+
+
+        <record id="sat_metodo_pago_search" model="ir.ui.view">
+            <field name="name">sat.metodo.pago.serch</field>
+            <field name="model">sat.metodo.pago</field>
+            <field name="arch" type="xml">
+                <search string="Metodos Pago SAT">
+                     <field name="name" filter_domain="['|', ('code','ilike',self),('name','ilike',self)]" string="Metodos de Pago ..."/>
+                    <field name="code"/>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_sat_metodo_pago" model="ir.actions.act_window">
+            <field name="name">Métodos de Pago</field>
+            <field name="res_model">sat.metodo.pago</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="sat_metodo_pago_tree"/>
+        </record>
+
+        <!--<menuitem action="action_sat_metodo_pago"
+                  id="action_sat_metodo_pago_menu" sequence="9"
+                  parent="catalogos_sat_menu" />-->
+
+
+
+<!-- PATENTES 
+
+        <record id="sat_patente_tree" model="ir.ui.view">
+            <field name="name">sat.patente.tree</field>
+            <field name="model">sat.patente</field>
+            <field name="arch" type="xml">
+                <tree string="Patentes SAT" >
+                    <field name="name"/>
+                    <field name="aduana_id"/>
+                    <field name="start_date" />
+                    <field name="end_date" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="sat_patente_form" model="ir.ui.view">
+            <field name="name">sat.patente.form</field>
+            <field name="model">sat.patente</field>
+            <field name="arch" type="xml">
+                <form string="Patentes SAT">
+                    <sheet>
+                         <div class="oe_title">
+                        <label class="oe_edit_only" for="name" string="Nombre Patente"/>
+                        <h1><field name="name" placeholder="10101501" required="1"/></h1>
+                        
+                    </div>
+
+                        
+                        <group >
+                            <field name="aduana_id" required="1"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="ejercicio" required="1"/>
+                            </group>
+                            <group>
+                                <field name="cantidad" required="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="start_date" required="1"/>
+                            </group>
+                            <group>
+                                <field name="end_date" />
+                            </group>
+                        </group>
+                    </sheet>
+                    
+                </form>
+            </field>
+        </record>
+
+
+        <record id="sat_patente_search" model="ir.ui.view">
+            <field name="name">sat.patente.serch</field>
+            <field name="model">sat.patente</field>
+            <field name="arch" type="xml">
+                <search string="Patentes SAT">
+                     <field name="name" filter_domain="['|',('aduana_id','ilike',self),('name','ilike',self)]" string="Patentes ..."/>
+                    <field name="name"/>
+                    <field name="aduana_id"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_sat_patente" model="ir.actions.act_window">
+            <field name="name">Patentes</field>
+            <field name="res_model">sat.patente</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="sat_patente_tree"/>
+        </record>
+
+        -->
+
+
+<!-- PATENTES ADUANALES 
+
+        <record id="sat_patente_aduanal_tree" model="ir.ui.view">
+            <field name="name">sat.patente.aduanal.tree</field>
+            <field name="model">sat.patente.aduanal</field>
+            <field name="arch" type="xml">
+                <tree string="Patentes Aduanales SAT">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="vigencia_inicio"/>
+                    <field name="vigencia_fin" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="sat_patente_aduanal_form" model="ir.ui.view">
+            <field name="name">sat.patente.aduanal.form</field>
+            <field name="model">sat.patente.aduanal</field>
+            <field name="arch" type="xml">
+                <form string="Patentes Aduanales SAT">
+                    <sheet>
+                        
+                        <group >
+                            <field name="code" />
+                        </group>
+                        <group>
+                            <group>
+                                <field name="vigencia_inicio" required="1"/>
+                            </group>
+                            <group>
+                                <field name="vigencia_fin" />
+                            </group>
+                        </group>
+                        <group>
+                            <field name="name" />
+                        </group>
+                    </sheet>
+                    
+                </form>
+            </field>
+        </record>
+
+
+        <record id="sat_patente_aduanal_search" model="ir.ui.view">
+            <field name="name">sat.patente.aduanal.search</field>
+            <field name="model">sat.patente.aduanal</field>
+            <field name="arch" type="xml">
+                <search string="Patentes Aduanales SAT">
+                     <field name="name" filter_domain="['|', ('code','ilike',self),('name','ilike',self)]" string="Patentes Aduanales ..."/>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="vigencia_inicio"/>
+                    <field name="vigencia_fin"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_sat_patente_aduanal" model="ir.actions.act_window">
+            <field name="name">Patentes Aduanales</field>
+            <field name="res_model">sat.patente.aduanal</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="sat_patente_aduanal_tree"/>
+        </record>
+
+        -->
+
+
+<!-- REGIMEN FISCAL -->
+
+        <record id="sat_regimen_fiscal_tree" model="ir.ui.view">
+            <field name="name">sat.regimen.fiscal.tree</field>
+            <field name="model">sat.regimen.fiscal</field>
+            <field name="arch" type="xml">
+                <tree string="Regimen Fiscal SAT" >
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sat_regimen_fiscal_form" model="ir.ui.view">
+            <field name="name">sat.regimen.fiscal.form</field>
+            <field name="model">sat.regimen.fiscal</field>
+            <field name="arch" type="xml">
+                <form string="Regimen Fiscal SAT">
+                    <sheet>
+                         <div class="oe_title">
+                        <label class="oe_edit_only" for="code" string="Codigo SAT"/>
+                        <h1><field name="code" placeholder="10101501"/></h1>
+                        
+                    </div>
+
+                        
+                        <group >
+                            <field name="name" />
+                        </group>
+                        <group>
+                            <group>
+                                <field name="aplica_persona_fisica" />
+                                <field name="aplica_persona_moral" />
+                            </group>
+                            <group>
+                                <!-- <field name="vigencia_inicio" />
+                                <field name="vigencia_fin" /> -->
+                            </group>
+                        </group>
+                        
+                    </sheet>
+                    
+                </form>
+            </field>
+        </record>
+
+
+        <record id="sat_regimen_fiscal_search" model="ir.ui.view">
+            <field name="name">sat.regimen.fiscal.serch</field>
+            <field name="model">sat.regimen.fiscal</field>
+            <field name="arch" type="xml">
+                <search string="Regimen Fiscal SAT">
+                     <field name="name" filter_domain="['|', ('code','ilike',self),('name','ilike',self)]" string="Regimen Fiscales ..."/>
+                    <field name="code"/>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_sat_regimen_fiscal" model="ir.actions.act_window">
+            <field name="name">Régimen Fiscal</field>
+            <field name="res_model">sat.regimen.fiscal</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="sat_regimen_fiscal_tree"/>
+        </record>
+
+        <!--<menuitem action="action_sat_regimen_fiscal"
+                  id="action_sat_regimen_fiscal_menu" sequence="14"
+                  parent="catalogos_sat_menu" />-->
+
+        <!-- Fracciones Arancelarias -->
+    
+        <record id="sat_arancel_tree" model="ir.ui.view">
+            <field name="name">sat.arancel.tree</field>
+            <field name="model">sat.arancel</field>
+            <field name="arch" type="xml">
+                <tree string="Fracciones Arancelarias" >
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="vigencia_inicio"/>
+                    <field name="vigencia_fin"/>
+                    <field name="criterio"/>
+                    <field name="unidad_de_medida"/>
+                    <field name="impuesto_importacion"/>
+                    <field name="impuesto_exportacion"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sat_arancel_form" model="ir.ui.view">
+            <field name="name">sat.arancel.form</field>
+            <field name="model">sat.arancel</field>
+            <field name="arch" type="xml">
+                <form string="Fracciones Arancelarias">
+                    <sheet>
+                         <div class="oe_title">
+                            <label class="oe_edit_only" for="code" string="Codigo SAT"/>
+                            <h1><field name="code" placeholder="10101501"/></h1>
+                        </div>
+                        <group >
+                            <field name="name" />
+                        </group>
+                        <group>
+                            <group>
+                                <field name="unidad_de_medida" />
+                                <field name="vigencia_inicio" />
+                                <field name="vigencia_fin" />
+                            </group>
+                            <group>
+                                <field name="criterio" />
+                                <field name="impuesto_importacion" />
+                                <field name="impuesto_exportacion" />
+                            </group>                            
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="sat_arancel_search" model="ir.ui.view">
+            <field name="name">sat.arancel.serch</field>
+            <field name="model">sat.arancel</field>
+            <field name="arch" type="xml">
+                <search string="Fracciones Arancelarias">
+                    <field name="name" filter_domain="['|', ('code','ilike',self),('name','ilike',self)]" string="Arancel..."/>
+                    <field name="code"/>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_sat_arancel" model="ir.actions.act_window">
+                <field name="name">Fracciones Arancelarias Com.Ext.</field>
+                <field name="res_model">sat.arancel</field>
+                <field name="view_mode">tree,form</field>
+                <field name="view_id" ref="sat_arancel_tree"/>
+            </record>
+
+        <!--<menuitem action="action_sat_arancel"
+              id="action_sat_arancel_menu" sequence="15"
+              parent="catalogos_sat_menu" />-->
+        
+        <!-- CATALOGOS USADOS EN CONTABILIDAD ELECTRONICA -->
+        
+        <!-- BANCOS -->
+        <record id="res_bank_search" model="ir.ui.view">
+            <field name="name">res.bank.search</field>
+            <field name="model">eaccount.bank</field>
+            <field name="arch" type="xml">
+                <search string="Bancos">
+                    <field name="bic" string="Clave"/>
+                    <field name="code" string="Nombre"/>
+                    <field name="name" string="Razón social"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="eaccount_bank_tree" model="ir.ui.view">
+            <field name="name">res.banktree.inherited</field>
+            <field name="model">eaccount.bank</field>
+            <field name="arch" type="xml">
+	            <tree string="Bancos">
+	                <field name="bic" string="Clave"/>
+	                <field name="code" string="Nombre"/>
+	                <field name="name" string="Razón social"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="eaccount_bank_form" model="ir.ui.view">
+            <field name="name">account.bank.form</field>
+            <field name="model">eaccount.bank</field>
+            <field name="arch" type="xml">
+                <form string="Bancos">
+                    <group colspan="4" col="6">
+                        <field name="bic" string="Clave"/>
+	                    <field name="code" colspan="4" string="Nombre"/>
+	                    <field name="name" colspan="6" string="Razón social"/>
+                	</group>
+                </form>
+            </field>
+        </record>
+        
+        <record id="action_eaccount_banks" model="ir.actions.act_window">
+            <field name="name">Bancos oficiales SAT</field>
+            <field name="res_model">eaccount.bank</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        
+        <!-- MONEDAS -->
+        
+        <record id="sat_moneda_tree" model="ir.ui.view">
+            <field name="name">eaccount.currency.tree</field>
+            <field name="model">eaccount.currency</field>
+            <field name="arch" type="xml">
+                <tree string="Monedas SAT" >
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sat_moneda_form" model="ir.ui.view">
+            <field name="name">eaccount.currency.form</field>
+            <field name="model">eaccount.currency</field>
+            <field name="arch" type="xml">
+                <form string="Monedas SAT">
+                    <sheet>
+                        <div class="oe_title">
+                            <label class="oe_edit_only" for="code" string="Codigo SAT"/>
+                            <h1><field name="code" placeholder="10101501"/></h1>
+                        </div>
+                        <group >
+                            <field name="name" />
+                        </group>
+                        <group>
+                            <group>
+                                <field name="decimales" />
+                            </group>
+                            <group>
+                                <field name="porcentaje_variacion" />
+                            </group>
+                        </group>                        
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="sat_moneda_search" model="ir.ui.view">
+            <field name="name">eaccount.currency.serch</field>
+            <field name="model">eaccount.currency</field>
+            <field name="arch" type="xml">
+                <search string="Monedas SAT">
+                    <field name="code"/>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_sat_moneda" model="ir.actions.act_window">
+            <field name="name">Catalogo Monedas</field>
+            <field name="res_model">eaccount.currency</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="sat_moneda_tree"/>
+        </record>
+
+    <!--<menuitem action="action_sat_moneda"
+                  id="action_sat_moneda_menu" sequence="11"
+                  parent="l10n_mx_sat_models.catalogos_sat_menu" />-->
+
+        <record id="eaccount_currency_action" model="ir.actions.act_window">
+            <field name="name">Monedas (SAT)</field>
+            <field name="res_model">eaccount.currency</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <!-- changes to currencie's form -->
+        
+        <record id="eaccount_currency_form_inherited" model="ir.ui.view">
+            <field name="name">eaccount.currency.form.inherited</field>
+            <field name="model">res.currency</field>
+            <field name="inherit_id" ref="base.view_currency_form"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="sat_currency_id" />
+                </field>
+            </field>
+        </record>
+        
+        
+        <!-- METODOS DE PAGO PARA CONTA ELECTRONICA -->
+        <record id="eaccount_paymeths_seach" model="ir.ui.view">
+            <field name="name">eaccount.paymeths.seach</field>
+            <field name="model">eaccount.payment.methods</field>
+            <field name="arch" type="xml">
+                <search string="Métodos de pago (Contab. Electrónica)">
+                    <field name="code"/>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="eaccount_payments_tree" model="ir.ui.view">
+            <field name="name">eaccount.paymeths.tree</field>
+            <field name="model">eaccount.payment.methods</field>
+            <field name="arch" type="xml">
+                <tree string="Métodos de pago (Contab. Electrónica)">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="eaccount_payments_form" model="ir.ui.view">
+            <field name="name">eaccount.paymeths.form</field>
+            <field name="model">eaccount.payment.methods</field>
+            <field name="arch" type="xml">
+                <form string="Métodos de pago (Contab. Electrónica)">
+					<group col="4" colspan="4">
+						<field name="code"/>
+						<field name="name"/>
+					</group>
+                </form>
+            </field>
+        </record>
+        
+        <record id="eaccount_payments_action" model="ir.actions.act_window">
+            <field name="name">Métodos de Pago (Contab. Electrónica)</field>
+            <field name="res_model">eaccount.payment.methods</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <!-- CODIGOS AGRUPADORES DE CUENTAS CONTABLES DEL SAT -->
+        
+        <record id="sat_accountcode_search" model="ir.ui.view">
+            <field name="name">sat.accountcode.search</field>
+            <field name="model">sat.account.code</field>
+            <field name="arch" type="xml">
+                <search string="Cuentas del SAT">
+                    <field name="key"/>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="sat_accountcode_tree" model="ir.ui.view">
+            <field name="name">sat.accountcode.tree</field>
+            <field name="model">sat.account.code</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Cuentas del SAT">
+                    <field name="key"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="sat_accountcode_form" model="ir.ui.view">
+            <field name="name">sat.accountcode.form</field>
+            <field name="model">sat.account.code</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Cuentas del SAT">
+                    <group colspan="4" col="6">
+                        <field name="key"/>
+                        <field name="name" colspan="4"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <record id="sat_accountcode_action" model="ir.actions.act_window">
+            <field name="name">Códigos agrupadores SAT</field>
+            <field name="res_model">sat.account.code</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+    
+    </data>
+</odoo>

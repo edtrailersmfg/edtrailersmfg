@@ -63,7 +63,7 @@
                 {% if TotalTrasladosBaseIVA8 %} TotalTrasladosBaseIVA8="{{TotalTrasladosBaseIVA8}}" {% endif %} 
                 {% if TotalTrasladosImpuestoIVA8 %} TotalTrasladosImpuestoIVA8="{{TotalTrasladosImpuestoIVA8}}" {% endif %} 
                 {% if TotalTrasladosBaseIVA0 %} TotalTrasladosBaseIVA0="{{TotalTrasladosBaseIVA0}}" {% endif %} 
-                {% if TotalTrasladosImpuestoIVA0 %} TotalTrasladosImpuestoIVA0="{{TotalTrasladosImpuestoIVA0}}" {% endif %} 
+                {% if TotalTrasladosBaseIVA0 %} TotalTrasladosImpuestoIVA0="{{TotalTrasladosImpuestoIVA0}}" {% endif %} 
                 {% if TotalTrasladosBaseIVAExento %} TotalTrasladosBaseIVAExento="{{TotalTrasladosBaseIVAExento}}" {% endif %} 
                 MontoTotalPagos="{{MontoTotalPagos}}"/>
             <pago20:Pago FechaPago="{{fecha_recepcion}}" 
@@ -141,8 +141,10 @@
                                             <pago20:TrasladoDR  BaseDR="{{trasladodr['BaseDR']}}" 
                                                                 ImpuestoDR="{{trasladodr['ImpuestoDR']}}" 
                                                                 TipoFactorDR="{{trasladodr['TipoFactorDR']}}" 
-                                                                TasaOCuotaDR="{{trasladodr['TasaOcuotaDR']}}" 
-                                                                ImporteDR="{{trasladodr['ImporteDR']}}"/>
+                                                                {% if trasladodr['TipoFactorDR'] != 'Exento' %} 
+                                                                    TasaOCuotaDR="{{trasladodr['TasaOcuotaDR']}}" 
+                                                                    ImporteDR="{{trasladodr['ImporteDR']}}"
+                                                                {% endif %} />
                                         {% endfor %}
                                         </pago20:TrasladosDR>
                                     {% endif %}
@@ -169,8 +171,10 @@
                                     <pago20:TrasladoP BaseP="{{trasladodrtotal['BaseDR']}}" 
                                                       ImpuestoP="{{trasladodrtotal['ImpuestoDR']}}" 
                                                       TipoFactorP="{{trasladodrtotal['TipoFactorDR']}}" 
+                                                      {% if trasladodrtotal['TipoFactorDR'] != 'Exento' %} 
                                                       TasaOCuotaP="{{trasladodrtotal['TasaOcuotaDR']}}" 
-                                                      ImporteP="{{trasladodrtotal['ImporteDR']}}"/>
+                                                      ImporteP="{{trasladodrtotal['ImporteDR']}}" 
+                                                      {% endif %} />
                                 {% endfor %}
                             </pago20:TrasladosP>
                         {% endif %}

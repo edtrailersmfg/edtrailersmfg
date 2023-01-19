@@ -278,11 +278,9 @@
     <record id="base.bd" model="res.country">
         <field name="sat_code">BGD</field>
     </record>
-    <!--
     <record id="base.be" model="res.country">
         <field name="sat_code">BEL</field>
     </record>
-    -->
     <record id="base.bf" model="res.country">
         <field name="sat_code">BFA</field>
     </record>
@@ -391,9 +389,9 @@
     <record id="base.cz" model="res.country">
         <field name="sat_code">CZE</field>
     </record>
-    <!-- <record id="base.de" model="res.country">
+    <record id="base.de" model="res.country">
         <field name="sat_code">DEU</field>
-    </record> -->
+    </record>
     <record id="base.dj" model="res.country">
         <field name="sat_code">DJI</field>
     </record>
@@ -502,9 +500,9 @@
     <record id="base.gy" model="res.country">
         <field name="sat_code">GUF</field>
     </record>
-    <!-- <record id="base.hk" model="res.country">
+    <record id="base.hk" model="res.country">
         <field name="sat_code">HKG</field>
-    </record> -->
+    </record>
     <record id="base.hm" model="res.country">
         <field name="sat_code">HMD</field>
     </record>

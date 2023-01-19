@@ -4,7 +4,7 @@
     "version"   : "1.0",
     "Summary"   : "Facturación Electrónica para México",
     "sequence"  : 50,
-    "author"    : "Fixdoo",
+    "author"    : "Argil Consulting",
     "category"  : "Localization",
     "description" : """
 Facturación Electrónica México
@@ -13,7 +13,7 @@ Facturación Electrónica México
 
 Este módulo extiende Odoo para poder manejar Facturación Electrónica de acuerdo a los requerimientos del SAT
 
-* Factura Electrónica (Facturas y Notas de Credito)
+* Factura Electrónica (Facturas y Notas de Crédito)
 
 * Manejo de Anticipos en Factura Electrónica (Identificando cuáles ya fueron aplicados)
 
@@ -28,7 +28,7 @@ Este módulo extiende Odoo para poder manejar Facturación Electrónica de acuer
     
 
     """,
-    "website" : "http://www.fixdoo.mx",
+    "website" : "http://www.argil.mx",
     "depends" : ["account",
                  #"account_cancel", - Modulo descontinuado por Odoo
                  "base_vat",
