@@ -4,7 +4,7 @@
 
 {
     'name': 'Sales Customizations',
-    'author': 'Enrique Jáquez',
+    'author': 'Enrique J.',
     'website': '',
     'summary': 'Sales Customizations',
     'description': """""",
