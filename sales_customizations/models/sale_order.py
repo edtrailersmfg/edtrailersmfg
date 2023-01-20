@@ -13,7 +13,7 @@ class SaleOrder(models.Model):
             for order in self:
                 order.margin = sum(order.order_line.mapped('margin'))
                 mapped_purchase_cost_data = sum(
-                    order.order_line.mapped('purchase_price')
+                    order.order_line.mapped('total_cost')
                 )
                 order.margin_percent = mapped_purchase_cost_data and order.margin / mapped_purchase_cost_data
         else:
@@ -24,10 +24,10 @@ class SaleOrder(models.Model):
             # may not be stored in database (new records or unsaved modifications).
             grouped_order_lines_data = self.env['sale.order.line'].read_group([
                 ('order_id', 'in', self.ids),
-            ], ['margin', 'order_id', 'purchase_price'], ['order_id'])
+            ], ['margin', 'order_id', 'total_cost'], ['order_id'])
             mapped_margin_data = {m['order_id'][0]: m['margin'] for m in grouped_order_lines_data}
             mapped_purchase_cost_data = {
-                m['order_id'][0]: m['purchase_price'] for m in grouped_order_lines_data
+                m['order_id'][0]: m['total_cost'] for m in grouped_order_lines_data
             }
             for order in self:
                 order.margin = mapped_margin_data.get(order.id, 0.0)
