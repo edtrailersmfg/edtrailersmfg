@@ -19,13 +19,6 @@ _logger = logging.getLogger(__name__)
 
 msg2 = "Contacta a tu administrador de Sistema o contactanos info@argil.mx"
 
-class PaymentMEthod(models.Model):
-    _name = 'l10n_mx_edi.payment.method'
-    _description = 'Metodo Pago l10n_mx_edi'
-    
-    code        = fields.Char(string='Clave SAT', required=True, index=True)
-    name        = fields.Char(string='Forma de Pago', size=128, required=True, index=True)
-    description = fields.Text(string='Descripción', required=True)
 
 class pay_method(models.Model):
     _name = 'pay.method'
