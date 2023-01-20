@@ -8,7 +8,7 @@ Tipo de Cambio para Calcular Costo y Precio del Producto
     """,
     'version' : '15.0.3',
     'category': 'Inventory/Inventory',
-    'author': 'Enrique Jáquez Olvera',
+    'author': 'Enrique Jáquez O.',
     'depends' : [
         'account',
         'base',
