@@ -2,10 +2,11 @@
 
 {
     'name': 'Product Cost Calculation',
-    'version': '1.0',
+    'version': '15.0.1',
     'category': 'Product',
     'sequence': 16,
     'summary': 'Cost Calculation of Product',
+    'author': 'Enrique Jaquez',
     'description': """
 Cost Calculation of Product
     """,
