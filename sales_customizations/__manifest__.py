@@ -4,13 +4,13 @@
 
 {
     'name': 'Sales Customizations',
-    'author': 'Enrique',
+    'author': 'Enrique Jaquez',
     'website': '',
     'summary': 'Sales Customizations',
     'description': """""",
     'license': 'OPL-1',
     'category': 'Sales',
-    'version': '15.0.1.0.0',
+    'version': '15.0.1',
     'depends': [
         'sale_margin'
     ],

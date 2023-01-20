@@ -7,6 +7,7 @@
     'sequence': 16,
     'summary': 'Cost Calculation of Product',
     'author': 'Enrique Jaquez',
+    'license': 'OPL-1',
     'description': """
 Cost Calculation of Product
     """,

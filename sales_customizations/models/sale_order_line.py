@@ -13,4 +13,4 @@ class SaleOrderLine(models.Model):
             line.margin = line.price_subtotal - (
                     line.purchase_price * line.product_uom_qty
             )
-            line.margin_percent = line.purchase_price and line.margin / line.purchase_price
+            line.margin_percent = line.purchase_price and line.margin / ( line.purchase_price * line.product_uom_qty )
