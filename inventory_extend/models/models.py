@@ -19,6 +19,7 @@ class Product(models.Model):
     # COMPUTE METHODS
     # -------------------------------------------------------------------------
 
+    @api.multi
     def _compute_tipo_cambio(self):
         for product in self:
             product.ensure_one()
