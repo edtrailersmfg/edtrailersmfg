@@ -19,10 +19,9 @@ class Product(models.Model):
     # COMPUTE METHODS
     # -------------------------------------------------------------------------
 
-    @api.multi
     def _compute_tipo_cambio(self):
         for product in self:
-            product.ensure_one()
+            self.ensure_one()
             product['tipo_cambio'] = self.env['res.currency.rate'].search([ ('currency_id.name','=','USD'), ('name','=',self.fecha_actual) ]).inverse_company_rate
 
     def _compute_costo_usd(self):
