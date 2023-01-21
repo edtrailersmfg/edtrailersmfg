@@ -21,7 +21,7 @@ class Product(models.Model):
 
     def _compute_tipo_cambio(self):
         for product in self:
-            if product.tipo_cambio:
+            if product.tipo_cambio > 0:
                 product['tipo_cambio'] = self.env['res.currency.rate'].search([ ('currency_id.name','=','USD'), ('name','=',self.fecha_actual) ]).inverse_company_rate or False
 
     def _compute_costo_usd(self):
