@@ -7,11 +7,11 @@ from datetime import datetime
 class Product(models.Model):
     _inherit = "product.template"
     
-    tipo_cambio = fields.Float(string="Tipo de Cambio", compute='_compute_tipo_cambio')
+    tipo_cambio = fields.Float(string="Tipo de Cambio")
     fecha_actual = fields.Date(string="Fecha para TC", default=datetime.today())
-    costo_usd = fields.Float(string="Costo USD", compute='_compute_costo_usd')
-    utilidad_usd = fields.Float(string="Utilidad en USD", compute='_compute_utilidad_usd')
-    utilidad = fields.Float(string="% de Utilidad", compute='_compute_utilidad')
+    costo_usd = fields.Float(string="Costo USD")
+    utilidad_usd = fields.Float(string="Utilidad en USD")
+    utilidad = fields.Float(string="% de Utilidad")
     precio_usd = fields.Float(string="Precio de Venta USD", default=0)
     #precio_usd = fields.Float(string="Precio de Venta USD", compute='_compute_precio_usd')    
 
