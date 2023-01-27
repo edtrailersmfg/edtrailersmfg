@@ -164,7 +164,6 @@ class AccountMove(models.Model):
         if address_invoice_parent.curp:
             complemento['cce11:ComercioExterior']['cce11:Emisor'].update({'Curp':address_invoice_parent.curp})
         
-        if
         complemento['cce11:ComercioExterior']['cce11:Emisor'].update({
                                                                         'cce11:Domicilio': {
                                                                                             'Calle'     : address_invoice_parent.street,
