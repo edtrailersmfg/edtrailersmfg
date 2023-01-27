@@ -202,8 +202,13 @@ class AccountMove(models.Model):
             }})        
         
         # ------- ------- RECEPTOR ------- -------
-        complemento['cce11:ComercioExterior'].update({'cce11:Receptor': {}})
-        
+        complemento['cce11:ComercioExterior'].update({'cce11:Receptor': {
+                                                                            'NumRegIdTrib'     : partner.num_reg_trib,
+                                                                            'ResidenciaFiscal' : partner.country_id.sat_code,
+                                                                        }})
+
+
+        cce11:ComercioExterior
         if partner.country_id.code != 'MX':
             if not partner.num_reg_trib:
                 raise UserError(_('Error !!! El cliente es extranjero pero no tiene definido el Registro Tributario, no es posible generar el CFDI sin esa información'))
