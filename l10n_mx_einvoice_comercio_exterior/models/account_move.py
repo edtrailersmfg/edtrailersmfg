@@ -95,6 +95,9 @@ class AccountMove(models.Model):
         if 'transport_document_cfdi' in self._fields and self.transport_document_cfdi:
             raise UserError(_('Advertencia !!! Por el momento no se soporta el Complemento de Comercio Exterior con CFDI de Traslado'))
         
+                partner = self.partner_id.commercial_partner_id
+
+        partner = self.partner_id.commercial_partner_id
         
         comprobante = xcomprobante.copy()
         
@@ -164,7 +167,7 @@ class AccountMove(models.Model):
             complemento['cce11:ComercioExterior']['cce11:Emisor'].update({'Curp':address_invoice_parent.curp})
         
         complemento['cce11:ComercioExterior']['cce11:Emisor'].update({
-                                                                        'NumRegIdTrib'     : partner.num_reg_trib,
+                                                                        'NumRegIdTrib'     : address_invoice_parent.num_reg_trib if address_invoice_parent.num_reg_trib else partner.num_reg_trib,
                                                                         'cce11:Domicilio': {
                                                                                             'Calle'     : address_invoice_parent.street,
                                                                                             'CodigoPostal' : address_invoice_parent.zip_sat_id.code,
@@ -203,7 +206,6 @@ class AccountMove(models.Model):
         
         # ------- ------- RECEPTOR ------- -------
         complemento['cce11:ComercioExterior'].update({'cce11:Receptor': {}})
-        partner = self.partner_id.commercial_partner_id
         
         if partner.country_id.code != 'MX':
             if not partner.num_reg_trib:
