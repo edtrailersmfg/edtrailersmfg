@@ -204,7 +204,7 @@ class AccountMove(models.Model):
         # ------- ------- RECEPTOR ------- -------
         complemento['cce11:ComercioExterior'].update({'cce11:Receptor': {
                                                                             'NumRegIdTrib'     : partner.num_reg_trib,
-                                                                            'ResidenciaFiscal' : partner.country_id.sat_code,
+                                                                            # 'ResidenciaFiscal' : partner.country_id.sat_code,
                                                                         }})
 
 
