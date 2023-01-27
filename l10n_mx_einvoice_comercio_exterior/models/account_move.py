@@ -95,8 +95,6 @@ class AccountMove(models.Model):
         if 'transport_document_cfdi' in self._fields and self.transport_document_cfdi:
             raise UserError(_('Advertencia !!! Por el momento no se soporta el Complemento de Comercio Exterior con CFDI de Traslado'))
         
-                partner = self.partner_id.commercial_partner_id
-
         partner = self.partner_id.commercial_partner_id
         
         comprobante = xcomprobante.copy()
