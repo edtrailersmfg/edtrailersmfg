@@ -4,7 +4,7 @@
 
 
      <record model="ir.ui.view" id="view_move_form_l10n_mx_einvoice_cce">
-            <field name="name">account.move.cfdi.33.cce</field>
+            <field name="name">account.move.cfdi.40.cce</field>
             <field name="model">account.move</field>
             <field name="inherit_id" ref="account.view_move_form"/>
             <field name="arch" type="xml">

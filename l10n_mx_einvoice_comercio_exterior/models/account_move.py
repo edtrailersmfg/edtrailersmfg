@@ -163,13 +163,16 @@ class AccountMove(models.Model):
         if address_invoice_parent.curp:
             complemento['cce11:ComercioExterior']['cce11:Emisor'].update({'Curp':address_invoice_parent.curp})
         
-        complemento['cce11:ComercioExterior']['cce11:Emisor'].update({'cce11:Domicilio': {
-            'Calle'     : address_invoice_parent.street,
-            'CodigoPostal' : address_invoice_parent.zip_sat_id.code,
-            'Estado'    : address_invoice_parent.state_id.code,
-            'Pais'      : address_invoice_parent.country_id.sat_code
-            }})
-        
+        complemento['cce11:ComercioExterior']['cce11:Emisor'].update({
+                                                                        'NumRegIdTrib'     : address_invoice_parent.num_reg_trib,
+                                                                        'cce11:Domicilio': {
+                                                                                            'Calle'     : address_invoice_parent.street,
+                                                                                            'CodigoPostal' : address_invoice_parent.zip_sat_id.code,
+                                                                                            'Estado'    : address_invoice_parent.state_id.code,
+                                                                                            'Pais'      : address_invoice_parent.country_id.sat_code
+                                                                                            }
+                                                                      })
+                                                                                        
         
         if address_invoice_parent.street_number:
             complemento['cce11:ComercioExterior']['cce11:Emisor']['cce11:Domicilio'].update({'NumeroExterior': address_invoice_parent.street_number})
@@ -195,7 +198,7 @@ class AccountMove(models.Model):
                 raise UserError(_('Error !!! El Propietario no tiene definido el Registro Tributario o el País, no es posible generar el CFDI sin esa información'))
             complemento['cce11:ComercioExterior'].update({'cce11:Propietario': {
                 'NumRegIdTrib'     : self.cfdi_comercio_exterior_propietario_id.num_reg_trib,
-                #'ResidenciaFiscal' : self.cfdi_comercio_exterior_propietario_id.country_id.sat_code,
+                'ResidenciaFiscal' : self.cfdi_comercio_exterior_propietario_id.country_id.sat_code,
             }})        
         
         # ------- ------- RECEPTOR ------- -------
@@ -228,10 +231,8 @@ class AccountMove(models.Model):
         if not complemento['cce11:ComercioExterior']['cce11:Receptor']['cce11:Domicilio']['CodigoPostal']:
             complemento['cce11:ComercioExterior']['cce11:Receptor']['cce11:Domicilio'].pop('CodigoPostal')
         
-        #complemento['cce11:ComercioExterior']['cce11:Receptor'].update({'NumRegIdTrib'     : partner.num_reg_trib,
-        #                                                         'ResidenciaFiscal' : partner.country_id.sat_code})
-
-        complemento['cce11:ComercioExterior']['cce11:Receptor'].update({'NumRegIdTrib'     : partner.num_reg_trib, 'ResidenciaFiscal' : partner.country_id.sat_code})
+        comprobante['cfdi:Comprobante']['cfdi:Receptor'].update({'NumRegIdTrib'     : partner.num_reg_trib,
+                                                                 'ResidenciaFiscal' : partner.country_id.sat_code})
         
         if partner.street_number:
             complemento['cce11:ComercioExterior']['cce11:Receptor']['cce11:Domicilio'].update({'NumeroExterior': partner.street_number})

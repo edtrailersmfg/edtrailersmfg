@@ -3,8 +3,8 @@
 {
     "name"      : "Complemento Comercio Exterior 1.1",
     "version"   : "1.0",
-    "author"    : "Fixdoo & Argil",
-    "website"   : "https://www.fixdoo.mx",
+    "author"    : "Argil Consulting",
+    "website"   : "https://www.argil.mx",
     "category"  : "Localization/Mexico",
     "description": """
 
@@ -26,4 +26,5 @@ obligatorio a partir del 1º Marzo 2018
         "views/res_partner.xml",
                   ],
     "installable": True,
+    "license"   : "Other proprietary",
 }
