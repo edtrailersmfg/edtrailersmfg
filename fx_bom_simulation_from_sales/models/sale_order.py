@@ -36,7 +36,7 @@ class SaleOrder(models.Model):
                 )
             # verificar tambien si existe una BoM para el producto
             bom_id = BoM.search(
-                [('product_tmpl_id.id', '=', prod.id)]
+                [('product_tmpl_id.default_code', '=', prod.default_code)]
             )
             if not len(bom_id):
                 bomless_prods.append(
