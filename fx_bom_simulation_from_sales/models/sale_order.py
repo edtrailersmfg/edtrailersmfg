@@ -38,10 +38,10 @@ class SaleOrder(models.Model):
             bom_id = BoM.search(
                 [('product_tmpl_id', '=', prod.id)]
             )
-            if not len(bom_id):
-                bomless_prods.append(
-                    f'* {prod.id} - {prod.default_code}'
-                )
+            #if not len(bom_id):
+            #    bomless_prods.append(
+            #        f'* {prod.id} - {prod.default_code}'
+            #    )
 
 
         # lanzar excepcion si hay productos mal configurados
