@@ -72,7 +72,7 @@ class SaleOrder(models.Model):
                 # obtener bom del producto y explotarla
                 # lo relevante son solo las lineas (index=1)
                 bom_id = BoM.search(
-                    [('product_tmpl_id', '=', line.product_id.id)]
+                    [('product_tmpl_id.default_code', '=', line.product_id.default_code)]
                 )
                 exploded_product_qtys = bom_id.explode(
                     line.product_id, line.product_uom_qty
