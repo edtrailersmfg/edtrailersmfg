@@ -40,7 +40,7 @@ class SaleOrder(models.Model):
             )
             if not len(bom_id):
                 bomless_prods.append(
-                    f'* {prod.name}'
+                    f'* {prod.product_id}'
                 )
 
         # lanzar excepcion si hay productos mal configurados
