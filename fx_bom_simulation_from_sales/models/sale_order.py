@@ -42,6 +42,9 @@ class SaleOrder(models.Model):
                 bomless_prods.append(
                     f'* {prod.id}'
                 )
+                bomless_prods.append(
+                    f'* {prod.default_code}'
+                )
 
         # lanzar excepcion si hay productos mal configurados
         if len(non_manufactured_prods):
