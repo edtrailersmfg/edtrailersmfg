@@ -10,7 +10,7 @@
     "support": "",
     'version': '15.0.1',
     "license" : "AGPL-3",
-    "depends" : ["base", "stock", "sales"],
+    "depends" : ["base", "stock"],
     "init_xml" : [],
     "demo_xml" : [],
     "data" : [],
