@@ -43,7 +43,6 @@
         'views/registro_patronal.xml',
         'views/caja_ahorro_view.xml',
         'wizard/entrega_fondo_caja_view.xml',
-        'wizard/reason_cancelation_sat_view',
     ],
     'assets': {
         'web.assets_backend': [
