@@ -401,8 +401,26 @@ class AccountMoveLine(models.Model):
     @api.depends('discount', 'price_unit', 'quantity')
     def _compute_discount_amounts(self):
         for line in self:
-            line.amount_subtotal = line.price_unit * line.quantity
-            line.amount_discount = (line.discount/100.0) * line.price_unit * line.quantity
+            invoice = line.move_id
+            if line.tax_ids:
+                gross_price_subtotal = 0.0
+                if line.discount != 100.0:
+                    gross_price_subtotal = invoice.currency_id.round(line.price_subtotal / (1 - line.discount / 100.0))
+                else:
+                    gross_price_subtotal = invoice.currency_id.round(line.price_unit * line.quantity)
+
+                discount_amount = gross_price_subtotal - line.price_subtotal
+
+                total_wo_discount = gross_price_subtotal
+                price_subtotal_unit = invoice.currency_id.round(
+                    total_wo_discount / line.quantity) if line.quantity else 0
+
+                line.amount_subtotal = total_wo_discount
+                line.amount_discount = discount_amount
+
+            else:
+                line.amount_subtotal = line.price_unit * line.quantity
+                line.amount_discount = (line.discount/100.0) * line.price_unit * line.quantity
         
     amount_discount = fields.Monetary(string='Monto Descuento', store=True, 
                                       compute='_compute_discount_amounts')

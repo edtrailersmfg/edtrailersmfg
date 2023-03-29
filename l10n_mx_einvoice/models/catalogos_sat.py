@@ -689,7 +689,7 @@ class SATRegimenFiscal(models.Model):
     aplica_persona_moral  = fields.Boolean(string="Aplica Persona Moral", default=False, required=True)
     
     _sql_constraints = [
-        ('code_unique', 'unique(code)',
+        ('code_unique', 'CHECK(1=1)',
          'El Código debe ser único')]
     
     

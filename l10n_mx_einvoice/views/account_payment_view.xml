@@ -61,8 +61,8 @@
                     <field name="date"/>
                 </field>
                 <field name="journal_id" position="after">
-                    <field name="cfdi_folio_fiscal" attrs="{'invisible' : [('cfdi_folio_fiscal','=',False)]}"/>
-                    <field name="cfdi_state" widget="selection" attrs="{'invisible' : [('cfdi_folio_fiscal','=',False)]}"/>
+                    <field name="cfdi_folio_fiscal" attrs="{'invisible' : [('generar_cfdi','!=', True)]}"/>
+                    <field name="cfdi_state" widget="selection" attrs="{'invisible' : [('generar_cfdi','!=', True)]}"/>
                 </field>
                 <field name="partner_bank_id" position="after">
                     <field name="user_id" invisible="1"/>
@@ -92,8 +92,9 @@
                 <xpath expr="//sheet" position="inside">
                     <notebook colspan="4" attrs="{'invisible' : [('generar_cfdi', '=', False)]}">
                         <page string="Facturas relacionadas">
-                            <field name="payment_invoice_line_ids" colspan="4" nolabel="1">
-                                <tree>
+                            <separator string="Facturas" />
+                            <field name="payment_invoice_line_ids" colspan="4" nolabel="1" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)]}">
+                                <tree string="Facturas CFDI">
                                     <field name="invoice_id" />
                                     <field name="invoice_serie" />
                                     <field name="invoice_folio" />
@@ -105,7 +106,127 @@
                                     <field name="monto_pago" />
                                     <field name="saldo_final" />
                                 </tree>
+                                <!-- Marzo 2023 -->
+                                <form string="Factura CFDI">
+                                    <group>
+                                        <field name="invoice_id" />
+                                        <field name="invoice_serie" />
+                                        <field name="invoice_folio" />
+                                        <field name="invoice_uuid" />
+                                        <field name="invoice_currency_id" />
+                                        <field name="invoice_currency_rate" />
+                                        <field name="equivalencia_dr" />
+                                        <field name="parcialidad" />
+                                        <field name="saldo_anterior" />
+                                        <field name="monto_pago" />
+                                        <field name="saldo_final" />
+                                    </group>
+
+                                    <separator string="Retenciones" />
+                                    <field name="tax_details_ret_ids" colspan="4" nolabel="1">
+                                        <tree string="Retenciones">
+                                            <field name="base_dr" />
+                                            <field name="impuesto_dr" />
+                                            <field name="tipo_factor_dr" />
+                                            <field name="exento" />
+                                            <field name="tasa_o_cuota_dr" />
+                                            <field name="importe_dr" />
+                                        </tree>
+                                        <form string="Retención">
+                                            <group>
+                                                <field name="base_dr" />
+                                                <field name="impuesto_dr" />
+                                                <field name="tipo_factor_dr" />
+                                                <field name="exento" />
+                                                <field name="tasa_o_cuota_dr" />
+                                                <field name="importe_dr" />
+                                            </group>
+                                        </form>
+                                    </field>
+
+                                    <separator string="Traslados" />
+                                    <field name="tax_details_tras_ids" colspan="4" nolabel="1">
+                                        <tree string="Traslados">
+                                            <field name="base_dr" />
+                                            <field name="impuesto_dr" />
+                                            <field name="tipo_factor_dr" />
+                                            <field name="exento" />
+                                            <field name="tasa_o_cuota_dr" />
+                                            <field name="importe_dr" />
+                                        </tree>
+                                        <form string="Traslados">
+                                            <group>
+                                                <field name="base_dr" />
+                                                <field name="impuesto_dr" />
+                                                <field name="tipo_factor_dr" />
+                                                <field name="exento" />
+                                                <field name="tasa_o_cuota_dr" />
+                                                <field name="importe_dr" />
+                                            </group>
+                                        </form>
+                                    </field>
+                                </form>
+                                <!-- FIN Marzo 2023 -->
                             </field>
+                            <!-- Marzo 2023 -->
+                            <separator string="Retenciones" />
+                            <field name="tax_details_totals_ret_ids" colspan="4" nolabel="1" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)]}">
+                                <tree string="Total Retenciones">
+                                    <field name="impuesto_p" />
+                                    <field name="importe_p" />
+                                </tree>
+                                <form string="Total Retenciones">
+                                    <group>
+                                        <field name="impuesto_p" />
+                                        <field name="importe_p" />
+                                    </group>
+                                </form>
+                            </field>
+
+                            <separator string="Traslados" />
+                            <field name="tax_details_totals_tras_ids" colspan="4" nolabel="1" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)]}">
+                                <tree string="Total Traslados">
+                                    <field name="base_p" />
+                                    <field name="impuesto_p" />
+                                    <field name="tipo_factor_p" />
+                                    <field name="exento" />
+                                    <field name="tasa_o_cuota_p" />
+                                    <field name="importe_p" />
+                                </tree>
+                                <form string="Total Traslados">
+                                    <group>
+                                        <field name="base_p" />
+                                        <field name="impuesto_p" />
+                                        <field name="tipo_factor_p" />
+                                        <field name="exento" />
+                                        <field name="tasa_o_cuota_p" />
+                                        <field name="importe_p" />
+                                    </group>
+                                </form>
+
+                            </field>
+
+                            <group string="Totales">
+                                <group>
+                                    <field name="total_retenciones_iva" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)]}"/>
+                                    <field name="total_retenciones_iva" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)]}"/>
+                                    <field name="total_retenciones_isr" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)]}"/>
+                                    <field name="tipo_cambio" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)]}"/>
+                                    <field name="decimal_precision" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)]}"/>
+                                    <field name="monto_total_pagos" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)]}"/>
+                                    <field name="recompute_amounts" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)]}"/>
+                                </group>
+                                <group>
+                                    <field name="total_traslados_base_iva_16" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)]}"/>
+                                    <field name="total_traslados_impuesto_iva_16" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)]}"/>
+                                    <field name="total_traslados_base_iva_8" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)]}"/>
+                                    <field name="total_traslados_impuesto_iva_8" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)]}"/>
+                                    <field name="total_traslados_base_iva_0" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)]}"/>
+                                    <field name="total_traslados_impuesto_iva_0" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)]}"/>
+                                    <field name="total_traslados_base_iva_exento" attrs="{'readonly':[('cfdi_folio_fiscal','!=',False)]}"/>
+                                </group>
+                            </group>
+                            <!-- FIN Marzo 2023 -->
                         </page>                        
                         <page string="CFDI Info">
                             <field name="use_for_cfdi" invisible="1"/>
