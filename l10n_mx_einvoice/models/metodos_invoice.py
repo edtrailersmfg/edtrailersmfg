@@ -59,6 +59,13 @@ REPLACEMENTS = [
     ' s de rl', ' S de RL', ' S DE RL', ' s en nc', ' S en NC',
     ' S EN NC', ' s en c', ' S en C', ' S EN C', ' s.c.',
     ' S.C.', ' A.C.', ' a.c.', ' sc', ' SC', ' ac', ' AC',
+    ' S.R.L. DE C.V.', ' SRL DE CV', ' SRL DE C.V.', ' S.R.L. DE CV',
+    ' S.A.S. DE C.V.', ' S.A.S. DE CV', ' SAS DE CV', ' SAS DE C.V.',
+    ' S. en C.S DE C.V.',  ' S. en C.S DE CV', ' S. en C.S. DE CV', ' S. en C.S. DE C.V.',
+    ' S.N.C. DE C.V.', ' S.N.C. DE CV', ' SNC DE C.V.', ' S.N.C. DE C.V.',
+    ' S.C. DE C.V.', ' SC DE C.V.', ' S.C. DE CV', ' SC DE CV',
+    ' S.A. P.I. DE C.V.', ' S.A. P.I. DE CV', ' SA PI DE C.V.',
+    ' S. DE R.L. DE C.V.', ' S. DE R.L. DE CV', ' S DE RL DE C.V.',
 ]
 
 def return_replacement(cadena):
@@ -94,6 +101,11 @@ def conv_ascii(text):
                 raise UserError(_("Warning !\nCan't recode the string [%s] in the letter [%s]") % (text, old))
     return text
 
+import math
+from odoo.tools.float_utils import float_repr
+
+def truncate(f, n):
+    return math.floor(f * 10 ** n) / 10 ** n
 
 class AccountMove(models.Model):
     _inherit = 'account.move'
@@ -493,9 +505,10 @@ class AccountMove(models.Model):
             keys = ['Rfc', 'Nombre', 'RegimenFiscal']
         if keys == ['cfdi:Retenciones', 'cfdi:Traslados']:
             keys = ['cfdi:Traslados','cfdi:Retenciones', ]
-        if keys == ['cfdi:Traslados', 'TotalImpuestosTrasladados', 'cfdi:Retenciones', 'TotalImpuestosRetenidos']:
+        if keys == ['cfdi:Traslados', 'TotalImpuestosTrasladados', 'cfdi:Retenciones', 'TotalImpuestosRetenidos'] or\
+           keys == ['TotalImpuestosTrasladados', 'cfdi:Traslados', 'TotalImpuestosRetenidos', 'cfdi:Retenciones']:
             keys = ['cfdi:Retenciones', 'TotalImpuestosRetenidos','cfdi:Traslados', 'TotalImpuestosTrasladados']
-
+            
         #TAGS de Complemento de Comercio Exterior
         if 'cce11:Emisor' in keys:
             #print("keys: %s" % keys)
@@ -979,12 +992,20 @@ class AccountMove(models.Model):
         #number_work = xnumber_work and xnumber_work[0] or xnumber_work
         
         currency = invoice.currency_id
-        rate = invoice.currency_id.with_context(date_ctx).rate
-        rate = rate != 0 and 1.0/rate or 0.0
-        if rate >= 0.99999 and rate <= 1.00001:#rate==1.0:
+        currency_context = invoice.currency_id.with_context(date_ctx)
+        _logger.info("\n############### currency_context: %s" % currency_context)
+        _logger.info("\n############### currency_context.rate: %s" % currency_context.rate)
+        rate = currency_context.rate
+        if rate == 1.0:
             rate = 1
         else:
-            rate = '%.4f' % rate or 1
+            rate = 1.0 / rate 
+        # rate = invoice.currency_id.with_context(date_ctx).rate
+        # rate = rate != 0 and 1.0/rate or 0.0
+        # if rate >= 0.99999 and rate <= 1.00001:#rate==1.0:
+        #     rate = 1
+        # else:
+        #     rate = '%.4f' % rate or 1
         ## Guardando el Tipo de Cambio ##
         self.write({'tipo_cambio': rate})
         # Serie y Folio
@@ -1017,6 +1038,77 @@ class AccountMove(models.Model):
         #if invoice.move_type == 'out_refund':
         #    if invoice.journal_id.refund_sequence_id:
         #        serie_from_type = serie_from_type = invoice.journal_id.refund_sequence_id.prefix and invoice.journal_id.refund_sequence_id.prefix.replace('/','').replace(' ','').replace('-','') or ''
+        
+        ##### German Ponce D. -  2023 ####
+
+        #### Redondeos ####
+        decimal_round_places = 2
+        if invoice.currency_id.id != invoice.company_id.currency_id.id:
+            decimal_round_places = 4
+
+        ### Calculo Manual del Redondeo ###
+        invoice_amount_subtotal = 0.0
+        invoice_amount_discount = 0.0
+        for line in self.invoice_line_ids.filtered(lambda inv: not inv.display_type):
+            if line.tax_ids:
+                gross_price_subtotal = 0.0
+                if line.discount != 100.0:
+                    gross_price_subtotal = invoice.currency_id.round(line.price_subtotal / (1 - line.discount / 100.0))
+                else:
+                    gross_price_subtotal = invoice.currency_id.round(line.price_unit * line.quantity)
+
+                #### Recortamos Decimales ####
+                gross_price_subtotal = truncate(gross_price_subtotal,10)
+                ##############################
+
+                discount_amount = gross_price_subtotal - line.price_subtotal
+
+                total_wo_discount = gross_price_subtotal
+                price_subtotal_unit = invoice.currency_id.round(
+                    total_wo_discount / line.quantity) if line.quantity else 0
+
+                invoice_amount_subtotal +=  round(total_wo_discount, decimal_round_places)
+                invoice_amount_discount += round(discount_amount, decimal_round_places)
+
+            else:
+                invoice_amount_subtotal += round(line.price_subtotal, decimal_round_places)
+                invoice_amount_discount += round((line.discount/100.0) * line.price_unit * line.quantity, decimal_round_places)
+
+        # invoice_amount_tax =  self.amount_tax
+        
+        # Si hay impuestos en la Fatura se agrega el nodo de Impuestos
+        taxes, iva_exento = self._get_global_taxes()
+        _logger.info("\n############### 0000 taxes: %s " % taxes)
+        
+        invoice_amount_tax = 0.0
+        invoice_amount_tax_retenciones = 0.0
+        if taxes:
+            invoice_amount_tax = taxes.get('total_impuestos', 0.0)
+            invoice_amount_tax_retenciones = taxes.get('total_retenciones', 0.0)
+
+
+        invoice_amount_subtotal = round(invoice_amount_subtotal, decimal_round_places)
+        invoice_amount_discount = round(invoice_amount_discount, decimal_round_places)
+        invoice_amount_tax = round(invoice_amount_tax, decimal_round_places)
+        invoice_amount_tax_retenciones = round(invoice_amount_tax_retenciones, decimal_round_places)
+        
+        _logger.info("\n########### invoice.amount_total:%s " % invoice.amount_total)
+        _logger.info("\n########### invoice_amount_subtotal:%s " % invoice_amount_subtotal)
+        _logger.info("\n########### invoice_amount_discount:%s " % invoice_amount_discount)
+        _logger.info("\n########### invoice_amount_tax:%s " % invoice_amount_tax)
+        _logger.info("\n########### invoice_amount_tax_retenciones:%s " % invoice_amount_tax_retenciones)
+
+        cfdi_amount_total = (invoice_amount_subtotal+ invoice_amount_tax if invoice_amount_discount == 0.0 else  \
+                                 (invoice_amount_subtotal - invoice_amount_discount + invoice_amount_tax)) or 0.0
+
+        if invoice_amount_tax_retenciones:
+            cfdi_amount_total = cfdi_amount_total - invoice_amount_tax_retenciones
+            
+        cfdi_amount_total = round(cfdi_amount_total, decimal_round_places)
+
+        _logger.info("\n########### self.amount_tax:%s " % self.amount_tax)
+        _logger.info("\n########### cfdi_amount_total:%s " % cfdi_amount_total)
+
         invoice_data_parent['cfdi:Comprobante'].update({
             'Folio': number_work,
             'Fecha': invoice.date_invoice_tz.strftime('%Y-%m-%dT%H:%M:%S') or '', #and time.strftime('%Y-%m-%dT%H:%M:%S', time.strptime(invoice.date_invoice_tz, '%Y-%m-%d %H:%M:%S')) or '',
@@ -1024,9 +1116,8 @@ class AccountMove(models.Model):
             'NoCertificado': '@',
             'Sello': '',
             'Certificado': '@',
-            'SubTotal': "%.2f" % (invoice.amount_untaxed or 0.0),
-            'Total' : "%.2f" % ((self.amount_total if self.amount_discount == 0.0 else  \
-                                 (self.amount_subtotal - self.amount_discount + self.amount_tax)) or 0.0),
+            'SubTotal': "%.2f" % (invoice_amount_subtotal or 0.0),
+            'Total' : "%.2f" % (cfdi_amount_total or 0.0),
             'Serie' : serie_from_type,
             'LugarExpedicion': invoice.address_issued_id.zip_sat_id.code,
             'Moneda': invoice.currency_id.name.upper(),
@@ -1058,10 +1149,9 @@ class AccountMove(models.Model):
         
         if self.amount_discount:
             invoice_data_parent['cfdi:Comprobante'].update({
-                                                    'Descuento': "%.2f" % (self.amount_discount or 0.0),
-                                                    'SubTotal': "%.2f" % self.amount_subtotal,
+                                                    'Descuento': "%.2f" % (invoice_amount_discount or 0.0),
+                                                    'SubTotal': "%.2f" % invoice_amount_subtotal,
                                                     })
-                
         
         # Termina seccion: Comprobante
         # Inicia seccion: Emisor
@@ -1214,10 +1304,40 @@ class AccountMove(models.Model):
             }
 
             if line.discount:
+                line_with_discount = True
+
+                gross_price_subtotal = 0.0
+                if line.discount != 100.0:
+                    gross_price_subtotal = invoice.currency_id.round(line.price_subtotal / (1 - line.discount / 100.0))
+                else:
+                    gross_price_subtotal = invoice.currency_id.round(line.price_unit * line.quantity)
+
+                _logger.info("\n#-------------- invoice.currency_id.round(line.price_subtotal / (1 - line.discount / 100.0)): %s "  % invoice.currency_id.round(line.price_subtotal / (1 - line.discount / 100.0)))
+                _logger.info("\n#-------------- invoice.currency_id.round(line.price_unit * line.quantity): %s "  % invoice.currency_id.round(line.price_unit * line.quantity))
+
+                #### Recortamos Decimales ####
+                gross_price_subtotal = truncate(gross_price_subtotal,12)
+                ##############################
+
+                discount_amount = gross_price_subtotal - line.price_subtotal
+
+                total_wo_discount = gross_price_subtotal
+                price_subtotal_unit = invoice.currency_id.round(
+                    total_wo_discount / line.quantity) if line.quantity else 0
+
+                invoice_amount_subtotal_line =  round(total_wo_discount, decimal_round_places)
+                invoice_amount_discount_line = round(discount_amount, decimal_round_places)
+                _logger.info("\n#-------------- invoice_amount_subtotal_line: %s "  % invoice_amount_subtotal_line)
+                _logger.info("\n#-------------- invoice_amount_discount_line: %s "  % invoice_amount_discount_line)
+
+                
+                line.amount_subtotal = total_wo_discount
+                line.amount_discount = invoice_amount_discount_line
+
                 concepto.update({
-                    'ValorUnitario': "%.2f" % ((line.amount_subtotal / line.quantity) or 0.0),
-                    'Importe': "%.2f" % (line.amount_subtotal or 0.0),
-                    'Descuento': "%.2f" % (line.amount_discount),
+                    'ValorUnitario': "%.2f" % ((total_wo_discount / line.quantity) or 0.0),
+                    'Importe': "%.2f" % (invoice_amount_subtotal_line or 0.0),
+                    'Descuento': "%.2f" % (invoice_amount_discount_line),
                     })
 
             ### Extension que permitira extender los modulos ###
@@ -1361,7 +1481,6 @@ class AccountMove(models.Model):
         
         # Inicia seccion: impuestos
         # Si hay impuestos en la Fatura se agrega el nodo de Impuestos
-        taxes, iva_exento = self._get_global_taxes()
         _logger.info("\n##### Impuestos Agrupados para la Facturación: %s " % taxes)
         total_impuestos = taxes.get('total_impuestos', 0.0)
         total_retenciones = taxes.get('total_retenciones', 0.0)
@@ -1685,7 +1804,7 @@ class AccountMove(models.Model):
             # Mandamos a Timbrar
             
             #invoice = self
-            type = invoice.cfdi_pac
+            type_pac = invoice.cfdi_pac
             if cfdi_state =='xml_unsigned' and not invoice.xml_file_signed_index:
                 try:
                     index_xml = ''
@@ -1694,7 +1813,7 @@ class AccountMove(models.Model):
                     type__fc = invoice.get_driver_cfdi_sign()
                     _logger.info(str(type__fc))
                     type__fc = type__fc or False
-                    if type in type__fc.keys():
+                    if type_pac in type__fc.keys():
                         fname_invoice = invoice.fname_invoice and invoice.fname_invoice + \
                             '.xml' or ''
                         if not 'fname' in locals() or not 'xml_data' in locals():
@@ -1704,7 +1823,7 @@ class AccountMove(models.Model):
                             _logger.info('Listo archivo XML a timbrar en el PAC - Factura: %s', fname_invoice)
                         fdata = base64.encodebytes(str.encode(xml_data))
                         _logger.info('Solicitando a PAC el Timbre para Factura: %s', fname_invoice)
-                        res = type__fc[type](fdata) #
+                        res = type__fc[type_pac](fdata) #
                         _logger.info("res: %s" % res)
                         _logger.info('Timbre entregado por el PAC - Factura: %s', fname_invoice)
                         msj = tools.ustr(res.get('msg', False))
@@ -1932,7 +2051,7 @@ class AccountMove(models.Model):
             # Mandamos a Timbrar
             
             #invoice = self
-            type = invoice.cfdi_pac
+            type_pac = invoice.cfdi_pac
             if cfdi_state =='xml_unsigned' and not invoice.xml_file_signed_index:
                 try:
                     index_xml = ''
@@ -1941,7 +2060,7 @@ class AccountMove(models.Model):
                     type__fc = invoice.get_driver_cfdi_sign()
                     _logger.info(str(type__fc))
                     type__fc = type__fc or False
-                    if type in type__fc.keys():
+                    if type_pac in type__fc.keys():
                         fname_invoice = invoice.fname_invoice and invoice.fname_invoice + \
                             '.xml' or ''
                         if not 'fname' in locals() or not 'xml_data' in locals():
@@ -1951,7 +2070,7 @@ class AccountMove(models.Model):
                             _logger.info('Listo archivo XML a timbrar en el PAC - Factura: %s', fname_invoice)
                         fdata = base64.encodebytes(str.encode(xml_data))
                         _logger.info('Solicitando a PAC el Timbre para Factura: %s', fname_invoice)
-                        res = type__fc[type](fdata) #
+                        res = type__fc[type_pac](fdata) #
                         _logger.info("res: %s" % res)
                         _logger.info('Timbre entregado por el PAC - Factura: %s', fname_invoice)
                         msj = tools.ustr(res.get('msg', False))

@@ -16,30 +16,26 @@
                     <field name="street2" placeholder="Street 2..." class="o_address_street" 
                            attrs="{'invisible':[('country_code_rel','=','MX')]}"/>
                     
-                        <field name="zip_sat_id" class="o_address_street" placeholder="Código Postal XXXXX"
-                               options="{'no_open': True,'no_create': True}" 
+                        <field name="zip_sat_id" class="o_address_street" placeholder="Código Postal XXXXX" 
                                attrs="{'invisible':[('country_code_rel','!=','MX')]}"/>
                     
                     <div class="oe_edit_only o_row" attrs="{'invisible':[('country_code_rel','!=','MX')]}">
                         <label for="zip_sat_id" string="Colonia" class="oe_edit_only"/>
                         <field name="colonia_sat_id" placeholder="Colonia" class="oe_edit_only oe_edit_only o_address_street" 
-                               domain="[('zip_sat_code','=',zip_sat_id)]" 
-                               options="{'no_open': True,'no_create': True}"
+                               domain="[('zip_sat_code','=',zip_sat_id)]"  
                                attrs="{'invisible':[('country_code_rel','!=','MX')]}"/>
                     </div>
                     <div class="oe_edit_only o_row" attrs="{'invisible':[('country_code_rel','!=','MX')]}">
                         <label for="township_sat_id" class="oe_edit_only" string="Municipio"/>
                         <field name="township_sat_id" class="o_address_city oe_edit_only o_address_street" 
-                               domain="[('state_sat_code','=',state_id)]" placeholder="Municipio"
-                               options="{'no_open': True,'no_create': True}" 
+                               domain="[('state_sat_code','=',state_id)]" placeholder="Municipio" 
                                attrs="{'invisible':[('country_code_rel','!=','MX')]}"/>
                     </div>
                     <div class="oe_edit_only o_row" attrs="{'invisible':[('country_code_rel','!=','MX')]}">
                         <label for="locality_sat_id" class="oe_edit_only" string="Localidad"/>
                         <field name="locality_sat_id" class="o_address_street oe_edit_only"
                            domain="[('state_sat_code','=',state_id)]" placeholder="Localidad"
-                           attrs="{'invisible':[('country_code_rel','!=','MX')]}"
-                           options="{'no_open': True,'no_create': True}"/>
+                           attrs="{'invisible':[('country_code_rel','!=','MX')]}" />
                     </div>
                 </field>
                 <field name="city" position="replace">
@@ -64,7 +60,7 @@
                 <field name="vat" position="after" >
                     <field name="curp" attrs="{'invisible':['|',('company_type2','!=','physical_person'),('country_code_rel','!=','MX')]}"/>
 
-                    <field name="regimen_fiscal_id" options="{'no_create_edit': True,'no_create': True}"/>
+                    <field name="regimen_fiscal_id" />
                     
                     <field name="num_reg_trib" string="Numero de Identificacion Fiscal"
                            attrs="{'invisible':[('country_code_rel','=','MX')]}"/>

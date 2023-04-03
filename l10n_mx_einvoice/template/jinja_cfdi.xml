@@ -75,7 +75,11 @@
                 {% if o.currency_id.name == o.company_id.currency_id.name %} 
                     TipoCambioP="1"  
                 {% endif %}
-                Monto="{{'{0:0.2f}'.format(o.amount)}}" 
+                {% if o.currency_id.name == o.company_id.currency_id.name %} 
+                    Monto="{{MontoTotalPagos}}" 
+                {% else %} 
+                    Monto="{{'{0:0.2f}'.format(o.amount)}}" 
+                {% endif %} 
                 {% if o.num_operacion %} 
                     NumOperacion="{{o.num_operacion}}" 
                 {% endif %} 

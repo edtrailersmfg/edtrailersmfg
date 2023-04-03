@@ -46,3 +46,5 @@ access_regimen_fiscal_user,regimen_fiscal_user,model_regimen_fiscal,base.group_u
 access_account_payment_invoice,account.payment.invoice,model_account_payment_invoice,account.group_account_user,1,1,1,1
 sat_catalogos_wizard_access,sat.catalogos.wizard,model_sat_catalogos_wizard,,1,1,1,1
 access_res_company_getcfdicount,access_res_company_getcfdicount,model_res_company_getcfdicount,account.group_account_manager,1,1,1,1
+account_payment_invoice_tax_details_access,account.payment.invoice.tax.details,model_account_payment_invoice_tax_details,,1,1,1,1
+account_payment_invoice_tax_details_totals_access,account.payment.invoice.tax.details.totals,model_account_payment_invoice_tax_details_totals,,1,1,1,1

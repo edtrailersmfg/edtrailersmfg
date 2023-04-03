@@ -19,6 +19,10 @@ from lxml import etree
 from lxml.objectify import fromstring
 from xml.dom.minidom import parse, parseString
 
+from collections import defaultdict
+
+from odoo.tools.float_utils import float_round, float_is_zero
+
 CFDI_XSLT_CADENA_TFD = 'l10n_mx_einvoice/SAT/cadenaoriginal_4_0/cadenaoriginal_TFD_1_1.xslt'
 
 import logging
@@ -47,6 +51,13 @@ REPLACEMENTS = [
     ' s de rl', ' S de RL', ' S DE RL', ' s en nc', ' S en NC',
     ' S EN NC', ' s en c', ' S en C', ' S EN C', ' s.c.',
     ' S.C.', ' A.C.', ' a.c.', ' sc', ' SC', ' ac', ' AC',
+    ' S.R.L. DE C.V.', ' SRL DE CV', ' SRL DE C.V.', ' S.R.L. DE CV',
+    ' S.A.S. DE C.V.', ' S.A.S. DE CV', ' SAS DE CV', ' SAS DE C.V.',
+    ' S. en C.S DE C.V.',  ' S. en C.S DE CV', ' S. en C.S. DE CV', ' S. en C.S. DE C.V.',
+    ' S.N.C. DE C.V.', ' S.N.C. DE CV', ' SNC DE C.V.', ' S.N.C. DE C.V.',
+    ' S.C. DE C.V.', ' SC DE C.V.', ' S.C. DE CV', ' SC DE CV',
+    ' S.A. P.I. DE C.V.', ' S.A. P.I. DE CV', ' SA PI DE C.V.',
+    ' S. DE R.L. DE C.V.', ' S. DE R.L. DE CV', ' S DE RL DE C.V.',
 ]
 
 def return_replacement(cadena):
@@ -383,16 +394,25 @@ class AccountPayment(models.Model):
             if not payment.payment_invoice_line_ids:
                 payment.create_cfdi_data_from_payment()
             currency = payment.currency_id
-            rate = payment.currency_id.with_context({'date': self.date}).rate
-            rate = rate != 0 and 1.0/rate or 0.0
+            currency_context = payment.currency_id.with_context({'date': self.date})
+            _logger.info("\n############### currency_context: %s" % currency_context)
+            _logger.info("\n############### currency_context.rate: %s" % currency_context.rate)
+            rate = currency_context.rate
+            # rate = payment.currency_id.with_context({'date': self.date}).rate
+            # rate = rate != 0 and 1.0/rate or 0.0
             if rate == 1.0:
                 rate = 1
+            else:
+                rate = 1.0 / rate 
             ## Guardando el Tipo de Cambio ##
             payment.write({'tipo_cambio'        : float('%.4f' % rate), 
                            'user_id'            : self.env.user.id,
                            'payment_datetime'   : fields.datetime.now()})            
             fname_payment = payment.fname_payment
             cfdi_state = payment.cfdi_state
+            ## 2023 ##
+            if cfdi_state == 'sent':
+                return True
             if cfdi_state =='draft':
                 fname, xml_data = payment.get_xml_to_sign()
                 if not xml_data:
@@ -625,48 +645,39 @@ class AccountPayment(models.Model):
 
     def get_account_tax_amounts_detail_from_invoice(self):
 
-        taxes_amounts_by_invoice_traslados = {}
-        taxes_amounts_by_invoice_retenciones = {}
-
         taxes_amounts_traslados_totales = []
         taxes_amounts_retenciones_totales = []
 
-        taxes_amounts_traslados_totales_dict = {}
-        taxes_amounts_retenciones_totales_dict = {}
+        # taxes_amounts_traslados_totales_dict = {}
+        # taxes_amounts_retenciones_totales_dict = {}
 
-        TotalTrasladosBaseIVA16 = False
-        TotalTrasladosImpuestoIVA16 = False
-        TotalTrasladosBaseIVA8 = False
-        TotalTrasladosImpuestoIVA8 = False
-        TotalTrasladosBaseIVA0 = False
-        TotalTrasladosImpuestoIVA0 = False
-        TotalTrasladosBaseIVAExento = False
-
-        TotalRetencionesIVA = False
-        TotalRetencionesISR = False
-        TotalRetencionesIEPS = False
-
-        MontoTotalPagos = 0.0
+        tax_amounts_dr = {}
 
         decimal_presicion = 2
 
 
         for payment in self:
-            # MontoTotalPagos = payment.amount
-
-            _logger.info("\n####### MontoTotalPagos: %s" % MontoTotalPagos)
-
             _logger.info("\n####### Moneda: %s" % payment.currency_id.name)
 
-            payment_currency_rate = payment.currency_id.with_context({'date': payment.date}).rate
-            payment_currency_rate = payment_currency_rate != 0 and 1.0/payment_currency_rate or 0.0
+            payment_currency = payment.currency_id
+            payment_currency_context = payment.currency_id.with_context({'date': payment.date})
+            _logger.info("\n############### payment_currency_context: %s" % payment_currency_context)
+            _logger.info("\n############### payment_currency_context.rate: %s" % payment_currency_context.rate)
+            payment_currency_rate = payment_currency_context.rate
             if payment_currency_rate == 1.0:
                 payment_currency_rate = 1
             else:
-                payment_currency_rate = float('%.4f' % payment_currency_rate)
+                payment_currency_rate = 1.0 / payment_currency_rate 
+
             _logger.info("\n####### TC: %s" % payment_currency_rate)
 
             if payment.payment_invoice_line_ids:
+                ############# Marzo 2023 ##################
+
+                payment_invoice_tax_details_obj = self.env['account.payment.invoice.tax.details']
+
+                ############# FIN Marzo 2023 ##################
+
                 for pinvoice in payment.payment_invoice_line_ids:
                     monto_pago = pinvoice.monto_pago
                     
@@ -689,24 +700,16 @@ class AccountPayment(models.Model):
                     elif payment.currency_id != invoice_id.currency_id:
                         x_date = invoice_id.invoice_date
 
-                    if MontoTotalPagos <= 0.0:
-                        if payment.currency_id == payment.company_id.currency_id:
-                            MontoTotalPagos = payment.amount
-                        else:
-                            # monto_total_pago_mxn = round(payment.currency_id._convert(round(float("%.2f" % payment.amount), 2), payment.company_id.currency_id, payment.company_id, x_date), 2)
-                            monto_total_pago_mxn = payment.amount * payment_currency_rate
-                            MontoTotalPagos = monto_total_pago_mxn
-
                     #revisa la cantidad que se va a pagar en el docuemnto
-                    equivalencia_dr  = round(pinvoice.invoice_currency_rate,6)
-                    if invoice_id.currency_id == invoice_id.company_id.currency_id:
-                        if  payment.currency_id != payment.company_id.currency_id:
-                            ############# Factura en Pesos Pago en Moneda Extranjera")
-                            equivalencia_dr = payment.currency_id._convert(1, payment.company_id.currency_id, payment.company_id, x_date)
-                            invoice_currency_name = invoice_id.currency_id.name
-                            payment_currency_name = payment.currency_id.name
-                            ######## equivalencia_dr 02: ", equivalencia_dr)
-                            pinvoice.equivalencia_dr = equivalencia_dr
+                    equivalencia_dr  = round(pinvoice.equivalencia_dr,10)
+                    # if invoice_id.currency_id == invoice_id.company_id.currency_id:
+                    #     if  payment.currency_id != payment.company_id.currency_id:
+                    #         ############# Factura en Pesos Pago en Moneda Extranjera
+                    #         equivalencia_dr = payment.currency_id._convert(1, payment.company_id.currency_id, payment.company_id, x_date)
+                    #         invoice_currency_name = invoice_id.currency_id.name
+                    #         payment_currency_name = payment.currency_id.name
+                    #         ######### equivalencia_dr 02: ", equivalencia_dr)
+                    #         # pinvoice.equivalencia_dr = equivalencia_dr                    
 
                     if payment.currency_id.id != invoice_id.currency_id.id:
                         if payment.currency_id.name == 'MXN':
@@ -730,22 +733,24 @@ class AccountPayment(models.Model):
                         else:
                             decimal_presicion = 6
 
+                    ##### Porcentaje que le corresponde al Pago Marzo - 2023 ########
+
                     paid_percentage = monto_pago_payment_currency / invoice_amount_total_payment_currency
 
-                    _logger.info("\n######## decimal_presicion : %s " % decimal_presicion)
-                    _logger.info("\n######## monto_pago : %s " % monto_pago)
-                    _logger.info("\n######## invoice_id : %s " % invoice_id)
-                    _logger.info("\n######## invoice_amount_total : %s " % invoice_amount_total)
-                    _logger.info("\n######## invoice_amount_total_payment_currency : %s " % invoice_amount_total_payment_currency)
-                    _logger.info("\n######## paid_percentage : %s " % paid_percentage)
-                    _logger.info("\n######## monto_pago_payment_currency : %s " % monto_pago_payment_currency)
+                    # _logger.info("\n######## decimal_presicion : %s " % decimal_presicion)
+                    # _logger.info("\n######## monto_pago : %s " % monto_pago)
+                    # _logger.info("\n######## invoice_id : %s " % invoice_id)
+                    # _logger.info("\n######## invoice_amount_total : %s " % invoice_amount_total)
+                    # _logger.info("\n######## invoice_amount_total_payment_currency : %s " % invoice_amount_total_payment_currency)
+                    # _logger.info("\n######## paid_percentage : %s " % paid_percentage)
+                    # _logger.info("\n######## monto_pago_payment_currency : %s " % monto_pago_payment_currency)
 
                     taxes, iva_exento = invoice_id._get_global_taxes(decimal_presicion)
                     total_impuestos = taxes.get('total_impuestos', 0.0)
                     total_retenciones = taxes.get('total_retenciones', 0.0)
-                    _logger.info("\n##### total_impuestos: %s " % total_impuestos)
-                    _logger.info("\n##### total_retenciones: %s " % total_retenciones)
-                    _logger.info("\n##### iva_exento: %s " % iva_exento)
+                    # _logger.info("\n##### total_impuestos: %s " % total_impuestos)
+                    # _logger.info("\n##### total_retenciones: %s " % total_retenciones)
+                    # _logger.info("\n##### iva_exento: %s " % iva_exento)
 
                     sat_code_tax = 'IVA'
 
@@ -755,27 +760,8 @@ class AccountPayment(models.Model):
                     ######## Retenciones ########
                     list_taxes_invoice_details_retenciones = []
 
-
-                    ################### BORARRRRRRRRR ####################################
-                    # print("####### TC -- invoice_currency_rate: %s" % pinvoice.invoice_currency_rate)
-                    # print("####### TC -- payment_currency_rate: %s" % payment_currency_rate)
-                    # print("######## decimal_presicion : %s " % decimal_presicion)
-                    # print("######## monto_pago : %s " % monto_pago)
-                    # print("######## invoice_id : %s " % invoice_id)
-                    # print("######## invoice_amount_total : %s " % invoice_amount_total)
-                    # print("######## invoice_amount_total_payment_currency : %s " % invoice_amount_total_payment_currency)
-                    # print("######## paid_percentage : %s " % paid_percentage)
-                    # print("######## monto_pago_payment_currency : %s " % monto_pago_payment_currency)
-                    # print("##### total_impuestos: %s " % total_impuestos)
-                    # print("##### total_retenciones: %s " % total_retenciones)
-                    # print("##### iva_exento: %s " % iva_exento)
-
-                    # print("##### taxes: %s " % taxes)
-                    # print("############################ ============================== ############################" )
-                    ################### FIN BORARRRRRRRRR ####################################
-
                     # _logger.info("\n##### Impuestos Agrupados para la Facturación: %s " % taxes)
-                    if total_impuestos or total_retenciones:                    
+                    if total_impuestos or total_retenciones or taxes.get('impuestos',[]) or taxes.get('retenciones',[]) and not iva_exento:                    
                         if 'total_impuestos' in taxes:
                             TotalImpuestosTrasladados = taxes['total_impuestos']
 
@@ -785,12 +771,6 @@ class AccountPayment(models.Model):
                                 TipoFactorDR=tax_line['type']
                                 TasaOCuotaDR=abs(tax_line['rate'])
                                 ImporteDR=abs(float(tax_line['tax_amount']))
-
-                                ############ Factura en USD Dolares
-                                #----------- Pago en MXN ( BIEN )
-                                #----------- Pago en USD ( BIEN )
-                                ############ Factura en MXN Pesos
-                                #----------- Pago en MXN ( BIEN )
 
                                 ##### Factura en USD y Pago en USD y MXN #####
                                 if invoice_currency_name == 'USD':
@@ -814,9 +794,9 @@ class AccountPayment(models.Model):
                                 ############## BASE DR ################
                                 #######################################
 
-                                BaseDRT = float(self.truncate(BaseDR, decimal_presicion))
+                                BaseDRT = float(float_round(BaseDR, decimal_presicion,rounding_method='UP'))
                                 BaseDRAmount = BaseDRT * paid_percentage
-                                BaseDRAmountT = float(self.truncate(BaseDRAmount, decimal_presicion))
+                                BaseDRAmountT = float(float_round(BaseDRAmount, decimal_presicion,rounding_method='UP'))
                                 if invoice_currency_name == 'USD' and payment_currency_name == 'MXN':
                                     ### FACTURA USD y PAGO en MXN >>>>>>>>>>>
                                     base_dr = BaseDRAmountT / equivalencia_dr
@@ -827,7 +807,7 @@ class AccountPayment(models.Model):
                                     else:
                                         base_dr = invoice_id.currency_id._convert(BaseDRAmountT, payment.currency_id, payment.company_id, x_date)
                                 # Truncamos
-                                base_dr = float(self.truncate(base_dr, decimal_presicion))
+                                base_dr = float(float_round(base_dr, decimal_presicion, rounding_method='UP'))
 
                                 base_dr_mxn = 0.0
                                 if payment.currency_id == payment.company_id.currency_id:
@@ -838,7 +818,7 @@ class AccountPayment(models.Model):
                                     else:
                                         base_dr_mxn = base_dr * payment_currency_rate
 
-                                base_dr_mxn = float(self.truncate(base_dr_mxn, decimal_presicion))
+                                base_dr_mxn = float(float_round(base_dr_mxn, decimal_presicion, rounding_method='UP'))
 
                                 sat_code_tax = tax_line['sat_code_tax']
 
@@ -847,22 +827,23 @@ class AccountPayment(models.Model):
 
                                 # Eliminamos el Redondeo ##
                                 ### Convertimos el Monto Pago a Monto Factura
-                                ImporteDRT = float(self.truncate(ImporteDR, decimal_presicion))
+                                ImporteDRT = float(float_round(ImporteDR, decimal_presicion, rounding_method='UP'))
                                 ImporteDRAmount = ImporteDRT * paid_percentage
-                                ImporteDRAmountT = float(self.truncate(ImporteDRAmount, decimal_presicion))
+                                ImporteDRAmountT = float(float_round(ImporteDRAmount, decimal_presicion, rounding_method='UP'))
                                 importe_dr = invoice_id.currency_id._convert(ImporteDRAmountT, payment.currency_id, payment.company_id, x_date)
                                 # Truncamos
-                                importe_dr = float(self.truncate(importe_dr, decimal_presicion))
+                                importe_dr = float(float_round(importe_dr, decimal_presicion, rounding_method='UP'))
+
 
                                 ImporteDRManualCompute = BaseDRAmountT * float(TasaOCuotaDR)
-                                ImporteDRManualCompute = float(self.truncate(ImporteDRManualCompute, decimal_presicion))
+                                ImporteDRManualCompute = float(float_round(ImporteDRManualCompute, decimal_presicion, rounding_method='UP'))
 
                                 importe_dr_mxn = 0.0
 
                                 
                                 if payment.currency_id == payment.company_id.currency_id:
                                     if invoice_currency_name == 'USD' and payment_currency_name == 'MXN':
-                                        ### FACTURA USD y PAGO en MXN >>>>>>>>>>>
+                                        ### FACTURA USD y PAGO en MXN >>>>>>>>>>> 
                                         importe_dr_mxn = ImporteDRManualCompute / equivalencia_dr
                                     else:
                                         importe_dr_mxn = invoice_id.currency_id._convert(ImporteDRManualCompute, payment.currency_id, payment.company_id, x_date)
@@ -872,9 +853,7 @@ class AccountPayment(models.Model):
                                     else:
                                         importe_dr_mxn = ImporteDRManualCompute * payment_currency_rate
 
-                                    
-
-                                importe_dr_mxn = float(self.truncate(importe_dr_mxn, decimal_presicion))
+                                importe_dr_mxn = float(float_round(importe_dr_mxn, decimal_presicion, rounding_method='UP'))
 
                                 base_dr_to_sum = base_dr_mxn
                                 importe_dr_to_sum = importe_dr_mxn
@@ -883,43 +862,12 @@ class AccountPayment(models.Model):
                                         base_dr_to_sum = BaseDRAmountT
                                         importe_dr_to_sum = ImporteDRManualCompute
 
-                                if TipoFactorDR == 'Exento':
-                                    TotalTrasladosBaseIVAExento = TotalTrasladosBaseIVAExento + base_dr_to_sum
-                                else:
-                                    if invoice_currency_name == 'MXN' and payment_currency_name == 'USD':
-                                        if '%0.*f' % (2, TasaOCuotaDR) == '0.16':
-                                            # IVA 16
-                                            TotalTrasladosBaseIVA16 = TotalTrasladosBaseIVA16 + (base_dr_mxn * equivalencia_dr)
-                                            TotalTrasladosImpuestoIVA16 = TotalTrasladosImpuestoIVA16 + (importe_dr_mxn * equivalencia_dr)
-                                        elif '%0.*f' % (2, TasaOCuotaDR) == '0.08':
-                                            # IVA 8
-                                            TotalTrasladosBaseIVA8 = TotalTrasladosBaseIVA8 + (base_dr_mxn * equivalencia_dr)
-                                            TotalTrasladosImpuestoIVA8 = TotalTrasladosImpuestoIVA8 + (importe_dr_mxn * equivalencia_dr)
-                                        elif '%0.*f' % (2, TasaOCuotaDR) == '0.00':
-                                            # IVA 0
-                                            TotalTrasladosBaseIVA0 = TotalTrasladosBaseIVA0 + (base_dr_mxn * equivalencia_dr)
-                                            TotalTrasladosImpuestoIVA0 = TotalTrasladosImpuestoIVA0 + (importe_dr_mxn * equivalencia_dr)
-
-                                    else:
-                                        if '%0.*f' % (2, TasaOCuotaDR) == '0.16':
-                                            # IVA 16
-                                            TotalTrasladosBaseIVA16 = TotalTrasladosBaseIVA16 + base_dr_to_sum
-                                            TotalTrasladosImpuestoIVA16 = TotalTrasladosImpuestoIVA16 + importe_dr_to_sum
-                                        elif '%0.*f' % (2, TasaOCuotaDR) == '0.08':
-                                            # IVA 8
-                                            TotalTrasladosBaseIVA8 = TotalTrasladosBaseIVA8 + base_dr_to_sum
-                                            TotalTrasladosImpuestoIVA8 = TotalTrasladosImpuestoIVA8 + importe_dr_to_sum
-                                        elif '%0.*f' % (2, TasaOCuotaDR) == '0.00':
-                                            # IVA 0
-                                            TotalTrasladosBaseIVA0 = TotalTrasladosBaseIVA0 + base_dr_to_sum
-                                            TotalTrasladosImpuestoIVA0 = TotalTrasladosImpuestoIVA0 + importe_dr_to_sum
-
                                 if invoice_currency_name == 'MXN' and payment_currency_name == 'USD':
                                     BaseDRAmountT =  base_dr_mxn * equivalencia_dr
-                                    BaseDRAmountT = float(self.truncate(BaseDRAmountT, decimal_presicion))
+                                    BaseDRAmountT = float(float_round(BaseDRAmountT, decimal_presicion, rounding_method='UP'))
 
                                     ImporteDRManualCompute = importe_dr_mxn * equivalencia_dr
-                                    ImporteDRManualCompute = float(self.truncate(ImporteDRManualCompute, decimal_presicion))
+                                    ImporteDRManualCompute = float(float_round(ImporteDRManualCompute, decimal_presicion, rounding_method='UP'))
 
                                     tax_invoice_vals_traslados = {
                                                                     'BaseDR': BaseDRAmountT,
@@ -937,50 +885,19 @@ class AccountPayment(models.Model):
                                                                     'ImporteDR': ImporteDRManualCompute,
                                                                  }
 
-                                tax_invoice_vals_traslados_totals = tax_invoice_vals_traslados.copy()
-
-                                if invoice_id.currency_id == payment.currency_id:
-                                    tax_invoice_vals_traslados_totals.update({
-                                                                                    'BaseDR': float('%0.*f' % (decimal_presicion, BaseDRAmountT)),
-                                                                                    'ImporteDR': ImporteDRManualCompute,
-                                                                                })
-                                else:
-                                    if invoice_currency_name == 'MXN' and payment_currency_name == 'USD':
-                                        # base_dr_mxn = base_dr_mxn / equivalencia_dr
-                                        # base_dr_mxn = float(self.truncate(base_dr_mxn, decimal_presicion))
-
-                                        # importe_dr_mxn = importe_dr_mxn / equivalencia_dr
-                                        # importe_dr_mxn = float(self.truncate(importe_dr_mxn, decimal_presicion))
-
-                                        tax_invoice_vals_traslados_totals.update({
-                                                                                        'BaseDR': base_dr_mxn,
-                                                                                        'ImporteDR': importe_dr_mxn,
-                                                                                    })
-                                    else:
-                                        tax_invoice_vals_traslados_totals.update({
-                                                                                        'BaseDR': base_dr_mxn,
-                                                                                        'ImporteDR': importe_dr_mxn,
-                                                                                    })
-
-                                list_taxes_invoice_details_traslados.append(tax_invoice_vals_traslados)
-                                taxes_amounts_by_invoice_traslados.update({
-                                                                invoice_id: list_taxes_invoice_details_traslados,
-                                                            })
-
-
-                                total_imp_trasl_name = ImpuestoDR + '-' + TipoFactorDR + '-' + '%0.*f' % (2, TasaOCuotaDR)
-                                if total_imp_trasl_name in taxes_amounts_traslados_totales_dict:
-                                    BaseDR_prev = taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['BaseDR']
-                                    ImporteDR_prev = taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['ImporteDR']
-
-                                    BaseDR_new = float(BaseDR_prev) + base_dr
-                                    ImporteDR_new = float(ImporteDR_prev) + importe_dr
-                                    taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['BaseDR'] = '%0.*f' % (2, BaseDR_new)
-                                    taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['ImporteDR'] = '%0.*f' % (decimal_presicion, ImporteDR_new)
-                                else:
-                                    taxes_amounts_traslados_totales_dict.update({
-                                                                                   total_imp_trasl_name : tax_invoice_vals_traslados_totals,
-                                                                                })
+                                ############# Marzo 2023 ##################
+                                xvals = {
+                                            'trasl_id': pinvoice.id,
+                                            'base_dr': float(tax_invoice_vals_traslados['BaseDR']),
+                                            'impuesto_dr': tax_invoice_vals_traslados['ImpuestoDR'],
+                                            'tipo_factor_dr': tax_invoice_vals_traslados['TipoFactorDR'],
+                                            'exento': True if tax_invoice_vals_traslados['TipoFactorDR'] == 'Exento' else False,
+                                            'tasa_o_cuota_dr': tax_invoice_vals_traslados['TasaOcuotaDR'],
+                                            'importe_dr': float(tax_invoice_vals_traslados['ImporteDR']),
+                                        }
+                                payment_invoice_tax_details_obj.create(xvals)
+                                
+                                ############# FIN Marzo 2023 ##################
 
                             # raise UserError("AQUI")
                         if 'total_retenciones' in taxes:
@@ -993,12 +910,6 @@ class AccountPayment(models.Model):
                                     TipoFactorDR=tax_line['type']
                                     TasaOCuotaDR=abs(tax_line['rate'])
                                     ImporteDR=abs(float(tax_line['tax_amount']))
-
-                                    ############ Factura en USD Dolares
-                                    #----------- Pago en MXN ( BIEN )
-                                    #----------- Pago en USD ( BIEN )
-                                    ############ Factura en MXN Pesos
-                                    #----------- Pago en MXN ( BIEN )
 
                                     ##### Factura en USD y Pago en USD y MXN #####
                                     if invoice_currency_name == 'USD':
@@ -1022,9 +933,9 @@ class AccountPayment(models.Model):
                                     ############## BASE DR ################
                                     #######################################
 
-                                    BaseDRT = float(self.truncate(BaseDR, decimal_presicion))
+                                    BaseDRT = float(float_round(BaseDR, decimal_presicion, rounding_method='UP'))
                                     BaseDRAmount = BaseDRT * paid_percentage
-                                    BaseDRAmountT = float(self.truncate(BaseDRAmount, decimal_presicion))
+                                    BaseDRAmountT = float(float_round(BaseDRAmount, decimal_presicion, rounding_method='UP'))
                                     if invoice_currency_name == 'USD' and payment_currency_name == 'MXN':
                                         ### FACTURA USD y PAGO en MXN >>>>>>>>>>>
                                         base_dr = BaseDRAmountT / equivalencia_dr
@@ -1035,7 +946,7 @@ class AccountPayment(models.Model):
                                         else:
                                             base_dr = invoice_id.currency_id._convert(BaseDRAmountT, payment.currency_id, payment.company_id, x_date)
                                     # Truncamos
-                                    base_dr = float(self.truncate(base_dr, decimal_presicion))
+                                    base_dr = float(float_round(base_dr, decimal_presicion, rounding_method='UP'))
 
                                     base_dr_mxn = 0.0
                                     if payment.currency_id == payment.company_id.currency_id:
@@ -1046,7 +957,7 @@ class AccountPayment(models.Model):
                                         else:
                                             base_dr_mxn = base_dr * payment_currency_rate
 
-                                    base_dr_mxn = float(self.truncate(base_dr_mxn, decimal_presicion))
+                                    base_dr_mxn = float(float_round(base_dr_mxn, decimal_presicion, rounding_method='UP'))
 
                                     sat_code_tax = tax_line['sat_code_tax']
 
@@ -1055,15 +966,15 @@ class AccountPayment(models.Model):
 
                                     # Eliminamos el Redondeo ##
                                     ### Convertimos el Monto Pago a Monto Factura
-                                    ImporteDRT = float(self.truncate(ImporteDR, decimal_presicion))
+                                    ImporteDRT = float(float_round(ImporteDR, decimal_presicion, rounding_method='UP'))
                                     ImporteDRAmount = ImporteDRT * paid_percentage
-                                    ImporteDRAmountT = float(self.truncate(ImporteDRAmount, decimal_presicion))
+                                    ImporteDRAmountT = float(float_round(ImporteDRAmount, decimal_presicion, rounding_method='UP'))
                                     importe_dr = invoice_id.currency_id._convert(ImporteDRAmountT, payment.currency_id, payment.company_id, x_date)
                                     # Truncamos
-                                    importe_dr = float(self.truncate(importe_dr, decimal_presicion))
+                                    importe_dr = float(float_round(importe_dr, decimal_presicion, rounding_method='UP'))
 
                                     ImporteDRManualCompute = BaseDRAmountT * float(TasaOCuotaDR)
-                                    ImporteDRManualCompute = float(self.truncate(ImporteDRManualCompute, decimal_presicion))
+                                    ImporteDRManualCompute = float(float_round(ImporteDRManualCompute, decimal_presicion, rounding_method='UP'))
 
                                     importe_dr_mxn = 0.0
 
@@ -1082,7 +993,7 @@ class AccountPayment(models.Model):
 
                                         
 
-                                    importe_dr_mxn = float(self.truncate(importe_dr_mxn, decimal_presicion))
+                                    importe_dr_mxn = float(float_round(importe_dr_mxn, decimal_presicion, rounding_method='UP'))
 
                                     base_dr_to_sum = base_dr_mxn
                                     importe_dr_to_sum = importe_dr_mxn
@@ -1113,13 +1024,13 @@ class AccountPayment(models.Model):
                                         elif sat_code_tax == 'IEPS' or sat_code_tax == '003':
                                             # IVA 0
                                             TotalRetencionesIEPS = TotalRetencionesIEPS + importe_dr_to_sum
-
+                                    
                                     if invoice_currency_name == 'MXN' and payment_currency_name == 'USD':
                                         BaseDRAmountT =  base_dr_mxn * equivalencia_dr
-                                        BaseDRAmountT = float(self.truncate(BaseDRAmountT, decimal_presicion))
+                                        BaseDRAmountT = float(float_round(BaseDRAmountT, decimal_presicion, rounding_method='UP'))
 
                                         ImporteDRManualCompute = importe_dr_mxn * equivalencia_dr
-                                        ImporteDRManualCompute = float(self.truncate(ImporteDRManualCompute, decimal_presicion))
+                                        ImporteDRManualCompute = float(float_round(ImporteDRManualCompute, decimal_presicion, rounding_method='UP'))
 
                                         tax_invoice_vals_retenciones = {
                                                                         'BaseDR': BaseDRAmountT,
@@ -1137,49 +1048,19 @@ class AccountPayment(models.Model):
                                                                         'ImporteDR': ImporteDRManualCompute,
                                                                      }
 
-                                    tax_invoice_vals_retenciones_totals = tax_invoice_vals_retenciones.copy()
-
-                                    if invoice_id.currency_id == payment.currency_id:
-                                        tax_invoice_vals_retenciones_totals.update({
-                                                                                        'BaseDR': float('%0.*f' % (decimal_presicion, BaseDRAmountT)),
-                                                                                        'ImporteDR': ImporteDRManualCompute,
-                                                                                    })
-                                    else:
-                                        if invoice_currency_name == 'MXN' and payment_currency_name == 'USD':
-                                            # base_dr_mxn = base_dr_mxn / equivalencia_dr
-                                            # base_dr_mxn = float(self.truncate(base_dr_mxn, decimal_presicion))
-
-                                            # importe_dr_mxn = importe_dr_mxn / equivalencia_dr
-                                            # importe_dr_mxn = float(self.truncate(importe_dr_mxn, decimal_presicion))
-
-                                            tax_invoice_vals_retenciones_totals.update({
-                                                                                            'BaseDR': base_dr_mxn,
-                                                                                            'ImporteDR': importe_dr_mxn,
-                                                                                        })
-                                        else:
-                                            tax_invoice_vals_retenciones_totals.update({
-                                                                                            'BaseDR': base_dr_mxn,
-                                                                                            'ImporteDR': importe_dr_mxn,
-                                                                                        })
-
-                                    list_taxes_invoice_details_retenciones.append(tax_invoice_vals_retenciones)
-                                    taxes_amounts_by_invoice_retenciones.update({
-                                                                    invoice_id: list_taxes_invoice_details_retenciones,
-                                                                })
-
-                                    total_imp_ret_name = ImpuestoDR + '-' + TipoFactorDR + '-' + '%0.*f' % (2, TasaOCuotaDR)
-                                    if total_imp_ret_name in taxes_amounts_retenciones_totales_dict:
-                                        BaseDR_prev = taxes_amounts_retenciones_totales_dict[total_imp_ret_name]['BaseDR']
-                                        ImporteDR_prev = taxes_amounts_retenciones_totales_dict[total_imp_ret_name]['ImporteDR']
-
-                                        BaseDR_new = float(BaseDR_prev) + base_dr
-                                        ImporteDR_new = float(ImporteDR_prev) + importe_dr
-                                        taxes_amounts_retenciones_totales_dict[total_imp_ret_name]['BaseDR'] = '%0.*f' % (2, BaseDR_new)
-                                        taxes_amounts_retenciones_totales_dict[total_imp_ret_name]['ImporteDR'] = '%0.*f' % (decimal_presicion, ImporteDR_new)
-                                    else:
-                                        taxes_amounts_retenciones_totales_dict.update({
-                                                                                       total_imp_ret_name : tax_invoice_vals_retenciones_totals,
-                                                                                    })
+                                    ############# Marzo 2023 ##################
+                                    xvals = {
+                                                'ret_id': pinvoice.id,
+                                                'base_dr': float(tax_invoice_vals_retenciones_totals['BaseDR']),
+                                                'impuesto_dr': tax_invoice_vals_retenciones_totals['ImpuestoDR'],
+                                                'tipo_factor_dr': tax_invoice_vals_retenciones_totals['TipoFactorDR'],
+                                                'exento': True if tax_invoice_vals_retenciones_totals['TipoFactorDR'] == 'Exento' else False,
+                                                'tasa_o_cuota_dr': tax_invoice_vals_retenciones_totals['TasaOcuotaDR'],
+                                                'importe_dr': float(tax_invoice_vals_retenciones_totals['ImporteDR']),
+                                            }
+                                    payment_invoice_tax_details_obj.create(xvals)
+                                    
+                                    ############# FIN Marzo 2023 ##################
 
                     #### IVA EXENTO ####
                     else:
@@ -1193,12 +1074,6 @@ class AccountPayment(models.Model):
                                     TipoFactorDR=tax_line['type']
                                     TasaOCuotaDR=abs(tax_line['rate'])
                                     ImporteDR=abs(float(tax_line['tax_amount']))
-
-                                    ############ Factura en USD Dolares
-                                    #----------- Pago en MXN ( BIEN )
-                                    #----------- Pago en USD ( BIEN )
-                                    ############ Factura en MXN Pesos
-                                    #----------- Pago en MXN ( BIEN )
 
                                     ##### Factura en USD y Pago en USD y MXN #####
                                     if invoice_currency_name == 'USD':
@@ -1222,11 +1097,11 @@ class AccountPayment(models.Model):
                                     ############## BASE DR ################
                                     #######################################
 
-                                    BaseDRT = float(self.truncate(BaseDR, decimal_presicion))
+                                    BaseDRT = float(float_round(BaseDR, decimal_presicion, rounding_method='UP'))
                                     BaseDRAmount = BaseDRT * paid_percentage
-                                    BaseDRAmountT = float(self.truncate(BaseDRAmount, decimal_presicion))
+                                    BaseDRAmountT = float(round(BaseDRAmount, decimal_presicion, rounding_method='UP'))
                                     if invoice_currency_name == 'USD' and payment_currency_name == 'MXN':
-                                        ### FACTURA USD y PAGO en MXN >>>>>>>>>>>
+                                        ### FACTURA USD y PAGO en MXN >>>>>>>>>>> 
                                         base_dr = BaseDRAmountT / equivalencia_dr
                                     else:
                                         if invoice_currency_name == 'MXN' and payment_currency_name == 'USD':
@@ -1235,7 +1110,7 @@ class AccountPayment(models.Model):
                                         else:
                                             base_dr = invoice_id.currency_id._convert(BaseDRAmountT, payment.currency_id, payment.company_id, x_date)
                                     # Truncamos
-                                    base_dr = float(self.truncate(base_dr, decimal_presicion))
+                                    base_dr = float(float_round(base_dr, decimal_presicion, rounding_method='UP'))
 
                                     base_dr_mxn = 0.0
                                     if payment.currency_id == payment.company_id.currency_id:
@@ -1246,7 +1121,7 @@ class AccountPayment(models.Model):
                                         else:
                                             base_dr_mxn = base_dr * payment_currency_rate
 
-                                    base_dr_mxn = float(self.truncate(base_dr_mxn, decimal_presicion))
+                                    base_dr_mxn = float(float_round(base_dr_mxn, decimal_presicion, rounding_method='UP'))
 
                                     sat_code_tax = tax_line['sat_code_tax']
 
@@ -1255,18 +1130,18 @@ class AccountPayment(models.Model):
 
                                     # Eliminamos el Redondeo ##
                                     ### Convertimos el Monto Pago a Monto Factura
-                                    ImporteDRT = float(self.truncate(ImporteDR, decimal_presicion))
+                                    ImporteDRT = float(float_round(ImporteDR, decimal_presicion, rounding_method='UP'))
                                     ImporteDRAmount = ImporteDRT * paid_percentage
-                                    ImporteDRAmountT = float(self.truncate(ImporteDRAmount, decimal_presicion))
+                                    ImporteDRAmountT = float(float_round(ImporteDRAmount, decimal_presicion, rounding_method='UP'))
                                     importe_dr = invoice_id.currency_id._convert(ImporteDRAmountT, payment.currency_id, payment.company_id, x_date)
                                     # Truncamos
-                                    importe_dr = float(self.truncate(importe_dr, decimal_presicion))
+                                    importe_dr = float(float_round(importe_dr, decimal_presicion, rounding_method='UP'))
 
                                     ImporteDRManualCompute = BaseDRAmountT * float(TasaOCuotaDR)
-                                    ImporteDRManualCompute = float(self.truncate(ImporteDRManualCompute, decimal_presicion))
+                                    ImporteDRManualCompute = float(float_round(ImporteDRManualCompute, decimal_presicion, rounding_method='UP'))
 
                                     importe_dr_mxn = 0.0
-
+                                    
                                     if payment.currency_id == payment.company_id.currency_id:
                                         if invoice_currency_name == 'USD' and payment_currency_name == 'MXN':
                                             ### FACTURA USD y PAGO en MXN >>>>>>>>>>>
@@ -1281,57 +1156,22 @@ class AccountPayment(models.Model):
 
                                         
 
-                                    importe_dr_mxn = float(self.truncate(importe_dr_mxn, decimal_presicion))
+                                    importe_dr_mxn = float(float_round(importe_dr_mxn, decimal_presicion, rounding_method='UP'))
 
                                     base_dr_to_sum = base_dr_mxn
                                     importe_dr_to_sum = importe_dr_mxn
+
                                     if payment.currency_id != payment.company_id.currency_id:
                                         if invoice_id.currency_id != payment.currency_id:
                                             base_dr_to_sum = BaseDRAmountT
                                             importe_dr_to_sum = ImporteDRManualCompute
 
-                                    if TipoFactorDR == 'Exento':
-                                        TotalTrasladosBaseIVAExento = TotalTrasladosBaseIVAExento + base_dr_to_sum
-                                    else:
-                                        if invoice_currency_name == 'MXN' and payment_currency_name == 'USD':
-                                            if TipoFactorDR == 'Exento':
-                                                TotalTrasladosBaseIVAExento = TotalTrasladosBaseIVAExento + (base_dr_mxn * equivalencia_dr)
-                                            else:
-                                                if '%0.*f' % (2, TasaOCuotaDR) == '0.16':
-                                                    # IVA 16
-                                                    TotalTrasladosBaseIVA16 = TotalTrasladosBaseIVA16 + (base_dr_mxn * equivalencia_dr)
-                                                    TotalTrasladosImpuestoIVA16 = TotalTrasladosImpuestoIVA16 + (importe_dr_mxn * equivalencia_dr)
-                                                elif '%0.*f' % (2, TasaOCuotaDR) == '0.08':
-                                                    # IVA 8
-                                                    TotalTrasladosBaseIVA8 = TotalTrasladosBaseIVA8 + (base_dr_mxn * equivalencia_dr)
-                                                    TotalTrasladosImpuestoIVA8 = TotalTrasladosImpuestoIVA8 + (importe_dr_mxn * equivalencia_dr)
-                                                elif '%0.*f' % (2, TasaOCuotaDR) == '0.00':
-                                                    # IVA 0
-                                                    TotalTrasladosBaseIVA0 = TotalTrasladosBaseIVA0 + (base_dr_mxn * equivalencia_dr)
-                                                    TotalTrasladosImpuestoIVA0 = TotalTrasladosImpuestoIVA0 + (importe_dr_mxn * equivalencia_dr)
-                                        else:
-                                            if TipoFactorDR == 'Exento':
-                                                TotalTrasladosBaseIVAExento = TotalTrasladosBaseIVAExento + (base_dr_mxn * equivalencia_dr)
-                                            else:
-                                                if '%0.*f' % (2, TasaOCuotaDR) == '0.16':
-                                                    # IVA 16
-                                                    TotalTrasladosBaseIVA16 = TotalTrasladosBaseIVA16 + base_dr_to_sum
-                                                    TotalTrasladosImpuestoIVA16 = TotalTrasladosImpuestoIVA16 + importe_dr_to_sum
-                                                elif '%0.*f' % (2, TasaOCuotaDR) == '0.08':
-                                                    # IVA 8
-                                                    TotalTrasladosBaseIVA8 = TotalTrasladosBaseIVA8 + base_dr_to_sum
-                                                    TotalTrasladosImpuestoIVA8 = TotalTrasladosImpuestoIVA8 + importe_dr_to_sum
-                                                elif '%0.*f' % (2, TasaOCuotaDR) == '0.00':
-                                                    # IVA 0
-                                                    TotalTrasladosBaseIVA0 = TotalTrasladosBaseIVA0 + base_dr_to_sum
-                                                    TotalTrasladosImpuestoIVA0 = TotalTrasladosImpuestoIVA0 + importe_dr_to_sum
-
                                     if invoice_currency_name == 'MXN' and payment_currency_name == 'USD':
                                         BaseDRAmountT =  base_dr_mxn * equivalencia_dr
-                                        BaseDRAmountT = float(self.truncate(BaseDRAmountT, decimal_presicion))
+                                        BaseDRAmountT = float(float_round(BaseDRAmountT, decimal_presicion, rounding_method='UP'))
 
                                         ImporteDRManualCompute = importe_dr_mxn * equivalencia_dr
-                                        ImporteDRManualCompute = float(self.truncate(ImporteDRManualCompute, decimal_presicion))
+                                        ImporteDRManualCompute = float(float_round(ImporteDRManualCompute, decimal_presicion, rounding_method='UP'))
 
                                         tax_invoice_vals_traslados = {
                                                                         'BaseDR': BaseDRAmountT,
@@ -1349,59 +1189,217 @@ class AccountPayment(models.Model):
                                                                         'ImporteDR': ImporteDRManualCompute,
                                                                      }
 
-                                    tax_invoice_vals_traslados_totals = tax_invoice_vals_traslados.copy()
+                                    ############# Marzo 2023 ##################
+                                    xvals = {
+                                                'trasl_id': pinvoice.id,
+                                                'base_dr': float(tax_invoice_vals_traslados['BaseDR']),
+                                                'impuesto_dr': tax_invoice_vals_traslados['ImpuestoDR'],
+                                                'tipo_factor_dr': tax_invoice_vals_traslados['TipoFactorDR'],
+                                                'exento': True if tax_invoice_vals_traslados['TipoFactorDR'] == 'Exento' else False,
+                                                'tasa_o_cuota_dr': tax_invoice_vals_traslados['TasaOcuotaDR'],
+                                                'importe_dr': float(tax_invoice_vals_traslados['ImporteDR']),
+                                            }
+                                    payment_invoice_tax_details_obj.create(xvals)
+                                    
+                                    ############# FIN Marzo 2023 ##################
 
-                                    if invoice_id.currency_id == payment.currency_id:
-                                        tax_invoice_vals_traslados_totals.update({
-                                                                                        'BaseDR': float('%0.*f' % (decimal_presicion, BaseDRAmountT)),
-                                                                                        'ImporteDR': ImporteDRManualCompute,
-                                                                                    })
-                                    else:
-                                        if invoice_currency_name == 'MXN' and payment_currency_name == 'USD':
-                                            # base_dr_mxn = base_dr_mxn / equivalencia_dr
-                                            # base_dr_mxn = float(self.truncate(base_dr_mxn, decimal_presicion))
+        ########## MARZO 2023 #########
+        ###### Sumatorias Totales #####
 
-                                            # importe_dr_mxn = importe_dr_mxn / equivalencia_dr
-                                            # importe_dr_mxn = float(self.truncate(importe_dr_mxn, decimal_presicion))
+        taxes_amounts_retenciones_totales_dict = {}
+        taxes_amounts_traslados_totales_dict = {}
 
-                                            tax_invoice_vals_traslados_totals.update({
-                                                                                            'BaseDR': base_dr_mxn,
-                                                                                            'ImporteDR': importe_dr_mxn,
-                                                                                        })
-                                        else:
-                                            tax_invoice_vals_traslados_totals.update({
-                                                                                            'BaseDR': base_dr_mxn,
-                                                                                            'ImporteDR': importe_dr_mxn,
-                                                                                        })
+        taxes_amounts_retenciones_totales = []
+        taxes_amounts_traslados_totales = []
 
-                                    list_taxes_invoice_details_traslados.append(tax_invoice_vals_traslados)
-                                    taxes_amounts_by_invoice_traslados.update({
-                                                                    invoice_id: list_taxes_invoice_details_traslados,
+        TotalTrasladosBaseIVA16 = 0.0
+        TotalTrasladosImpuestoIVA16 = 0.0
+        TotalTrasladosBaseIVA8 = 0.0
+        TotalTrasladosImpuestoIVA8 = 0.0
+        TotalTrasladosBaseIVA0 = 0.0
+        TotalTrasladosImpuestoIVA0 = 0.0
+        TotalTrasladosBaseIVAExento = 0.0
+
+        TotalRetencionesIVA = 0.0
+        TotalRetencionesISR = 0.0
+        TotalRetencionesIEPS = 0.0
+
+        ##### Registro para los Totales #####
+
+        for pinvoice in payment.payment_invoice_line_ids:
+            equivalencia_dr = pinvoice.equivalencia_dr
+            if not equivalencia_dr:
+                equivalencia_dr = 1
+            ## ** Retenciones ** ##
+            for pretn in pinvoice.tax_details_ret_ids:
+                round_importe_dr = round(pretn.importe_dr, self.currency_id.decimal_places)
+                round_base_dr = round(pretn.base_dr, self.currency_id.decimal_places)
+
+                total_imp_ret_name = str(pretn.impuesto_dr) + '-' + str(pretn.tipo_factor_dr) + '-' + str(pretn.tasa_o_cuota_dr)
+                if total_imp_ret_name in taxes_amounts_retenciones_totales_dict:
+                    importe_p = round_importe_dr / equivalencia_dr
+                    base_p = round_base_dr / equivalencia_dr
+
+                    ## Redondeo ##
+                    base_p = round(base_p, self.currency_id.decimal_places)
+                    importe_p = round(importe_p, self.currency_id.decimal_places)
+
+                    base_p_prev = taxes_amounts_retenciones_totales_dict[total_imp_ret_name]['base_p']
+                    importe_p_prev = taxes_amounts_retenciones_totales_dict[total_imp_ret_name]['importe_p']
+
+                    base_p_new = float(base_p_prev) + base_p
+                    importe_p_new = float(importe_p_prev) + importe_p
+
+                    ## Redondeo ##
+                    base_p_new = round(base_p_new, self.currency_id.decimal_places)
+                    importe_p_new = round(importe_p_new, self.currency_id.decimal_places)
+
+                    taxes_amounts_retenciones_totales_dict[total_imp_ret_name]['base_p'] =  base_p_new
+                    taxes_amounts_retenciones_totales_dict[total_imp_ret_name]['importe_p'] = importe_p_new
+                else:
+                    importe_p = round_importe_dr / equivalencia_dr
+                    base_p = round_base_dr / equivalencia_dr
+
+                    ## Redondeo ##
+                    base_p = round(base_p, self.currency_id.decimal_places)
+                    importe_p = round(importe_p, self.currency_id.decimal_places)
+
+                    taxes_amounts_retenciones_totales_dict.update({
+                                                                   total_imp_ret_name : {
+                                                                                            'ret_id': self.id,
+                                                                                            'base_p': base_p,
+                                                                                            'importe_p': importe_p,
+                                                                                            'impuesto_p': pretn.impuesto_dr,
+                                                                                            'tipo_factor_p': pretn.tipo_factor_dr,
+                                                                                            'exento': pretn.exento,
+                                                                                            'tasa_o_cuota_p': pretn.tasa_o_cuota_dr,
+                                                                                          }
+                                                                })
+            
+            ## ** Traslados ** ##
+
+            for ptrasl in pinvoice.tax_details_tras_ids:
+                round_importe_dr = round(ptrasl.importe_dr, self.currency_id.decimal_places)
+                round_base_dr = round(ptrasl.base_dr, self.currency_id.decimal_places)
+
+                total_imp_trasl_name = str(ptrasl.impuesto_dr) + '-' + str(ptrasl.tipo_factor_dr) + '-' + str(ptrasl.tasa_o_cuota_dr)
+                if total_imp_trasl_name in taxes_amounts_traslados_totales_dict:
+                    importe_p = round_importe_dr / equivalencia_dr
+                    base_p = round_base_dr / equivalencia_dr
+
+                    ## Redondeo ##
+                    base_p = round(base_p, self.currency_id.decimal_places)
+                    importe_p = round(importe_p, self.currency_id.decimal_places)
+
+                    base_p_prev = taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['base_p']
+                    importe_p_prev = taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['importe_p']
+
+                    base_p_new = float(base_p_prev) + base_p
+                    importe_p_new = float(importe_p_prev) + importe_p
+
+                    ## Redondeo ##
+                    base_p_new = round(base_p_new, self.currency_id.decimal_places)
+                    importe_p_new = round(importe_p_new, self.currency_id.decimal_places)
+
+                    taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['base_p'] =  base_p_new
+                    taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['importe_p'] = importe_p_new
+                else:
+                    importe_p = round_importe_dr / equivalencia_dr
+                    base_p = round_base_dr / equivalencia_dr
+
+                    ## Redondeo ##
+                    base_p = round(base_p, self.currency_id.decimal_places)
+                    importe_p = round(importe_p, self.currency_id.decimal_places)
+
+                    taxes_amounts_traslados_totales_dict.update({
+                                                                   total_imp_trasl_name : {
+                                                                                            'trasl_id': self.id,
+                                                                                            'base_p': base_p,
+                                                                                            'importe_p': importe_p,
+                                                                                            'impuesto_p': ptrasl.impuesto_dr,
+                                                                                            'tipo_factor_p': ptrasl.tipo_factor_dr,
+                                                                                            'exento': ptrasl.exento,
+                                                                                            'tasa_o_cuota_p': ptrasl.tasa_o_cuota_dr,
+                                                                                          }
                                                                 })
 
-                                    total_imp_trasl_name = ImpuestoDR + '-' + TipoFactorDR + '-' + '%0.*f' % (2, TasaOCuotaDR)
-                                    if total_imp_trasl_name in taxes_amounts_traslados_totales_dict:
-                                        BaseDR_prev = taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['BaseDR']
-                                        ImporteDR_prev = taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['ImporteDR']
 
-                                        BaseDR_new = float(BaseDR_prev) + base_dr
-                                        ImporteDR_new = float(ImporteDR_prev) + importe_dr
-                                        taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['BaseDR'] = '%0.*f' % (2, BaseDR_new)
-                                        taxes_amounts_traslados_totales_dict[total_imp_trasl_name]['ImporteDR'] = '%0.*f' % (decimal_presicion, ImporteDR_new)
-                                    else:
-                                        taxes_amounts_traslados_totales_dict.update({
-                                                                                       total_imp_trasl_name : tax_invoice_vals_traslados_totals,
-                                                                                    })
-
+        payment_invoice_tax_details_totals_obj = self.env['account.payment.invoice.tax.details.totals']
+        if taxes_amounts_retenciones_totales_dict:
+            for ret_total_key in taxes_amounts_retenciones_totales_dict.keys():
+                xvals = taxes_amounts_retenciones_totales_dict[ret_total_key]
+                payment_invoice_tax_details_totals_id = payment_invoice_tax_details_totals_obj.create(xvals) 
 
         if taxes_amounts_traslados_totales_dict:
-            for taxt in taxes_amounts_traslados_totales_dict.keys():
-                taxvals = taxes_amounts_traslados_totales_dict[taxt]
-                taxes_amounts_traslados_totales.append(taxvals)
-        if taxes_amounts_retenciones_totales_dict:
-            for taxr in taxes_amounts_retenciones_totales_dict.keys():
-                taxvals = taxes_amounts_retenciones_totales_dict[taxr]
-                taxes_amounts_retenciones_totales.append(taxvals)
+            for trasl_total_key in taxes_amounts_traslados_totales_dict.keys():
+                xvals = taxes_amounts_traslados_totales_dict[trasl_total_key]
+                payment_invoice_tax_details_totals_id = payment_invoice_tax_details_totals_obj.create(xvals) 
+
+
+        ##### Calculamos los totales Totales #####
+        
+        ### Retenciones ####
+
+        tipo_cambio = self.tipo_cambio
+        if tipo_cambio:
+            tipo_cambio = float_round(tipo_cambio, 6, rounding_method='UP')
+        else:
+            tipo_cambio = 1
+
+        for rettotal in self.tax_details_totals_ret_ids:
+            sat_code_tax = rettotal.impuesto_p
+            if sat_code_tax == '001':
+                sat_code_tax = 'ISR'
+            elif sat_code_tax == '002':
+                sat_code_tax = 'IVA'
+            elif sat_code_tax == '003':
+                sat_code_tax = 'IEPS'
+                
+            importe_f = rettotal.importe_p * tipo_cambio
+            ## Redondeo ##
+            importe_f = float_round(importe_f, self.currency_id.decimal_places, rounding_method='UP')
+
+            if sat_code_tax == 'IVA' or sat_code_tax == '002':
+                # IVA 16
+                TotalRetencionesIVA = TotalRetencionesIVA + importe_f
+            elif sat_code_tax == 'ISR' or sat_code_tax == '001':
+                # IVA 8
+                TotalRetencionesISR = TotalRetencionesISR + importe_f
+            elif sat_code_tax == 'IEPS' or sat_code_tax == '003':
+                # IVA 0
+                TotalRetencionesIEPS = TotalRetencionesIEPS + importe_f
+
+        ### Traslados ####
+        for trasltotal in self.tax_details_totals_tras_ids:
+            sat_code_tax = trasltotal.impuesto_p
+            tasa_o_cuota_p = trasltotal.tasa_o_cuota_p
+
+            if sat_code_tax == '001':
+                sat_code_tax = 'ISR'
+            elif sat_code_tax == '002':
+                sat_code_tax = 'IVA'
+            elif sat_code_tax == '003':
+                sat_code_tax = 'IEPS'
+
+            importe_f = trasltotal.importe_p * tipo_cambio
+            base_f = trasltotal.base_p * tipo_cambio
+
+            ## Redondeo ##
+            base_p = float_round(importe_f, self.currency_id.decimal_places, rounding_method='UP')
+            importe_p = float_round(base_f, self.currency_id.decimal_places, rounding_method='UP')
+
+            if '%0.*f' % (2, float(tasa_o_cuota_p)) == '0.16':
+                # IVA 16
+                TotalTrasladosBaseIVA16 = TotalTrasladosBaseIVA16 + base_f
+                TotalTrasladosImpuestoIVA16 = TotalTrasladosImpuestoIVA16 + importe_f
+            elif '%0.*f' % (2, float(tasa_o_cuota_p)) == '0.08':
+                # IVA 8
+                TotalTrasladosBaseIVA8 = TotalTrasladosBaseIVA8 + base_f
+                TotalTrasladosImpuestoIVA8 = TotalTrasladosImpuestoIVA8 + importe_f
+            elif '%0.*f' % (2, float(tasa_o_cuota_p)) == '0.00':
+                # IVA 0
+                TotalTrasladosBaseIVA0 = TotalTrasladosBaseIVA0 + base_f
+                TotalTrasladosImpuestoIVA0 = TotalTrasladosImpuestoIVA0 + importe_f
 
         ###### Los totales los convertimos a moneda nacional ######## 
 
@@ -1410,28 +1408,62 @@ class AccountPayment(models.Model):
             decimal_presicion = 2
         ##### ### ### ### ### ### ###
         _logger.info("\n############# decimal_presicion: %s " % decimal_presicion)
-        tax_amounts_dr = {
-                                    'TotalRetencionesIVA' : '%0.*f' % (decimal_presicion, TotalRetencionesIVA) if TotalRetencionesIVA else False,
-                                    'TotalRetencionesISR' : '%0.*f' % (decimal_presicion, TotalRetencionesISR) if TotalRetencionesISR else False,
-                                    'TotalRetencionesIEPS' : '%0.*f' % (decimal_presicion, TotalRetencionesIEPS) if TotalRetencionesIEPS else False,
-                                    'TotalTrasladosBaseIVA16' : '%0.*f' % (decimal_presicion, TotalTrasladosBaseIVA16) if TotalTrasladosBaseIVA16 else False,
-                                    'TotalTrasladosImpuestoIVA16' : '%0.*f' % (decimal_presicion, TotalTrasladosImpuestoIVA16) if TotalTrasladosImpuestoIVA16 else False,
-                                    'TotalTrasladosBaseIVA8' : '%0.*f' % (decimal_presicion, TotalTrasladosBaseIVA8) if TotalTrasladosBaseIVA8 else False,
-                                    'TotalTrasladosImpuestoIVA8' : '%0.*f' % (decimal_presicion, TotalTrasladosImpuestoIVA8) if TotalTrasladosImpuestoIVA8 else False,
-                                    'TotalTrasladosBaseIVA0' : '%0.*f' % (decimal_presicion, TotalTrasladosBaseIVA0) if TotalTrasladosBaseIVA0 else False,
-                                    'TotalTrasladosImpuestoIVA0' : '%0.*f' % (decimal_presicion, TotalTrasladosImpuestoIVA0) if TotalTrasladosImpuestoIVA0 else False,
-                                    'TotalTrasladosBaseIVAExento' : '%0.*f' % (decimal_presicion, TotalTrasladosBaseIVAExento) if TotalTrasladosBaseIVAExento else False,
-                                    'TrasladosDR': taxes_amounts_by_invoice_traslados,
-                                    'RetencionesDR': taxes_amounts_by_invoice_retenciones,
-                                    'TrasladosDRTotales': taxes_amounts_traslados_totales,
-                                    'RetencionesDRTotales': taxes_amounts_retenciones_totales,
-                                    'MontoTotalPagos': '%0.*f' % (decimal_presicion, MontoTotalPagos),
-                              }
 
         # raise UserError("DEBUG >>>>>")
 
-        return tax_amounts_dr
-    
+        ############# Marzo 2023 ##################
+        
+        # MontoTotalPagos =   (TotalTrasladosBaseIVA16 or 0.0) + \
+        #                     (TotalTrasladosImpuestoIVA16 or 0.0) + \
+        #                     (TotalTrasladosBaseIVA8 or 0.0) + \
+        #                     (TotalTrasladosImpuestoIVA8 or 0.0) + \
+        #                     (TotalTrasladosBaseIVA0 or 0.0) + \
+        #                     (TotalTrasladosImpuestoIVA0 or 0.0) + \
+        #                     (TotalTrasladosBaseIVAExento or 0.0) + \
+        #                     (TotalRetencionesIVA or 0.0) + \
+        #                     (TotalRetencionesISR or 0.0) + \
+        #                     (TotalRetencionesIEPS or 0.0)
+
+        MontoTotalPagos = 0.0
+        if self.currency_id != self.company_id.currency_id:
+            for pinvoice in payment.payment_invoice_line_ids:
+                pinvoice_monto_pago =  pinvoice.monto_pago
+                pinvoice_monto_pago = round(pinvoice_monto_pago, self.currency_id.decimal_places)
+
+                importe_total_mxn = pinvoice_monto_pago * tipo_cambio
+                importe_total_mxn = round(importe_total_mxn, self.currency_id.decimal_places)
+
+                MontoTotalPagos += importe_total_mxn
+        else:
+            MontoTotalPagos = self.amount
+
+        self.write({
+                    'total_retenciones_iva': TotalRetencionesIVA,
+                    'total_retenciones_isr': TotalRetencionesISR,
+                    'total_retenciones_ieps': TotalRetencionesIEPS,
+                    'total_traslados_base_iva_16': TotalTrasladosBaseIVA16,
+                    'total_traslados_impuesto_iva_16': TotalTrasladosImpuestoIVA16,
+                    'total_traslados_base_iva_8': TotalTrasladosBaseIVA8,
+                    'total_traslados_impuesto_iva_8': TotalTrasladosImpuestoIVA8,
+                    'total_traslados_base_iva_0': TotalTrasladosBaseIVA0,
+                    'total_traslados_impuesto_iva_0': TotalTrasladosImpuestoIVA0,
+                    'total_traslados_base_iva_exento': TotalTrasladosBaseIVAExento,
+                    'monto_total_pagos': MontoTotalPagos,
+                    # 'tax_details_totals_ret_ids': 
+                    # 'tax_details_totals_tras_ids': 
+                    'decimal_precision': decimal_presicion,
+                    'recompute_amounts': False,
+
+                   })
+
+        # tax_details_totals_ret_ids = fields.One2many('account.payment.invoice.tax.details.totals', 'ret_id', 'Total Retenciones')
+
+        # tax_details_totals_tras_ids = fields.One2many('account.payment.invoice.tax.details.totals', 'trasl_id', 'Total Traslados')
+
+        # raise UserError("AQUI")
+
+        ############# FIN Marzo 2023 ##################
+        return tax_amounts_dr    
     
     def get_xml_to_sign(self):    
         self.ensure_one()
@@ -1488,11 +1520,12 @@ class AccountPayment(models.Model):
                 receptor_nombre = self.supplier_factor.name
         address_invoice = self.partner_id
         ResidenciaFiscal, NumRegIdTrib = False, False
-        if address_invoice.country_id.sat_code.upper() != 'MEX':
+        if address_invoice.country_id.code != 'MX' or address_invoice.country_id.sat_code.upper() != 'MEX':
             if not address_invoice.num_reg_trib:
                 raise UserError(_("Error!\nPara clientes con dirección en el extranjero es necesario ingresar el registro de identidad fiscal."))
             ResidenciaFiscal = address_invoice.country_id.sat_code
-            NumRegIdTrib = address_invoice.num_reg_trib
+            # NumRegIdTrib = address_invoice.num_reg_trib
+            
         fecha = self.date_payment_tz.strftime('%Y-%m-%dT%H:%M:%S') or ''
         fecha_recepcion = self.date_payment_reception_tz.strftime('%Y-%m-%dT%H:%M:%S') or ''
         #fecha = ti.strftime('%Y-%m-%dT%H:%M:%S', ti.strptime(str(self.date_payment_tz), '%Y-%m-%d %H:%M:%S'))
@@ -1517,27 +1550,128 @@ class AccountPayment(models.Model):
             if parent_obj.zip:
                 receptor_zip = parent_obj.zip
 
+        if receptor_rfc.upper() in ('XEXX010101000','MXXEXX010101000','XAXX010101000','MXXAXX010101000'):
+            receptor_zip = self.address_issued_id.zip_sat_id.code
         #### Detalle de Pagos ####
+
+        ############# Marzo 2023 ##################
+
+        if self.recompute_amounts:
+            self.total_retenciones_iva = 0.0
+            self.total_retenciones_isr = 0.0
+            self.total_retenciones_ieps = 0.0
+            self.total_traslados_base_iva_16 = 0.0
+            self.total_traslados_impuesto_iva_16 = 0.0
+            self.total_traslados_base_iva_8 = 0.0
+            self.total_traslados_impuesto_iva_8 = 0.0
+            self.total_traslados_base_iva_0 = 0.0
+            self.total_traslados_impuesto_iva_0 = 0.0
+            self.total_traslados_base_iva_exento = 0.0
+            self.monto_total_pagos = 0.
+            if self.tax_details_totals_ret_ids:
+                self.tax_details_totals_ret_ids.unlink()
+            if self.tax_details_totals_tras_ids:
+                self.tax_details_totals_tras_ids.unlink()
+
+            for pinvoice in self.payment_invoice_line_ids:
+                if pinvoice.tax_details_ret_ids:
+                    pinvoice.tax_details_ret_ids.unlink()
+                if pinvoice.tax_details_tras_ids:
+                    pinvoice.tax_details_tras_ids.unlink()
+
+            ############### METODOS ESTANDAR #####################
+            ######################################################
+            # ######################################################
+
+            tax_amounts_details = self.get_account_tax_amounts_detail_from_invoice()
+
+            ############# FIN Marzo 2023 ##################
+
+
+        # raise UserError("AQUI >>>>>>> ")
         
-        tax_amounts_details = self.get_account_tax_amounts_detail_from_invoice()
+        ############# Marzo 2023 ##################
 
-        TotalRetencionesIVA = tax_amounts_details.get('TotalRetencionesIVA', False)
-        TotalRetencionesISR = tax_amounts_details.get('TotalRetencionesISR', False)
-        TotalRetencionesIEPS = tax_amounts_details.get('TotalRetencionesIEPS', False)
-        TotalTrasladosBaseIVA16 = tax_amounts_details.get('TotalTrasladosBaseIVA16', False)
-        TotalTrasladosImpuestoIVA16 = tax_amounts_details.get('TotalTrasladosImpuestoIVA16', False)
-        TotalTrasladosBaseIVA8 = tax_amounts_details.get('TotalTrasladosBaseIVA8', False)
-        TotalTrasladosImpuestoIVA8 = tax_amounts_details.get('TotalTrasladosImpuestoIVA8', False)
-        TotalTrasladosBaseIVA0 = tax_amounts_details.get('TotalTrasladosBaseIVA0', False)
-        TotalTrasladosImpuestoIVA0 = tax_amounts_details.get('TotalTrasladosImpuestoIVA0', False)
-        TotalTrasladosBaseIVAExento = tax_amounts_details.get('TotalTrasladosBaseIVAExento', False)
-        TrasladosDR = tax_amounts_details.get('TrasladosDR', False)
-        RetencionesDR = tax_amounts_details.get('RetencionesDR', False)
+        decimal_precision = self.decimal_precision
 
-        TrasladosDRTotales = tax_amounts_details.get('TrasladosDRTotales', False)
-        RetencionesDRTotales = tax_amounts_details.get('RetencionesDRTotales', False)
-        MontoTotalPagos = tax_amounts_details.get('MontoTotalPagos', False)
+        TotalRetencionesIVA = '%0.*f' % (decimal_precision, self.total_retenciones_iva) if self.total_retenciones_iva else False
+        TotalRetencionesISR = '%0.*f' % (decimal_precision, self.total_retenciones_isr) if self.total_retenciones_isr else False
+        TotalRetencionesIEPS = '%0.*f' % (decimal_precision, self.total_retenciones_ieps) if self.total_retenciones_ieps else False
+        TotalTrasladosBaseIVA16 = '%0.*f' % (decimal_precision, self.total_traslados_base_iva_16) if self.total_traslados_base_iva_16 else False
+        TotalTrasladosImpuestoIVA16 = '%0.*f' % (decimal_precision, self.total_traslados_impuesto_iva_16) if self.total_traslados_impuesto_iva_16 else False
+        TotalTrasladosBaseIVA8 = '%0.*f' % (decimal_precision, self.total_traslados_base_iva_8) if self.total_traslados_base_iva_8 else False
+        TotalTrasladosImpuestoIVA8 = '%0.*f' % (decimal_precision, self.total_traslados_impuesto_iva_8) if self.total_traslados_impuesto_iva_8 else False
+        TotalTrasladosBaseIVA0 = '%0.*f' % (decimal_precision, self.total_traslados_base_iva_0) if self.total_traslados_base_iva_0 else False
+        TotalTrasladosImpuestoIVA0 = '%0.*f' % (decimal_precision, self.total_traslados_impuesto_iva_0) if self.total_traslados_impuesto_iva_0 else False
+        TotalTrasladosBaseIVAExento = '%0.*f' % (decimal_precision, self.total_traslados_base_iva_exento) if self.total_traslados_base_iva_exento else False
+        
+        MontoTotalPagos = '%0.*f' % (decimal_precision, self.monto_total_pagos) if self.monto_total_pagos else False
+
+        # TrasladosDR = tax_amounts_details.get('TrasladosDR', False)
+        # RetencionesDR = tax_amounts_details.get('RetencionesDR', False)
+
+        payment_traslados_dr = {}
+        payment_retenciones_dr = {}
+        for pinvoice in self.payment_invoice_line_ids:
+            ######## Traslados ########
+            list_taxes_invoice_details_traslados = []
+            ######## Retenciones ########
+            list_taxes_invoice_details_retenciones = []
+            for pinvoice_traslados in pinvoice.tax_details_tras_ids:
+                xvals = {
+                            'BaseDR': '%0.*f' % (decimal_precision, pinvoice_traslados.base_dr),
+                            'ImpuestoDR': pinvoice_traslados.impuesto_dr,
+                            'TipoFactorDR':  pinvoice_traslados.tipo_factor_dr,
+                            'TasaOcuotaDR':  pinvoice_traslados.tasa_o_cuota_dr,
+                            'ImporteDR': '%0.*f' % (decimal_precision, pinvoice_traslados.importe_dr),
+                         }
+                list_taxes_invoice_details_traslados.append(xvals)
+
+            for pinvoice_retenciones in pinvoice.tax_details_ret_ids:
+                xvals = {
+                            'BaseDR': '%0.*f' % (decimal_precision, pinvoice_retenciones.base_dr),
+                            'ImpuestoDR': pinvoice_retenciones.impuesto_dr,
+                            'TipoFactorDR': pinvoice_retenciones.tipo_factor_dr,
+                            'TasaOcuotaDR': pinvoice_retenciones.tasa_o_cuota_dr,
+                            'ImporteDR': '%0.*f' % (decimal_precision, pinvoice_retenciones.importe_dr),
+                         }
+                list_taxes_invoice_details_retenciones.append(xvals)
+
+            if list_taxes_invoice_details_traslados:
+                payment_traslados_dr[pinvoice.invoice_id] = list_taxes_invoice_details_traslados
+            if list_taxes_invoice_details_retenciones:
+                payment_retenciones_dr[pinvoice.invoice_id] = list_taxes_invoice_details_retenciones
+
+
+        # TrasladosDRTotales = tax_amounts_details.get('TrasladosDRTotales', False)
+        # RetencionesDRTotales = tax_amounts_details.get('RetencionesDRTotales', False)
+
+        tralados_dr_totales = []
+        retenciones_dr_totales = []
+
+        for payment_total_trasl in self.tax_details_totals_tras_ids:
+            xvals = {
+                            'BaseDR': '%0.*f' % (decimal_precision, payment_total_trasl.base_p),
+                            'ImpuestoDR': payment_total_trasl.impuesto_p,
+                            'TipoFactorDR':payment_total_trasl.tipo_factor_p,
+                            'TasaOcuotaDR':payment_total_trasl.tasa_o_cuota_p,
+                            'ImporteDR': '%0.*f' % (decimal_precision, payment_total_trasl.importe_p),
+                         }
+            tralados_dr_totales.append(xvals)
+
+        for payment_total_ret in self.tax_details_totals_ret_ids:
+            xvals = {
+                            'ImpuestoDR': payment_total_ret.impuesto_p,
+                            'ImporteDR': '%0.*f' % (decimal_precision, payment_total_ret.importe_p),
+                         }
+            retenciones_dr_totales.append(xvals)
+
+
         # MontoTotalPagos = False
+
+        MontoTotalPagos = '%0.*f' % (decimal_precision, self.monto_total_pagos)
+
+        ############# FIN Marzo 2023 ##################
 
         razon_social_emisor = return_replacement(address_payment_parent.name)
 
@@ -1576,10 +1710,12 @@ class AccountPayment(models.Model):
             'TotalTrasladosBaseIVA0': TotalTrasladosBaseIVA0,
             'TotalTrasladosImpuestoIVA0': TotalTrasladosImpuestoIVA0,
             'TotalTrasladosBaseIVAExento': TotalTrasladosBaseIVAExento,
-            'TrasladosDR': TrasladosDR,
-            'RetencionesDR': RetencionesDR,
-            'TrasladosDRTotales': TrasladosDRTotales,
-            'RetencionesDRTotales': RetencionesDRTotales,
+            ############# Marzo 2023 ##################
+            'TrasladosDR': payment_traslados_dr if payment_traslados_dr else {},
+            'RetencionesDR': payment_retenciones_dr if payment_retenciones_dr else {},
+            'TrasladosDRTotales': tralados_dr_totales if tralados_dr_totales else False,
+            'RetencionesDRTotales': retenciones_dr_totales if retenciones_dr_totales else False,
+            ############# FIN Marzo 2023 ##################
             'MontoTotalPagos': MontoTotalPagos,
             }
 

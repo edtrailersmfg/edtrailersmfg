@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/4" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:pago20="http://www.sat.gob.mx/Pagos20" 
+    xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd http://www.sat.gob.mx/Pagos20 http://www.sat.gob.mx/sitio_internet/cfd/Pagos/Pagos20.xsd" 
+    Version="4.0" 
+    {% if serie %} 
+        Serie="{{serie}}" 
+    {% endif %} 
+    {% if folio %} 
+        Folio="{{folio}}" 
+    {% endif %} 
+    Fecha="{{date_2_cfdi_tz}}" 
+    SubTotal="0" 
+    Total="0" 
+    Moneda="XXX" 
+    LugarExpedicion="{{o.address_issued_id.zip_sat_id.code}}" 
+    TipoDeComprobante="P" 
+    Exportacion="01" 
+    NoCertificado="{{noCertificado}}" 
+    Certificado="{{certificado}}" 
+    {% if pac_confirmation_code %} 
+        Confirmacion="{{pac_confirmation_code}}" 
+    {% endif %} 
+    Sello="">
+    {% if o.activar_relacion_cfdi and o.cfdi_relacionado_id %}
+        <cfdi:CfdiRelacionados TipoRelacion="04">
+            <cfdi:CfdiRelacionado UUID="{{ o.cfdi_relacionado_id.cfdi_folio_fiscal }}"/>
+        </cfdi:CfdiRelacionados>
+    {% endif %}
+    <cfdi:Emisor Rfc="{{emisor_rfc.replace('&','&amp;')}}" 
+        Nombre="{{emisor_nombre.replace('&','&amp;') or ''}}" 
+        RegimenFiscal="{{emisor_regimen}}"/>
+    <cfdi:Receptor Rfc="{{receptor_rfc.replace('&','&amp;')}}" 
+        Nombre="{{receptor_nombre.replace('&','&amp;')}}" 
+        UsoCFDI="CP01" 
+        {% if ResidenciaFiscal %} 
+            ResidenciaFiscal="{{ResidenciaFiscal}}" 
+        {% endif %} 
+        {% if NumRegIdTrib %} 
+            NumRegIdTrib="{{NumRegIdTrib}}" 
+        {% endif %} 
+        DomicilioFiscalReceptor="{{domicilio_fiscal_receptor}}" 
+        RegimenFiscalReceptor="{{regimen_fiscal_receptor}}"/>
+    <cfdi:Conceptos>
+        <cfdi:Concepto ClaveProdServ="84111506" 
+            Cantidad="1" 
+            ClaveUnidad="ACT" 
+            Descripcion="Pago" 
+            ValorUnitario="0" 
+            Importe="0" 
+            ObjetoImp="{{objeto_impuesto}}"/>
+    </cfdi:Conceptos>
+    <cfdi:Complemento>
+        <pago20:Pagos Version="2.0">
+
+            <pago20:Totales 
+                {% if TotalRetencionesIVA %} TotalRetencionesIVA="{{TotalRetencionesIVA}}" {% endif %} 
+                {% if TotalRetencionesISR %} TotalRetencionesISR="{{TotalRetencionesISR}}" {% endif %} 
+                {% if TotalRetencionesIEPS %} TotalRetencionesIEPS="{{TotalRetencionesIEPS}}" {% endif %} 
+                {% if TotalTrasladosBaseIVA16 %} TotalTrasladosBaseIVA16="{{TotalTrasladosBaseIVA16}}" {% endif %} 
+                {% if TotalTrasladosImpuestoIVA16 %} TotalTrasladosImpuestoIVA16="{{TotalTrasladosImpuestoIVA16}}" {% endif %} 
+                {% if TotalTrasladosBaseIVA8 %} TotalTrasladosBaseIVA8="{{TotalTrasladosBaseIVA8}}" {% endif %} 
+                {% if TotalTrasladosImpuestoIVA8 %} TotalTrasladosImpuestoIVA8="{{TotalTrasladosImpuestoIVA8}}" {% endif %} 
+                {% if TotalTrasladosBaseIVA0 %} TotalTrasladosBaseIVA0="{{TotalTrasladosBaseIVA0}}" {% endif %} 
+                {% if TotalTrasladosBaseIVA0 %} TotalTrasladosImpuestoIVA0="{{TotalTrasladosImpuestoIVA0}}" {% endif %} 
+                {% if TotalTrasladosBaseIVAExento %} TotalTrasladosBaseIVAExento="{{TotalTrasladosBaseIVAExento}}" {% endif %} 
+                MontoTotalPagos="{{MontoTotalPagos}}"/>
+            <pago20:Pago FechaPago="{{fecha_recepcion}}" 
+                FormaDePagoP="{{o.pay_method_id.code}}" 
+                MonedaP="{{o.currency_id.name.upper()}}" 
+                {% if o.currency_id.name != o.company_id.currency_id.name %} 
+                    TipoCambioP="{{'{0:0.4f}'.format(o.tipo_cambio)}}" 
+                {% endif %} 
+                {% if o.currency_id.name == o.company_id.currency_id.name %} 
+                    TipoCambioP="1"  
+                {% endif %}
+                Monto="{{'{0:0.2f}'.format(o.amount)}}" 
+                {% if o.num_operacion %} 
+                    NumOperacion="{{o.num_operacion}}" 
+                {% endif %} 
+                {% if rfcemisorctaord %} 
+                    RfcEmisorCtaOrd="{{rfcemisorctaord}}" 
+                {% endif %} 
+                {% if nombancoordext %} 
+                    NomBancoOrdExt="{{nombancoordext}}" 
+                {% endif %} 
+                {% if ctaordenante %} 
+                    CtaOrdenante="{{ctaordenante}}" 
+                {% endif %} 
+                {% if rfcemisorctaben %} 
+                    RfcEmisorCtaBen="{{rfcemisorctaben}}" 
+                {% endif %} 
+                {% if ctabeneficiario %} 
+                    CtaBeneficiario="{{ctabeneficiario}}"  
+                {% endif %} >
+                {% for l in o.payment_invoice_line_ids %}
+                    <pago20:DoctoRelacionado IdDocumento="{{l.invoice_uuid}}" 
+                        {% if l.invoice_serie %} 
+                            Serie="{{l.invoice_serie}}" 
+                        {% endif %} 
+                        {% if l.invoice_folio %} 
+                            Folio="{{l.invoice_folio}}" 
+                        {% endif %} 
+                        MonedaDR="{{l.invoice_currency_id.name.upper()}}" 
+                        NumParcialidad="{{l.parcialidad}}" 
+                        ImpSaldoAnt="{{'{0:0.2f}'.format(l.saldo_anterior)}}" 
+                        ImpPagado="{{'{0:0.2f}'.format(l.monto_pago)}}" 
+                        ImpSaldoInsoluto="{{'{0:0.2f}'.format(l.saldo_final)}}"
+                        ObjetoImpDR="{{l.objeto_impuestos}}"
+
+                        {% if l.equivalencia_dr == 1.0 %} 
+                            EquivalenciaDR="1" 
+                        {% else %}
+                        {% if o.equivalencia_dr != 1.0 %} 
+                            {% if l.payment_currency_id.id == l.invoice_currency_id.id %}
+                                EquivalenciaDR="1" 
+                            {% else %}
+                                EquivalenciaDR="{{'{0:0.8f}'.format(l.equivalencia_dr)}}" 
+                            {% endif %}
+                        {% endif %} 
+                        {% endif %}>
+                        
+                        {% if TrasladosDR or RetencionesDR  %}
+                            {% if l.invoice_id in TrasladosDR or l.invoice_id in RetencionesDR %}
+                                <pago20:ImpuestosDR>
+                                    {% if l.invoice_id in RetencionesDR %}
+                                        <pago20:RetencionesDR>
+                                        {% for retenciondr in RetencionesDR[l.invoice_id] %}
+                                            <pago20:RetencionDR  BaseDR="{{retenciondr['BaseDR']}}" 
+                                                                ImpuestoDR="{{retenciondr['ImpuestoDR']}}" 
+                                                                TipoFactorDR="{{retenciondr['TipoFactorDR']}}" 
+                                                                TasaOCuotaDR="{{retenciondr['TasaOcuotaDR']}}" 
+                                                                ImporteDR="{{retenciondr['ImporteDR']}}"/>
+                                        {% endfor %}
+                                        </pago20:RetencionesDR>
+                                    {% endif %}
+                                    {% if l.invoice_id in TrasladosDR %}
+                                        <pago20:TrasladosDR>
+                                        {% for trasladodr in TrasladosDR[l.invoice_id] %}
+                                            <pago20:TrasladoDR  BaseDR="{{trasladodr['BaseDR']}}" 
+                                                                ImpuestoDR="{{trasladodr['ImpuestoDR']}}" 
+                                                                TipoFactorDR="{{trasladodr['TipoFactorDR']}}" 
+                                                                {% if trasladodr['TipoFactorDR'] != 'Exento' %} 
+                                                                    TasaOCuotaDR="{{trasladodr['TasaOcuotaDR']}}" 
+                                                                    ImporteDR="{{trasladodr['ImporteDR']}}"
+                                                                {% endif %} />
+                                        {% endfor %}
+                                        </pago20:TrasladosDR>
+                                    {% endif %}
+                                </pago20:ImpuestosDR>
+                            {% endif %}
+                        {% endif %}
+                        </pago20:DoctoRelacionado>                    
+                {% endfor %}
+                
+                {% if TrasladosDRTotales or RetencionesDRTotales  %}
+                    <pago20:ImpuestosP>
+                        {% if RetencionesDRTotales  %}
+                            <pago20:RetencionesP>
+                                {% for retenciondodrtotal in RetencionesDRTotales %}
+                                    <pago20:RetencionP ImpuestoP="{{retenciondodrtotal['ImpuestoDR']}}" 
+                                                       ImporteP="{{retenciondodrtotal['ImporteDR']}}" />
+                                {% endfor %}
+                            </pago20:RetencionesP>
+                        {% endif %}
+
+                        {% if TrasladosDRTotales  %}
+                            <pago20:TrasladosP>
+                                {% for trasladodrtotal in TrasladosDRTotales %}
+                                    <pago20:TrasladoP BaseP="{{trasladodrtotal['BaseDR']}}" 
+                                                      ImpuestoP="{{trasladodrtotal['ImpuestoDR']}}" 
+                                                      TipoFactorP="{{trasladodrtotal['TipoFactorDR']}}" 
+                                                      {% if trasladodrtotal['TipoFactorDR'] != 'Exento' %} 
+                                                      TasaOCuotaP="{{trasladodrtotal['TasaOcuotaDR']}}" 
+                                                      ImporteP="{{trasladodrtotal['ImporteDR']}}" 
+                                                      {% endif %} />
+                                {% endfor %}
+                            </pago20:TrasladosP>
+                        {% endif %}
+                    </pago20:ImpuestosP>
+                {% endif %}
+            </pago20:Pago>
+        </pago20:Pagos>
+    </cfdi:Complemento>
+</cfdi:Comprobante>

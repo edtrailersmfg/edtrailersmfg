@@ -8,8 +8,9 @@ import logging
 _logger = logging.getLogger(__name__)
 from datetime import datetime, timedelta, time
 import pytz
+from odoo.tools.float_utils import float_round, float_is_zero
 
-    
+from odoo.tools.float_utils import float_round, float_is_zero
 
 class AccountPaymentRegister(models.TransientModel):
     _inherit = "account.payment.register"
@@ -265,7 +266,7 @@ class AccountPayment(models.Model):
     
     
 
-    payment_invoice_line_ids = fields.One2many('account.payment.invoice', 'payment_id', 'Desglose Facturas Pagadas', readonly=True)
+    payment_invoice_line_ids = fields.One2many('account.payment.invoice', 'payment_id', 'Desglose Facturas Pagadas')
     num_operacion = fields.Char('Número de Operación', 
                                 help="Indique número de cheque, número de autorización, número de referencia, "
                                      "clave de rastreo en caso de ser SPEI, línea de captura o algún número de referencia análogo que "
@@ -291,7 +292,35 @@ class AccountPayment(models.Model):
 
     pac_confirmation_code = fields.Char('Codigo de Confirmación', help="Atributo condicional para registrar la clave de confirmación que entregue\
                     el PAC para expedir el comprobante con importes grandes, con un tipo de cambio fuera del rango establecido o con ambos casos", size=64)
-    
+
+    ############# Marzo 2023 ##################
+
+    total_retenciones_iva     = fields.Float('Total R. IVA', digits=(14,6), copy=False)
+    total_retenciones_isr    = fields.Float('Total R. ISR', digits=(14,6), copy=False)
+    total_retenciones_ieps    = fields.Float('Total R. IEPS', digits=(14,6), copy=False)
+
+    total_traslados_base_iva_16    = fields.Float('Total T. Base IVA 16', digits=(14,6), copy=False)
+    total_traslados_impuesto_iva_16    = fields.Float('Total T. Imp. IVA 16', digits=(14,6), copy=False)
+
+    total_traslados_base_iva_8    = fields.Float('Total T. Base IVA 8', digits=(14,6), copy=False)
+    total_traslados_impuesto_iva_8    = fields.Float('Total T. Imp. IVA 8', digits=(14,6), copy=False)
+
+    total_traslados_base_iva_0    = fields.Float('Total T. Base IVA 0', digits=(14,6), copy=False)
+    total_traslados_impuesto_iva_0    = fields.Float('Total T. Imp. IVA 0', digits=(14,6), copy=False)
+
+    total_traslados_base_iva_exento    = fields.Float('Total T. IVA Exento', digits=(14,6), copy=False)
+
+    tax_details_totals_ret_ids = fields.One2many('account.payment.invoice.tax.details.totals', 'ret_id', 'Total Retenciones', copy=False)
+
+    tax_details_totals_tras_ids = fields.One2many('account.payment.invoice.tax.details.totals', 'trasl_id', 'Total Traslados', copy=False)
+
+    monto_total_pagos  = fields.Float('Monto Total Pagos', digits=(14,6), copy=False)
+
+    decimal_precision  = fields.Integer('Precisión Decimal', default=2, copy=False)
+
+    recompute_amounts = fields.Boolean('Recalcular Montos', default=True)
+
+    ############# FIN Marzo 2023 ##################
     
     @api.onchange('date')
     def _onchange_payment_date(self):
@@ -373,10 +402,50 @@ class AccountPaymentInvoice(models.Model):
         for payment in self:
             equivalencia_dr = 1
             #revisa la cantidad que se va a pagar en el docuemnto
-            if round(payment.invoice_currency_rate,6) != 1.0:
-                equivalencia_dr = round(payment.invoice_currency_rate,6)
+            if payment.invoice_id.currency_id == payment.payment_id.currency_id:
+                # Same currency
+                equivalencia_dr = 1
+            else:
+                payment_id = payment.payment_id
+                invoice_id = payment.invoice_id
 
+                if payment_id.currency_id == invoice_id.currency_id or not payment.invoice_id:
+                    # Same currency
+                    equivalencia_dr = 1.0
+                else:
+                    # It needs to be how much invoice currency you pay for one payment currency
+                    company_currency_id = invoice_id.company_id.currency_id
+                    invoice_currency_rate = payment.invoice_currency_rate
+
+                    payment_amount = payment.monto_pago
+                    amount_exchange = 0.0
+                    amount_mxn = 0.0
+                    if invoice_id.currency_id != company_currency_id:
+                        #### Factura en USD y Pago en Pesos ")
+                        amount_mxn = payment_amount
+                        rate2 = invoice_id.currency_id.with_context({'date': payment.payment_date}).rate
+                        if rate2 == 1.0:
+                            rate2 = 1
+                        else:
+                            rate2 = 1.0 / rate2 
+
+                        amount_exchange = payment_amount / rate2
+                    else:
+                        #### Factura en Pesos y Pago en Moneda Extranjera
+                        amount_exchange = payment_amount
+                        rate2 = payment_id.currency_id.with_context({'date': payment.payment_date}).rate
+                        if rate2 == 1.0:
+                            rate2 = 1
+                        else:
+                            rate2 = 1.0 / rate2
+                        amount_mxn = payment_amount * rate2
+
+                    exchange_rate = amount_exchange / amount_mxn
+                    equivalencia_dr = exchange_rate
+            # if round(payment.invoice_currency_rate,10) != 1.0:
+            #     equivalencia_dr = round(payment.invoice_currency_rate,10)
             payment.equivalencia_dr  = equivalencia_dr
+
         
     payment_id  = fields.Many2one('account.payment', 'Pago', required=True)
     payment_state = fields.Selection(string="Estado", readonly=True, related="payment_id.state")
@@ -399,4 +468,46 @@ class AccountPaymentInvoice(models.Model):
                                help="Saldo Insoluto (en Moneda de la Factura) después del pago")
 
     objeto_impuestos = fields.Char('Objeto de Impuestos', compute="_get_object_invoice_taxes")
-    equivalencia_dr  = fields.Float('Equivalencia DR', compute="_get_dr_equivalence", digits=(4,6))
+    equivalencia_dr  = fields.Float('Equivalencia DR', compute="_get_dr_equivalence", digits=(4,10))
+
+    ############# Marzo 2023 ##################
+
+    tax_details_ret_ids = fields.One2many('account.payment.invoice.tax.details', 'ret_id', 'Detalle Retenciones')
+
+    tax_details_tras_ids = fields.One2many('account.payment.invoice.tax.details', 'trasl_id', 'Detalle Traslados')
+
+class AccountPaymentInvoiceTaxDetails(models.Model):
+    _name = 'account.payment.invoice.tax.details'
+    _description="Parcialidades Detalle Impuestos"
+
+    ret_id = fields.Many2one('account.payment.invoice', 'Parcialidad Ret. ID')
+    trasl_id = fields.Many2one('account.payment.invoice', 'Parcialidad Tras. ID')
+
+    base_dr  = fields.Float('Base DR', digits=(14,8))
+    impuesto_dr  = fields.Char('Impuesto DR')
+    tipo_factor_dr  = fields.Char('Tipo Factor DR')
+    exento  = fields.Boolean('Exento')
+    tasa_o_cuota_dr  = fields.Char('Tasa/Cuota DR')
+    importe_dr  = fields.Float('Importe DR', digits=(14,8))
+
+class AccountPaymentInvoiceTaxDetailsTotals(models.Model):
+    _name = 'account.payment.invoice.tax.details.totals'
+    _description="Parcialidades Detalle Impuestos Totales"
+    _rec_name = "base_p"
+
+    ret_id = fields.Many2one('account.payment', 'Parcialidad Ret. ID')
+    trasl_id = fields.Many2one('account.payment', 'Parcialidad Tras. ID')
+
+    base_p  = fields.Float('Base P', digits=(14,8))
+    impuesto_p  = fields.Char('Impuesto P')
+    tipo_factor_p  = fields.Char('Tipo Factor P')
+    exento  = fields.Boolean('Exento')
+    tasa_o_cuota_p  = fields.Char('Tasa/Cuota P')
+    importe_p  = fields.Float('Importe P', digits=(14,8))
+
+    # ***** Agregar al ir.models.access.csv ***** #
+
+    # account_payment_invoice_tax_details_access,account.payment.invoice.tax.details,model_account_payment_invoice_tax_details,,1,1,1,1
+    # account_payment_invoice_tax_details_totals_access,account.payment.invoice.tax.details.totals,model_account_payment_invoice_tax_details_totals,,1,1,1,1
+
+    ############# FIN Marzo 2023 ##################
