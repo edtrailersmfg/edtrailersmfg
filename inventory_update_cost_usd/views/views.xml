@@ -5,7 +5,7 @@
 		<field name="model">product.template</field>
 		<field name="inherit_id" ref="product.product_template_form_view"/>
 		<field name="arch" type="xml">
-			<xpath expr="//field[@name='default_code']" position="after">
+			<xpath expr="//field[@name='barcode']" position="after">
 				<field name="fecha_tc"/>
 				<field name="tipo_cambio"/>
 				<field name="costo_usd"/>
