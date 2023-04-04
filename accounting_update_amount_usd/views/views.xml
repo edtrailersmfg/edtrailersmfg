@@ -1,0 +1,16 @@
+<odoo>
+	<!-- vista form -->
+	<record id="view_inventory_update_cost_form" model="ir.ui.view">
+		<field name="name">view.inventory.update.cost.form</field>
+		<field name="model">product.template</field>
+		<field name="inherit_id" ref="product.product_template_form_view"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='categ_id']" position="after">
+				<field name="fecha_tc"/>
+				<field name="tipo_cambio"/>
+				<field name="costo_usd"/>
+			</xpath>
+		</field>
+	</record>
+	<!-- vista form -->
+</odoo>
