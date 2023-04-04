@@ -57,7 +57,7 @@ class RegisterPayments(models.Model):
 	tipo_cambio = fields.Float(compute="_compute_tipo_cambio", string="Tipo de Cambio")
 	importe_usd = fields.Float(compute="_compute_importe_usd", string="Importe en USD")
 	importe_mxn = fields.Float(compute="_compute_importe_mxn", string="Importe en MXN")
-	x_studio_tc = fields.Float(string="Tipo de Cambio")
+	#x_studio_tc = fields.Float(string="Tipo de Cambio")
 
 
 	def _compute_tipo_cambio(self):
@@ -69,7 +69,7 @@ class RegisterPayments(models.Model):
 		tc = location_model.search([("currency_id", "=", "USD"),("name","=",current_date)])
 		self.tipo_cambio = tc.inverse_company_rate
 		self.fecha_tc = tc.create_date
-		#self.x_studio_tc = tc.inverse_company_rate
+		self.x_studio_tc = tc.inverse_company_rate
 		#raise UserError("tipo de cambio " + str(tc.inverse_company_rate))
 
 	def _compute_importe_usd(self):
