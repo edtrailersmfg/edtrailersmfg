@@ -57,7 +57,7 @@ class RegisterPayments(models.Model):
 	tipo_cambio = fields.Float(compute="_compute_tipo_cambio", string="Tipo de Cambio")
 	importe_usd = fields.Float(compute="_compute_importe_usd", string="Importe en USD")
 	importe_mxn = fields.Float(compute="_compute_importe_mxn", string="Importe en MXN")
-	#x_studio_tc = fields.Float(string="Tipo de Cambio")
+	x_studio_tc = fields.Float(string="TC")
 
 
 	def _compute_tipo_cambio(self):
