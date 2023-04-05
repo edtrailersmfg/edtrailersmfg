@@ -1,0 +1,17 @@
+<odoo>
+	<!-- vista form -->
+	<record id="view_product_pricelist_items_cost_form" model="ir.ui.view">
+		<field name="name">view.product.pricelist.items.cost.form</field>
+		<field name="model">product.pricelist</field>
+		<field name="inherit_id" ref="product.product_pricelist_view"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='fixed_price']" position="after">
+				<field name="costo_usd" readonly="True"/>
+				<field name="profit" readonly="True"/>
+				<field name="margin" readonly="True"/>
+				<field name="costo_mxn" readonly="True"/>
+			</xpath>
+		</field>
+	</record>
+	<!-- vista form -->
+</odoo>
