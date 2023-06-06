@@ -62,6 +62,19 @@
             </field>
         </record>
 
+        <!-- View Search -->
+        <record id="view_control_search" model="ir.ui.view">
+            <field name="name">View Control Search</field>
+            <field name="model">control.control</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="serie"/>
+                    <field name="orden_venta"/>
+                </search>
+            </field>
+        </record>
+
+
 
         <!-- Acción para abrir vistas de los modelos -->
         <record model="ir.actions.act_window" id="action_manufacturing_control_view">

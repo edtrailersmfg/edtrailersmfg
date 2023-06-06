@@ -11,7 +11,7 @@ class Control(models.Model):
     _order = "orden_venta"
 
     order       = fields.Integer(defaul=10, help="Campo para ordenar los registros de acuerdo a la produccion")
-    orden_venta = fields.Many2one('sale.order', string='Orden', required=True, stored=True)
+    orden_venta = fields.Many2one('sale.order', string='Orden de Venta', required=True, stored=True)
     cliente     = fields.Many2one(related='orden_venta.partner_id', tracking=True, string='Cliente',
                               domain="['|', ('company_id', '=', False), ('company_id', '=', company_id) )]")
     fecha_orden      = fields.Datetime(related='orden_venta.date_order', tracking=True, string='Fecha Orden', store=True)
