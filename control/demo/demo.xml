@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+          <record id="object0" model="logistica.ordenes_venta_carga">
+              <field name="orden_venta">SM00030</field>
+              <field name="cliente">Lumber Inc</field>
+              <field name="fecha_pedido">20/01/2022 14:43:51</field>
+              <field name="fecha_compromiso">29/01/2022 14:43:51</field>
+              <field name="orden_salida">CHIC1/IN/00005</field>
+              <field name="fecha_salida">25/01/2022 14:43:51</field>
+              <field name="estado">En Transito</field>
+              <field name="evidencia"></field>
+              <field name="fecha_entrega">30/01/2022 14:43:51</field>
+          </record>
+    </data>
+</odoo>
