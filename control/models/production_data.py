@@ -21,3 +21,17 @@ class Production_Data(models.Model):
         )
     terminado = fields.Boolean(string='Terminado')
     hold = fields.Boolean(string='Hold')
+
+    @api.onchange('centro_trabajo')
+    def on_change_centro_trabajo(self):
+        for record in self:
+            if record.centro_trabajo == 'Terminado':
+                record.terminado = True
+            elif record.centro_trabajo == 'Hold':
+                record.terminado = False
+                record.hold = True
+            else:
+                record.terminado = False
+                record.hold = False
+
+
