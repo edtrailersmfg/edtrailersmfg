@@ -39,13 +39,3 @@ class Control(models.Model):
     fecha_inicio   = fields.Datetime(string='Fecha Inicio')
     fecha_fin      = fields.Datetime(string='Fecha Fin')
 
-
-    _sql_constraints = [
-
-        ('serie_unico', 'unique (serie)', "Error : No es posible duplicar numeros de serie."),
-    ]
-
-
-
-
-
