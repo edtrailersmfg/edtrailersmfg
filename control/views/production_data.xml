@@ -48,7 +48,6 @@
             <field name="arch" type="xml">
                 <search>
                     <field name="serie"/>
-                    <field name="centro_trabajo"/>
                 </search>
             </field>
         </record>
