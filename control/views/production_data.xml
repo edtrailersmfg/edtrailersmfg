@@ -14,6 +14,7 @@
                         <group name=" group_top">
                             <group name="group_left">
                                 <field name="serie"/>
+                                <field name="producto"/>
                                 <field name="centro_trabajo"/>
                                 <field name="terminado"/>
                                 <field name="hold"/>
@@ -32,6 +33,7 @@
             <field name="arch" type="xml">
                 <tree string="Production Data">
                     <field name="serie"/>
+                    <field name="producto"/>
                     <field name="centro_trabajo"/>
                     <field name="terminado"/>
                     <field name="hold"/>

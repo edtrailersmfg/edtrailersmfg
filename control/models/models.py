@@ -10,8 +10,6 @@ class Control(models.Model):
     _description = "Lista de Control de la Produccion"
     _order = "orden_venta"
 
-    def compute_name(self):
-        self.name = self.serie.name
     order       = fields.Integer(defaul=10, help="Campo para ordenar los registros de acuerdo a la produccion")
     orden_venta = fields.Many2one('sale.order', string='Orden de Venta', stored=True)
     cliente     = fields.Many2one(related='orden_venta.partner_id', tracking=True, string='Cliente',
@@ -21,7 +19,7 @@ class Control(models.Model):
     orden_produccion = fields.Many2one('mrp.production', string="Producción", stored=True)
     producto         = fields.Many2one(related='orden_produccion.product_id', string="Producto", stored=True)
     serie            = fields.Many2one(related='orden_produccion.lot_producing_id', string="Serie", stored=True)
-    name             = fields.Char(string="name", compute="compute_name")
+
     centro_trabajo = fields.Selection([
                 ('No Iniciado','No Iniciado'),
                 ('Producción','Producción'),
