@@ -58,6 +58,7 @@
                     <field name="centro_trabajo"/>                   
                     <field name="fecha_inicio"/>
                     <field name="fecha_fin"/>
+                    <field name="name" invisible="1"/>
                 </tree>
             </field>
         </record>
