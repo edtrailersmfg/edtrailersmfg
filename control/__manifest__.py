@@ -11,6 +11,10 @@
 
             Capturamos informacion de los modulos de Ventas y Produccion para informar internamente la produccion
             y colocar informacion en el tablero web.
+
+            Se genera un nuevo modelo production_data para registro de la producción en el piso de producción,
+            esto permitirá actualizar el tablero de producción diaria y semanal.
+
     """,
 
     'author': "Enrique Jaquez",
