@@ -12,8 +12,7 @@
             Capturamos informacion de los modulos de Ventas y Produccion para informar internamente la produccion
             y colocar informacion en el tablero web.
 
-            Se genera un nuevo modelo production_data para registro de la producción en el piso de producción,
-            esto permitirá actualizar el tablero de producción diaria.
+            Se genera un nuevo modelo production_data para registro de la producción en el piso de producción.
 
     """,
 
@@ -24,7 +23,7 @@
     # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Manufacturing',
-    'version': '15.01',
+    'version': '15.02',
 
     # any module necessary for this one to work correctly
     'depends': ['base', 'sale_management', 'contacts', 'stock', 'product', 'mrp', 'logistics'],
