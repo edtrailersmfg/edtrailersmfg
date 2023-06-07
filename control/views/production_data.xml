@@ -13,7 +13,7 @@
                     <sheet>
                         <group name=" group_top">
                             <group name="group_left">
-                                <field name="serie"/>
+                                <field name="serie" options="{'no_open':true, 'no_quick_create':true, 'no_create_edit':true, 'no_create':true}"/>
                                 <field name="producto"/>
                                 <field name="centro_trabajo"/>
                                 <field name="terminado"/>
