@@ -7,8 +7,8 @@ class Production_Data(models.Model):
     _name = 'control.production_data'
     _description = "Datos levantados de Producción"
 
-    serie = fields.Many2one('stock.production.lot', string="Serie", stored=True)
-    producto = fields.Many2one(related='serie.product_id', string="Producto", stored=True)
+    serie = fields.Many2one('stock.production.lot', string="Serie")
+    producto = fields.Many2one(related='serie.product_id', string="Producto")
     centro_trabajo = fields.Selection([
                 ('No Iniciado','No Iniciado'),
                 ('Producción','Producción'),
