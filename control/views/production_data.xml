@@ -41,7 +41,7 @@
             </field>
         </record>
 
-        <!-- View Search -->
+        <!-- View Search 
         <record id="view_production_data_search" model="ir.ui.view">
             <field name="name">View Production Data Search</field>
             <field name="model">control.production_data</field>
@@ -51,6 +51,7 @@
                 </search>
             </field>
         </record>
+        -->
 
 
 
