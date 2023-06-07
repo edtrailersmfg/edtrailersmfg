@@ -1,0 +1,100 @@
+<odoo>
+    <data>
+
+        <!-- Form Control -->
+        <record id="view_control_form" model="ir.ui.view">
+            <field name="name">view.control.form </field>
+            <field name="model">control.control</field>
+            <field name="arch" type="xml">
+                <form string="Manufacturing Orders">
+                    <header>
+                        
+                    </header>
+                    <sheet>
+                        <group name=" group_top">
+                            <group name="group_left">
+                                <field name="orden_venta"/>
+                                <field name="cliente"/>
+                                <field name="fecha_orden"/>
+                                <field name="fecha_compromiso"/>
+                            </group>
+                            <group name="group_right">
+                                
+                                <field name="orden_produccion"/>
+                                <field name="producto"/>
+                                <field name="serie"/>
+                                <field name="fecha_inicio"/>
+                                <field name="fecha_fin"/>
+                                <field name="centro_trabajo"/>
+                                <field name="terminado"/>
+                                <field name="hold"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- Tree Control -->
+        <record id="view_control_tree" model="ir.ui.view">
+            <field name="name">view.control.tree</field>
+            <field name="model">control.control</field>
+            <field name="arch" type="xml">
+                <tree string="Control" default_order="order asc">
+                    <field name="order" widget="handle"/>
+                    <field name="orden_venta"/>
+                    <field name="cliente"/>
+                    <field name="fecha_orden"/>
+                    <field name="fecha_compromiso"/>
+                    <field name="orden_produccion"/>
+                    <field name="producto"/>
+                    <field name="serie"/>
+                    <field name="centro_trabajo"/>                   
+                    <field name="fecha_inicio"/>
+                    <field name="fecha_fin"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- View Search -->
+        <record id="view_control_search" model="ir.ui.view">
+            <field name="name">View Control Search</field>
+            <field name="model">control.control</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="serie"/>
+                    <field name="orden_venta"/>
+                </search>
+            </field>
+        </record>
+
+
+
+        <!-- Acción para abrir vistas de los modelos -->
+        <record model="ir.actions.act_window" id="action_manufacturing_control_view">
+            <field name="name">Manufacturing Control</field>
+            <field name="res_model">control.control</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <!-- Menú item superior -->
+        <menuitem name="Manufacturing Control" id="menu_control_root"/>
+
+        <!-- Categorías de menú -->
+        <menuitem name="Orders" id="menu_orders"
+                  parent="menu_control_root"/>
+
+        <!--Acciones del menú-->
+        <menuitem name="Orders" id="menu_sales_orders"
+                  parent="menu_orders"
+                  action="action_manufacturing_control_view"/>
+
+    </data>
+</odoo>
