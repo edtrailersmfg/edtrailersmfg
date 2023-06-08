@@ -16,6 +16,7 @@
                                 <field name="serie" options="{'no_open':true, 'no_quick_create':true, 'no_create_edit':true, 'no_create':true}"/>
                                 <field name="producto"/>
                                 <field name="centro_trabajo"/>
+                                <field name="semana_laboral"/>
                                 <field name="terminado"/>
                                 <field name="hold"/>
                             </group>
@@ -35,6 +36,7 @@
                     <field name="serie"/>
                     <field name="producto"/>
                     <field name="centro_trabajo"/>
+                    <field name="semana_laboral"/>
                     <field name="terminado"/>
                     <field name="hold"/>
                 </tree>
@@ -49,6 +51,7 @@
                 <search>
                     <field name="serie"/>
                     <field name="centro_trabajo"/>
+                    <field name="semana_laboral"/>
                 </search>
             </field>
         </record>
