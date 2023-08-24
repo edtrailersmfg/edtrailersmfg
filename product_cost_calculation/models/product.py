@@ -20,4 +20,5 @@ class ProductProduct(models.Model):
         if not product_cost:
             product_cost = 1.16
         if price > 0:
-            self.standard_price = price * float(product_cost)
+            #self.standard_price = price * float(product_cost)
+            self.standard_price = price
