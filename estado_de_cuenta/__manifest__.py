@@ -6,10 +6,10 @@
         Reporte de Estado de Cuenta del Cliente
         Muestra el listado de Facturas Sin Pago y con Pago Parcial
     """,
-    "version": "15.0.2",
+    "version": "15.0.1",
     "category": "Account",
     "website": "https://www.sursoom.mx",
-    "author": "Sursoom",
+    "author": "Enrique Jaquez",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
