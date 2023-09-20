@@ -6,7 +6,7 @@ from openerp.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
 
 class AccounutReportWizard(models.TransientModel):
     _name = "account.report.wizard"
-    _description = "Estado de Cuenta"
+    _description = "Estado de Cuenta del Cliente"
 
     customer = fields.Many2one('res.partner', string="Cliente : ")
     start_date = fields.Datetime(string="Fecha Inicial : ", default=lambda self: fields.datetime.now())
