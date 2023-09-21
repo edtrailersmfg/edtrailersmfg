@@ -10,7 +10,7 @@ PAYMENT_STATE = {
 }
 
 class AccountReportXlsx(models.AbstractModel):
-    _name = "report.estado_de_cuenta.report_account_report_excel"
+    _name = "report.estado_de_cuenta_proveedor.report_account_report_excel"
     _inherit = "report.report_xlsx.abstract"
     _description = "Estado de Cuenta"
 

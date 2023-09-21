@@ -13,10 +13,10 @@ class AccounutReportWizard(models.TransientModel):
     end_date = fields.Datetime(string="Fecha Final : ", default=lambda self: fields.datetime.now())
 
     def action_get_report_values(self):
-        return self.env.ref('estado_de_cuenta.action_report_account_report').report_action(self)
+        return self.env.ref('estado_de_cuenta_proveedor.action_report_account_report').report_action(self)
 
     def action_get_xlsx_report(self):
-        return self.env.ref('estado_de_cuenta.action_report_account_report_xlsx').report_action(self)
+        return self.env.ref('estado_de_cuenta_proveedor.action_report_account_report_xlsx').report_action(self)
 
     def _get_move_data_report_values(self):
         docs = self

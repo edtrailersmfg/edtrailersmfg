@@ -2,7 +2,7 @@
 from odoo import models, fields, api, _
 
 class ReportInvoiceWithPayment(models.AbstractModel):
-    _name = 'report.estado_de_cuenta.report_account_report'
+    _name = 'report.estado_de_cuenta_proveedor.report_account_report'
     _description = 'Estado de Cuenta del Proveedor'
 
     @api.model
