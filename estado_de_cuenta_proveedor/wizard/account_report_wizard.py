@@ -23,7 +23,7 @@ class AccounutReportWizard(models.TransientModel):
         AccountMove = self.env['account.move']
         domain = [
             ('state', '=', 'posted'),
-            ('move_type', '=', 'out_invoice'),
+            ('move_type', '=', 'in_invoice'),
             ('payment_state', '!=', 'paid'),
             ('payment_state', '!=', 'in_payment'),
             ('payment_state', '!=', 'reversed'),
@@ -41,7 +41,7 @@ class AccounutReportWizard(models.TransientModel):
         AccountMove = self.env['account.move']
         domain = [
             ('state', '=', 'posted'),
-            ('move_type', '=', 'out_invoice'),
+            ('move_type', '=', 'in_invoice'),
             ('payment_state', '!=', 'paid'),
             ('payment_state', '!=', 'in_payment'),
             ('payment_state', '!=', 'reversed'),
