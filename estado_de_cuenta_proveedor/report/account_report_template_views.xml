@@ -7,7 +7,7 @@
                     Fecha del Reporte : 
                     <span class="ml-2 mr-2" t-field="o.start_date"/>
                     <br/>
-                    Proveedor : <span class="ml-2 mr-2" t-field="o.customer.name"/>
+                    Proveedor : <span class="ml-2 mr-2" t-field="o.supplier.name"/>
                 </div>
                 <div class="page">
                     Moneda: USD<br/>

@@ -29,9 +29,9 @@ class AccounutReportWizard(models.TransientModel):
             ('payment_state', '!=', 'reversed'),
             ('currency_id', '=', 'USD'),
         ]
-        if docs.customer:
+        if docs.supplier:
             domain.append(
-                ('partner_id', '=', docs.customer.id),
+                ('partner_id', '=', docs.supplier.id),
             )
         move_ids = AccountMove.search(domain)
         return move_ids
@@ -47,9 +47,9 @@ class AccounutReportWizard(models.TransientModel):
             ('payment_state', '!=', 'reversed'),
             ('currency_id', '=', 'MXN'),
         ]
-        if docs.customer:
+        if docs.supplier:
             domain.append(
-                ('partner_id', '=', docs.customer.id),
+                ('partner_id', '=', docs.supplier.id),
             )
         move_ids = AccountMove.search(domain)
         return move_ids
