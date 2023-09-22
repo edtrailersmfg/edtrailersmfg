@@ -13,40 +13,39 @@
                     <table class="table table-sm o_main_table">
                         <thead style="display: table-row-group">
                             <tr>
-                                <th>Factura #</th>
+                                <th>Factura</th>
+                                <th>Ref</th>
                                 <th>Fecha</th>
                                 <th>Vencimiento</th>
-                                <th>Importe</th>
-                                <th>Impuesto</th>
+                                <th>Días V.</th>
                                 <th>Total</th>
-                                <th>Estado del Pago</th>
+                                <th>Saldo</th>                                
+                                <th>T.C.</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <t t-set="importe_dolares" t-value="0.00"/>
-                            <t t-set="tax_dolares" t-value="0.00"/>
-                            <t t-set="total_dolares" t-value="0.00"/>
+                            <t t-set="importe_total" t-value="0.00"/>
+                            <t t-set="importe_saldo" t-value="0.00"/>
                             <t t-foreach="move_data" t-as="data">
                                 <tr>
                                     <td><span t-field="data.name"/></td>
+                                    <td><span t-field="data.ref"/></td>
                                     <td><span t-field="data.invoice_date"/></td>
                                     <td><span t-field="data.invoice_date_due"/></td>
-                                    <td align="right"><span t-field="data.amount_untaxed"/></td>
-                                    <td align="right"><span t-field="data.amount_tax"/></td>
+                                    <td></td>
                                     <td align="right"><span t-field="data.amount_total"/></td>
-                                    <td><span t-field="data.payment_state"/></td>
-                                    <t t-set="importe_dolares" t-value="importe_dolares+data.amount_untaxed"/>
-                                    <t t-set="tax_dolares" t-value="tax_dolares+data.amount_tax"/>
-                                    <t t-set="total_dolares" t-value="total_dolares+data.amount_total"/>
+                                    <t t-set="importe_total" t-value="importe_total+data.amount_total"/>
+                                    <t t-set="importe_saldo" t-value="importe_saldo+importe_total"/>
                                 </tr>
                             </t>
                             <tr>
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td align="right"><t t-esc="'{0:,.2f}'.format(importe_dolares)"/></td>
-                                <td align="right"><t t-esc="'{0:,.2f}'.format(tax_dolares)"/></td>
-                                <td align="right"><t t-esc="'{0:,.2f}'.format(total_dolares)"/></td>
+                                <td></td>
+                                <td></td>
+                                <td align="right"><t t-esc="'{0:,.2f}'.format(importe_total)"/></td>
+                                <td align="right"><t t-esc="'{0:,.2f}'.format(importe_saldo)"/></td>
                                 <td></td>
                             </tr>
                         </tbody>
