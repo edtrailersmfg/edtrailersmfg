@@ -11,8 +11,8 @@ class AccountMove(models.Model):
     def _compute_dias(self):
         for rec in self:
             if rec.invoice_date_due:
-                #rec.dias = (rec.invoice_date_due - rec.invoice_date).days
-                rec.dias = 1
+                rec.dias = (rec.invoice_date_due - rec.invoice_date).days
+                #rec.dias = 1
             else:
                 rec.dias = 0
 
