@@ -6,12 +6,12 @@ from datetime import timedelta
 class AccountMove(models.Model):
     _inherit = 'account.move'
 
-    dias = fields.Integer(string="Días Vencidos", compute="_compute_dias", store=True)
+    dias = fields.Char(string="Días Vencidos", compute="_compute_dias", store=True)
 
     @api.depends('invoice_date', 'invoice_date_due')
     def _compute_dias(self):
         now = datetime.today().strftime('%Y-%m-%d')
         for rec in self:
             if rec.invoice_date_due:
-                rec.dias = (rec.invoice_date_due - now).days
+                rec.dias = rec.invoice_date_due - now
 
