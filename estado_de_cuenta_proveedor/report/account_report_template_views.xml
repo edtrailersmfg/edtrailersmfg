@@ -56,7 +56,7 @@
                                 <td align="right"><t t-esc="'{0:,.2f}'.format(importe_saldo)"/></td>
                                 <td>
                                     <t t-set="tipo_cambio_promedio" t-value="suma_tipo_cambio/i"/>
-                                    <td align="right"><t t-esc="'{0:,.2f}'.format(tipo_cambio_promedio)"/></td>
+                                    <t t-esc="'{0:,.2f}'.format(tipo_cambio_promedio)"/>
                                 </td>
                             </tr>
                         </tbody>
