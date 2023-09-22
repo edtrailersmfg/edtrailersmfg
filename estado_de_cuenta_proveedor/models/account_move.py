@@ -12,7 +12,7 @@ class AccountMove(models.Model):
         for rec in self:
             if rec.invoice_date_due:
                 #rec.dias = (rec.invoice_date_due - rec.invoice_date).days
-                rec.dias = 0
+                rec.dias = 1
             else:
                 rec.dias = 0
 
