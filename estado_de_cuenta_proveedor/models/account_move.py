@@ -12,8 +12,8 @@ class AccountMove(models.Model):
         fmt = '%Y-%m-%d'
         for rec in self:
             rec.dias = 0
-            start_date = rec.invoice_date
-            end_date = rec.invoice_date_due
+            start_date = self.invoice_date
+            end_date = self.invoice_date_due
             d1 = datetime.strptime(start_date, fmt)
             d2 = datetime.strptime(end_date, fmt)
             rec.dias = (d2 - d1).days
