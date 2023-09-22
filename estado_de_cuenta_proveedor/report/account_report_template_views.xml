@@ -34,7 +34,7 @@
                                     <td><span t-field="data.invoice_date_due"/></td>
                                     <td></td>
                                     <td align="right"><span t-field="data.amount_total"/></td>
-                                    <td align="right"><span t-field="data.amount_residual_signed"/></td>
+                                    <td align="right"><span t-field="data.amount_residual"/></td>
                                     <td align="right"></td>
                                     <t t-set="importe_total" t-value="importe_total+data.amount_total"/>
                                     <t t-set="importe_saldo" t-value="importe_saldo+data.amount_residual"/>
