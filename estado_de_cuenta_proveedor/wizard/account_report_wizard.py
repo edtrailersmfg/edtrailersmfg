@@ -27,7 +27,6 @@ class AccounutReportWizard(models.TransientModel):
             ('payment_state', '!=', 'paid'),
             ('payment_state', '!=', 'in_payment'),
             ('payment_state', '!=', 'reversed'),
-            ('currency_id', '=', 'USD'),
         ]
         if docs.supplier:
             domain.append(
