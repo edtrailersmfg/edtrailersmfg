@@ -5,7 +5,7 @@ from datetime import datetime, date
 class AccountMove(models.Model):
     _inherit = 'account.move'
 
-    dias = fields.Integer(string="Días Vencidos", compute="_compute_dias", store=True)
+    dias = fields.Integer(string="Días Vencidos", compute="_compute_dias", store=False)
 
     @api.depends('invoice_date_due','invoice_date')
     def _compute_dias(self):
