@@ -35,7 +35,7 @@
                                     <td><span t-field="data.ref"/></td>
                                     <td><span t-field="data.invoice_date"/></td>
                                     <td><span t-field="data.invoice_date_due"/></td>
-                                    <td></td>
+                                    <td><span t-field="data.dias"/></td>
                                     <td align="right"><span t-field="data.amount_total"/></td>
                                     <td align="right"><span t-field="data.amount_residual"/></td>
                                     <t t-set="tc" t-value="data.x_studio_tipo_de_cambio"/>
