@@ -15,5 +15,4 @@ class ReportInvoiceWithPayment(models.AbstractModel):
             'doc_model': 'account.report.wizard',
             'docs': docs,
             'move_data': move_data,
-            'move_data2': move_data2,
         }
