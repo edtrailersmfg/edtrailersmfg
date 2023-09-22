@@ -37,7 +37,7 @@
                                     <td align="right"><span t-field="data.amount_residual_signed"/></td>
                                     <td align="right"></td>
                                     <t t-set="importe_total" t-value="importe_total+data.amount_total"/>
-                                    <t t-set="importe_saldo" t-value="importe_saldo+data.amount_residual_signed"/>
+                                    <t t-set="importe_saldo" t-value="importe_saldo+data.amount_residual"/>
                                 </tr>
                             </t>
                             <tr>
