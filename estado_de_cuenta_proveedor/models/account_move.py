@@ -12,7 +12,8 @@ class AccountMove(models.Model):
         fecha_actual = datetime.now()
         for rec in self:
             if rec.invoice_date_due:
-                fecha_limite = datetime.strptime(rec.invoice_date_due, "%Y-%m-%d")
+                #fecha_limite = datetime.strptime(rec.invoice_date_due, "%Y-%m-%d")
+                fecha_limite = rec.invoice_date_due
                 diferencia = fecha_actual - fecha_limite
                 diferencia_en_dias = diferencia.days
                 rec.dias = diferencia_en_dias
