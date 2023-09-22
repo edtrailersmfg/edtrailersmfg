@@ -13,5 +13,5 @@ class AccountMove(models.Model):
         now = datetime.now()
         for rec in self:
             if rec.invoice_date_due:
-                rec.dias = rec.invoice_date_due - now
+                rec.dias = now
 
