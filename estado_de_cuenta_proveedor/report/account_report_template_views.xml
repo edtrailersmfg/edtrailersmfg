@@ -42,7 +42,7 @@
                                     <t t-set="importe_total" t-value="importe_total+data.amount_total"/>
                                     <t t-set="importe_saldo" t-value="importe_saldo+data.amount_residual"/>
                                     <t t-set="suma_tipo_cambio" t-value="suma_tipo_cambio+data.x_studio_tipo_de_cambio"/>
-                                    <t t-set="i" t-value="i=i+1"/>
+                                    <t t-set="i" t-value="i+1"/>
                                 </tr>
                             </t>
                             <tr>
