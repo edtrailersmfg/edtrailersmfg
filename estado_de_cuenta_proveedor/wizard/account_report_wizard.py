@@ -35,23 +35,3 @@ class AccounutReportWizard(models.TransientModel):
             )
         move_ids = AccountMove.search(domain)
         return move_ids
-
-    def _get_move_data_report_values2(self):
-        docs = self
-        AccountMove = self.env['account.move']
-        domain = [
-            ('state', '=', 'posted'),
-            ('move_type', '=', 'in_invoice'),
-            ('payment_state', '!=', 'paid'),
-            ('payment_state', '!=', 'in_payment'),
-            ('payment_state', '!=', 'reversed'),
-            ('currency_id', '=', 'MXN'),
-        ]
-        if docs.supplier:
-            domain.append(
-                ('partner_id', '=', docs.supplier.id),
-            )
-        move_ids = AccountMove.search(domain)
-        return move_ids
-
-
