@@ -9,9 +9,10 @@ class AccountMove(models.Model):
 
     @api.depends('invoice_date_due','invoice_date')
     def _compute_dias(self):
+        now = datetime.now()
         for rec in self:
             if rec.invoice_date_due:
-                rec.dias = (rec.invoice_date_due - rec.invoice_date).days
+                rec.dias = (rec.invoice_date_due - now).days
                 #rec.dias = 1
             else:
                 rec.dias = 0
