@@ -10,8 +10,7 @@ class AccountMove(models.Model):
 
     @api.depends('invoice_date_due','invoice_date')
     def _compute_dias(self):
-        fecha_actual = datetime.now()
-        tipo_fecha_actual = str(type(fecha_actual))
+        fecha_actual = datetime.now().strftime('%Y-%m-%d')
         for rec in self:
             if rec.invoice_date_due:
                 #fecha_limite = datetime.strptime(rec.invoice_date_due, "%Y-%m-%d")
