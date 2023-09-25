@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api, _
 from datetime import datetime, date
+from odoo.exceptions import UserError
 
 class AccountMove(models.Model):
     _inherit = 'account.move'
@@ -14,10 +15,11 @@ class AccountMove(models.Model):
             if rec.invoice_date_due:
                 #fecha_limite = datetime.strptime(rec.invoice_date_due, "%Y-%m-%d")
                 fecha_limite = rec.invoice_date_due
-                diferencia = fecha_actual - fecha_limite
-                diferencia_en_dias = diferencia.days
-                rec.dias = diferencia_en_dias
-                #rec.dias = 1
+                raise UserError("Tipo de Dato %s" %fecha_limite)
+                #diferencia = fecha_actual - fecha_limite
+                #diferencia_en_dias = diferencia.days
+                #rec.dias = diferencia_en_dias
+                rec.dias = 1
             else:
                 rec.dias = 0
 
