@@ -3,7 +3,7 @@
     <template id="report_account_report_template">
         <t t-call="web.external_layout">
 
-
+            <t t-set="o" t-value="o.with_context(lang=lang)"/>
             <table width="100%" style="font-size:12px; border-collapse: collapse;padding: 5px;" id="company_address_data">
                 <tr>
                     <td width="30%" style="vertical-align: middle;text-align: center;">
