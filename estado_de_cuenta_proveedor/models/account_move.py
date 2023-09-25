@@ -19,8 +19,7 @@ class AccountMove(models.Model):
                 fecha_dt2 = datetime(fecha_limite.year, fecha_limite.month, fecha_limite.day)
                 #raise UserError("Fecha límite %s" %tipo_fecha_limite)
                 diferencia_dt = fecha_dt - fecha_dt2
-                diferencia_int = int(diferencia_dt)
-                diferencia_str = str(diferencia_int)
+                diferencia_str = datetime.strptime(diferencia_dt, '%d')
                 raise UserError("diferencia %s" %diferencia_str)
                 #diferencia_en_dias = diferencia.days
                 #rec.dias = diferencia_en_dias
