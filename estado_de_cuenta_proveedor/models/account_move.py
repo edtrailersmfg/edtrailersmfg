@@ -16,6 +16,7 @@ class AccountMove(models.Model):
             if rec.invoice_date_due:
                 #fecha_limite = datetime.strptime(rec.invoice_date_due, "%Y-%m-%d")
                 fecha_limite = rec.invoice_date_due
+                fecha_dt2 = datetime(fecha_limite.year, fecha_limite.month, fecha_limite.day)
                 #raise UserError("Fecha límite %s" %tipo_fecha_limite)
                 diferencia = fecha_dt - fecha_limite
                 raise UserError("diferencia %s" %diferencia)
