@@ -12,7 +12,7 @@
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">estado_de_cuenta.report_account_report</field>
             <field name="report_file">estado_de_cuenta.report_account_report</field>
-            <field name="print_report_name">'Estado de Cuenta'</field>
+            <field name="print_report_name">'account status'</field>
             <field name="binding_type">report</field>
         </record>
 
@@ -21,8 +21,8 @@
             <field name="model">account.report.wizard</field>
             <field name="report_type">xlsx</field>
             <field name="report_name">estado_de_cuentas.report_account_report_excel</field>
-            <field name="report_file">Reporte Facturas</field>
-            <field name="print_report_name">'Estado Cuenta'</field>
+            <field name="report_file">Invoice Report</field>
+            <field name="print_report_name">'account status'</field>
             <field name="binding_type">report</field>
         </record>
 
