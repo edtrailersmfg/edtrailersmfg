@@ -76,8 +76,8 @@
                                             <t t-set="tc" t-value="1"/>
                                     </t>
 
-                                    <t t-set="total_mxn" t-value="tc * data.amount_total"/>
-                                    <t t-set="saldo_mxn" t-value="tc * data.amount_residual"/>
+                                    <t t-set="total_mxn" t-value="tc*data.amount_total"/>
+                                    <t t-set="saldo_mxn" t-value="tc*data.amount_residual"/>
 
                                     <td align="right"><span t-field="saldo_mxn"/></td>
                                     <td align="right"><span t-field="saldo_mxn"/></td>
