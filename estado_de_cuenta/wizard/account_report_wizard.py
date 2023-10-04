@@ -25,12 +25,12 @@ class AccounutReportWizard(models.TransientModel):
             ('state', '=', 'posted'),
             ('move_type', '=', 'out_invoice'),
             ('currency_id', '=', 'USD'),
+            ('invoice_date', '>=', self.start_date),
+            ('invoice_date', '<=', self.end_date),
         ]
         if docs.customer:
             domain.append(
                 ('partner_id', '=', docs.customer.id),
-                ('invoice_date', '>=', docs.start_date),    
-                ('invoice_date', '<=', docs.end_date),
             )
         move_ids = AccountMove.search(domain)
         return move_ids
