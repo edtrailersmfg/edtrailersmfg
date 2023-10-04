@@ -75,10 +75,10 @@
                                     <t t-if="data.currency_id.name=='MXN'">
                                             <t t-set="tc" t-value="1"/>
                                     </t>
-<!--
+
                                     <t t-set="total_mxn" t-value="tc*data.amount_total"/>
                                     <t t-set="saldo_mxn" t-value="tc*data.amount_residual"/>
--->
+
                                     <td align="right"><span t-esc="saldo_mxn"/></td>
                                     <td align="right"><span t-esc="saldo_mxn"/></td>
 
