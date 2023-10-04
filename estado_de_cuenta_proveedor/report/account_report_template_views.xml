@@ -37,10 +37,12 @@
                                 <th>Factura</th>
                                 <th>Ref</th>
                                 <th>Fecha</th>
-                                <th>Vencimiento</th>
-                                <th>Días V.</th>
+                                <th>Venc.</th>
+                                <th>Días</th>
                                 <th>Total</th>
                                 <th>Saldo</th>                                
+                                <th>Total MXN</th>
+                                <th>Saldo MXN</th>
                                 <th>T.C.</th>
                             </tr>
                         </thead>
@@ -49,20 +51,44 @@
                             <t t-set="importe_saldo" t-value="0.00"/>
                             <t t-set="i" t-value="0"/>
                             <t t-set="suma_tipo_cambio" t-value="0"/>
+                            <t t-set="tipo_cambio" t-value="1"/>
                             <t t-set="tipo_cambio_promedio" t-value="0"/>
+                            <t t-set="total_mxn" t-value="0"/>
+                            <t t-set="saldo_mxn" t-value="0"/>
                             <t t-foreach="move_data" t-as="data">
                                 <tr>
                                     <td><span t-field="data.name"/></td>
                                     <td><span t-field="data.ref"/></td>
                                     <td><span t-field="data.invoice_date"/></td>
                                     <td><span t-field="data.invoice_date_due"/></td>
-                                    <td><span t-field="data.dias"/></td>
+                                    <td>
+                                        <center>
+                                                <span t-field="data.dias"/>
+                                        </center>
+                                    </td>
                                     <td align="right"><span t-field="data.amount_total"/></td>
                                     <td align="right"><span t-field="data.amount_residual"/></td>
-                                    <t t-set="tc" t-value="data.x_studio_tipo_de_cambio"/>
-                                    <td align="right"><t t-esc="'{0:,.2f}'.format(tc)"/></td>
-                                    <t t-set="importe_total" t-value="importe_total+data.amount_total"/>
-                                    <t t-set="importe_saldo" t-value="importe_saldo+data.amount_residual"/>
+                                    
+                                    <t t-if="data.currency_id.name!='MXN'">
+                                            <t t-set="tc" t-value="data.x_studio_tipo_de_cambio"/>
+                                    </t>
+                                    <t t-if="data.currency_id.name=='MXN'">
+                                            <t t-set="tc" t-value="1"/>
+                                    </t>
+
+                                    <t t-set="total_mxn" t-value="tc*data.amount_total"/>
+                                    <t t-set="saldo_mxn" t-value="tc*data.amount_residual"/>
+
+                                    <td align="right"><span t-esc="'{0:,.2f}'.format(saldo_mxn)"/></td>
+                                    <td align="right"><span t-esc="'{0:,.2f}'.format(saldo_mxn)"/></td>
+
+                                    <td align="right">
+                                        <t t-esc="'{0:,.2f}'.format(tc)"/>
+                                        <!-- <span t-field="data.currency_id.name"/> -->
+                                    </td>
+
+                                    <t t-set="importe_total" t-value="importe_total+total_mxn"/>
+                                    <t t-set="importe_saldo" t-value="importe_saldo+saldo_mxn"/>
                                     <t t-set="suma_tipo_cambio" t-value="suma_tipo_cambio+data.x_studio_tipo_de_cambio"/>
                                     <t t-set="i" t-value="i+1"/>
                                 </tr>
@@ -73,12 +99,11 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
+                                <td></td>
+                                <td></td>
                                 <td align="right"><t t-esc="'{0:,.2f}'.format(importe_total)"/></td>
                                 <td align="right"><t t-esc="'{0:,.2f}'.format(importe_saldo)"/></td>
-                                <td>
-                                    <t t-set="tipo_cambio_promedio" t-value="suma_tipo_cambio/i"/>
-                                    <t t-esc="'{0:,.2f}'.format(tipo_cambio_promedio)"/>
-                                </td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>
