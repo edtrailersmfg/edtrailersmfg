@@ -79,8 +79,8 @@
                                     <t t-set="total_mxn" t-value="tc*data.amount_total"/>
                                     <t t-set="saldo_mxn" t-value="tc*data.amount_residual"/>
 
-                                    <td align="right"><span t-esc="saldo_mxn"/></td>
-                                    <td align="right"><span t-esc="saldo_mxn"/></td>
+                                    <td align="right"><span t-esc="'{0:,.2f}'.format(saldo_mxn)"/></td>
+                                    <td align="right"><span t-esc="'{0:,.2f}'.format(saldo_mxn)"/></td>
 
                                     <td align="right">
                                         <t t-esc="'{0:,.2f}'.format(tc)"/>
