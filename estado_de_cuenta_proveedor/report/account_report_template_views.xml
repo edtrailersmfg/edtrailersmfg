@@ -69,9 +69,6 @@
                                     <td align="right"><span t-field="data.amount_total"/></td>
                                     <td align="right"><span t-field="data.amount_residual"/></td>
                                     
-                                    <td align="right"><span t-field="data.total_mxn"/></td>
-                                    <td align="right"><span t-field="data.saldo_mxn"/></td>
-
                                     <t t-if="data.currency_id.name!='MXN'">
                                             <t t-set="tc" t-value="data.x_studio_tipo_de_cambio"/>
                                     </t>
@@ -82,6 +79,8 @@
                                     <t t-set="total_mxn" t-value="tc * data.amount_total"/>
                                     <t t-set="saldo_mxn" t-value="tc * data.amount_residual"/>
 
+                                    <td align="right"><span t-field="saldo_mxn"/></td>
+                                    <td align="right"><span t-field="saldo_mxn"/></td>
 
                                     <td align="right">
                                         <t t-esc="'{0:,.2f}'.format(tc)"/>
