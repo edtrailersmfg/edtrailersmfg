@@ -25,6 +25,8 @@ class AccounutReportWizard(models.TransientModel):
             ('state', '=', 'posted'),
             ('move_type', '=', 'out_invoice'),
             ('currency_id', '=', 'USD'),
+            ('invoice_date', '>=', self.start_date),
+            ('invoice_date', '<=', self.end_date),
         ]
         if docs.customer:
             domain.append(
