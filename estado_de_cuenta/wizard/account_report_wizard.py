@@ -8,9 +8,9 @@ class AccounutReportWizard(models.TransientModel):
     _name = "account.report.wizard"
     _description = "Estado de Cuenta del Cliente"
 
-    customer = fields.Many2one('res.partner', string="Cliente : ")
-    start_date = fields.Datetime(string="Fecha Inicial : ", default=lambda self: fields.datetime.now())
-    end_date = fields.Datetime(string="Fecha Final : ", default=lambda self: fields.datetime.now())
+    customer = fields.Many2one('res.partner', string="Customer : ")
+    start_date = fields.Datetime(string="Initial Date : ", default=lambda self: fields.datetime.now())
+    end_date = fields.Datetime(string="Final Date : ", default=lambda self: fields.datetime.now())
 
     def action_get_report_values(self):
         return self.env.ref('estado_de_cuenta.action_report_account_report').report_action(self)
@@ -24,9 +24,6 @@ class AccounutReportWizard(models.TransientModel):
         domain = [
             ('state', '=', 'posted'),
             ('move_type', '=', 'out_invoice'),
-            ('payment_state', '!=', 'paid'),
-            ('payment_state', '!=', 'in_payment'),
-            ('payment_state', '!=', 'reversed'),
             ('currency_id', '=', 'USD'),
         ]
         if docs.customer:
@@ -35,23 +32,4 @@ class AccounutReportWizard(models.TransientModel):
             )
         move_ids = AccountMove.search(domain)
         return move_ids
-
-    def _get_move_data_report_values2(self):
-        docs = self
-        AccountMove = self.env['account.move']
-        domain = [
-            ('state', '=', 'posted'),
-            ('move_type', '=', 'out_invoice'),
-            ('payment_state', '!=', 'paid'),
-            ('payment_state', '!=', 'in_payment'),
-            ('payment_state', '!=', 'reversed'),
-            ('currency_id', '=', 'MXN'),
-        ]
-        if docs.customer:
-            domain.append(
-                ('partner_id', '=', docs.customer.id),
-            )
-        move_ids = AccountMove.search(domain)
-        return move_ids
-
 
