@@ -8,7 +8,7 @@
 
         <record id="action_report_account_report" model="ir.actions.report">
             <field name="name">Estado de Cuenta</field>
-            <field name="model">account.report.wizard</field>
+            <field name="model">account.report.wizard.customer</field>
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">estado_de_cuenta.report_account_report</field>
             <field name="report_file">estado_de_cuenta.report_account_report</field>
@@ -18,7 +18,7 @@
 
         <record id="action_report_account_report_xlsx" model="ir.actions.report">
             <field name="name">Estado de Cuenta (en XLSX)</field>
-            <field name="model">account.report.wizard</field>
+            <field name="model">account.report.wizard.customer</field>
             <field name="report_type">xlsx</field>
             <field name="report_name">estado_de_cuentas.report_account_report_excel</field>
             <field name="report_file">Invoice Report</field>

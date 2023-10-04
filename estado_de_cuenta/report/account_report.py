@@ -8,11 +8,11 @@ class ReportInvoiceWithPayment(models.AbstractModel):
 
     @api.model
     def _get_report_values(self, docids, data=None):
-        docs = self.env['account.report.wizard'].browse(docids)
+        docs = self.env['account.report.wizard.customer'].browse(docids)
         move_data = docs._get_move_data_report_values()
         return {
             'doc_ids': docids,
-            'doc_model': 'account.report.wizard',
+            'doc_model': 'account.report.wizard.customer',
             'docs': docs,
             'move_data': move_data,
         }

@@ -2,8 +2,8 @@
 <odoo>
 
     <record id="view_account_report_wizard_form" model="ir.ui.view">
-        <field name="name">account.report.wizard.form</field>
-        <field name="model">account.report.wizard</field>
+        <field name="name">account.report.wizard.customer.form</field>
+        <field name="model">account.report.wizard.customer</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
@@ -32,7 +32,7 @@
 
     <record id='account_report_wizard_action' model='ir.actions.act_window'>
         <field name="name">Estado de Cuenta del Cliente</field>
-        <field name="res_model">account.report.wizard</field>
+        <field name="res_model">account.report.wizard.customer</field>
         <field name="type">ir.actions.act_window</field>
         <field name="view_mode">form</field>
         <field name="target">new</field>

@@ -5,7 +5,7 @@ from openerp.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
 
 
 class AccounutReportWizard(models.TransientModel):
-    _name = "account.report.wizard"
+    _name = "account.report.wizard.customer"
     _description = "Estado de Cuenta del Cliente"
 
     customer = fields.Many2one('res.partner', string="Customer", domain="[('customer_rank', '>', 0)]")
