@@ -10,6 +10,8 @@
                     <group>
                         <group>
                             <field name="customer"/>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
                         </group>
                     </group>
                     <footer>
