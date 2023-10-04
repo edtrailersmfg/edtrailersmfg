@@ -74,7 +74,7 @@
                                     </t>
                                     <td align="right">
                                         <t t-esc="'{0:,.2f}'.format(tc)"/>
-                                        <span t-field="data.currency_id.name"/>
+                                        <!-- <span t-field="data.currency_id.name"/> -->
                                     </td>
                                     <t t-set="importe_total" t-value="importe_total+data.amount_total"/>
                                     <t t-set="importe_saldo" t-value="importe_saldo+data.amount_residual"/>
