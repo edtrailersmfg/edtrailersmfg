@@ -87,10 +87,8 @@
                                         <!-- <span t-field="data.currency_id.name"/> -->
                                     </td>
 
-                                    <t t-set="importe_total" t-value="importe_total+data.amount_total"/>
-                                    <t t-set="importe_saldo" t-value="importe_saldo+data.amount_residual"/>
-                                    <t t-set="importe_total" t-value="importe_total+data.amount_total"/>
-                                    <t t-set="importe_saldo" t-value="importe_saldo+data.amount_residual"/>
+                                    <t t-set="importe_total" t-value="importe_total+total_mxn"/>
+                                    <t t-set="importe_saldo" t-value="importe_saldo+saldo_mxn"/>
                                     <t t-set="suma_tipo_cambio" t-value="suma_tipo_cambio+data.x_studio_tipo_de_cambio"/>
                                     <t t-set="i" t-value="i+1"/>
                                 </tr>
@@ -101,13 +99,12 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td align="right"><t t-esc="'{0:,.2f}'.format(importe_total)"/></td>
-                                <td align="right"><t t-esc="'{0:,.2f}'.format(importe_saldo)"/></td>
                                 <td>
-                                    <t t-set="tipo_cambio_promedio" t-value="suma_tipo_cambio/i"/>
-                                    <t t-esc="'{0:,.2f}'.format(tipo_cambio_promedio)"/>
+                                    <td align="right"><t t-esc="'{0:,.2f}'.format(importe_total)"/></td>
                                 </td>
-                                <td></td>
+                                <td>
+                                    <td align="right"><t t-esc="'{0:,.2f}'.format(importe_saldo)"/></td>
+                                </td>
                                 <td></td>
                             </tr>
                         </tbody>
