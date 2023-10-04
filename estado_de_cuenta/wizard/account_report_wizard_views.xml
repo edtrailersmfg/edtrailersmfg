@@ -13,7 +13,7 @@
                         </group>
                     </group>
                     <footer>
-                        <button string="Imprimir PDF" name="action_get_report_values"
+                        <button string="Print Report in PDF" name="action_get_report_values"
                                 type="object"
                                 class="btn-primary"/>
                     <!--
