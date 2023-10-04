@@ -8,7 +8,7 @@ class AccounutReportWizard(models.TransientModel):
     _name = "account.report.wizard"
     _description = "Estado de Cuenta del Cliente"
 
-    customer = fields.Many2one('res.partner', string="Customer : ")
+    customer = fields.Many2one('res.partner', string="Select Customer")
     start_date = fields.Datetime(string="Initial Date : ", default=lambda self: fields.datetime.now())
     end_date = fields.Datetime(string="Final Date : ", default=lambda self: fields.datetime.now())
 
