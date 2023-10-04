@@ -27,6 +27,8 @@ class AccounutReportWizard(models.TransientModel):
             ('payment_state', '!=', 'paid'),
             ('payment_state', '!=', 'in_payment'),
             ('payment_state', '!=', 'reversed'),
+            ('invoice_date', '>=', self.start_date),
+            ('invoice_date', '<=', self.end_date),
         ]
         if docs.supplier:
             domain.append(

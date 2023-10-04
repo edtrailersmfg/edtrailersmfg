@@ -99,6 +99,8 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
+                                <td></td>
+                                <td></td>
                                 <td align="right"><t t-esc="'{0:,.2f}'.format(importe_total)"/></td>
                                 <td align="right"><t t-esc="'{0:,.2f}'.format(importe_saldo)"/></td>
                                 <td></td>
