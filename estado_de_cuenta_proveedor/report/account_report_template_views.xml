@@ -38,7 +38,7 @@
                                 <th>Ref</th>
                                 <th>Fecha</th>
                                 <th>Venc.</th>
-                                <th>Días V.</th>
+                                <th>Días</th>
                                 <th>Total</th>
                                 <th>Saldo</th>                                
                                 <th>Total MXN</th>
@@ -51,6 +51,7 @@
                             <t t-set="importe_saldo" t-value="0.00"/>
                             <t t-set="i" t-value="0"/>
                             <t t-set="suma_tipo_cambio" t-value="0"/>
+                            <t t-set="tipo_cambio" t-value="1"/>
                             <t t-set="tipo_cambio_promedio" t-value="0"/>
                             <t t-foreach="move_data" t-as="data">
                                 <tr>
@@ -65,8 +66,15 @@
                                     </td>
                                     <td align="right"><span t-field="data.amount_total"/></td>
                                     <td align="right"><span t-field="data.amount_residual"/></td>
-                                    <t t-set="tc" t-value="data.x_studio_tipo_de_cambio"/>
-                                    <td align="right"><t t-esc="'{0:,.2f}'.format(tc)"/></td>
+                                    <t t-if="data.currency_id.name!='MXN'">
+                                            <t t-set="tc" t-value="data.x_studio_tipo_de_cambio"/>
+                                    </t>
+                                    <t t-if="data.currency_id.name=='MXN'">
+                                            <t t-set="tc" t-value="1"/>
+                                    </t>
+                                    <td align="right">
+                                        <t t-esc="'{0:,.2f}'.format(tc)"/>
+                                    </td>
                                     <t t-set="importe_total" t-value="importe_total+data.amount_total"/>
                                     <t t-set="importe_saldo" t-value="importe_saldo+data.amount_residual"/>
                                     <t t-set="importe_total" t-value="importe_total+data.amount_total"/>
