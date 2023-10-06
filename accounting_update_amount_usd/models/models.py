@@ -71,8 +71,8 @@ class RegisterPayments(models.Model):
 		tc = location_model.search([("currency_id", "=", "USD"),("name","=",current_date)])
 
 		reg = self.env['res.currency.rate'].search([('id', '>', 0)], limit=1, order="id desc")
-        if reg:
-        	for record in reg:
+		if reg:
+			for record in reg:
 				#raise UserError("Fecha %s" % (record.inverse_company_rate) )
 				tipo_de_cambio = record.inverse_company_rate
 				fecha_tipocambio = record.create_date
