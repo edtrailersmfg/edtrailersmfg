@@ -21,7 +21,7 @@ class ProductTemplate(models.Model):
 	#	self.fecha_tc = date.today()
 
 	def _compute_tipo_cambio(self):
-        reg = self.env['res.currency.rate'].search([('id', '>', 0)], limit=1, order="id desc")
+		reg = self.env['res.currency.rate'].search([('id', '>', 0)], limit=1, order="id desc")
         if reg:
             for record in reg:
                 #raise UserError("Fecha %s" % (record.inverse_company_rate) )
