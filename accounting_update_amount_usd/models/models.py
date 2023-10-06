@@ -21,17 +21,6 @@ class ProductTemplate(models.Model):
 	#	self.fecha_tc = date.today()
 
 	def _compute_tipo_cambio(self):
-		#if self.invoice_date:
-		#	current_date = self.invoice_date
-		#else:
-		#	current_date = str(datetime.now().date())
-		#location_model = self.env["res.currency.rate"]
-		#tc = location_model.search([("currency_id", "=", "USD"),("name","=",current_date)])
-
-        ############
-        # VAMOS A OBTENER EL TIPO DE CAMBIO 
-        ############
-
         reg = self.env['res.currency.rate'].search([('id', '>', 0)], limit=1, order="id desc")
         if reg:
             for record in reg:
@@ -91,7 +80,7 @@ class RegisterPayments(models.Model):
                 #raise UserError("Fecha %s" % (record.inverse_company_rate) )
                 tipo_de_cambio = record.inverse_company_rate
                 fecha_tipocambio = record.create_date
-                
+
 		self.tipo_cambio = tipo_de_cambio
 		self.fecha_tc = fecha_tipocambio
 		self.x_studio_tc = tipo_de_cambio
