@@ -70,11 +70,7 @@ class RegisterPayments(models.Model):
 		location_model = self.env["res.currency.rate"]
 		tc = location_model.search([("currency_id", "=", "USD"),("name","=",current_date)])
 
-        ############
-        # VAMOS A OBTENER EL TIPO DE CAMBIO 
-        ############
-
-        reg = self.env['res.currency.rate'].search([('id', '>', 0)], limit=1, order="id desc")
+		reg = self.env['res.currency.rate'].search([('id', '>', 0)], limit=1, order="id desc")
         if reg:
         	for record in reg:
 				#raise UserError("Fecha %s" % (record.inverse_company_rate) )
