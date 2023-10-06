@@ -22,11 +22,11 @@ class ProductTemplate(models.Model):
 
 	def _compute_tipo_cambio(self):
 		reg = self.env['res.currency.rate'].search([('id', '>', 0)], limit=1, order="id desc")
-        if reg:
-            for record in reg:
-                #raise UserError("Fecha %s" % (record.inverse_company_rate) )
-                tipo_de_cambio = record.inverse_company_rate
-                fecha_tipocambio = record.create_date
+		if reg:
+			for record in reg:
+				#raise UserError("Fecha %s" % (record.inverse_company_rate) )
+				tipo_de_cambio = record.inverse_company_rate
+				fecha_tipocambio = record.create_date
 
 		self.tipo_cambio = tipo_de_cambio
 		self.fecha_tc = fecha_tipocambio
