@@ -37,15 +37,15 @@ class ProductTemplate(models.Model):
 			if len(self) == 1:
 				if record.tipo_cambio > 0:
 					record.importe_usd = record.amount_total_signed / record.tipo_cambio
-					if record.currency_id.name == "USD":
-						record.amount_total_in_currency_signed = record.importe_usd
+					#if record.currency_id.name == "USD":
+					#	record.amount_total_in_currency_signed = record.importe_usd
 
 	def _compute_importe_mxn(self):
 		for record in self:
 			if len(self) == 1:
 				if record.tipo_cambio > 0:
 					record.importe_mxn = record.amount_total_signed * ( record.tipo_cambio / record.tipo_cambio )
-					if record.currency_id.name == "MXN":
-						record.amount_total_in_currency_signed = record.importe_mxn
+					#if record.currency_id.name == "MXN":
+					#	record.amount_total_in_currency_signed = record.importe_mxn
 
 
