@@ -1,0 +1,17 @@
+<odoo>
+	<!-- vista form -->
+	<record id="view_purchase_order_update_amount_usd_form" model="ir.ui.view">
+		<field name="name">view.purchase.order.update.amount.usd.form</field>
+		<field name="model">purchase.order</field>
+		<field name="inherit_id" ref="purchase.purchase_order_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='currency_id']" position="after">
+				<field name="fecha_tc"/>
+				<field name="tipo_cambio"/>
+				<field name="importe_usd"/>
+				<field name="importe_mxn"/>
+			</xpath>
+		</field>
+	</record>
+	<!-- vista form -->
+</odoo>
