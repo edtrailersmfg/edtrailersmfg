@@ -24,9 +24,9 @@ class ProductTemplate(models.Model):
 	@api.onchange('tipo_cambio')
 	def on_change_tipo_cambio(self):
 		for record in self:
-		if self.tipo_cambio > 0:
-			record.importe_usd = self.amount_total / self.tipo_cambio
-			record.importe_mxn = self.amount_total * ( self.tipo_cambio / self.tipo_cambio )
+			if self.tipo_cambio > 0:
+				record.importe_usd = self.amount_total / self.tipo_cambio
+				record.importe_mxn = self.amount_total * ( self.tipo_cambio / self.tipo_cambio )
 
 	#def _compute_tipo_cambio(self):
 		#reg = self.env['res.currency.rate'].search([('id', '>', 0)], limit=1, order="id desc")
