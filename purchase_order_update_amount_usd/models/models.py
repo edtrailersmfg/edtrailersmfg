@@ -30,7 +30,7 @@ class ProductTemplate(models.Model):
 
 		self.tipo_cambio = tipo_de_cambio
 		self.fecha_tc = fecha_tipocambio
-		self.x_studio_tipo_de_cambio = tipo_de_cambio
+		#self.x_studio_tipo_de_cambio = tipo_de_cambio
 
 	def _compute_importe_usd(self):
 		for record in self:
