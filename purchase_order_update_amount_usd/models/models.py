@@ -58,3 +58,15 @@ class ProductTemplate(models.Model):
 					#record.importe_mxn = record.amount_total * ( record.tipo_cambio / record.tipo_cambio )
 					#if record.currency_id.name == "MXN":
 					#	record.amount_total_in_currency_signed = record.importe_mxn
+
+
+
+class RequisitionTemplate(models.Model):
+
+	_inherit ='purchase.requisition'
+
+	#fecha_tc = fields.Date(compute="_compute_fecha", string="Fecha Tipo Cambio")
+	fecha_tc = fields.Date(string="Fecha TC")
+	tipo_cambio = fields.Float(string="Tipo Cambio", default=1)
+	importe_usd = fields.Float(string="Importe USD")
+	importe_mxn = fields.Float(string="Importe MXN")
