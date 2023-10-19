@@ -8,8 +8,8 @@
 			<xpath expr="//field[@name='currency_id']" position="after">
 				<field name="fecha_tc"/>
 				<field name="tipo_cambio"/>
-				<field name="importe_usd" readonly="1"/>
-				<field name="importe_mxn" readonly="1"/>
+				<field name="importe_usd"/>
+				<field name="importe_mxn"/>
 			</xpath>
 		</field>
 	</record>
