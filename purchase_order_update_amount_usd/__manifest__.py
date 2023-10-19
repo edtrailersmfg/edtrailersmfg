@@ -15,7 +15,7 @@ Update Amount in USD and MXN in Purchase Order depending of USD daily rate
     """,
     'category': 'Accounting/Accounting',
     'website': 'https://www.odoo.com',
-    'depends' : ['base','product','account'],
+    'depends' : ['base','product','account','purchase'],
     'data': [
         'views/views.xml',
     ],
