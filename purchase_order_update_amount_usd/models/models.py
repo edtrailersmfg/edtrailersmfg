@@ -20,7 +20,6 @@ class ProductTemplate(models.Model):
 	#def _compute_fecha(self):
 	#	self.fecha_tc = date.today()
 
-	@api.multi
 	@api.onchange('tipo_cambio')
 	def on_change_tipo_cambio(self):
 		for record in self:
