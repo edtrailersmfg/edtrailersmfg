@@ -22,14 +22,13 @@ class ProductTemplate(models.Model):
 
 	@api.onchange('tipo_cambio')
 	def on_change_tipo_cambio(self):
-		for record in self:
-			if self.tipo_cambio > 0:
-				if record.currency_id.name == "MXN":
-					record.importe_usd = record.amount_total / record.tipo_cambio
-					record.importe_mxn = record.amount_total
-				else:
-					record.importe_usd = record.amount_total
-					record.importe_mxn = record.amount_total * record.tipo_cambio
+		if self.tipo_cambio > 0:
+			if self.currency_id.name == "MXN":
+				self.importe_usd = self.amount_total / self.tipo_cambio
+				self.importe_mxn = self.amount_total
+			else:
+				self.importe_usd = self.amount_total
+				self.importe_mxn = self.amount_total * self.tipo_cambio
 
 	#def _compute_tipo_cambio(self):
 		#reg = self.env['res.currency.rate'].search([('id', '>', 0)], limit=1, order="id desc")
