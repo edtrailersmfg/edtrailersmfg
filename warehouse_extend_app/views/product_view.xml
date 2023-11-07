@@ -19,7 +19,7 @@
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_tree_view"/>
         <field name="arch" type="xml">
-            <div name="name" position="after">
+            <div name="default_code" position="after">
                 <field name="warehouse_quantity"/>
             </div>
         </field>
