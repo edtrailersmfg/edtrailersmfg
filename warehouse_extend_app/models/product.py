@@ -36,7 +36,8 @@ class ProductTemplate(models.Model):
                             tt_warehouses.update({warehouse_id.name:0})
                         tt_warehouses[warehouse_id.name] += t_warehouses[location]
 
+                i = 0
                 for item in tt_warehouses:
                     if tt_warehouses[item] != 0:
-                        warehouse_quantity_text = warehouse_quantity_text + ' > ' + item + ': ' + str(tt_warehouses[item]) + '.\n'
+                        warehouse_quantity_text = warehouse_quantity_text + " (" + i + ") " + item + ": " + str(tt_warehouses[item]) + "\n"
                 record.warehouse_quantity = warehouse_quantity_text
