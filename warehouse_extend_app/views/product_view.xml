@@ -15,13 +15,13 @@
 
     <!--Ampliando la vista tree existente para el campo Cantidad por almacén-->
     <record id="product_template_tree_view_inherit_warehouse_quantity" model="ir.ui.view">
-        <field name="name">product.template.tree.warehouse.quantity</field>
+        <field name="name">product.template.tree.view.inherit.warehouse.quantity</field>
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_tree_view"/>
         <field name="arch" type="xml">
-            <div name="default_code" position="after">
+            <xpath expr="//field[@name='default_code']" position="after">
                 <field name="warehouse_quantity"/>
-            </div>
+            </xpath>
         </field>
     </record>
 
