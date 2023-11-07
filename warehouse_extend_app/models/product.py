@@ -38,5 +38,5 @@ class ProductTemplate(models.Model):
 
                 for item in tt_warehouses:
                     if tt_warehouses[item] != 0:
-                        warehouse_quantity_text = warehouse_quantity_text + " " + item + ": " + str(tt_warehouses[item]) + "/n"
+                        warehouse_quantity_text = warehouse_quantity_text + " " + item + ": " + str(tt_warehouses[item]) + " / "
                 record.warehouse_quantity = warehouse_quantity_text
