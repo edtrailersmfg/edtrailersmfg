@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!--Extending existing form view for Quantity per Warehouse field-->
+    <!--Ampliando la vista de formulario existente para el campo Cantidad por almacén-->
     <record id="product_template_form_view_inherit_warehouse_quantity" model="ir.ui.view">
         <field name="name">product.template.common.form.warehouse.quantity</field>
         <field name="model">product.template</field>
@@ -13,7 +13,7 @@
         </field>
     </record>
 
-    <!--Extending existing kanban view for Quantity per Warehouse field-->
+    <!--Ampliando la vista kanban existente para el campo Cantidad por almacén-->
     <record id="product_template_kanban_view_inherit_warehouse_quantity" model="ir.ui.view">
         <field name="name">product.template.kanban.warehouse.quantity</field>
         <field name="model">product.template</field>
