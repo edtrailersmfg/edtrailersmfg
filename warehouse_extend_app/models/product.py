@@ -5,7 +5,7 @@ from odoo import api, fields, models, _
 class ProductTemplate(models.Model):
     _inherit = "product.template"
 
-    warehouse_quantity = fields.Char(compute='_get_warehouse_quantity', string='Disponible por Almacén')
+    warehouse_quantity = fields.Html(compute='_get_warehouse_quantity', string='Disponible por Almacén')
 
     def _get_warehouse_quantity(self):
         for record in self:
@@ -38,5 +38,5 @@ class ProductTemplate(models.Model):
 
                 for item in tt_warehouses:
                     if tt_warehouses[item] != 0:
-                        warehouse_quantity_text = warehouse_quantity_text + " " + item + ": " + str(tt_warehouses[item]) + " / "
+                        warehouse_quantity_text = warehouse_quantity_text + " " + item + ": " + str(tt_warehouses[item]) + "\n"
                 record.warehouse_quantity = warehouse_quantity_text
