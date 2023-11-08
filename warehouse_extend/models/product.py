@@ -40,9 +40,15 @@ class ProductTemplate(models.Model):
                 for item in tt_warehouses:
                     #if tt_warehouses[item] != 0:
                     if (item == "ALMACEN DE MATERIALES"):
-                        warehouse_quantity = tt_warehouses[item]
-                        record.warehouse01_quantity = warehouse_quantity
+                        if tt_warehouses[item] != 0:
+                            warehouse_quantity = tt_warehouses[item]
+                            record.warehouse01_quantity = warehouse_quantity
+                        else:
+                            record.warehouse01_quantity = 0
                     if (item == "ALMACEN EN PROCESO"):
-                        warehouse_quantity = tt_warehouses[item]
-                        record.warehouse02_quantity = warehouse_quantity
+                        if tt_warehouses[item] != 0:
+                            warehouse_quantity = tt_warehouses[item]
+                            record.warehouse02_quantity = warehouse_quantity
+                        else:
+                            record.warehouse02_quantity = 0
 
