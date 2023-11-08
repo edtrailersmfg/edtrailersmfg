@@ -38,11 +38,11 @@ class ProductTemplate(models.Model):
                         tt_warehouses[warehouse_id.name] += t_warehouses[location]
 
                 for item in tt_warehouses:
-                    if tt_warehouses[item] != 0:
-                        if (item == "ALMACEN DE MATERIALES"):
-                            warehouse_quantity_text = str(tt_warehouses[item])
-                            record.warehouse01_quantity = warehouse_quantity_text
-                        if (item == "ALMACEN EN PROCESO"):
-                            warehouse_quantity_text = str(tt_warehouses[item])
-                            record.warehouse02_quantity = warehouse_quantity_text
+                    #if tt_warehouses[item] != 0:
+                    if (item == "ALMACEN DE MATERIALES"):
+                        warehouse_quantity_text = str(tt_warehouses[item])
+                        record.warehouse01_quantity = warehouse_quantity_text
+                    if (item == "ALMACEN EN PROCESO"):
+                        warehouse_quantity_text = str(tt_warehouses[item])
+                        record.warehouse02_quantity = warehouse_quantity_text
 
