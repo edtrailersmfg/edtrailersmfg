@@ -19,7 +19,7 @@
         'report_xlsx'
     ],
     "data": [
-        'security/ir.model.access.csv',
+        #'security/ir.model.access.csv',
         'wizard/account_report_wizard_views.xml',
         'report/account_report_template_views.xml',
         'report/account_report.xml',
