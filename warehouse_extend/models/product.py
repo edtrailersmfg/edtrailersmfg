@@ -19,10 +19,10 @@ class ProductTemplate(models.Model):
                 #t_warehouses = {}
                 for quant in quant_ids:
                     if quant.location_id:
-                        raise UserError( quant.location_id[0] )
-                        if quant.location_id == 8:
+                        #raise UserError( quant.location_id[0] )
+                        if quant.location_id[0] == 8:
                             x_warehouse01_quantity = quant.quantity
-                        if quant.location_id == 94:
+                        if quant.location_id[0] == 94:
                             x_warehouse02_quantity = quant.quantity
                 record.warehouse01_quantity = x_warehouse01_quantity
                 record.warehouse02_quantity = x_warehouse02_quantity
