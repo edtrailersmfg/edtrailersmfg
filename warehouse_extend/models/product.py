@@ -47,4 +47,5 @@ class ProductTemplate(models.Model):
                         else:
                             warehouse_quantity_text = item + ": " + str(tt_warehouses[item])
                             record.warehouse02_quantity = warehouse_quantity_text
+                            i = 1
 
