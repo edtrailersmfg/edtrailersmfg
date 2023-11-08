@@ -5,8 +5,8 @@ from odoo import api, fields, models, _
 class ProductTemplate(models.Model):
     _inherit = "product.template"
 
-    warehouse01_quantity = fields.Char(compute='_get_warehouse_quantity', string='Almacén 1')
-    warehouse02_quantity = fields.Char(string='Almacén 2')
+    warehouse01_quantity = fields.Char(compute='_get_warehouse_quantity', string='ALMACEN DE MATERIALES')
+    warehouse02_quantity = fields.Char(string='ALMACEN EN PROCESO')
 
     def _get_warehouse_quantity(self):
         for record in self:
@@ -39,11 +39,11 @@ class ProductTemplate(models.Model):
 
                 for item in tt_warehouses:
                     if tt_warehouses[item] != 0:
-                        if (item.id == 1):
+                        if (item == "ALMACEN DE MATERIALES"):
                             warehouse_quantity_text = str(tt_warehouses[item])
                             record.warehouse01_quantity = warehouse_quantity_text
                             i += 1
-                        if (item.id == 9):
+                        if (item == "ALMACEN EN PROCESO"):
                             warehouse_quantity_text = str(tt_warehouses[item])
                             record.warehouse02_quantity = warehouse_quantity_text
 
