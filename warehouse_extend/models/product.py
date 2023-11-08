@@ -10,7 +10,7 @@ class ProductTemplate(models.Model):
 
     def _get_warehouse_quantity(self):
         for record in self:
-            warehouse_quantity_text = ''
+            warehouse_quantity = 0
             product_id = self.env['product.product'].sudo().search([('product_tmpl_id', '=', record.id)])
             if product_id:
                 quant_ids = self.env['stock.quant'].sudo().search([('product_id','=',product_id[0].id),('location_id.usage','=','internal')])
@@ -40,9 +40,9 @@ class ProductTemplate(models.Model):
                 for item in tt_warehouses:
                     #if tt_warehouses[item] != 0:
                     if (item == "ALMACEN DE MATERIALES"):
-                        warehouse_quantity_text = tt_warehouses[item]
-                        record.warehouse01_quantity = warehouse_quantity_text
+                        warehouse_quantity = tt_warehouses[item]
+                        record.warehouse01_quantity = warehouse_quantity
                     if (item == "ALMACEN EN PROCESO"):
-                        warehouse_quantity_text = tt_warehouses[item]
-                        record.warehouse02_quantity = warehouse_quantity_text
+                        warehouse_quantity = tt_warehouses[item]
+                        record.warehouse02_quantity = warehouse_quantity
 
