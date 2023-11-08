@@ -42,7 +42,6 @@ class ProductTemplate(models.Model):
                         if (item == "ALMACEN DE MATERIALES"):
                             warehouse_quantity_text = str(tt_warehouses[item])
                             record.warehouse01_quantity = warehouse_quantity_text
-                            i += 1
                         if (item == "ALMACEN EN PROCESO"):
                             warehouse_quantity_text = str(tt_warehouses[item])
                             record.warehouse02_quantity = warehouse_quantity_text
