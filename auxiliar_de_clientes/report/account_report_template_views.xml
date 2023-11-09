@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="report_account_report_template">
+    <template id="report_account_report_template_auxiliar_clientes">
         <t t-call="web.external_layout">
 
 
@@ -140,7 +140,7 @@
     <template id="report_account_report">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="doc">
-                <t t-call="estado_de_cuenta.report_account_report_template" t-lang="doc.env.user.lang"/>
+                <t t-call="auxiliar_de_clientes.report_account_report_template_auxiliar_clientes" t-lang="doc.env.user.lang"/>
             </t>
         </t>
     </template>
