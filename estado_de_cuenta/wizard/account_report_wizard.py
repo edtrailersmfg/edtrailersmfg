@@ -22,13 +22,24 @@ class AccounutReportWizard(models.TransientModel):
     def _get_move_data_report_values(self):
         docs = self
         AccountMove = self.env['account.move']
-        domain = [
-            ('state', '=', 'posted'),
-            ('move_type', '=', 'out_invoice'),
-            ('currency_id', '=', 'USD'),
-            ('invoice_date', '>=', self.start_date),
-            ('invoice_date', '<=', self.end_date),            
-        ]
+        if (self.sin_pagar == True):
+            domain = [
+                ('state', '=', 'posted'),
+                ('move_type', '=', 'out_invoice'),
+                ('payment_state', '=', 'not_paid'),
+                ('payment_state', '=', 'partial'),
+                ('currency_id', '=', 'USD'),
+                ('invoice_date', '>=', self.start_date),
+                ('invoice_date', '<=', self.end_date),            
+            ]
+        else:
+            domain = [
+                ('state', '=', 'posted'),
+                ('move_type', '=', 'out_invoice'),
+                ('currency_id', '=', 'USD'),
+                ('invoice_date', '>=', self.start_date),
+                ('invoice_date', '<=', self.end_date),            
+            ]            
         if docs.customer:
             domain.append(
                 ('partner_id', '=', docs.customer.id),
