@@ -11,6 +11,7 @@ class AccounutReportWizard(models.TransientModel):
     customer = fields.Many2one('res.partner', string="Cliente : ")
     start_date = fields.Datetime(string="Fecha Inicial : ", default=lambda self: fields.datetime.now())
     end_date = fields.Datetime(string="Fecha Final : ", default=lambda self: fields.datetime.now())
+    sin_pagar = fields.Boolean(string="Mostrar solo pendientes de pago", default=False)
 
     def action_get_report_values(self):
         return self.env.ref('estado_de_cuenta.action_report_account_report').report_action(self)
