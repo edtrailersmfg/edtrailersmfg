@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api, _
 
-
-class ReportInvoiceWithPayment(models.AbstractModel):
+class ReportInvoices(models.AbstractModel):
     _name = 'report.auxiliar_de_clientes.report_account_report'
     _description = 'Auxiliar de Clientes'
 
