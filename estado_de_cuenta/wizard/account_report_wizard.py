@@ -28,6 +28,7 @@ class AccounutReportWizard(models.TransientModel):
                 ('move_type', '=', 'out_invoice'),
                 ('payment_state', '!=', 'paid'),
                 ('payment_state', '!=', 'reversed'),
+                ('payment_state', '!=', 'in_payment'),
                 ('currency_id', '=', 'USD'),
                 ('invoice_date', '>=', self.start_date),
                 ('invoice_date', '<=', self.end_date),            
