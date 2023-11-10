@@ -24,8 +24,6 @@
             </table>
             <p></p>   
 
-
-
             <t t-foreach="doc" t-as="o">
                 <div class="mb-2 ml-1 mt-2 row">
                     Fecha Inicial : 

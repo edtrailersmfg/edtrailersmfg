@@ -4,7 +4,7 @@ from datetime import timedelta, datetime
 from openerp.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
 
 
-class AccounutReportWizard(models.TransientModel):
+class AccountReportWizard(models.TransientModel):
     _name = "account.report.wizard.auxiliar.cliente"
     _description = "Auxiliar de Clientes"
 
