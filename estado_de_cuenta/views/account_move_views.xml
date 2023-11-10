@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_move_form" model="ir.ui.view">
+        <field name="name">account.move.view.buttons</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@id='invoice_tab']//field[@name='invoice_line_ids']//field[@name='price_total']"
+                   position="after">
+                <field name="cost_amount" optional="hide" invisible="1"/>
+                <field name="profit" optional="hide" invisible="1"/>
+                <field name="margin" optional="hide" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='line_ids']//field[@name='account_id']"
+                   position="after">
+                <field name="cost_amount" invisible="1"/>
+                <field name="profit" invisible="1"/>
+                <field name="margin" invisible="1"/>
+            </xpath>
+            <xpath expr="//page[@id='invoice_tab']//field[@name='amount_residual']" position="after">
+                <field name="cost_amount" invisible="1"/>
+                <field name="profit" invisible="1"/>
+                <field name="margin" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
