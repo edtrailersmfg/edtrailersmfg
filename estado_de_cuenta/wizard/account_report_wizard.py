@@ -24,10 +24,9 @@ class AccounutReportWizard(models.TransientModel):
         domain = [
             ('state', '=', 'posted'),
             ('move_type', '=', 'out_invoice'),
-            ('payment_state', '!=', 'paid'),
-            ('payment_state', '!=', 'in_payment'),
-            ('payment_state', '!=', 'reversed'),
             ('currency_id', '=', 'USD'),
+            ('invoice_date', '>=', self.start_date),
+            ('invoice_date', '<=', self.end_date),            
         ]
         if docs.customer:
             domain.append(
@@ -42,10 +41,9 @@ class AccounutReportWizard(models.TransientModel):
         domain = [
             ('state', '=', 'posted'),
             ('move_type', '=', 'out_invoice'),
-            ('payment_state', '!=', 'paid'),
-            ('payment_state', '!=', 'in_payment'),
-            ('payment_state', '!=', 'reversed'),
             ('currency_id', '=', 'MXN'),
+            ('invoice_date', '>=', self.start_date),
+            ('invoice_date', '<=', self.end_date),            
         ]
         if docs.customer:
             domain.append(
