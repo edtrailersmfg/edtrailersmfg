@@ -24,6 +24,7 @@ class AccounutReportWizard(models.TransientModel):
         domain = [
             ('state', '=', 'posted'),
             ('move_type', '=', 'out_invoice'),
+            ('move_type', '=', 'out_refund'),
             ('currency_id', '=', 'USD'),
             ('invoice_date', '>=', self.start_date),
             ('invoice_date', '<=', self.end_date),
