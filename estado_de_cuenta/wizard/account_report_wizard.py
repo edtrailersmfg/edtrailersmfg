@@ -23,8 +23,11 @@ class AccounutReportWizard(models.TransientModel):
         AccountMove = self.env['account.move']
         domain = [
             ('state', '=', 'posted'),
-            ('move_type', '=', 'out_invoice'),
-            ('move_type', '=', 'out_refund'),
+            ('move_type', '!=', 'entry'),
+            ('move_type', '!=', 'in_invoice'),
+            ('move_type', '!=', 'in_refund'),
+            ('move_type', '!=', 'out_receipt'),
+            ('move_type', '!=', 'in_receipt'),
             ('currency_id', '=', 'USD'),
             ('invoice_date', '>=', self.start_date),
             ('invoice_date', '<=', self.end_date),
