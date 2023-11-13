@@ -29,7 +29,7 @@
             <t t-foreach="doc" t-as="o">
                 <div class="mb-2 ml-1 mt-2 row">
                     Report Date : 
-                    <span class="ml-2 mr-2" t-field="o.start_date"/>
+                    <span class="ml-2 mr-2" t-field="o.report_date"/>
                     <br/>
                     Customer : <span class="ml-2 mr-2" t-field="o.customer.name"/>
                 </div>

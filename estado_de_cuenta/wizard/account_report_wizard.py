@@ -9,8 +9,9 @@ class AccounutReportWizard(models.TransientModel):
     _description = "Estado de Cuenta del Cliente"
 
     customer = fields.Many2one('res.partner', string="Customer", domain="[('customer_rank', '>', 0)]")
-    start_date = fields.Datetime(string="Initial Date : ", default=lambda self: fields.datetime.now())
-    end_date = fields.Datetime(string="Final Date : ", default=lambda self: fields.datetime.now())
+    start_date = fields.Date(string="Initial Date : ", default=lambda self: fields.datetime.now())
+    end_date = fields.Date(string="Final Date : ", default=lambda self: fields.datetime.now())
+    report_date = fields.Date(string="Report Date : ", default=lambda self: fields.datetime.now())
 
     def action_get_report_values(self):
         return self.env.ref('estado_de_cuenta.action_report_account_report').report_action(self)
