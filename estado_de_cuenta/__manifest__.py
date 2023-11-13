@@ -5,8 +5,6 @@
         Estado de Cuenta
         Reporte de Estado de Cuenta del Cliente
         Muestra el listado de Facturas Sin Pago y con Pago Parcial
-
-        15.0.2 se agregan notas de crédito (13/11/2023)
     """,
     "version": "15.0.2",
     "category": "Account",
