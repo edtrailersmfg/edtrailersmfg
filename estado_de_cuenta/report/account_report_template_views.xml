@@ -29,7 +29,7 @@
             <t t-foreach="doc" t-as="o">
                 <div class="mb-2 ml-1 mt-2 row">
                     Report Date : 
-                    <span class="ml-2 mr-2" t-field="o.report_date"/>
+                    <span class="ml-2 mr-2" t-field="o.start_date"/>
                     <br/>
                     Customer : <span class="ml-2 mr-2" t-field="o.customer.name"/>
                 </div>
@@ -52,36 +52,17 @@
                             <t t-set="importe_saldo" t-value="0.00"/>                            
                             <t t-foreach="move_data" t-as="data">
                                 <tr>
-                                    <td>
-                                        <span t-field="data.name"/>
-                                        <t t-if="data.move_type=='out_refund'">(Out Refund)</t>
-                                    </td>
+                                    <td><span t-field="data.name"/></td>
                                     <td><span t-field="data.invoice_date"/></td>
-                                    <td align="right">
-                                        <t t-if="data.move_type=='out_refund'">-</t>
-                                        <span t-field="data.amount_untaxed"/>
-                                    </td>
+                                    <td align="right"><span t-field="data.amount_untaxed"/></td>
                                     <td>
-                                        <t t-if="data.move_type!='out_refund'">
-                                            <span t-field="data.payment_state"/>
-                                        </t>
+                                        <span t-field="data.payment_state"/>
                                     </td>
-                                    <td align="right">
-                                        <t t-if="data.move_type=='out_refund'">-</t>
-                                        <span t-field="data.amount_residual"/>
-                                    </td>
-                                    <t t-if="data.move_type!='out_refund'">
-                                        <t t-set="importe_dolares" t-value="importe_dolares+data.amount_untaxed"/>
-                                        <t t-set="tax_dolares" t-value="tax_dolares+data.amount_tax"/>
-                                        <t t-set="total_dolares" t-value="total_dolares+data.amount_total"/>
-                                        <t t-set="importe_saldo" t-value="importe_saldo+data.amount_residual"/>
-                                    </t>
-                                    <t t-if="data.move_type=='out_refund'">
-                                        <t t-set="importe_dolares" t-value="importe_dolares+(data.amount_untaxed *-1)"/>
-                                        <t t-set="tax_dolares" t-value="tax_dolares+(data.amount_tax *-1)"/>
-                                        <t t-set="total_dolares" t-value="total_dolares+(data.amount_total *-1)"/>
-                                        <t t-set="importe_saldo" t-value="importe_saldo+(data.amount_residual *-1)"/>
-                                    </t>
+                                    <td align="right"><span t-field="data.amount_residual"/></td>
+                                    <t t-set="importe_dolares" t-value="importe_dolares+data.amount_untaxed"/>
+                                    <t t-set="tax_dolares" t-value="tax_dolares+data.amount_tax"/>
+                                    <t t-set="total_dolares" t-value="total_dolares+data.amount_total"/>
+                                    <t t-set="importe_saldo" t-value="importe_saldo+data.amount_residual"/>
                                 </tr>
                             </t>
                             <tr>

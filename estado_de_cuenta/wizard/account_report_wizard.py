@@ -9,9 +9,8 @@ class AccounutReportWizard(models.TransientModel):
     _description = "Estado de Cuenta del Cliente"
 
     customer = fields.Many2one('res.partner', string="Customer", domain="[('customer_rank', '>', 0)]")
-    start_date = fields.Date(string="Initial Date : ", default=lambda self: fields.datetime.now())
-    end_date = fields.Date(string="Final Date : ", default=lambda self: fields.datetime.now())
-    report_date = fields.Date(string="Report Date : ", default=lambda self: fields.datetime.now())
+    start_date = fields.Datetime(string="Initial Date : ", default=lambda self: fields.datetime.now())
+    end_date = fields.Datetime(string="Final Date : ", default=lambda self: fields.datetime.now())
 
     def action_get_report_values(self):
         return self.env.ref('estado_de_cuenta.action_report_account_report').report_action(self)
@@ -24,11 +23,7 @@ class AccounutReportWizard(models.TransientModel):
         AccountMove = self.env['account.move']
         domain = [
             ('state', '=', 'posted'),
-            ('move_type', '!=', 'entry'),
-            ('move_type', '!=', 'in_invoice'),
-            ('move_type', '!=', 'in_refund'),
-            ('move_type', '!=', 'out_receipt'),
-            ('move_type', '!=', 'in_receipt'),
+            ('move_type', '=', 'out_invoice'),
             ('currency_id', '=', 'USD'),
             ('invoice_date', '>=', self.start_date),
             ('invoice_date', '<=', self.end_date),
