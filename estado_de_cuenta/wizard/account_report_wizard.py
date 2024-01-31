@@ -35,3 +35,5 @@ class AccounutReportWizard(models.TransientModel):
         move_ids = AccountMove.search(domain)
         return move_ids
 
+
+

@@ -24,8 +24,6 @@
             </table>
             <p></p>   
 
-
-
             <t t-foreach="doc" t-as="o">
                 <div class="mb-2 ml-1 mt-2 row">
                     Report Date : 
@@ -34,7 +32,6 @@
                     Customer : <span class="ml-2 mr-2" t-field="o.customer.name"/>
                 </div>
                 <div class="page">
-                    Currency: USD<br/>
                     <table class="table table-sm o_main_table">
                         <thead style="display: table-row-group">
                             <tr>
@@ -75,8 +72,12 @@
                         </tbody>
                     </table>
                 </div>
-
             </t>
+
+
+
+
+
         </t>
     </template>
 
