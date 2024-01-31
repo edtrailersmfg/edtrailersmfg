@@ -66,7 +66,7 @@
                                         <span t-field="data.payment_state"/>
                                     </td>
                                     <td align="right"><span t-field="data.amount_residual"/></td>
-                                    <t t-set="importe_dolares" t-value="importe_dolares+data.amount_untaxed"/>
+                                    <t t-set="importe_dolares" t-value="importe_dolares+data.amount_total"/>
                                     <t t-set="tax_dolares" t-value="tax_dolares+data.amount_tax"/>
                                     <t t-set="total_dolares" t-value="total_dolares+data.amount_total"/>
                                     <t t-set="importe_saldo" t-value="importe_saldo+data.amount_residual"/>
