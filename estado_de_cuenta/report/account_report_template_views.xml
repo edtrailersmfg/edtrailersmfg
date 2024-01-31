@@ -38,6 +38,10 @@
                                 <th>Invoice #</th>
                                 <th>Date</th>
                                 <th>Amout</th>
+                                <!--
+                                <th>Tax</th>
+                                <th>Total</th>
+                                -->
                                 <th>Payment State</th>
                                 <th>Balance</th>
                             </tr>
@@ -51,7 +55,13 @@
                                 <tr>
                                     <td><span t-field="data.name"/></td>
                                     <td><span t-field="data.invoice_date"/></td>
+                                    <!--
                                     <td align="right"><span t-field="data.amount_untaxed"/></td>
+                                    <td align="right"><span t-field="data.amount_tax"/></td>
+                                -->
+                                    <td align="right">
+                                        <span t-field="data.amount_total"/>
+                                    </td>
                                     <td>
                                         <span t-field="data.payment_state"/>
                                     </td>
