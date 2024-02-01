@@ -107,7 +107,7 @@ class AccountMove(models.Model):
         # rate = currency_usd.with_context(date=self.invoice_date).rate
         # rate = rate != 0 and 1.0/rate or 0.0
         if rate == 1.0:
-            rate = 1
+            rate = 17.2333
         # else:
         #     rate = '%.4f' % rate or 1
         
