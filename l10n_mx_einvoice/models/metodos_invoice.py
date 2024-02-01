@@ -532,6 +532,8 @@ class AccountMove(models.Model):
                 keys2.remove('MotivoTraslado')
             if not 'CertificadoOrigen' in keys:
                 keys2.remove('CertificadoOrigen')
+            if not 'NumeroExportadorConfiable' in keys:
+                keys2.remove('NumeroExportadorConfiable')
             keys = keys2  
         # * FIN CARTA PORTE 20 * #
 
