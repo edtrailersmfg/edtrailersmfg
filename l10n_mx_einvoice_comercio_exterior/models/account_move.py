@@ -100,23 +100,29 @@ class AccountMove(models.Model):
         comprobante = xcomprobante.copy()
         
         currency_usd = self.env['res.currency'].search([('name','=','USD')], limit=1)
-        rate = currency_usd.with_context(date=self.invoice_date).rate
-        rate = rate != 0 and 1.0/rate or 0.0
+        currency_context = currency_usd.with_context(date=self.invoice_date)
+        _logger.info("\n############### currency_context: %s" % currency_context)
+        _logger.info("\n############### currency_context.rate2: %s" % currency_context.rate2)
+        rate = currency_context.rate2
+        # rate = currency_usd.with_context(date=self.invoice_date).rate
+        # rate = rate != 0 and 1.0/rate or 0.0
         if rate == 1.0:
             rate = 1
-        else:
-            rate = '%.4f' % rate or 1
+        # else:
+        #     rate = '%.4f' % rate or 1
         
+        # * INICIO CARTA PORTE 20 * #
+
         if not (rate and self.cfdi_comercio_exterior_total_usd):
             raise UserError(_('Error !!! No ha definido la información relacionada al Tipo de Cambio a usar en Complemento de Comercio Exterior y/o el Total en USD no está definido'))
-        complemento = {'cce11:ComercioExterior': 
+        complemento = {'cce20:ComercioExterior': 
                         {
-                        'xmlns:cce11'       : "http://www.sat.gob.mx/ComercioExterior11",
-                        'xsi:schemaLocation': "http://www.sat.gob.mx/ComercioExterior11 http://www.sat.gob.mx/sitio_internet/cfd/ComercioExterior11/ComercioExterior11.xsd",
+                        'xmlns:cce20'       : "http://www.sat.gob.mx/ComercioExterior20",
+                        'xsi:schemaLocation': "http://www.sat.gob.mx/ComercioExterior20 http://www.sat.gob.mx/sitio_internet/cfd/ComercioExterior20/ComercioExterior20.xsd",
                         'xmlns:xsi'         : "http://www.w3.org/2001/XMLSchema-instance",                            
-                        'Version'           : '1.1',
+                        'Version'           : '2.0',
                         'MotivoTraslado'    : self.cfdi_motivo_traslado,
-                        'TipoOperacion'     : '2',
+                        # 'TipoOperacion'     : '2',
                         'ClaveDePedimento'  : 'A1',
                         'CertificadoOrigen' : self.cfdi_certificado_origen,
                         'NumCertificadoOrigen'  : self.cfdi_num_certificado_origen,
@@ -129,15 +135,15 @@ class AccountMove(models.Model):
                         }
                     }
         
-        diccionario = complemento['cce11:ComercioExterior'].copy()
+        diccionario = complemento['cce20:ComercioExterior'].copy()
         for key, value in diccionario.items():
             if key not in ('CertificadoOrigen','TotalUSD') and not bool(value):
-                complemento['cce11:ComercioExterior'].pop(key)
-        if not complemento['cce11:ComercioExterior']['CertificadoOrigen'] and complemento['cce11:ComercioExterior']['NumCertificadoOrigen']:
+                complemento['cce20:ComercioExterior'].pop(key)
+        if not complemento['cce20:ComercioExterior']['CertificadoOrigen'] and complemento['cce20:ComercioExterior']['NumCertificadoOrigen']:
             raise UserError(_('El campo "Número Certificado Origen" debe estar vacío si "Certificado Origen" está establecido como: "No funge como certificado de origen"'))
         
         # ------- ------- EMISOR ------- -------
-        complemento['cce11:ComercioExterior'].update({'cce11:Emisor': {}})
+        complemento['cce20:ComercioExterior'].update({'cce20:Emisor': {}})
         
         address_invoice_parent = self.address_issued_id or False
         if not address_invoice_parent:
@@ -162,10 +168,10 @@ class AccountMove(models.Model):
         _logger.info("\n########## address_invoice_parent: %s" % address_invoice_parent)
         _logger.info("\n########## address_invoice_parent.curp: %s" % address_invoice_parent.curp)
         if address_invoice_parent.curp:
-            complemento['cce11:ComercioExterior']['cce11:Emisor'].update({'Curp':address_invoice_parent.curp})
+            complemento['cce20:ComercioExterior']['cce20:Emisor'].update({'Curp':address_invoice_parent.curp})
         
-        complemento['cce11:ComercioExterior']['cce11:Emisor'].update({
-                                                                        'cce11:Domicilio': {
+        complemento['cce20:ComercioExterior']['cce20:Emisor'].update({
+                                                                        'cce20:Domicilio': {
                                                                                             'Calle'     : address_invoice_parent.street,
                                                                                             'CodigoPostal' : address_invoice_parent.zip_sat_id.code,
                                                                                             'Estado'    : address_invoice_parent.state_id.code,
@@ -175,19 +181,19 @@ class AccountMove(models.Model):
                                                                                         
         
         if address_invoice_parent.street_number:
-            complemento['cce11:ComercioExterior']['cce11:Emisor']['cce11:Domicilio'].update({'NumeroExterior': address_invoice_parent.street_number})
+            complemento['cce20:ComercioExterior']['cce20:Emisor']['cce20:Domicilio'].update({'NumeroExterior': address_invoice_parent.street_number})
             
         if address_invoice_parent.street_number2:
-            complemento['cce11:ComercioExterior']['cce11:Emisor']['cce11:Domicilio'].update({'NumeroInterior': address_invoice_parent.street_number2})
+            complemento['cce20:ComercioExterior']['cce20:Emisor']['cce20:Domicilio'].update({'NumeroInterior': address_invoice_parent.street_number2})
 
         if address_invoice_parent.colonia_sat_id.code:
-            complemento['cce11:ComercioExterior']['cce11:Emisor']['cce11:Domicilio'].update({'Colonia': address_invoice_parent.colonia_sat_id.code})
+            complemento['cce20:ComercioExterior']['cce20:Emisor']['cce20:Domicilio'].update({'Colonia': address_invoice_parent.colonia_sat_id.code})
 
         if address_invoice_parent.locality_sat_id.code:
-            complemento['cce11:ComercioExterior']['cce11:Emisor']['cce11:Domicilio'].update({'Localidad': address_invoice_parent.locality_sat_id.code})
+            complemento['cce20:ComercioExterior']['cce20:Emisor']['cce20:Domicilio'].update({'Localidad': address_invoice_parent.locality_sat_id.code})
 
         if address_invoice_parent.township_sat_id.code:
-            complemento['cce11:ComercioExterior']['cce11:Emisor']['cce11:Domicilio'].update({'Municipio': address_invoice_parent.township_sat_id.code})
+            complemento['cce20:ComercioExterior']['cce20:Emisor']['cce20:Domicilio'].update({'Municipio': address_invoice_parent.township_sat_id.code})
         
         # ------- ------- PROPIETARIO ------- 
         # ------- SOLO SE AÑADE SI EL TIPO DE COMPROBANTE ES T - TRASLADO - Aun no se soporta
@@ -196,19 +202,19 @@ class AccountMove(models.Model):
         elif 'transport_document_cfdi' in self._fields and self.transport_document_cfdi:
             if not (self.cfdi_comercio_exterior_propietario_id.num_reg_trib and self.cfdi_comercio_exterior_propietario_id.country_id.sat_code):
                 raise UserError(_('Error !!! El Propietario no tiene definido el Registro Tributario o el País, no es posible generar el CFDI sin esa información'))
-            complemento['cce11:ComercioExterior'].update({'cce11:Propietario': {
+            complemento['cce20:ComercioExterior'].update({'cce20:Propietario': {
                 'NumRegIdTrib'     : self.cfdi_comercio_exterior_propietario_id.num_reg_trib,
                 'ResidenciaFiscal' : self.cfdi_comercio_exterior_propietario_id.country_id.sat_code,
             }})        
         
         # ------- ------- RECEPTOR ------- -------
-        complemento['cce11:ComercioExterior'].update({'cce11:Receptor': {
+        complemento['cce20:ComercioExterior'].update({'cce20:Receptor': {
                                                                             'NumRegIdTrib'     : partner.num_reg_trib,
                                                                             # 'ResidenciaFiscal' : partner.country_id.sat_code,
                                                                         }})
 
 
-        cce11:ComercioExterior
+        cce20:ComercioExterior
         if partner.country_id.code != 'MX':
             if not partner.num_reg_trib:
                 raise UserError(_('Error !!! El cliente es extranjero pero no tiene definido el Registro Tributario, no es posible generar el CFDI sin esa información'))
@@ -225,36 +231,50 @@ class AccountMove(models.Model):
         if partner.country_id.code in ('CAN','USA','MX') and not partner.state_id.code:
             raise UserError('Para los Receptores de países México / Canadá / Estados Unidos es indispensable que cree el estado esté asociado en el Catálogo de Estados del SAT, por favor revise Configuración => Catálogos SAT CFDI => Catálogo Códigos de Estados')
             
-        complemento['cce11:ComercioExterior']['cce11:Receptor'].update({'cce11:Domicilio': {
+        complemento['cce20:ComercioExterior']['cce20:Receptor'].update({'cce20:Domicilio': {
             'Calle'     : partner.street,
             'CodigoPostal' : partner.zip or partner.zip_sat_id.code,
             'Estado'    : (partner.state_id.code and partner.state_id.code) or partner.state_id.name,
             'Pais'      : partner.country_id.sat_code,
             }})
 
-        if not complemento['cce11:ComercioExterior']['cce11:Receptor']['cce11:Domicilio']['CodigoPostal']:
-            complemento['cce11:ComercioExterior']['cce11:Receptor']['cce11:Domicilio'].pop('CodigoPostal')
+        if not complemento['cce20:ComercioExterior']['cce20:Receptor']['cce20:Domicilio']['CodigoPostal']:
+            complemento['cce20:ComercioExterior']['cce20:Receptor']['cce20:Domicilio'].pop('CodigoPostal')
         
         comprobante['cfdi:Comprobante']['cfdi:Receptor'].update({'NumRegIdTrib'     : partner.num_reg_trib,
                                                                  'ResidenciaFiscal' : partner.country_id.sat_code})
         
         if partner.street_number:
-            complemento['cce11:ComercioExterior']['cce11:Receptor']['cce11:Domicilio'].update({'NumeroExterior': partner.street_number})
+            complemento['cce20:ComercioExterior']['cce20:Receptor']['cce20:Domicilio'].update({'NumeroExterior': partner.street_number})
             
         if partner.street_number2:
-            complemento['cce11:ComercioExterior']['cce11:Receptor']['cce11:Domicilio'].update({'NumeroInterior': partner.street_number2})
+            complemento['cce20:ComercioExterior']['cce20:Receptor']['cce20:Domicilio'].update({'NumeroInterior': partner.street_number2})
         
 
         # ------- ------- DESTINATARIO ------- -------
         if partner != self.partner_shipping_id and self.partner_shipping_id:
-            complemento['cce11:ComercioExterior'].update({'cce11:Destinatario': {}})
+            complemento['cce20:ComercioExterior'].update({'cce20:Destinatario': {}})
             partner = self.partner_shipping_id
 
-            if not partner.num_reg_trib:
+            partner_num_reg_trib = ""
+            if partner.country_id.code != 'MX':
+                if partner.num_reg_trib:
+                    partner_num_reg_trib = partner.num_reg_trib
+                if not partner_num_reg_trib:
+                    partner_num_reg_trib = self.partner_id.num_reg_trib
+
+            if not partner_num_reg_trib and partner.country_id.code != 'MX':
                 raise UserError(_('Error !!! El Destinatario no tiene definido el Registro Tributario, no es posible generar el CFDI sin esa información'))
 
-            complemento['cce11:ComercioExterior']['cce11:Destinatario'].update({'NumRegIdTrib': partner.num_reg_trib})
-
+            if partner_num_reg_trib:
+                complemento['cce20:ComercioExterior']['cce20:Destinatario'].update({
+                                                                                        'NumRegIdTrib': partner_num_reg_trib
+                                                                                   })
+                
+            complemento['cce20:ComercioExterior']['cce20:Destinatario'].update({
+                                                                                    'Nombre' : partner.name
+                                                                               })
+            
             if not (partner.street and partner.state_id.code and partner.country_id.sat_code):
                 raise UserError(_("Error !!! La dirección del Receptor parece estar incompleta o algún valor no tiene relacionado el Código SAT correspondiente,"
                                   "por favor revise que tenga los siguientes datos en la dirección:"
@@ -263,7 +283,7 @@ class AccountMove(models.Model):
                                   "- País"
                                  ))
 
-            complemento['cce11:ComercioExterior']['cce11:Destinatario'].update({'cce11:Domicilio': {
+            complemento['cce20:ComercioExterior']['cce20:Destinatario'].update({'cce20:Domicilio': {
                 'Calle'     : partner.street,
                 'CodigoPostal' : partner.zip_sat_id.code,
                 'Estado'    : partner.state_id.code,
@@ -271,22 +291,22 @@ class AccountMove(models.Model):
                 }})
 
             if partner.street_number:
-                complemento['cce11:ComercioExterior']['cce11:Destinatario']['cce11:Domicilio'].update({'NumeroExterior': partner.street_number})
+                complemento['cce20:ComercioExterior']['cce20:Destinatario']['cce20:Domicilio'].update({'NumeroExterior': partner.street_number})
 
             if partner.street_number2:
-                complemento['cce11:ComercioExterior']['cce11:Destinatario']['cce11:Domicilio'].update({'NumeroInterior': partner.street_number2})
+                complemento['cce20:ComercioExterior']['cce20:Destinatario']['cce20:Domicilio'].update({'NumeroInterior': partner.street_number2})
 
             if partner.colonia_sat_id.code:
-                complemento['cce11:ComercioExterior']['cce11:Destinatario']['cce11:Domicilio'].update({'Colonia': partner.colonia_sat_id.code or partner.street2})
+                complemento['cce20:ComercioExterior']['cce20:Destinatario']['cce20:Domicilio'].update({'Colonia': partner.colonia_sat_id.code or partner.street2})
 
             if partner.locality_sat_id.code:
-                complemento['cce11:ComercioExterior']['cce11:Destinatario']['cce11:Domicilio'].update({'Localidad': partner.locality_sat_id.code})
+                complemento['cce20:ComercioExterior']['cce20:Destinatario']['cce20:Domicilio'].update({'Localidad': partner.locality_sat_id.code})
 
             if partner.township_sat_id.code:
-                complemento['cce11:ComercioExterior']['cce11:Destinatario']['cce11:Domicilio'].update({'Municipio': partner.township_sat_id.code or partner.city})
+                complemento['cce20:ComercioExterior']['cce20:Destinatario']['cce20:Domicilio'].update({'Municipio': partner.township_sat_id.code or partner.city})
 
         # ----- ----- MERCANCIAS ----- -----
-        complemento['cce11:ComercioExterior'].update({'cce11:Mercancias': []})
+        complemento['cce20:ComercioExterior'].update({'cce20:Mercancias': []})
         group_to_ce_mercancia = {}
         for line in self.invoice_line_ids.filtered(lambda w: not w.display_type):
             if not line.cce_quantity:
@@ -331,7 +351,7 @@ class AccountMove(models.Model):
                          'ValorDolares'         : self.currency_id.with_context(date=self.invoice_date).compute(line.price_unit * line.quantity, currency_usd),
                         }
                     })
-            # concepto = {'cce11:Mercancia':
+            # concepto = {'cce20:Mercancia':
             #             {'NoIdentificacion'     : product_code,
             #              'FraccionArancelaria'  : line.product_id.sat_arancel_id.code or '',
             #              'CantidadAduana'       : "%.2f" % line.cce_quantity+cantidad_aduana or 0.0,
@@ -341,15 +361,15 @@ class AccountMove(models.Model):
             #             }
             #            }
             # if line.product_id.sat_marca:
-            #     concepto['cce11:Mercancia'].update({'cce11:DescripcionesEspecificas':{
+            #     concepto['cce20:Mercancia'].update({'cce20:DescripcionesEspecificas':{
             #         'xmlns' : 'http://www.sat.gob.mx/ComercioExterior', 
             #         'Marca' : line.product_id.sat_marca}})
             #     if line.product_id.sat_modelo:
-            #         concepto['cce11:Mercancia']['cce11:DescripcionesEspecificas'].update({'Modelo':line.product_id.sat_modelo})
+            #         concepto['cce20:Mercancia']['cce20:DescripcionesEspecificas'].update({'Modelo':line.product_id.sat_modelo})
             #         if line.product_id.sat_submodelo:
-            #             concepto['cce11:Mercancia']['cce11:DescripcionesEspecificas'].update({'SubModelo':line.product_id.sat_submodelo})    
+            #             concepto['cce20:Mercancia']['cce20:DescripcionesEspecificas'].update({'SubModelo':line.product_id.sat_submodelo})    
 
-            # complemento['cce11:ComercioExterior']['cce11:Mercancias'].append(concepto)
+            # complemento['cce20:ComercioExterior']['cce20:Mercancias'].append(concepto)
     
         for groupline in group_to_ce_mercancia:
             line_mercancia = group_to_ce_mercancia[groupline]
@@ -361,19 +381,19 @@ class AccountMove(models.Model):
                                     'ValorUnitarioAduana': round(valor_unitario_aduana_final,2),
                                     })
             product_br = groupline
-            concepto = {'cce11:Mercancia':
+            concepto = {'cce20:Mercancia':
                         line_mercancia
                        }
             if product_br.sat_marca:
-                concepto['cce11:Mercancia'].update({'cce11:DescripcionesEspecificas':{
+                concepto['cce20:Mercancia'].update({'cce20:DescripcionesEspecificas':{
                     'xmlns' : 'http://www.sat.gob.mx/ComercioExterior', 
                     'Marca' : product_br.sat_marca}})
                 if product_br.sat_modelo:
-                    concepto['cce11:Mercancia']['cce11:DescripcionesEspecificas'].update({'Modelo':product_br.sat_modelo})
+                    concepto['cce20:Mercancia']['cce20:DescripcionesEspecificas'].update({'Modelo':product_br.sat_modelo})
                     if product_br.sat_submodelo:
-                        concepto['cce11:Mercancia']['cce11:DescripcionesEspecificas'].update({'SubModelo':product_br.sat_submodelo})    
+                        concepto['cce20:Mercancia']['cce20:DescripcionesEspecificas'].update({'SubModelo':product_br.sat_submodelo})    
 
-            complemento['cce11:ComercioExterior']['cce11:Mercancias'].append(concepto)
+            complemento['cce20:ComercioExterior']['cce20:Mercancias'].append(concepto)
         
         comprobante['cfdi:Comprobante'].update({'cfdi:Complemento':complemento})
         #print "================================================="

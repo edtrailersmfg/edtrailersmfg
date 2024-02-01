@@ -464,14 +464,13 @@ class AccountMove(models.Model):
         result_sello_256 = self.env['facturae.certificate.library'].with_context(context)._sign_sello()
         return result_sello_256.decode("utf-8") 
 
-    
     def _dict_iteritems_sort(self, data_dict):  # cr=False, uid=False, ids=[], context=None):
         """
         @param data_dict : Dictionary with data from invoice
         """
         key_order = [
-            'cfdi:CfdiRelacionados',
             'cfdi:InformacionGlobal',
+            'cfdi:CfdiRelacionados',
             'cfdi:Emisor',
             'cfdi:Receptor',
             'cfdi:Conceptos',
@@ -481,6 +480,7 @@ class AccountMove(models.Model):
         ]
        
         keys = list(data_dict.keys())
+
         key_item_sort = []
         for ko in key_order:
             if ko in keys:
@@ -496,10 +496,11 @@ class AccountMove(models.Model):
             keys = ['Rfc', 'Nombre', 'RegimenFiscal']
         if keys == ['cfdi:Retenciones', 'cfdi:Traslados']:
             keys = ['cfdi:Traslados','cfdi:Retenciones', ]
-        if keys == ['cfdi:Traslados', 'TotalImpuestosTrasladados', 'cfdi:Retenciones', 'TotalImpuestosRetenidos']:
+        if keys == ['cfdi:Traslados', 'TotalImpuestosTrasladados', 'cfdi:Retenciones', 'TotalImpuestosRetenidos'] or\
+           keys == ['TotalImpuestosTrasladados', 'cfdi:Traslados', 'TotalImpuestosRetenidos', 'cfdi:Retenciones']:
             keys = ['cfdi:Retenciones', 'TotalImpuestosRetenidos','cfdi:Traslados', 'TotalImpuestosTrasladados']
-
-        #TAGS de Complemento de Comercio Exterior
+            
+        #TAGS de Complemento de Comercio Exterior 11
         if 'cce11:Emisor' in keys:
             #print("keys: %s" % keys)
             keys2 = ['Version', 'TipoOperacion', 'ClaveDePedimento', 'CertificadoOrigen', 'NumCertificadoOrigen', 'Incoterm', 'Subdivision', 'Observaciones', 'TipoCambioUSD', 'TotalUSD',  'xmlns:cce11',  'xsi:schemaLocation', 'xmlns:xsi', 'cce11:Emisor', 'cce11:Receptor', 'cce11:Destinatario', 'cce11:Mercancias']
@@ -508,8 +509,20 @@ class AccountMove(models.Model):
             if not 'cce11:Destinatario' in keys:
                 keys2.remove('cce11:Destinatario')
             keys = keys2  
-            
-            
+
+        # * INICIO CARTA PORTE 20 * #
+        #TAGS de Complemento de Comercio Exterior 20
+        if 'cce20:Emisor' in keys:
+            #print("keys: %s" % keys)
+            keys2 = ['Version', 'MotivoTraslado', 'ClaveDePedimento', 'CertificadoOrigen', 'NumCertificadoOrigen', 'NumeroExportadorConfiable', 'Incoterm', 'Observaciones',  
+            'TipoCambioUSD', 'TotalUSD', 'xmlns:cce20',  'xsi:schemaLocation', 'xmlns:xsi', 'cce20:Emisor', 'cce20:Receptor', 'cce20:Destinatario', 'cce20:Mercancias']
+            if not 'NumCertificadoOrigen' in keys:
+                keys2.remove('NumCertificadoOrigen')
+            if not 'CertificadoOrigen' in keys:
+                keys2.remove('CertificadoOrigen')
+            keys = keys2  
+        # * FIN CARTA PORTE 20 * #
+
         #TAGS de Complemento Detallista -- 1 --
         elif 'xmlns:detallista' in keys:
             # print "keys: %s" % keys
@@ -553,19 +566,24 @@ class AccountMove(models.Model):
                 if not xkey in keys:
                     keys2.remove(xkey)
             keys = keys2
-
+        ##### Inicio - Carta Porte - Complemento 3.0 #####
         #TAGS de Complemento Carta porte 
-        elif 'cartaporte20:Ubicaciones' in keys:
+        elif 'cartaporte30:Ubicaciones' in keys:
             keys2 = [
                      'Version',
+                     'IdCCP',
                      'TranspInternac',
-                     'TotalDistRec',
+                     'RegimenAduanero',
                      'EntradaSalidaMerc',
                      'PaisOrigenDestino',
                      'ViaEntradaSalida',
-                     'cartaporte20:Ubicaciones',
-                     'cartaporte20:Mercancias',
-                     'cartaporte20:FiguraTransporte'
+                     'TotalDistRec',
+                     'RegistroISTMO',
+                     'UbicacionPoloOrigen',
+                     'UbicacionPoloDestino',
+                     'cartaporte30:Ubicaciones',
+                     'cartaporte30:Mercancias',
+                     'cartaporte30:FiguraTransporte'
                     ]
             keys_match = []
             for xkey in keys2:
@@ -577,17 +595,18 @@ class AccountMove(models.Model):
         elif 'TipoUbicacion' in keys:
             keys2 = [
                         'TipoUbicacion',
+                        'IDUbicacion',
                         'RFCRemitenteDestinatario',
                         'NombreRemitenteDestinatario',
-                        'FechaHoraSalidaLlegada',
-                        'IDUbicacion',
-                        'NumRegIdTrib',
-                        #'ResidenciaFiscal',
+                        'NumRegIdTrib'
+                        'ResidenciaFiscal',
                         'NumEstacion',
                         'NombreEstacion',
+                        'NavegacionTrafico',
+                        'FechaHoraSalidaLlegada',
                         'TipoEstacion',
                         'DistanciaRecorrida',
-                        'cartaporte20:Domicilio',
+                        'cartaporte30:Domicilio',
                     ]
             keys_match = []
             for xkey in keys2:
@@ -595,25 +614,120 @@ class AccountMove(models.Model):
                     keys_match.append(xkey)
             keys = keys_match
 
-        elif 'BienesTransp' in keys:
+        elif 'PesoBrutoTotal' in keys:
+            keys2 = [
+                        'PesoBrutoTotal',
+                        'UnidadPeso',
+                        'PesoNetoTotal',
+                        'NumTotalMercancias',
+                        'LogisticaInversaRecoleccionDevolucion',
+                        'cartaporte30:Mercancia',
+                        'cartaporte30:Autotransporte',
+                        'cartaporte30:TransporteMaritimo',
+                        'cartaporte30:TransporteAereo',
+                        'cartaporte30:TransporteFerroviario',
+                    ]
+            keys_match = []
+            for xkey in keys2:
+                if xkey in keys:
+                    keys_match.append(xkey)
+            keys = keys_match
+
+        elif 'Dimensiones' in keys:
             keys2 = [
                         'BienesTransp',
+                        'ClaveSTCC',
                         'Descripcion',
                         'Cantidad',
                         'ClaveUnidad',
-                        'ClaveSTCC',
+                        'Unidad',
                         'Dimensiones',
-                        'PesoEnKg',
                         'MaterialPeligroso',
                         'CveMaterialPeligroso',
-                        'Moneda',
-                        'ValorMercancia',
                         'Embalaje',
                         'DescripEmbalaje',
+                        'SectorCOFEPRIS',
+                        'NombreIngredienteActivo',
+                        'NomQuimico',
+                        'DenominacionGenericaProd',
+                        'DenominacionDistintivaProd',
+                        'Fabricante',
+                        'FechaCaducidad',
+                        'LoteMedicamento',
+                        'FormaFarmaceutica',
+                        'CondicionesEspTransp',
+                        'RegistroSanitarioFolioAutorizacion',
+                        'PermisoImportacion',
+                        'FolioImpoVUCEM',
+                        'NumCAS',
+                        'RazonSocialEmpImp',
+                        'NumRegSanPlagCOFEPRIS',
+                        'DatosFabricante',
+                        'DatosFormulador',
+                        'DatosMaquilador',
+                        'UsoAutorizado',
+                        'PesoEnKg',
+                        'ValorMercancia',
+                        'Moneda',
                         'FraccionArancelaria',
                         'UUIDComercioExt',
-                        'cartaporte20:Pedimentos',
-                        'cartaporte20:CantidadTransporta',
+                        'TipoMateria',
+                        'DescripcionMateria',
+                        'cartaporte30:DocumentacionAduanera',
+                        'cartaporte30:GuiasIdentificacion',
+                        'cartaporte30:CantidadTransporta',
+                        'cartaporte30:DetalleMercancia',
+                    ]
+            keys_match = []
+            for xkey in keys2:
+                if xkey in keys:
+                    keys_match.append(xkey)
+            keys = keys_match
+
+        elif 'TipoDocumento' in keys:
+            keys2 = [
+                        'TipoDocumento',
+                        'NumPedimento',
+                        'IdentDocAduanero',
+                        'RFCImpo',
+                    ]
+            keys_match = []
+            for xkey in keys2:
+                if xkey in keys:
+                    keys_match.append(xkey)
+            keys = keys_match
+
+        elif 'NumeroGuiaIdentificacion' in keys:
+            keys2 = [
+                        'NumeroGuiaIdentificacion',
+                        'PesoGuiaIdentificacion',
+                    ]
+            keys_match = []
+            for xkey in keys2:
+                if xkey in keys:
+                    keys_match.append(xkey)
+            keys = keys_match
+
+        elif 'IDOrigen' in keys and 'IDDestino' in keys:
+            keys2 = [
+                        'Cantidad',
+                        'IDOrigen',
+                        'IDDestino',
+                        'CvesTransporte',
+                    ]
+            keys_match = []
+            for xkey in keys2:
+                if xkey in keys:
+                    keys_match.append(xkey)
+            keys = keys_match
+
+        elif 'UnidadPesoMerc' in keys:
+            keys2 = [
+                        'UnidadPesoMerc',
+                        'PesoBruto',
+                        'PesoNeto',
+                        'PesoTara',
+                        'NumPiezas',
                     ]
             keys_match = []
             for xkey in keys2:
@@ -625,9 +739,9 @@ class AccountMove(models.Model):
             keys2 = [
                         'PermSCT',
                         'NumPermisoSCT',
-                        'cartaporte20:IdentificacionVehicular',
-                        'cartaporte20:Seguros',
-                        'cartaporte20:Remolques',
+                        'cartaporte30:IdentificacionVehicular',
+                        'cartaporte30:Seguros',
+                        'cartaporte30:Remolques',
                     ]
             keys_match = []
             for xkey in keys2:
@@ -635,34 +749,75 @@ class AccountMove(models.Model):
                     keys_match.append(xkey)
             keys = keys_match
         
-        elif 'NombreFigura' in keys:
+        elif 'ConfigVehicular' in keys:
             keys2 = [
-                        'TipoFigura',
-                        'NombreFigura',
-                        'RFCFigura',
-                        'NumLicencia',
-                        #'ResidenciaFiscalFigura',
-                        'NumRegIdTribFigura',
-                        'cartaporte20:PartesTransporte',
-                        'cartaporte20:Domicilio',
+                        'ConfigVehicular',
+                        'PesoBrutoVehicular',
+                        'PlacaVM',
+                        'AnioModeloVM',
                     ]
             keys_match = []
             for xkey in keys2:
                 if xkey in keys:
                     keys_match.append(xkey)
             keys = keys_match
-            
-        elif 'IDOrigen' in keys and 'IDDestino' in keys:
-            keys2 = [
-                     'Cantidad',
-                     'IDOrigen',
-                     'IDDestino',
-                    ]            
-            keys = keys2
 
+        elif 'AseguraRespCivil' in keys:
+            keys2 = [
+                        'AseguraRespCivil',
+                        'PolizaRespCivil',
+                        'AseguraMedAmbiente',
+                        'PolizaMedAmbiente',
+                        'AseguraCarga',
+                        'PolizaCarga',
+                        'PrimaSeguro',
+                    ]
+            keys_match = []
+            for xkey in keys2:
+                if xkey in keys:
+                    keys_match.append(xkey)
+            keys = keys_match
+
+        elif 'NombreFigura' in keys:
+            keys2 = [
+                        'TipoFigura',
+                        'RFCFigura',
+                        'NumLicencia',
+                        'NombreFigura',
+                        'NumRegIdTribFigura',
+                        'ResidenciaFiscalFigura',
+                        'cartaporte30:PartesTransporte',
+                        'cartaporte30:Domicilio',
+                    ]
+            keys_match = []
+            for xkey in keys2:
+                if xkey in keys:
+                    keys_match.append(xkey)
+            keys = keys_match
+        
+        elif 'SubTipoRem' in keys:
+            keys2 = [
+                        'SubTipoRem',
+                        'Placa',
+                    ]
+            keys_match = []
+            for xkey in keys2:
+                if xkey in keys:
+                    keys_match.append(xkey)
+            keys = keys_match
+
+        # elif 'IDOrigen' in keys and 'IDDestino' in keys:
+        #     keys2 = [
+        #              'Cantidad',
+        #              'IDOrigen',
+        #              'IDDestino',
+        #             ]            
+        #     keys = keys2
+        ##### Fin - Carta Porte - Complemento 3.0 #####
+        
         for key_too in keys:
             key_item_sort.append([key_too, data_dict[key_too]])
-        return key_item_sort    
+        return key_item_sort     
     
     
     def _get_file_globals(self):
