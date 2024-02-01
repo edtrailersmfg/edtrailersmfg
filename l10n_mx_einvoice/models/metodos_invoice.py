@@ -528,6 +528,8 @@ class AccountMove(models.Model):
             'TipoCambioUSD', 'TotalUSD', 'xmlns:cce20',  'xsi:schemaLocation', 'xmlns:xsi', 'cce20:Emisor', 'cce20:Receptor', 'cce20:Destinatario', 'cce20:Mercancias']
             if not 'NumCertificadoOrigen' in keys:
                 keys2.remove('NumCertificadoOrigen')
+            if not 'MotivoTraslado' in keys:
+                keys2.remove('MotivoTraslado')
             if not 'CertificadoOrigen' in keys:
                 keys2.remove('CertificadoOrigen')
             keys = keys2  
@@ -828,7 +830,7 @@ class AccountMove(models.Model):
         for key_too in keys:
             key_item_sort.append([key_too, data_dict[key_too]])
         return key_item_sort    
-        
+
     
     def _get_file_globals(self):
         ctx = self._context.copy()
