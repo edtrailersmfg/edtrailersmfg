@@ -87,7 +87,16 @@ class AccountMove(models.Model):
         else:
             if self.partner_id.cfdi_comercio_exterior_notas:
                 self.cfdi_comercio_exterior_notas = self.partner_id.cfdi_comercio_exterior_notas 
-                
+
+    def _get_currency_exchange_rate_from_invoice_cce(self,):
+        rate = 1
+        currency_usd = self.env['res.currency'].search([('name','=','USD')], limit=1)
+        currency_context = currency_usd.with_context(date=self.invoice_date)
+        _logger.info("\n############### currency_context: %s" % currency_context)
+        _logger.info("\n############### currency_context.rate2: %s" % currency_context.rate2)
+        rate = currency_context.rate2
+        return rate
+
     def _get_einvoice_complement_dict(self, xcomprobante):
         if self.cfdi_complemento != 'comercio_exterior':
             return super(AccountMove, self)._get_einvoice_complement_dict(xcomprobante)
@@ -101,9 +110,8 @@ class AccountMove(models.Model):
         
         currency_usd = self.env['res.currency'].search([('name','=','USD')], limit=1)
         currency_context = currency_usd.with_context(date=self.invoice_date)
-        _logger.info("\n############### currency_context: %s" % currency_context)
-        _logger.info("\n############### currency_context.rate2: %s" % currency_context.rate2)
-        rate = currency_context.rate2
+        rate = self._get_currency_exchange_rate_from_invoice_cce()
+        _logger.info("\n############### rate (compute): %s" % rate)
         # rate = currency_usd.with_context(date=self.invoice_date).rate
         # rate = rate != 0 and 1.0/rate or 0.0
         if rate == 1.0:

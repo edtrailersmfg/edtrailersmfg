@@ -1122,6 +1122,19 @@ class AccountMove(models.Model):
             'folio_number': folio_number,
         }
 
+    def _get_currency_exchange_rate_from_invoice(self, invoice, date_ctx):
+        rate = 1
+        currency = invoice.currency_id
+        currency_context = invoice.currency_id.with_context(date_ctx)
+        _logger.info("\n############### currency_context: %s" % currency_context)
+        _logger.info("\n############### currency_context.rate: %s" % currency_context.rate)
+        rate = currency_context.rate
+        if rate == 1.0:
+            rate = 1
+        else:
+            rate = 1.0 / rate 
+        return rate
+
     def _get_facturae_invoice_dict_data(self):
         self.ensure_one()
         invoice_datas = []
@@ -1156,11 +1169,10 @@ class AccountMove(models.Model):
         currency_context = invoice.currency_id.with_context(date_ctx)
         _logger.info("\n############### currency_context: %s" % currency_context)
         _logger.info("\n############### currency_context.rate: %s" % currency_context.rate)
-        rate = currency_context.rate
-        if rate == 1.0:
-            rate = 1
-        else:
-            rate = 1.0 / rate 
+
+        rate = self._get_currency_exchange_rate_from_invoice(invoice, date_ctx)
+        _logger.info("\n############### rate (compute): %s" % rate)
+
         # rate = invoice.currency_id.with_context(date_ctx).rate
         # rate = rate != 0 and 1.0/rate or 0.0
         # if rate >= 0.99999 and rate <= 1.00001:#rate==1.0:
