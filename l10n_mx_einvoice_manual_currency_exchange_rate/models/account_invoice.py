@@ -4,6 +4,9 @@ from odoo import fields, models,api,_
 from odoo.exceptions import UserError
 from odoo.exceptions import UserError, ValidationError
 
+import logging
+_logger = logging.getLogger(__name__)
+
 class account_invoice_line(models.Model):
     _inherit ='account.move.line'
     
@@ -130,11 +133,26 @@ class account_invoice_line(models.Model):
 class account_invoice(models.Model):
     _inherit ='account.move'
     
+    def _get_current_currency_rate(self):
+        for rec in self:
+            current_currency_rate = 1
+            if rec.company_id.currency_id != rec.currency_id:
+                current_currency_rate = 0
+                currency = rec.currency_id
+                date_ctx = {'date': rec.date_invoice_tz and rec.date_invoice_tz.date() or rec.invoice_date or fields.Date.context_today}
+                currency_context = rec.currency_id.with_context(date_ctx)
+                _logger.info("\n############### currency_context: %s" % currency_context)
+                _logger.info("\n############### currency_context.rate: %s" % currency_context.rate)
+                current_currency_rate = self._get_currency_exchange_rate_from_invoice(rec, date_ctx)
+                _logger.info("\n############### current_currency_rate (compute): %s" % current_currency_rate)
+            rec.current_currency_rate = current_currency_rate
+
     manual_currency_rate_active = fields.Boolean('Aplicar T.C. Manual')
     manual_currency_rate = fields.Float('Rate', digits=(12, 6))
 
     manual_currency_rate_invert = fields.Float('Tipo de Cambio', digits=(12, 6))
     
+    current_currency_rate = fields.Float('Tipo de Cambio', digits=(12, 6), compute="_get_current_currency_rate")
 
     ######################## Timbrado Electronico ##########################
     def _get_currency_exchange_rate_from_invoice_cce(self):

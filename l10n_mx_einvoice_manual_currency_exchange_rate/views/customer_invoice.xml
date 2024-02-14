@@ -10,6 +10,7 @@
                     <field name="manual_currency_rate_active"/>
                     <field name="manual_currency_rate" invisible="1"/>
                     <field name="manual_currency_rate_invert" attrs="{'invisible': [('manual_currency_rate_active', '=', False)],'required':[('manual_currency_rate_active', '=', True)]}"/>
+                    <field name="current_currency_rate" attrs="{'invisible': [('manual_currency_rate_active', '=', True)]}"/>
                 </field>
             </field>
         </record>
