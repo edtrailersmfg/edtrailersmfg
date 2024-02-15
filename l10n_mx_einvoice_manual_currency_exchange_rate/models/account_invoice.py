@@ -137,13 +137,16 @@ class account_invoice(models.Model):
         for rec in self:
             current_currency_rate = 1
             if rec.company_id.currency_id != rec.currency_id:
-                current_currency_rate = 0
                 currency = rec.currency_id
                 date_ctx = {'date': rec.date_invoice_tz and rec.date_invoice_tz.date() or rec.invoice_date or fields.Date.context_today}
                 currency_context = rec.currency_id.with_context(date_ctx)
                 _logger.info("\n############### currency_context: %s" % currency_context)
                 _logger.info("\n############### currency_context.rate: %s" % currency_context.rate)
-                current_currency_rate = self._get_currency_exchange_rate_from_invoice(rec, date_ctx)
+                current_currency_rate = currency_context.rate
+                if current_currency_rate == 1.0:
+                    current_currency_rate = 1
+                else:
+                    current_currency_rate = 1.0 / current_currency_rate 
                 _logger.info("\n############### current_currency_rate (compute): %s" % current_currency_rate)
             rec.current_currency_rate = current_currency_rate
 
@@ -158,13 +161,13 @@ class account_invoice(models.Model):
     def _get_currency_exchange_rate_from_invoice_cce(self):
         rate = self.manual_currency_rate_invert
         if not rate:
-            return 1.0
+            return super(account_invoice, self)._get_currency_exchange_rate_from_invoice_cce()
         return rate
 
     def _get_currency_exchange_rate_from_invoice(self, invoice, date_ctx):
         rate = invoice.manual_currency_rate_invert
         if not rate:
-            return 1.0
+            return super(account_invoice, self)._get_currency_exchange_rate_from_invoice(invoice, date_ctx)
         return rate
 
 
