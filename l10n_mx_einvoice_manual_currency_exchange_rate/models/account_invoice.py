@@ -150,10 +150,10 @@ class account_invoice(models.Model):
                 _logger.info("\n############### current_currency_rate (compute): %s" % current_currency_rate)
             rec.current_currency_rate = current_currency_rate
 
-    manual_currency_rate_active = fields.Boolean('Aplicar T.C. Manual')
-    manual_currency_rate = fields.Float('Rate', digits=(12, 6))
+    manual_currency_rate_active = fields.Boolean('Aplicar T.C. Manual', copy=False)
+    manual_currency_rate = fields.Float('Rate', digits=(12, 6), copy=False)
 
-    manual_currency_rate_invert = fields.Float('Tipo de Cambio', digits=(12, 6))
+    manual_currency_rate_invert = fields.Float('Tipo de Cambio', digits=(12, 6), copy=False)
     
     current_currency_rate = fields.Float('Tipo de Cambio', digits=(12, 6), compute="_get_current_currency_rate")
 
