@@ -158,13 +158,13 @@ class account_invoice(models.Model):
     def _get_currency_exchange_rate_from_invoice_cce(self):
         rate = self.manual_currency_rate_invert
         if not rate:
-            raise UserError("No se tiene capturado el tipo de cambio.")
+            return 1.0
         return rate
 
     def _get_currency_exchange_rate_from_invoice(self, invoice, date_ctx):
         rate = invoice.manual_currency_rate_invert
         if not rate:
-            raise UserError("No se tiene capturado el tipo de cambio.")
+            return 1.0
         return rate
 
 
