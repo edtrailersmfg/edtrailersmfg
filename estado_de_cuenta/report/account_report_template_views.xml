@@ -22,12 +22,14 @@
                     </td>
                 </tr>
             </table>
-            <p></p>   
+            <p></p>
 
             <t t-foreach="doc" t-as="o">
                 <div class="mb-2 ml-1 mt-2 row">
-                    Report Date : 
+                    Report From :
                     <span class="ml-2 mr-2" t-field="o.start_date"/>
+                    To :
+                    <span class="ml-2 mr-2" t-field="o.end_date"/>
                     <br/>
                     Customer : <span class="ml-2 mr-2" t-field="o.customer.name"/>
                 </div>
@@ -50,7 +52,7 @@
                             <t t-set="importe_dolares" t-value="0.00"/>
                             <t t-set="tax_dolares" t-value="0.00"/>
                             <t t-set="total_dolares" t-value="0.00"/>
-                            <t t-set="importe_saldo" t-value="0.00"/>                            
+                            <t t-set="importe_saldo" t-value="0.00"/>
                             <t t-foreach="move_data" t-as="data">
                                 <tr>
                                     <td><span t-field="data.name"/></td>
@@ -81,6 +83,11 @@
                             </tr>
                         </tbody>
                     </table>
+                    <div>
+                      <br/>
+                      End of report.
+                      <br/>
+                    </div>
                 </div>
             </t>
 
