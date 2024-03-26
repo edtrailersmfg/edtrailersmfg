@@ -23,7 +23,7 @@ class Product(models.Model):
                 for record_tc in reg_tc:
                     tipo_de_cambio = record_tc.inverse_company_rate
             product['tipo_cambio'] = tipo_de_cambio
-            product['costo_usd'] = standard_price / tipo_de_cambio
+            product['costo_usd'] = product['standard_price'] / tipo_de_cambio
             precio_en_usd = 1.0
             precio_en_usd = ( (product['standard_price'] * 1.16) * 1.19 ) * 1.05
             product['precio_usd'] = precio_en_usd
