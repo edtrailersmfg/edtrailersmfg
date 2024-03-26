@@ -2,13 +2,15 @@
 {
     'name' : 'Tipo de Cambio para Calcular Costo y Precio del Producto',
     'description':"""
-Inventory Extend
-=======================================
-Tipo de Cambio para Calcular Costo y Precio del Producto
+            Inventory Extend
+            =======================================
+            Calculamos el Precio de Venta en MXN y USD de los productos a partir 
+            del costo del producto y obteniendo el tipo de cambio más reciente
+            en el sistema.
     """,
-    'version' : '15.0.3',
+    'version' : '15.0.1',
     'category': 'Inventory/Inventory',
-    'author': 'Enrique J',
+    'author': 'Enrique Jaquez',
     'depends' : [
         'account',
         'base',
@@ -19,12 +21,7 @@ Tipo de Cambio para Calcular Costo y Precio del Producto
         'product_unspsc'        
         ],
     'data': [
-        #'security/ir.model.access.csv',
         'views/product_views.xml'
-        #'views/account_move_views.xml',
-        #'views/account_payment_views.xml',
-        #'views/account_journal_views.xml',
-        #'data/cron.xml'
     ],
     'installable': True,
     'application': True,
