@@ -25,7 +25,7 @@ class Product(models.Model):
             product['tipo_cambio'] = tipo_de_cambio
             product['costo_usd'] = standard_price / tipo_de_cambio
             precio_en_usd = 1.0
-            precio_en_usd = ( (standard_price * 1.16) * 1.19 ) * 1.05
+            precio_en_usd = ( (product['standard_price'] * 1.16) * 1.19 ) * 1.05
             product['precio_usd'] = precio_en_usd
             precio_en_mxn = precio_en_usd * tipo_de_cambio
             product['precio_mxn'] = precio_en_mxn
