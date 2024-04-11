@@ -200,18 +200,30 @@ class account_invoice(models.Model):
     def action_post(self):
         exchange_difference = False
         for rec in self:
-            if rec.manual_currency_rate_active:
+            if rec.manual_currency_rate_active and rec.manual_currency_rate_invert:
                 exchange_difference = True
                 for line in rec.invoice_line_ids:
                     prev_price = line.price_unit
                     line.with_context(exchange_difference=True,check_move_validity=False).price_unit = line.price_unit + 0.5
                     line.with_context(exchange_difference=True,check_move_validity=False).price_unit = prev_price
+                manual_currency_rate_invert = rec.manual_currency_rate_invert
+                for line in rec.line_ids:
+                    if line.amount_currency:
+                        amount_convert = abs(line.amount_currency) * manual_currency_rate_invert
+                        _logger.info("\n########### amount_convert:  ", amount_convert)
+                        if line.credit:
+                            line.with_context(exchange_difference=True,check_move_validity=False).credit = amount_convert
+                        if line.debit:
+                            line.with_context(exchange_difference=True,check_move_validity=False).debit = amount_convert
+
         _logger.info("\n########### AQUI ???????? ")
         ##### CHERMAN 2024 #####
         # Si tiene fecha de cambio modificada no genera movimiento de ajuste de tipos de cambio....
         if exchange_difference:
-            res = super(account_invoice, self.with_context(exchange_difference=True,check_move_validity=False)).action_post()   
+            _logger.info("\n########### 00000000  ")
+            res = super(account_invoice, self.with_context(exchange_difference=True, check_move_validity=False)).action_post()   
         else:
+            _logger.info("\n########### 111111111  ")
             res = super(account_invoice, self).action_post()   
         ########################
         return res
@@ -380,6 +392,42 @@ class account_invoice(models.Model):
 
             if in_draft_mode:
                 taxes_map_entry['tax_line'].update(taxes_map_entry['tax_line']._get_fields_onchange_balance(force_computation=True))
+
+    def _check_balanced(self):
+        _logger.info("\n############# _check_balanced >>>>>>>>>>>> ")
+        context = self._context
+        _logger.info("\n############# context: %s" % context)
+        _logger.info("\n############# context.get('exchange_difference', False): %s" % context.get('exchange_difference', False))
+        ''' Assert the move is fully balanced debit = credit.
+        An error is raised if it's not the case.
+        '''
+        moves = self.filtered(lambda move: move.line_ids)
+        if not moves:
+            return
+
+        # /!\ As this method is called in create / write, we can't make the assumption the computed stored fields
+        # are already done. Then, this query MUST NOT depend of computed stored fields (e.g. balance).
+        # It happens as the ORM makes the create with the 'no_recompute' statement.
+        self.env['account.move.line'].flush(self.env['account.move.line']._fields)
+        self.env['account.move'].flush(['journal_id'])
+        self._cr.execute('''
+            SELECT line.move_id, ROUND(SUM(line.debit - line.credit), currency.decimal_places)
+            FROM account_move_line line
+            JOIN account_move move ON move.id = line.move_id
+            JOIN account_journal journal ON journal.id = move.journal_id
+            JOIN res_company company ON company.id = journal.company_id
+            JOIN res_currency currency ON currency.id = company.currency_id
+            WHERE line.move_id IN %s
+            GROUP BY line.move_id, currency.decimal_places
+            HAVING ROUND(SUM(line.debit - line.credit), currency.decimal_places) != 0.0;
+        ''', [tuple(self.ids)])
+
+        query_res = self._cr.fetchall()
+        if query_res:
+            ids = [res[0] for res in query_res]
+            sums = [res[1] for res in query_res]
+            if not context.get('exchange_difference', False):
+                raise UserError(_("Cannot create unbalanced journal entry. Ids: %s\nDifferences debit - credit: %s") % (ids, sums))
 
 
 # # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
