@@ -209,7 +209,7 @@ class account_invoice(models.Model):
         ##### CHERMAN 2024 #####
         # Si tiene fecha de cambio modificada no genera movimiento de ajuste de tipos de cambio....
         if no_exchange_difference:
-            res = super(account_invoice, self.with_context(no_exchange_difference=True)).action_post()   
+            res = super(account_invoice, self.with_context(no_exchange_difference=True,check_move_validity=False)).action_post()   
         else:
             res = super(account_invoice, self).action_post()   
         ########################
