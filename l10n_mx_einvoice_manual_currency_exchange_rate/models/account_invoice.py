@@ -200,12 +200,21 @@ class account_invoice(models.Model):
     def action_post(self):
         exchange_difference = False
         for rec in self:
-            if rec.manual_currency_rate_active:
+            if rec.manual_currency_rate_active and rec.manual_currency_rate_invert:
                 exchange_difference = True
                 for line in rec.invoice_line_ids:
                     prev_price = line.price_unit
                     line.with_context(exchange_difference=True,check_move_validity=False).price_unit = line.price_unit + 0.5
                     line.with_context(exchange_difference=True,check_move_validity=False).price_unit = prev_price
+                manual_currency_rate_invert = rec.manual_currency_rate_invert
+                for line in rec.move_line_ids:
+                    if line.amount_currency:
+                        amount_convert = abs(line.amount_currency) * manual_currency_rate_invert
+                        if line.credit:
+                            line.with_context(exchange_difference=True,check_move_validity=False).credit = amount_convert
+                        if line.debit:
+                            line.with_context(exchange_difference=True,check_move_validity=False).debit = amount_convert
+
         _logger.info("\n########### AQUI ???????? ")
         ##### CHERMAN 2024 #####
         # Si tiene fecha de cambio modificada no genera movimiento de ajuste de tipos de cambio....
@@ -387,6 +396,7 @@ class account_invoice(models.Model):
         _logger.info("\n############# _check_balanced >>>>>>>>>>>> ")
         context = self._context
         _logger.info("\n############# context: %s" % context)
+        _logger.info("\n############# context.get('exchange_difference', False): %s" % context.get('exchange_difference', False))
         ''' Assert the move is fully balanced debit = credit.
         An error is raised if it's not the case.
         '''
