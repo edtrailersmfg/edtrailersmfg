@@ -206,6 +206,7 @@ class account_invoice(models.Model):
                     prev_price = line.price_unit
                     line.with_context(exchange_difference=True,check_move_validity=False).price_unit = line.price_unit + 0.5
                     line.with_context(exchange_difference=True,check_move_validity=False).price_unit = prev_price
+        _logger.info("\n########### AQUI ???????? ")
         ##### CHERMAN 2024 #####
         # Si tiene fecha de cambio modificada no genera movimiento de ajuste de tipos de cambio....
         if exchange_difference:
