@@ -210,6 +210,7 @@ class account_invoice(models.Model):
                 for line in rec.line_ids:
                     if line.amount_currency:
                         amount_convert = abs(line.amount_currency) * manual_currency_rate_invert
+                        _logger.info("\n########### amount_convert:  ", amount_convert)
                         if line.credit:
                             line.with_context(exchange_difference=True,check_move_validity=False).credit = amount_convert
                         if line.debit:
