@@ -198,18 +198,18 @@ class account_invoice(models.Model):
                 raise UserError(_('Company currency and invoice currency same, You can not added manual Exchange rate in same currency.'))
 
     def action_post(self):
-        no_exchange_difference = False
+        exchange_difference = False
         for rec in self:
             if rec.manual_currency_rate_active:
-                no_exchange_difference = True
+                exchange_difference = True
                 for line in rec.invoice_line_ids:
                     prev_price = line.price_unit
-                    line.price_unit = line.price_unit + 0.5
-                    line.price_unit = prev_price
+                    line.with_context(exchange_difference=True,check_move_validity=False).price_unit = line.price_unit + 0.5
+                    line.with_context(exchange_difference=True,check_move_validity=False).price_unit = prev_price
         ##### CHERMAN 2024 #####
         # Si tiene fecha de cambio modificada no genera movimiento de ajuste de tipos de cambio....
-        if no_exchange_difference:
-            res = super(account_invoice, self.with_context(no_exchange_difference=True,check_move_validity=False)).action_post()   
+        if exchange_difference:
+            res = super(account_invoice, self.with_context(exchange_difference=True,check_move_validity=False)).action_post()   
         else:
             res = super(account_invoice, self).action_post()   
         ########################
