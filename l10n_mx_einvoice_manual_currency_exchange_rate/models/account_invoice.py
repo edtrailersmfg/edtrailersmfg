@@ -207,7 +207,7 @@ class account_invoice(models.Model):
                     line.with_context(exchange_difference=True,check_move_validity=False).price_unit = line.price_unit + 0.5
                     line.with_context(exchange_difference=True,check_move_validity=False).price_unit = prev_price
                 manual_currency_rate_invert = rec.manual_currency_rate_invert
-                for line in rec.move_line_ids:
+                for line in rec.line_ids:
                     if line.amount_currency:
                         amount_convert = abs(line.amount_currency) * manual_currency_rate_invert
                         if line.credit:
