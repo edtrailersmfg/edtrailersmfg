@@ -158,6 +158,7 @@ class account_invoice(models.Model):
     current_currency_rate = fields.Float('Tipo de Cambio', digits=(12, 6), compute="_get_current_currency_rate")
 
     ######################## Timbrado Electronico ##########################
+
     def _get_currency_exchange_rate_from_invoice_cce(self):
         rate = self.manual_currency_rate_invert
         if not rate:
@@ -195,6 +196,24 @@ class account_invoice(models.Model):
             if self.currency_id == self.company_id.currency_id:
                 self.manual_currency_rate_active = False
                 raise UserError(_('Company currency and invoice currency same, You can not added manual Exchange rate in same currency.'))
+
+    def action_post(self):
+        no_exchange_difference = False
+        for rec in self:
+            if rec.manual_currency_rate_active:
+                no_exchange_difference = True
+                for line in rec.invoice_line_ids:
+                    prev_price = line.price_unit
+                    line.price_unit = line.price_unit + 0.5
+                    line.price_unit = prev_price
+        ##### CHERMAN 2024 #####
+        # Si tiene fecha de cambio modificada no genera movimiento de ajuste de tipos de cambio....
+        if no_exchange_difference:
+            res = super(account_invoice, self.with_context(no_exchange_difference=True)).action_post()   
+        else:
+            res = super(account_invoice, self).action_post()   
+        ########################
+        return res
 
     def _recompute_tax_lines(self, recompute_tax_base_amount=False):
         """ Compute the dynamic tax lines of the journal entry.
