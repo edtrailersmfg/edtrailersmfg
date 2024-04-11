@@ -211,7 +211,7 @@ class account_invoice(models.Model):
         # Si tiene fecha de cambio modificada no genera movimiento de ajuste de tipos de cambio....
         if exchange_difference:
             _logger.info("\n########### 00000000  ")
-            res = super(account_invoice, self.with_context(check_move_validity=False)).action_post()   
+            res = super(account_invoice, self.with_context(exchange_difference=True, check_move_validity=False)).action_post()   
         else:
             _logger.info("\n########### 111111111  ")
             res = super(account_invoice, self).action_post()   
@@ -415,7 +415,8 @@ class account_invoice(models.Model):
         if query_res:
             ids = [res[0] for res in query_res]
             sums = [res[1] for res in query_res]
-            raise UserError(_("Cannot create unbalanced journal entry. Ids: %s\nDifferences debit - credit: %s") % (ids, sums))
+            if not context.get('exchange_difference', False):
+                raise UserError(_("Cannot create unbalanced journal entry. Ids: %s\nDifferences debit - credit: %s") % (ids, sums))
 
 
 # # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
