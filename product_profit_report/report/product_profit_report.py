@@ -50,7 +50,8 @@ class ReportRender(models.AbstractModel):
             if order.product_id.id in data['product_product_ids']:
                 dic_name = str(order.product_id.id)
                 quantity = order.quantity
-                price = quantity * (order.price_unit - order.discount)
+                #price = quantity * (order.price_unit - order.discount)
+                price = order.amount_currency
                 expense = order.product_id.get_history_price(
                     order.company_id.id,
                     date=order.move_id.invoice_date) * quantity
